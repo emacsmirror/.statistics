@@ -1,0 +1,706 @@
+#+SETUPFILE: .orgconfig
+#+NAME: setup
+#+BEGIN_SRC emacs-lisp :results silent
+  (require 'emir)
+
+  (defun emir--melpa-missing (predicate)
+    (cl-set-difference
+     (epkgs 'name predicate)
+     (mapcar #'car (epkg-sql [:select name :from melpa-recipes]))
+     :test #'equal))
+
+  (defun emir--mirror-link (pkg)
+    (if (oref pkg repopage-format)
+	(format "[[%s][%s/%s]]"
+		(oref pkg repopage)
+		(oref pkg upstream-user)
+		(oref pkg upstream-name))
+      (--if-let (or (oref pkg repopage)
+                    (oref pkg homepage))
+          (format "[[%s]]" it)
+	"")))
+#+END_SRC
+* Github
+#+NAME: missing-github
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Link")
+    (--map (list it (emir--mirror-link (epkg it)))
+           (emir--melpa-missing 'epkg-github-package)))
+#+END_SRC
+#+RESULTS: missing-github
+| Package                      | Link                                      |
+|------------------------------+-------------------------------------------|
+| a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]                |
+| abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                              |
+| ac-dscanner                  | [[https://github.com/jmaschme/ac-dscanner][jmaschme/ac-dscanner]]                      |
+| ac-nrepl                     | [[https://github.com/clojure-emacs/ac-nrepl][clojure-emacs/ac-nrepl]]                    |
+| ac-r                         | [[https://github.com/mattfidler/ac-R][mattfidler/ac-R]]                           |
+| accelerate                   | [[https://github.com/yagunov/accelerate.el][yagunov/accelerate.el]]                     |
+| ack                          | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                             |
+| acme-mouse                   | [[https://github.com/akrito/acme-mouse][akrito/acme-mouse]]                         |
+| activator                    | [[https://github.com/apg/activator-el][apg/activator-el]]                          |
+| ajc-java-complete            | [[https://github.com/emacs-java/auto-java-complete][emacs-java/auto-java-complete]]             |
+| alore-mode                   | [[https://github.com/JukkaL/alore-emacs][JukkaL/alore-emacs]]                        |
+| alternative-files            | [[https://github.com/doitian/alternative-files-el][doitian/alternative-files-el]]              |
+| aml-mode                     | [[https://github.com/david-christiansen/aml-mode][david-christiansen/aml-mode]]               |
+| ansys-mode                   | [[https://github.com/dieter-wilhelm/ansys-mode][dieter-wilhelm/ansys-mode]]                 |
+| ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                              |
+| ant-project-mode             | [[https://github.com/skeeto/ant-project-mode][skeeto/ant-project-mode]]                   |
+| antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                       |
+| anything-hatena-bookmark     | [[https://github.com/k1LoW/anything-hatena-bookmark][k1LoW/anything-hatena-bookmark]]            |
+| as3-simple-mode              | [[https://github.com/svdm/as3-simple-mode][svdm/as3-simple-mode]]                      |
+| asciidoc                     | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                      |
+| asp-mode                     | [[https://github.com/chrisdone/asp-mode][chrisdone/asp-mode]]                        |
+| assert-rtn                   | [[https://github.com/neil-smithline-elisp/assert-rtn][neil-smithline-elisp/assert-rtn]]           |
+| async-eval                   | [[https://github.com/nschum/async-eval.el][nschum/async-eval.el]]                      |
+| atoctx                       | [[https://github.com/quantumkid/atoctx][quantumkid/atoctx]]                         |
+| atom                         | [[https://github.com/fperrin/atom][fperrin/atom]]                              |
+| atom-syndication             | [[https://github.com/dmj/atom-syndication][dmj/atom-syndication]]                      |
+| augment                      | [[https://github.com/technomancy/augment][technomancy/augment]]                       |
+| aurquery                     | [[https://github.com/CMB/aurquery-el][CMB/aurquery-el]]                           |
+| auto-complete-clang-objc     | [[https://github.com/tharpa/auto-complete-clang-objc][tharpa/auto-complete-clang-objc]]           |
+| auto-complete-golang         | [[https://github.com/koko1000ban/auto-complete-golang][koko1000ban/auto-complete-golang]]          |
+| auto-complete-latex-light    | [[https://github.com/tequilasunset/auto-complete-latex-light][tequilasunset/auto-complete-latex-light]]   |
+| auto-complete-ya-gtags       | [[https://github.com/whitypig/auto-complete-ya-gtags][whitypig/auto-complete-ya-gtags]]           |
+| auto-document                | [[https://github.com/rubikitch/auto-document][rubikitch/auto-document]]                   |
+| auto-pep8                    | [[https://github.com/deactivated/auto-pep8.el][deactivated/auto-pep8.el]]                  |
+| auto-scratch                 | [[https://github.com/lovekonakona/auto-scratch][lovekonakona/auto-scratch]]                 |
+| autocompletion-php-functions | [[https://github.com/ashizawa/autocompletion-php-functions][ashizawa/autocompletion-php-functions]]     |
+| avmmf                        | [[https://github.com/davep/avmmf.el][davep/avmmf.el]]                            |
+| aws                          | [[https://github.com/ieure/aws-el][ieure/aws-el]]                              |
+| backups-mode                 | [[https://github.com/chadbraunduin/backups-mode][chadbraunduin/backups-mode]]                |
+| bbcode                       | [[https://github.com/sensorflo/bbcode][sensorflo/bbcode]]                          |
+| bd-set-mark                  | [[https://github.com/lewang/bd-set-mark][lewang/bd-set-mark]]                        |
+| better-jump                  | [[https://github.com/Fuco1/better-jump][Fuco1/better-jump]]                         |
+| bibeltex                     | [[https://github.com/ruediger/bibeltex][ruediger/bibeltex]]                         |
+| bing-api                     | [[https://github.com/coordinate/bingapiel][coordinate/bingapiel]]                      |
+| binmove                      | [[https://github.com/beketa/binmove][beketa/binmove]]                            |
+| bookem                       | [[https://github.com/kjfletch/bookem-el][kjfletch/bookem-el]]                        |
+| bookiez                      | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                      |
+| bookmark-extensions          | [[https://github.com/thierryvolpiatto/emacs-bmk-ext][thierryvolpiatto/emacs-bmk-ext]]            |
+| breadcrumb                   | [[https://github.com/pheaver/breadcrumb][pheaver/breadcrumb]]                        |
+| buffer-action                | [[https://github.com/xwl/buffer-action][xwl/buffer-action]]                         |
+| buffer-timer                 | [[https://github.com/hardaker/elisp-buffer-timer][hardaker/elisp-buffer-timer]]               |
+| buftoggle                    | [[https://github.com/michaelw/buftoggle][michaelw/buftoggle]]                        |
+| bug-hunter                   | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                |
+| bundle                       | [[https://github.com/tarao/bundle-el][tarao/bundle-el]]                           |
+| ca2                          | [[https://github.com/hjanetzek/ca2][hjanetzek/ca2]]                             |
+| campfire                     | [[https://github.com/timcharper/campfire-el][timcharper/campfire-el]]                    |
+| cat-safe                     | [[https://github.com/skeeto/cat-safe][skeeto/cat-safe]]                           |
+| cc-chainsaw                  | [[https://github.com/abo-abo/cc-chainsaw][abo-abo/cc-chainsaw]]                       |
+| cddb                         | [[https://github.com/larsmagne/cddb.el][larsmagne/cddb.el]]                         |
+| cdecl                        | [[https://github.com/jhgorrell/cdecl-el][jhgorrell/cdecl-el]]                        |
+| cdmi-mode                    | [[https://github.com/jeastman/cdmi-mode][jeastman/cdmi-mode]]                        |
+| ce                           | [[https://github.com/jessealama/ce-el][jessealama/ce-el]]                          |
+| cheat                        | [[https://github.com/samsonjs/cheat.el][samsonjs/cheat.el]]                         |
+| cheat-fu                     | [[https://github.com/jpablobr/cheat-fu-mode][jpablobr/cheat-fu-mode]]                    |
+| chicken-scheme-extras        | [[https://github.com/xwl/chicken-scheme-extras][xwl/chicken-scheme-extras]]                 |
+| chumpy-windows               | [[https://github.com/chumpage/chumpy-windows][chumpage/chumpy-windows]]                   |
+| circle                       | [[https://github.com/tkf/emacs-circle][tkf/emacs-circle]]                          |
+| cl-merge                     | [[https://github.com/haxney/cl-merge][haxney/cl-merge]]                           |
+| clang-lookup                 | [[https://github.com/sheijk/clang-lookup][sheijk/clang-lookup]]                       |
+| clasker                      | [[https://github.com/clasker/clasker][clasker/clasker]]                           |
+| clip2org                     | [[https://github.com/thamer/clip2org][thamer/clip2org]]                           |
+| clojure-refactoring-mode     | [[https://github.com/joodie/clojure-refactoring][joodie/clojure-refactoring]]                |
+| cluck                        | [[https://github.com/ddp/cluck][ddp/cluck]]                                 |
+| code-imports                 | [[https://github.com/ahyatt/code-imports][ahyatt/code-imports]]                       |
+| codepad                      | [[https://github.com/ruediger/emacs-codepad][ruediger/emacs-codepad]]                    |
+| codethumb                    | [[https://github.com/tkf/emacs-codethumb][tkf/emacs-codethumb]]                       |
+| codex                        | [[https://github.com/sigma/codex][sigma/codex]]                               |
+| color-dired                  | [[https://github.com/mhayashi1120/Emacs-color-dired][mhayashi1120/Emacs-color-dired]]            |
+| colour-region                | [[https://github.com/vapniks/colour-region][vapniks/colour-region]]                     |
+| come-fly                     | [[https://github.com/davidmiller/come-fly][davidmiller/come-fly]]                      |
+| comicscript                  | [[https://github.com/jkersey/comicscript][jkersey/comicscript]]                       |
+| company-ess                  | [[https://github.com/Lompik/company-ess][Lompik/company-ess]]                        |
+| company-statistics           | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]           |
+| compile-bookmarks            | [[https://github.com/nschum/compile-bookmarks.el][nschum/compile-bookmarks.el]]               |
+| conspire                     | [[https://github.com/technomancy/conspire][technomancy/conspire]]                      |
+| coq                          | [[https://github.com/ProofGeneral/PG][ProofGeneral/PG]]                           |
+| cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                      |
+| crisp-mode                   | [[https://github.com/krisajenkins/crisp-mode][krisajenkins/crisp-mode]]                   |
+| csmart-mode                  | [[https://github.com/kwitek/csmart][kwitek/csmart]]                             |
+| csp-mode                     | [[https://github.com/zonix/csp-mode][zonix/csp-mode]]                            |
+| csr-mode                     | [[https://github.com/trailbound/csr-mode][trailbound/csr-mode]]                       |
+| css-format                   | [[https://github.com/chalmagean/css-format.el][chalmagean/css-format.el]]                  |
+| css-helper                   | [[https://github.com/tungd/css-helper][tungd/css-helper]]                          |
+| cucumber-i18n                | [[https://github.com/senny/cucumber-i18n.el][senny/cucumber-i18n.el]]                    |
+| cui-about-me                 | [[https://github.com/gongo/cui-about-me.el][gongo/cui-about-me.el]]                     |
+| curl                         | [[https://github.com/cinsk/emacs-curl][cinsk/emacs-curl]]                          |
+| current-story                | [[https://github.com/charlietanksley/current-story][charlietanksley/current-story]]             |
+| cygstart                     | [[https://github.com/lieutar/cygstart.el][lieutar/cygstart.el]]                       |
+| cygwin-terminal-clipboard    | [[https://github.com/j0xaf/cygwin-terminal-clipboard][j0xaf/cygwin-terminal-clipboard]]           |
+| dae                          | [[https://github.com/larsmagne/dae.el][larsmagne/dae.el]]                          |
+| darken-text                  | [[https://github.com/renard/darken-text][renard/darken-text]]                        |
+| db-sql                       | [[https://github.com/renard/db-sql-el][renard/db-sql-el]]                          |
+| dbus-codegen                 | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                      |
+| dedent                       | [[https://github.com/deactivated/dedent-el][deactivated/dedent-el]]                     |
+| defhook                      | [[https://github.com/neil-smithline-elisp/defhook][neil-smithline-elisp/defhook]]              |
+| delim-pad                    | [[https://github.com/lewang/delim-pad][lewang/delim-pad]]                          |
+| di-macs                      | [[https://github.com/jackhmwilliams/di-macs][jackhmwilliams/di-macs]]                    |
+| diatheke                     | [[https://github.com/JasonFruit/diatheke.el][JasonFruit/diatheke.el]]                    |
+| dictem                       | [[https://github.com/cheusov/dictem][cheusov/dictem]]                            |
+| diff-ediff                   | [[https://github.com/matthewlmcclure/diff-ediff][matthewlmcclure/diff-ediff]]                |
+| diff-git                     | [[https://github.com/alanfalloon/diff-git.el][alanfalloon/diff-git.el]]                   |
+| dired-hacks                  | [[https://github.com/Fuco1/dired-hacks][Fuco1/dired-hacks]]                         |
+| dired-sequence               | [[https://github.com/jave/dired-sequence][jave/dired-sequence]]                       |
+| dired-sync                   | [[https://github.com/renard/dired-sync][renard/dired-sync]]                         |
+| dired-view                   | [[https://github.com/xwl/dired-view][xwl/dired-view]]                            |
+| dired-xattr                  | [[https://github.com/renard/dired-xattr][renard/dired-xattr]]                        |
+| distel                       | [[https://github.com/massemanet/distel][massemanet/distel]]                         |
+| ditz                         | [[https://github.com/kentaro/emacs-ditz][kentaro/emacs-ditz]]                        |
+| dna-debug                    | [[https://github.com/jave/dna-debug][jave/dna-debug]]                            |
+| doc-mode                     | [[https://github.com/nschum/doc-mode][nschum/doc-mode]]                           |
+| docsetutil                   | [[https://github.com/leoliu/docsetutil-el][leoliu/docsetutil-el]]                      |
+| door-gnus                    | [[https://github.com/yyr/door-gnus][yyr/door-gnus]]                             |
+| doxygen                      | [[https://github.com/TreeRex/doxygen-el][TreeRex/doxygen-el]]                        |
+| dragbox                      | [[https://github.com/jave/dragbox][jave/dragbox]]                              |
+| drela-mode                   | [[https://github.com/cloudchamber/Drela-mode][cloudchamber/Drela-mode]]                   |
+| drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]              |
+| durendal                     | [[https://github.com/technomancy/durendal][technomancy/durendal]]                      |
+| dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                      |
+| easy-highlight               | [[https://github.com/syohex/emacs-easy-highlight][syohex/emacs-easy-highlight]]               |
+| easy-imenu-index-generator   | [[https://github.com/tm8st/emacs-easy-imenu-index-generator][tm8st/emacs-easy-imenu-index-generator]]    |
+| easy-todo                    | [[https://github.com/xwl/easy-todo][xwl/easy-todo]]                             |
+| ebm                          | [[https://github.com/carrl/ebm][carrl/ebm]]                                 |
+| ebnf-mode                    | [[https://github.com/jeramey/ebnf-mode][jeramey/ebnf-mode]]                         |
+| ecco                         | [[https://github.com/capitaomorte/ecco][capitaomorte/ecco]]                         |
+| ecd                          | [[https://github.com/akicho8/ecd][akicho8/ecd]]                               |
+| echo-pick                    | [[https://github.com/nschum/echo-pick.el][nschum/echo-pick.el]]                       |
+| edbc                         | [[https://github.com/redraiment/edbc][redraiment/edbc]]                           |
+| edice                        | [[https://github.com/capitaomorte/edice][capitaomorte/edice]]                        |
+| edit-thing                   | [[https://github.com/deactivated/edit-thing-el][deactivated/edit-thing-el]]                 |
+| eev                          | [[https://github.com/edrx/eev][edrx/eev]]                                  |
+| egit                         | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                          |
+| eimap                        | [[https://github.com/corecode/eimap][corecode/eimap]]                            |
+| el-index                     | [[https://github.com/medikoo/el-index][medikoo/el-index]]                          |
+| elisp-slime-expand           | [[https://github.com/russell/elisp-slime-expand][russell/elisp-slime-expand]]                |
+| elk-test                     | [[https://github.com/nschum/elk-test][nschum/elk-test]]                           |
+| elpad-client                 | [[https://github.com/nicferrier/elpad-client][nicferrier/elpad-client]]                   |
+| eltex                        | [[https://github.com/abo-abo/eltex][abo-abo/eltex]]                             |
+| elwiki                       | [[https://github.com/aidalgol/elwiki][aidalgol/elwiki]]                           |
+| emacs-android                | [[https://github.com/cpc26/emacs-android][cpc26/emacs-android]]                       |
+| emacs-speaks-nonmem          | [[https://github.com/mattfidler/Emacs-Speaks-NONMEM][mattfidler/Emacs-Speaks-NONMEM]]            |
+| emacs-xcode                  | [[https://github.com/senny/emacs-xcode][senny/emacs-xcode]]                         |
+| emacspeak                    | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                         |
+| emmental                     | [[https://github.com/jave/emmental][jave/emmental]]                             |
+| emsane                       | [[https://github.com/jave/emsane][jave/emsane]]                               |
+| emux                         | [[https://github.com/re5et/emux][re5et/emux]]                                |
+| epackage                     | [[https://github.com/jaalto/project--emacs-epackage][jaalto/project--emacs-epackage]]            |
+| epom                         | [[https://github.com/aufrank/epom][aufrank/epom]]                              |
+| eproject-peepopen            | [[https://github.com/mbarnett/eproject-peepopen][mbarnett/eproject-peepopen]]                |
+| epydoc                       | [[https://github.com/mooz/epydoc][mooz/epydoc]]                               |
+| erc-babel                    | [[https://github.com/vapniks/erc-babel][vapniks/erc-babel]]                         |
+| erc-highlight-nicknames      | [[https://github.com/amalloy/erc-highlight-nick][amalloy/erc-highlight-nick]]                |
+| erc-yank                     | [[https://github.com/jwiegley/erc-yank][jwiegley/erc-yank]]                         |
+| ergore                       | [[https://github.com/jonnay/ergore][jonnay/ergore]]                             |
+| erlang-dired-mode            | [[https://github.com/jixiuf/erlang-dired-mode][jixiuf/erlang-dired-mode]]                  |
+| ert-extras                   | [[https://github.com/mrc/ert-extras][mrc/ert-extras]]                            |
+| ertorrent                    | [[https://github.com/spacebat/ertorrent][spacebat/ertorrent]]                        |
+| es                           | [[https://github.com/leathekd/es.el][leathekd/es.el]]                            |
+| espect                       | [[https://github.com/rafl/espect][rafl/espect]]                               |
+| esv                          | [[https://github.com/csebold/esv.el][csebold/esv.el]]                            |
+| etags-update                 | [[https://github.com/mattkeller/etags-update][mattkeller/etags-update]]                   |
+| etest                        | [[https://github.com/philjackson/etest][philjackson/etest]]                         |
+| evelnote                     | [[https://github.com/hadashiA/evelnote-for-evernote][hadashiA/evelnote-for-evernote]]            |
+| eviews                       | [[https://github.com/vapniks/eviews-mode][vapniks/eviews-mode]]                       |
+| evil-elscreen                | [[https://github.com/coldnew/evil-elscreen][coldnew/evil-elscreen]]                     |
+| evil-rebellion               | [[https://github.com/tarleb/evil-rebellion][tarleb/evil-rebellion]]                     |
+| evil-scout                   | [[https://github.com/tarleb/evil-scout][tarleb/evil-scout]]                         |
+| evimodeline                  | [[https://github.com/danderson/evimodeline][danderson/evimodeline]]                     |
+| exim                         | [[https://github.com/ch11ng/exim][ch11ng/exim]]                               |
+| expectations-mode            | [[https://github.com/gar3thjon3s/expectations-mode][gar3thjon3s/expectations-mode]]             |
+| exwm                         | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                               |
+| ezbl                         | [[https://github.com/haxney/ezbl][haxney/ezbl]]                               |
+| fab                          | [[https://github.com/davidmiller/fabmacs][davidmiller/fabmacs]]                       |
+| find-file-suggest            | [[https://github.com/cjauvin/find-file-suggest][cjauvin/find-file-suggest]]                 |
+| find-git                     | [[https://github.com/lieutar/find-git.el][lieutar/find-git.el]]                       |
+| find-in-repo                 | [[https://github.com/Wilfred/find-in-repo.el][Wilfred/find-in-repo.el]]                   |
+| findwalker                   | [[https://github.com/mhayashi1120/Emacs-findwalker][mhayashi1120/Emacs-findwalker]]             |
+| finkinfo-mode                | [[https://github.com/xwl/finkinfo-mode][xwl/finkinfo-mode]]                         |
+| firefox-remote               | [[https://github.com/ruediger/emacs-firefox-remote][ruediger/emacs-firefox-remote]]             |
+| flowtimer                    | [[https://github.com/jrockway/time-utils-el][jrockway/time-utils-el]]                    |
+| fluiddb                      | [[https://github.com/hdurer/fluiddb.el][hdurer/fluiddb.el]]                         |
+| flycheck-typescript-tslint   | [[https://github.com/Simplify/flycheck-typescript-tslint][Simplify/flycheck-typescript-tslint]]       |
+| flymake-csslint              | [[https://github.com/arnested/flymake-csslint][arnested/flymake-csslint]]                  |
+| flymake-pylint               | [[https://github.com/btoconnor/flymake-pylint][btoconnor/flymake-pylint]]                  |
+| font-lock-ext                | [[https://github.com/sensorflo/font-lock-ext][sensorflo/font-lock-ext]]                   |
+| forml-mode                   | [[https://github.com/jvshahid/forml-mode][jvshahid/forml-mode]]                       |
+| foursquare                   | [[https://github.com/hober/foursquare-el][hober/foursquare-el]]                       |
+| frame-bufs                   | [[https://github.com/alpaker/Frame-Bufs][alpaker/Frame-Bufs]]                        |
+| frame-ctr                    | [[https://github.com/takaxp/frame-ctr][takaxp/frame-ctr]]                          |
+| framov                       | [[https://github.com/lieutar/framov.el][lieutar/framov.el]]                         |
+| fs-mode                      | [[https://github.com/suzp1984/fs-mode][suzp1984/fs-mode]]                          |
+| fsdired                      | [[https://github.com/jave/fsdired][jave/fsdired]]                              |
+| fullscreen-mode              | [[https://github.com/ryantm/fullscreen-mode][ryantm/fullscreen-mode]]                    |
+| fuzzy-find-in-project        | [[https://github.com/justinweiss/fuzzy-find-in-project][justinweiss/fuzzy-find-in-project]]         |
+| fuzzyjump                    | [[https://github.com/tomoya/fuzzyjump.el][tomoya/fuzzyjump.el]]                       |
+| ga                           | [[https://github.com/xwl/ga][xwl/ga]]                                    |
+| gaplay                       | [[https://github.com/te223/gaplay-el][te223/gaplay-el]]                           |
+| gdb-bp-session               | [[https://github.com/jglee1027/gdb-bp-session][jglee1027/gdb-bp-session]]                  |
+| generic-edit-special         | [[https://github.com/lewang/generic-edit-special][lewang/generic-edit-special]]               |
+| generic-range-opt            | [[https://github.com/tm8st/emacs-generic-range-opt][tm8st/emacs-generic-range-opt]]             |
+| geocode                      | [[https://github.com/hober/geocode-el][hober/geocode-el]]                          |
+| gershwin-mode                | [[https://github.com/gershwin/emacs-gershwin-mode][gershwin/emacs-gershwin-mode]]              |
+| git-auto-commit              | [[https://github.com/renard/git-auto-commit][renard/git-auto-commit]]                    |
+| git-code-review              | [[https://github.com/psanford/git-code-review-el][psanford/git-code-review-el]]               |
+| git-emacs                    | [[https://github.com/tsgates/git-emacs][tsgates/git-emacs]]                         |
+| git-find-file                | [[https://github.com/marktriggs/git-find-file.el][marktriggs/git-find-file.el]]               |
+| git-modes                    | [[https://github.com/magit/git-modes][magit/git-modes]]                           |
+| git-show                     | [[https://github.com/jpablobr/git-show][jpablobr/git-show]]                         |
+| git-time-machine             | [[https://github.com/psanford/git-time-machine-el][psanford/git-time-machine-el]]              |
+| gitch                        | [[https://github.com/rjprins/gitch][rjprins/gitch]]                             |
+| githorg                      | [[https://github.com/ieure/githorg][ieure/githorg]]                             |
+| github                       | [[https://github.com/abhiyerra/github.el][abhiyerra/github.el]]                       |
+| github-api-v3                | [[https://github.com/rsanders/github-api-v3.el][rsanders/github-api-v3.el]]                 |
+| gitsum                       | [[https://github.com/chneukirchen/gitsum][chneukirchen/gitsum]]                       |
+| gmail-notifier               | [[https://github.com/xwl/gmail-notifier][xwl/gmail-notifier]]                        |
+| gnorb                        | [[https://github.com/girzel/gnorb][girzel/gnorb]]                              |
+| gnus-autocheck               | [[https://github.com/slaanesh/gnus-autocheck][slaanesh/gnus-autocheck]]                   |
+| gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                         |
+| gnus-harvest                 | [[https://github.com/jwiegley/gnus-harvest][jwiegley/gnus-harvest]]                     |
+| gnus-identities              | [[https://github.com/renard/gnus-identities][renard/gnus-identities]]                    |
+| go-svg                       | [[https://github.com/yhvh/go-svg-mode][yhvh/go-svg-mode]]                          |
+| goby                         | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                        |
+| google-calendar              | [[https://github.com/slaanesh/Google-Calendar-Elisp][slaanesh/Google-Calendar-Elisp]]            |
+| gopher                       | [[https://github.com/ardekantur/gopher.el][ardekantur/gopher.el]]                      |
+| gosh-mode                    | [[https://github.com/mhayashi1120/Emacs-gosh-mode][mhayashi1120/Emacs-gosh-mode]]              |
+| goto-pattern                 | [[https://github.com/cjauvin/goto-pattern][cjauvin/goto-pattern]]                      |
+| gplus-mode                   | [[https://github.com/ellencubed/gplus-mode][ellencubed/gplus-mode]]                     |
+| gradle                       | [[https://github.com/vhallac/gradle-el][vhallac/gradle-el]]                         |
+| graphviz-dot                 | [[https://github.com/xwl/graphviz-dot][xwl/graphviz-dot]]                          |
+| grc                          | [[https://github.com/leathekd/grc][leathekd/grc]]                              |
+| griffin                      | [[https://github.com/tokenrove/griffin][tokenrove/griffin]]                         |
+| grr                          | [[https://github.com/leathekd/grr.el][leathekd/grr.el]]                           |
+| guess-style                  | [[https://github.com/nschum/guess-style][nschum/guess-style]]                        |
+| guess-tex-master             | [[https://github.com/mattfidler/guess-tex-master.el][mattfidler/guess-tex-master.el]]            |
+| h2o                          | [[https://github.com/punchagan/h2o][punchagan/h2o]]                             |
+| header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                     |
+| helm-build-command           | [[https://github.com/tkf/helm-build-command][tkf/helm-build-command]]                    |
+| helm-delicious               | [[https://github.com/emacs-helm/helm-delicious][emacs-helm/helm-delicious]]                 |
+| helm-etags+                  | [[https://github.com/jixiuf/helm-etags-plus][jixiuf/helm-etags-plus]]                    |
+| helm-find-files-in-project   | [[https://github.com/tototoshi/helm-find-files-in-project][tototoshi/helm-find-files-in-project]]      |
+| helm-github-issues           | [[https://github.com/syohex/emacs-helm-github-issues][syohex/emacs-helm-github-issues]]           |
+| helm-google-contacts         | [[https://github.com/yuutayamada/helm-google-contacts][yuutayamada/helm-google-contacts]]          |
+| helm-haskell-import          | [[https://github.com/syohex/emacs-helm-haskell-import][syohex/emacs-helm-haskell-import]]          |
+| helm-ipython                 | [[https://github.com/thierryvolpiatto/helm-ipython][thierryvolpiatto/helm-ipython]]             |
+| helm-mu-contacts             | [[https://github.com/agpchil/helm-mu-contacts][agpchil/helm-mu-contacts]]                  |
+| helm-odoc                    | [[https://github.com/trietlai/helm-odoc][trietlai/helm-odoc]]                        |
+| helm-project                 | [[https://github.com/shishi/helm-project][shishi/helm-project]]                       |
+| helm-projectile-all          | [[https://github.com/spatz/helm-projectile-all][spatz/helm-projectile-all]]                 |
+| helm-shell-history           | [[https://github.com/yuutayamada/helm-shell-history][yuutayamada/helm-shell-history]]            |
+| helm-slime                   | [[https://github.com/emacs-helm/helm-slime][emacs-helm/helm-slime]]                     |
+| hide-url                     | [[https://github.com/tkf/hide-url.el][tkf/hide-url.el]]                           |
+| highlight-sexp               | [[https://github.com/daimrod/highlight-sexp][daimrod/highlight-sexp]]                    |
+| highrise                     | [[https://github.com/hober/37emacs][hober/37emacs]]                             |
+| hippie-expand-distel         | [[https://github.com/rost/hippie-expand-distel][rost/hippie-expand-distel]]                 |
+| hl-tags-mode                 | [[https://github.com/deactivated/hl-tags-mode][deactivated/hl-tags-mode]]                  |
+| hse                          | [[https://github.com/ekschencn/hybrid-source-edit][ekschencn/hybrid-source-edit]]              |
+| hsearch                      | [[https://github.com/jschaf/hsearch][jschaf/hsearch]]                            |
+| html-fold                    | [[https://github.com/ataka/html-fold][ataka/html-fold]]                           |
+| html-key-chord-mode          | [[https://github.com/tomoya/html-key-chord-mode][tomoya/html-key-chord-mode]]                |
+| html5                        | [[https://github.com/hober/html5-el][hober/html5-el]]                            |
+| huskie                       | [[https://github.com/nicferrier/emacs-huskie][nicferrier/emacs-huskie]]                   |
+| i3                           | [[https://github.com/vava/i3-emacs][vava/i3-emacs]]                             |
+| ibuffer-perspective          | [[https://github.com/wstucker/ibuffer-perspective][wstucker/ibuffer-perspective]]              |
+| ical-event                   | [[https://github.com/jtatarik/ical-event][jtatarik/ical-event]]                       |
+| ical2org                     | [[https://github.com/cofi/ical2org][cofi/ical2org]]                             |
+| ido-better-flex              | [[https://github.com/vic/ido-better-flex][vic/ido-better-flex]]                       |
+| ido-other-window             | [[https://github.com/timcharper/ido-other-window][timcharper/ido-other-window]]               |
+| igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                           |
+| ii-mode                      | [[https://github.com/krl/ii-mode][krl/ii-mode]]                               |
+| includeme                    | [[https://github.com/jart/includeme][jart/includeme]]                            |
+| indent-hints-mode            | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                  |
+| indicate-changes             | [[https://github.com/renard/indicate-change][renard/indicate-change]]                    |
+| indirect-region              | [[https://github.com/renard/indirect-region][renard/indirect-region]]                    |
+| inertial-scroll              | [[https://github.com/kiwanami/emacs-inertial-scroll][kiwanami/emacs-inertial-scroll]]            |
+| inf-js                       | [[https://github.com/bkyle/inf-js][bkyle/inf-js]]                              |
+| inf-ruby-bond                | [[https://github.com/pd/inf-ruby-bond][pd/inf-ruby-bond]]                          |
+| infix                        | [[https://github.com/rspeele/infix-dot-el][rspeele/infix-dot-el]]                      |
+| inform-mode                  | [[https://github.com/rupertl/inform-mode][rupertl/inform-mode]]                       |
+| insert-time                  | [[https://github.com/rmm5t/insert-time.el][rmm5t/insert-time.el]]                      |
+| ios-config-mode              | [[https://github.com/nibrahim/IOS-config-mode][nibrahim/IOS-config-mode]]                  |
+| isea                         | [[https://github.com/nicferrier/emacs-isea][nicferrier/emacs-isea]]                     |
+| iswitch-menu                 | [[https://github.com/joodie/iswitch-menu][joodie/iswitch-menu]]                       |
+| itimer                       | [[https://github.com/pheaver/itimer-el][pheaver/itimer-el]]                         |
+| jamar                        | [[https://github.com/kliph/jamar-el][kliph/jamar-el]]                            |
+| java-mode-plus               | [[https://github.com/skeeto/emacs-java][skeeto/emacs-java]]                         |
+| jb-misc-functions            | [[https://github.com/vapniks/jb-misc-functions][vapniks/jb-misc-functions]]                 |
+| jda                          | [[https://github.com/jglee1027/jda-minor-mode][jglee1027/jda-minor-mode]]                  |
+| jedi-eldoc                   | [[https://github.com/syohex/emacs-jedi-eldoc][syohex/emacs-jedi-eldoc]]                   |
+| joseph-autopair              | [[https://github.com/jixiuf/joseph-autopair][jixiuf/joseph-autopair]]                    |
+| joseph-file-util             | [[https://github.com/jixiuf/joseph-file-util][jixiuf/joseph-file-util]]                   |
+| joseph-single-dired          | [[https://github.com/jixiuf/joseph-single-dired][jixiuf/joseph-single-dired]]                |
+| js-lookup                    | [[https://github.com/skeeto/js-lookup][skeeto/js-lookup]]                          |
+| json-sexp-mode               | [[https://github.com/TaylanUB/json-sexp-mode][TaylanUB/json-sexp-mode]]                   |
+| juick                        | [[https://github.com/mad/emacs-juick-el][mad/emacs-juick-el]]                        |
+| kappa                        | [[https://github.com/rhz/kappa-emacs][rhz/kappa-emacs]]                           |
+| keats                        | [[https://github.com/rejeep/keats][rejeep/keats]]                              |
+| key-cast                     | [[https://github.com/k1LoW/emacs-key-cast][k1LoW/emacs-key-cast]]                      |
+| keyadvice                    | [[https://github.com/Fuco1/keyadvice.el][Fuco1/keyadvice.el]]                        |
+| keyboard-converter           | [[https://github.com/renard/keyboard-converter][renard/keyboard-converter]]                 |
+| kibit-mode                   | [[https://github.com/aredington/kibit-mode][aredington/kibit-mode]]                     |
+| kindle-mode                  | [[https://github.com/kototama/kindle-mode][kototama/kindle-mode]]                      |
+| kindly-mode                  | [[https://github.com/fukamachi/kindly-mode][fukamachi/kindly-mode]]                     |
+| konoha-mode                  | [[https://github.com/syohex/emacs-konoha-mode][syohex/emacs-konoha-mode]]                  |
+| lagn                         | [[https://github.com/vanicat/lagn][vanicat/lagn]]                              |
+| latch                        | [[https://github.com/skeeto/elisp-latch][skeeto/elisp-latch]]                        |
+| latex-wrap                   | [[https://github.com/abo-abo/latex-wrap][abo-abo/latex-wrap]]                        |
+| lazarus                      | [[https://github.com/ajvargo/Lazarus][ajvargo/Lazarus]]                           |
+| lazy-search                  | [[https://github.com/vapniks/lazy-search][vapniks/lazy-search]]                       |
+| less                         | [[https://github.com/xwl/less][xwl/less]]                                  |
+| less-mode                    | [[https://github.com/myfreeweb/less-mode][myfreeweb/less-mode]]                       |
+| let-recur                    | [[https://github.com/tali713/tail-call][tali713/tail-call]]                         |
+| lilypond-hook                | [[https://github.com/mjago/lilypond-hook][mjago/lilypond-hook]]                       |
+| linum-ace                    | [[https://github.com/coldnew/linum-ace][coldnew/linum-ace]]                         |
+| linum-relativenumber         | [[https://github.com/scottjad/linum-relativenumber][scottjad/linum-relativenumber]]             |
+| lisp-editing                 | [[https://github.com/nicferrier/emacs-lisp-editing-tools][nicferrier/emacs-lisp-editing-tools]]       |
+| lispy-mnemonic               | [[https://github.com/itsjeyd/lispy-mnemonic][itsjeyd/lispy-mnemonic]]                    |
+| ltsv                         | [[https://github.com/syohex/emacs-ltsv][syohex/emacs-ltsv]]                         |
+| lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                     |
+| magit-identities             | [[https://github.com/renard/magit-identities][renard/magit-identities]]                   |
+| magit-view-file              | [[https://github.com/renard/magit-view-file][renard/magit-view-file]]                    |
+| mail-bug                     | [[https://github.com/xaccrocheur/mail-bug][xaccrocheur/mail-bug]]                      |
+| maildir                      | [[https://github.com/nicferrier/emacs-maildir][nicferrier/emacs-maildir]]                  |
+| mailq                        | [[https://github.com/dimitri/mailq-el][dimitri/mailq-el]]                          |
+| makefile-runner              | [[https://github.com/danamlund/emacs-makefile-runner][danamlund/emacs-makefile-runner]]           |
+| mandoku-meta-kr              | [[https://github.com/cwittern/KR][cwittern/KR]]                               |
+| manued                       | [[https://github.com/yamauchih/manued][yamauchih/manued]]                          |
+| mark-forward-sexp            | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]                 |
+| mark-select                  | [[https://github.com/namikister/mark-select][namikister/mark-select]]                    |
+| masquerade-mode              | [[https://github.com/dsevilla/masquerade-mode-el][dsevilla/masquerade-mode-el]]               |
+| maven-mode                   | [[https://github.com/bkyle/maven-mode][bkyle/maven-mode]]                          |
+| metapost-mode+               | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                   |
+| mew-ical                     | [[https://github.com/tagoh/mew-ical][tagoh/mew-ical]]                            |
+| mew-unread                   | [[https://github.com/tortkis/mew-unread][tortkis/mew-unread]]                        |
+| minimal                      | [[https://github.com/dandavison/minimal][dandavison/minimal]]                        |
+| mk-project                   | [[https://github.com/mattkeller/mk-project][mattkeller/mk-project]]                     |
+| mk-project+                  | [[https://github.com/scjung/mk-project-plus][scjung/mk-project-plus]]                    |
+| mks                          | [[https://github.com/sensorflo/mks][sensorflo/mks]]                             |
+| modelica-mode                | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]              |
+| mojo                         | [[https://github.com/samsonjs/mojo.el][samsonjs/mojo.el]]                          |
+| moneylog                     | [[https://github.com/watter/moneylog-el][watter/moneylog-el]]                        |
+| movie                        | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                        |
+| mplayer-mode                 | [[https://github.com/markhepburn/mplayer-mode][markhepburn/mplayer-mode]]                  |
+| mru-yank                     | [[https://github.com/lewang/le_emacs_MRU_yank][lewang/le_emacs_MRU_yank]]                  |
+| mu4e                         | [[https://github.com/djcb/mu][djcb/mu]]                                   |
+| multi-column-mode            | [[https://github.com/diiq/multi-column-mode][diiq/multi-column-mode]]                    |
+| multi-mode-util              | [[https://github.com/tarao/multi-mode-util][tarao/multi-mode-util]]                     |
+| multiple-line-edit           | [[https://github.com/k-talo/multiple-line-edit.el][k-talo/multiple-line-edit.el]]              |
+| muse-blog                    | [[https://github.com/jd/muse-blog.el][jd/muse-blog.el]]                           |
+| musicbrainz                  | [[https://github.com/larsmagne/musicbrainz.el][larsmagne/musicbrainz.el]]                  |
+| mv-shell                     | [[https://github.com/nflath/mv-shell][nflath/mv-shell]]                           |
+| mvc                          | [[https://github.com/wachikun/mvc][wachikun/mvc]]                              |
+| mysql                        | [[https://github.com/haxney/mysql][haxney/mysql]]                              |
+| mythryl-mode                 | [[https://github.com/phr/mythryl-mode][phr/mythryl-mode]]                          |
+| namelist-mode                | [[https://github.com/yyr/namelist-mode][yyr/namelist-mode]]                         |
+| nazna                        | [[https://github.com/baron/nazna.el][baron/nazna.el]]                            |
+| ne2wm                        | [[https://github.com/tkf/ne2wm][tkf/ne2wm]]                                 |
+| networkmanager               | [[https://github.com/k-ten/networkmanager-el][k-ten/networkmanager-el]]                   |
+| ngircd                       | [[https://github.com/nicferrier/emacs-ngircd][nicferrier/emacs-ngircd]]                   |
+| nimrod-mode                  | [[https://github.com/jameshfisher/nimrod-mode][jameshfisher/nimrod-mode]]                  |
+| nnir-spotlight               | [[https://github.com/renard/nnir-spotlight][renard/nnir-spotlight]]                     |
+| node-console                 | [[https://github.com/yuutayamada/node-console][yuutayamada/node-console]]                  |
+| noob-arrows-mode             | [[https://github.com/n3mo/noob-arrows-mode.el][n3mo/noob-arrows-mode.el]]                  |
+| nopaste                      | [[https://github.com/avar/nopaste][avar/nopaste]]                              |
+| noprefix                     | [[https://github.com/abo-abo/noprefix][abo-abo/noprefix]]                          |
+| notify                       | [[https://github.com/haxney/notify][haxney/notify]]                             |
+| nreplxmp                     | [[https://github.com/wakala/nreplxmp][wakala/nreplxmp]]                           |
+| numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                         |
+| ob-clojurescript             | [[https://github.com/bloat/babel-clojurescript][bloat/babel-clojurescript]]                 |
+| ob-markdown                  | [[https://github.com/tnoda/ob-markdown][tnoda/ob-markdown]]                         |
+| octopress-tentacle           | [[https://github.com/brighid/octopress-tentacle][brighid/octopress-tentacle]]                |
+| ogi                          | [[https://github.com/ryuslash/ogi][ryuslash/ogi]]                              |
+| old-fashioned-undo           | [[https://github.com/k-talo/old-fashioned-undo.el][k-talo/old-fashioned-undo.el]]              |
+| one-key                      | [[https://github.com/vapniks/one-key][vapniks/one-key]]                           |
+| one-key-local                | [[https://github.com/aki2o/one-key-local][aki2o/one-key-local]]                       |
+| open-related-file            | [[https://github.com/skirino/open-related-file][skirino/open-related-file]]                 |
+| openssl-cipher               | [[https://github.com/mhayashi1120/Emacs-openssl-cipher][mhayashi1120/Emacs-openssl-cipher]]         |
+| opscode-sign                 | [[https://github.com/skeptomai/opscode-emacs-sign][skeptomai/opscode-emacs-sign]]              |
+| org-auto-shorten-url         | [[https://github.com/neil-smithline-elisp/org-auto-shorten-url][neil-smithline-elisp/org-auto-shorten-url]] |
+| org-bom                      | [[https://github.com/Frozenlock/Org-Bill-of-materials][Frozenlock/Org-Bill-of-materials]]          |
+| org-buffers                  | [[https://github.com/dandavison/org-buffers][dandavison/org-buffers]]                    |
+| org-daypage                  | [[https://github.com/almost/org-daypage][almost/org-daypage]]                        |
+| org-defprop                  | [[https://github.com/Neil-Smithline/org-defprop][Neil-Smithline/org-defprop]]                |
+| org-email                    | [[https://github.com/nicferrier/org-email][nicferrier/org-email]]                      |
+| org-global-insert-link       | [[https://github.com/Neil-Smithline/org-global-insert-link][Neil-Smithline/org-global-insert-link]]     |
+| org-gnome-calendar           | [[https://github.com/llvilanova/org-gnome-calendar][llvilanova/org-gnome-calendar]]             |
+| org-helpers                  | [[https://github.com/leoc/org-helpers.el][leoc/org-helpers.el]]                       |
+| org-hlc                      | [[https://github.com/tj64/org-hlc][tj64/org-hlc]]                              |
+| org-hyde                     | [[https://github.com/punchagan/org-hyde][punchagan/org-hyde]]                        |
+| org-link-minor-mode          | [[https://github.com/seanohalpin/org-link-minor-mode][seanohalpin/org-link-minor-mode]]           |
+| org-mac-protocol             | [[https://github.com/claviclaws/org-mac-protocol][claviclaws/org-mac-protocol]]               |
+| org-magit                    | [[https://github.com/sigma/org-magit][sigma/org-magit]]                           |
+| org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                       |
+| org-nan                      | [[https://github.com/gkappler/org-nan][gkappler/org-nan]]                          |
+| org-osm-link                 | [[https://github.com/SebastianRose/org-osm][SebastianRose/org-osm]]                     |
+| org-presie                   | [[https://github.com/nicferrier/org-presie][nicferrier/org-presie]]                     |
+| org-protocol-github-lines    | [[https://github.com/kidd/org-protocol-github-lines][kidd/org-protocol-github-lines]]            |
+| org-reading                  | [[https://github.com/abhiyerra/org-reading][abhiyerra/org-reading]]                     |
+| org-s5                       | [[https://github.com/sigma/org-s5][sigma/org-s5]]                              |
+| org-seenthis                 | [[https://github.com/juba/org-seenthis][juba/org-seenthis]]                         |
+| org-status                   | [[https://github.com/neil-smithline-elisp/org-status][neil-smithline-elisp/org-status]]           |
+| org-yaml                     | [[https://github.com/Neil-Smithline/org-yaml][Neil-Smithline/org-yaml]]                   |
+| orgrade                      | [[https://github.com/gucong/emacs-orgrade][gucong/emacs-orgrade]]                      |
+| osm-mode                     | [[https://github.com/ruediger/osm-mode][ruediger/osm-mode]]                         |
+| osxpkg                       | [[https://github.com/renard/osxpkg][renard/osxpkg]]                             |
+| owl-functional-mode          | [[https://github.com/vakkermans/owl-functional-mode][vakkermans/owl-functional-mode]]            |
+| package-demo                 | [[https://github.com/vermiculus/package-demo][vermiculus/package-demo]]                   |
+| package-store                | [[https://github.com/nicferrier/emacs-package-store][nicferrier/emacs-package-store]]            |
+| page-mode                    | [[https://github.com/BartMassey/emacs-page][BartMassey/emacs-page]]                     |
+| paredit-c                    | [[https://github.com/dandavison/paredit-c][dandavison/paredit-c]]                      |
+| parfait-mode                 | [[https://github.com/sorellabs/parfait-mode][sorellabs/parfait-mode]]                    |
+| partially                    | [[https://github.com/mbriggs/partially.el][mbriggs/partially.el]]                      |
+| password-mode                | [[https://github.com/juergenhoetzel/password-mode][juergenhoetzel/password-mode]]              |
+| paste                        | [[https://github.com/nicferrier/pasteel][nicferrier/pasteel]]                        |
+| pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                       |
+| pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                      |
+| per-window-point             | [[https://github.com/alpaker/Per-Window-Point][alpaker/Per-Window-Point]]                  |
+| perl-utils                   | [[https://github.com/syohex/emacs-perl-utils][syohex/emacs-perl-utils]]                   |
+| perlbrew-mini                | [[https://github.com/dams/perlbrew-mini.el][dams/perlbrew-mini.el]]                     |
+| perlmonks                    | [[https://github.com/metaperl/emacs-perlmonks][metaperl/emacs-perlmonks]]                  |
+| pgrok                        | [[https://github.com/juri/pgrok][juri/pgrok]]                                |
+| pgsql-linum-format           | [[https://github.com/dimitri/pgsql-linum-format][dimitri/pgsql-linum-format]]                |
+| pgsrc                        | [[https://github.com/dimitri/pgsrc-el][dimitri/pgsrc-el]]                          |
+| phantomjs                    | [[https://github.com/nicferrier/phantomjsel][nicferrier/phantomjsel]]                    |
+| php-completion               | [[https://github.com/imakado/php-completion][imakado/php-completion]]                    |
+| pickel                       | [[https://github.com/tlh/pickel.el][tlh/pickel.el]]                             |
+| picolisp-wiki-mode           | [[https://github.com/tj64/picolisp-wiki-mode][tj64/picolisp-wiki-mode]]                   |
+| plain-org-wiki               | [[https://github.com/abo-abo/plain-org-wiki][abo-abo/plain-org-wiki]]                    |
+| plone-mode                   | [[https://github.com/jone/plone-mode.el][jone/plone-mode.el]]                        |
+| pocketcompletion             | [[https://github.com/jave/pocketcompletion][jave/pocketcompletion]]                     |
+| popup+                       | [[https://github.com/scjung/popup-plus][scjung/popup-plus]]                         |
+| popup-frame                  | [[https://github.com/Sarcasm/popup-frame][Sarcasm/popup-frame]]                       |
+| popup-global-mark-ring       | [[https://github.com/whitypig/popup-global-mark-ring][whitypig/popup-global-mark-ring]]           |
+| posn-on-screen               | [[https://github.com/Sarcasm/posn-on-screen][Sarcasm/posn-on-screen]]                    |
+| posterous                    | [[https://github.com/snim2/posterous.el][snim2/posterous.el]]                        |
+| powershell-mode              | [[https://github.com/fperrin/powershell-mode][fperrin/powershell-mode]]                   |
+| projectur                    | [[https://github.com/vderyagin/projectur][vderyagin/projectur]]                       |
+| projutils                    | [[https://github.com/fgallina/projutils.el][fgallina/projutils.el]]                     |
+| pry                          | [[https://github.com/jacott/emacs-pry][jacott/emacs-pry]]                          |
+| psl-mode                     | [[https://github.com/skeeto/psl-mode][skeeto/psl-mode]]                           |
+| pulseaudio                   | [[https://github.com/suzp1984/pulseaudio-mode][suzp1984/pulseaudio-mode]]                  |
+| puppet-pi-mode               | [[https://github.com/t9md/puppet-pi-mode.el][t9md/puppet-pi-mode.el]]                    |
+| pvr                          | [[https://github.com/larsmagne/pvr.el][larsmagne/pvr.el]]                          |
+| pylookup                     | [[https://github.com/tsgates/pylookup][tsgates/pylookup]]                          |
+| qa-mode                      | [[https://github.com/senny/qa-mode][senny/qa-mode]]                             |
+| qooxdoo                      | [[https://github.com/jdodds/qooxdoo.el][jdodds/qooxdoo.el]]                         |
+| qtref                        | [[https://github.com/whitypig/qtref][whitypig/qtref]]                            |
+| quick-jump                   | [[https://github.com/jixiuf/quick-jump][jixiuf/quick-jump]]                         |
+| quickfix-mode                | [[https://github.com/ulises/quickfix-mode][ulises/quickfix-mode]]                      |
+| rails-test-toggler           | [[https://github.com/mbriggs/rails-test-toggler][mbriggs/rails-test-toggler]]                |
+| rb                           | [[https://github.com/nicferrier/emacs-rhythmbox][nicferrier/emacs-rhythmbox]]                |
+| rcfiles                      | [[https://github.com/didierverna/el-rcfiles][didierverna/el-rcfiles]]                    |
+| rcirc-robots                 | [[https://github.com/nicferrier/rcirc-robots][nicferrier/rcirc-robots]]                   |
+| rcirc-ucomplete              | [[https://github.com/technomancy/rcirc-ucomplete][technomancy/rcirc-ucomplete]]               |
+| rd-mode                      | [[https://github.com/uwabami/rdtool][uwabami/rdtool]]                            |
+| rdictcc                      | [[https://github.com/tsdh/rdictcc][tsdh/rdictcc]]                              |
+| recaptcha                    | [[https://github.com/fsmunoz/recaptcha][fsmunoz/recaptcha]]                         |
+| recent-addresses             | [[https://github.com/nschum/recent-addresses.el][nschum/recent-addresses.el]]                |
+| recipe-mode                  | [[https://github.com/sshelagh/recipe-mode][sshelagh/recipe-mode]]                      |
+| recs-mode                    | [[https://github.com/tlh/recs-mode.el][tlh/recs-mode.el]]                          |
+| reddit-mode                  | [[https://github.com/death/reddit-mode][death/reddit-mode]]                         |
+| redmine                      | [[https://github.com/fukamachi/redmine-el][fukamachi/redmine-el]]                      |
+| reflected-buffers            | [[https://github.com/tkf/reflected-buffers][tkf/reflected-buffers]]                     |
+| remind-conf-mode             | [[https://github.com/sshelagh/remind-conf-mode][sshelagh/remind-conf-mode]]                 |
+| revealjs-mode                | [[https://github.com/cjohansen/revealjs-mode][cjohansen/revealjs-mode]]                   |
+| review                       | [[https://github.com/gigamonkey/review][gigamonkey/review]]                         |
+| revive+                      | [[https://github.com/martialboniou/revive-plus][martialboniou/revive-plus]]                 |
+| ri                           | [[https://github.com/technomancy/ri.el][technomancy/ri.el]]                         |
+| rmoo                         | [[https://github.com/toddsundsted/rmoo][toddsundsted/rmoo]]                         |
+| rotate-text                  | [[https://github.com/nschum/rotate-text.el][nschum/rotate-text.el]]                     |
+| ruby-comint                  | [[https://github.com/jpablobr/ruby-comint.el][jpablobr/ruby-comint.el]]                   |
+| rubyinterpol                 | [[https://github.com/ober/rubyinterpol][ober/rubyinterpol]]                         |
+| s3                           | [[https://github.com/thorstadt/s3.el][thorstadt/s3.el]]                           |
+| save-packages                | [[https://github.com/petere/emacs-save-packages][petere/emacs-save-packages]]                |
+| sbt                          | [[https://github.com/dchenbecker/sbt.el][dchenbecker/sbt.el]]                        |
+| scan                         | [[https://github.com/larsmagne/scan.el][larsmagne/scan.el]]                         |
+| screensend                   | [[https://github.com/benwbooth/screensend.el][benwbooth/screensend.el]]                   |
+| scriptify                    | [[https://github.com/vderyagin/scriptify][vderyagin/scriptify]]                       |
+| scrobble                     | [[https://github.com/larsmagne/scrobble.el][larsmagne/scrobble.el]]                     |
+| scrum                        | [[https://github.com/ianxm/emacs-scrum][ianxm/emacs-scrum]]                         |
+| selftest                     | [[https://github.com/hober/selftest-el][hober/selftest-el]]                         |
+| seognil                      | [[https://github.com/md11235/seognil][md11235/seognil]]                           |
+| sequence                     | [[https://github.com/nicferrier/emacs-sequence][nicferrier/emacs-sequence]]                 |
+| sh-proxy                     | [[https://github.com/jave/sh-proxy][jave/sh-proxy]]                             |
+| shoes-off                    | [[https://github.com/nicferrier/shoes-off][nicferrier/shoes-off]]                      |
+| short-lambda                 | [[https://github.com/abo-abo/short-lambda][abo-abo/short-lambda]]                      |
+| show-arglist                 | [[https://github.com/peccu/show-arglist.el][peccu/show-arglist.el]]                     |
+| showoff-mode                 | [[https://github.com/developernotes/showoff-mode][developernotes/showoff-mode]]               |
+| simo                         | [[https://github.com/lieutar/simo.el][lieutar/simo.el]]                           |
+| simple-slides                | [[https://github.com/joodie/emacs-simple-slides][joodie/emacs-simple-slides]]                |
+| simplegv-mode                | [[https://github.com/jordonbiondo/simplegv-mode][jordonbiondo/simplegv-mode]]                |
+| sinasi                       | [[https://github.com/emk/sinasi][emk/sinasi]]                                |
+| skeleton-complete            | [[https://github.com/baohaojun/skeleton-complete][baohaojun/skeleton-complete]]               |
+| skinny                       | [[https://github.com/nicferrier/skinny][nicferrier/skinny]]                         |
+| skip-sexp                    | [[https://github.com/sigma/skip-sexp.el][sigma/skip-sexp.el]]                        |
+| slime-complete-locals        | [[https://github.com/joodie/slime-complete-locals][joodie/slime-complete-locals]]              |
+| slime-js                     | [[https://github.com/Gozala/slime-js][Gozala/slime-js]]                           |
+| slurm                        | [[https://github.com/ffevotte/slurm.el][ffevotte/slurm.el]]                         |
+| smart-log                    | [[https://github.com/mhayashi1120/smart-log.el][mhayashi1120/smart-log.el]]                 |
+| smart-quotes                 | [[https://github.com/gareth-rees/smart-quotes][gareth-rees/smart-quotes]]                  |
+| smart-todo                   | [[https://github.com/gyordanov/smart-todo.el][gyordanov/smart-todo.el]]                   |
+| smartchr                     | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                    |
+| snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                     |
+| sofa                         | [[https://github.com/cinsk/emacs-sofa][cinsk/emacs-sofa]]                          |
+| songbook                     | [[https://github.com/crep4ever/songbook-emacs-mode][crep4ever/songbook-emacs-mode]]             |
+| sourcepawn-mode              | [[https://github.com/agrif/sourcepawn-mode][agrif/sourcepawn-mode]]                     |
+| spinasm-mode                 | [[https://github.com/segoh/spinasm-mode][segoh/spinasm-mode]]                        |
+| spinner                      | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                      |
+| spss                         | [[https://github.com/vapniks/spss-mode][vapniks/spss-mode]]                         |
+| ssh-config                   | [[https://github.com/renard/ssh-config-el][renard/ssh-config-el]]                      |
+| ssl-mode                     | [[https://github.com/npc3/ssl-mode][npc3/ssl-mode]]                             |
+| startproject                 | [[https://github.com/myfreeweb/startproject][myfreeweb/startproject]]                    |
+| startupd                     | [[https://github.com/fgallina/startupd.el][fgallina/startupd.el]]                      |
+| stickies                     | [[https://github.com/tkosaka/emacs-lisp-stickies][tkosaka/emacs-lisp-stickies]]               |
+| string-template              | [[https://github.com/renard/string-template-el][renard/string-template-el]]                 |
+| sunrise-commander            | [[https://github.com/escherdragon/sunrise-commander][escherdragon/sunrise-commander]]            |
+| swallow-window               | [[https://github.com/pd/swallow-window.el][pd/swallow-window.el]]                      |
+| swarmhacker                  | [[https://github.com/nicferrier/emacs-swarmhacker][nicferrier/emacs-swarmhacker]]              |
+| switch-files                 | [[https://github.com/hardaker/elisp-switch-files][hardaker/elisp-switch-files]]               |
+| symbols-mode                 | [[https://github.com/orontee/symbols-mode][orontee/symbols-mode]]                      |
+| sync-scroll                  | [[https://github.com/mori-dev/sync-scroll][mori-dev/sync-scroll]]                      |
+| sysuplist-mode               | [[https://github.com/mrBliss/sysuplist-mode][mrBliss/sysuplist-mode]]                    |
+| tags-view                    | [[https://github.com/markhepburn/tags-view][markhepburn/tags-view]]                     |
+| tap-mode                     | [[https://github.com/renormalist/emacs-tap-mode][renormalist/emacs-tap-mode]]                |
+| taskpaper                    | [[https://github.com/jonasoberschweiber/taskpaper-el][jonasoberschweiber/taskpaper-el]]           |
+| tbemail                      | [[https://github.com/martinp26/tbemail][martinp26/tbemail]]                         |
+| tellstick                    | [[https://github.com/larsmagne/tellstick.el][larsmagne/tellstick.el]]                    |
+| tempo-snippets               | [[https://github.com/nschum/tempo-snippets.el][nschum/tempo-snippets.el]]                  |
+| terminal-notifier            | [[https://github.com/krismolendyke/terminal-notifier.el][krismolendyke/terminal-notifier.el]]        |
+| terrible-template            | [[https://github.com/yonkeltron/terrible-template][yonkeltron/terrible-template]]              |
+| test-framework               | [[https://github.com/epsil/test-framework.el][epsil/test-framework.el]]                   |
+| test-more                    | [[https://github.com/syohex/emacs-test-more][syohex/emacs-test-more]]                    |
+| testkick                     | [[https://github.com/hadashiA/testkick][hadashiA/testkick]]                         |
+| text-align                   | [[https://github.com/akicho8/text-align][akicho8/text-align]]                        |
+| textlint                     | [[https://github.com/DamienCassou/textlint][DamienCassou/textlint]]                     |
+| textsnip                     | [[https://github.com/functionreturnfunction/textsnip.el][functionreturnfunction/textsnip.el]]        |
+| theme-helper                 | [[https://github.com/lewang/theme-helper][lewang/theme-helper]]                       |
+| theme-park-mode              | [[https://github.com/darrik/theme-park-mode][darrik/theme-park-mode]]                    |
+| thinks                       | [[https://github.com/davep/thinks.el][davep/thinks.el]]                           |
+| thrift-mode                  | [[https://github.com/davidmiller/thrift-mode][davidmiller/thrift-mode]]                   |
+| tipshare                     | [[https://github.com/k1LoW/emacs-tipshare][k1LoW/emacs-tipshare]]                      |
+| tlh-util                     | [[https://github.com/tlh/tlh-util.el][tlh/tlh-util.el]]                           |
+| tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                          |
+| todostack                    | [[https://github.com/EvansWinner/todostack.el][EvansWinner/todostack.el]]                  |
+| tora-mode                    | [[https://github.com/syohex/emacs-tora-mode][syohex/emacs-tora-mode]]                    |
+| trac-wiki                    | [[https://github.com/tiborsimko/trac-wiki-el][tiborsimko/trac-wiki-el]]                   |
+| transcript                   | [[https://github.com/nasfarley88/transcript-el][nasfarley88/transcript-el]]                 |
+| trelloel                     | [[https://github.com/jdodds/trelloel][jdodds/trelloel]]                           |
+| trindle                      | [[https://github.com/daic-h/trindle][daic-h/trindle]]                            |
+| try-code                     | [[https://github.com/lewang/try-code][lewang/try-code]]                           |
+| tumblr                       | [[https://github.com/travisjeffery/emacs-tumblr][travisjeffery/emacs-tumblr]]                |
+| tumblr-gist                  | [[https://github.com/dleslie/tumblr-gist.el][dleslie/tumblr-gist.el]]                    |
+| tumblr-mode                  | [[https://github.com/qxj/tumblr-mode][qxj/tumblr-mode]]                           |
+| twiki                        | [[https://github.com/christopherjwhite/emacs-twiki-mode][christopherjwhite/emacs-twiki-mode]]        |
+| twiki-org                    | [[https://github.com/saintaardvark/twiki-org][saintaardvark/twiki-org]]                   |
+| twit                         | [[https://github.com/baudtack/twit.el][baudtack/twit.el]]                          |
+| twittering-dframe            | [[https://github.com/k-ten/twittering-dframe][k-ten/twittering-dframe]]                   |
+| tx-mode                      | [[https://github.com/yoshiki/tx-mode][yoshiki/tx-mode]]                           |
+| ultratex                     | [[https://github.com/jhpalmieri/ultratex][jhpalmieri/ultratex]]                       |
+| uncrustify                   | [[https://github.com/glima/Emacs-uncrustify][glima/Emacs-uncrustify]]                    |
+| unique-window-buffers        | [[https://github.com/lewang/unique-window-buffers][lewang/unique-window-buffers]]              |
+| uptimes                      | [[https://github.com/davep/uptimes.el][davep/uptimes.el]]                          |
+| utf8islove                   | [[https://github.com/robsimmons/utf8islove][robsimmons/utf8islove]]                     |
+| vc-browse                    | [[https://github.com/ieure/vc-browse][ieure/vc-browse]]                           |
+| vc-mks                       | [[https://github.com/pusto/vc-mks.el][pusto/vc-mks.el]]                           |
+| vc-partial-commit            | [[https://github.com/fperrin/vc-partial-commit][fperrin/vc-partial-commit]]                 |
+| vim-modeline                 | [[https://github.com/cinsk/emacs-vim-modeline][cinsk/emacs-vim-modeline]]                  |
+| vimvars                      | [[https://github.com/jamesyoungman/vimvars][jamesyoungman/vimvars]]                     |
+| visual-indentation-mode      | [[https://github.com/skeeto/visual-indentation-mode][skeeto/visual-indentation-mode]]            |
+| w3m-https-everywhere         | [[https://github.com/k-ten/w3m-https-everywhere][k-ten/w3m-https-everywhere]]                |
+| warp                         | [[https://github.com/yukihr/Warp][yukihr/Warp]]                               |
+| weak-ref                     | [[https://github.com/skeeto/elisp-weak-ref][skeeto/elisp-weak-ref]]                     |
+| weather                      | [[https://github.com/mad/weather.el][mad/weather.el]]                            |
+| whole-line-funcs             | [[https://github.com/lewang/le_emacs_whole_line_funcs][lewang/le_emacs_whole_line_funcs]]          |
+| wikidoc                      | [[https://github.com/nicferrier/elwikidoc][nicferrier/elwikidoc]]                      |
+| wikidot-mode                 | [[https://github.com/infochimps-customers/wikidot-mode][infochimps-customers/wikidot-mode]]         |
+| window-margin                | [[https://github.com/aculich/window-margin.el][aculich/window-margin.el]]                  |
+| wipe                         | [[https://github.com/didierverna/wipe][didierverna/wipe]]                          |
+| wmctrl                       | [[https://github.com/tkf/emacs-wmctrl][tkf/emacs-wmctrl]]                          |
+| wmii                         | [[https://github.com/fsmunoz/wmii-el][fsmunoz/wmii-el]]                           |
+| wordnik                      | [[https://github.com/hober/wordnik-el][hober/wordnik-el]]                          |
+| wordpress-mode               | [[https://github.com/danlamanna/wordpress-mode][danlamanna/wordpress-mode]]                 |
+| worklog                      | [[https://github.com/credmp/worklog][credmp/worklog]]                            |
+| wsh-repl                     | [[https://github.com/jonnay/wsh-repl][jonnay/wsh-repl]]                           |
+| wubi                         | [[https://github.com/xwl/wubi][xwl/wubi]]                                  |
+| xargs-grep                   | [[https://github.com/lewang/le_emacs_xargs_grep][lewang/le_emacs_xargs_grep]]                |
+| xdg-paths                    | [[https://github.com/tomprince/xdg-paths-el][tomprince/xdg-paths-el]]                    |
+| xelb                         | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                               |
+| xrc                          | [[https://github.com/spacebat/xrc][spacebat/xrc]]                              |
+| xrefresh                     | [[https://github.com/justmoon/xrefresh-emacs][justmoon/xrefresh-emacs]]                   |
+| xyzzy                        | [[https://github.com/tomoya/xyzzy.el][tomoya/xyzzy.el]]                           |
+| ya-cppref                    | [[https://github.com/whitypig/ya-cppref][whitypig/ya-cppref]]                        |
+| yafastnav                    | [[https://github.com/tm8st/emacs-yafastnav][tm8st/emacs-yafastnav]]                     |
+| yammer                       | [[https://github.com/psanford/emacs-yammer][psanford/emacs-yammer]]                     |
+| yatest                       | [[https://github.com/lieutar/yatest.el][lieutar/yatest.el]]                         |
+| yeoman                       | [[https://github.com/julienXX/yeoman.el][julienXX/yeoman.el]]                        |
+| yql                          | [[https://github.com/wfarr/yql-el][wfarr/yql-el]]                              |
+| zen-mode                     | [[https://github.com/jave/zen-mode][jave/zen-mode]]                             |
+| zendmd-comint                | [[https://github.com/jhanson/zendmd-comint.el][jhanson/zendmd-comint.el]]                  |
+| zone-matrix                  | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                          |
+| zwiebel                      | [[https://github.com/silentbicycle/zwiebel][silentbicycle/zwiebel]]                     |
+
+* Gitlab
+#+NAME: missing-gitlab
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Link")
+    (--map (list it (emir--mirror-link (epkg it)))
+           (emir--melpa-missing 'epkg-gitlab-package)))
+#+END_SRC
+#+RESULTS: missing-gitlab
+| Package | Link         |
+|---------+--------------|
+| borg    | [[https://gitlab.com/tarsius/borg][tarsius/borg]] |
+| emir    | [[https://gitlab.com/tarsius/emir][tarsius/emir]] |
+
+* Git
+#+NAME: missing-git
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Link")
+    (--map (list it (emir--mirror-link (epkg it)))
+           (emir--melpa-missing 'epkg-git-package)))
+#+END_SRC
+#+RESULTS: missing-git
+| Package             | Link                                                                   |
+|---------------------+------------------------------------------------------------------------|
+| annot               |                                                                        |
+| auto-mounter        |                                                                        |
+| delight             | [[https://savannah.nongnu.org/projects/delight]]                           |
+| ebuild-mode         |                                                                        |
+| factor-mode         |                                                                        |
+| globalizer          |                                                                        |
+| gpicker             |                                                                        |
+| hyperbole           | [[http://www.gnu.org/software/hyperbole]]                                  |
+| im-notification     |                                                                        |
+| lilypond            |                                                                        |
+| org                 | [[http://orgmode.org]]                                                     |
+| os                  | [[http://orgmode.org/worg/org-contrib/gsoc2012/student-projects/org-sync]] |
+| pelican-mode        |                                                                        |
+| pmd                 |                                                                        |
+| project-buffer-mode | [[http://repo.or.cz/w/project-buffer-mode.git]]                            |
+| python-pep8         |                                                                        |
+| python-pylint       |                                                                        |
+| rcirc-ssh           |                                                                        |
+| riece               | [[http://www.nongnu.org/riece]]                                            |
+| slate-config-mode   |                                                                        |
+| speechd             | [[http://www.freebsoft.org/speechd-el]]                                    |
+
+* Bitbucket
+#+NAME: missing-bitbucket
+#+BEGIN_SRC emacs-lisp
+(emir--with-org-header ("Package" "Link")
+  (--map (list it (emir--mirror-link (epkg it)))
+         (emir--melpa-missing 'epkg-bitbucket-package)))
+#+END_SRC
+#+RESULTS: missing-bitbucket
+| Package            | Link                           |
+|--------------------+--------------------------------|
+| ac-source-ispell   | [[https://bitbucket.org/tequilasunset/ac-source-ispell][tequilasunset/ac-source-ispell]] |
+| clay-mode          | [[https://bitbucket.org/prafulla/clay-mode][prafulla/clay-mode]]             |
+| darkroom-mode      | [[https://bitbucket.org/phromo/darkroom-mode][phromo/darkroom-mode]]           |
+| lotto-check        | [[https://bitbucket.org/kaisyu/lotto-check][kaisyu/lotto-check]]             |
+| ogre-material-mode | [[https://bitbucket.org/sevas/ogre-material-mode][sevas/ogre-material-mode]]       |
+| omake              | [[https://bitbucket.org/dmcooke/omake-mode][dmcooke/omake-mode]]             |
+| python-extras      | [[https://bitbucket.org/mickey/python-extras][mickey/python-extras]]           |
+| w32-fullscreen     | [[https://bitbucket.org/phromo/w32-fullscreen][phromo/w32-fullscreen]]          |
+

@@ -1,0 +1,547 @@
+#+SETUPFILE: .orgconfig
+#+NAME: setup
+#+BEGIN_SRC emacs-lisp :results silent
+  (require 'emir)
+
+  (defun emir--melpa-link (name)
+    (-let [(fetcher repo repopage url)
+           (car (epkg-sql [:select [fetcher repo repopage url]
+                           :from melpa-recipes
+                           :where (= name $s1)]
+                          name))]
+      (if (memq fetcher '(github gitlab bitbucket))
+          (format "[[%s][%s]]" repopage repo)
+        (--if-let (or repopage
+                      (and url
+                           (string-match-p "\\`https?://" url)
+                           (replace-regexp-in-string "\\.git\\'" "" url)))
+            (format "[[%s]]" it)
+          ""))))
+
+  (defun emir--mirror-link (pkg)
+    (if (oref pkg repopage-format)
+        (format "[[%s][%s/%s]]"
+                (oref pkg repopage)
+                (oref pkg upstream-user)
+                (oref pkg upstream-name))
+      (--if-let (or (oref pkg repopage)
+                    (oref pkg homepage))
+          (format "[[%s]]" it)
+        "")))
+
+#+END_SRC
+* Summary
+#+NAME: summary
+#+BEGIN_SRC emacs-lisp
+  (require 'finder-inf)
+  (let* ((builtin      (length package--builtins))
+         (builtin-emir (length (epkgs 'name 'epkg-builtin-package-p)))
+         (builtin-elpa (length (epkg-sql [:select *
+                                          :from gelpa-packages
+                                          :where (= type ':core)])))
+         (elpa         (length (epkg-sql [:select *
+                                          :from gelpa-packages
+                                          :where type :in $v1
+                                          :and (isnull unreleased)]
+                                         [:dir :subtree])))
+         (elpa-branch  (length (epkg-sql [:select *
+                                          :from gelpa-packages
+                                          :where (= type ':external)])))
+         (shelved      (length (epkgs 'name 'epkg-shelved-package-p)))
+         (table `(("Archive/Type" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
+                  hline
+                  (builtin     ,builtin-emir "" "" ,builtin ,builtin-elpa "")
+                  (elpa        0  0  "" "" ,elpa "")
+                  (elpa-branch 0  0  "" "" ,elpa-branch "")
+                  hline
+                  (github      0  0  "" "" "" 0)
+                  (gitlab      0  0  "" "" "" 0)
+                  (git         0  0  "" "" "" 0)
+                  (subtree     0  0  "" "" "" "")
+                  hline
+                  (bitbucket   0  0  "" "" "" 0)
+                  (hg          0  0  "" "" "" 0)
+                  hline
+                  (bzr         "" "" "" "" "" 0)
+                  (cvs         "" "" "" "" "" 0)
+                  (darcs       "" "" "" "" "" 0)
+                  (fossil      "" "" "" "" "" 0)
+                  (svn         "" "" "" "" "" 0)
+                  hline
+                  (wiki        0  0  "" "" "" 0)
+                  (file        0  0  "" "" "" "")
+                  (minority    0  0  "" "" "" "")
+                  hline
+                  (orphaned    0  0  "" "" "" "")
+                  (shelved     ,shelved "" ,shelved "" "" "")
+                  hline)))
+    (dolist (class (epkgs 'class 'epkg-mirrored-package--eieio-childp))
+      (cl-incf (nth 1 (assq class table)))
+      (cl-incf (nth 2 (assq class table))))
+    (dolist (fetcher (epkg-sql [:select fetcher :from melpa-recipes]))
+      (cl-incf (nth 6 (assq (car fetcher) table))))
+    `(,@table
+      ("total"
+       ,@(--reduce (cl-mapcar (lambda (a b)
+                                (+ (if (numberp a) a 0)
+                                   (if (numberp b) b 0)))
+                              acc it)
+                   (--keep (and (listp it)
+                                (symbolp (car it))
+                                (cdr it))
+                           table)))))
+#+END_SRC
+#+RESULTS: summary
+| Archive/Type | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
+|--------------+------+--------+-------+-------+-------+-------|
+| builtin      |  423 |        |       |   426 |     5 |       |
+| elpa         |   92 |     92 |       |       |   138 |       |
+| elpa-branch  |    6 |      6 |       |       |    12 |       |
+|--------------+------+--------+-------+-------+-------+-------|
+| github       | 3535 |   3535 |       |       |       |  3097 |
+| gitlab       |   26 |     26 |       |       |       |    24 |
+| git          |   52 |     52 |       |       |       |    40 |
+| subtree      |   21 |     21 |       |       |       |       |
+|--------------+------+--------+-------+-------+-------+-------|
+| bitbucket    |   44 |     44 |       |       |       |    38 |
+| hg           |    1 |      1 |       |       |       |     1 |
+|--------------+------+--------+-------+-------+-------+-------|
+| bzr          |      |        |       |       |       |     2 |
+| cvs          |      |        |       |       |       |     2 |
+| darcs        |      |        |       |       |       |     2 |
+| fossil       |      |        |       |       |       |     0 |
+| svn          |      |        |       |       |       |     9 |
+|--------------+------+--------+-------+-------+-------+-------|
+| wiki         |  762 |    762 |       |       |       |   179 |
+| file         |  313 |    313 |       |       |       |       |
+| minority     |   20 |     20 |       |       |       |       |
+|--------------+------+--------+-------+-------+-------+-------|
+| orphaned     |   35 |     35 |       |       |       |       |
+| shelved      |  964 |        |   964 |       |       |       |
+|--------------+------+--------+-------+-------+-------+-------|
+| total        | 6294 |   4907 |   964 |   426 |   155 |  3394 |
+
+* Emacs
+** New
+#+NAME: builtin-new
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package")
+    (epkg-sql [:select :distinct [builtin-libraries:closql-id]
+               :from [packages builtin-libraries]
+               :where (isnull packages:class)
+               :order-by [(asc builtin-libraries:closql-id)]]))
+#+END_SRC
+#+RESULTS: builtin-new
+
+** Removed
+#+NAME: builtin-removed
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package")
+    (epkg-sql [:select :distinct [packages:name]
+               :from [packages builtin-libraries]
+               :where (isnull builtin-libraries:closql-id)
+               :order-by [(asc packages:name)]]))
+#+END_SRC
+#+RESULTS: builtin-removed
+
+** Prefer elpa
+#+NAME: builtin-prefer-elpa
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Type")
+    (epkg-sql [:select :distinct [packages:name packages:class]
+               :from [packages builtin-libraries]
+               :where (= packages:name builtin-libraries:closql-id)
+               :and packages:class :in $v1
+               :order-by [(asc packages:name)]]
+              [elpa elpa-branch]))
+#+END_SRC
+#+RESULTS: builtin-prefer-elpa
+| Package  | Type |
+|----------+------|
+| ada-mode | elpa |
+| seq      | elpa |
+
+** Prefer upstream
+#+NAME: builtin-prefer-upstream
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Type")
+    (epkg-sql [:select :distinct [packages:name packages:class]
+               :from [packages builtin-libraries]
+               :where (= packages:name builtin-libraries:closql-id)
+               :and packages:class :not :in $v1
+               :order-by [(asc packages:name)]]
+              [builtin elpa elpa-branch]))
+#+END_SRC
+#+RESULTS: builtin-prefer-upstream
+| Package | Type |
+|---------+------|
+| org     | git  |
+
+* Gelpa
+** New
+#+NAME: gelpa-new
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Type")
+    (epkg-sql [:select [name type]
+               :from gelpa-recipes
+               :where (= status 'new)
+               :order-by [(asc name)]]))
+#+END_SRC
+#+RESULTS: gelpa-new
+
+** Pending
+#+NAME: gelpa-pending
+#+BEGIN_SRC emacs-lisp :results list
+  (emir--with-org-header ("Package" "Reason")
+    (--map (assoc (car it) emir-pending-packages)
+           (epkg-sql [:select [name]
+                      :from gelpa-recipes
+                      :where (= status 'pending)
+                      :order-by [(asc name)]])))
+#+END_SRC
+#+RESULTS: gelpa-pending
+
+** Prefer builtin
+- *Revisit*
+  - let-alist
+  - ntlm
+  - python
+  - soap-client
+- *Backport*
+  - cl-generic
+  - cl-lib
+- *Builtin version is more recent*
+  - pinentry
+- *Builtin version is an old implementation*
+  Therefore we mirror the Gelpa version.
+  - ada-mode
+#+NAME: gelpa-prefer-builtin
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package")
+    (epkg-sql [:select :distinct [packages:name]
+               :from [packages gelpa-recipes]
+               :where (= packages:name gelpa-recipes:closql-id)
+               :and (= packages:class 'builtin)
+               :order-by [(asc packages:name)]]))
+#+END_SRC
+#+RESULTS: gelpa-prefer-builtin
+| Package     |
+|-------------|
+| cl-generic  |
+| cl-lib      |
+| let-alist   |
+| ntlm        |
+| pinentry    |
+| python      |
+| soap-client |
+
+** Prefer upstream
+#+NAME: gelpa-prefer-upstream
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Type" "Gelpa" "Method" "Reason" "Link")
+    (mapcar (-lambda ((name type gelpa method))
+              (list name type gelpa
+                    (or method "")
+                    (or (cadr (assoc name emir-preferred-upstreams)) "")
+                    (emir--mirror-link (epkg name))))
+            (epkg-sql [:select :distinct [packages:name
+                                          packages:class
+                                          gelpa-recipes:type
+                                          gelpa-recipes:method]
+                       :from [packages gelpa-recipes]
+                       :where (= packages:name gelpa-recipes:closql-id)
+                       :and packages:class :not :in $v1
+                       :order-by [(asc packages:name)]]
+                      [builtin elpa elpa-branch])))
+#+END_SRC
+#+RESULTS: gelpa-prefer-upstream
+| Package                    | Type   | Gelpa     | Method   | Reason               | Link                                         |
+|----------------------------+--------+-----------+----------+----------------------+----------------------------------------------|
+| ace-window                 | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
+| ack                        | github | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
+| aggressive-indent          | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
+| ahungry-theme              | github | :subtree! | :squash  |                      | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
+| async                      | github | :subtree! | :squash  | squash               | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
+| avy                        | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
+| beacon                     | github | :subtree! | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
+| bug-hunter                 | github | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
+| coffee-mode                | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67443674][#34#67443674]]         | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
+| company                    | github | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
+| company-math               | github | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
+| company-statistics         | github | :subtree! | :squash  | squash               | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
+| dash                       | github | :external |          | external             | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
+| dbus-codegen               | github | :subtree  | :squash  | squash               | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
+| delight                    | git    | :subtree  | :merge   |                      | [[https://savannah.nongnu.org/projects/delight]] |
+| diff-hl                    | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                               |
+| diffview                   | github | :subtree  | :merge   |                      | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
+| dts-mode                   | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164455502][#69#164455502]]        | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
+| easy-kill                  | github | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164356304][melpa#3383#164356304]] | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
+| eldoc-eval                 | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
+| electric-spacing           | github | :subtree! | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164462609][#69#164462609]]        | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
+| ergoemacs-mode             | github | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164897071][melpa#3383#164897071]] | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
+| exwm                       | github | :external |          | external             | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
+| ggtags                     | github | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
+| gnorb                      | github | :subtree  | :squash  | squash               | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
+| highlight-escape-sequences | github | :subtree  | :merge   |                      | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
+| hydra                      | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
+| hyperbole                  | git    | :external |          |                      | [[http://www.gnu.org/software/hyperbole]]        |
+| ioccur                     | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
+| ivy                        | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
+| js2-mode                   | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
+| load-relative              | github | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
+| loc-changes                | github | :subtree! | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
+| loccur                     | github | :subtree! | :squash! | squash               | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
+| math-symbol-lists          | github | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                     |
+| nameless                   | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
+| names                      | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
+| on-screen                  | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164450677][#69#164450677]]        | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
+| org                        | git    | :core     |          |                      | [[http://orgmode.org]]                           |
+| pabbrev                    | github | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164418230][melpa#3383#164418230]] | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
+| parsec                     | github | :subtree  | :squash  |                      | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
+| realgud                    | github | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
+| rich-minority              | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
+| sotlisp                    | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
+| spinner                    | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
+| systemd                    | github | :subtree! | :merge   |                      | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
+| test-simple                | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
+| tiny                       | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
+| undo-tree                  | git    | :subtree! | :squash! | squash               | [[http://www.dr-qubit.org/emacs.php]]            |
+| vlf                        | github | :subtree! | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164299250][melpa#3383#164299250]] | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
+| wcheck-mode                | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68142129][#34#68142129]]         | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
+| web-server                 | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/pull/3394][melpa#3394]]           | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
+| websocket                  | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68123453][#34#68123453]]         | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
+| xelb                       | github | :external |          | external             | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
+| yasnippet                  | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         | [[https://github.com/capitaomorte/yasnippet][capitaomorte/yasnippet]]                       |
+| ztree                      | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
+
+* Melpa
+** New
+#+NAME: melpa-new
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Type" "Link")
+    (mapcar (-lambda ((name fetcher))
+              (list name
+                    fetcher
+                    (emir--melpa-link name)))
+            (epkg-sql [:select [name fetcher]
+                       :from melpa-recipes
+                       :where (= status 'new)
+                       :order-by [(asc name)]])))
+#+END_SRC
+#+RESULTS: melpa-new
+
+** Pending
+#+NAME: melpa-pending
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Reason")
+    (mapcar (-lambda ((name))
+              (assoc name emir-pending-packages))
+            (epkg-sql [:select [name]
+                       :from melpa-recipes
+                       :where (= status 'pending)
+                       :order-by [(asc name)]])))
+#+END_SRC
+#+RESULTS: melpa-pending
+
+** Shared repositories
+#+NAME: secondary-packages
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Primary package" "Secondary package" "Type")
+    (epkg-sql [:select :distinct [packages:name
+                                  melpa-recipes:name
+                                  packages:class]
+               :from [packages melpa-recipes]
+               :where (= packages:name melpa-recipes:closql-id)
+               :and :not (= melpa-recipes:closql-id
+                            melpa-recipes:name)
+               :order-by [(asc packages:name)
+                          (asc melpa-recipes:name)]]))
+#+END_SRC
+#+RESULTS: secondary-packages
+| Primary package         | Secondary package               | Type      |
+|-------------------------+---------------------------------+-----------|
+| ac-php                  | ac-php-core                     | github    |
+| ac-php                  | company-php                     | github    |
+| axiom-environment       | ob-axiom                        | bitbucket |
+| biblio                  | biblio-core                     | github    |
+| button-lock             | wiki-nav                        | github    |
+| chumpy-windows          | spaces                          | github    |
+| chumpy-windows          | splitter                        | github    |
+| chumpy-windows          | window-jump                     | github    |
+| circe                   | tracking                        | github    |
+| clojure-mode            | clojure-mode-extra-font-locking | github    |
+| codesearch              | projectile-codesearch           | github    |
+| copyit                  | copyit-pandoc                   | github    |
+| ctl-mode                | gs-mode                         | github    |
+| dash                    | dash-functional                 | github    |
+| datetime-format         | timecop                         | github    |
+| ddskk                   | ccc                             | orphaned  |
+| ddskk                   | cdb                             | orphaned  |
+| deferred                | concurrent                      | github    |
+| dictionary              | connection                      | github    |
+| dictionary              | link                            | github    |
+| dired-hacks             | dired-avfs                      | github    |
+| dired-hacks             | dired-filter                    | github    |
+| dired-hacks             | dired-hacks-utils               | github    |
+| dired-hacks             | dired-narrow                    | github    |
+| dired-hacks             | dired-open                      | github    |
+| dired-hacks             | dired-rainbow                   | github    |
+| dired-hacks             | dired-ranger                    | github    |
+| dired-hacks             | dired-subtree                   | github    |
+| distel-completion-lib   | auto-complete-distel            | github    |
+| distel-completion-lib   | company-distel                  | github    |
+| dix                     | dix-evil                        | github    |
+| django-mode             | django-snippets                 | github    |
+| eclim                   | ac-emacs-eclim                  | github    |
+| eclim                   | company-emacs-eclim             | github    |
+| elfeed                  | elfeed-web                      | github    |
+| emacsql                 | emacsql-mysql                   | github    |
+| emacsql                 | emacsql-psql                    | github    |
+| emacsql                 | emacsql-sqlite                  | github    |
+| esqlite                 | esqlite-helm                    | github    |
+| factor-mode             | fuel                            | git       |
+| flx                     | flx-ido                         | github    |
+| flyspell-correct        | flyspell-correct-helm           | github    |
+| flyspell-correct        | flyspell-correct-ivy            | github    |
+| flyspell-correct        | flyspell-correct-popup          | github    |
+| git-emacs               | git-blamed                      | github    |
+| git-modes               | gitattributes-mode              | github    |
+| git-modes               | gitconfig-mode                  | github    |
+| git-modes               | gitignore-mode                  | github    |
+| gitlab                  | helm-gitlab                     | github    |
+| gitlab                  | ivy-gitlab                      | github    |
+| go-mode                 | go-guru                         | github    |
+| go-mode                 | go-rename                       | github    |
+| groovy-mode             | grails-mode                     | github    |
+| haskell-emacs           | haskell-emacs-base              | github    |
+| haskell-emacs           | haskell-emacs-text              | github    |
+| helm                    | helm-core                       | github    |
+| helm-bibtex             | ivy-bibtex                      | github    |
+| helm-etags+             | ctags-update                    | github    |
+| ido-ubiquitous          | ido-completing-read+            | github    |
+| ivy                     | counsel                         | github    |
+| ivy                     | ivy-hydra                       | github    |
+| ivy                     | swiper                          | github    |
+| jade-mode               | stylus-mode                     | github    |
+| jade-mode               | sws-mode                        | github    |
+| jedi                    | jedi-core                       | github    |
+| jump                    | inflections                     | github    |
+| kaesar                  | kaesar-file                     | github    |
+| kaesar                  | kaesar-mode                     | github    |
+| load-theme-buffer-local | color-theme-buffer-local        | github    |
+| magit                   | git-commit                      | github    |
+| magit                   | magit-popup                     | github    |
+| nameframe               | nameframe-perspective           | github    |
+| nameframe               | nameframe-projectile            | github    |
+| nand2tetris             | company-nand2tetris             | github    |
+| nand2tetris             | nand2tetris-assembler           | github    |
+| nixos-options           | company-nixos-options           | github    |
+| nixos-options           | helm-nixos-options              | github    |
+| nixos-options           | nix-sandbox                     | github    |
+| nxhtml                  | sml-modeline                    | orphaned  |
+| opener                  | evil-opener                     | github    |
+| org                     | org-mac-iCal                    | git       |
+| org                     | org-mac-link                    | git       |
+| ox-twiki                | ox-tiddly                       | github    |
+| pig-mode                | pig-snippets                    | github    |
+| pollen-mode             | company-pollen                  | github    |
+| processing-mode         | processing-snippets             | github    |
+| prosjekt                | anything-prosjekt               | github    |
+| prosjekt                | dirtree-prosjekt                | github    |
+| prosjekt                | helm-prosjekt                   | github    |
+| request                 | request-deferred                | github    |
+| restclient              | restclient-helm                 | github    |
+| rinari                  | ruby-compilation                | github    |
+| sift                    | projectile-sift                 | github    |
+| smart-mode-line         | smart-mode-line-powerline-theme | github    |
+| sourcekit               | company-sourcekit               | github    |
+| speechd                 | speechd-el                      | git       |
+| springboard             | ido-springboard                 | github    |
+| stan-mode               | stan-snippets                   | github    |
+| term-manager            | term-projectile                 | github    |
+| tern                    | tern-auto-complete              | github    |
+| use-package             | bind-key                        | github    |
+| use-package-chords      | bind-chord                      | github    |
+| w3m                     | shimbun                         | orphaned  |
+| wgrep                   | wgrep-ack                       | github    |
+| wgrep                   | wgrep-ag                        | github    |
+| wgrep                   | wgrep-helm                      | github    |
+| wgrep                   | wgrep-pt                        | github    |
+| ycm                     | company-ycm                     | github    |
+| ycmd                    | company-ycmd                    | github    |
+| ycmd                    | flycheck-ycmd                   | github    |
+
+** Diverging sources
+- *all-in-one git*
+  - autotest,toggle [[https://github.com/zenspider/elisp/issues/5][#5]] rejected
+  - flymake-lua [[https://github.com/sroccaserra/emacs/issues/4][#4]] no reply
+  - ox-clip [[https://github.com/jkitchin/scimax/issues/21][#21]] pending
+- *bzr*
+  - color-theme
+- *cvs*
+  - w3m [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]
+- *darcs*
+  - darcsum [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]
+  - tex-smart-umlauts
+- *svn*
+  - caml
+  - cg
+  - clang-format
+  - confluence
+  - dic-lookup-w3m
+  - helm-ls-svn
+#+NAME: melpa-elsewhere
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Type" "Melpa" "Melpa Link")
+    (-keep (-lambda ((name class fetcher repo))
+             (and (not (or (and (eq class 'subtree)  (eq fetcher 'github))
+                           (and (eq class 'subtree)  (eq fetcher 'git))
+                           (and (eq class 'orphaned) (eq fetcher 'github))
+                           (and (eq class 'file)     (eq fetcher 'github)
+                                (string-prefix-p "emacsmirror/" repo))))
+                  (list name class fetcher
+                        (if (memq fetcher '(github gitlab bitbucket))
+                            (emir--melpa-link name)
+                          ""))))
+           (epkg-sql [:select :distinct [packages:name
+                                         packages:class
+                                         melpa-recipes:fetcher
+                                         melpa-recipes:repo]
+                      :from [packages melpa-recipes]
+                      :where    (= melpa-recipes:closql-id packages:name)
+                      :and      (= melpa-recipes:closql-id melpa-recipes:name)
+                      :and :not (= melpa-recipes:fetcher   packages:class)
+                      :order-by [(asc packages:name)]])))
+#+END_SRC
+#+RESULTS: melpa-elsewhere
+| Package             | Type     | Melpa     | Melpa Link                 |
+|---------------------+----------+-----------+----------------------------|
+| autotest            | minority | github    | [[https://github.com/zenspider/elisp][zenspider/elisp]]            |
+| caml                | orphaned | svn       |                            |
+| cfengine-code-style | minority | github    | [[https://github.com/cfengine/core][cfengine/core]]              |
+| cg                  | orphaned | svn       |                            |
+| clang-format        | orphaned | svn       |                            |
+| cmake-mode          | minority | github    | [[https://github.com/Kitware/CMake][Kitware/CMake]]              |
+| color-theme         | orphaned | bzr       |                            |
+| confluence          | orphaned | svn       |                            |
+| cython-mode         | minority | github    | [[https://github.com/cython/cython][cython/cython]]              |
+| darcsum             | orphaned | darcs     |                            |
+| dic-lookup-w3m      | orphaned | svn       |                            |
+| dsvn                | minority | svn       |                            |
+| flymake-lua         | minority | github    | [[https://github.com/sroccaserra/emacs][sroccaserra/emacs]]          |
+| frame-restore       | shelved  | github    | [[https://github.com/lunaryorn/frame-restore.el][lunaryorn/frame-restore.el]] |
+| google-c-style      | minority | github    | [[https://github.com/google/styleguide][google/styleguide]]          |
+| helm-ls-svn         | orphaned | svn       |                            |
+| llvm-mode           | minority | git       |                            |
+| nemerle             | minority | github    | [[https://github.com/rsdn/nemerle][rsdn/nemerle]]               |
+| ninja-mode          | minority | github    | [[https://github.com/martine/ninja][martine/ninja]]              |
+| ox-clip             | minority | github    | [[https://github.com/jkitchin/scimax][jkitchin/scimax]]            |
+| po-mode             | minority | git       |                            |
+| pylint              | minority | github    | [[https://github.com/PyCQA/pylint][PyCQA/pylint]]               |
+| ruby-additional     | minority | svn       |                            |
+| ruby-electric       | minority | svn       |                            |
+| tex-smart-umlauts   | minority | darcs     |                            |
+| thrift              | minority | github    | [[https://github.com/apache/thrift][apache/thrift]]              |
+| toggle              | minority | github    | [[https://github.com/zenspider/elisp][zenspider/elisp]]            |
+| w3m                 | orphaned | cvs       |                            |
+| wisp-mode           | minority | bitbucket | [[https://bitbucket.org/ArneBab/wisp][ArneBab/wisp]]               |
