@@ -567,6 +567,7 @@
   - ecb: https://github.com/alexott/ecb/pull/36
   - elscreen: https://github.com/knu/elscreen/pull/25
   - general-close: [[https://github.com/emacs-berlin/general-close/commit/4544040b3498d7f734ecce251708cd70089cd63b][emacs-berlin/general-close@4544040]]
+    even though no entry below
   - helm-odoc: [[https://github.com/trietlai/helm-odoc/issues/1][trietlai/helm-odoc#1]]
   - w3m: lets wait for the switch away from cvs
 #+NAME: unsatisfied-hard
@@ -589,7 +590,6 @@
 | dic-lookup-w3m  | orphaned | svn    | text-translator        |
 | ecb             | github   | github | semantic-analyze       |
 | ecb             | github   | github | semantic-ctxt          |
-| general-close   | github   | github | thingatpt-highlight    |
 | helm-odoc       | github   |        | helm-plugin            |
 | malabar-mode    | github   | github | cc-subword             |
 | malabar-mode    | github   | github | ede/maven2             |
@@ -675,6 +675,7 @@
 * Dependent on shelved packages
 ** hard dependencies
 - *Revisit*
+  - Blame this line, what's going on here?
 - *Pending*
   - elisp-depend [[https://github.com/tehom/elisp-depend/pull/1][tehom/elisp-depend#1]]
 #+NAME: required-shelved-hard
@@ -685,35 +686,24 @@
                         '((= hard 't) (isnull drop)))
 #+END_SRC
 #+RESULTS: required-shelved-hard
-| Package                   | Type        | Melpa  | Feature                  |
-|---------------------------+-------------+--------+--------------------------|
-| ac-haskell-process        | github      | github | haskell                  |
-| auctex                    | elpa-branch |        | etexshow                 |
-| clj-refactor              | github      | github | inflections              |
-| company-ghci              | github      | github | haskell                  |
-| drupal-mode               | github      | github | gtags                    |
-| efire                     | github      | github | lui                      |
-| elisp-depend              | github      | github | emtest/main/define       |
-| elisp-depend              | github      | github | emtest/testhelp/standard |
-| elisp-depend              | github      | github | emtest/testhelp/tagnames |
-| emms-player-mpv-jp-radios | github      | github | later-do                 |
-| emms-player-simple-mpv    | github      | github | later-do                 |
-| ess                       | github      | github | rtf-support              |
-| helm-rails                | github      | github | inflections              |
-| hyperbole                 | git         |        | efs                      |
-| jabber                    | git         | git    | osd                      |
-| lilypond                  | git         |        | ecasound                 |
-| lilypond                  | git         |        | ilisp                    |
-| mpg123                    | file        | github | smart-dnd                |
-| notes-mode                | elpa        |        | mailcrypt                |
-| projectile-rails          | github      | github | inflections              |
-| python-mode               | gitlab      | gitlab | pymacs                   |
-| railgun                   | github      | github | inflections              |
-| riece                     | git         |        | lsdb                     |
-| rpm-spec-mode             | github      | github | shindent                 |
-| ruby-factory              | github      | github | inflections              |
-| slack                     | github      | github | lui                      |
-| w3m                       | orphaned    | cvs    | lsdb                     |
+| Package       | Type        | Melpa  | Feature                  |
+|---------------+-------------+--------+--------------------------|
+| auctex        | elpa-branch |        | etexshow                 |
+| drupal-mode   | github      | github | gtags                    |
+| elisp-depend  | github      | github | emtest/main/define       |
+| elisp-depend  | github      | github | emtest/testhelp/standard |
+| elisp-depend  | github      | github | emtest/testhelp/tagnames |
+| ess           | github      | github | rtf-support              |
+| hyperbole     | git         |        | efs                      |
+| jabber        | git         | git    | osd                      |
+| lilypond      | git         |        | ecasound                 |
+| lilypond      | git         |        | ilisp                    |
+| mpg123        | file        | github | smart-dnd                |
+| notes-mode    | elpa        |        | mailcrypt                |
+| python-mode   | gitlab      | gitlab | pymacs                   |
+| riece         | git         |        | lsdb                     |
+| rpm-spec-mode | github      | github | shindent                 |
+| w3m           | orphaned    | cvs    | lsdb                     |
 
 ** soft dependencies
 - *Revisit*

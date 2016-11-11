@@ -98,7 +98,7 @@
 | elpa         |   92 |     92 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3535 |   3535 |       |       |       |  3097 |
+| github       | 3541 |   3541 |       |       |       |  3103 |
 | gitlab       |   26 |     26 |       |       |       |    24 |
 | git          |   52 |     52 |       |       |       |    40 |
 | subtree      |   21 |     21 |       |       |       |       |
@@ -107,19 +107,19 @@
 | hg           |    1 |      1 |       |       |       |     1 |
 |--------------+------+--------+-------+-------+-------+-------|
 | bzr          |      |        |       |       |       |     2 |
-| cvs          |      |        |       |       |       |     2 |
+| cvs          |      |        |       |       |       |     4 |
 | darcs        |      |        |       |       |       |     2 |
 | fossil       |      |        |       |       |       |     0 |
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  762 |    762 |       |       |       |   179 |
 | file         |  313 |    313 |       |       |       |       |
-| minority     |   20 |     20 |       |       |       |       |
+| minority     |   22 |     22 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   35 |     35 |       |       |       |       |
 | shelved      |  964 |        |   964 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6294 |   4907 |   964 |   426 |   155 |  3394 |
+| total        | 6302 |   4915 |   964 |   426 |   155 |  3402 |
 
 * Emacs
 ** New
@@ -514,34 +514,36 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-elsewhere
-| Package             | Type     | Melpa     | Melpa Link                 |
-|---------------------+----------+-----------+----------------------------|
-| autotest            | minority | github    | [[https://github.com/zenspider/elisp][zenspider/elisp]]            |
-| caml                | orphaned | svn       |                            |
-| cfengine-code-style | minority | github    | [[https://github.com/cfengine/core][cfengine/core]]              |
-| cg                  | orphaned | svn       |                            |
-| clang-format        | orphaned | svn       |                            |
-| cmake-mode          | minority | github    | [[https://github.com/Kitware/CMake][Kitware/CMake]]              |
-| color-theme         | orphaned | bzr       |                            |
-| confluence          | orphaned | svn       |                            |
-| cython-mode         | minority | github    | [[https://github.com/cython/cython][cython/cython]]              |
-| darcsum             | orphaned | darcs     |                            |
-| dic-lookup-w3m      | orphaned | svn       |                            |
-| dsvn                | minority | svn       |                            |
-| flymake-lua         | minority | github    | [[https://github.com/sroccaserra/emacs][sroccaserra/emacs]]          |
-| frame-restore       | shelved  | github    | [[https://github.com/lunaryorn/frame-restore.el][lunaryorn/frame-restore.el]] |
-| google-c-style      | minority | github    | [[https://github.com/google/styleguide][google/styleguide]]          |
-| helm-ls-svn         | orphaned | svn       |                            |
-| llvm-mode           | minority | git       |                            |
-| nemerle             | minority | github    | [[https://github.com/rsdn/nemerle][rsdn/nemerle]]               |
-| ninja-mode          | minority | github    | [[https://github.com/martine/ninja][martine/ninja]]              |
-| ox-clip             | minority | github    | [[https://github.com/jkitchin/scimax][jkitchin/scimax]]            |
-| po-mode             | minority | git       |                            |
-| pylint              | minority | github    | [[https://github.com/PyCQA/pylint][PyCQA/pylint]]               |
-| ruby-additional     | minority | svn       |                            |
-| ruby-electric       | minority | svn       |                            |
-| tex-smart-umlauts   | minority | darcs     |                            |
-| thrift              | minority | github    | [[https://github.com/apache/thrift][apache/thrift]]              |
-| toggle              | minority | github    | [[https://github.com/zenspider/elisp][zenspider/elisp]]            |
-| w3m                 | orphaned | cvs       |                            |
-| wisp-mode           | minority | bitbucket | [[https://bitbucket.org/ArneBab/wisp][ArneBab/wisp]]               |
+| Package               | Type     | Melpa     | Melpa Link                 |
+|-----------------------+----------+-----------+----------------------------|
+| autotest              | minority | github    | [[https://github.com/zenspider/elisp][zenspider/elisp]]            |
+| caml                  | orphaned | svn       |                            |
+| cfengine-code-style   | minority | github    | [[https://github.com/cfengine/core][cfengine/core]]              |
+| cg                    | orphaned | svn       |                            |
+| clang-format          | orphaned | svn       |                            |
+| cmake-mode            | minority | github    | [[https://github.com/Kitware/CMake][Kitware/CMake]]              |
+| color-theme           | orphaned | bzr       |                            |
+| confluence            | orphaned | svn       |                            |
+| cython-mode           | minority | github    | [[https://github.com/cython/cython][cython/cython]]              |
+| darcsum               | orphaned | darcs     |                            |
+| debian-bug            | minority | cvs       |                            |
+| debian-changelog-mode | minority | cvs       |                            |
+| dic-lookup-w3m        | orphaned | svn       |                            |
+| dsvn                  | minority | svn       |                            |
+| flymake-lua           | minority | github    | [[https://github.com/sroccaserra/emacs][sroccaserra/emacs]]          |
+| frame-restore         | shelved  | github    | [[https://github.com/lunaryorn/frame-restore.el][lunaryorn/frame-restore.el]] |
+| google-c-style        | minority | github    | [[https://github.com/google/styleguide][google/styleguide]]          |
+| helm-ls-svn           | orphaned | svn       |                            |
+| llvm-mode             | minority | git       |                            |
+| nemerle               | minority | github    | [[https://github.com/rsdn/nemerle][rsdn/nemerle]]               |
+| ninja-mode            | minority | github    | [[https://github.com/martine/ninja][martine/ninja]]              |
+| ox-clip               | minority | github    | [[https://github.com/jkitchin/scimax][jkitchin/scimax]]            |
+| po-mode               | minority | git       |                            |
+| pylint                | minority | github    | [[https://github.com/PyCQA/pylint][PyCQA/pylint]]               |
+| ruby-additional       | minority | svn       |                            |
+| ruby-electric         | minority | svn       |                            |
+| tex-smart-umlauts     | minority | darcs     |                            |
+| thrift                | minority | github    | [[https://github.com/apache/thrift][apache/thrift]]              |
+| toggle                | minority | github    | [[https://github.com/zenspider/elisp][zenspider/elisp]]            |
+| w3m                   | orphaned | cvs       |                            |
+| wisp-mode             | minority | bitbucket | [[https://bitbucket.org/ArneBab/wisp][ArneBab/wisp]]               |

@@ -81,10 +81,12 @@
   (emir--save-variable 'emir-renamed-files value)
 #+END_SRC
 #+NAME: emir-renamed-files
-| Name          | Filename                 |
-|---------------+--------------------------|
-| llvm-mode     | llvm-mode.el?view=co     |
-| tablegen-mode | tablegen-mode.el?view=co |
+| Name                  | Filename                                     |
+|-----------------------+----------------------------------------------|
+| llvm-mode             | llvm-mode.el?view=co                         |
+| tablegen-mode         | tablegen-mode.el?view=co                     |
+| debian-bug            | debian-bug.el?root=pkg-goodies-el            |
+| debian-changelog-mode | debian-changelog-mode.el?root=pkg-goodies-el |
 
 ** variable ~emir-preferred-upstreams~
 #+NAME: set--emir-preferred-upstreams
