@@ -61,7 +61,7 @@ help:
 	(require 'org)\
 	(let ((org-babel-confirm-evaluate-answer-no 'noeval))\
 	  (org-html-export-to-html)))" 2>&1 |\
-	grep "Evaluation of this emacs-lisp code-block"
+	grep "Evaluation of this emacs-lisp code block"
 	@rm -f $@~
 
 publish:
