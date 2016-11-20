@@ -98,8 +98,8 @@
 | elpa         |   92 |     92 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3541 |   3541 |       |       |       |  3103 |
-| gitlab       |   26 |     26 |       |       |       |    24 |
+| github       | 3559 |   3559 |       |       |       |  3122 |
+| gitlab       |   27 |     27 |       |       |       |    25 |
 | git          |   52 |     52 |       |       |       |    40 |
 | subtree      |   21 |     21 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
@@ -113,13 +113,13 @@
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  762 |    762 |       |       |       |   179 |
-| file         |  313 |    313 |       |       |       |       |
+| file         |  312 |    312 |       |       |       |       |
 | minority     |   22 |     22 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   35 |     35 |       |       |       |       |
-| shelved      |  964 |        |   964 |       |       |       |
+| shelved      |  963 |        |   963 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6302 |   4915 |   964 |   426 |   155 |  3402 |
+| total        | 6319 |   4933 |   963 |   426 |   155 |  3422 |
 
 * Emacs
 ** New
@@ -452,6 +452,7 @@
 | request                 | request-deferred                | github    |
 | restclient              | restclient-helm                 | github    |
 | rinari                  | ruby-compilation                | github    |
+| ripgrep                 | projectile-ripgrep              | github    |
 | sift                    | projectile-sift                 | github    |
 | smart-mode-line         | smart-mode-line-powerline-theme | github    |
 | sourcekit               | company-sourcekit               | github    |

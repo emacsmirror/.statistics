@@ -402,6 +402,7 @@
 * Features provided by multiple packages
 ** excluding shelved
 - *Pending*
+  - go [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - ob-scala [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
   - org-bullets [[https://github.com/sabof/org-bullets/issues/18][#18]]
 #+NAME: conflicts
@@ -411,6 +412,8 @@
 #+RESULTS: conflicts
 | Feature     | Package     |
 |-------------+-------------|
+| gnugo       | gnugo       |
+| gnugo       | go          |
 | ob-scala    | org         |
 | ob-scala    | scala-mode  |
 | org-bullets | org         |
@@ -463,6 +466,8 @@
 | ewoc                 | ewoc                 |         |
 | expect               | cddb                 |         |
 | expect               | mailcrypt            | t       |
+| gnugo                | gnugo                |         |
+| gnugo                | go                   |         |
 | haskell              | haskell              | t       |
 | haskell              | haskell-mode         |         |
 | htmlize              | htmlize              |         |
