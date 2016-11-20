@@ -40,6 +40,7 @@ help:
 	$(info make [html]       - generate html)
 	$(info make publish      - publish html)
 	$(info make clean        - remove html)
+	@printf "\n"
 
 %.org: force
 	@printf ">>> Updating $@\n"
