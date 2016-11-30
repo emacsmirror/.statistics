@@ -78,6 +78,7 @@
 | bookem                       | [[https://github.com/kjfletch/bookem-el][kjfletch/bookem-el]]                        |
 | bookiez                      | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                      |
 | bookmark-extensions          | [[https://github.com/thierryvolpiatto/emacs-bmk-ext][thierryvolpiatto/emacs-bmk-ext]]            |
+| borg                         | [[https://github.com/emacscollective/borg][emacscollective/borg]]                      |
 | breadcrumb                   | [[https://github.com/pheaver/breadcrumb][pheaver/breadcrumb]]                        |
 | buffer-action                | [[https://github.com/xwl/buffer-action][xwl/buffer-action]]                         |
 | buffer-timer                 | [[https://github.com/hardaker/elisp-buffer-timer][hardaker/elisp-buffer-timer]]               |
@@ -182,6 +183,7 @@
 | emacs-speaks-nonmem          | [[https://github.com/mattfidler/Emacs-Speaks-NONMEM][mattfidler/Emacs-Speaks-NONMEM]]            |
 | emacs-xcode                  | [[https://github.com/senny/emacs-xcode][senny/emacs-xcode]]                         |
 | emacspeak                    | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                         |
+| emir                         | [[https://github.com/emacscollective/emir][emacscollective/emir]]                      |
 | emmental                     | [[https://github.com/jave/emmental][jave/emmental]]                             |
 | emsane                       | [[https://github.com/jave/emsane][jave/emsane]]                               |
 | emux                         | [[https://github.com/re5et/emux][re5et/emux]]                                |
@@ -648,10 +650,6 @@
            (emir--melpa-missing 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
-| Package | Link                 |
-|---------+----------------------|
-| borg    | [[https://gitlab.com/emacscollective/borg][emacscollective/borg]] |
-| emir    | [[https://gitlab.com/emacscollective/emir][emacscollective/emir]] |
 
 * Git
 #+NAME: missing-git
