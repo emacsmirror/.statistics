@@ -98,7 +98,7 @@
 | elpa         |   92 |     92 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3570 |   3570 |       |       |       |  3131 |
+| github       | 3579 |   3579 |       |       |       |  3141 |
 | gitlab       |   23 |     23 |       |       |       |    23 |
 | git          |   52 |     52 |       |       |       |    40 |
 | subtree      |   21 |     21 |       |       |       |       |
@@ -113,13 +113,13 @@
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  762 |    762 |       |       |       |   179 |
-| file         |  311 |    311 |       |       |       |       |
+| file         |  310 |    310 |       |       |       |       |
 | minority     |   22 |     22 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   36 |     36 |       |       |       |       |
 | shelved      |  964 |        |   964 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6327 |   4940 |   964 |   426 |   155 |  3429 |
+| total        | 6335 |   4948 |   964 |   426 |   155 |  3439 |
 
 * Emacs
 ** New
@@ -473,6 +473,8 @@
 | ycmd                    | flycheck-ycmd                   | github    |
 
 ** Diverging sources
+- *remove from melpa?*
+  - frame-restore [[https://github.com/melpa/melpa/issues/4455][#4455]]
 - *all-in-one git*
   - autotest,toggle [[https://github.com/zenspider/elisp/issues/5][#5]] rejected
   - flymake-lua [[https://github.com/sroccaserra/emacs/issues/4][#4]] no reply
