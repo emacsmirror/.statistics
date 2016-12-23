@@ -18,7 +18,7 @@
 #+NAME: set--emir-reports-directory
 #+BEGIN_SRC emacs-lisp :results silent
   (emir--save-variable 'emir-reports-directory
-                       "~/Repos/emacsmirror/export/reports/")
+                       "~/code/emacsmirror/export/reports/")
 #+END_SRC
 
 ** variable ~emir-ignored-dependencies~
