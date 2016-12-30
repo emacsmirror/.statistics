@@ -98,8 +98,8 @@
 | elpa         |   92 |     92 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3592 |   3592 |       |       |       |  3154 |
-| gitlab       |   24 |     24 |       |       |       |    24 |
+| github       | 3596 |   3596 |       |       |       |  3158 |
+| gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   52 |     52 |       |       |       |    40 |
 | subtree      |   21 |     21 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
@@ -119,7 +119,7 @@
 | orphaned     |   36 |     36 |       |       |       |       |
 | shelved      |  964 |        |   964 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6349 |   4962 |   964 |   426 |   155 |  3453 |
+| total        | 6354 |   4967 |   964 |   426 |   155 |  3458 |
 
 * Emacs
 ** New
@@ -288,6 +288,7 @@
 | ioccur                     | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
 | ivy                        | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
 | js2-mode                   | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
+| json-mode                  | github | :subtree! | :merge   |                      | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
 | load-relative              | github | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
 | loc-changes                | github | :subtree! | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
 | loccur                     | github | :subtree! | :squash! | squash               | [[https://github.com/fourier/loccur][fourier/loccur]]                               |

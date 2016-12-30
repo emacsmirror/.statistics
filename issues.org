@@ -397,12 +397,11 @@
 
 * Features provided by multiple packages
 ** excluding shelved
-- *TODO*
-  - org-ebib
 - *Pending*
   - go [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - ob-scala [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
   - org-bullets [[https://github.com/sabof/org-bullets/issues/18][#18]]
+  - org-ebib [[https://github.com/joostkremers/ebib/issues/112][#112]]
 #+NAME: conflicts
 #+BEGIN_SRC emacs-lisp
   (emir--provide-issues t)
@@ -625,7 +624,9 @@
 - *Revisit*
 - *Pending*
   - es-lib, project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
-  - hyperbole: mailed author, sais not hard dependencies
+  - hyperbole: mailed author
+    He says that these are not hard dependencies
+    and that they will eventually be available again.
   - markchars: mailed author
 #+NAME: unsatisfied-soft
 #+BEGIN_SRC emacs-lisp
@@ -680,8 +681,6 @@
 
 * Dependent on shelved packages
 ** hard dependencies
-- *Revisit*
-  - Blame this line, what's going on here?
 - *Pending*
   - elisp-depend [[https://github.com/tehom/elisp-depend/pull/1][tehom/elisp-depend#1]]
 #+NAME: required-shelved-hard
