@@ -223,6 +223,9 @@
 - *Revisit*
 - *Pending*
   - slime, sly, ilisp (shelved) [[https://github.com/capitaomorte/sly/issues/86][capitaomorte/sly#86]]
+- *Permanent*
+  - ess: rtf-support is only available in xemacs
+  - hyperbole: efs is an xemacs package on emacs tramp is used
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature" "Global")
@@ -252,11 +255,13 @@
 | emacs-speaks-nonmem             | github      | org-publish          | t      |
 | emacspeak                       | github      | org-exp              | t      |
 | erlang                          | github      | tags                 | t      |
+| ess                             | github      | rtf-support          | t      |
 | folding                         | github      | mode-motion          | global |
 | folio                           | shelved     | color-theme          | global |
 | gnuplot                         | github      | toolbar              | global |
 | gnus                            | builtin     | un-define            | global |
 | help+                           | wiki        | info+20              | global |
+| hyperbole                       | git         | efs                  | t      |
 | icicles                         | wiki        | color-theme          | global |
 | jabber                          | git         | un-define            | global |
 | lacarte                         | wiki        | subr-21              | global |
@@ -300,6 +305,9 @@
 - *Revisit*
 - *Pending*
   - es-lib, project-explorer [[https://github.com/sabof/project-explorer/issues/47][sabof/project-explorer#47]]
+  - hyperbole: maintainer said by mail that those dependencies are not
+    actually necessary and that they eventually will be available
+    again.
   - jabber [[https://github.com/legoscia/emacs-jabber/pull/16][legoscia/emacs-jabber#16]]
 #+NAME: required-ease
 #+BEGIN_SRC emacs-lisp
@@ -398,6 +406,7 @@
 * Features provided by multiple packages
 ** excluding shelved
 - *Pending*
+  - expect, timer [[https://github.com/barak/mailcrypt/pull/1][#1]]
   - go [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - ob-scala [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
   - org-bullets [[https://github.com/sabof/org-bullets/issues/18][#18]]
@@ -409,6 +418,8 @@
 #+RESULTS: conflicts
 | Feature     | Package     |
 |-------------+-------------|
+| expect      | cddb        |
+| expect      | mailcrypt   |
 | gnugo       | gnugo       |
 | gnugo       | go          |
 | ob-scala    | org         |
@@ -417,6 +428,8 @@
 | org-bullets | org-bullets |
 | org-ebib    | ebib        |
 | org-ebib    | org         |
+| timer       | emacs       |
+| timer       | mailcrypt   |
 
 ** including shelved
 #+NAME: conflicts-shelved
@@ -463,7 +476,7 @@
 | ewoc                 | dvc                  | t       |
 | ewoc                 | ewoc                 |         |
 | expect               | cddb                 |         |
-| expect               | mailcrypt            | t       |
+| expect               | mailcrypt            |         |
 | gnugo                | gnugo                |         |
 | gnugo                | go                   |         |
 | haskell              | haskell              | t       |
@@ -542,7 +555,7 @@
 | timeclock            | planner              | t       |
 | timeclock            | timeclock            |         |
 | timer                | emacs                |         |
-| timer                | mailcrypt            | t       |
+| timer                | mailcrypt            |         |
 | tracking             | circe                |         |
 | tracking             | elim                 | t       |
 | tree-mode            | pases                | t       |
@@ -681,8 +694,11 @@
 
 * Dependent on shelved packages
 ** hard dependencies
+- *TODO*
+  - lilypond
+  - python-mode
 - *Pending*
-  - elisp-depend [[https://github.com/tehom/elisp-depend/pull/1][tehom/elisp-depend#1]]
+  - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
 #+NAME: required-shelved-hard
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -691,27 +707,18 @@
                         '((= hard 't) (isnull drop)))
 #+END_SRC
 #+RESULTS: required-shelved-hard
-| Package       | Type        | Melpa  | Feature                  |
-|---------------+-------------+--------+--------------------------|
-| auctex        | elpa-branch |        | etexshow                 |
-| drupal-mode   | github      | github | gtags                    |
-| elisp-depend  | github      | github | emtest/main/define       |
-| elisp-depend  | github      | github | emtest/testhelp/standard |
-| elisp-depend  | github      | github | emtest/testhelp/tagnames |
-| ess           | github      | github | rtf-support              |
-| hyperbole     | git         |        | efs                      |
-| jabber        | git         | git    | osd                      |
-| lilypond      | git         |        | ecasound                 |
-| lilypond      | git         |        | ilisp                    |
-| mpg123        | file        | github | smart-dnd                |
-| notes-mode    | elpa        |        | mailcrypt                |
-| python-mode   | gitlab      | gitlab | pymacs                   |
-| riece         | git         |        | lsdb                     |
-| rpm-spec-mode | github      | github | shindent                 |
-| w3m           | orphaned    | cvs    | lsdb                     |
+| Package       | Type   | Melpa  | Feature  |
+|---------------+--------+--------+----------|
+| lilypond      | git    |        | ecasound |
+| lilypond      | git    |        | ilisp    |
+| python-mode   | gitlab | gitlab | pymacs   |
+| rpm-spec-mode | github | github | shindent |
 
 ** soft dependencies
-- *Revisit*
+- *TODO*
+  - anything
+- *Pending*
+  - haml-mode [[https://github.com/nex3/haml-mode/issues/34][#34]]
 #+NAME: required-shelved-soft
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -723,8 +730,5 @@
 | Package   | Type   | Melpa  | Feature         |
 |-----------+--------+--------+-----------------|
 | anything  | git    | git    | background      |
-| anything  | git    | git    | gtags           |
-| cake      | github | github | tail            |
-| cake2     | github | github | tail            |
 | haml-mode | github | github | javascript-mode |
 
