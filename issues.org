@@ -224,6 +224,7 @@
 - *Pending*
   - slime, sly, ilisp (shelved) [[https://github.com/capitaomorte/sly/issues/86][capitaomorte/sly#86]]
 - *Permanent*
+  - ecb: backward compatibility [[https://github.com/ecb-home/ecb/issues/24][#24]]
   - ess: rtf-support is only available in xemacs
   - hyperbole: efs is an xemacs package on emacs tramp is used
 #+NAME: required-drop
@@ -249,6 +250,8 @@
 | dired+                          | wiki        | help+20              | global |
 | dired+                          | wiki        | subr-21              | global |
 | doremi-cmd                      | wiki        | color-theme          | global |
+| ecb                             | github      | semantic-analyze     | t      |
+| ecb                             | github      | semantic-ctxt        | t      |
 | ecb                             | github      | thing                | global |
 | efs                             | shelved     | view-less            | global |
 | eide                            | git         | gdb-ui               | t      |
@@ -582,7 +585,6 @@
 - *Revisit*
 - *Pending*
   - character-fold+: https://www.emacswiki.org/emacs/character-fold%2b.el
-  - ecb: https://github.com/alexott/ecb/pull/36
   - elscreen: https://github.com/knu/elscreen/pull/25
   - general-close: [[https://github.com/emacs-berlin/general-close/commit/4544040b3498d7f734ecce251708cd70089cd63b][emacs-berlin/general-close@4544040]]
     even though no entry below
@@ -606,8 +608,6 @@
 | ddskk           | orphaned | github | lookup                 |
 | ddskk           | orphaned | github | nicola-ddskk-autoloads |
 | dic-lookup-w3m  | orphaned | svn    | text-translator        |
-| ecb             | github   | github | semantic-analyze       |
-| ecb             | github   | github | semantic-ctxt          |
 | helm-odoc       | github   |        | helm-plugin            |
 | malabar-mode    | github   | github | cc-subword             |
 | malabar-mode    | github   | github | ede/maven2             |
