@@ -108,11 +108,13 @@
   - emacspeak [[https://github.com/tvraman/emacspeak/pull/15][#15]]
   - eyuml, helm-backup [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]
   - floobits [[https://github.com/Floobits/floobits-emacs/pull/86][#86]] (no reply)
+  - mailcrypt [[https://github.com/barak/mailcrypt/pull/1][#1]]
   - nav [[https://github.com/ijt/emacs-nav/pull/103][#103]]
   - org (drop htmlize)
   - project-root [[https://bitbucket.org/piranha/project-root/pull-requests/1/remove-bundled-find-cmdel/diff][project-root#1]]
   - slime, sly [[https://github.com/capitaomorte/sly/issues/92][sly#92]]
 - *Rejected*
+  - go: upstream reverted my fix [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - mic-paren: upstream considers it to be a drop-in replacement
   - palette: upstream considers it to be a drop-in replacement
 #+NAME: provided-drop
@@ -149,9 +151,9 @@
 | coq              | github   | mmm-univ              |
 | coq              | github   | mmm-utils             |
 | coq              | github   | mmm-vars              |
-| ddskk            | orphaned | install               |
-| ddskk            | orphaned | ptexinfmt             |
-| ddskk            | orphaned | vip                   |
+| ddskk            | github   | install               |
+| ddskk            | github   | ptexinfmt             |
+| ddskk            | github   | vip                   |
 | emacspeak        | github   | amixer                |
 | emacspeak        | github   | nm                    |
 | emacspeak        | github   | tetris                |
@@ -174,7 +176,9 @@
 | flim             | orphaned | sha1                  |
 | flim             | orphaned | smtpmail              |
 | floobits         | github   | highlight             |
+| go               | github   | gnugo                 |
 | helm-backup      | github   | env                   |
+| mailcrypt        | github   | timer                 |
 | mic-paren        | file     | paren                 |
 | nav              | github   | ack                   |
 | nxhtml           | orphaned | ack                   |
@@ -245,7 +249,7 @@
 | color-theme-sanityinc-solarized | github      | color-theme          | global |
 | color-theme-sanityinc-tomorrow  | github      | color-theme          | global |
 | color-theme-solarized           | github      | color-theme          | global |
-| ddskk                           | orphaned    | balloon-help         | global |
+| ddskk                           | github      | balloon-help         | global |
 | dictionary                      | github      | balloon-help         | global |
 | dired+                          | wiki        | help+20              | global |
 | dired+                          | wiki        | subr-21              | global |
@@ -388,6 +392,7 @@
 | auctex               | elpa-branch | tex.el                  |
 | ca2                  | github      | ca2+.el                 |
 | chumpy-windows       | github      | window-jump.el          |
+| ddskk                | github      | skk.el                  |
 | dired-hacks          | github      | dired-hacks-utils.el    |
 | emacs-speaks-nonmem  | github      | esn-start.el            |
 | emux                 | github      | emux-base.el            |
@@ -409,8 +414,6 @@
 * Features provided by multiple packages
 ** excluding shelved
 - *Pending*
-  - expect, timer [[https://github.com/barak/mailcrypt/pull/1][#1]]
-  - go [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - ob-scala [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
   - org-bullets [[https://github.com/sabof/org-bullets/issues/18][#18]]
   - org-ebib [[https://github.com/joostkremers/ebib/issues/112][#112]]
@@ -421,18 +424,12 @@
 #+RESULTS: conflicts
 | Feature     | Package     |
 |-------------+-------------|
-| expect      | cddb        |
-| expect      | mailcrypt   |
-| gnugo       | gnugo       |
-| gnugo       | go          |
 | ob-scala    | org         |
 | ob-scala    | scala-mode  |
 | org-bullets | org         |
 | org-bullets | org-bullets |
 | org-ebib    | ebib        |
 | org-ebib    | org         |
-| timer       | emacs       |
-| timer       | mailcrypt   |
 
 ** including shelved
 #+NAME: conflicts-shelved
@@ -604,10 +601,11 @@
 | character-fold+ | wiki     | wiki   | character-fold         |
 | coq             | github   |        | atomic-extents         |
 | coq             | github   |        | proof-x-symbol         |
-| ddskk           | orphaned | github | jisx0213               |
-| ddskk           | orphaned | github | lookup                 |
-| ddskk           | orphaned | github | nicola-ddskk-autoloads |
+| ddskk           | github   | github | jisx0213               |
+| ddskk           | github   | github | lookup                 |
+| ddskk           | github   | github | nicola-ddskk-autoloads |
 | dic-lookup-w3m  | orphaned | svn    | text-translator        |
+| elo             | orphaned |        | org-exp                |
 | helm-odoc       | github   |        | helm-plugin            |
 | malabar-mode    | github   | github | cc-subword             |
 | malabar-mode    | github   | github | ede/maven2             |
@@ -707,12 +705,23 @@
                         '((= hard 't) (isnull drop)))
 #+END_SRC
 #+RESULTS: required-shelved-hard
-| Package       | Type   | Melpa  | Feature  |
-|---------------+--------+--------+----------|
-| lilypond      | git    |        | ecasound |
-| lilypond      | git    |        | ilisp    |
-| python-mode   | gitlab | gitlab | pymacs   |
-| rpm-spec-mode | github | github | shindent |
+| Package                   | Type   | Melpa  | Feature     |
+|---------------------------+--------+--------+-------------|
+| ac-haskell-process        | github | github | haskell     |
+| clj-refactor              | github | github | inflections |
+| company-ghci              | github | github | haskell     |
+| efire                     | github | github | lui         |
+| emms-player-mpv-jp-radios | github | github | later-do    |
+| emms-player-simple-mpv    | github | github | later-do    |
+| helm-rails                | github | github | inflections |
+| lilypond                  | git    |        | ecasound    |
+| lilypond                  | git    |        | ilisp       |
+| projectile-rails          | github | github | inflections |
+| python-mode               | gitlab | gitlab | pymacs      |
+| railgun                   | github | github | inflections |
+| rpm-spec-mode             | github | github | shindent    |
+| ruby-factory              | github | github | inflections |
+| slack                     | github | github | lui         |
 
 ** soft dependencies
 - *TODO*
