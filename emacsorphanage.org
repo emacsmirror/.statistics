@@ -1,0 +1,138 @@
+#+SETUPFILE: .orgconfig
+* Overview
+#+NAME: overview
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Mirror" "Melpa" "Reason")
+    (--map (-let* ((name (cdr (assq 'name it)))
+		   (epkg (epkg name))
+		   ((fetcher repo)
+		    (emir--melpa-get name [fetcher repo])))
+	     (list name
+		   (if epkg (epkg-type epkg) "")
+		   (if (string-prefix-p "emacsorphanage/" repo)
+		       "orphaned"
+		     (or fetcher ""))
+		   (or (cadr (assoc name emir-orphanage-reason)) "")))
+	   (cl-sort (let ((ghub-unpaginate t))
+		      (ghub-get "/orgs/emacsorphanage/repos"))
+		    #'string< :key (lambda (it) (cdr (assq 'name it))))))
+#+END_SRC
+#+RESULTS: overview
+| Package         | Mirror   | Melpa    | Reason                      |
+|-----------------+----------+----------+-----------------------------|
+| apel            | orphaned | github   | 6. many feature conflicts   |
+| caml            | orphaned | svn      | 5. svn not supported        |
+| cg              | orphaned | svn      | 5. svn not supported        |
+| clang-format    | orphaned | svn      | 5. svn not supported        |
+| color-theme     | orphaned | bzr      | 5. bzr not supported        |
+| confluence      | orphaned | svn      | 5. svn not supported        |
+| crontab-mode    | orphaned | orphaned | 3. upstream disappeared     |
+| darcsum         | orphaned | darcs    | 5. darcs not supported      |
+| dedicated       | orphaned | orphaned | 2. upstream has disappeared |
+| dic-lookup-w3m  | orphaned | svn      | 5. svn not supported        |
+| doom            | orphaned | orphaned | 3. upstream unresponsive    |
+| elisp-depend    | orphaned | orphaned | 3. upstream unresponsive    |
+| elo             | orphaned |          | 4. dropped of by maintainer |
+| eshell-manual   | orphaned |          | 3. upstream unresponsive    |
+| filladapt       | orphaned |          | 3. upstream unresponsive    |
+| flim            | orphaned | github   | 6. many feature conflicts   |
+| helm-ls-svn     | orphaned | svn      | 5. svn not supported        |
+| keydef          | orphaned | orphaned | 2. upstream disappeared     |
+| linkd           | orphaned |          | 7. include the images       |
+| lively          | orphaned | orphaned | 3. upstream unresponsive    |
+| lsdb            | orphaned |          | 5. tarball not supported    |
+| miniedit        | orphaned | orphaned | 2. upstream disappeared     |
+| nxhtml          | orphaned |          | 5. bzr not supported        |
+| oberon          | orphaned | orphaned | 3. upstream unresponsive    |
+| org-grep        | orphaned | orphaned | 1. the maintainer has died  |
+| osd             | orphaned |          | 2. upstream disappeared     |
+| pager           | orphaned | orphaned | 2. upstream disappeared     |
+| pointback       | orphaned | orphaned | 2. upstream disappeared     |
+| read-char-spec  | orphaned |          | 3. upstream unresponsive    |
+| ruby-additional | minority | svn      | 5. svn not supported        |
+| semi            | orphaned | github   | 6. many feature conflicts   |
+| session         | orphaned | orphaned | 5. tarball not supported    |
+| setnu           | orphaned |          | 3. upstream unresponsive    |
+| smarty-mode     | orphaned | orphaned | 2. upstream has disappeared |
+| stem-english    | orphaned |          | 2. upstream has disappeared |
+| swbuff          | orphaned | orphaned | 5. cvs not supported        |
+| tail            | orphaned |          | 2. upstream has disappeared |
+| vala-mode       | orphaned | orphaned | 2. upstream has disappeared |
+| vc-fossil       | orphaned |          | 5. fossil not supported     |
+| vm              | orphaned |          | 5. bzr not supported        |
+| w3m             | orphaned | cvs      | 5. cvs not supported        |
+| wanderlust      | orphaned | github   | 6. many feature conflicts   |
+
+- The ~Mirror~ column specifies where the Emacsmirror mirrors a package
+  from.  This should be ~orphaned~, meaning that the mirror gets it from
+  here, or an empty string, which means that the package is not
+  mirrored.
+
+- The ~Melpa~ column specifies where Melpa gets a package from.  This
+  matches the fetcher in the Melpa recipe, except if Melpa gets it
+  from here, then ~orphaned~ is used instead of ~github~.  If this is an
+  empty string, then the package is not available from Melpa.
+
+- Sometimes the reason given here might not be correct.  Please do not
+  be offended by that and keep in mind how much work it is to maintain
+  the Emacsmirror.  Errors happen.  Please inform me about mistakes.
+
+Reasons:
+
+1. Sadly there is one package where "orphan" has a more literal
+   meaning than what I had in mind when I created the Emacs Orphanage.
+   RIP François.
+
+2. The upstream repository or file download for these packages has
+   disappeared.
+
+   Or at least it wasn't available for a long time; in some cases the
+   upstream might be available again.  I do not check to make sure
+   this is not the case.  If you find such a package, then please let
+   me know.
+
+   Of course there are many more packages whose upstream has
+   disappeared, then those listed here, many of which can be found on
+   the Emacsattic.
+
+   Those unmaintained packages that made it into the orphanage instead
+   of just the attic, did so because other mirrored packages depend on
+   them, and/or because they are available from Melpa (I mirror all
+   packages that are available from there).
+   
+3. The upstream repository or file download for these packages still
+   exists (or at least still existed when being added here), but these
+   packages have issues that have to be fixed and the maintainer did
+   not respond when I contacted them about that.  I have patched these
+   packages here in the orphanage to fix these issues. 
+
+   Some of the upstream repositories or file downloads might have
+   disappeared since I have done that.
+
+4. These packages where officially dropped of by the former
+   maintainer, in the hope that a new maintainer can be found.
+
+5. The tools used to maintain the Emacsmirror do not support ~bzr~, ~cvs~,
+   ~darcs~, ~fossil~, or importing from a tarball.  So I manually import
+   the upstream repositories/tarballs into a ~git~ repository on the
+   orphanage and then import the resulting ~git~ repositories as if that
+   were the actual upstream.
+
+   I do not regularly update these repositories.  If you find that
+   they are outdated, then please let me know.  However many of these
+   package repositories have not seen a commit in a decade.
+
+6. ~apel~, ~flim~, ~semi~, and ~wanderlust~ are in the orphanage temporarily.
+
+   ~wanderlust~ is still maintained by its upstream, and forks of the
+   other packages are maintained by the ~wanderlust~ maintainers.
+
+   However these packages have *many* feature conflicts and it looks
+   like it's me who has to fix that.  Once I am done with that I will
+   try to get those changes merged into the ~wanderlust~ repositories.
+
+7. ~linkd~ is distributed on the Emacswiki.  Beside the library it also
+   consists of images.  The tools used to maintain the Emacsmirror
+   don't support this, so I have imported this manually.  The library
+   has not been touched on the Emacswiki in some years, it can be
+   considered unmaintained.

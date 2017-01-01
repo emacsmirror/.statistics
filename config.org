@@ -152,6 +152,57 @@
 | yasnippet          | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         |
 | ztree              | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] |
 
+** variable ~emir-orphanage-reason~
+#+NAME: set--emir-orphanage-reason
+#+BEGIN_SRC emacs-lisp :results silent :var value=emir-orphanage-reason
+  (emir--save-variable 'emir-orphanage-reason value)
+#+END_SRC
+#+NAME: emir-orphanage-reason
+| Package         | Reason                      |
+|-----------------+-----------------------------|
+| apel            | 6. many feature conflicts   |
+| caml            | 5. svn not supported        |
+| cg              | 5. svn not supported        |
+| clang-format    | 5. svn not supported        |
+| color-theme     | 5. bzr not supported        |
+| confluence      | 5. svn not supported        |
+| crontab-mode    | 3. upstream disappeared     |
+| darcsum         | 5. darcs not supported      |
+| dedicated       | 2. upstream has disappeared |
+| dic-lookup-w3m  | 5. svn not supported        |
+| doom            | 3. upstream unresponsive    |
+| elisp-depend    | 3. upstream unresponsive    |
+| elo             | 4. dropped of by maintainer |
+| eshell-manual   | 3. upstream unresponsive    |
+| filladapt       | 3. upstream unresponsive    |
+| flim            | 6. many feature conflicts   |
+| helm-ls-svn     | 5. svn not supported        |
+| keydef          | 2. upstream disappeared     |
+| linkd           | 7. include the images       |
+| lively          | 3. upstream unresponsive    |
+| lsdb            | 5. tarball not supported    |
+| miniedit        | 2. upstream disappeared     |
+| nxhtml          | 5. bzr not supported        |
+| oberon          | 3. upstream unresponsive    |
+| org-grep        | 1. the maintainer has died  |
+| osd             | 2. upstream disappeared     |
+| pager           | 2. upstream disappeared     |
+| pointback       | 2. upstream disappeared     |
+| read-char-spec  | 3. upstream unresponsive    |
+| ruby-additional | 5. svn not supported        |
+| semi            | 6. many feature conflicts   |
+| session         | 5. tarball not supported    |
+| setnu           | 3. upstream unresponsive    |
+| smarty-mode     | 2. upstream has disappeared |
+| stem-english    | 2. upstream has disappeared |
+| swbuff          | 5. cvs not supported        |
+| tail            | 2. upstream has disappeared |
+| vala-mode       | 2. upstream has disappeared |
+| vc-fossil       | 5. fossil not supported     |
+| vm              | 5. bzr not supported        |
+| w3m             | 5. cvs not supported        |
+| wanderlust      | 6. many feature conflicts   |
+
 * Rare slots
 ** slot ~upstream-branch~
 #+NAME: slot--upstream-branch
