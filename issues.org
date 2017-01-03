@@ -68,28 +68,33 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package             | Type    | Feature             |
-|---------------------+---------+---------------------|
-| bbdb                | git     | bbdb-site           |
-| cider               | github  | cider-test          |
-| emacs               | builtin | cus-load            |
-| emacs               | builtin | leim-list           |
-| emacs-speaks-nonmem | github  | esn-autoloads       |
-| eshell              | builtin | esh-groups          |
-| ess                 | github  | essddr              |
-| finder              | builtin | finder-inf          |
-| ledger-mode         | github  | ledger-test         |
-| mu4e                | github  | mu4e-meta           |
-| navi2ch             | github  | navi2ch-config      |
-| riece               | git     | riece-package-info  |
-| sly                 | github  | sly-buttons         |
-| sly                 | github  | sly-common          |
-| sly                 | github  | sly-completion      |
-| sly                 | github  | sly-messages        |
-| sly                 | github  | sly-parse           |
-| sly                 | github  | sly-tests           |
-| ucs-utils           | github  | ucs-utils-6.0-delta |
-| wisi                | elpa    | wisi-compat-24.2    |
+| Package             | Type     | Feature             |
+|---------------------+----------+---------------------|
+| bbdb                | git      | bbdb-site           |
+| cider               | github   | cider-test          |
+| emacs               | builtin  | cus-load            |
+| emacs               | builtin  | leim-list           |
+| emacs-speaks-nonmem | github   | esn-autoloads       |
+| eshell              | builtin  | esh-groups          |
+| ess                 | github   | essddr              |
+| finder              | builtin  | finder-inf          |
+| geiser              | github   | geiser-install      |
+| geiser              | github   | geiser-load         |
+| ledger-mode         | github   | ledger-test         |
+| mu4e                | github   | mu4e-meta           |
+| navi2ch             | github   | navi2ch-config      |
+| php+-mode           | github   | php-test            |
+| realgud             | github   | bashdb              |
+| riece               | git      | riece-package-info  |
+| sly                 | github   | sly-buttons         |
+| sly                 | github   | sly-common          |
+| sly                 | github   | sly-completion      |
+| sly                 | github   | sly-messages        |
+| sly                 | github   | sly-parse           |
+| sly                 | github   | sly-tests           |
+| ucs-utils           | github   | ucs-utils-6.0-delta |
+| wanderlust          | orphaned | wl-news             |
+| wisi                | elpa     | wisi-compat-24.2    |
 
 ** drop provided
 - *Revisit*
@@ -226,11 +231,21 @@
 ** drop required
 - *Revisit*
 - *Pending*
+  - haml-mode [[https://github.com/nex3/haml-mode/issues/34][#34]], [[https://github.com/nex3/haml-mode/pull/35][#35]]
+  - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
   - slime, sly, ilisp (shelved) [[https://github.com/capitaomorte/sly/issues/86][capitaomorte/sly#86]]
 - *Permanent*
   - ecb: backward compatibility [[https://github.com/ecb-home/ecb/issues/24][#24]]
   - ess: rtf-support is only available in xemacs
   - hyperbole: efs is an xemacs package on emacs tramp is used
+  - lilypond: ilisp wasn't touched in over a decade and is only
+    required by a single, undocumented, command
+  - python-mode: pymacs is unmaintained but a copy is bundled with
+    python-mode.  py-load-pymacs does "Load Pymacs as delivered with
+    python-mode.el", so even though I could not find (provide 'pymacs)
+    anywhere but did find (require 'pymacs), I am going to assume that
+    somehow that feature is made available by python-mode itself.
+    Also mailed the maintainer about this.
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature" "Global")
@@ -245,10 +260,14 @@
 |---------------------------------+-------------+----------------------+--------|
 | ac-octave                       | github      | octave-inf           | global |
 | ada-mode                        | elpa        | ada-mode-compat-24.2 | t      |
+| auto-complete                   | github      | semantic-ia          | t      |
 | cobol-mode                      | wiki        | cobol-indent         | t      |
 | color-theme-sanityinc-solarized | github      | color-theme          | global |
 | color-theme-sanityinc-tomorrow  | github      | color-theme          | global |
 | color-theme-solarized           | github      | color-theme          | global |
+| company                         | github      | semantic-idle        | t      |
+| coq                             | github      | atomic-extents       | t      |
+| coq                             | github      | proof-x-symbol       | t      |
 | ddskk                           | github      | balloon-help         | global |
 | dictionary                      | github      | balloon-help         | global |
 | dired+                          | wiki        | help+20              | global |
@@ -267,11 +286,13 @@
 | folio                           | shelved     | color-theme          | global |
 | gnuplot                         | github      | toolbar              | global |
 | gnus                            | builtin     | un-define            | global |
+| haml-mode                       | github      | javascript-mode      | t      |
 | help+                           | wiki        | info+20              | global |
 | hyperbole                       | git         | efs                  | t      |
 | icicles                         | wiki        | color-theme          | global |
 | jabber                          | git         | un-define            | global |
 | lacarte                         | wiki        | subr-21              | global |
+| lilypond                        | git         | ilisp                | t      |
 | load-theme-buffer-local         | github      | color-theme          | global |
 | menu-bar+                       | wiki        | help+20              | global |
 | menu-bar+                       | wiki        | info+20              | global |
@@ -293,6 +314,8 @@
 | ox-pukiwiki                     | github      | org-test             | t      |
 | ox-textile                      | github      | org-test             | t      |
 | po-mode                         | minority    | po-compat            | t      |
+| python-mode                     | gitlab      | pymacs               | t      |
+| rpm-spec-mode                   | github      | shindent             | t      |
 | scroll-1                        | shelved     | view-less            | global |
 | semi                            | orphaned    | bitmap               | global |
 | slamhound                       | github      | slam.hound           | t      |
@@ -310,6 +333,7 @@
 
 ** ease required
 - *Revisit*
+  - elscreen: https://github.com/knu/elscreen/pull/25
 - *Pending*
   - es-lib, project-explorer [[https://github.com/sabof/project-explorer/issues/47][sabof/project-explorer#47]]
   - hyperbole: maintainer said by mail that those dependencies are not
@@ -415,21 +439,17 @@
 ** excluding shelved
 - *Pending*
   - ob-scala [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
+- *Add to orphanage?*
   - org-bullets [[https://github.com/sabof/org-bullets/issues/18][#18]]
-  - org-ebib [[https://github.com/joostkremers/ebib/issues/112][#112]]
 #+NAME: conflicts
 #+BEGIN_SRC emacs-lisp
   (emir--provide-issues t)
 #+END_SRC
 #+RESULTS: conflicts
-| Feature     | Package     |
-|-------------+-------------|
-| ob-scala    | org         |
-| ob-scala    | scala-mode  |
-| org-bullets | org         |
-| org-bullets | org-bullets |
-| org-ebib    | ebib        |
-| org-ebib    | org         |
+| Feature  | Package    |
+|----------+------------|
+| ob-scala | org        |
+| ob-scala | scala-mode |
 
 ** including shelved
 #+NAME: conflicts-shelved
@@ -465,7 +485,7 @@
 | dropdown-list        | dropdown-list        |         |
 | easymenu             | emacs                |         |
 | easymenu             | tla-mode             | t       |
-| ecasound             | ecasound             | t       |
+| ecasound             | ecasound             |         |
 | ecasound             | xiomacs              | t       |
 | elunit               | dvc                  | t       |
 | elunit               | elunit               | t       |
@@ -475,10 +495,6 @@
 | ess-R-object-popup   | ess-R-object-popup   |         |
 | ewoc                 | dvc                  | t       |
 | ewoc                 | ewoc                 |         |
-| expect               | cddb                 |         |
-| expect               | mailcrypt            |         |
-| gnugo                | gnugo                |         |
-| gnugo                | go                   |         |
 | haskell              | haskell              | t       |
 | haskell              | haskell-mode         |         |
 | htmlize              | htmlize              |         |
@@ -520,10 +536,6 @@
 | noweb                | noweb                |         |
 | ob-scala             | org                  |         |
 | ob-scala             | scala-mode           |         |
-| org-bullets          | org                  |         |
-| org-bullets          | org-bullets          |         |
-| org-ebib             | ebib                 |         |
-| org-ebib             | org                  |         |
 | pomodoro             | pomodoro             |         |
 | pomodoro             | protocolarium        | t       |
 | refactor             | gauche-ext           | t       |
@@ -554,8 +566,6 @@
 | textmate             | textmate             |         |
 | timeclock            | planner              | t       |
 | timeclock            | timeclock            |         |
-| timer                | emacs                |         |
-| timer                | mailcrypt            |         |
 | tracking             | circe                |         |
 | tracking             | elim                 | t       |
 | tree-mode            | pases                | t       |
@@ -580,13 +590,17 @@
 * Unsatisfied dependencies
 ** hard dependencies
 - *Revisit*
+  - apel, wanderlust
+  - ddskk
+  - malabar-mode
+  - matlab-mode
+  - vm
 - *Pending*
   - character-fold+: https://www.emacswiki.org/emacs/character-fold%2b.el
-  - elscreen: https://github.com/knu/elscreen/pull/25
+  - elo: I need to adapt this for org v9
   - general-close: [[https://github.com/emacs-berlin/general-close/commit/4544040b3498d7f734ecce251708cd70089cd63b][emacs-berlin/general-close@4544040]]
     even though no entry below
   - helm-odoc: [[https://github.com/trietlai/helm-odoc/issues/1][trietlai/helm-odoc#1]]
-  - w3m: lets wait for the switch away from cvs
 #+NAME: unsatisfied-hard
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -599,12 +613,9 @@
 | apel            | orphaned | github | tcp                    |
 | apel            | orphaned | github | timer-funcs            |
 | character-fold+ | wiki     | wiki   | character-fold         |
-| coq             | github   |        | atomic-extents         |
-| coq             | github   |        | proof-x-symbol         |
 | ddskk           | github   | github | jisx0213               |
 | ddskk           | github   | github | lookup                 |
 | ddskk           | github   | github | nicola-ddskk-autoloads |
-| dic-lookup-w3m  | orphaned | svn    | text-translator        |
 | elo             | orphaned |        | org-exp                |
 | helm-odoc       | github   |        | helm-plugin            |
 | malabar-mode    | github   | github | cc-subword             |
@@ -624,7 +635,6 @@
 | matlab-mode     | git      | git    | semantic-format        |
 | matlab-mode     | git      | git    | semanticdb             |
 | matlab-mode     | git      | git    | srecode-map            |
-| php+-mode       | github   | github | php-test               |
 | vm              | orphaned |        | atomic-extents         |
 | vm              | orphaned |        | highlight-headers      |
 | vm              | orphaned |        | timer-funcs            |
@@ -633,12 +643,25 @@
 
 ** soft dependencies
 - *Revisit*
+  - color-moccur
+  - jabber
+  - jdee
+  - latest-clojure-libraries
+  - mew
+  - nxhtml
+  - org-readme
+  - slamhound
+  - twittering-mode
+  - w3
 - *Pending*
+  - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
+  - el-autoyas, extend-dnd, r-autoyas [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]
   - es-lib, project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
   - hyperbole: mailed author
     He says that these are not hard dependencies
     and that they will eventually be available again.
   - markchars: mailed author
+  - navi2ch [[https://github.com/naota/navi2ch/issues/38][#38]]
 #+NAME: unsatisfied-soft
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -646,57 +669,39 @@
                         '((isnull hard) (isnull drop)))
 #+END_SRC
 #+RESULTS: unsatisfied-soft
-| Package                  | Type        | Melpa  | Feature           |
-|--------------------------+-------------+--------+-------------------|
-| aozora-view              | github      | github | ivs-aj1           |
-| auto-complete            | github      | github | rcodetools        |
-| auto-complete            | github      | github | semantic-ia       |
-| color-moccur             | github      | github | ee-autoloads      |
-| company                  | github      | github | semantic-idle     |
-| el-autoyas               | github      | github | yasnippet-bundle  |
-| es-lib                   | github      | github | ack-and-a-half    |
-| extend-dnd               | github      | github | yasnippet-bundle  |
-| geiser                   | github      | github | geiser-install    |
-| geiser                   | github      | github | geiser-load       |
-| gnus-summary-ext         | github      | github | extract-text      |
-| hyperbole                | git         |        | id-menubars       |
-| hyperbole                | git         |        | x-mouse           |
-| jabber                   | git         | git    | password          |
-| jdee                     | github      | github | working           |
-| latest-clojure-libraries | github      | github | nrepl             |
-| mew                      | github      | github | mw32script        |
-| mingus                   | github      | github | taggit            |
-| navi2ch                  | github      | github | spamfilter        |
-| nxhtml                   | orphaned    |        | company-mode      |
-| nxhtml                   | orphaned    |        | emacsw32          |
-| nxhtml                   | orphaned    |        | flymake-js        |
-| nxhtml                   | orphaned    |        | typesetter        |
-| nxhtml                   | orphaned    |        | w32-regdat        |
-| nxhtml                   | orphaned    |        | w32shell          |
-| one-key                  | github      |        | bashdb            |
-| org                      | git         |        | inferior-picolisp |
-| org                      | git         |        | mozart            |
-| org                      | git         |        | rcodetools        |
-| org-readme               | github      | github | org-html          |
-| outorg                   | github      | github | org-watchdoc      |
-| project-explorer         | github      | github | ack-and-a-half    |
-| r-autoyas                | github      | github | yasnippet-bundle  |
-| slamhound                | github      | github | nrepl             |
-| twittering-mode          | github      | github | alpaca            |
-| twittering-mode          | github      | github | unicode           |
-| w3                       | elpa-branch |        | dtk-voices        |
-| w3                       | elpa-branch |        | x-font-menu       |
-| w3                       | elpa-branch |        | xbm-button        |
-| w3                       | elpa-branch |        | xpm-button        |
-| wanderlust               | orphaned    | github | wl-news           |
+| Package                  | Type        | Melpa  | Feature          |
+|--------------------------+-------------+--------+------------------|
+| aozora-view              | github      | github | ivs-aj1          |
+| color-moccur             | github      | github | ee-autoloads     |
+| el-autoyas               | github      | github | yasnippet-bundle |
+| es-lib                   | github      | github | ack-and-a-half   |
+| extend-dnd               | github      | github | yasnippet-bundle |
+| hyperbole                | git         |        | id-menubars      |
+| hyperbole                | git         |        | x-mouse          |
+| jabber                   | git         | git    | password         |
+| jdee                     | github      | github | working          |
+| latest-clojure-libraries | github      | github | nrepl            |
+| mew                      | github      | github | mw32script       |
+| navi2ch                  | github      | github | spamfilter       |
+| nxhtml                   | orphaned    |        | company-mode     |
+| nxhtml                   | orphaned    |        | emacsw32         |
+| nxhtml                   | orphaned    |        | flymake-js       |
+| nxhtml                   | orphaned    |        | typesetter       |
+| nxhtml                   | orphaned    |        | w32-regdat       |
+| nxhtml                   | orphaned    |        | w32shell         |
+| org-readme               | github      | github | org-html         |
+| project-explorer         | github      | github | ack-and-a-half   |
+| r-autoyas                | github      | github | yasnippet-bundle |
+| slamhound                | github      | github | nrepl            |
+| twittering-mode          | github      | github | alpaca           |
+| twittering-mode          | github      | github | unicode          |
+| w3                       | elpa-branch |        | dtk-voices       |
+| w3                       | elpa-branch |        | x-font-menu      |
+| w3                       | elpa-branch |        | xbm-button       |
+| w3                       | elpa-branch |        | xpm-button       |
 
 * Dependent on shelved packages
 ** hard dependencies
-- *TODO*
-  - lilypond
-  - python-mode
-- *Pending*
-  - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
 #+NAME: required-shelved-hard
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -705,29 +710,8 @@
                         '((= hard 't) (isnull drop)))
 #+END_SRC
 #+RESULTS: required-shelved-hard
-| Package                   | Type   | Melpa  | Feature     |
-|---------------------------+--------+--------+-------------|
-| ac-haskell-process        | github | github | haskell     |
-| clj-refactor              | github | github | inflections |
-| company-ghci              | github | github | haskell     |
-| efire                     | github | github | lui         |
-| emms-player-mpv-jp-radios | github | github | later-do    |
-| emms-player-simple-mpv    | github | github | later-do    |
-| helm-rails                | github | github | inflections |
-| lilypond                  | git    |        | ecasound    |
-| lilypond                  | git    |        | ilisp       |
-| projectile-rails          | github | github | inflections |
-| python-mode               | gitlab | gitlab | pymacs      |
-| railgun                   | github | github | inflections |
-| rpm-spec-mode             | github | github | shindent    |
-| ruby-factory              | github | github | inflections |
-| slack                     | github | github | lui         |
 
 ** soft dependencies
-- *TODO*
-  - anything
-- *Pending*
-  - haml-mode [[https://github.com/nex3/haml-mode/issues/34][#34]]
 #+NAME: required-shelved-soft
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -736,8 +720,4 @@
                         '((isnull hard) (isnull drop))))
 #+END_SRC
 #+RESULTS: required-shelved-soft
-| Package   | Type   | Melpa  | Feature         |
-|-----------+--------+--------+-----------------|
-| anything  | git    | git    | background      |
-| haml-mode | github | github | javascript-mode |
 
