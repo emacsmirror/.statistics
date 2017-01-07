@@ -235,9 +235,16 @@
   - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
   - slime, sly, ilisp (shelved) [[https://github.com/capitaomorte/sly/issues/86][capitaomorte/sly#86]]
 - *Permanent*
+  - color-moccur: ~ee~ support is optional. ~ee~ depends on ~edb~.  Some of
+    the ~edb~ libraries require the feature ~edbcore~, but none of its
+    libraries actually provides that feature.
   - ecb: backward compatibility [[https://github.com/ecb-home/ecb/issues/24][#24]]
   - ess: rtf-support is only available in xemacs
   - hyperbole: efs is an xemacs package on emacs tramp is used
+  - jdee: The stand-alone ~cedet~ version contains ~working~ but the
+    built-in version does not.  ~jdee~ defines defines the functions
+    from ~working~ that it uses itself if the library cannot be
+    loaded.
   - lilypond: ilisp wasn't touched in over a decade and is only
     required by a single, undocumented, command
   - python-mode: pymacs is unmaintained but a copy is bundled with
@@ -246,6 +253,9 @@
     anywhere but did find (require 'pymacs), I am going to assume that
     somehow that feature is made available by python-mode itself.
     Also mailed the maintainer about this.
+  - mew: mw32script is only required when using the Meadow Emacs fork.
+  - twittering-mode: ~alpaca~ is only used if ~epa~ isn't available, and
+    ~unicode~ is required to work around an old and long-since fixed bug.
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature" "Global")
@@ -262,6 +272,7 @@
 | ada-mode                        | elpa        | ada-mode-compat-24.2 | t      |
 | auto-complete                   | github      | semantic-ia          | t      |
 | cobol-mode                      | wiki        | cobol-indent         | t      |
+| color-moccur                    | github      | ee-autoloads         | t      |
 | color-theme-sanityinc-solarized | github      | color-theme          | global |
 | color-theme-sanityinc-tomorrow  | github      | color-theme          | global |
 | color-theme-solarized           | github      | color-theme          | global |
@@ -291,11 +302,13 @@
 | hyperbole                       | git         | efs                  | t      |
 | icicles                         | wiki        | color-theme          | global |
 | jabber                          | git         | un-define            | global |
+| jdee                            | github      | working              | t      |
 | lacarte                         | wiki        | subr-21              | global |
 | lilypond                        | git         | ilisp                | t      |
 | load-theme-buffer-local         | github      | color-theme          | global |
 | menu-bar+                       | wiki        | help+20              | global |
 | menu-bar+                       | wiki        | info+20              | global |
+| mew                             | github      | mw32script           | t      |
 | mew                             | github      | un-define            | global |
 | mh-e                            | builtin     | toolbar              | global |
 | mhc                             | github      | bitmap               | global |
@@ -318,12 +331,14 @@
 | rpm-spec-mode                   | github      | shindent             | t      |
 | scroll-1                        | shelved     | view-less            | global |
 | semi                            | orphaned    | bitmap               | global |
-| slamhound                       | github      | slam.hound           | t      |
+| slamhound                       | shelved     | slam.hound           | t      |
 | slime                           | github      | hyperspec            | t      |
 | sly                             | github      | hyperspec            | t      |
 | tangotango-theme                | github      | color-theme          | global |
 | tc                              | github      | bitmap               | global |
+| twittering-mode                 | github      | alpaca               | t      |
 | twittering-mode                 | github      | un-define            | global |
+| twittering-mode                 | github      | unicode              | t      |
 | vcl-mode                        | github      | generic-mode         | global |
 | w3                              | elpa-branch | w3-site-init         | t      |
 | w3m                             | orphaned    | un-define            | global |
@@ -439,8 +454,6 @@
 ** excluding shelved
 - *Pending*
   - ob-scala [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
-- *Add to orphanage?*
-  - org-bullets [[https://github.com/sabof/org-bullets/issues/18][#18]]
 #+NAME: conflicts
 #+BEGIN_SRC emacs-lisp
   (emir--provide-issues t)
@@ -643,25 +656,18 @@
 
 ** soft dependencies
 - *Revisit*
-  - color-moccur
-  - jabber
-  - jdee
-  - latest-clojure-libraries
-  - mew
   - nxhtml
-  - org-readme
-  - slamhound
-  - twittering-mode
   - w3
 - *Pending*
   - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
   - el-autoyas, extend-dnd, r-autoyas [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]
   - es-lib, project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
-  - hyperbole: mailed author
-    He says that these are not hard dependencies
-    and that they will eventually be available again.
+  - hyperbole: mailed author.  He says that these are not hard
+    dependencies and that they will eventually be available again.
+  - jabber: mailed author
   - markchars: mailed author
   - navi2ch [[https://github.com/naota/navi2ch/issues/38][#38]]
+  - org-readme [[https://github.com/mattfidler/org-readme/issues/19][#19]]
 #+NAME: unsatisfied-soft
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -669,36 +675,29 @@
                         '((isnull hard) (isnull drop)))
 #+END_SRC
 #+RESULTS: unsatisfied-soft
-| Package                  | Type        | Melpa  | Feature          |
-|--------------------------+-------------+--------+------------------|
-| aozora-view              | github      | github | ivs-aj1          |
-| color-moccur             | github      | github | ee-autoloads     |
-| el-autoyas               | github      | github | yasnippet-bundle |
-| es-lib                   | github      | github | ack-and-a-half   |
-| extend-dnd               | github      | github | yasnippet-bundle |
-| hyperbole                | git         |        | id-menubars      |
-| hyperbole                | git         |        | x-mouse          |
-| jabber                   | git         | git    | password         |
-| jdee                     | github      | github | working          |
-| latest-clojure-libraries | github      | github | nrepl            |
-| mew                      | github      | github | mw32script       |
-| navi2ch                  | github      | github | spamfilter       |
-| nxhtml                   | orphaned    |        | company-mode     |
-| nxhtml                   | orphaned    |        | emacsw32         |
-| nxhtml                   | orphaned    |        | flymake-js       |
-| nxhtml                   | orphaned    |        | typesetter       |
-| nxhtml                   | orphaned    |        | w32-regdat       |
-| nxhtml                   | orphaned    |        | w32shell         |
-| org-readme               | github      | github | org-html         |
-| project-explorer         | github      | github | ack-and-a-half   |
-| r-autoyas                | github      | github | yasnippet-bundle |
-| slamhound                | github      | github | nrepl            |
-| twittering-mode          | github      | github | alpaca           |
-| twittering-mode          | github      | github | unicode          |
-| w3                       | elpa-branch |        | dtk-voices       |
-| w3                       | elpa-branch |        | x-font-menu      |
-| w3                       | elpa-branch |        | xbm-button       |
-| w3                       | elpa-branch |        | xpm-button       |
+| Package          | Type        | Melpa  | Feature          |
+|------------------+-------------+--------+------------------|
+| aozora-view      | github      | github | ivs-aj1          |
+| el-autoyas       | github      | github | yasnippet-bundle |
+| es-lib           | github      | github | ack-and-a-half   |
+| extend-dnd       | github      | github | yasnippet-bundle |
+| hyperbole        | git         |        | id-menubars      |
+| hyperbole        | git         |        | x-mouse          |
+| jabber           | git         | git    | password         |
+| navi2ch          | github      | github | spamfilter       |
+| nxhtml           | orphaned    |        | company-mode     |
+| nxhtml           | orphaned    |        | emacsw32         |
+| nxhtml           | orphaned    |        | flymake-js       |
+| nxhtml           | orphaned    |        | typesetter       |
+| nxhtml           | orphaned    |        | w32-regdat       |
+| nxhtml           | orphaned    |        | w32shell         |
+| org-readme       | github      | github | org-html         |
+| project-explorer | github      | github | ack-and-a-half   |
+| r-autoyas        | github      | github | yasnippet-bundle |
+| w3               | elpa-branch |        | dtk-voices       |
+| w3               | elpa-branch |        | x-font-menu      |
+| w3               | elpa-branch |        | xbm-button       |
+| w3               | elpa-branch |        | xpm-button       |
 
 * Dependent on shelved packages
 ** hard dependencies
