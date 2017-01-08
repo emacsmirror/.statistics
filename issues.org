@@ -240,6 +240,7 @@
     libraries actually provides that feature.
   - ecb: backward compatibility [[https://github.com/ecb-home/ecb/issues/24][#24]]
   - ess: rtf-support is only available in xemacs
+  - guix: these libraries are provided by GuixSD itself
   - hyperbole: efs is an xemacs package on emacs tramp is used
   - jdee: The stand-alone ~cedet~ version contains ~working~ but the
     built-in version does not.  ~jdee~ defines defines the functions
@@ -258,7 +259,7 @@
     ~unicode~ is required to work around an old and long-since fixed bug.
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Feature" "Global")
+  (emir--with-org-header ("Package" "Type" "Feature" "Drop")
     (epkg-sql [:select [name class feature drop]
                :from [packages required]
                :where (and (= name package)
@@ -266,7 +267,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package                         | Type        | Feature              | Global |
+| Package                         | Type        | Feature              | Drop   |
 |---------------------------------+-------------+----------------------+--------|
 | ac-octave                       | github      | octave-inf           | global |
 | ada-mode                        | elpa        | ada-mode-compat-24.2 | t      |
@@ -297,7 +298,8 @@
 | folio                           | shelved     | color-theme          | global |
 | gnuplot                         | github      | toolbar              | global |
 | gnus                            | builtin     | un-define            | global |
-| haml-mode                       | github      | javascript-mode      | t      |
+| guix                            | github      | guix-build-config    | t      |
+| guix                            | github      | guix-emacs           | t      |
 | help+                           | wiki        | info+20              | global |
 | hyperbole                       | git         | efs                  | t      |
 | icicles                         | wiki        | color-theme          | global |
@@ -354,7 +356,6 @@
   - hyperbole: maintainer said by mail that those dependencies are not
     actually necessary and that they eventually will be available
     again.
-  - jabber [[https://github.com/legoscia/emacs-jabber/pull/16][legoscia/emacs-jabber#16]]
 #+NAME: required-ease
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature")
@@ -373,7 +374,6 @@
 | es-lib           | github      | ack-and-a-half    |
 | hyperbole        | git         | id-menubars       |
 | hyperbole        | git         | x-mouse           |
-| jabber           | git         | password          |
 | mew              | github      | mw32script        |
 | navi2ch          | github      | spamfilter        |
 | org              | git         | inferior-picolisp |
@@ -664,7 +664,6 @@
   - es-lib, project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
   - hyperbole: mailed author.  He says that these are not hard
     dependencies and that they will eventually be available again.
-  - jabber: mailed author
   - markchars: mailed author
   - navi2ch [[https://github.com/naota/navi2ch/issues/38][#38]]
   - org-readme [[https://github.com/mattfidler/org-readme/issues/19][#19]]
@@ -683,7 +682,6 @@
 | extend-dnd       | github      | github | yasnippet-bundle |
 | hyperbole        | git         |        | id-menubars      |
 | hyperbole        | git         |        | x-mouse          |
-| jabber           | git         | git    | password         |
 | navi2ch          | github      | github | spamfilter       |
 | nxhtml           | orphaned    |        | company-mode     |
 | nxhtml           | orphaned    |        | emacsw32         |
