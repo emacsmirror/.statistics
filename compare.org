@@ -98,7 +98,7 @@
 | elpa         |   92 |     92 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3606 |   3606 |       |       |       |  3160 |
+| github       | 3612 |   3612 |       |       |       |  3166 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   51 |     51 |       |       |       |    39 |
 | subtree      |   23 |     23 |       |       |       |       |
@@ -112,14 +112,14 @@
 | fossil       |      |        |       |       |       |     0 |
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
-| wiki         |  765 |    765 |       |       |       |   179 |
+| wiki         |  764 |    764 |       |       |       |   178 |
 | file         |  312 |    312 |       |       |       |       |
 | minority     |   22 |     22 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| orphaned     |   44 |     44 |       |       |       |       |
-| shelved      |  956 |        |   956 |       |       |       |
+| orphaned     |   45 |     45 |       |       |       |       |
+| shelved      |  957 |        |   957 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6370 |   4991 |   956 |   426 |   155 |  3459 |
+| total        | 6377 |   4997 |   957 |   426 |   155 |  3464 |
 
 * Emacs
 ** New
@@ -418,7 +418,6 @@
 | haskell-emacs           | haskell-emacs-text              | github    |
 | helm                    | helm-core                       | github    |
 | helm-bibtex             | ivy-bibtex                      | github    |
-| helm-etags+             | ctags-update                    | github    |
 | ido-ubiquitous          | ido-completing-read+            | github    |
 | ivy                     | counsel                         | github    |
 | ivy                     | ivy-hydra                       | github    |

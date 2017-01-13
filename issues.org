@@ -238,16 +238,24 @@
   - color-moccur: ~ee~ support is optional. ~ee~ depends on ~edb~.  Some of
     the ~edb~ libraries require the feature ~edbcore~, but none of its
     libraries actually provides that feature.
+  - ddskk: nicola-ddskk-autoloads is generated, jisx0213 is for
+    backward compatibility
   - ecb: backward compatibility [[https://github.com/ecb-home/ecb/issues/24][#24]]
   - ess: rtf-support is only available in xemacs
+  - el-autoyas, extend-dnd, r-autoyas: backward compatibility [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]
   - guix: these libraries are provided by GuixSD itself
-  - hyperbole: efs is an xemacs package on emacs tramp is used
+  - hyperbole: I have emailed the author.  efs is an xemacs package,
+    on emacs tramp is used.  Author sais id-menubars and x-mouse are
+    not hard dependencies and that he will eventually make them
+    available again.  I expect "eventually" to take a long time.
   - jdee: The stand-alone ~cedet~ version contains ~working~ but the
     built-in version does not.  ~jdee~ defines defines the functions
     from ~working~ that it uses itself if the library cannot be
     loaded.
   - lilypond: ilisp wasn't touched in over a decade and is only
     required by a single, undocumented, command
+  - malabar-mode: only required by obsolete version in src.old/.
+  - matlab-mode: backward compatibility
   - python-mode: pymacs is unmaintained but a copy is bundled with
     python-mode.  py-load-pymacs does "Load Pymacs as delivered with
     python-mode.el", so even though I could not find (provide 'pymacs)
@@ -257,6 +265,8 @@
   - mew: mw32script is only required when using the Meadow Emacs fork.
   - twittering-mode: ~alpaca~ is only used if ~epa~ isn't available, and
     ~unicode~ is required to work around an old and long-since fixed bug.
+  - w3: x-font-menu, xbm-button, xpm-button for XEmacs; dtk-voices is
+    no longer available and not needed
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature" "Drop")
@@ -267,86 +277,112 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package                         | Type        | Feature              | Drop   |
-|---------------------------------+-------------+----------------------+--------|
-| ac-octave                       | github      | octave-inf           | global |
-| ada-mode                        | elpa        | ada-mode-compat-24.2 | t      |
-| auto-complete                   | github      | semantic-ia          | t      |
-| cobol-mode                      | wiki        | cobol-indent         | t      |
-| color-moccur                    | github      | ee-autoloads         | t      |
-| color-theme-sanityinc-solarized | github      | color-theme          | global |
-| color-theme-sanityinc-tomorrow  | github      | color-theme          | global |
-| color-theme-solarized           | github      | color-theme          | global |
-| company                         | github      | semantic-idle        | t      |
-| coq                             | github      | atomic-extents       | t      |
-| coq                             | github      | proof-x-symbol       | t      |
-| ddskk                           | github      | balloon-help         | global |
-| dictionary                      | github      | balloon-help         | global |
-| dired+                          | wiki        | help+20              | global |
-| dired+                          | wiki        | subr-21              | global |
-| doremi-cmd                      | wiki        | color-theme          | global |
-| ecb                             | github      | semantic-analyze     | t      |
-| ecb                             | github      | semantic-ctxt        | t      |
-| ecb                             | github      | thing                | global |
-| efs                             | shelved     | view-less            | global |
-| eide                            | git         | gdb-ui               | t      |
-| emacs-speaks-nonmem             | github      | org-publish          | t      |
-| emacspeak                       | github      | org-exp              | t      |
-| erlang                          | github      | tags                 | t      |
-| ess                             | github      | rtf-support          | t      |
-| folding                         | github      | mode-motion          | global |
-| folio                           | shelved     | color-theme          | global |
-| gnuplot                         | github      | toolbar              | global |
-| gnus                            | builtin     | un-define            | global |
-| guix                            | github      | guix-build-config    | t      |
-| guix                            | github      | guix-emacs           | t      |
-| help+                           | wiki        | info+20              | global |
-| hyperbole                       | git         | efs                  | t      |
-| icicles                         | wiki        | color-theme          | global |
-| jabber                          | git         | un-define            | global |
-| jdee                            | github      | working              | t      |
-| lacarte                         | wiki        | subr-21              | global |
-| lilypond                        | git         | ilisp                | t      |
-| load-theme-buffer-local         | github      | color-theme          | global |
-| menu-bar+                       | wiki        | help+20              | global |
-| menu-bar+                       | wiki        | info+20              | global |
-| mew                             | github      | mw32script           | t      |
-| mew                             | github      | un-define            | global |
-| mh-e                            | builtin     | toolbar              | global |
-| mhc                             | github      | bitmap               | global |
-| mhc                             | github      | mhc-bm               | t      |
-| mhc                             | github      | mhc-xmas             | t      |
-| mhc                             | github      | pcustom              | t      |
-| mhc                             | github      | poe                  | t      |
-| mkhtml                          | wiki        | info+20              | global |
-| molokai-theme                   | github      | color-theme          | global |
-| navi2ch                         | github      | bitmap               | global |
-| notes-mode                      | elpa        | npgp                 | t      |
-| notes-mode                      | elpa        | pam                  | t      |
-| org                             | git         | org-publish          | t      |
-| org                             | git         | org-remember         | t      |
-| org-caldav                      | github      | org-icalendar        | t      |
-| ox-pukiwiki                     | github      | org-test             | t      |
-| ox-textile                      | github      | org-test             | t      |
-| po-mode                         | minority    | po-compat            | t      |
-| python-mode                     | gitlab      | pymacs               | t      |
-| rpm-spec-mode                   | github      | shindent             | t      |
-| scroll-1                        | shelved     | view-less            | global |
-| semi                            | orphaned    | bitmap               | global |
-| slamhound                       | shelved     | slam.hound           | t      |
-| slime                           | github      | hyperspec            | t      |
-| sly                             | github      | hyperspec            | t      |
-| tangotango-theme                | github      | color-theme          | global |
-| tc                              | github      | bitmap               | global |
-| twittering-mode                 | github      | alpaca               | t      |
-| twittering-mode                 | github      | un-define            | global |
-| twittering-mode                 | github      | unicode              | t      |
-| vcl-mode                        | github      | generic-mode         | global |
-| w3                              | elpa-branch | w3-site-init         | t      |
-| w3m                             | orphaned    | un-define            | global |
-| wanderlust                      | orphaned    | bitmap               | global |
-| xwem                            | shelved     | view-less            | global |
-| yatex                           | hg          | hilit19              | t      |
+| Package                         | Type        | Feature                | Drop   |
+|---------------------------------+-------------+------------------------+--------|
+| ac-octave                       | github      | octave-inf             | global |
+| ada-mode                        | elpa        | ada-mode-compat-24.2   | t      |
+| auto-complete                   | github      | semantic-ia            | t      |
+| cobol-mode                      | wiki        | cobol-indent           | t      |
+| color-moccur                    | github      | ee-autoloads           | t      |
+| color-theme-sanityinc-solarized | github      | color-theme            | global |
+| color-theme-sanityinc-tomorrow  | github      | color-theme            | global |
+| color-theme-solarized           | github      | color-theme            | global |
+| company                         | github      | semantic-idle          | t      |
+| coq                             | github      | atomic-extents         | t      |
+| coq                             | github      | proof-x-symbol         | t      |
+| ddskk                           | github      | balloon-help           | global |
+| ddskk                           | github      | jisx0213               | t      |
+| ddskk                           | github      | nicola-ddskk-autoloads | t      |
+| dictionary                      | github      | balloon-help           | global |
+| dired+                          | wiki        | help+20                | global |
+| dired+                          | wiki        | subr-21                | global |
+| doremi-cmd                      | wiki        | color-theme            | global |
+| ecb                             | github      | semantic-analyze       | t      |
+| ecb                             | github      | semantic-ctxt          | t      |
+| ecb                             | github      | thing                  | global |
+| efs                             | shelved     | view-less              | global |
+| eide                            | git         | gdb-ui                 | t      |
+| el-autoyas                      | github      | yasnippet-bundle       | t      |
+| emacs-speaks-nonmem             | github      | org-publish            | t      |
+| emacspeak                       | github      | org-exp                | t      |
+| erlang                          | github      | tags                   | t      |
+| ess                             | github      | rtf-support            | t      |
+| extend-dnd                      | github      | yasnippet-bundle       | t      |
+| folding                         | github      | mode-motion            | global |
+| folio                           | shelved     | color-theme            | global |
+| gnuplot                         | github      | toolbar                | global |
+| gnus                            | builtin     | un-define              | global |
+| guix                            | github      | guix-build-config      | t      |
+| guix                            | github      | guix-emacs             | t      |
+| help+                           | wiki        | info+20                | global |
+| hyperbole                       | git         | efs                    | t      |
+| hyperbole                       | git         | id-menubars            | t      |
+| hyperbole                       | git         | x-mouse                | t      |
+| icicles                         | wiki        | color-theme            | global |
+| jabber                          | git         | un-define              | global |
+| jdee                            | github      | working                | t      |
+| lacarte                         | wiki        | subr-21                | global |
+| lilypond                        | git         | ilisp                  | t      |
+| load-theme-buffer-local         | github      | color-theme            | global |
+| malabar-mode                    | github      | cc-subword             | t      |
+| malabar-mode                    | github      | malabar-test           | t      |
+| malabar-mode                    | github      | semantic-ctxt          | t      |
+| malabar-mode                    | github      | semantic-find          | t      |
+| malabar-mode                    | github      | semantic-ia            | t      |
+| malabar-mode                    | github      | semantic-load          | t      |
+| malabar-mode                    | github      | semantic-wisent        | t      |
+| malabar-mode                    | github      | semanticdb-search      | t      |
+| malabar-mode                    | github      | srecode-getset         | t      |
+| malabar-mode                    | github      | srecode-map            | t      |
+| malabar-mode                    | github      | wisent-java            | t      |
+| matlab-mode                     | git         | semantic-dep           | t      |
+| matlab-mode                     | git         | semantic-format        | t      |
+| matlab-mode                     | git         | semanticdb             | t      |
+| matlab-mode                     | git         | srecode-map            | t      |
+| menu-bar+                       | wiki        | help+20                | global |
+| menu-bar+                       | wiki        | info+20                | global |
+| mew                             | github      | mw32script             | t      |
+| mew                             | github      | un-define              | global |
+| mh-e                            | builtin     | toolbar                | global |
+| mhc                             | github      | bitmap                 | global |
+| mhc                             | github      | mhc-bm                 | t      |
+| mhc                             | github      | mhc-xmas               | t      |
+| mhc                             | github      | pcustom                | t      |
+| mhc                             | github      | poe                    | t      |
+| mkhtml                          | wiki        | info+20                | global |
+| molokai-theme                   | github      | color-theme            | global |
+| navi2ch                         | github      | bitmap                 | global |
+| notes-mode                      | elpa        | npgp                   | t      |
+| notes-mode                      | elpa        | pam                    | t      |
+| org                             | git         | org-publish            | t      |
+| org                             | git         | org-remember           | t      |
+| org-caldav                      | github      | org-icalendar          | t      |
+| ox-pukiwiki                     | github      | org-test               | t      |
+| ox-textile                      | github      | org-test               | t      |
+| po-mode                         | minority    | po-compat              | t      |
+| python-mode                     | gitlab      | pymacs                 | t      |
+| r-autoyas                       | github      | yasnippet-bundle       | t      |
+| rpm-spec-mode                   | github      | shindent               | t      |
+| scroll-1                        | shelved     | view-less              | global |
+| semi                            | orphaned    | bitmap                 | global |
+| slamhound                       | shelved     | slam.hound             | t      |
+| slime                           | github      | hyperspec              | t      |
+| sly                             | github      | hyperspec              | t      |
+| tangotango-theme                | github      | color-theme            | global |
+| tc                              | github      | bitmap                 | global |
+| twittering-mode                 | github      | alpaca                 | t      |
+| twittering-mode                 | github      | un-define              | global |
+| twittering-mode                 | github      | unicode                | t      |
+| vcl-mode                        | github      | generic-mode           | global |
+| w3                              | elpa-branch | dtk-voices             | t      |
+| w3                              | elpa-branch | w3-site-init           | t      |
+| w3                              | elpa-branch | x-font-menu            | t      |
+| w3                              | elpa-branch | xbm-button             | t      |
+| w3                              | elpa-branch | xpm-button             | t      |
+| w3m                             | orphaned    | un-define              | global |
+| wanderlust                      | orphaned    | bitmap                 | global |
+| xwem                            | shelved     | view-less              | global |
+| yatex                           | hg          | hilit19                | t      |
 
 ** ease required
 - *Revisit*
@@ -397,6 +433,8 @@
   - html5
   - ne2wm
   - ultratex
+- *Pending:* Misc
+  - zotxt [[https://gitlab.com/egh/zotxt-emacs/merge_requests/2][#2]]
 - *Pending:* Gelpa
   - ada-ref-man [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
   - uniconfusables [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
@@ -449,20 +487,27 @@
 | tao-theme            | github      | tao-yang-theme.el       |
 | ultratex             | github      | lisp/ultex.el           |
 | uni-confusables      | elpa        | uni-confusables.el      |
+| zotxt                | gitlab      | zotxt.el                |
 
 * Features provided by multiple packages
 ** excluding shelved
 - *Pending*
   - ob-scala [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
+  - org-mime [[https://github.com/melpa/melpa/pull/4497][melpa#4497]]
+  - stem-english [[https://github.com/lookup2/lookup2/pull/14][lookup#14]]
 #+NAME: conflicts
 #+BEGIN_SRC emacs-lisp
   (emir--provide-issues t)
 #+END_SRC
 #+RESULTS: conflicts
-| Feature  | Package    |
-|----------+------------|
-| ob-scala | org        |
-| ob-scala | scala-mode |
+| Feature      | Package      |
+|--------------+--------------|
+| ob-scala     | org          |
+| ob-scala     | scala-mode   |
+| org-mime     | org          |
+| org-mime     | org-mime     |
+| stem-english | lookup       |
+| stem-english | stem-english |
 
 ** including shelved
 #+NAME: conflicts-shelved
@@ -549,6 +594,8 @@
 | noweb                | noweb                |         |
 | ob-scala             | org                  |         |
 | ob-scala             | scala-mode           |         |
+| org-mime             | org                  |         |
+| org-mime             | org-mime             |         |
 | pomodoro             | pomodoro             |         |
 | pomodoro             | protocolarium        | t       |
 | refactor             | gauche-ext           | t       |
@@ -567,6 +614,8 @@
 | stack-f              | emacspeak            |         |
 | stem                 | sdic                 | t       |
 | stem                 | stem                 |         |
+| stem-english         | lookup               |         |
+| stem-english         | stem-english         |         |
 | tagging              | free-tagging         | t       |
 | tagging              | tagging              | t       |
 | test                 | test                 | t       |
@@ -603,17 +652,11 @@
 * Unsatisfied dependencies
 ** hard dependencies
 - *Revisit*
-  - apel, wanderlust
-  - ddskk
-  - malabar-mode
-  - matlab-mode
+  - apel
   - vm
 - *Pending*
-  - character-fold+: https://www.emacswiki.org/emacs/character-fold%2b.el
-  - elo: I need to adapt this for org v9
-  - general-close: [[https://github.com/emacs-berlin/general-close/commit/4544040b3498d7f734ecce251708cd70089cd63b][emacs-berlin/general-close@4544040]]
-    even though no entry below
-  - helm-odoc: [[https://github.com/trietlai/helm-odoc/issues/1][trietlai/helm-odoc#1]]
+  - malabar-mode [[https://github.com/m0smith/malabar-mode/issues/189][#189]]
+  - wanderlust [[https://github.com/wanderlust/wanderlust/issues/139][#139]]
 #+NAME: unsatisfied-hard
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -621,52 +664,25 @@
                         '((= hard 't) (isnull drop)))
 #+END_SRC
 #+RESULTS: unsatisfied-hard
-| Package         | Type     | Melpa  | Feature                |
-|-----------------+----------+--------+------------------------|
-| apel            | orphaned | github | tcp                    |
-| apel            | orphaned | github | timer-funcs            |
-| character-fold+ | wiki     | wiki   | character-fold         |
-| ddskk           | github   | github | jisx0213               |
-| ddskk           | github   | github | lookup                 |
-| ddskk           | github   | github | nicola-ddskk-autoloads |
-| elo             | orphaned |        | org-exp                |
-| helm-odoc       | github   |        | helm-plugin            |
-| malabar-mode    | github   | github | cc-subword             |
-| malabar-mode    | github   | github | ede/maven2             |
-| malabar-mode    | github   | github | malabar-test           |
-| malabar-mode    | github   | github | semantic-ctxt          |
-| malabar-mode    | github   | github | semantic-find          |
-| malabar-mode    | github   | github | semantic-ia            |
-| malabar-mode    | github   | github | semantic-load          |
-| malabar-mode    | github   | github | semantic-wisent        |
-| malabar-mode    | github   | github | semantic/db-javap      |
-| malabar-mode    | github   | github | semanticdb-search      |
-| malabar-mode    | github   | github | srecode-getset         |
-| malabar-mode    | github   | github | srecode-map            |
-| malabar-mode    | github   | github | wisent-java            |
-| matlab-mode     | git      | git    | semantic-dep           |
-| matlab-mode     | git      | git    | semantic-format        |
-| matlab-mode     | git      | git    | semanticdb             |
-| matlab-mode     | git      | git    | srecode-map            |
-| vm              | orphaned |        | atomic-extents         |
-| vm              | orphaned |        | highlight-headers      |
-| vm              | orphaned |        | timer-funcs            |
-| wanderlust      | orphaned | github | bbdb-hooks             |
-| wanderlust      | orphaned | github | spamfilter             |
+| Package      | Type     | Melpa  | Feature           |
+|--------------+----------+--------+-------------------|
+| apel         | orphaned | github | tcp               |
+| apel         | orphaned | github | timer-funcs       |
+| malabar-mode | github   | github | ede/maven2        |
+| malabar-mode | github   | github | semantic/db-javap |
+| vm           | orphaned |        | atomic-extents    |
+| vm           | orphaned |        | highlight-headers |
+| vm           | orphaned |        | timer-funcs       |
+| wanderlust   | orphaned | github | bbdb-hooks        |
 
 ** soft dependencies
 - *Revisit*
   - nxhtml
-  - w3
 - *Pending*
   - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
-  - el-autoyas, extend-dnd, r-autoyas [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]
-  - es-lib, project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
-  - hyperbole: mailed author.  He says that these are not hard
-    dependencies and that they will eventually be available again.
-  - markchars: mailed author
-  - navi2ch [[https://github.com/naota/navi2ch/issues/38][#38]]
+  - es-lib [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
   - org-readme [[https://github.com/mattfidler/org-readme/issues/19][#19]]
+  - project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
 #+NAME: unsatisfied-soft
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -674,28 +690,18 @@
                         '((isnull hard) (isnull drop)))
 #+END_SRC
 #+RESULTS: unsatisfied-soft
-| Package          | Type        | Melpa  | Feature          |
-|------------------+-------------+--------+------------------|
-| aozora-view      | github      | github | ivs-aj1          |
-| el-autoyas       | github      | github | yasnippet-bundle |
-| es-lib           | github      | github | ack-and-a-half   |
-| extend-dnd       | github      | github | yasnippet-bundle |
-| hyperbole        | git         |        | id-menubars      |
-| hyperbole        | git         |        | x-mouse          |
-| navi2ch          | github      | github | spamfilter       |
-| nxhtml           | orphaned    |        | company-mode     |
-| nxhtml           | orphaned    |        | emacsw32         |
-| nxhtml           | orphaned    |        | flymake-js       |
-| nxhtml           | orphaned    |        | typesetter       |
-| nxhtml           | orphaned    |        | w32-regdat       |
-| nxhtml           | orphaned    |        | w32shell         |
-| org-readme       | github      | github | org-html         |
-| project-explorer | github      | github | ack-and-a-half   |
-| r-autoyas        | github      | github | yasnippet-bundle |
-| w3               | elpa-branch |        | dtk-voices       |
-| w3               | elpa-branch |        | x-font-menu      |
-| w3               | elpa-branch |        | xbm-button       |
-| w3               | elpa-branch |        | xpm-button       |
+| Package          | Type     | Melpa  | Feature        |
+|------------------+----------+--------+----------------|
+| aozora-view      | github   | github | ivs-aj1        |
+| es-lib           | github   | github | ack-and-a-half |
+| nxhtml           | orphaned |        | company-mode   |
+| nxhtml           | orphaned |        | emacsw32       |
+| nxhtml           | orphaned |        | flymake-js     |
+| nxhtml           | orphaned |        | typesetter     |
+| nxhtml           | orphaned |        | w32-regdat     |
+| nxhtml           | orphaned |        | w32shell       |
+| org-readme       | github   | github | org-html       |
+| project-explorer | github   | github | ack-and-a-half |
 
 * Dependent on shelved packages
 ** hard dependencies
