@@ -98,12 +98,12 @@
 | elpa         |   92 |     92 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3612 |   3612 |       |       |       |  3166 |
+| github       | 3616 |   3616 |       |       |       |  3168 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
-| git          |   51 |     51 |       |       |       |    39 |
+| git          |   52 |     52 |       |       |       |    42 |
 | subtree      |   23 |     23 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| bitbucket    |   44 |     44 |       |       |       |    38 |
+| bitbucket    |   43 |     43 |       |       |       |    37 |
 | hg           |    1 |      1 |       |       |       |     1 |
 |--------------+------+--------+-------+-------+-------+-------|
 | bzr          |      |        |       |       |       |     2 |
@@ -117,9 +117,9 @@
 | minority     |   22 |     22 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   45 |     45 |       |       |       |       |
-| shelved      |  957 |        |   957 |       |       |       |
+| shelved      |  958 |        |   958 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6377 |   4997 |   957 |   426 |   155 |  3464 |
+| total        | 6382 |   5001 |   958 |   426 |   155 |  3468 |
 
 * Emacs
 ** New
@@ -473,6 +473,8 @@
 | ycmd                    | flycheck-ycmd                   | github    |
 
 ** Diverging sources
+- *pending*
+  - buffer-sets, pushover [[https://github.com/melpa/melpa/pull/4471#issuecomment-272823682][melpa#4471#272823682]]
 - *remove from melpa?*
   - frame-restore [[https://github.com/melpa/melpa/issues/4455][#4455]]
 - *all-in-one git*
@@ -520,6 +522,7 @@
 | Package               | Type     | Melpa     | Melpa Link        |
 |-----------------------+----------+-----------+-------------------|
 | autotest              | minority | github    | [[https://github.com/zenspider/elisp][zenspider/elisp]]   |
+| buffer-sets           | github   | git       |                   |
 | caml                  | orphaned | svn       |                   |
 | cfengine-code-style   | minority | github    | [[https://github.com/cfengine/core][cfengine/core]]     |
 | cg                    | orphaned | svn       |                   |
@@ -541,6 +544,7 @@
 | ninja-mode            | minority | github    | [[https://github.com/martine/ninja][martine/ninja]]     |
 | ox-clip               | minority | github    | [[https://github.com/jkitchin/scimax][jkitchin/scimax]]   |
 | po-mode               | minority | git       |                   |
+| pushover              | github   | git       |                   |
 | pylint                | minority | github    | [[https://github.com/PyCQA/pylint][PyCQA/pylint]]      |
 | ruby-additional       | minority | svn       |                   |
 | ruby-electric         | minority | svn       |                   |

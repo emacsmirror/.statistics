@@ -83,10 +83,13 @@
 #+NAME: emir-renamed-files
 | Name                  | Filename                                     |
 |-----------------------+----------------------------------------------|
-| llvm-mode             | llvm-mode.el?view=co                         |
-| tablegen-mode         | tablegen-mode.el?view=co                     |
+| chasen                | chasen.el.txt                                |
 | debian-bug            | debian-bug.el?root=pkg-goodies-el            |
 | debian-changelog-mode | debian-changelog-mode.el?root=pkg-goodies-el |
+| japanese-tokenizer    | japanese-tokenizer.el.txt                    |
+| llvm-mode             | llvm-mode.el?view=co                         |
+| spamfilter            | spamfilter.el.txt                            |
+| tablegen-mode         | tablegen-mode.el?view=co                     |
 
 ** variable ~emir-preferred-upstreams~
 #+NAME: set--emir-preferred-upstreams
@@ -163,7 +166,6 @@
 | apel               | 6. many feature conflicts   |
 | caml               | 5. svn not supported        |
 | cg                 | 5. svn not supported        |
-| chasen             | 9. suffix not supported     |
 | clang-format       | 5. svn not supported        |
 | color-theme        | 5. bzr not supported        |
 | confluence         | 5. svn not supported        |
@@ -179,7 +181,6 @@
 | filladapt          | 3. upstream unresponsive    |
 | flim               | 6. many feature conflicts   |
 | helm-ls-svn        | 5. svn not supported        |
-| japanese-tokenizer | 9. suffix not supported     |
 | keydef             | 2. upstream disappeared     |
 | linkd              | 7. include the images       |
 | lively             | 3. upstream unresponsive    |
@@ -198,7 +199,6 @@
 | session            | 5. tarball not supported    |
 | setnu              | 3. upstream unresponsive    |
 | smarty-mode        | 2. upstream has disappeared |
-| spamfiler          | 9. suffix not supported     |
 | swbuff             | 5. cvs not supported        |
 | tail               | 2. upstream has disappeared |
 | text-translator    | 5. bzr not supported        |
