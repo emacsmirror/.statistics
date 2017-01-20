@@ -118,6 +118,10 @@
   - org (drop htmlize)
   - project-root [[https://bitbucket.org/piranha/project-root/pull-requests/1/remove-bundled-find-cmdel/diff][project-root#1]]
   - slime, sly [[https://github.com/capitaomorte/sly/issues/92][sly#92]]
+- *Permanent*
+  - wanderlust [[https://github.com/wanderlust/wanderlust/issues/139][#139]] bbdb-wl.el is for compatibility with older bbdb
+    versions.  It's the only file that requires bbdb.  bbdb v3 comes
+    with wanderlust support.
 - *Rejected*
   - go: upstream reverted my fix [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - mic-paren: upstream considers it to be a drop-in replacement
@@ -267,6 +271,9 @@
     ~unicode~ is required to work around an old and long-since fixed bug.
   - w3: x-font-menu, xbm-button, xpm-button for XEmacs; dtk-voices is
     no longer available and not needed
+  - wanderlust [[https://github.com/wanderlust/wanderlust/issues/139][#139]] bbdb-wl.el is for compatibility with older bbdb
+    versions.  It's the only file that requires bbdb.  bbdb v3 comes
+    with wanderlust support.
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature" "Drop")
@@ -380,6 +387,9 @@
 | w3                              | elpa-branch | xbm-button             | t      |
 | w3                              | elpa-branch | xpm-button             | t      |
 | w3m                             | orphaned    | un-define              | global |
+| wanderlust                      | orphaned    | bbdb                   | t      |
+| wanderlust                      | orphaned    | bbdb-com               | t      |
+| wanderlust                      | orphaned    | bbdb-hooks             | t      |
 | wanderlust                      | orphaned    | bitmap                 | global |
 | xwem                            | shelved     | view-less              | global |
 | yatex                           | hg          | hilit19                | t      |
@@ -656,7 +666,6 @@
   - vm
 - *Pending*
   - malabar-mode [[https://github.com/m0smith/malabar-mode/issues/189][#189]]
-  - wanderlust [[https://github.com/wanderlust/wanderlust/issues/139][#139]]
 #+NAME: unsatisfied-hard
 #+BEGIN_SRC emacs-lisp
   (emir--require-issues (lambda (name feature)
@@ -673,7 +682,6 @@
 | vm           | orphaned |        | atomic-extents    |
 | vm           | orphaned |        | highlight-headers |
 | vm           | orphaned |        | timer-funcs       |
-| wanderlust   | orphaned | github | bbdb-hooks        |
 
 ** soft dependencies
 - *Revisit*
