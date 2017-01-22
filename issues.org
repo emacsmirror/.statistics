@@ -53,6 +53,7 @@
                    (sort features #'string<))))
        (epkgs [name class] 'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
+[[https://emacsmirror.net/stats][up]]
 * Feature kludges
 ** join provided
 - *Revisit*
@@ -126,6 +127,7 @@
   - go: upstream reverted my fix [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - mic-paren: upstream considers it to be a drop-in replacement
   - palette: upstream considers it to be a drop-in replacement
+  - mkhtml: upstream considers it to be a drop-in replacement
 #+NAME: provided-drop
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature")
@@ -189,6 +191,7 @@
 | helm-backup      | github   | env                   |
 | mailcrypt        | github   | timer                 |
 | mic-paren        | file     | paren                 |
+| mkhtml           | wiki     | htmlize               |
 | nav              | github   | ack                   |
 | nxhtml           | orphaned | ack                   |
 | nxhtml           | orphaned | anchored-transpose    |
@@ -260,6 +263,7 @@
     required by a single, undocumented, command
   - malabar-mode: only required by obsolete version in src.old/.
   - matlab-mode: backward compatibility
+  - org-readme: [[https://github.com/mattfidler/org-readme/issues/19][#19]] backward compatibility
   - python-mode: pymacs is unmaintained but a copy is bundled with
     python-mode.  py-load-pymacs does "Load Pymacs as delivered with
     python-mode.el", so even though I could not find (provide 'pymacs)
@@ -364,6 +368,7 @@
 | org                             | git         | org-publish            | t      |
 | org                             | git         | org-remember           | t      |
 | org-caldav                      | github      | org-icalendar          | t      |
+| org-readme                      | github      | org-html               | t      |
 | ox-pukiwiki                     | github      | org-test               | t      |
 | ox-textile                      | github      | org-test               | t      |
 | po-mode                         | minority    | po-compat              | t      |
@@ -689,7 +694,6 @@
 - *Pending*
   - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
   - es-lib [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
-  - org-readme [[https://github.com/mattfidler/org-readme/issues/19][#19]]
   - project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
 #+NAME: unsatisfied-soft
 #+BEGIN_SRC emacs-lisp
@@ -708,7 +712,6 @@
 | nxhtml           | orphaned |        | typesetter     |
 | nxhtml           | orphaned |        | w32-regdat     |
 | nxhtml           | orphaned |        | w32shell       |
-| org-readme       | github   | github | org-html       |
 | project-explorer | github   | github | ack-and-a-half |
 
 * Dependent on shelved packages

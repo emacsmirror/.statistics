@@ -7,6 +7,7 @@
     (customize-save-variable variable (and (not (equal value "nil")) value))
     nil)
 #+END_SRC
+[[https://emacsmirror.net/stats][up]]
 * Package variables
 ** variable ~emir-emacs-repository~
 #+NAME: set--emir-emacs-repository
