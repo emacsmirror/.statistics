@@ -99,12 +99,12 @@
 | elpa         |   92 |     92 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3628 |   3628 |       |       |       |  3186 |
+| github       | 3631 |   3631 |       |       |       |  3187 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   54 |     54 |       |       |       |    42 |
 | subtree      |   23 |     23 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| bitbucket    |   42 |     42 |       |       |       |    36 |
+| bitbucket    |   43 |     43 |       |       |       |    37 |
 | hg           |    1 |      1 |       |       |       |     1 |
 |--------------+------+--------+-------+-------+-------+-------|
 | bzr          |      |        |       |       |       |     2 |
@@ -115,12 +115,12 @@
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  763 |    763 |       |       |       |   178 |
 | file         |  307 |    307 |       |       |       |       |
-| minority     |   22 |     22 |       |       |       |       |
+| minority     |   21 |     21 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   44 |     44 |       |       |       |       |
 | shelved      |  969 |        |   969 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6399 |   5007 |   969 |   426 |   155 |  3485 |
+| total        | 6402 |   5010 |   969 |   426 |   155 |  3487 |
 
 * Emacs
 ** New
@@ -476,7 +476,6 @@
 ** Diverging sources
 - *all-in-one git*
   - autotest,toggle [[https://github.com/zenspider/elisp/issues/5][#5]] rejected
-  - flymake-lua [[https://github.com/sroccaserra/emacs/issues/4][#4]] no reply
   - ox-clip [[https://github.com/jkitchin/scimax/issues/21][#21]] pending
 - *bzr*
   - color-theme
@@ -532,7 +531,6 @@
 | debian-changelog-mode | minority | cvs       |                   |
 | dic-lookup-w3m        | orphaned | svn       |                   |
 | dsvn                  | minority | svn       |                   |
-| flymake-lua           | minority | github    | [[https://github.com/sroccaserra/emacs][sroccaserra/emacs]] |
 | google-c-style        | minority | github    | [[https://github.com/google/styleguide][google/styleguide]] |
 | helm-ls-svn           | orphaned | svn       |                   |
 | llvm-mode             | minority | git       |                   |
