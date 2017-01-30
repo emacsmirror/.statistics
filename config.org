@@ -231,6 +231,18 @@
 | ebuild-mode         | git    | ebuild-mode |
 
 ** slot ~library~
+
+Unlike for mirrored packages, this slot is set to an automatically
+determined value for all builtin packages (except the pseudo-package
+~emacs~), so these packages are not listed here.
+
+An exception to the exception is the builtin package ~nxml~.  Its
+~library~ was set explictily.  There is no ~nxml.el~ library, only
+~nxml-mode.el~, so this departure from the conventions had to be
+explicitly sanctioned by setting the value of ~library~ explicitly.
+But being an exception to the exception, this cannot automatically
+be listed here.  Thus this comment.
+
 #+NAME: slot--library
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Library")
@@ -249,10 +261,12 @@
 | auctex               | elpa-branch | tex.el                  |
 | ca2                  | github      | ca2+.el                 |
 | chumpy-windows       | github      | window-jump.el          |
+| ddskk                | github      | skk.el                  |
 | dired-hacks          | github      | dired-hacks-utils.el    |
 | emacs-speaks-nonmem  | github      | esn-start.el            |
 | emux                 | github      | emux-base.el            |
 | ert-runner           | github      | ert-runner.el           |
+| eziam-theme          | github      | eziam-dark-theme.el     |
 | farmhouse-theme      | github      | farmhouse-dark-theme.el |
 | gh                   | github      | gh-api.el               |
 | html5                | github      | html5-ncr.el            |
@@ -266,6 +280,7 @@
 | tao-theme            | github      | tao-yang-theme.el       |
 | ultratex             | github      | lisp/ultex.el           |
 | uni-confusables      | elpa        | uni-confusables.el      |
+| zotxt                | gitlab      | zotxt.el                |
 
 ** slot ~libraries~
 #+NAME: slot--libraries
