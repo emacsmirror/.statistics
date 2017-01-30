@@ -44,7 +44,7 @@
                                        [:order-by [(asc feature)]])
                               name))
              (setq feature (car feature))
-             (when (funcall pred name feature)
+             (when (funcall pred feature)
                (push feature features)))
            (mapcar (lambda (feature)
                      (list name class
@@ -57,11 +57,25 @@
 * Feature kludges
 ** join provided
 - *Revisit*
-- *Rejected*
+  - bbdb
+  - emacs
+  - eshell
+  - ess
+  - finder
+  - geiser
+  - mu4e
+  - navi2ch
+  - org-toodledo
+  - realgud
+  - riece
+  - ucs-utils
+  - wanderlust
+  - wisi
+- *Permanent:* rejected
   - sly [[https://github.com/capitaomorte/sly/pull/85][capitaomorte/sly#85]]
-- *Permanent (generated version file)*
+- *Permanent:* generated at built-time
   - notmuch
-- *Permanent (internal ignored test files)*
+- *Permanent:* internal ignored test files
   - jdee: jdee-test
   - org: org-test
   - org-toodledo: org-toodledo-test
@@ -102,7 +116,7 @@
 | wisi         | elpa     | wisi-compat-24.2    |
 
 ** drop provided
-- *TODO (bundle ert)*
+- *Todo:* bundle ert
   - codex
   - fabric
   - ghost-blog
@@ -114,20 +128,20 @@
   - phpunit
   - pony-mode
   - unkillable-scratch
-- *TODO (bundle el-expectations)*
+- *Todo:* bundle el-expectations
   - cake-inflector, cake2, historyf
   - helm-rails
-- *TODO (bundle mocker)*
+- *Todo:* bundle mocker
   - ein
   - pow
-- *TODO (bundle shelved elunit)*
+- *Todo:* bundle shelved elunit
   - jump
   - rinari
-- *TODO (provide init)*
+- *Todo:* provide init
   - ac-anaconda, anaconda-mode, company-anaconda, company-tern
-- *TODO (provide test-helper)*
+- *Todo:* provide test-helper
   - total of 69 packages!
-- *TODO (misc bundled libraries)*
+- *Todo:* misc bundled libraries
   - bitbake
   - cerbere
   - diffscuss-mode
@@ -165,7 +179,7 @@
   - project-root [[https://bitbucket.org/piranha/project-root/pull-requests/1/remove-bundled-find-cmdel/diff][#1]]
   - slime, sly [[https://github.com/capitaomorte/sly/issues/92][sly#92]]
   - smart-newline [[https://github.com/ainame/smart-newline.el/pull/20][#20]]
-- *Permanent*
+- *Permanent*: misc
   - (a) bundle ert: cask, commander, drag-stuff, ecukes, espuds,
     ruby-end, wrap-region (b) provide dummy-package: epl, flycheck (c)
     flycheck provides many fake libraries.  In the past this upstream
@@ -174,7 +188,7 @@
   - wanderlust [[https://github.com/wanderlust/wanderlust/issues/139][#139]] bbdb-wl.el is for compatibility with older bbdb
     versions.  It's the only file that requires bbdb.  bbdb v3 comes
     with wanderlust support.
-- *Rejected*
+- *Permanent:* rejected
   - go: upstream reverted my fix [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]
   - mic-paren: upstream considers it to be a drop-in replacement
   - palette: upstream considers it to be a drop-in replacement
@@ -420,22 +434,28 @@
 ** drop required
 - *Revisit*
 - *Pending*
+  - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
   - haml-mode [[https://github.com/nex3/haml-mode/issues/34][#34]], [[https://github.com/nex3/haml-mode/pull/35][#35]]
   - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
   - slime, sly, ilisp (shelved) [[https://github.com/capitaomorte/sly/issues/86][capitaomorte/sly#86]]
-- *Permanent*
+- *Permanent:* misc
+  - cask-package-toolset: bogus dependency
   - color-moccur: ~ee~ support is optional. ~ee~ depends on ~edb~.  Some of
     the ~edb~ libraries require the feature ~edbcore~, but none of its
     libraries actually provides that feature.
   - ddskk: jisx0213 is for backward compatibility
   - ecb: backward compatibility [[https://github.com/ecb-home/ecb/issues/24][#24]]
+  - es-lib [[https://github.com/sabof/es-lib/issues/3][#3]], project-explorer: [[https://github.com/sabof/project-explorer/issues/47][#47]] ack-and-a-half was removed due to
+    license violations.  Some parts of these packages break when that
+    isn't available, but the libraries are still loadable.
   - ess: rtf-support is only available in xemacs
   - el-autoyas, extend-dnd, r-autoyas: backward compatibility [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]
   - guix: these libraries are provided by GuixSD itself
-  - hyperbole: I have emailed the author.  efs is an xemacs package,
-    on emacs tramp is used.  Author sais id-menubars and x-mouse are
-    not hard dependencies and that he will eventually make them
-    available again.  I expect "eventually" to take a long time.
+  - hyperbole: I have emailed the author.  ~efs~ is an XEmacs package,
+    on Emacs ~tramp~ is used instead.  The author also says that
+    ~id-menubars~ and ~x-mouse~ are not hard dependencies and that he will
+    eventually make them available again.  I expect "eventually" to
+    take a long time.
   - jdee: The stand-alone ~cedet~ version contains ~working~ but the
     built-in version does not.  ~jdee~ defines defines the functions
     from ~working~ that it uses itself if the library cannot be
@@ -454,15 +474,15 @@
   - mew: mw32script is only required when using the Meadow Emacs fork.
   - twittering-mode: ~alpaca~ is only used if ~epa~ isn't available, and
     ~unicode~ is required to work around an old and long-since fixed bug.
-  - w3: x-font-menu, xbm-button, xpm-button for XEmacs; dtk-voices is
-    no longer available and not needed
+  - w3: x-font-menu, xbm-button, xpm-button are for XEmacs; dtk-voices
+    used to be part of emacspeaks and not needed
   - wanderlust [[https://github.com/wanderlust/wanderlust/issues/139][#139]] bbdb-wl.el is for compatibility with older bbdb
     versions.  It's the only file that requires bbdb.  bbdb v3 comes
     with wanderlust support.
-- *Permanent (internal autoloads)*
+- *Permanent:* internal autoloads
   - ddskk: skk-autoloads, nicola-ddskk-autoloads
   - vm: vm-autoloads
-- *Permanent (external autoloads)*
+- *Permanent:* external autoloads
   - bbdb: vm-autoloads
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
@@ -478,8 +498,10 @@
 |---------------------------------+-------------+------------------------+--------|
 | ac-octave                       | github      | octave-inf             | global |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | t      |
+| aozora-view                     | github      | ivs-aj1                | t      |
 | auto-complete                   | github      | semantic-ia            | t      |
 | bbdb                            | git         | vm-autoloads           | t      |
+| cask-package-toolset            | github      | ${package-name}        | t      |
 | cobol-mode                      | wiki        | cobol-indent           | t      |
 | color-moccur                    | github      | ee-autoloads           | t      |
 | color-theme-sanityinc-solarized | github      | color-theme            | global |
@@ -505,6 +527,7 @@
 | emacs-speaks-nonmem             | github      | org-publish            | t      |
 | emacspeak                       | github      | org-exp                | t      |
 | erlang                          | github      | tags                   | t      |
+| es-lib                          | github      | ack-and-a-half         | t      |
 | ess                             | github      | rtf-support            | t      |
 | extend-dnd                      | github      | yasnippet-bundle       | t      |
 | folding                         | github      | mode-motion            | global |
@@ -559,6 +582,7 @@
 | ox-pukiwiki                     | github      | org-test               | t      |
 | ox-textile                      | github      | org-test               | t      |
 | po-mode                         | minority    | po-compat              | t      |
+| project-explorer                | github      | ack-and-a-half         | t      |
 | python-mode                     | gitlab      | pymacs                 | t      |
 | r-autoyas                       | github      | yasnippet-bundle       | t      |
 | rpm-spec-mode                   | github      | shindent               | t      |
@@ -588,13 +612,6 @@
 | yatex                           | hg          | hilit19                | t      |
 
 ** ease required
-- *Revisit*
-  - elscreen: https://github.com/knu/elscreen/pull/25
-- *Pending*
-  - es-lib, project-explorer [[https://github.com/sabof/project-explorer/issues/47][sabof/project-explorer#47]]
-  - hyperbole: maintainer said by mail that those dependencies are not
-    actually necessary and that they eventually will be available
-    again.
 #+NAME: required-ease
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature")
@@ -605,55 +622,35 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-ease
-| Package          | Type        | Feature           |
-|------------------+-------------+-------------------|
-| auto-complete    | github      | rcodetools        |
-| color-moccur     | github      | ee-autoloads      |
-| elscreen         | github      | wl                |
-| es-lib           | github      | ack-and-a-half    |
-| hyperbole        | git         | id-menubars       |
-| hyperbole        | git         | x-mouse           |
-| mew              | github      | mw32script        |
-| navi2ch          | github      | spamfilter        |
-| org              | git         | inferior-picolisp |
-| org              | git         | matlab            |
-| org              | git         | rcodetools        |
-| org              | git         | wl                |
-| project-explorer | github      | ack-and-a-half    |
-| w3               | elpa-branch | dtk-voices        |
-| w3               | elpa-branch | x-font-menu       |
-| w3               | elpa-branch | xbm-button        |
-| w3               | elpa-branch | xpm-button        |
+| Package | Type | Feature           |
+|---------+------+-------------------|
+| org     | git  | inferior-picolisp |
+| org     | git  | matlab            |
 
 * Forced main library
-- *Revisit*
-  - ca2
-  - chumpy-windows
-  - dired-hacks
-  - emacs-speaks-nonmem
-  - emux
-  - gh
-  - html5
-  - ne2wm
-  - ultratex
-- *Pending:* Misc
-  - zotxt [[https://gitlab.com/egh/zotxt-emacs/merge_requests/2][#2]]
-- *Pending:* Gelpa
-  - ada-ref-man [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
-  - uniconfusables [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
 - *Pending:* two-variant themes
   - farmhouse-theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]
   - majapahit-theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]
   - punpun-theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]
   - spacemacs-theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]
   - tao-theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]
-- *Pending:* in Melpa and therefor mirrored too
-  - literate-starter-kit TODO
-  - meacupla-theme [[https://gitlab.com/jtecca/meacupla-theme/merge_requests/1][#1]]
-  - suscolors-theme [[https://github.com/TheSuspiciousWombat/SusColors-emacs/pull/3][#3]]
-- *Rejected*
-  - auctex (or so I assume)
-  - ert-runner [[https://github.com/rejeep/ert-runner.el/pull/16][#16]] (not a library)
+- *Stalled:* Gelpa
+  - ada-ref-man [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
+  - uni-confusables [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
+- *Permanent:* misc
+  - auctex: to late to change this now
+  - ddskk: upstream rejected the idea of consistent naming
+  - ert-runner: [[https://github.com/rejeep/ert-runner.el/pull/16][#16]] rejected because it's not a library
+  - literate-starter-kit: not a package but in Melpa
+- *Permanent:* no properly named main library
+  - emacs-speaks-nonmem
+  - emux
+  - html5
+  - ne2wm
+  - ultratex
+- *Permanent:* related packages, no primary entry point, pick one
+  - chumpy-windows
+  - dired-hacks
 #+NAME: no-mainlib
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Library")
@@ -670,7 +667,6 @@
 |----------------------+-------------+-------------------------|
 | ada-ref-man          | elpa        | ada-ref-man.el          |
 | auctex               | elpa-branch | tex.el                  |
-| ca2                  | github      | ca2+.el                 |
 | chumpy-windows       | github      | window-jump.el          |
 | ddskk                | github      | skk.el                  |
 | dired-hacks          | github      | dired-hacks-utils.el    |
@@ -679,19 +675,15 @@
 | ert-runner           | github      | ert-runner.el           |
 | eziam-theme          | github      | eziam-dark-theme.el     |
 | farmhouse-theme      | github      | farmhouse-dark-theme.el |
-| gh                   | github      | gh-api.el               |
 | html5                | github      | html5-ncr.el            |
 | literate-starter-kit | github      | init.el                 |
 | majapahit-theme      | gitlab      | majapahit-dark-theme.el |
-| meacupla-theme       | gitlab      | meacupla-theme.el       |
 | ne2wm                | github      | ne2wm-setup.el          |
 | punpun-theme         | github      | punpun-dark-theme.el    |
 | spacemacs-theme      | github      | spacemacs-dark-theme.el |
-| suscolors-theme      | github      | suscolors-theme.el      |
 | tao-theme            | github      | tao-yang-theme.el       |
 | ultratex             | github      | lisp/ultex.el           |
 | uni-confusables      | elpa        | uni-confusables.el      |
-| zotxt                | gitlab      | zotxt.el                |
 
 * Features provided by multiple packages
 ** excluding shelved
@@ -857,63 +849,55 @@
 
 * Unsatisfied dependencies
 ** hard dependencies
-- *Revisit*
+- *Todo*
   - apel
   - vm
 - *Pending*
-  - bts [[https://github.com/aki2o/emacs-bts/issues/16][16]]
+  - bts [[https://github.com/aki2o/emacs-bts/issues/16][#16]]
   - malabar-mode [[https://github.com/m0smith/malabar-mode/issues/189][#189]]
 #+NAME: unsatisfied-hard
 #+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (name feature)
-                          (not (epkg--required name feature)))
+  (emir--require-issues (lambda (feature)
+                          (not (epkg-provided-by feature)))
                         '((= hard 't) (isnull drop)))
 #+END_SRC
 #+RESULTS: unsatisfied-hard
-| Package              | Type     | Melpa  | Feature           |
-|----------------------+----------+--------+-------------------|
-| apel                 | orphaned | github | tcp               |
-| apel                 | orphaned | github | timer-funcs       |
-| bts                  | github   | github | tenv              |
-| cask-package-toolset | github   | github | ${package-name}   |
-| malabar-mode         | github   | github | ede/maven2        |
-| malabar-mode         | github   | github | semantic/db-javap |
-| vm                   | orphaned |        | atomic-extents    |
-| vm                   | orphaned |        | highlight-headers |
-| vm                   | orphaned |        | timer-funcs       |
+| Package      | Type     | Melpa  | Feature           |
+|--------------+----------+--------+-------------------|
+| apel         | orphaned | github | tcp               |
+| apel         | orphaned | github | timer-funcs       |
+| bts          | github   | github | tenv              |
+| malabar-mode | github   | github | ede/maven2        |
+| malabar-mode | github   | github | semantic/db-javap |
+| vm           | orphaned |        | atomic-extents    |
+| vm           | orphaned |        | highlight-headers |
+| vm           | orphaned |        | timer-funcs       |
 
 ** soft dependencies
-- *Revisit*
+- *Todo*
   - nxhtml
-- *Pending*
-  - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
-  - es-lib [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
-  - project-explorer [[https://github.com/sabof/es-lib/issues/3][sabof/es-lib#3]]
 #+NAME: unsatisfied-soft
 #+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (name feature)
-                          (not (epkg--required name feature)))
+  (emir--require-issues (lambda (feature)
+                          (not (epkg-provided-by feature)))
                         '((isnull hard) (isnull drop)))
 #+END_SRC
 #+RESULTS: unsatisfied-soft
-| Package          | Type     | Melpa  | Feature        |
-|------------------+----------+--------+----------------|
-| aozora-view      | github   | github | ivs-aj1        |
-| es-lib           | github   | github | ack-and-a-half |
-| nxhtml           | orphaned |        | company-mode   |
-| nxhtml           | orphaned |        | emacsw32       |
-| nxhtml           | orphaned |        | flymake-js     |
-| nxhtml           | orphaned |        | typesetter     |
-| nxhtml           | orphaned |        | w32-regdat     |
-| nxhtml           | orphaned |        | w32shell       |
-| project-explorer | github   | github | ack-and-a-half |
+| Package | Type     | Melpa | Feature      |
+|---------+----------+-------+--------------|
+| nxhtml  | orphaned |       | company-mode |
+| nxhtml  | orphaned |       | emacsw32     |
+| nxhtml  | orphaned |       | flymake-js   |
+| nxhtml  | orphaned |       | typesetter   |
+| nxhtml  | orphaned |       | w32-regdat   |
+| nxhtml  | orphaned |       | w32shell     |
 
 * Dependent on shelved packages
 ** hard dependencies
 #+NAME: required-shelved-hard
 #+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (name feature)
-                          (--when-let (epkg--required name feature)
+  (emir--require-issues (lambda (feature)
+                          (--when-let (epkg-provided-by feature)
                             (epkg-shelved-package-p (epkg it))))
                         '((= hard 't) (isnull drop)))
 #+END_SRC
@@ -922,8 +906,8 @@
 ** soft dependencies
 #+NAME: required-shelved-soft
 #+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (name feature)
-                          (--when-let (epkg--required name feature)
+  (emir--require-issues (lambda (feature)
+                          (--when-let (epkg-provided-by feature)
                             (epkg-shelved-package-p (epkg it))))
                         '((isnull hard) (isnull drop))))
 #+END_SRC
