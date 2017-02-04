@@ -117,6 +117,7 @@
 
 ** drop provided
 - *Todo:* bundle ert
+  - bury-successful-compilation
   - codex
   - fabric
   - ghost-blog
@@ -169,8 +170,6 @@
   - emacspeak [[https://github.com/tvraman/emacspeak/pull/15][#15]]
   - eyuml, helm-backup [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]
   - floobits [[https://github.com/Floobits/floobits-emacs/pull/86][#86]] (no reply)
-  - git-command [[https://github.com/10sr/git-command-el/pull/12][#12]]
-  - haskell-mode [[https://github.com/haskell/haskell-mode/pull/1478][#1478]]
   - lookup [[https://github.com/lookup2/lookup2/pull/14][#14]]
   - mailcrypt [[https://github.com/barak/mailcrypt/pull/1][#1]]
   - psgml [[https://github.com/lenst/psgml/issues/1][#1]]
@@ -179,7 +178,6 @@
   - org [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
   - project-root [[https://bitbucket.org/piranha/project-root/pull-requests/1/remove-bundled-find-cmdel/diff][#1]]
   - slime, sly [[https://github.com/capitaomorte/sly/issues/92][sly#92]]
-  - smart-newline [[https://github.com/ainame/smart-newline.el/pull/20][#20]]
 - *Permanent*: misc
   - (a) bundle ert: cask, commander, drag-stuff, ecukes, espuds,
     ruby-end, wrap-region (b) provide dummy-package: epl, flycheck (c)
@@ -204,240 +202,234 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package              | Type     | Feature                        |
-|----------------------+----------+--------------------------------|
-| ac-anaconda          | github   | init                           |
-| ag                   | github   | test-helper                    |
-| alchemist            | github   | test-helper                    |
-| amd-mode             | github   | test-helper                    |
-| ample-regexps        | github   | test-helper                    |
-| anaconda-mode        | github   | init                           |
-| anaconda-mode        | github   | test-helper                    |
-| anything-project     | github   | anything                       |
-| anything-project     | github   | anything-match-plugin          |
-| apel                 | orphaned | custom                         |
-| apel                 | orphaned | env                            |
-| apel                 | orphaned | install                        |
-| apel                 | orphaned | timezone                       |
-| apel                 | orphaned | xemacs                         |
-| basic-c-compile      | github   | test-helper                    |
-| bitbake              | github   | functional-test                |
-| cake-inflector       | github   | el-expectations                |
-| cake2                | github   | el-expectations                |
-| cask                 | github   | ert                            |
-| cask-package-toolset | github   | test-helper                    |
-| celery               | github   | test-helper                    |
-| cerbere              | github   | phpunit-test                   |
-| cerbere              | github   | test-helper                    |
-| codex                | github   | ert                            |
-| coffee-mode          | github   | test-helper                    |
-| commander            | github   | ert                            |
-| company-anaconda     | github   | init                           |
-| company-tern         | github   | init                           |
-| company-tern         | github   | test-helper                    |
-| confluence           | orphaned | xml-rpc                        |
-| coq                  | github   | maths-menu                     |
-| coq                  | github   | mmm-auto                       |
-| coq                  | github   | mmm-class                      |
-| coq                  | github   | mmm-cmds                       |
-| coq                  | github   | mmm-compat                     |
-| coq                  | github   | mmm-cweb                       |
-| coq                  | github   | mmm-mason                      |
-| coq                  | github   | mmm-mode                       |
-| coq                  | github   | mmm-region                     |
-| coq                  | github   | mmm-rpm                        |
-| coq                  | github   | mmm-sample                     |
-| coq                  | github   | mmm-univ                       |
-| coq                  | github   | mmm-utils                      |
-| coq                  | github   | mmm-vars                       |
-| cpanfile-mode        | github   | test-helper                    |
-| ddskk                | github   | install                        |
-| ddskk                | github   | ptexinfmt                      |
-| ddskk                | github   | vip                            |
-| diffscuss-mode       | subtree  | test-simple                    |
-| dionysos             | github   | test-helper                    |
-| drag-stuff           | github   | ert                            |
-| dumb-jump            | github   | test-helper                    |
-| ecukes               | github   | ert                            |
-| edbi-database-url    | github   | test-helper                    |
-| edbi-django          | github   | test-helper                    |
-| ein                  | github   | mocker                         |
-| elisp-refs           | github   | test-helper                    |
-| elixir-mode          | github   | test-helper                    |
-| emacspeak            | github   | amixer                         |
-| emacspeak            | github   | nm                             |
-| emacspeak            | github   | tetris                         |
-| emojify              | github   | test-helper                    |
-| emr                  | github   | test-helper                    |
-| epl                  | github   | dummy-package                  |
-| espuds               | github   | ert                            |
-| evil-smartparens     | github   | evil-tests                     |
-| evil-snipe           | github   | test-helper                    |
-| eyuml                | github   | env                            |
-| fabric               | github   | ert                            |
-| fabric               | github   | test-helper                    |
-| find-file-in-project | github   | ivy                            |
-| fireplace            | github   | test-helper                    |
-| flim                 | orphaned | hex-util                       |
-| flim                 | orphaned | hmac-def                       |
-| flim                 | orphaned | hmac-md5                       |
-| flim                 | orphaned | hmac-sha1                      |
-| flim                 | orphaned | luna                           |
-| flim                 | orphaned | lunit                          |
-| flim                 | orphaned | md4                            |
-| flim                 | orphaned | md5                            |
-| flim                 | orphaned | ntlm                           |
-| flim                 | orphaned | sasl                           |
-| flim                 | orphaned | sasl-anonymous                 |
-| flim                 | orphaned | sasl-cram                      |
-| flim                 | orphaned | sasl-digest                    |
-| flim                 | orphaned | sasl-login                     |
-| flim                 | orphaned | sasl-ntlm                      |
-| flim                 | orphaned | sasl-plain                     |
-| flim                 | orphaned | sasl-scram                     |
-| flim                 | orphaned | sha1                           |
-| flim                 | orphaned | smtpmail                       |
-| floobits             | github   | highlight                      |
-| flycheck             | github   | checkdoc-elisp-mode-regression |
-| flycheck             | github   | compressed                     |
-| flycheck             | github   | dummy-package                  |
-| flycheck             | github   | dummy-package-autoloads        |
-| flycheck             | github   | errors-and-warnings            |
-| flycheck             | github   | warnings                       |
-| ghost-blog           | github   | ert                            |
-| git                  | github   | ert                            |
-| git-command          | github   | git-ps1-mode                   |
-| git-command          | github   | term-run                       |
-| git-command          | github   | with-editor                    |
-| gitlab               | github   | test-helper                    |
-| go                   | github   | gnugo                          |
-| go-eldoc             | github   | test-helper                    |
-| google-this          | github   | noflet                         |
-| gotest               | github   | test-helper                    |
-| haskell-mode         | github   | dash                           |
-| haskell-mode         | github   | ert                            |
-| haskell-mode         | github   | shut-up                        |
-| haskell-mode         | github   | undercover                     |
-| helm-backup          | github   | env                            |
-| helm-company         | github   | test-helper                    |
-| helm-rails           | github   | ert-expectations               |
-| historyf             | github   | el-expectations                |
-| ido-ubiquitous       | github   | test-helper                    |
-| irony                | github   | ert                            |
-| jump                 | github   | elunit                         |
-| karma                | github   | test-helper                    |
-| literate-coffee-mode | github   | test-helper                    |
-| lookup               | github   | stem-english                   |
-| loop                 | github   | test-helper                    |
-| mailcrypt            | github   | timer                          |
-| malabar-mode         | github   | elk-test                       |
-| marcopolo            | github   | test-helper                    |
-| markdown-toc         | github   | test-helper                    |
-| markdownfmt          | github   | test-helper                    |
-| markup               | github   | ert                            |
-| matrix-client        | git      | test-helper                    |
-| mic-paren            | file     | paren                          |
-| mkhtml               | wiki     | htmlize                        |
-| mu4e-alert           | github   | test-helper                    |
-| nav                  | github   | ack                            |
-| navi2ch              | github   | ert                            |
-| nxhtml               | orphaned | ack                            |
-| nxhtml               | orphaned | anchored-transpose             |
-| nxhtml               | orphaned | csharp-mode                    |
-| nxhtml               | orphaned | edit-server                    |
-| nxhtml               | orphaned | fold-dwim                      |
-| nxhtml               | orphaned | html-toc                       |
-| nxhtml               | orphaned | http-post-simple               |
-| nxhtml               | orphaned | iss-mode                       |
-| nxhtml               | orphaned | markchars                      |
-| nxhtml               | orphaned | moz                            |
-| nxhtml               | orphaned | org-panel                      |
-| nxhtml               | orphaned | outline-magic                  |
-| nxhtml               | orphaned | php-mode                       |
-| nxhtml               | orphaned | pointback                      |
-| nxhtml               | orphaned | powershell-mode                |
-| nxhtml               | orphaned | rnc-mode                       |
-| nxhtml               | orphaned | smarty-mode                    |
-| nxhtml               | orphaned | tt-mode                        |
-| nxhtml               | orphaned | visual-basic-mode              |
-| nxhtml               | orphaned | vline                          |
-| nxhtml               | orphaned | zencoding-mode                 |
-| omni-log             | github   | test-helper                    |
-| omni-quotes          | github   | test-helper                    |
-| omni-scratch         | github   | test-helper                    |
-| omni-tags            | github   | test-helper                    |
-| opensource           | github   | test-helper                    |
-| org                  | git      | htmlize                        |
-| org                  | git      | ob-scala                       |
-| org-doing            | github   | test-helper                    |
-| org-sync             | github   | test-helper                    |
-| org-trello           | github   | test-helper                    |
-| org2jekyll           | github   | test-helper                    |
-| overseer             | github   | test-helper                    |
-| palette              | wiki     | eyedropper                     |
-| paradox              | github   | test-helper                    |
-| ph                   | github   | tdd-helper                     |
-| php+-mode            | github   | ert                            |
-| php+-mode            | github   | ert-tests                      |
-| php+-mode            | github   | ert-x                          |
-| php+-mode            | github   | ert-x-tests                    |
-| php+-mode            | github   | php-completion                 |
-| php+-mode            | github   | php-doc                        |
-| php+-mode            | github   | php-string                     |
-| php+-mode            | github   | string-utils                   |
-| phpunit              | github   | ert                            |
-| phpunit              | github   | test-helper                    |
-| pony-mode            | github   | ert                            |
-| pow                  | github   | mocker                         |
-| prodigy              | github   | test-helper                    |
-| projmake-mode        | github   | elisp-lint                     |
-| psgml                | github   | sgml-mode                      |
-| pythonic             | github   | test-helper                    |
-| racer                | github   | test-helper                    |
-| refine               | github   | test-helper                    |
-| relative-buffers     | github   | test-helper                    |
-| repo                 | github   | functional-test                |
-| resize-window        | github   | test-helper                    |
-| restart-emacs        | github   | test-helper                    |
-| rinari               | github   | elunit                         |
-| ripgrep              | github   | test-helper                    |
-| ruby-end             | github   | ert                            |
-| semi                 | orphaned | signature                      |
-| sift                 | github   | test-helper                    |
-| skeletor             | github   | test-helper                    |
-| slime                | github   | cl-indent                      |
-| sly                  | github   | cl-indent                      |
-| smart-newline        | github   | cursor-test                    |
-| smart-newline        | github   | test-helper                    |
-| smartparens          | github   | test-helper                    |
-| socyl                | github   | test-helper                    |
-| suggest              | github   | test-helper                    |
-| tco                  | github   | test-helper                    |
-| tern-django          | github   | test-helper                    |
-| tox                  | github   | test-helper                    |
-| travis               | github   | test-helper                    |
-| tuareg               | github   | caml                           |
-| twittering-mode      | github   | ssl                            |
-| unkillable-scratch   | github   | ert                            |
-| vdirel               | github   | test-helper                    |
-| vm                   | orphaned | org-vm                         |
-| vm                   | orphaned | tapestry                       |
-| vm                   | orphaned | vcard                          |
-| wanderlust           | orphaned | bbdb-wl                        |
-| wanderlust           | orphaned | ptexinfmt                      |
-| wanderlust           | orphaned | rfc2368                        |
-| wanderlust           | orphaned | ssl                            |
-| wanderlust           | orphaned | utf7                           |
-| widget-mvc           | github   | test-helper                    |
-| window-purpose       | github   | test-helper                    |
-| wordnut              | github   | tdd-helper                     |
-| wrap-region          | github   | ert                            |
+| Package                     | Type     | Feature                        |
+|-----------------------------+----------+--------------------------------|
+| ac-anaconda                 | github   | init                           |
+| ag                          | github   | test-helper                    |
+| alchemist                   | github   | test-helper                    |
+| amd-mode                    | github   | test-helper                    |
+| ample-regexps               | github   | test-helper                    |
+| anaconda-mode               | github   | init                           |
+| anaconda-mode               | github   | test-helper                    |
+| anything-project            | github   | anything                       |
+| anything-project            | github   | anything-match-plugin          |
+| apel                        | orphaned | custom                         |
+| apel                        | orphaned | env                            |
+| apel                        | orphaned | install                        |
+| apel                        | orphaned | timezone                       |
+| apel                        | orphaned | xemacs                         |
+| basic-c-compile             | github   | test-helper                    |
+| bitbake                     | github   | functional-test                |
+| bury-successful-compilation | github   | ert                            |
+| cake-inflector              | github   | el-expectations                |
+| cake2                       | github   | el-expectations                |
+| cask                        | github   | ert                            |
+| cask-package-toolset        | github   | test-helper                    |
+| celery                      | github   | test-helper                    |
+| cerbere                     | github   | phpunit-test                   |
+| cerbere                     | github   | test-helper                    |
+| codex                       | github   | ert                            |
+| coffee-mode                 | github   | test-helper                    |
+| commander                   | github   | ert                            |
+| company-anaconda            | github   | init                           |
+| company-tern                | github   | init                           |
+| company-tern                | github   | test-helper                    |
+| confluence                  | orphaned | xml-rpc                        |
+| coq                         | github   | maths-menu                     |
+| coq                         | github   | mmm-auto                       |
+| coq                         | github   | mmm-class                      |
+| coq                         | github   | mmm-cmds                       |
+| coq                         | github   | mmm-compat                     |
+| coq                         | github   | mmm-cweb                       |
+| coq                         | github   | mmm-mason                      |
+| coq                         | github   | mmm-mode                       |
+| coq                         | github   | mmm-region                     |
+| coq                         | github   | mmm-rpm                        |
+| coq                         | github   | mmm-sample                     |
+| coq                         | github   | mmm-univ                       |
+| coq                         | github   | mmm-utils                      |
+| coq                         | github   | mmm-vars                       |
+| cpanfile-mode               | github   | test-helper                    |
+| ddskk                       | github   | install                        |
+| ddskk                       | github   | ptexinfmt                      |
+| ddskk                       | github   | vip                            |
+| diffscuss-mode              | subtree  | test-simple                    |
+| dionysos                    | github   | test-helper                    |
+| drag-stuff                  | github   | ert                            |
+| dumb-jump                   | github   | test-helper                    |
+| ecukes                      | github   | ert                            |
+| edbi-database-url           | github   | test-helper                    |
+| edbi-django                 | github   | test-helper                    |
+| ein                         | github   | mocker                         |
+| elisp-refs                  | github   | test-helper                    |
+| elixir-mode                 | github   | test-helper                    |
+| emacspeak                   | github   | amixer                         |
+| emacspeak                   | github   | nm                             |
+| emacspeak                   | github   | tetris                         |
+| emojify                     | github   | test-helper                    |
+| emr                         | github   | test-helper                    |
+| epl                         | github   | dummy-package                  |
+| espuds                      | github   | ert                            |
+| evil-smartparens            | github   | evil-tests                     |
+| evil-snipe                  | github   | test-helper                    |
+| eyuml                       | github   | env                            |
+| fabric                      | github   | ert                            |
+| fabric                      | github   | test-helper                    |
+| find-file-in-project        | github   | ivy                            |
+| fireplace                   | github   | test-helper                    |
+| flim                        | orphaned | hex-util                       |
+| flim                        | orphaned | hmac-def                       |
+| flim                        | orphaned | hmac-md5                       |
+| flim                        | orphaned | hmac-sha1                      |
+| flim                        | orphaned | luna                           |
+| flim                        | orphaned | lunit                          |
+| flim                        | orphaned | md4                            |
+| flim                        | orphaned | md5                            |
+| flim                        | orphaned | ntlm                           |
+| flim                        | orphaned | sasl                           |
+| flim                        | orphaned | sasl-anonymous                 |
+| flim                        | orphaned | sasl-cram                      |
+| flim                        | orphaned | sasl-digest                    |
+| flim                        | orphaned | sasl-login                     |
+| flim                        | orphaned | sasl-ntlm                      |
+| flim                        | orphaned | sasl-plain                     |
+| flim                        | orphaned | sasl-scram                     |
+| flim                        | orphaned | sha1                           |
+| flim                        | orphaned | smtpmail                       |
+| floobits                    | github   | highlight                      |
+| flycheck                    | github   | checkdoc-elisp-mode-regression |
+| flycheck                    | github   | compressed                     |
+| flycheck                    | github   | dummy-package                  |
+| flycheck                    | github   | dummy-package-autoloads        |
+| flycheck                    | github   | errors-and-warnings            |
+| flycheck                    | github   | warnings                       |
+| ghost-blog                  | github   | ert                            |
+| git                         | github   | ert                            |
+| gitlab                      | github   | test-helper                    |
+| go                          | github   | gnugo                          |
+| go-eldoc                    | github   | test-helper                    |
+| google-this                 | github   | noflet                         |
+| gotest                      | github   | test-helper                    |
+| helm-backup                 | github   | env                            |
+| helm-company                | github   | test-helper                    |
+| helm-rails                  | github   | ert-expectations               |
+| historyf                    | github   | el-expectations                |
+| ido-ubiquitous              | github   | test-helper                    |
+| irony                       | github   | ert                            |
+| jump                        | github   | elunit                         |
+| karma                       | github   | test-helper                    |
+| literate-coffee-mode        | github   | test-helper                    |
+| lookup                      | github   | stem-english                   |
+| loop                        | github   | test-helper                    |
+| mailcrypt                   | github   | timer                          |
+| malabar-mode                | github   | elk-test                       |
+| marcopolo                   | github   | test-helper                    |
+| markdown-toc                | github   | test-helper                    |
+| markdownfmt                 | github   | test-helper                    |
+| markup                      | github   | ert                            |
+| matrix-client               | git      | test-helper                    |
+| mic-paren                   | file     | paren                          |
+| mkhtml                      | wiki     | htmlize                        |
+| mu4e-alert                  | github   | test-helper                    |
+| nav                         | github   | ack                            |
+| navi2ch                     | github   | ert                            |
+| nxhtml                      | orphaned | ack                            |
+| nxhtml                      | orphaned | anchored-transpose             |
+| nxhtml                      | orphaned | csharp-mode                    |
+| nxhtml                      | orphaned | edit-server                    |
+| nxhtml                      | orphaned | fold-dwim                      |
+| nxhtml                      | orphaned | html-toc                       |
+| nxhtml                      | orphaned | http-post-simple               |
+| nxhtml                      | orphaned | iss-mode                       |
+| nxhtml                      | orphaned | markchars                      |
+| nxhtml                      | orphaned | moz                            |
+| nxhtml                      | orphaned | org-panel                      |
+| nxhtml                      | orphaned | outline-magic                  |
+| nxhtml                      | orphaned | php-mode                       |
+| nxhtml                      | orphaned | pointback                      |
+| nxhtml                      | orphaned | powershell-mode                |
+| nxhtml                      | orphaned | rnc-mode                       |
+| nxhtml                      | orphaned | smarty-mode                    |
+| nxhtml                      | orphaned | tt-mode                        |
+| nxhtml                      | orphaned | visual-basic-mode              |
+| nxhtml                      | orphaned | vline                          |
+| nxhtml                      | orphaned | zencoding-mode                 |
+| omni-log                    | github   | test-helper                    |
+| omni-quotes                 | github   | test-helper                    |
+| omni-scratch                | github   | test-helper                    |
+| omni-tags                   | github   | test-helper                    |
+| opensource                  | github   | test-helper                    |
+| org                         | git      | htmlize                        |
+| org                         | git      | ob-scala                       |
+| org-doing                   | github   | test-helper                    |
+| org-sync                    | github   | test-helper                    |
+| org-trello                  | github   | test-helper                    |
+| org2jekyll                  | github   | test-helper                    |
+| overseer                    | github   | test-helper                    |
+| palette                     | wiki     | eyedropper                     |
+| paradox                     | github   | test-helper                    |
+| ph                          | github   | tdd-helper                     |
+| php+-mode                   | github   | ert                            |
+| php+-mode                   | github   | ert-tests                      |
+| php+-mode                   | github   | ert-x                          |
+| php+-mode                   | github   | ert-x-tests                    |
+| php+-mode                   | github   | php-completion                 |
+| php+-mode                   | github   | php-doc                        |
+| php+-mode                   | github   | php-string                     |
+| php+-mode                   | github   | string-utils                   |
+| phpunit                     | github   | ert                            |
+| phpunit                     | github   | test-helper                    |
+| pony-mode                   | github   | ert                            |
+| pow                         | github   | mocker                         |
+| prodigy                     | github   | test-helper                    |
+| projmake-mode               | github   | elisp-lint                     |
+| psgml                       | github   | sgml-mode                      |
+| pythonic                    | github   | test-helper                    |
+| racer                       | github   | test-helper                    |
+| refine                      | github   | test-helper                    |
+| relative-buffers            | github   | test-helper                    |
+| repo                        | github   | functional-test                |
+| resize-window               | github   | test-helper                    |
+| restart-emacs               | github   | test-helper                    |
+| rinari                      | github   | elunit                         |
+| ripgrep                     | github   | test-helper                    |
+| ruby-end                    | github   | ert                            |
+| semi                        | orphaned | signature                      |
+| sift                        | github   | test-helper                    |
+| skeletor                    | github   | test-helper                    |
+| slime                       | github   | cl-indent                      |
+| sly                         | github   | cl-indent                      |
+| smartparens                 | github   | test-helper                    |
+| socyl                       | github   | test-helper                    |
+| suggest                     | github   | test-helper                    |
+| tco                         | github   | test-helper                    |
+| tern-django                 | github   | test-helper                    |
+| tox                         | github   | test-helper                    |
+| travis                      | github   | test-helper                    |
+| tuareg                      | github   | caml                           |
+| twittering-mode             | github   | ssl                            |
+| unkillable-scratch          | github   | ert                            |
+| vdirel                      | github   | test-helper                    |
+| vm                          | orphaned | org-vm                         |
+| vm                          | orphaned | tapestry                       |
+| vm                          | orphaned | vcard                          |
+| wanderlust                  | orphaned | bbdb-wl                        |
+| wanderlust                  | orphaned | ptexinfmt                      |
+| wanderlust                  | orphaned | rfc2368                        |
+| wanderlust                  | orphaned | ssl                            |
+| wanderlust                  | orphaned | utf7                           |
+| widget-mvc                  | github   | test-helper                    |
+| window-purpose              | github   | test-helper                    |
+| wordnut                     | github   | tdd-helper                     |
+| wrap-region                 | github   | ert                            |
 
 ** drop required
 - *Revisit*
 - *Pending*
   - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
+  - font-lock-studio [[https://github.com/Lindydancer/font-lock-studio/issues/2][#2]]
   - haml-mode [[https://github.com/nex3/haml-mode/issues/34][#34]], [[https://github.com/nex3/haml-mode/pull/35][#35]]
+  - lispxmp: asked by email
   - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
   - slime, sly, ilisp (shelved) [[https://github.com/capitaomorte/sly/issues/86][capitaomorte/sly#86]]
 - *Permanent:* misc
@@ -496,121 +488,124 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package                         | Type        | Feature                | Drop   |
-|---------------------------------+-------------+------------------------+--------|
-| ac-octave                       | github      | octave-inf             | global |
-| ada-mode                        | elpa        | ada-mode-compat-24.2   | t      |
-| aozora-view                     | github      | ivs-aj1                | t      |
-| auto-complete                   | github      | semantic-ia            | t      |
-| bbdb                            | git         | vm-autoloads           | t      |
-| cask-package-toolset            | github      | ${package-name}        | t      |
-| color-moccur                    | github      | ee-autoloads           | t      |
-| color-theme-sanityinc-solarized | github      | color-theme            | global |
-| color-theme-sanityinc-tomorrow  | github      | color-theme            | global |
-| color-theme-solarized           | github      | color-theme            | global |
-| company                         | github      | semantic-idle          | t      |
-| coq                             | github      | atomic-extents         | t      |
-| coq                             | github      | proof-x-symbol         | t      |
-| ddskk                           | github      | balloon-help           | global |
-| ddskk                           | github      | jisx0213               | t      |
-| ddskk                           | github      | nicola-ddskk-autoloads | t      |
-| ddskk                           | github      | skk-autoloads          | t      |
-| dictionary                      | github      | balloon-help           | global |
-| dired+                          | wiki        | help+20                | global |
-| dired+                          | wiki        | subr-21                | global |
-| doremi-cmd                      | wiki        | color-theme            | global |
-| ecb                             | github      | semantic-analyze       | t      |
-| ecb                             | github      | semantic-ctxt          | t      |
-| ecb                             | github      | thing                  | global |
-| efs                             | shelved     | view-less              | global |
-| eide                            | git         | gdb-ui                 | t      |
-| el-autoyas                      | github      | yasnippet-bundle       | t      |
-| emacs-speaks-nonmem             | github      | org-publish            | t      |
-| emacspeak                       | github      | org-exp                | t      |
-| erlang                          | github      | tags                   | t      |
-| es-lib                          | github      | ack-and-a-half         | t      |
-| ess                             | github      | rtf-support            | t      |
-| extend-dnd                      | github      | yasnippet-bundle       | t      |
-| folding                         | github      | mode-motion            | global |
-| folio                           | shelved     | color-theme            | global |
-| gnuplot                         | github      | toolbar                | global |
-| gnus                            | builtin     | un-define              | global |
-| guix                            | github      | guix-build-config      | t      |
-| guix                            | github      | guix-emacs             | t      |
-| help+                           | wiki        | info+20                | global |
-| hyperbole                       | git         | efs                    | t      |
-| hyperbole                       | git         | id-menubars            | t      |
-| hyperbole                       | git         | x-mouse                | t      |
-| icicles                         | wiki        | color-theme            | global |
-| jabber                          | git         | un-define              | global |
-| jdee                            | github      | working                | t      |
-| lacarte                         | wiki        | subr-21                | global |
-| lilypond                        | git         | ilisp                  | t      |
-| load-theme-buffer-local         | github      | color-theme            | global |
-| malabar-mode                    | github      | cc-subword             | t      |
-| malabar-mode                    | github      | semantic-ctxt          | t      |
-| malabar-mode                    | github      | semantic-find          | t      |
-| malabar-mode                    | github      | semantic-ia            | t      |
-| malabar-mode                    | github      | semantic-load          | t      |
-| malabar-mode                    | github      | semantic-wisent        | t      |
-| malabar-mode                    | github      | semanticdb-search      | t      |
-| malabar-mode                    | github      | srecode-getset         | t      |
-| malabar-mode                    | github      | srecode-map            | t      |
-| malabar-mode                    | github      | wisent-java            | t      |
-| matlab-mode                     | git         | semantic-dep           | t      |
-| matlab-mode                     | git         | semantic-format        | t      |
-| matlab-mode                     | git         | semanticdb             | t      |
-| matlab-mode                     | git         | srecode-map            | t      |
-| menu-bar+                       | wiki        | help+20                | global |
-| menu-bar+                       | wiki        | info+20                | global |
-| mew                             | github      | mw32script             | t      |
-| mew                             | github      | un-define              | global |
-| mh-e                            | builtin     | toolbar                | global |
-| mhc                             | github      | bitmap                 | global |
-| mhc                             | github      | mhc-bm                 | t      |
-| mhc                             | github      | mhc-xmas               | t      |
-| mhc                             | github      | pcustom                | t      |
-| mhc                             | github      | poe                    | t      |
-| mkhtml                          | wiki        | info+20                | global |
-| molokai-theme                   | github      | color-theme            | global |
-| navi2ch                         | github      | bitmap                 | global |
-| notes-mode                      | elpa        | npgp                   | t      |
-| notes-mode                      | elpa        | pam                    | t      |
-| org                             | git         | org-publish            | t      |
-| org                             | git         | org-remember           | t      |
-| org-caldav                      | github      | org-icalendar          | t      |
-| org-readme                      | github      | org-html               | t      |
-| ox-pukiwiki                     | github      | org-test               | t      |
-| ox-textile                      | github      | org-test               | t      |
-| po-mode                         | minority    | po-compat              | t      |
-| project-explorer                | github      | ack-and-a-half         | t      |
-| python-mode                     | gitlab      | pymacs                 | t      |
-| r-autoyas                       | github      | yasnippet-bundle       | t      |
-| rpm-spec-mode                   | github      | shindent               | t      |
-| scroll-1                        | shelved     | view-less              | global |
-| semi                            | orphaned    | bitmap                 | global |
-| slamhound                       | shelved     | slam.hound             | t      |
-| slime                           | github      | hyperspec              | t      |
-| sly                             | github      | hyperspec              | t      |
-| tangotango-theme                | github      | color-theme            | global |
-| tc                              | github      | bitmap                 | global |
-| twittering-mode                 | github      | alpaca                 | t      |
-| twittering-mode                 | github      | un-define              | global |
-| twittering-mode                 | github      | unicode                | t      |
-| vcl-mode                        | github      | generic-mode           | global |
-| vm                              | orphaned    | vm-autoloads           | t      |
-| w3                              | elpa-branch | dtk-voices             | t      |
-| w3                              | elpa-branch | w3-site-init           | t      |
-| w3                              | elpa-branch | x-font-menu            | t      |
-| w3                              | elpa-branch | xbm-button             | t      |
-| w3                              | elpa-branch | xpm-button             | t      |
-| w3m                             | orphaned    | un-define              | global |
-| wanderlust                      | orphaned    | bbdb                   | t      |
-| wanderlust                      | orphaned    | bbdb-com               | t      |
-| wanderlust                      | orphaned    | bbdb-hooks             | t      |
-| wanderlust                      | orphaned    | bitmap                 | global |
-| xwem                            | shelved     | view-less              | global |
-| yatex                           | hg          | hilit19                | t      |
+| Package                         | Type        | Feature                    | Drop   |
+|---------------------------------+-------------+----------------------------+--------|
+| ac-octave                       | github      | octave-inf                 | global |
+| ada-mode                        | elpa        | ada-mode-compat-24.2       | t      |
+| aozora-view                     | github      | ivs-aj1                    | t      |
+| auto-complete                   | github      | semantic-ia                | t      |
+| bbdb                            | git         | vm-autoloads               | t      |
+| cask-package-toolset            | github      | ${package-name}            | t      |
+| color-moccur                    | github      | ee-autoloads               | t      |
+| color-theme-sanityinc-solarized | github      | color-theme                | global |
+| color-theme-sanityinc-tomorrow  | github      | color-theme                | global |
+| color-theme-solarized           | github      | color-theme                | global |
+| company                         | github      | semantic-idle              | t      |
+| coq                             | github      | atomic-extents             | t      |
+| coq                             | github      | proof-x-symbol             | t      |
+| ddskk                           | github      | balloon-help               | global |
+| ddskk                           | github      | jisx0213                   | t      |
+| ddskk                           | github      | nicola-ddskk-autoloads     | t      |
+| ddskk                           | github      | skk-autoloads              | t      |
+| dictionary                      | github      | balloon-help               | global |
+| dired+                          | wiki        | help+20                    | global |
+| dired+                          | wiki        | subr-21                    | global |
+| doremi-cmd                      | wiki        | color-theme                | global |
+| ecb                             | github      | semantic-analyze           | t      |
+| ecb                             | github      | semantic-ctxt              | t      |
+| ecb                             | github      | thing                      | global |
+| efs                             | shelved     | view-less                  | global |
+| eide                            | git         | gdb-ui                     | t      |
+| el-autoyas                      | github      | yasnippet-bundle           | t      |
+| emacs-speaks-nonmem             | github      | org-publish                | t      |
+| emacspeak                       | github      | org-exp                    | t      |
+| erlang                          | github      | tags                       | t      |
+| es-lib                          | github      | ack-and-a-half             | t      |
+| ess                             | github      | rtf-support                | t      |
+| extend-dnd                      | github      | yasnippet-bundle           | t      |
+| folding                         | github      | mode-motion                | global |
+| folio                           | shelved     | color-theme                | global |
+| font-lock-studio                | github      | font-lock-profiler         | t      |
+| font-lock-studio                | github      | font-lock-regression-suite | t      |
+| gnuplot                         | github      | toolbar                    | global |
+| gnus                            | builtin     | un-define                  | global |
+| guix                            | github      | guix-build-config          | t      |
+| guix                            | github      | guix-emacs                 | t      |
+| help+                           | wiki        | info+20                    | global |
+| hyperbole                       | git         | efs                        | t      |
+| hyperbole                       | git         | id-menubars                | t      |
+| hyperbole                       | git         | x-mouse                    | t      |
+| icicles                         | wiki        | color-theme                | global |
+| jabber                          | git         | un-define                  | global |
+| jdee                            | github      | working                    | t      |
+| lacarte                         | wiki        | subr-21                    | global |
+| lilypond                        | git         | ilisp                      | t      |
+| lispxmp                         | wiki        | newxmp                     | t      |
+| load-theme-buffer-local         | github      | color-theme                | global |
+| malabar-mode                    | github      | cc-subword                 | t      |
+| malabar-mode                    | github      | semantic-ctxt              | t      |
+| malabar-mode                    | github      | semantic-find              | t      |
+| malabar-mode                    | github      | semantic-ia                | t      |
+| malabar-mode                    | github      | semantic-load              | t      |
+| malabar-mode                    | github      | semantic-wisent            | t      |
+| malabar-mode                    | github      | semanticdb-search          | t      |
+| malabar-mode                    | github      | srecode-getset             | t      |
+| malabar-mode                    | github      | srecode-map                | t      |
+| malabar-mode                    | github      | wisent-java                | t      |
+| matlab-mode                     | git         | semantic-dep               | t      |
+| matlab-mode                     | git         | semantic-format            | t      |
+| matlab-mode                     | git         | semanticdb                 | t      |
+| matlab-mode                     | git         | srecode-map                | t      |
+| menu-bar+                       | wiki        | help+20                    | global |
+| menu-bar+                       | wiki        | info+20                    | global |
+| mew                             | github      | mw32script                 | t      |
+| mew                             | github      | un-define                  | global |
+| mh-e                            | builtin     | toolbar                    | global |
+| mhc                             | github      | bitmap                     | global |
+| mhc                             | github      | mhc-bm                     | t      |
+| mhc                             | github      | mhc-xmas                   | t      |
+| mhc                             | github      | pcustom                    | t      |
+| mhc                             | github      | poe                        | t      |
+| mkhtml                          | wiki        | info+20                    | global |
+| molokai-theme                   | github      | color-theme                | global |
+| navi2ch                         | github      | bitmap                     | global |
+| notes-mode                      | elpa        | npgp                       | t      |
+| notes-mode                      | elpa        | pam                        | t      |
+| org                             | git         | org-publish                | t      |
+| org                             | git         | org-remember               | t      |
+| org-caldav                      | github      | org-icalendar              | t      |
+| org-readme                      | github      | org-html                   | t      |
+| ox-pukiwiki                     | github      | org-test                   | t      |
+| ox-textile                      | github      | org-test                   | t      |
+| po-mode                         | minority    | po-compat                  | t      |
+| project-explorer                | github      | ack-and-a-half             | t      |
+| python-mode                     | gitlab      | pymacs                     | t      |
+| r-autoyas                       | github      | yasnippet-bundle           | t      |
+| rpm-spec-mode                   | github      | shindent                   | t      |
+| scroll-1                        | shelved     | view-less                  | global |
+| semi                            | orphaned    | bitmap                     | global |
+| slamhound                       | shelved     | slam.hound                 | t      |
+| slime                           | github      | hyperspec                  | t      |
+| sly                             | github      | hyperspec                  | t      |
+| tangotango-theme                | github      | color-theme                | global |
+| tc                              | github      | bitmap                     | global |
+| twittering-mode                 | github      | alpaca                     | t      |
+| twittering-mode                 | github      | un-define                  | global |
+| twittering-mode                 | github      | unicode                    | t      |
+| vcl-mode                        | github      | generic-mode               | global |
+| vm                              | orphaned    | vm-autoloads               | t      |
+| w3                              | elpa-branch | dtk-voices                 | t      |
+| w3                              | elpa-branch | w3-site-init               | t      |
+| w3                              | elpa-branch | x-font-menu                | t      |
+| w3                              | elpa-branch | xbm-button                 | t      |
+| w3                              | elpa-branch | xpm-button                 | t      |
+| w3m                             | orphaned    | un-define                  | global |
+| wanderlust                      | orphaned    | bbdb                       | t      |
+| wanderlust                      | orphaned    | bbdb-com                   | t      |
+| wanderlust                      | orphaned    | bbdb-hooks                 | t      |
+| wanderlust                      | orphaned    | bitmap                     | global |
+| xwem                            | shelved     | view-less                  | global |
+| yatex                           | hg          | hilit19                    | t      |
 
 ** ease required
 #+NAME: required-ease
