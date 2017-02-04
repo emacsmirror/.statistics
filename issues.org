@@ -173,6 +173,7 @@
   - haskell-mode [[https://github.com/haskell/haskell-mode/pull/1478][#1478]]
   - lookup [[https://github.com/lookup2/lookup2/pull/14][#14]]
   - mailcrypt [[https://github.com/barak/mailcrypt/pull/1][#1]]
+  - psgml [[https://github.com/lenst/psgml/issues/1][#1]]
   - nav [[https://github.com/ijt/emacs-nav/pull/103][#103]]
   - org (drop htmlize)
   - org [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
@@ -390,6 +391,7 @@
 | pow                  | github   | mocker                         |
 | prodigy              | github   | test-helper                    |
 | projmake-mode        | github   | elisp-lint                     |
+| psgml                | github   | sgml-mode                      |
 | pythonic             | github   | test-helper                    |
 | racer                | github   | test-helper                    |
 | refine               | github   | test-helper                    |
@@ -502,7 +504,6 @@
 | auto-complete                   | github      | semantic-ia            | t      |
 | bbdb                            | git         | vm-autoloads           | t      |
 | cask-package-toolset            | github      | ${package-name}        | t      |
-| cobol-mode                      | wiki        | cobol-indent           | t      |
 | color-moccur                    | github      | ee-autoloads           | t      |
 | color-theme-sanityinc-solarized | github      | color-theme            | global |
 | color-theme-sanityinc-tomorrow  | github      | color-theme            | global |

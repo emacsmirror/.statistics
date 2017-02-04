@@ -96,10 +96,10 @@
 | Archive/Type | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |--------------+------+--------+-------+-------+-------+-------|
 | builtin      |  423 |        |       |   426 |     5 |       |
-| elpa         |   92 |     92 |       |       |   138 |       |
+| elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3633 |   3633 |       |       |       |  3188 |
+| github       | 3637 |   3637 |       |       |       |  3191 |
 | gitlab       |   24 |     24 |       |       |       |    24 |
 | git          |   54 |     54 |       |       |       |    42 |
 | subtree      |   23 |     23 |       |       |       |       |
@@ -113,14 +113,14 @@
 | fossil       |      |        |       |       |       |     0 |
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
-| wiki         |  762 |    762 |       |       |       |   178 |
+| wiki         |  761 |    761 |       |       |       |   178 |
 | file         |  307 |    307 |       |       |       |       |
 | minority     |   21 |     21 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   44 |     44 |       |       |       |       |
 | shelved      |  969 |        |   969 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6402 |   5010 |   969 |   426 |   155 |  3487 |
+| total        | 6406 |   5014 |   969 |   426 |   155 |  3490 |
 
 * Emacs
 ** New
@@ -300,6 +300,7 @@
 | org                        | git    | :core     |          |                      | [[http://orgmode.org]]                           |
 | pabbrev                    | github | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164418230][melpa#3383#164418230]] | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
 | parsec                     | github | :subtree  | :squash  |                      | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
+| psgml                      | github | :external |          |                      | [[https://github.com/lenst/psgml][lenst/psgml]]                                  |
 | realgud                    | github | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
 | rich-minority              | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | sotlisp                    | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
