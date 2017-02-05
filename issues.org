@@ -170,6 +170,7 @@
   - emacspeak [[https://github.com/tvraman/emacspeak/pull/15][#15]]
   - eyuml, helm-backup [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]
   - floobits [[https://github.com/Floobits/floobits-emacs/pull/86][#86]] (no reply)
+  - font-lock-regression-suite [[https://github.com/Lindydancer/font-lock-studio/issues/2][font-lock-studio#2]]
   - lookup [[https://github.com/lookup2/lookup2/pull/14][#14]]
   - mailcrypt [[https://github.com/barak/mailcrypt/pull/1][#1]]
   - psgml [[https://github.com/lenst/psgml/issues/1][#1]]
@@ -303,6 +304,8 @@
 | flycheck                    | github   | dummy-package-autoloads        |
 | flycheck                    | github   | errors-and-warnings            |
 | flycheck                    | github   | warnings                       |
+| font-lock-regression-suite  | github   | files                          |
+| font-lock-regression-suite  | github   | remote-wildcards               |
 | ghost-blog                  | github   | ert                            |
 | git                         | github   | ert                            |
 | gitlab                      | github   | test-helper                    |
@@ -427,7 +430,6 @@
 - *Revisit*
 - *Pending*
   - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
-  - font-lock-studio [[https://github.com/Lindydancer/font-lock-studio/issues/2][#2]]
   - haml-mode [[https://github.com/nex3/haml-mode/issues/34][#34]], [[https://github.com/nex3/haml-mode/pull/35][#35]]
   - lispxmp: asked by email
   - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
@@ -488,124 +490,122 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package                         | Type        | Feature                    | Drop   |
-|---------------------------------+-------------+----------------------------+--------|
-| ac-octave                       | github      | octave-inf                 | global |
-| ada-mode                        | elpa        | ada-mode-compat-24.2       | t      |
-| aozora-view                     | github      | ivs-aj1                    | t      |
-| auto-complete                   | github      | semantic-ia                | t      |
-| bbdb                            | git         | vm-autoloads               | t      |
-| cask-package-toolset            | github      | ${package-name}            | t      |
-| color-moccur                    | github      | ee-autoloads               | t      |
-| color-theme-sanityinc-solarized | github      | color-theme                | global |
-| color-theme-sanityinc-tomorrow  | github      | color-theme                | global |
-| color-theme-solarized           | github      | color-theme                | global |
-| company                         | github      | semantic-idle              | t      |
-| coq                             | github      | atomic-extents             | t      |
-| coq                             | github      | proof-x-symbol             | t      |
-| ddskk                           | github      | balloon-help               | global |
-| ddskk                           | github      | jisx0213                   | t      |
-| ddskk                           | github      | nicola-ddskk-autoloads     | t      |
-| ddskk                           | github      | skk-autoloads              | t      |
-| dictionary                      | github      | balloon-help               | global |
-| dired+                          | wiki        | help+20                    | global |
-| dired+                          | wiki        | subr-21                    | global |
-| doremi-cmd                      | wiki        | color-theme                | global |
-| ecb                             | github      | semantic-analyze           | t      |
-| ecb                             | github      | semantic-ctxt              | t      |
-| ecb                             | github      | thing                      | global |
-| efs                             | shelved     | view-less                  | global |
-| eide                            | git         | gdb-ui                     | t      |
-| el-autoyas                      | github      | yasnippet-bundle           | t      |
-| emacs-speaks-nonmem             | github      | org-publish                | t      |
-| emacspeak                       | github      | org-exp                    | t      |
-| erlang                          | github      | tags                       | t      |
-| es-lib                          | github      | ack-and-a-half             | t      |
-| ess                             | github      | rtf-support                | t      |
-| extend-dnd                      | github      | yasnippet-bundle           | t      |
-| folding                         | github      | mode-motion                | global |
-| folio                           | shelved     | color-theme                | global |
-| font-lock-studio                | github      | font-lock-profiler         | t      |
-| font-lock-studio                | github      | font-lock-regression-suite | t      |
-| gnuplot                         | github      | toolbar                    | global |
-| gnus                            | builtin     | un-define                  | global |
-| guix                            | github      | guix-build-config          | t      |
-| guix                            | github      | guix-emacs                 | t      |
-| help+                           | wiki        | info+20                    | global |
-| hyperbole                       | git         | efs                        | t      |
-| hyperbole                       | git         | id-menubars                | t      |
-| hyperbole                       | git         | x-mouse                    | t      |
-| icicles                         | wiki        | color-theme                | global |
-| jabber                          | git         | un-define                  | global |
-| jdee                            | github      | working                    | t      |
-| lacarte                         | wiki        | subr-21                    | global |
-| lilypond                        | git         | ilisp                      | t      |
-| lispxmp                         | wiki        | newxmp                     | t      |
-| load-theme-buffer-local         | github      | color-theme                | global |
-| malabar-mode                    | github      | cc-subword                 | t      |
-| malabar-mode                    | github      | semantic-ctxt              | t      |
-| malabar-mode                    | github      | semantic-find              | t      |
-| malabar-mode                    | github      | semantic-ia                | t      |
-| malabar-mode                    | github      | semantic-load              | t      |
-| malabar-mode                    | github      | semantic-wisent            | t      |
-| malabar-mode                    | github      | semanticdb-search          | t      |
-| malabar-mode                    | github      | srecode-getset             | t      |
-| malabar-mode                    | github      | srecode-map                | t      |
-| malabar-mode                    | github      | wisent-java                | t      |
-| matlab-mode                     | git         | semantic-dep               | t      |
-| matlab-mode                     | git         | semantic-format            | t      |
-| matlab-mode                     | git         | semanticdb                 | t      |
-| matlab-mode                     | git         | srecode-map                | t      |
-| menu-bar+                       | wiki        | help+20                    | global |
-| menu-bar+                       | wiki        | info+20                    | global |
-| mew                             | github      | mw32script                 | t      |
-| mew                             | github      | un-define                  | global |
-| mh-e                            | builtin     | toolbar                    | global |
-| mhc                             | github      | bitmap                     | global |
-| mhc                             | github      | mhc-bm                     | t      |
-| mhc                             | github      | mhc-xmas                   | t      |
-| mhc                             | github      | pcustom                    | t      |
-| mhc                             | github      | poe                        | t      |
-| mkhtml                          | wiki        | info+20                    | global |
-| molokai-theme                   | github      | color-theme                | global |
-| navi2ch                         | github      | bitmap                     | global |
-| notes-mode                      | elpa        | npgp                       | t      |
-| notes-mode                      | elpa        | pam                        | t      |
-| org                             | git         | org-publish                | t      |
-| org                             | git         | org-remember               | t      |
-| org-caldav                      | github      | org-icalendar              | t      |
-| org-readme                      | github      | org-html                   | t      |
-| ox-pukiwiki                     | github      | org-test                   | t      |
-| ox-textile                      | github      | org-test                   | t      |
-| po-mode                         | minority    | po-compat                  | t      |
-| project-explorer                | github      | ack-and-a-half             | t      |
-| python-mode                     | gitlab      | pymacs                     | t      |
-| r-autoyas                       | github      | yasnippet-bundle           | t      |
-| rpm-spec-mode                   | github      | shindent                   | t      |
-| scroll-1                        | shelved     | view-less                  | global |
-| semi                            | orphaned    | bitmap                     | global |
-| slamhound                       | shelved     | slam.hound                 | t      |
-| slime                           | github      | hyperspec                  | t      |
-| sly                             | github      | hyperspec                  | t      |
-| tangotango-theme                | github      | color-theme                | global |
-| tc                              | github      | bitmap                     | global |
-| twittering-mode                 | github      | alpaca                     | t      |
-| twittering-mode                 | github      | un-define                  | global |
-| twittering-mode                 | github      | unicode                    | t      |
-| vcl-mode                        | github      | generic-mode               | global |
-| vm                              | orphaned    | vm-autoloads               | t      |
-| w3                              | elpa-branch | dtk-voices                 | t      |
-| w3                              | elpa-branch | w3-site-init               | t      |
-| w3                              | elpa-branch | x-font-menu                | t      |
-| w3                              | elpa-branch | xbm-button                 | t      |
-| w3                              | elpa-branch | xpm-button                 | t      |
-| w3m                             | orphaned    | un-define                  | global |
-| wanderlust                      | orphaned    | bbdb                       | t      |
-| wanderlust                      | orphaned    | bbdb-com                   | t      |
-| wanderlust                      | orphaned    | bbdb-hooks                 | t      |
-| wanderlust                      | orphaned    | bitmap                     | global |
-| xwem                            | shelved     | view-less                  | global |
-| yatex                           | hg          | hilit19                    | t      |
+| Package                         | Type        | Feature                | Drop   |
+|---------------------------------+-------------+------------------------+--------|
+| ac-octave                       | github      | octave-inf             | global |
+| ada-mode                        | elpa        | ada-mode-compat-24.2   | t      |
+| aozora-view                     | github      | ivs-aj1                | t      |
+| auto-complete                   | github      | semantic-ia            | t      |
+| bbdb                            | git         | vm-autoloads           | t      |
+| cask-package-toolset            | github      | ${package-name}        | t      |
+| color-moccur                    | github      | ee-autoloads           | t      |
+| color-theme-sanityinc-solarized | github      | color-theme            | global |
+| color-theme-sanityinc-tomorrow  | github      | color-theme            | global |
+| color-theme-solarized           | github      | color-theme            | global |
+| company                         | github      | semantic-idle          | t      |
+| coq                             | github      | atomic-extents         | t      |
+| coq                             | github      | proof-x-symbol         | t      |
+| ddskk                           | github      | balloon-help           | global |
+| ddskk                           | github      | jisx0213               | t      |
+| ddskk                           | github      | nicola-ddskk-autoloads | t      |
+| ddskk                           | github      | skk-autoloads          | t      |
+| dictionary                      | github      | balloon-help           | global |
+| dired+                          | wiki        | help+20                | global |
+| dired+                          | wiki        | subr-21                | global |
+| doremi-cmd                      | wiki        | color-theme            | global |
+| ecb                             | github      | semantic-analyze       | t      |
+| ecb                             | github      | semantic-ctxt          | t      |
+| ecb                             | github      | thing                  | global |
+| efs                             | shelved     | view-less              | global |
+| eide                            | git         | gdb-ui                 | t      |
+| el-autoyas                      | github      | yasnippet-bundle       | t      |
+| emacs-speaks-nonmem             | github      | org-publish            | t      |
+| emacspeak                       | github      | org-exp                | t      |
+| erlang                          | github      | tags                   | t      |
+| es-lib                          | github      | ack-and-a-half         | t      |
+| ess                             | github      | rtf-support            | t      |
+| extend-dnd                      | github      | yasnippet-bundle       | t      |
+| folding                         | github      | mode-motion            | global |
+| folio                           | shelved     | color-theme            | global |
+| gnuplot                         | github      | toolbar                | global |
+| gnus                            | builtin     | un-define              | global |
+| guix                            | github      | guix-build-config      | t      |
+| guix                            | github      | guix-emacs             | t      |
+| help+                           | wiki        | info+20                | global |
+| hyperbole                       | git         | efs                    | t      |
+| hyperbole                       | git         | id-menubars            | t      |
+| hyperbole                       | git         | x-mouse                | t      |
+| icicles                         | wiki        | color-theme            | global |
+| jabber                          | git         | un-define              | global |
+| jdee                            | github      | working                | t      |
+| lacarte                         | wiki        | subr-21                | global |
+| lilypond                        | git         | ilisp                  | t      |
+| lispxmp                         | wiki        | newxmp                 | t      |
+| load-theme-buffer-local         | github      | color-theme            | global |
+| malabar-mode                    | github      | cc-subword             | t      |
+| malabar-mode                    | github      | semantic-ctxt          | t      |
+| malabar-mode                    | github      | semantic-find          | t      |
+| malabar-mode                    | github      | semantic-ia            | t      |
+| malabar-mode                    | github      | semantic-load          | t      |
+| malabar-mode                    | github      | semantic-wisent        | t      |
+| malabar-mode                    | github      | semanticdb-search      | t      |
+| malabar-mode                    | github      | srecode-getset         | t      |
+| malabar-mode                    | github      | srecode-map            | t      |
+| malabar-mode                    | github      | wisent-java            | t      |
+| matlab-mode                     | git         | semantic-dep           | t      |
+| matlab-mode                     | git         | semantic-format        | t      |
+| matlab-mode                     | git         | semanticdb             | t      |
+| matlab-mode                     | git         | srecode-map            | t      |
+| menu-bar+                       | wiki        | help+20                | global |
+| menu-bar+                       | wiki        | info+20                | global |
+| mew                             | github      | mw32script             | t      |
+| mew                             | github      | un-define              | global |
+| mh-e                            | builtin     | toolbar                | global |
+| mhc                             | github      | bitmap                 | global |
+| mhc                             | github      | mhc-bm                 | t      |
+| mhc                             | github      | mhc-xmas               | t      |
+| mhc                             | github      | pcustom                | t      |
+| mhc                             | github      | poe                    | t      |
+| mkhtml                          | wiki        | info+20                | global |
+| molokai-theme                   | github      | color-theme            | global |
+| navi2ch                         | github      | bitmap                 | global |
+| notes-mode                      | elpa        | npgp                   | t      |
+| notes-mode                      | elpa        | pam                    | t      |
+| org                             | git         | org-publish            | t      |
+| org                             | git         | org-remember           | t      |
+| org-caldav                      | github      | org-icalendar          | t      |
+| org-readme                      | github      | org-html               | t      |
+| ox-pukiwiki                     | github      | org-test               | t      |
+| ox-textile                      | github      | org-test               | t      |
+| po-mode                         | minority    | po-compat              | t      |
+| project-explorer                | github      | ack-and-a-half         | t      |
+| python-mode                     | gitlab      | pymacs                 | t      |
+| r-autoyas                       | github      | yasnippet-bundle       | t      |
+| rpm-spec-mode                   | github      | shindent               | t      |
+| scroll-1                        | shelved     | view-less              | global |
+| semi                            | orphaned    | bitmap                 | global |
+| slamhound                       | shelved     | slam.hound             | t      |
+| slime                           | github      | hyperspec              | t      |
+| sly                             | github      | hyperspec              | t      |
+| tangotango-theme                | github      | color-theme            | global |
+| tc                              | github      | bitmap                 | global |
+| twittering-mode                 | github      | alpaca                 | t      |
+| twittering-mode                 | github      | un-define              | global |
+| twittering-mode                 | github      | unicode                | t      |
+| vcl-mode                        | github      | generic-mode           | global |
+| vm                              | orphaned    | vm-autoloads           | t      |
+| w3                              | elpa-branch | dtk-voices             | t      |
+| w3                              | elpa-branch | w3-site-init           | t      |
+| w3                              | elpa-branch | x-font-menu            | t      |
+| w3                              | elpa-branch | xbm-button             | t      |
+| w3                              | elpa-branch | xpm-button             | t      |
+| w3m                             | orphaned    | un-define              | global |
+| wanderlust                      | orphaned    | bbdb                   | t      |
+| wanderlust                      | orphaned    | bbdb-com               | t      |
+| wanderlust                      | orphaned    | bbdb-hooks             | t      |
+| wanderlust                      | orphaned    | bitmap                 | global |
+| xwem                            | shelved     | view-less              | global |
+| yatex                           | hg          | hilit19                | t      |
 
 ** ease required
 #+NAME: required-ease
@@ -892,20 +892,20 @@
 ** hard dependencies
 #+NAME: required-shelved-hard
 #+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (feature)
-                          (--when-let (epkg-provided-by feature)
-                            (epkg-shelved-package-p (epkg it))))
-                        '((= hard 't) (isnull drop)))
+  ;; (emir--require-issues (lambda (feature)
+  ;;                         (--when-let (epkg-provided-by feature)
+  ;;                           (epkg-shelved-package-p (epkg it))))
+  ;;                       '((= hard 't) (isnull drop)))
 #+END_SRC
 #+RESULTS: required-shelved-hard
 
 ** soft dependencies
 #+NAME: required-shelved-soft
 #+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (feature)
-                          (--when-let (epkg-provided-by feature)
-                            (epkg-shelved-package-p (epkg it))))
-                        '((isnull hard) (isnull drop))))
+  ;; (emir--require-issues (lambda (feature)
+  ;;                         (--when-let (epkg-provided-by feature)
+  ;;                           (epkg-shelved-package-p (epkg it))))
+  ;;                       '((isnull hard) (isnull drop)))
 #+END_SRC
 #+RESULTS: required-shelved-soft
 
