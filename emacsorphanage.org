@@ -19,54 +19,53 @@
 		    #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package          | Mirror   | Melpa    | Reason                      |
-|------------------+----------+----------+-----------------------------|
-| apel             | orphaned | github   | 6. many feature conflicts   |
-| caml             | orphaned | svn      | 5. svn not supported        |
-| cg               | orphaned | svn      | 5. svn not supported        |
-| clang-format     | orphaned | svn      | 5. svn not supported        |
-| color-theme      | orphaned | bzr      | 5. bzr not supported        |
-| confluence       | orphaned | svn      | 5. svn not supported        |
-| crontab-mode     | orphaned | orphaned | 3. upstream disappeared     |
-| darcsum          | orphaned | darcs    | 5. darcs not supported      |
-| dedicated        | orphaned | orphaned | 2. upstream has disappeared |
-| dic-lookup-w3m   | orphaned | svn      | 5. svn not supported        |
-| doom             | orphaned | orphaned | 3. upstream unresponsive    |
-| ecasound         | orphaned |          | 3. upstream disappeared     |
-| elisp-depend     | orphaned | orphaned | 3. upstream unresponsive    |
-| elo              |          |          | 4. dropped of by maintainer |
-| eshell-manual    | orphaned |          | 3. upstream unresponsive    |
-| filladapt        | orphaned |          | 3. upstream unresponsive    |
-| flim             | orphaned | github   | 6. many feature conflicts   |
-| helm-ls-svn      | orphaned | svn      | 5. svn not supported        |
-| keydef           | orphaned | orphaned | 2. upstream disappeared     |
-| linkd            | orphaned |          | 7. include the images       |
-| lively           | orphaned | orphaned | 3. upstream unresponsive    |
-| lsdb             | orphaned |          | 5. tarball not supported    |
-| magit-filenotify | orphaned | orphaned | [[https://github.com/emacsorphanage/magit-filenotify/issues/19][#19]]                         |
-| miniedit         | orphaned | orphaned | 2. upstream disappeared     |
-| nxhtml           | orphaned |          | 5. bzr not supported        |
-| oberon           | orphaned | orphaned | 3. upstream unresponsive    |
-| org-bullets      | orphaned | orphaned | [[https://github.com/sabof/org-bullets/issues/18][#18]]                         |
-| org-grep         | orphaned | orphaned | 1. the maintainer has died  |
-| osd              | orphaned |          | 2. upstream disappeared     |
-| pager            | orphaned | orphaned | 2. upstream disappeared     |
-| picolisp         | orphaned |          | 8. should contact upstream  |
-| pointback        | orphaned | orphaned | 2. upstream disappeared     |
-| read-char-spec   | orphaned |          | 3. upstream unresponsive    |
-| ruby-additional  | minority | svn      | 5. svn not supported        |
-| semi             | orphaned | github   | 6. many feature conflicts   |
-| session          | orphaned | orphaned | 5. tarball not supported    |
-| setnu            | orphaned |          | 3. upstream unresponsive    |
-| smarty-mode      | orphaned | orphaned | 2. upstream has disappeared |
-| swbuff           | orphaned | orphaned | 5. cvs not supported        |
-| tail             | orphaned |          | 2. upstream has disappeared |
-| text-translator  | orphaned |          | 5. bzr not supported        |
-| vala-mode        | orphaned | orphaned | 2. upstream has disappeared |
-| vc-fossil        | orphaned | orphaned | 5. fossil not supported     |
-| vm               | orphaned |          | 5. bzr not supported        |
-| w3m              | orphaned | cvs      | 5. cvs not supported        |
-| wanderlust       | orphaned | github   | 6. many feature conflicts   |
+| Package         | Mirror   | Melpa    | Reason                      |
+|-----------------+----------+----------+-----------------------------|
+| apel            | orphaned | github   | 6. many feature conflicts   |
+| caml            | orphaned | svn      | 5. svn not supported        |
+| cg              | orphaned | svn      | 5. svn not supported        |
+| clang-format    | orphaned | svn      | 5. svn not supported        |
+| color-theme     | orphaned | bzr      | 5. bzr not supported        |
+| confluence      | orphaned | svn      | 5. svn not supported        |
+| crontab-mode    | orphaned | orphaned | 3. upstream disappeared     |
+| darcsum         | orphaned | darcs    | 5. darcs not supported      |
+| dedicated       | orphaned | orphaned | 2. upstream has disappeared |
+| dic-lookup-w3m  | orphaned | svn      | 5. svn not supported        |
+| doom            | orphaned | orphaned | 3. upstream unresponsive    |
+| ecasound        | orphaned |          | 3. upstream disappeared     |
+| elisp-depend    | orphaned | orphaned | 3. upstream unresponsive    |
+| elo             |          |          | 4. dropped of by maintainer |
+| eshell-manual   | orphaned |          | 3. upstream unresponsive    |
+| filladapt       | orphaned |          | 3. upstream unresponsive    |
+| flim            | orphaned | github   | 6. many feature conflicts   |
+| helm-ls-svn     | orphaned | svn      | 5. svn not supported        |
+| keydef          | orphaned | orphaned | 2. upstream disappeared     |
+| linkd           | orphaned |          | 7. include the images       |
+| lively          | orphaned | orphaned | 3. upstream unresponsive    |
+| lsdb            | orphaned |          | 5. tarball not supported    |
+| miniedit        | orphaned | orphaned | 2. upstream disappeared     |
+| nxhtml          | orphaned |          | 5. bzr not supported        |
+| oberon          | orphaned | orphaned | 3. upstream unresponsive    |
+| org-bullets     | orphaned | orphaned | [[https://github.com/sabof/org-bullets/issues/18][#18]]                         |
+| org-grep        | orphaned | orphaned | 1. the maintainer has died  |
+| osd             | orphaned |          | 2. upstream disappeared     |
+| pager           | orphaned | orphaned | 2. upstream disappeared     |
+| picolisp        | orphaned |          | 8. should contact upstream  |
+| pointback       | orphaned | orphaned | 2. upstream disappeared     |
+| read-char-spec  | orphaned |          | 3. upstream unresponsive    |
+| ruby-additional | minority | svn      | 5. svn not supported        |
+| semi            | orphaned | github   | 6. many feature conflicts   |
+| session         | orphaned | orphaned | 5. tarball not supported    |
+| setnu           | orphaned |          | 3. upstream unresponsive    |
+| smarty-mode     | orphaned | orphaned | 2. upstream has disappeared |
+| swbuff          | orphaned | orphaned | 5. cvs not supported        |
+| tail            | orphaned |          | 2. upstream has disappeared |
+| text-translator | orphaned |          | 5. bzr not supported        |
+| vala-mode       | orphaned | orphaned | 2. upstream has disappeared |
+| vc-fossil       | orphaned | orphaned | 5. fossil not supported     |
+| vm              | orphaned |          | 5. bzr not supported        |
+| w3m             | orphaned | cvs      | 5. cvs not supported        |
+| wanderlust      | orphaned | github   | 6. many feature conflicts   |
 
 - The ~Mirror~ column specifies where the Emacsmirror mirrors a package
   from.  This should be ~orphaned~, meaning that the mirror gets it from
