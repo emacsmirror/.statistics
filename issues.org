@@ -170,7 +170,6 @@
   - emacspeak [[https://github.com/tvraman/emacspeak/pull/15][#15]]
   - eyuml, helm-backup [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]
   - floobits [[https://github.com/Floobits/floobits-emacs/pull/86][#86]] (no reply)
-  - font-lock-regression-suite [[https://github.com/Lindydancer/font-lock-studio/issues/2][font-lock-studio#2]]
   - lookup [[https://github.com/lookup2/lookup2/pull/14][#14]]
   - mailcrypt [[https://github.com/barak/mailcrypt/pull/1][#1]]
   - psgml [[https://github.com/lenst/psgml/issues/1][#1]]
@@ -304,8 +303,6 @@
 | flycheck                    | github   | dummy-package-autoloads        |
 | flycheck                    | github   | errors-and-warnings            |
 | flycheck                    | github   | warnings                       |
-| font-lock-regression-suite  | github   | files                          |
-| font-lock-regression-suite  | github   | remote-wildcards               |
 | ghost-blog                  | github   | ert                            |
 | git                         | github   | ert                            |
 | gitlab                      | github   | test-helper                    |
@@ -431,7 +428,7 @@
 - *Pending*
   - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
   - haml-mode [[https://github.com/nex3/haml-mode/issues/34][#34]], [[https://github.com/nex3/haml-mode/pull/35][#35]]
-  - lispxmp: asked by email
+  - lispxmp: newxmp has not been released yet (email)
   - rpm-spec-mode [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]
   - slime, sly, ilisp (shelved) [[https://github.com/capitaomorte/sly/issues/86][capitaomorte/sly#86]]
 - *Permanent:* misc
