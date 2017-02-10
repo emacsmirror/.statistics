@@ -2,60 +2,10 @@
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
   (require 'emir)
-
-  (defun emir--provide-issues (&optional exclude-shelved)
-    (let (alist body)
-      (dolist (name (if (not exclude-shelved)
-                        (epkgs 'name)
-                      (epkgs 'name '(epkg-mirrored-package--eieio-childp
-                                     epkg-builtin-package-p))))
-        (dolist (feature (epkg-sql [:select feature :from provided
-                                    :where (and (= package $s1)
-                                                (isnull drop))]
-                                   name))
-          (setq feature (car feature))
-          (-if-let (elt (assq feature alist))
-              (push name (cdr elt))
-            (cl-pushnew (list feature name) alist))))
-      (setq body
-            (-mapcat (-lambda ((feature . providers))
-                       (and (> (length providers) 1)
-                            (list (list feature providers))
-                            (--map (list feature it)
-                                   (sort providers #'string<))))
-                     (cl-sort alist #'string< :key #'car)))
-      (if (not exclude-shelved)
-          (emir--with-org-header ("Feature" "Package" "Shelved")
-            (mapcar (-lambda ((feature package))
-                      (list feature package
-                            (or (epkg-shelved-package-p (epkg package)) "")))
-                    body))
-        (emir--with-org-header ("Feature" "Package")
-          body))))
-
-  (defun emir--require-issues (pred where)
-    (emir--with-org-header ("Package" "Type" "Melpa" "Feature")
-      (-mapcat
-       (-lambda ((name class))
-         (let (features)
-           (dolist (feature
-                    (epkg-sql (vconcat [:select feature :from required :where]
-                                       `((and (= package $s1) ,@where))
-                                       [:order-by [(asc feature)]])
-                              name))
-             (setq feature (car feature))
-             (when (funcall pred feature)
-               (push feature features)))
-           (mapcar (lambda (feature)
-                     (list name class
-                           (or (emir--melpa-get name 'fetcher) "")
-                           feature))
-                   (sort features #'string<))))
-       (epkgs [name class] 'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
-* Feature kludges
-** join provided
+* Issues that are being worked around
+** add provided features
 - *Revisit*
   - bbdb
   - emacs
@@ -115,7 +65,7 @@
 | wanderlust   | orphaned | wl-news             |
 | wisi         | elpa     | wisi-compat-24.2    |
 
-** drop provided
+** drop provided features
 - *Todo:* bundle ert
   - bury-successful-compilation
   - codex
@@ -445,7 +395,7 @@
 | wrap-region                 | github   | ert                            |
 | x-face                      | shelved  | mew                            |
 
-** drop required
+** drop required features
 - *Revisit*
 - *Pending*
   - aozora-view [[https://github.com/kawabata/aozora-view/issues/3][#3]]
@@ -626,7 +576,7 @@
 | xwem                            | shelved     | view-less              | global |
 | yatex                           | hg          | hilit19                | t      |
 
-** ease required
+** soften required features
 #+NAME: required-ease
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature")
@@ -642,7 +592,7 @@
 | org     | git  | inferior-picolisp |
 | org     | git  | matlab            |
 
-* Forced main library
+** set main library
 - *Pending:* two-variant themes
   - farmhouse-theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]
   - majapahit-theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]
@@ -700,84 +650,82 @@
 | ultratex             | github      | lisp/ultex.el           |
 | uni-confusables      | elpa        | uni-confusables.el      |
 
-* Features provided by multiple packages
-** excluding shelved
-#+NAME: conflicts
+* Issues that aren't being worked around yet
+** Features provided by multiple packages
+#+NAME: conflict
 #+BEGIN_SRC emacs-lisp
-  (emir--provide-issues t)
+  (let (alist)
+    (dolist (name (epkgs 'name))
+      (dolist (feature (epkg-sql [:select feature :from provided
+				  :where (and (= package $s1)
+					      (isnull drop))]
+				 name))
+	(setq feature (car feature))
+	(-if-let (elt (assq feature alist))
+	    (push name (cdr elt))
+	  (cl-pushnew (list feature name) alist))))
+    (emir--with-org-header ("Feature" "Package" "Shelved")
+      (mapcar (-lambda ((feature package))
+		(list feature package
+		      (or (epkg-shelved-package-p (epkg package)) "")))
+	      (-mapcat (-lambda ((feature . providers))
+			 (and (> (length providers) 1)
+			      (list (list feature providers))
+			      (--map (list feature it)
+				     (sort providers #'string<))))
+		       (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
-#+RESULTS: conflicts
+#+RESULTS: conflict
 
-** including shelved
-#+NAME: conflicts-shelved
-#+BEGIN_SRC emacs-lisp
-  (emir--provide-issues nil)
-#+END_SRC
-#+RESULTS: conflicts-shelved
-
-* Unsatisfied dependencies
-** hard dependencies
+** Packages with unsatisfied dependencies
 - *Todo*
   - apel
+  - nxhtml
   - vm
 - *Pending*
   - bts [[https://github.com/aki2o/emacs-bts/issues/16][#16]]
   - malabar-mode [[https://github.com/m0smith/malabar-mode/issues/189][#189]]
-#+NAME: unsatisfied-hard
+#+NAME: unsatisfied
 #+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (feature)
-                          (not (epkg-provided-by feature)))
-                        '((= hard 't) (isnull drop)))
+  (emir--with-org-header ("Package" "Type" "Melpa" "Feature" "Shelved")
+    (-mapcat
+     (-lambda ((name class))
+       (let (alist)
+	 (-each (epkg-sql [:select feature :from required
+			   :where (and (= package $s1)
+				       (isnull drop))]
+			  name)
+	   (-lambda ((feature))
+	     (-if-let (provider (epkg-provided-by feature))
+		 (when (epkg-sql [:select class :from packages
+				  :where (and (= name $s1)
+					      (= class 'shelved))]
+				 name)
+		   (push (list feature provider) alist))
+	       (push (list feature nil) alist))))
+	 (mapcar (-lambda ((feature provider))
+		   (list name class
+			 (or (emir--melpa-get name 'fetcher) "")
+			 feature
+			 (or provider "")))
+		 (cl-sort alist #'string< :key #'car))))
+     (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
-#+RESULTS: unsatisfied-hard
-| Package      | Type     | Melpa  | Feature           |
-|--------------+----------+--------+-------------------|
-| apel         | orphaned | github | tcp               |
-| apel         | orphaned | github | timer-funcs       |
-| bts          | github   | github | tenv              |
-| malabar-mode | github   | github | ede/maven2        |
-| malabar-mode | github   | github | semantic/db-javap |
-| vm           | orphaned |        | atomic-extents    |
-| vm           | orphaned |        | highlight-headers |
-| vm           | orphaned |        | timer-funcs       |
-
-** soft dependencies
-- *Todo*
-  - nxhtml
-#+NAME: unsatisfied-soft
-#+BEGIN_SRC emacs-lisp
-  (emir--require-issues (lambda (feature)
-                          (not (epkg-provided-by feature)))
-                        '((isnull hard) (isnull drop)))
-#+END_SRC
-#+RESULTS: unsatisfied-soft
-| Package | Type     | Melpa | Feature      |
-|---------+----------+-------+--------------|
-| nxhtml  | orphaned |       | company-mode |
-| nxhtml  | orphaned |       | emacsw32     |
-| nxhtml  | orphaned |       | flymake-js   |
-| nxhtml  | orphaned |       | typesetter   |
-| nxhtml  | orphaned |       | w32-regdat   |
-| nxhtml  | orphaned |       | w32shell     |
-
-* Dependent on shelved packages
-** hard dependencies
-#+NAME: required-shelved-hard
-#+BEGIN_SRC emacs-lisp
-  ;; (emir--require-issues (lambda (feature)
-  ;;                         (--when-let (epkg-provided-by feature)
-  ;;                           (epkg-shelved-package-p (epkg it))))
-  ;;                       '((= hard 't) (isnull drop)))
-#+END_SRC
-#+RESULTS: required-shelved-hard
-
-** soft dependencies
-#+NAME: required-shelved-soft
-#+BEGIN_SRC emacs-lisp
-  ;; (emir--require-issues (lambda (feature)
-  ;;                         (--when-let (epkg-provided-by feature)
-  ;;                           (epkg-shelved-package-p (epkg it))))
-  ;;                       '((isnull hard) (isnull drop)))
-#+END_SRC
-#+RESULTS: required-shelved-soft
+#+RESULTS: unsatisfied
+| Package      | Type     | Melpa  | Feature           | Shelved |
+|--------------+----------+--------+-------------------+---------|
+| apel         | orphaned | github | tcp               |         |
+| apel         | orphaned | github | timer-funcs       |         |
+| bts          | github   | github | tenv              |         |
+| malabar-mode | github   | github | ede/maven2        |         |
+| malabar-mode | github   | github | semantic/db-javap |         |
+| nxhtml       | orphaned |        | company-mode      |         |
+| nxhtml       | orphaned |        | emacsw32          |         |
+| nxhtml       | orphaned |        | flymake-js        |         |
+| nxhtml       | orphaned |        | typesetter        |         |
+| nxhtml       | orphaned |        | w32-regdat        |         |
+| nxhtml       | orphaned |        | w32shell          |         |
+| vm           | orphaned |        | atomic-extents    |         |
+| vm           | orphaned |        | highlight-headers |         |
+| vm           | orphaned |        | timer-funcs       |         |
 
