@@ -145,6 +145,7 @@
 - *Todo:* misc bundled libraries
   - bitbake
   - cerbere
+  - coq: remove texi-docstring-magic, add it to orphanage?
   - diffscuss-mode
   - evil-smartparens
   - find-file-in-project
@@ -153,6 +154,7 @@
   - malabar-mode
   - ph
   - repo
+  - twittering-mode: remove test, add it to orphanage?
   - wordnut
 - *Revisit*
   - apel, flim, semi, wanderlust
@@ -178,6 +180,16 @@
   - org [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]
   - project-root [[https://bitbucket.org/piranha/project-root/pull-requests/1/remove-bundled-find-cmdel/diff][#1]]
   - slime, sly [[https://github.com/capitaomorte/sly/issues/92][sly#92]]
+- *Permanent*: shelved package that bundles a library that is also
+  bundled with a mirrored package
+  - ilisp: bridge in slime
+  - gnuserv: devices in w3
+- *Permanent*: shelved package that contains a library that conflicts
+  with another implementation that is part of a mirrored package
+  - csde: beanshell in jdee
+  - elim: notify in notify
+  - folio: uuidgen in uuidgen
+  - simple-server: httpd in muse
 - *Permanent*: misc
   - (a) bundle ert: cask, commander, drag-stuff, ecukes, espuds,
     ruby-end, wrap-region (b) provide dummy-package: epl, flycheck (c)
@@ -249,7 +261,9 @@
 | coq                         | github   | mmm-univ                       |
 | coq                         | github   | mmm-utils                      |
 | coq                         | github   | mmm-vars                       |
+| coq                         | github   | texi-docstring-magic           |
 | cpanfile-mode               | github   | test-helper                    |
+| csde                        | shelved  | beanshell                      |
 | ddskk                       | github   | install                        |
 | ddskk                       | github   | ptexinfmt                      |
 | ddskk                       | github   | vip                            |
@@ -261,6 +275,7 @@
 | edbi-database-url           | github   | test-helper                    |
 | edbi-django                 | github   | test-helper                    |
 | ein                         | github   | mocker                         |
+| elim                        | shelved  | notify                         |
 | elisp-refs                  | github   | test-helper                    |
 | elixir-mode                 | github   | test-helper                    |
 | emacspeak                   | github   | amixer                         |
@@ -303,9 +318,11 @@
 | flycheck                    | github   | dummy-package-autoloads        |
 | flycheck                    | github   | errors-and-warnings            |
 | flycheck                    | github   | warnings                       |
+| folio                       | shelved  | uuidgen                        |
 | ghost-blog                  | github   | ert                            |
 | git                         | github   | ert                            |
 | gitlab                      | github   | test-helper                    |
+| gnuserv                     | shelved  | devices                        |
 | go                          | github   | gnugo                          |
 | go-eldoc                    | github   | test-helper                    |
 | google-this                 | github   | noflet                         |
@@ -315,6 +332,7 @@
 | helm-rails                  | github   | ert-expectations               |
 | historyf                    | github   | el-expectations                |
 | ido-ubiquitous              | github   | test-helper                    |
+| ilisp                       | shelved  | bridge                         |
 | irony                       | github   | ert                            |
 | jump                        | github   | elunit                         |
 | karma                       | github   | test-helper                    |
@@ -331,6 +349,7 @@
 | mic-paren                   | file     | paren                          |
 | mkhtml                      | wiki     | htmlize                        |
 | mu4e-alert                  | github   | test-helper                    |
+| mupacs                      | shelved  | lazy-lock                      |
 | nav                         | github   | ack                            |
 | navi2ch                     | github   | ert                            |
 | nxhtml                      | orphaned | ack                            |
@@ -396,6 +415,7 @@
 | ruby-end                    | github   | ert                            |
 | semi                        | orphaned | signature                      |
 | sift                        | github   | test-helper                    |
+| simple-server               | shelved  | httpd                          |
 | skeletor                    | github   | test-helper                    |
 | slime                       | github   | cl-indent                      |
 | sly                         | github   | cl-indent                      |
@@ -408,6 +428,7 @@
 | travis                      | github   | test-helper                    |
 | tuareg                      | github   | caml                           |
 | twittering-mode             | github   | ssl                            |
+| twittering-mode             | github   | test                           |
 | unkillable-scratch          | github   | ert                            |
 | vdirel                      | github   | test-helper                    |
 | vm                          | orphaned | org-vm                         |
@@ -422,6 +443,7 @@
 | window-purpose              | github   | test-helper                    |
 | wordnut                     | github   | tdd-helper                     |
 | wrap-region                 | github   | ert                            |
+| x-face                      | shelved  | mew                            |
 
 ** drop required
 - *Revisit*
@@ -692,153 +714,6 @@
   (emir--provide-issues nil)
 #+END_SRC
 #+RESULTS: conflicts-shelved
-| Feature               | Package              | Shelved |
-|-----------------------+----------------------+---------|
-| alert                 | alert                |         |
-| alert                 | protocolarium        | t       |
-| anything              | anything             |         |
-| anything              | auto-complete-acr    | t       |
-| anything              | symfony              | t       |
-| anything-config       | anything             |         |
-| anything-config       | auto-complete-acr    | t       |
-| anything-grep         | anything             |         |
-| anything-grep         | symfony              | t       |
-| anything-match-plugin | anything             |         |
-| anything-match-plugin | symfony              | t       |
-| anything-project      | anything-project     |         |
-| anything-project      | symfony              | t       |
-| auto-complete         | auto-complete        |         |
-| auto-complete         | symfony              | t       |
-| beanshell             | csde                 | t       |
-| beanshell             | jdee                 |         |
-| bridge                | ilisp                | t       |
-| bridge                | slime                |         |
-| bufcomp               | light                | t       |
-| bufcomp               | ultratex             |         |
-| comint                | emacs                |         |
-| comint                | rexx-mode            | t       |
-| csharp-mode           | csharp-mode          |         |
-| csharp-mode           | idebridge            | t       |
-| cust-stub             | cust-stub            | t       |
-| cust-stub             | efs                  | t       |
-| devices               | gnuserv              | t       |
-| devices               | w3                   |         |
-| dotassoc              | dotassoc             | t       |
-| dotassoc              | kv                   |         |
-| dropdown-list         | auto-complete-acr    | t       |
-| dropdown-list         | dropdown-list        |         |
-| easymenu              | emacs                |         |
-| easymenu              | tla-mode             | t       |
-| ecasound              | ecasound             |         |
-| ecasound              | xiomacs              | t       |
-| el-expectations       | el-expectations      |         |
-| el-expectations       | symfony              | t       |
-| el-mock               | el-mock              |         |
-| el-mock               | symfony              | t       |
-| elunit                | dvc                  | t       |
-| elunit                | elunit               | t       |
-| erlext                | distel               |         |
-| erlext                | shbuf                | t       |
-| ert                   | ert                  |         |
-| ert                   | mode-line-in-header  | t       |
-| ess-R-object-popup    | auto-complete-acr    | t       |
-| ess-R-object-popup    | ess-R-object-popup   |         |
-| ewoc                  | dvc                  | t       |
-| ewoc                  | ewoc                 |         |
-| haskell               | haskell              | t       |
-| haskell               | haskell-mode         |         |
-| htmlize               | htmlize              |         |
-| htmlize               | simple-server        | t       |
-| http-headers          | http-headers         | t       |
-| http-headers          | know-your-http-well  |         |
-| httpd                 | muse                 |         |
-| httpd                 | simple-server        | t       |
-| inflections           | emacs-rails          | t       |
-| inflections           | jump                 |         |
-| iterator              | iterator             |         |
-| iterator              | traverselisp         | t       |
-| jack                  | emms                 |         |
-| jack                  | xiomacs              | t       |
-| javascript-mode       | javascript-mode      | t       |
-| javascript-mode       | mdee                 | t       |
-| js                    | espresso             | t       |
-| js                    | js                   |         |
-| later-do              | emms                 |         |
-| later-do              | later-do             | t       |
-| lazy-lock             | emacs                |         |
-| lazy-lock             | mupacs               | t       |
-| light                 | light                | t       |
-| light                 | ultratex             |         |
-| lui                   | circe                |         |
-| lui                   | elim                 | t       |
-| lui                   | lui                  | t       |
-| mail-reorder-headers  | mail-reorder-headers | t       |
-| mail-reorder-headers  | order-head           |         |
-| matlab-publish        | matlab-mode          |         |
-| matlab-publish        | matlab-publish       | t       |
-| mew                   | mew                  |         |
-| mew                   | x-face               | t       |
-| multi-mode            | litprog              | t       |
-| multi-mode            | multi-mode           |         |
-| notify                | elim                 | t       |
-| notify                | notify               |         |
-| noweb                 | litprog              | t       |
-| noweb                 | noweb                |         |
-| php-completion        | php-completion       |         |
-| php-completion        | symfony              | t       |
-| php-mode              | desktop-recover      | t       |
-| php-mode              | php-mode             |         |
-| php-mode              | symfony              | t       |
-| pomodoro              | pomodoro             |         |
-| pomodoro              | protocolarium        | t       |
-| refactor              | gauche-ext           | t       |
-| refactor              | refactor             | t       |
-| reporter              | reporter             |         |
-| reporter              | tla-mode             | t       |
-| rijndael              | elgyach              | t       |
-| rijndael              | rijndael             |         |
-| setnu                 | csde                 | t       |
-| setnu                 | setnu                |         |
-| snippet               | pases                | t       |
-| snippet               | snippet              |         |
-| spread                | protocolarium        | t       |
-| spread                | spread               |         |
-| stack-f               | elib                 | t       |
-| stack-f               | emacspeak            |         |
-| stem                  | sdic                 | t       |
-| stem                  | stem                 |         |
-| tagging               | free-tagging         | t       |
-| tagging               | tagging              | t       |
-| test                  | test                 | t       |
-| test                  | twittering-mode      |         |
-| test-framework        | test-framework       |         |
-| test-framework        | vimpulse             | t       |
-| texi-docstring-magic  | coq                  |         |
-| texi-docstring-magic  | texi-docstring-magic | t       |
-| textmate              | peepopen             | t       |
-| textmate              | textmate             |         |
-| timeclock             | planner              | t       |
-| timeclock             | timeclock            |         |
-| tracking              | circe                |         |
-| tracking              | elim                 | t       |
-| tree-mode             | pases                | t       |
-| tree-mode             | tree-mode            |         |
-| units                 | cpad                 | t       |
-| units                 | units                | t       |
-| uuidgen               | folio                | t       |
-| uuidgen               | uuidgen              |         |
-| vc                    | emtest               | t       |
-| vc                    | vc                   |         |
-| websocket             | wave-client          | t       |
-| websocket             | websocket            |         |
-| winsize               | nxhtml               |         |
-| winsize               | winsize              | t       |
-| xml-parse             | doxymacs             | t       |
-| xml-parse             | xml-parse            |         |
-| xml-rpc               | elserv               | t       |
-| xml-rpc               | xml-rpc              |         |
-| yasnippet             | auto-complete-acr    | t       |
-| yasnippet             | yasnippet            |         |
 
 * Unsatisfied dependencies
 ** hard dependencies
