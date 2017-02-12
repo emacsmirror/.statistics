@@ -22,29 +22,6 @@
                        "~/code/emacsmirror/export/reports/")
 #+END_SRC
 
-** variable ~emir-ignored-dependencies~
-#+NAME: set--emir-ignored-dependencies
-#+BEGIN_SRC emacs-lisp :results silent :var value=emir-ignored-dependencies
-  (emir--save-variable 'emir-ignored-dependencies
-                       (--map (list (intern (car it)) (cadr it)) value))
-#+END_SRC
-#+NAME: emir-ignored-dependencies
-| Package      | Reason |
-|--------------+--------|
-| balloon-help | xemacs |
-| bitmap       | xemacs |
-| color-theme  | <=22.3 |
-| generic-mode | xemacs |
-| help+20      | drew   |
-| info+20      | drew   |
-| mode-motion  | xemacs |
-| octave-inf   | <=24.3 |
-| subr-21      | drew   |
-| thing        | xemacs |
-| toolbar      | xemacs |
-| un-define    | xemacs |
-| view-less    | xemacs |
-
 ** variable ~emir-pending-packages~
 #+NAME: set--emir-pending-packages
 #+BEGIN_SRC emacs-lisp :results silent :var value=emir-pending-packages
