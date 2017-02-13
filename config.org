@@ -188,6 +188,44 @@
 | w3m              | 5. cvs not supported        |
 | wanderlust       | 6. many feature conflicts   |
 
+** variable ~emir-library-reason~
+#+NAME: set--emir-library-reason
+#+BEGIN_SRC emacs-lisp :results silent :var value=emir-library-reason
+  (emir--save-variable 'emir-library-reason value)
+#+END_SRC
+#+NAME: emir-library-reason
+| Package               | Reason                                  |
+|-----------------------+-----------------------------------------|
+| autotest              | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] (rejected) |
+| caml                  | svn                                     |
+| cfengine-code-style   | mostly non-elisp                        |
+| cg                    | svn                                     |
+| clang-format          | svn                                     |
+| cmake-mode            | mostly non-elisp                        |
+| color-theme           | bzr                                     |
+| confluence            | svn                                     |
+| cython-mode           | mostly non-elisp                        |
+| darcsum               | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                           |
+| debian-bug            | mostly non-elisp                        |
+| debian-changelog-mode | mostly non-elisp                        |
+| dic-lookup-w3m        | svn                                     |
+| dsvn                  | svn                                     |
+| google-c-style        | mostly non-elisp                        |
+| helm-ls-svn           | svn                                     |
+| llvm-mode             | mostly non-elisp                        |
+| nemerle               | mostly non-elisp                        |
+| ninja-mode            | mostly non-elisp                        |
+| ox-clip               | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] (pending) |
+| po-mode               | mostly non-elisp                        |
+| pylint                | mostly non-elisp                        |
+| ruby-additional       | svn                                     |
+| ruby-electric         | svn                                     |
+| tex-smart-umlauts     | darcs                                   |
+| thrift                | mostly non-elisp                        |
+| toggle                | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] (rejected) |
+| w3m                   | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]                          |
+| wisp-mode             | mostly non-elisp                        |
+
 * Rare slots
 ** slot ~upstream-branch~
 #+NAME: slot--upstream-branch
