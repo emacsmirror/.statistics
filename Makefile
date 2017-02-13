@@ -21,12 +21,14 @@ SYNC += --exclude "index.html"
 
 BABEL  = compare.org
 BABEL += emacsorphanage.org
+BABEL += kludges.org
 BABEL += issues.org
 BABEL += melpa-missing.org
 
 HTML   = config.html
 HTML  += compare.html
 HTML  += emacsorphanage.html
+HTML  += kludges.html
 HTML  += issues.html
 HTML  += melpa-missing.html
 
