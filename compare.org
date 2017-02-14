@@ -243,7 +243,7 @@
     (mapcar (-lambda ((name type gelpa method))
               (list name type gelpa
                     (or method "")
-                    (or (cadr (assoc name emir-preferred-upstreams)) "")
+                    (or (cadr (assoc name emir--preferred-upstreams)) "")
                     (emir--mirror-link (epkg name))))
             (epkg-sql [:select :distinct [packages:name
                                           packages:class
@@ -485,7 +485,7 @@
                            (and (eq class 'file)     (eq fetcher 'github)
                                 (string-prefix-p "emacsmirror/" repo))))
                   (list name class fetcher
-                        (or (cadr (assoc name emir-library-reason)) ""))))
+                        (or (cadr (assoc name emir--diverging-reason)) ""))))
            (epkg-sql [:select :distinct [packages:name
                                          packages:class
                                          melpa-recipes:fetcher
@@ -497,34 +497,34 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-elsewhere
-| Package               | Type     | Melpa     | Reason                                  |
-|-----------------------+----------+-----------+-----------------------------------------|
-| autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] (rejected) |
-| caml                  | orphaned | svn       | svn                                     |
-| cfengine-code-style   | minority | github    | mostly non-elisp                        |
-| cg                    | orphaned | svn       | svn                                     |
-| clang-format          | orphaned | svn       | svn                                     |
-| cmake-mode            | minority | github    | mostly non-elisp                        |
-| color-theme           | orphaned | bzr       | bzr                                     |
-| confluence            | orphaned | svn       | svn                                     |
-| cython-mode           | minority | github    | mostly non-elisp                        |
-| darcsum               | orphaned | darcs     | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                           |
-| debian-bug            | minority | cvs       | mostly non-elisp                        |
-| debian-changelog-mode | minority | cvs       | mostly non-elisp                        |
-| dic-lookup-w3m        | orphaned | svn       | svn                                     |
-| dsvn                  | minority | svn       | svn                                     |
-| google-c-style        | minority | github    | mostly non-elisp                        |
-| helm-ls-svn           | orphaned | svn       | svn                                     |
-| llvm-mode             | minority | git       | mostly non-elisp                        |
-| nemerle               | minority | github    | mostly non-elisp                        |
-| ninja-mode            | minority | github    | mostly non-elisp                        |
-| ox-clip               | minority | github    | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] (pending) |
-| po-mode               | minority | git       | mostly non-elisp                        |
-| pylint                | minority | github    | mostly non-elisp                        |
-| ruby-additional       | minority | svn       | svn                                     |
-| ruby-electric         | minority | svn       | svn                                     |
-| tex-smart-umlauts     | minority | darcs     | darcs                                   |
-| thrift                | minority | github    | mostly non-elisp                        |
-| toggle                | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] (rejected) |
-| w3m                   | orphaned | cvs       | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]                          |
-| wisp-mode             | minority | bitbucket | mostly non-elisp                        |
+| Package               | Type     | Melpa     | Reason                        |
+|-----------------------+----------+-----------+-------------------------------|
+| autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
+| caml                  | orphaned | svn       | svn                           |
+| cfengine-code-style   | minority | github    | mostly non-elisp              |
+| cg                    | orphaned | svn       | svn                           |
+| clang-format          | orphaned | svn       | svn                           |
+| cmake-mode            | minority | github    | mostly non-elisp              |
+| color-theme           | orphaned | bzr       | bzr                           |
+| confluence            | orphaned | svn       | svn                           |
+| cython-mode           | minority | github    | mostly non-elisp              |
+| darcsum               | orphaned | darcs     | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                 |
+| debian-bug            | minority | cvs       | mostly non-elisp              |
+| debian-changelog-mode | minority | cvs       | mostly non-elisp              |
+| dic-lookup-w3m        | orphaned | svn       | svn                           |
+| dsvn                  | minority | svn       | svn                           |
+| google-c-style        | minority | github    | mostly non-elisp              |
+| helm-ls-svn           | orphaned | svn       | svn                           |
+| llvm-mode             | minority | git       | mostly non-elisp              |
+| nemerle               | minority | github    | mostly non-elisp              |
+| ninja-mode            | minority | github    | mostly non-elisp              |
+| ox-clip               | minority | github    | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] |
+| po-mode               | minority | git       | mostly non-elisp              |
+| pylint                | minority | github    | mostly non-elisp              |
+| ruby-additional       | minority | svn       | svn                           |
+| ruby-electric         | minority | svn       | svn                           |
+| tex-smart-umlauts     | minority | darcs     | darcs                         |
+| thrift                | minority | github    | mostly non-elisp              |
+| toggle                | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
+| w3m                   | orphaned | cvs       | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]                |
+| wisp-mode             | minority | bitbucket | mostly non-elisp              |

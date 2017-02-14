@@ -380,60 +380,107 @@
 | yatex                           | hg          | hilit19                | backward compatibility                                            |
 
 * Set main library
-- *Pending:* two-variant themes
-  - farmhouse-theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]
-  - majapahit-theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]
-  - punpun-theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]
-  - spacemacs-theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]
-  - tao-theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]
-- *Stalled:* Gelpa
-  - ada-ref-man [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
-  - uni-confusables [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]
-- *Permanent:* misc
-  - auctex: too late to change this now
-  - ddskk: upstream rejected the idea of consistent naming
-  - ert-runner: [[https://github.com/rejeep/ert-runner.el/pull/16][#16]] rejected because it's not a library
-  - literate-starter-kit: not a package but in Melpa
-- *Permanent:* no properly named main library
-  - emacs-speaks-nonmem
-  - emux
-  - html5
-  - ne2wm
-  - ultratex
-- *Permanent:* related packages, no primary entry point, pick one
-  - chumpy-windows
-  - dired-hacks
 #+NAME: no-mainlib
 #+BEGIN_SRC emacs-lisp
+   (emir--with-org-header ("Package" "Type" "Library" "Reason")
+     (mapcar (-lambda ((name type library))
+               (list name type library
+                     (or (cadr (assoc name emir--library-reason)) "")))
+            (epkg-sql [:select [name class library] :from packages
+                       :where (notnull library)
+                       :and class :in $v1
+                       :order-by [(asc name)]]
+                      (closql--where-class-in
+                       (epkg-db)
+                       'epkg-mirrored-package--eieio-childp))))
+#+END_SRC
+#+RESULTS: no-mainlib
+| Package              | Type        | Library                 | Reason                     |
+|----------------------+-------------+-------------------------+----------------------------|
+| ada-ref-man          | elpa        | ada-ref-man.el          | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
+| auctex               | elpa-branch | tex.el                  | pkg/lib name mismatch      |
+| chumpy-windows       | github      | window-jump.el          | no primary entry point     |
+| ddskk                | github      | skk.el                  | pkg/lib name mismatch      |
+| dired-hacks          | github      | dired-hacks-utils.el    | no primary entry point     |
+| emacs-speaks-nonmem  | github      | esn-start.el            | no/mismatched main library |
+| emux                 | github      | emux-base.el            | no/mismatched main library |
+| ert-runner           | github      | ert-runner.el           | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
+| eziam-theme          | github      | eziam-dark-theme.el     | two-variant theme          |
+| farmhouse-theme      | github      | farmhouse-dark-theme.el | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
+| html5                | github      | html5-ncr.el            | no/mismatched main library |
+| literate-starter-kit | github      | init.el                 | not a package              |
+| majapahit-theme      | gitlab      | majapahit-dark-theme.el | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
+| ne2wm                | github      | ne2wm-setup.el          | no/mismatched main library |
+| punpun-theme         | github      | punpun-dark-theme.el    | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
+| spacemacs-theme      | github      | spacemacs-dark-theme.el | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
+| tao-theme            | github      | tao-yang-theme.el       | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |
+| ultratex             | github      | lisp/ultex.el           | no/mismatched main library |
+| uni-confusables      | elpa        | uni-confusables.el      | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
+
+* Set libraries
+#+NAME: slot--libraries
+#+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Library")
-    (epkg-sql [:select [name class library] :from packages
-               :where (notnull library)
+    (epkg-sql [:select [name class libraries:library]
+               :from [packages libraries]
+               :where (= name package)
+               :and class :in $v1
+               :order-by [(asc package)
+                          (asc libraries:library)]]
+              (closql--where-class-in
+               (epkg-db)
+               'epkg-mirrored-package--eieio-childp)))
+#+END_SRC
+#+RESULTS: slot--libraries
+| Package            | Type | Library                      |
+|--------------------+------+------------------------------|
+| bookmark+          | wiki | bookmark+-1.el               |
+| bookmark+          | wiki | bookmark+-bmu.el             |
+| bookmark+          | wiki | bookmark+-chg.el             |
+| bookmark+          | wiki | bookmark+-doc.el             |
+| bookmark+          | wiki | bookmark+-key.el             |
+| bookmark+          | wiki | bookmark+-lit.el             |
+| bookmark+          | wiki | bookmark+-mac.el             |
+| bookmark+          | wiki | bookmark+.el                 |
+| d-insert-import    | wiki | d-insert-import-data.el      |
+| d-insert-import    | wiki | d-insert-import.el           |
+| icicles            | wiki | icicles-chg.el               |
+| icicles            | wiki | icicles-cmd1.el              |
+| icicles            | wiki | icicles-cmd2.el              |
+| icicles            | wiki | icicles-doc1.el              |
+| icicles            | wiki | icicles-doc2.el              |
+| icicles            | wiki | icicles-face.el              |
+| icicles            | wiki | icicles-fn.el                |
+| icicles            | wiki | icicles-mac.el               |
+| icicles            | wiki | icicles-mcmd.el              |
+| icicles            | wiki | icicles-mode.el              |
+| icicles            | wiki | icicles-opt.el               |
+| icicles            | wiki | icicles-var.el               |
+| icicles            | wiki | icicles.el                   |
+| mkhtml             | wiki | mkhtml-htmlize.el            |
+| mkhtml             | wiki | mkhtml.el                    |
+| sequential-command | wiki | sequential-command-config.el |
+| sequential-command | wiki | sequential-command.el        |
+| thing-edit         | wiki | thing-edit-extension.el      |
+| thing-edit         | wiki | thing-edit.el                |
+| yaoddmuse          | wiki | yaoddmuse-extension.el       |
+| yaoddmuse          | wiki | yaoddmuse.el                 |
+
+* Set branch
+#+NAME: slot--upstream-branch
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Type" "Branch")
+    (epkg-sql [:select [name class upstream-branch] :from packages
+               :where (notnull upstream-branch)
                :and class :in $v1
                :order-by [(asc name)]]
               (closql--where-class-in
                (epkg-db)
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
-#+RESULTS: no-mainlib
-| Package              | Type        | Library                 |
-|----------------------+-------------+-------------------------|
-| ada-ref-man          | elpa        | ada-ref-man.el          |
-| auctex               | elpa-branch | tex.el                  |
-| chumpy-windows       | github      | window-jump.el          |
-| ddskk                | github      | skk.el                  |
-| dired-hacks          | github      | dired-hacks-utils.el    |
-| emacs-speaks-nonmem  | github      | esn-start.el            |
-| emux                 | github      | emux-base.el            |
-| ert-runner           | github      | ert-runner.el           |
-| eziam-theme          | github      | eziam-dark-theme.el     |
-| farmhouse-theme      | github      | farmhouse-dark-theme.el |
-| html5                | github      | html5-ncr.el            |
-| literate-starter-kit | github      | init.el                 |
-| majapahit-theme      | gitlab      | majapahit-dark-theme.el |
-| ne2wm                | github      | ne2wm-setup.el          |
-| punpun-theme         | github      | punpun-dark-theme.el    |
-| spacemacs-theme      | github      | spacemacs-dark-theme.el |
-| tao-theme            | github      | tao-yang-theme.el       |
-| ultratex             | github      | lisp/ultex.el           |
-| uni-confusables      | elpa        | uni-confusables.el      |
+#+RESULTS: slot--upstream-branch
+| Package             | Type   | Branch      |
+|---------------------+--------+-------------|
+| distinguished-theme | github | develop     |
+| ebuild-mode         | git    | ebuild-mode |
 

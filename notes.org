@@ -1,0 +1,194 @@
+#+SETUPFILE: .orgconfig
+#+NAME: setup
+#+BEGIN_SRC emacs-lisp :results silent
+  (require 'emir)
+
+  (defun emir--save-variable (variable value)
+    (customize-save-variable variable (and (not (equal value "nil")) value))
+    nil)
+#+END_SRC
+* Preferred upstreams
+#+NAME: set--emir--preferred-upstreams
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--preferred-upstreams
+  (emir--save-variable 'emir--preferred-upstreams value)
+#+END_SRC
+#+NAME: val--emir--preferred-upstreams
+| Name               | Reason               |
+|--------------------+----------------------|
+| ace-window         | squash               |
+| ack                | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     |
+| ada-mode           | builtin              |
+| aggressive-indent  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| async              | squash               |
+| avy                | squash               |
+| auctex             | actively maintained  |
+| beacon             | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| bug-hunter         | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| cedet              | not [[http://git.randomsample.de/cedet.git][randomsample.de]]  |
+| coffee-mode        | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67443674][#34#67443674]]         |
+| company            | squash [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]  |
+| company-math       | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] |
+| company-statistics | squash               |
+| crisp              | builtin              |
+| dash               | external             |
+| dbus-codegen       | squash               |
+| diff-hl            | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         |
+| dts-mode           | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164455502][#69#164455502]]        |
+| easy-kill          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164356304][melpa#3383#164356304]] |
+| eldoc-eval         | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         |
+| electric-spacing   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164462609][#69#164462609]]        |
+| ergoemacs-mode     | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164897071][melpa#3383#164897071]] |
+| exwm               | external             |
+| f90-face           | [[https://github.com/wence-/f90-iface/issues/1][wence-/f90-iface#1]]   |
+| ggtags             | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     |
+| gnorb              | squash               |
+| gnus               | not [[http://git.gnus.org/gnus.git][gnus.org]]         |
+| hydra              | squash               |
+| ioccur             | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         |
+| ivy                | squash               |
+| js2-mode           | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         |
+| load-relative      |                      |
+| loc-changes        | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        |
+| loccur             | squash               |
+| math-symbol-lists  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] |
+| minimap            | unfriendly fork      |
+| nameless           | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| names              | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| on-screen          | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164450677][#69#164450677]]        |
+| pabbrev            | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164418230][melpa#3383#164418230]] |
+| rich-minority      | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| sokoban            | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     |
+| sotlisp            | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| spinner            | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           |
+| test-simple        | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        |
+| tiny               | squash               |
+| undo-tree          | squash               |
+| vlf                | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164299250][melpa#3383#164299250]] |
+| wcheck-mode        | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68142129][#34#68142129]]         |
+| websocket          | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68123453][#34#68123453]]         |
+| web-server         | [[https://github.com/milkypostman/melpa/pull/3394][melpa#3394]]           |
+| xelb               | external             |
+| yasnippet          | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         |
+| ztree              | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] |
+
+* Diverging reason
+#+NAME: set--emir--diverging-reason
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--diverging-reason
+  (emir--save-variable 'emir--diverging-reason value)
+#+END_SRC
+#+NAME: val--emir--diverging-reason
+| Package               | Reason                        |
+|-----------------------+-------------------------------|
+| autotest              | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
+| caml                  | svn                           |
+| cfengine-code-style   | mostly non-elisp              |
+| cg                    | svn                           |
+| clang-format          | svn                           |
+| cmake-mode            | mostly non-elisp              |
+| color-theme           | bzr                           |
+| confluence            | svn                           |
+| cython-mode           | mostly non-elisp              |
+| darcsum               | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                 |
+| debian-bug            | mostly non-elisp              |
+| debian-changelog-mode | mostly non-elisp              |
+| dic-lookup-w3m        | svn                           |
+| dsvn                  | svn                           |
+| google-c-style        | mostly non-elisp              |
+| helm-ls-svn           | svn                           |
+| llvm-mode             | mostly non-elisp              |
+| nemerle               | mostly non-elisp              |
+| ninja-mode            | mostly non-elisp              |
+| ox-clip               | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] |
+| po-mode               | mostly non-elisp              |
+| pylint                | mostly non-elisp              |
+| ruby-additional       | svn                           |
+| ruby-electric         | svn                           |
+| tex-smart-umlauts     | darcs                         |
+| thrift                | mostly non-elisp              |
+| toggle                | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
+| w3m                   | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]                |
+| wisp-mode             | mostly non-elisp              |
+
+* Library reason
+#+NAME: set--emir--library-reason
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--library-reason
+  (emir--save-variable 'emir--library-reason value)
+#+END_SRC
+#+NAME: val--emir--library-reason
+| Package              | Reason                     |
+|----------------------+----------------------------|
+| ada-ref-man          | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
+| auctex               | pkg/lib name mismatch      |
+| chumpy-windows       | no primary entry point     |
+| ddskk                | pkg/lib name mismatch      |
+| dired-hacks          | no primary entry point     |
+| emacs-speaks-nonmem  | no/mismatched main library |
+| emux                 | no/mismatched main library |
+| ert-runner           | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
+| eziam-theme          | two-variant theme          |
+| farmhouse-theme      | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
+| html5                | no/mismatched main library |
+| literate-starter-kit | not a package              |
+| majapahit-theme      | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
+| ne2wm                | no/mismatched main library |
+| punpun-theme         | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
+| spacemacs-theme      | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
+| tao-theme            | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |
+| ultratex             | no/mismatched main library |
+| uni-confusables      | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
+
+* Orphanage reason
+#+NAME: set--emir--orphanage-reason
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--orphanage-reason
+  (emir--save-variable 'emir--orphanage-reason value)
+#+END_SRC
+#+NAME: val--emir--orphanage-reason
+| Package          | Reason                      |
+|------------------+-----------------------------|
+| apel             | 6. many feature conflicts   |
+| caml             | 5. svn not supported        |
+| cg               | 5. svn not supported        |
+| clang-format     | 5. svn not supported        |
+| color-theme      | 5. bzr not supported        |
+| confluence       | 5. svn not supported        |
+| crontab-mode     | 3. upstream disappeared     |
+| darcsum          | 5. darcs not supported      |
+| dedicated        | 2. upstream has disappeared |
+| dic-lookup-w3m   | 5. svn not supported        |
+| doom             | 3. upstream unresponsive    |
+| ecasound         | 3. upstream disappeared     |
+| elisp-depend     | 3. upstream unresponsive    |
+| elo              | 4. dropped of by maintainer |
+| eshell-manual    | 3. upstream unresponsive    |
+| filladapt        | 3. upstream unresponsive    |
+| flim             | 6. many feature conflicts   |
+| helm-ls-svn      | 5. svn not supported        |
+| keydef           | 2. upstream disappeared     |
+| linkd            | 7. include the images       |
+| lively           | 3. upstream unresponsive    |
+| lsdb             | 5. tarball not supported    |
+| magit-filenotify | [[https://github.com/emacsorphanage/magit-filenotify/issues/19][#19]]                         |
+| miniedit         | 2. upstream disappeared     |
+| nxhtml           | 5. bzr not supported        |
+| oberon           | 3. upstream unresponsive    |
+| org-bullets      | [[https://github.com/sabof/org-bullets/issues/18][#18]]                         |
+| org-grep         | 1. the maintainer has died  |
+| osd              | 2. upstream disappeared     |
+| pager            | 2. upstream disappeared     |
+| picolisp         | 8. should contact upstream  |
+| pointback        | 2. upstream disappeared     |
+| read-char-spec   | 3. upstream unresponsive    |
+| ruby-additional  | 5. svn not supported        |
+| semi             | 6. many feature conflicts   |
+| session          | 5. tarball not supported    |
+| setnu            | 3. upstream unresponsive    |
+| smarty-mode      | 2. upstream has disappeared |
+| swbuff           | 5. cvs not supported        |
+| tail             | 2. upstream has disappeared |
+| text-translator  | 5. bzr not supported        |
+| vala-mode        | 2. upstream has disappeared |
+| vc-fossil        | 5. fossil not supported     |
+| vm               | 5. bzr not supported        |
+| w3m              | 5. cvs not supported        |
+| wanderlust       | 6. many feature conflicts   |
+

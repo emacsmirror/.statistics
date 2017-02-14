@@ -13,7 +13,7 @@
 		   (if (string-prefix-p "emacsorphanage/" repo)
 		       "orphaned"
 		     (or fetcher ""))
-		   (or (cadr (assoc name emir-orphanage-reason)) "")))
+		   (or (cadr (assoc name emir--orphanage-reason)) "")))
 	   (cl-sort (let ((ghub-unpaginate t))
 		      (ghub-get "/orgs/emacsorphanage/repos"))
 		    #'string< :key (lambda (it) (cdr (assq 'name it))))))
