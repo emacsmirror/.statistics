@@ -66,7 +66,6 @@
 | apel                 | orphaned | timezone                       | TODO revisit                                                |
 | apel                 | orphaned | xemacs                         | TODO revisit                                                |
 | basic-c-compile      | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| bitbake              | github   | functional-test                | pending [[https://github.com/canatella/bitbake-el/pull/7][#7]]                                                  |
 | cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                                  |
 | cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                                  |
 | cask                 | github   | ert                            | TODO ert                                                    |
@@ -217,7 +216,6 @@
 | ph                   | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                                                  |
 | php+-mode            | github   | php-completion                 | TODO revisit                                                |
 | php+-mode            | github   | php-doc                        | TODO revisit                                                |
-| php+-mode            | github   | php-string                     | TODO revisit                                                |
 | php+-mode            | github   | string-utils                   | TODO revisit                                                |
 | pony-mode            | github   | ert                            | pending ert [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                                             |
 | pow                  | github   | mocker                         | pending [[https://github.com/yukihr/emacs-pow/pull/35][#35]]                                                 |
@@ -228,7 +226,6 @@
 | racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | refine               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | relative-buffers     | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| repo                 | github   | functional-test                | pending [[https://github.com/canatella/repo-el/pull/2][#2]]                                                  |
 | resize-window        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | restart-emacs        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | rinari               | github   | elunit                         | permanent: shelved bundling shelved                         |
@@ -299,7 +296,6 @@
 | ecb                             | github      | semantic-analyze       | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                                       |
 | ecb                             | github      | semantic-ctxt          | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                                       |
 | ecb                             | github      | thing                  | XXX                                                               |
-| eide                            | git         | gdb-ui                 | pending: gdb-ui was renamed to gdb-mi in Emacs (email)            |
 | el-autoyas                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
 | emacs-speaks-nonmem             | github      | org-publish            | pending: [[https://github.com/mattfidler/Emacs-Speaks-NONMEM/issues/29][#29]]                                                      |
 | emacspeak                       | github      | org-exp                | required by obsolete library                                      |
