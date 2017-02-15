@@ -166,7 +166,7 @@
 | lookup               | github   | stem-english                   | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                                                 |
 | loop                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | mailcrypt            | github   | timer                          | pending [[https://github.com/barak/mailcrypt/pull/1][#1]]                                                  |
-| malabar-mode         | github   | elk-test                       | pending [[https://github.com/m0smith/malabar-mode/pull/190][#190]]                                                |
+| malabar-mode         | shelved  | elk-test                       | permanent                                                   |
 | marcopolo            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | markdown-toc         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | markdownfmt          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
@@ -275,8 +275,11 @@
 | ac-octave                       | github      | octave-inf             | backward compatibility                                            |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                                            |
 | aozora-view                     | github      | ivs-aj1                | pending: [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                                       |
+| apel                            | orphaned    | tcp                    | backward compatibility                                            |
+| apel                            | orphaned    | timer-funcs            | XEmacs compatibility                                              |
 | auto-complete                   | github      | semantic-ia            | backward compatibility                                            |
 | bbdb                            | git         | vm-autoloads           | generated external file                                           |
+| bts                             | github      | tenv                   | tests only  [[https://github.com/aki2o/emacs-bts/issues/16][#16]]                                                   |
 | cask-package-toolset            | github      | ${package-name}        | TODO bogus dependency                                             |
 | color-moccur                    | github      | ee-autoloads           | ee isn't mirrored because it requires but doesn't provide edbcore |
 | color-theme-sanityinc-solarized | github      | color-theme            | backward compatibility                                            |
@@ -319,16 +322,6 @@
 | lilypond                        | git         | ilisp                  | only required by a single undocumented command                    |
 | lispxmp                         | wiki        | newxmp                 | pending: newxmp has not been released yet (email)                 |
 | load-theme-buffer-local         | github      | color-theme            | backward compatibility                                            |
-| malabar-mode                    | github      | cc-subword             | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | semantic-ctxt          | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | semantic-find          | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | semantic-ia            | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | semantic-load          | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | semantic-wisent        | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | semanticdb-search      | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | srecode-getset         | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | srecode-map            | required by obsolete version in src.old                           |
-| malabar-mode                    | github      | wisent-java            | required by obsolete version in src.old                           |
 | matlab-mode                     | git         | semantic-dep           | backward compatibility                                            |
 | matlab-mode                     | git         | semantic-format        | backward compatibility                                            |
 | matlab-mode                     | git         | semanticdb             | backward compatibility                                            |
@@ -348,6 +341,12 @@
 | navi2ch                         | github      | bitmap                 | XEmacs compatibility                                              |
 | notes-mode                      | elpa        | npgp                   | backward compatibility                                            |
 | notes-mode                      | elpa        | pam                    | backward compatibility                                            |
+| nxhtml                          | orphaned    | company-mode           | backward compatibility ~                                          |
+| nxhtml                          | orphaned    | emacsw32               | examples only                                                     |
+| nxhtml                          | orphaned    | flymake-js             | TODO revisit                                                      |
+| nxhtml                          | orphaned    | typesetter             | TODO revisit                                                      |
+| nxhtml                          | orphaned    | w32-regdat             | Windows compatibility                                             |
+| nxhtml                          | orphaned    | w32shell               | Windows compatibility                                             |
 | org                             | git         | org-publish            | XXX                                                               |
 | org                             | git         | org-remember           | XXX                                                               |
 | org-caldav                      | github      | org-icalendar          | backward compatibility                                            |
@@ -366,6 +365,9 @@
 | twittering-mode                 | github      | un-define              | XEmacs compatibility                                              |
 | twittering-mode                 | github      | unicode                | backward compatibility                                            |
 | vcl-mode                        | github      | generic-mode           | XEmacs compatibility                                              |
+| vm                              | orphaned    | atomic-extents         | XEmacs compatibility                                              |
+| vm                              | orphaned    | highlight-headers      | XEmacs compatibility                                              |
+| vm                              | orphaned    | timer-funcs            | XEmacs compatibility                                              |
 | vm                              | orphaned    | vm-autoloads           | generated internal file                                           |
 | w3                              | elpa-branch | dtk-voices             | used to be part of emacspeak, not needed                          |
 | w3                              | elpa-branch | w3-site-init           | XXX                                                               |

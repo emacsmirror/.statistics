@@ -31,13 +31,6 @@
 #+RESULTS: conflict
 
 * Packages with unsatisfied dependencies
-- *Todo*
-  - apel
-  - nxhtml
-  - vm
-- *Pending*
-  - bts [[https://github.com/aki2o/emacs-bts/issues/16][#16]]
-  - malabar-mode [[https://github.com/m0smith/malabar-mode/issues/189][#189]]
 #+NAME: unsatisfied
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature" "Shelved")
@@ -62,20 +55,4 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package      | Type     | Feature           | Shelved |
-|--------------+----------+-------------------+---------|
-| apel         | orphaned | tcp               |         |
-| apel         | orphaned | timer-funcs       |         |
-| bts          | github   | tenv              |         |
-| malabar-mode | github   | ede/maven2        |         |
-| malabar-mode | github   | semantic/db-javap |         |
-| nxhtml       | orphaned | company-mode      |         |
-| nxhtml       | orphaned | emacsw32          |         |
-| nxhtml       | orphaned | flymake-js        |         |
-| nxhtml       | orphaned | typesetter        |         |
-| nxhtml       | orphaned | w32-regdat        |         |
-| nxhtml       | orphaned | w32shell          |         |
-| vm           | orphaned | atomic-extents    |         |
-| vm           | orphaned | highlight-headers |         |
-| vm           | orphaned | timer-funcs       |         |
 

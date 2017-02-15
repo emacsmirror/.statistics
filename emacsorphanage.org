@@ -1,6 +1,5 @@
 #+SETUPFILE: .orgconfig
 [[https://emacsmirror.net/stats][up]]
-* Overview
 #+NAME: overview
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Mirror" "Melpa" "Reason")
@@ -147,9 +146,3 @@ Reasons:
    distributed, I have little confidence in my fixes getting
    integrated.  But I should at least try, and eventually I will.
 
-* Pending
-
-These packages haven't been added to the orphanage yet, but they are
-candidates for being added:
-
-- org-bullets [[https://github.com/sabof/org-bullets/issues/18][#18]]
