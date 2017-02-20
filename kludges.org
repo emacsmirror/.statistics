@@ -65,6 +65,7 @@
 | apel                 | orphaned | install                        | TODO revisit                                                |
 | apel                 | orphaned | timezone                       | TODO revisit                                                |
 | apel                 | orphaned | xemacs                         | TODO revisit                                                |
+| base16-theme         | github   | screenshot                     | pending [[https://github.com/belak/base16-emacs/pull/39][#39]]                                                 |
 | basic-c-compile      | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                                  |
 | cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                                  |
@@ -106,7 +107,6 @@
 | ecukes               | github   | ert                            | TODO ert                                                    |
 | edbi-database-url    | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | edbi-django          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| ein                  | github   | mocker                         | pending [[https://github.com/millejoh/emacs-ipython-notebook/pull/175][#175]]                                                |
 | elim                 | shelved  | notify                         | permanent: shelved conflicting with mirrored implementation |
 | elisp-refs           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | elixir-mode          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
@@ -117,7 +117,6 @@
 | emr                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | epl                  | github   | dummy-package                  | fake package used for testing                               |
 | espuds               | github   | ert                            | TODO ert                                                    |
-| evil-smartparens     | github   | evil-tests                     | pending [[https://github.com/expez/evil-smartparens/pull/37][#37]]                                                 |
 | evil-snipe           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | eyuml                | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]                                      |
 | fabric               | github   | ert                            | pending ert [[https://github.com/nlamirault/fabric.el/pull/5][#5]]                                              |
@@ -160,7 +159,6 @@
 | helm-company         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | historyf             | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                                                  |
 | ilisp                | shelved  | bridge                         | permanent: shelved bundling also bundled with mirrored      |
-| irony                | github   | ert                            | pending ert [[https://github.com/Sarcasm/irony-mode/pull/359][#359]]                                            |
 | jump                 | github   | elunit                         | permanent: shelved bundling shelved                         |
 | karma                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | lookup               | github   | stem-english                   | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                                                 |
@@ -214,11 +212,7 @@
 | palette              | wiki     | eyedropper                     | rejected: upstream considers it to be a drop-in replacement |
 | paradox              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | ph                   | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                                                  |
-| php+-mode            | github   | php-completion                 | TODO revisit                                                |
-| php+-mode            | github   | php-doc                        | TODO revisit                                                |
-| php+-mode            | github   | string-utils                   | TODO revisit                                                |
 | pony-mode            | github   | ert                            | pending ert [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                                             |
-| pow                  | github   | mocker                         | pending [[https://github.com/yukihr/emacs-pow/pull/35][#35]]                                                 |
 | prodigy              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | projmake-mode        | github   | elisp-lint                     | TODO revisit                                                |
 | psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                                  |
@@ -226,7 +220,6 @@
 | racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | refine               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | relative-buffers     | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| resize-window        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | restart-emacs        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | rinari               | github   | elunit                         | permanent: shelved bundling shelved                         |
 | ruby-end             | github   | ert                            | TODO ert                                                    |
@@ -236,7 +229,6 @@
 | skeletor             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | slime                | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                                              |
 | sly                  | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][#92]]                                                 |
-| smartparens          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | suggest              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | tco                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | tern-django          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
@@ -304,7 +296,6 @@
 | emacspeak                       | github      | org-exp                | required by obsolete library                                      |
 | erlang                          | github      | tags                   | TODO                                                              |
 | es-lib                          | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]                             |
-| ess                             | github      | rtf-support            | XEmacs compatibility                                              |
 | extend-dnd                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
 | folding                         | github      | mode-motion            | XEmacs compatibility                                              |
 | gnuplot                         | github      | toolbar                | XEmacs compatibility                                              |
