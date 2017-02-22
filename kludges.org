@@ -65,7 +65,6 @@
 | apel                 | orphaned | install                        | TODO revisit                                                |
 | apel                 | orphaned | timezone                       | TODO revisit                                                |
 | apel                 | orphaned | xemacs                         | TODO revisit                                                |
-| base16-theme         | github   | screenshot                     | pending [[https://github.com/belak/base16-emacs/pull/39][#39]]                                                 |
 | basic-c-compile      | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                                  |
 | cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                                  |
@@ -78,7 +77,6 @@
 | commander            | github   | ert                            | TODO ert                                                    |
 | company-anaconda     | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
 | company-tern         | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
-| company-tern         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | confluence           | orphaned | xml-rpc                        | TODO revisit                                                |
 | coq                  | github   | maths-menu                     | TODO revisit                                                |
 | coq                  | github   | mmm-auto                       | TODO revisit                                                |
@@ -105,19 +103,15 @@
 | drag-stuff           | github   | ert                            | TODO ert                                                    |
 | dumb-jump            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | ecukes               | github   | ert                            | TODO ert                                                    |
-| edbi-database-url    | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| edbi-django          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | elim                 | shelved  | notify                         | permanent: shelved conflicting with mirrored implementation |
 | elisp-refs           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | elixir-mode          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | emacspeak            | github   | amixer                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                                 |
 | emacspeak            | github   | nm                             | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                                 |
 | emacspeak            | github   | tetris                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                                 |
-| emojify              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | emr                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | epl                  | github   | dummy-package                  | fake package used for testing                               |
 | espuds               | github   | ert                            | TODO ert                                                    |
-| evil-snipe           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | eyuml                | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]                                      |
 | fabric               | github   | ert                            | pending ert [[https://github.com/nlamirault/fabric.el/pull/5][#5]]                                              |
 | fabric               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
@@ -172,7 +166,6 @@
 | matrix-client        | git      | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | mic-paren            | file     | paren                          | rejected: upstream considers it to be a drop-in replacement |
 | mkhtml               | wiki     | htmlize                        | rejected: upstream considers it to be a drop-in replacement |
-| mu4e-alert           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | mupacs               | shelved  | lazy-lock                      | TODO revisit                                                |
 | nav                  | github   | ack                            | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                                                |
 | navi2ch              | github   | ert                            | pending ert [[https://github.com/naota/navi2ch/pull/39][#39]]                                             |
@@ -204,7 +197,6 @@
 | opensource           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | org                  | git      | htmlize                        | TODO revisit                                                |
 | org                  | git      | ob-scala                       | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]                               |
-| org-doing            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | org-sync             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | org-trello           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | org2jekyll           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
@@ -216,28 +208,22 @@
 | prodigy              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | projmake-mode        | github   | elisp-lint                     | TODO revisit                                                |
 | psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                                  |
-| pythonic             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | refine               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| relative-buffers     | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| restart-emacs        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | rinari               | github   | elunit                         | permanent: shelved bundling shelved                         |
 | ruby-end             | github   | ert                            | TODO ert                                                    |
 | semi                 | orphaned | signature                      | TODO revisit                                                |
 | sift                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | simple-server        | shelved  | httpd                          | permanent: shelved conflicting with mirrored implementation |
-| skeletor             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | slime                | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                                              |
 | sly                  | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][#92]]                                                 |
 | suggest              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | tco                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| tern-django          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | tox                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | travis               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | tuareg               | github   | caml                           | TODO revisit                                                |
 | twittering-mode      | github   | ssl                            | TODO revisit                                                |
 | twittering-mode      | github   | test                           | TODO revisit                                                |
-| vdirel               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | vm                   | orphaned | org-vm                         | TODO revisit                                                |
 | vm                   | orphaned | tapestry                       | TODO revisit                                                |
 | vm                   | orphaned | vcard                          | TODO revisit                                                |
