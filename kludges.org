@@ -14,7 +14,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package      | Type     | Feature             | Reason                                    |
+| Package (15) | Type     | Feature             | Reason                                    |
 |--------------+----------+---------------------+-------------------------------------------|
 | bbdb         | git      | bbdb-site           | generated from *.el.in                    |
 | emacs        | builtin  | cus-load            | generated                                 |
@@ -49,7 +49,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package              | Type     | Feature                        | Reason                                                      |
+| Package (104)        | Type     | Feature                        | Reason                                                      |
 |----------------------+----------+--------------------------------+-------------------------------------------------------------|
 | ac-anaconda          | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
@@ -243,7 +243,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package                         | Type        | Feature                | Reason                                                            |
+| Package (68)                    | Type        | Feature                | Reason                                                            |
 |---------------------------------+-------------+------------------------+-------------------------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                                            |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                                            |
@@ -369,7 +369,7 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package              | Type        | Library                 | Reason                     |
+| Package (19)         | Type        | Library                 | Reason                     |
 |----------------------+-------------+-------------------------+----------------------------|
 | ada-ref-man          | elpa        | ada-ref-man.el          | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
 | auctex               | elpa-branch | tex.el                  | pkg/lib name mismatch      |
@@ -406,7 +406,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--libraries
-| Package            | Type | Library                      |
+| Package (7)        | Type | Library                      |
 |--------------------+------+------------------------------|
 | bookmark+          | wiki | bookmark+-1.el               |
 | bookmark+          | wiki | bookmark+-bmu.el             |
@@ -453,7 +453,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package             | Type   | Branch      |
+| Package (2)         | Type   | Branch      |
 |---------------------+--------+-------------|
 | distinguished-theme | github | develop     |
 | ebuild-mode         | git    | ebuild-mode |

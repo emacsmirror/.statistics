@@ -29,7 +29,7 @@
            (emir--melpa-missing 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package                      | Link                                      |
+| Package (620)                | Link                                      |
 |------------------------------+-------------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]                |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                              |
@@ -669,7 +669,7 @@
            (emir--melpa-missing 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package             | Link                                                                   |
+| Package (21)        | Link                                                                   |
 |---------------------+------------------------------------------------------------------------|
 | annot               |                                                                        |
 | auto-mounter        |                                                                        |
@@ -701,7 +701,7 @@
          (emir--melpa-missing 'epkg-bitbucket-package)))
 #+END_SRC
 #+RESULTS: missing-bitbucket
-| Package            | Link                           |
+| Package (8)        | Link                           |
 |--------------------+--------------------------------|
 | ac-source-ispell   | [[https://bitbucket.org/tequilasunset/ac-source-ispell][tequilasunset/ac-source-ispell]] |
 | clay-mode          | [[https://bitbucket.org/prafulla/clay-mode][prafulla/clay-mode]]             |

@@ -157,10 +157,10 @@
               [elpa elpa-branch]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
-| Package  | Type |
-|----------+------|
-| ada-mode | elpa |
-| seq      | elpa |
+| Package (2) | Type |
+|-------------+------|
+| ada-mode    | elpa |
+| seq         | elpa |
 
 ** Prefer upstream
 #+NAME: builtin-prefer-upstream
@@ -174,9 +174,9 @@
               [builtin elpa elpa-branch]))
 #+END_SRC
 #+RESULTS: builtin-prefer-upstream
-| Package | Type |
-|---------+------|
-| org     | git  |
+| Package (1) | Type |
+|-------------+------|
+| org         | git  |
 
 * Gelpa
 ** New
@@ -226,7 +226,7 @@
                :order-by [(asc packages:name)]]))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package     |
+| Package (7) |
 |-------------|
 | cl-generic  |
 | cl-lib      |
@@ -256,7 +256,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package                    | Type   | Gelpa     | Method   | Reason               | Link                                         |
+| Package (58)               | Type   | Gelpa     | Method   | Reason               | Link                                         |
 |----------------------------+--------+-----------+----------+----------------------+----------------------------------------------|
 | ace-window                 | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -345,7 +345,7 @@
                        :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
-| Package      | Reason                                       |
+| Package (1)  | Reason                                       |
 |--------------+----------------------------------------------|
 | build-status | https://github.com/sshaw/build-status/pull/1 |
 
@@ -364,7 +364,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package         | Secondary package               | Type      |
+| Primary package (71)    | Secondary package               | Type      |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -500,7 +500,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-elsewhere
-| Package               | Type     | Melpa     | Reason                        |
+| Package (29)          | Type     | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
