@@ -49,7 +49,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (104)        | Type     | Feature                        | Reason                                                      |
+| Package (105)        | Type     | Feature                        | Reason                                                      |
 |----------------------+----------+--------------------------------+-------------------------------------------------------------|
 | ac-anaconda          | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
@@ -153,6 +153,7 @@
 | ilisp                | shelved  | bridge                         | permanent: shelved bundling also bundled with mirrored      |
 | jump                 | github   | elunit                         | permanent: shelved bundling shelved                         |
 | karma                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
+| ledger-mode          | github   | test-helper                    | TODO                                                        |
 | lookup               | github   | stem-english                   | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                                                 |
 | loop                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | mailcrypt            | github   | timer                          | pending [[https://github.com/barak/mailcrypt/pull/1][#1]]                                                  |

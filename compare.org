@@ -99,7 +99,7 @@
 | elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3667 |   3667 |       |       |       |  3219 |
+| github       | 3668 |   3668 |       |       |       |  3219 |
 | gitlab       |   24 |     24 |       |       |       |    24 |
 | git          |   54 |     54 |       |       |       |    42 |
 | subtree      |   23 |     23 |       |       |       |       |
@@ -120,7 +120,7 @@
 | orphaned     |   43 |     43 |       |       |       |       |
 | shelved      |  961 |        |   961 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6426 |   5042 |   961 |   426 |   155 |  3519 |
+| total        | 6427 |   5043 |   961 |   426 |   155 |  3519 |
 
 * Emacs
 ** New
@@ -192,7 +192,7 @@
 
 ** Pending
 #+NAME: gelpa-pending
-#+BEGIN_SRC emacs-lisp :results list
+#+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Reason")
     (--map (assoc (car it) emir-pending-packages)
            (epkg-sql [:select [name]
@@ -201,6 +201,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
+| Package (1) | Reason                                     |
+|-------------+--------------------------------------------|
+| cl-print    | :core gelpa package, but not in Emacs 25.1 |
 
 ** Prefer builtin
 - *Revisit*
@@ -314,7 +317,7 @@
 | web-server                 | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/pull/3394][melpa#3394]]           | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
 | websocket                  | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68123453][#34#68123453]]         | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
 | xelb                       | github | :external |          | external             | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
-| yasnippet                  | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         | [[https://github.com/capitaomorte/yasnippet][capitaomorte/yasnippet]]                       |
+| yasnippet                  | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
 | ztree                      | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
 
 * Melpa
@@ -337,17 +340,13 @@
 #+NAME: melpa-pending
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Reason")
-    (mapcar (-lambda ((name))
-              (assoc name emir-pending-packages))
-            (epkg-sql [:select [name]
-                       :from melpa-recipes
-                       :where (= status 'pending)
-                       :order-by [(asc name)]])))
+    (--map (assoc (car it) emir-pending-packages)
+           (epkg-sql [:select [name]
+                      :from melpa-recipes
+                      :where (= status 'pending)
+                      :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
-| Package (1)  | Reason                                       |
-|--------------+----------------------------------------------|
-| build-status | https://github.com/sshaw/build-status/pull/1 |
 
 ** Shared repositories
 #+NAME: secondary-packages
@@ -477,8 +476,30 @@
 | ycmd                    | company-ycmd                    | github    |
 | ycmd                    | flycheck-ycmd                   | github    |
 
-** Diverging sources
-#+NAME: melpa-elsewhere
+** Diverging repositories
+- *Revert?*
+  - lyrics was [[https://github.com/death/lyrics][death/lyrics]]
+  - scratch was [[https://github.com/ieure/scratch-el][ieure/scratch-el]]
+#+NAME: melpa-diverging-repositories
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Package" "Mirror" "Melpa")
+    (-keep (-lambda ((name))
+             (list name
+                   (emir--mirror-link (epkg name))
+                   (emir--melpa-link name)))
+           (epkg-sql [:select :distinct [packages:name]
+                      :from [packages melpa-recipes]
+                      :where    (= melpa-recipes:closql-id packages:name)
+                      :and      (= melpa-recipes:closql-id melpa-recipes:name)
+                      :and      (= melpa-recipes:fetcher  'github)
+                      :and      (= packages:class         'github)
+                      :and :not (= packages:url melpa-recipes:url)
+                      :order-by [(asc packages:name)]])))
+#+END_SRC
+#+RESULTS: melpa-diverging-repositories
+
+** Diverging types
+#+NAME: melpa-diverging-types
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Melpa" "Reason")
     (-keep (-lambda ((name class fetcher repo))
@@ -499,7 +520,7 @@
                       :and :not (= melpa-recipes:fetcher   packages:class)
                       :order-by [(asc packages:name)]])))
 #+END_SRC
-#+RESULTS: melpa-elsewhere
+#+RESULTS: melpa-diverging-types
 | Package (29)          | Type     | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
@@ -531,3 +552,4 @@
 | toggle                | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | w3m                   | orphaned | cvs       | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]                |
 | wisp-mode             | minority | bitbucket | mostly non-elisp              |
+
