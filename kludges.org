@@ -60,11 +60,11 @@
 | anaconda-mode        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | anything-project     | github   | anything                       | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                                  |
 | anything-project     | github   | anything-match-plugin          | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                                  |
-| apel                 | orphaned | custom                         | TODO revisit                                                |
-| apel                 | orphaned | env                            | TODO revisit                                                |
-| apel                 | orphaned | install                        | TODO revisit                                                |
-| apel                 | orphaned | timezone                       | TODO revisit                                                |
-| apel                 | orphaned | xemacs                         | TODO revisit                                                |
+| apel                 | orphaned | custom                         | backward compatibility                                      |
+| apel                 | orphaned | env                            | backward compatibility                                      |
+| apel                 | orphaned | install                        | TODO conflict                                               |
+| apel                 | orphaned | timezone                       | TODO bundled built-in                                       |
+| apel                 | orphaned | xemacs                         | XEmacs compatibility                                        |
 | basic-c-compile      | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
 | cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                                  |
 | cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                                  |
@@ -254,14 +254,14 @@
 | auto-complete                   | github      | semantic-ia            | backward compatibility                                            |
 | bbdb                            | git         | vm-autoloads           | generated external file                                           |
 | bts                             | github      | tenv                   | tests only  [[https://github.com/aki2o/emacs-bts/issues/16][#16]]                                                   |
-| cask-package-toolset            | github      | ${package-name}        | TODO bogus dependency                                             |
+| cask-package-toolset            | github      | ${package-name}        | only for template file                                            |
 | color-moccur                    | github      | ee-autoloads           | ee isn't mirrored because it requires but doesn't provide edbcore |
 | color-theme-sanityinc-solarized | github      | color-theme            | backward compatibility                                            |
 | color-theme-sanityinc-tomorrow  | github      | color-theme            | backward compatibility                                            |
 | color-theme-solarized           | github      | color-theme            | backward compatibility                                            |
 | company                         | github      | semantic-idle          | backward compatibility                                            |
-| coq                             | github      | atomic-extents         | TODO                                                              |
-| coq                             | github      | proof-x-symbol         | TODO                                                              |
+| coq                             | github      | atomic-extents         | XEmacs compatibility                                              |
+| coq                             | github      | proof-x-symbol         | only for obsolete library                                         |
 | ddskk                           | github      | balloon-help           | XEmacs compatibility                                              |
 | ddskk                           | github      | jisx0213               | backward compatibility                                            |
 | ddskk                           | github      | nicola-ddskk-autoloads | generated internal file                                           |
@@ -272,11 +272,11 @@
 | doremi-cmd                      | wiki        | color-theme            | backward compatibility                                            |
 | ecb                             | github      | semantic-analyze       | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                                       |
 | ecb                             | github      | semantic-ctxt          | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                                       |
-| ecb                             | github      | thing                  | XXX                                                               |
+| ecb                             | github      | thing                  | XEmacs compatibility                                              |
 | el-autoyas                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
 | emacs-speaks-nonmem             | github      | org-publish            | pending: [[https://github.com/mattfidler/Emacs-Speaks-NONMEM/issues/29][#29]]                                                      |
 | emacspeak                       | github      | org-exp                | required by obsolete library                                      |
-| erlang                          | github      | tags                   | TODO                                                              |
+| erlang                          | github      | tags                   | backward compatibility                                            |
 | es-lib                          | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]                             |
 | extend-dnd                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
 | folding                         | github      | mode-motion            | XEmacs compatibility                                              |
@@ -305,10 +305,10 @@
 | mew                             | github      | un-define              | XEmacs compatibility                                              |
 | mh-e                            | builtin     | toolbar                | XEmacs compatibility                                              |
 | mhc                             | github      | bitmap                 | XEmacs compatibility                                              |
-| mhc                             | github      | mhc-bm                 | TODO                                                              |
-| mhc                             | github      | mhc-xmas               | TODO                                                              |
-| mhc                             | github      | pcustom                | TODO                                                              |
-| mhc                             | github      | poe                    | TODO                                                              |
+| mhc                             | github      | mhc-bm                 | Mule compatibility                                                |
+| mhc                             | github      | mhc-xmas               | XEmacs compatibility                                              |
+| mhc                             | github      | pcustom                | Mule compatibility                                                |
+| mhc                             | github      | poe                    | Mule compatibility                                                |
 | mkhtml                          | wiki        | info+20                | backward compatibility                                            |
 | molokai-theme                   | github      | color-theme            | backward compatibility                                            |
 | navi2ch                         | github      | bitmap                 | XEmacs compatibility                                              |
@@ -316,12 +316,11 @@
 | notes-mode                      | elpa        | pam                    | backward compatibility                                            |
 | nxhtml                          | orphaned    | company-mode           | backward compatibility ~                                          |
 | nxhtml                          | orphaned    | emacsw32               | examples only                                                     |
-| nxhtml                          | orphaned    | flymake-js             | TODO revisit                                                      |
-| nxhtml                          | orphaned    | typesetter             | TODO revisit                                                      |
+| nxhtml                          | orphaned    | flymake-js             | not a proper package [[https://github.com/Anks/elisp/blob/master/flymake-js.el][source]]                                       |
+| nxhtml                          | orphaned    | typesetter             | not touched in ten years                                          |
 | nxhtml                          | orphaned    | w32-regdat             | Windows compatibility                                             |
 | nxhtml                          | orphaned    | w32shell               | Windows compatibility                                             |
-| org                             | git         | org-publish            | XXX                                                               |
-| org                             | git         | org-remember           | XXX                                                               |
+| org                             | git         | org-remember           | pending mailing list                                              |
 | org-caldav                      | github      | org-icalendar          | backward compatibility                                            |
 | org-readme                      | github      | org-html               | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                                       |
 | po-mode                         | minority    | po-compat              | backward compatibility                                            |
@@ -329,11 +328,11 @@
 | python-mode                     | gitlab      | pymacs                 | it's complicated (email)                                          |
 | r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
 | rpm-spec-mode                   | github      | shindent               | pending: [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                                      |
-| semi                            | orphaned    | bitmap                 | XXX                                                               |
+| semi                            | orphaned    | bitmap                 | only if image isn't available                                     |
 | slime                           | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                                   |
 | sly                             | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                                   |
 | tangotango-theme                | github      | color-theme            | backward compatibility                                            |
-| tc                              | github      | bitmap                 | XXX                                                               |
+| tc                              | github      | bitmap                 | pending: [[https://github.com/kozo2/tc/issues/5][#5]]                                                       |
 | twittering-mode                 | github      | alpaca                 | only required if epa isn't available                              |
 | twittering-mode                 | github      | un-define              | XEmacs compatibility                                              |
 | twittering-mode                 | github      | unicode                | backward compatibility                                            |
@@ -343,7 +342,7 @@
 | vm                              | orphaned    | timer-funcs            | XEmacs compatibility                                              |
 | vm                              | orphaned    | vm-autoloads           | generated internal file                                           |
 | w3                              | elpa-branch | dtk-voices             | used to be part of emacspeak, not needed                          |
-| w3                              | elpa-branch | w3-site-init           | XXX                                                               |
+| w3                              | elpa-branch | w3-site-init           | leftover noise                                                    |
 | w3                              | elpa-branch | x-font-menu            | XEmacs compatibility                                              |
 | w3                              | elpa-branch | xbm-button             | XEmacs compatibility                                              |
 | w3                              | elpa-branch | xpm-button             | XEmacs compatibility                                              |
