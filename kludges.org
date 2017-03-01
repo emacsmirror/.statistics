@@ -49,187 +49,181 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (105)        | Type     | Feature                        | Reason                                                      |
-|----------------------+----------+--------------------------------+-------------------------------------------------------------|
-| ac-anaconda          | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
-| ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| alchemist            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| amd-mode             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| ample-regexps        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| anaconda-mode        | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
-| anaconda-mode        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| anything-project     | github   | anything                       | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                                  |
-| anything-project     | github   | anything-match-plugin          | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                                  |
-| apel                 | orphaned | install                        | TODO conflict                                               |
-| apel                 | orphaned | xemacs                         | XEmacs compatibility                                        |
-| basic-c-compile      | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                                  |
-| cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                                  |
-| cask                 | github   | ert                            | TODO ert                                                    |
-| cask-package-toolset | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| cerbere              | github   | phpunit-test                   | TODO revisit                                                |
-| cerbere              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| codex                | github   | ert                            | pending ert [[https://github.com/sigma/codex/pull/1][#1]]                                              |
-| commander            | github   | ert                            | TODO ert                                                    |
-| company-anaconda     | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
-| company-tern         | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                                       |
-| confluence           | orphaned | xml-rpc                        | TODO revisit                                                |
-| coq                  | github   | maths-menu                     | TODO revisit                                                |
-| coq                  | github   | mmm-auto                       | TODO revisit                                                |
-| coq                  | github   | mmm-class                      | TODO revisit                                                |
-| coq                  | github   | mmm-cmds                       | TODO revisit                                                |
-| coq                  | github   | mmm-compat                     | TODO revisit                                                |
-| coq                  | github   | mmm-cweb                       | TODO revisit                                                |
-| coq                  | github   | mmm-mason                      | TODO revisit                                                |
-| coq                  | github   | mmm-mode                       | TODO revisit                                                |
-| coq                  | github   | mmm-region                     | TODO revisit                                                |
-| coq                  | github   | mmm-rpm                        | TODO revisit                                                |
-| coq                  | github   | mmm-sample                     | TODO revisit                                                |
-| coq                  | github   | mmm-univ                       | TODO revisit                                                |
-| coq                  | github   | mmm-utils                      | TODO revisit                                                |
-| coq                  | github   | mmm-vars                       | TODO revisit                                                |
-| coq                  | github   | texi-docstring-magic           | TODO revisit                                                |
-| csde                 | shelved  | beanshell                      | permanent: shelved conflicting with mirrored implementation |
-| ddskk                | github   | install                        | TODO revisit                                                |
-| ddskk                | github   | ptexinfmt                      | TODO revisit                                                |
-| ddskk                | github   | vip                            | TODO revisit                                                |
-| diffscuss-mode       | subtree  | test-simple                    | pending [[https://github.com/tomheon/diffscuss/pull/42][#42]]                                                 |
-| dionysos             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| drag-stuff           | github   | ert                            | TODO ert                                                    |
-| dumb-jump            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| ecukes               | github   | ert                            | TODO ert                                                    |
-| elim                 | shelved  | notify                         | permanent: shelved conflicting with mirrored implementation |
-| elisp-refs           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| elixir-mode          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| emacspeak            | github   | amixer                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                                 |
-| emacspeak            | github   | nm                             | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                                 |
-| emacspeak            | github   | tetris                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                                 |
-| emr                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| epl                  | github   | dummy-package                  | fake package used for testing                               |
-| espuds               | github   | ert                            | TODO ert                                                    |
-| eyuml                | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]                                      |
-| fabric               | github   | ert                            | pending ert [[https://github.com/nlamirault/fabric.el/pull/5][#5]]                                              |
-| fabric               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| fireplace            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| flim                 | orphaned | hex-util                       | TODO revisit                                                |
-| flim                 | orphaned | hmac-def                       | TODO revisit                                                |
-| flim                 | orphaned | hmac-md5                       | TODO revisit                                                |
-| flim                 | orphaned | hmac-sha1                      | TODO revisit                                                |
-| flim                 | orphaned | luna                           | TODO revisit                                                |
-| flim                 | orphaned | lunit                          | TODO revisit                                                |
-| flim                 | orphaned | md4                            | TODO revisit                                                |
-| flim                 | orphaned | md5                            | TODO revisit                                                |
-| flim                 | orphaned | ntlm                           | TODO revisit                                                |
-| flim                 | orphaned | sasl                           | TODO revisit                                                |
-| flim                 | orphaned | sasl-anonymous                 | TODO revisit                                                |
-| flim                 | orphaned | sasl-cram                      | TODO revisit                                                |
-| flim                 | orphaned | sasl-digest                    | TODO revisit                                                |
-| flim                 | orphaned | sasl-login                     | TODO revisit                                                |
-| flim                 | orphaned | sasl-ntlm                      | TODO revisit                                                |
-| flim                 | orphaned | sasl-plain                     | TODO revisit                                                |
-| flim                 | orphaned | sasl-scram                     | TODO revisit                                                |
-| flim                 | orphaned | sha1                           | TODO revisit                                                |
-| flim                 | orphaned | smtpmail                       | TODO revisit                                                |
-| floobits             | github   | highlight                      | pending [[https://github.com/Floobits/floobits-emacs/pull/86][#86]]                                                 |
-| flycheck             | github   | checkdoc-elisp-mode-regression | fake package used for testing                               |
-| flycheck             | github   | compressed                     | fake package used for testing                               |
-| flycheck             | github   | dummy-package                  | fake package used for testing                               |
-| flycheck             | github   | dummy-package-autoloads        | fake package used for testing                               |
-| flycheck             | github   | errors-and-warnings            | fake package used for testing                               |
-| flycheck             | github   | warnings                       | fake package used for testing                               |
-| folio                | shelved  | uuidgen                        | permanent: shelved conflicting with mirrored implementation |
-| git                  | github   | ert                            | TODO ert                                                    |
-| gitlab               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| gnuserv              | shelved  | devices                        | permanent: shelved bundling also bundled with mirrored      |
-| go                   | github   | gnugo                          | rejected: upstream reverted my fix [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]                 |
-| google-this          | github   | noflet                         | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                                                 |
-| gotest               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| helm-backup          | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][#22]]                                                 |
-| helm-company         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| historyf             | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                                                  |
-| ilisp                | shelved  | bridge                         | permanent: shelved bundling also bundled with mirrored      |
-| jump                 | github   | elunit                         | permanent: shelved bundling shelved                         |
-| karma                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| ledger-mode          | github   | test-helper                    | TODO                                                        |
-| lookup               | github   | stem-english                   | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                                                 |
-| loop                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| mailcrypt            | github   | timer                          | pending [[https://github.com/barak/mailcrypt/pull/1][#1]]                                                  |
-| malabar-mode         | shelved  | elk-test                       | permanent                                                   |
-| marcopolo            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| markdownfmt          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| markup               | github   | ert                            | pending ert [[https://github.com/leoc/markup.el/pull/2][#2]]                                              |
-| matrix-client        | git      | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| mic-paren            | file     | paren                          | rejected: upstream considers it to be a drop-in replacement |
-| mkhtml               | wiki     | htmlize                        | rejected: upstream considers it to be a drop-in replacement |
-| mupacs               | shelved  | lazy-lock                      | TODO revisit                                                |
-| nav                  | github   | ack                            | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                                                |
-| navi2ch              | github   | ert                            | pending ert [[https://github.com/naota/navi2ch/pull/39][#39]]                                             |
-| nxhtml               | orphaned | ack                            | TODO revisit                                                |
-| nxhtml               | orphaned | anchored-transpose             | TODO revisit                                                |
-| nxhtml               | orphaned | csharp-mode                    | TODO revisit                                                |
-| nxhtml               | orphaned | edit-server                    | TODO revisit                                                |
-| nxhtml               | orphaned | fold-dwim                      | TODO revisit                                                |
-| nxhtml               | orphaned | html-toc                       | TODO revisit                                                |
-| nxhtml               | orphaned | http-post-simple               | TODO revisit                                                |
-| nxhtml               | orphaned | iss-mode                       | TODO revisit                                                |
-| nxhtml               | orphaned | markchars                      | TODO revisit                                                |
-| nxhtml               | orphaned | moz                            | TODO revisit                                                |
-| nxhtml               | orphaned | org-panel                      | TODO revisit                                                |
-| nxhtml               | orphaned | outline-magic                  | TODO revisit                                                |
-| nxhtml               | orphaned | php-mode                       | TODO revisit                                                |
-| nxhtml               | orphaned | pointback                      | TODO revisit                                                |
-| nxhtml               | orphaned | powershell-mode                | TODO revisit                                                |
-| nxhtml               | orphaned | rnc-mode                       | TODO revisit                                                |
-| nxhtml               | orphaned | smarty-mode                    | TODO revisit                                                |
-| nxhtml               | orphaned | tt-mode                        | TODO revisit                                                |
-| nxhtml               | orphaned | visual-basic-mode              | TODO revisit                                                |
-| nxhtml               | orphaned | vline                          | TODO revisit                                                |
-| nxhtml               | orphaned | zencoding-mode                 | TODO revisit                                                |
-| omni-log             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| omni-quotes          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| omni-scratch         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| omni-tags            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| opensource           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| org                  | git      | htmlize                        | TODO revisit                                                |
-| org                  | git      | ob-scala                       | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]                               |
-| org-sync             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| overseer             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| palette              | wiki     | eyedropper                     | rejected: upstream considers it to be a drop-in replacement |
-| paradox              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| ph                   | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                                                  |
-| pony-mode            | github   | ert                            | pending ert [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                                             |
-| prodigy              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| projmake-mode        | github   | elisp-lint                     | TODO revisit                                                |
-| psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                                  |
-| racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| refine               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| rinari               | github   | elunit                         | permanent: shelved bundling shelved                         |
-| ruby-end             | github   | ert                            | TODO ert                                                    |
-| semi                 | orphaned | signature                      | TODO revisit                                                |
-| sift                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| simple-server        | shelved  | httpd                          | permanent: shelved conflicting with mirrored implementation |
-| slime                | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                                              |
-| sly                  | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][#92]]                                                 |
-| suggest              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| tco                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| tox                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| travis               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| tuareg               | github   | caml                           | TODO revisit                                                |
-| twittering-mode      | github   | ssl                            | TODO revisit                                                |
-| twittering-mode      | github   | test                           | TODO revisit                                                |
-| vm                   | orphaned | org-vm                         | TODO revisit                                                |
-| vm                   | orphaned | tapestry                       | TODO revisit                                                |
-| vm                   | orphaned | vcard                          | TODO revisit                                                |
-| wanderlust           | orphaned | bbdb-wl                        | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                                |
-| wanderlust           | orphaned | ptexinfmt                      | TODO revisit                                                |
-| wanderlust           | orphaned | rfc2368                        | TODO revisit                                                |
-| wanderlust           | orphaned | ssl                            | TODO revisit                                                |
-| wanderlust           | orphaned | utf7                           | TODO revisit                                                |
-| widget-mvc           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| window-purpose       | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                                    |
-| wordnut              | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/wordnut/pull/3][#3]]                                                  |
-| wrap-region          | github   | ert                            | TODO ert                                                    |
-| x-face               | shelved  | mew                            | TODO revisit                                                |
+| Package (99)         | Type     | Feature                        | Reason                                            |
+|----------------------+----------+--------------------------------+---------------------------------------------------|
+| ac-anaconda          | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
+| ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| alchemist            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| amd-mode             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| ample-regexps        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| anaconda-mode        | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
+| anaconda-mode        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| anything-project     | github   | anything                       | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |
+| anything-project     | github   | anything-match-plugin          | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |
+| apel                 | orphaned | install                        | TODO conflict                                     |
+| apel                 | orphaned | xemacs                         | XEmacs compatibility                              |
+| basic-c-compile      | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                        |
+| cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                        |
+| cask                 | github   | ert                            | TODO ert                                          |
+| cask-package-toolset | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| cerbere              | github   | phpunit-test                   | TODO revisit                                      |
+| cerbere              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| codex                | github   | ert                            | pending ert [[https://github.com/sigma/codex/pull/1][#1]]                                    |
+| commander            | github   | ert                            | TODO ert                                          |
+| company-anaconda     | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
+| company-tern         | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
+| confluence           | orphaned | xml-rpc                        | TODO revisit                                      |
+| coq                  | github   | maths-menu                     | TODO revisit                                      |
+| coq                  | github   | mmm-auto                       | TODO revisit                                      |
+| coq                  | github   | mmm-class                      | TODO revisit                                      |
+| coq                  | github   | mmm-cmds                       | TODO revisit                                      |
+| coq                  | github   | mmm-compat                     | TODO revisit                                      |
+| coq                  | github   | mmm-cweb                       | TODO revisit                                      |
+| coq                  | github   | mmm-mason                      | TODO revisit                                      |
+| coq                  | github   | mmm-mode                       | TODO revisit                                      |
+| coq                  | github   | mmm-region                     | TODO revisit                                      |
+| coq                  | github   | mmm-rpm                        | TODO revisit                                      |
+| coq                  | github   | mmm-sample                     | TODO revisit                                      |
+| coq                  | github   | mmm-univ                       | TODO revisit                                      |
+| coq                  | github   | mmm-utils                      | TODO revisit                                      |
+| coq                  | github   | mmm-vars                       | TODO revisit                                      |
+| coq                  | github   | texi-docstring-magic           | TODO revisit                                      |
+| ddskk                | github   | install                        | TODO revisit                                      |
+| ddskk                | github   | ptexinfmt                      | TODO revisit                                      |
+| ddskk                | github   | vip                            | TODO revisit                                      |
+| diffscuss-mode       | subtree  | test-simple                    | pending [[https://github.com/tomheon/diffscuss/pull/42][#42]]                                       |
+| dionysos             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| drag-stuff           | github   | ert                            | TODO ert                                          |
+| dumb-jump            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| ecukes               | github   | ert                            | TODO ert                                          |
+| elim                 | shelved  | notify                         | shelved conflicting with mirrored implementation  |
+| elisp-refs           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| elixir-mode          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| emacspeak            | github   | amixer                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
+| emacspeak            | github   | nm                             | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
+| emacspeak            | github   | tetris                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
+| emr                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| epl                  | github   | dummy-package                  | fake package used for testing                     |
+| espuds               | github   | ert                            | TODO ert                                          |
+| eyuml                | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]                            |
+| fabric               | github   | ert                            | pending ert [[https://github.com/nlamirault/fabric.el/pull/5][#5]]                                    |
+| fabric               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| fireplace            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| flim                 | orphaned | hex-util                       | TODO revisit                                      |
+| flim                 | orphaned | hmac-def                       | TODO revisit                                      |
+| flim                 | orphaned | hmac-md5                       | TODO revisit                                      |
+| flim                 | orphaned | hmac-sha1                      | TODO revisit                                      |
+| flim                 | orphaned | luna                           | TODO revisit                                      |
+| flim                 | orphaned | lunit                          | TODO revisit                                      |
+| flim                 | orphaned | md4                            | TODO revisit                                      |
+| flim                 | orphaned | md5                            | TODO revisit                                      |
+| flim                 | orphaned | ntlm                           | TODO revisit                                      |
+| flim                 | orphaned | sasl                           | TODO revisit                                      |
+| flim                 | orphaned | sasl-anonymous                 | TODO revisit                                      |
+| flim                 | orphaned | sasl-cram                      | TODO revisit                                      |
+| flim                 | orphaned | sasl-digest                    | TODO revisit                                      |
+| flim                 | orphaned | sasl-login                     | TODO revisit                                      |
+| flim                 | orphaned | sasl-ntlm                      | TODO revisit                                      |
+| flim                 | orphaned | sasl-plain                     | TODO revisit                                      |
+| flim                 | orphaned | sasl-scram                     | TODO revisit                                      |
+| flim                 | orphaned | sha1                           | TODO revisit                                      |
+| flim                 | orphaned | smtpmail                       | TODO revisit                                      |
+| floobits             | github   | highlight                      | pending [[https://github.com/Floobits/floobits-emacs/pull/86][#86]]                                       |
+| flycheck             | github   | checkdoc-elisp-mode-regression | fake package used for testing                     |
+| flycheck             | github   | compressed                     | fake package used for testing                     |
+| flycheck             | github   | dummy-package                  | fake package used for testing                     |
+| flycheck             | github   | dummy-package-autoloads        | fake package used for testing                     |
+| flycheck             | github   | errors-and-warnings            | fake package used for testing                     |
+| flycheck             | github   | warnings                       | fake package used for testing                     |
+| git                  | github   | ert                            | TODO ert                                          |
+| gitlab               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| go                   | github   | gnugo                          | upstream reverted my fix again [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]           |
+| google-this          | github   | noflet                         | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                                       |
+| gotest               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| helm-backup          | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][#22]]                                       |
+| helm-company         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| historyf             | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                                        |
+| ilisp                | shelved  | bridge                         | shelved bundling also bundled with mirrored       |
+| jump                 | github   | elunit                         | bundled is unsuitable for melpa                   |
+| karma                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| ledger-mode          | github   | test-helper                    | TODO                                              |
+| lookup               | github   | stem-english                   | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                                       |
+| loop                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| mailcrypt            | github   | timer                          | pending [[https://github.com/barak/mailcrypt/pull/1][#1]]                                        |
+| marcopolo            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| markdownfmt          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| markup               | github   | ert                            | pending ert [[https://github.com/leoc/markup.el/pull/2][#2]]                                    |
+| matrix-client        | git      | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| mic-paren            | file     | paren                          | upstream considers it to be a drop-in replacement |
+| mkhtml               | wiki     | htmlize                        | upstream considers it to be a drop-in replacement |
+| mupacs               | shelved  | lazy-lock                      | XEmacs compatibility                              |
+| nav                  | github   | ack                            | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                                      |
+| navi2ch              | github   | ert                            | pending ert [[https://github.com/naota/navi2ch/pull/39][#39]]                                   |
+| nxhtml               | orphaned | ack                            | TODO revisit                                      |
+| nxhtml               | orphaned | anchored-transpose             | TODO revisit                                      |
+| nxhtml               | orphaned | csharp-mode                    | TODO revisit                                      |
+| nxhtml               | orphaned | edit-server                    | TODO revisit                                      |
+| nxhtml               | orphaned | fold-dwim                      | TODO revisit                                      |
+| nxhtml               | orphaned | html-toc                       | TODO revisit                                      |
+| nxhtml               | orphaned | http-post-simple               | TODO revisit                                      |
+| nxhtml               | orphaned | iss-mode                       | TODO revisit                                      |
+| nxhtml               | orphaned | markchars                      | TODO revisit                                      |
+| nxhtml               | orphaned | moz                            | TODO revisit                                      |
+| nxhtml               | orphaned | org-panel                      | TODO revisit                                      |
+| nxhtml               | orphaned | outline-magic                  | TODO revisit                                      |
+| nxhtml               | orphaned | php-mode                       | TODO revisit                                      |
+| nxhtml               | orphaned | pointback                      | TODO revisit                                      |
+| nxhtml               | orphaned | powershell-mode                | TODO revisit                                      |
+| nxhtml               | orphaned | rnc-mode                       | TODO revisit                                      |
+| nxhtml               | orphaned | smarty-mode                    | TODO revisit                                      |
+| nxhtml               | orphaned | tt-mode                        | TODO revisit                                      |
+| nxhtml               | orphaned | visual-basic-mode              | TODO revisit                                      |
+| nxhtml               | orphaned | vline                          | TODO revisit                                      |
+| nxhtml               | orphaned | zencoding-mode                 | TODO revisit                                      |
+| omni-log             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| omni-quotes          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| omni-scratch         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| omni-tags            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| opensource           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| org                  | git      | htmlize                        | TODO revisit                                      |
+| org                  | git      | ob-scala                       | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode/#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]                     |
+| org-sync             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| overseer             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| palette              | wiki     | eyedropper                     | upstream considers it to be a drop-in replacement |
+| paradox              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| ph                   | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                                        |
+| pony-mode            | github   | ert                            | pending ert [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                                   |
+| prodigy              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| projmake-mode        | github   | elisp-lint                     | TODO revisit                                      |
+| psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                        |
+| racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| refine               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| rinari               | github   | elunit                         | bundled is unsuitable for melpa                   |
+| ruby-end             | github   | ert                            | TODO ert                                          |
+| semi                 | orphaned | signature                      | TODO revisit                                      |
+| sift                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| simple-server        | shelved  | httpd                          | shelved conflicting with mirrored implementation  |
+| slime                | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                                    |
+| sly                  | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][#92]]                                       |
+| suggest              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| tox                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| travis               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| tuareg               | github   | caml                           | TODO revisit                                      |
+| twittering-mode      | github   | ssl                            | TODO revisit                                      |
+| twittering-mode      | github   | test                           | TODO revisit                                      |
+| vm                   | orphaned | org-vm                         | TODO revisit                                      |
+| vm                   | orphaned | tapestry                       | TODO revisit                                      |
+| vm                   | orphaned | vcard                          | TODO revisit                                      |
+| wanderlust           | orphaned | bbdb-wl                        | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                      |
+| wanderlust           | orphaned | ptexinfmt                      | TODO revisit                                      |
+| wanderlust           | orphaned | rfc2368                        | TODO revisit                                      |
+| wanderlust           | orphaned | ssl                            | TODO revisit                                      |
+| wanderlust           | orphaned | utf7                           | TODO revisit                                      |
+| widget-mvc           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| window-purpose       | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
+| wordnut              | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/wordnut/pull/3][#3]]                                        |
+| wrap-region          | github   | ert                            | TODO ert                                          |
 
 * Drop required features
 #+NAME: required-drop
@@ -241,114 +235,115 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (68)                    | Type        | Feature                | Reason                                                            |
-|---------------------------------+-------------+------------------------+-------------------------------------------------------------------|
-| ac-octave                       | github      | octave-inf             | backward compatibility                                            |
-| ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                                            |
-| aozora-view                     | github      | ivs-aj1                | pending: [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                                       |
-| apel                            | orphaned    | tcp                    | backward compatibility                                            |
-| apel                            | orphaned    | timer-funcs            | XEmacs compatibility                                              |
-| auto-complete                   | github      | semantic-ia            | backward compatibility                                            |
-| bbdb                            | git         | vm-autoloads           | generated external file                                           |
-| bts                             | github      | tenv                   | tests only  [[https://github.com/aki2o/emacs-bts/issues/16][#16]]                                                   |
-| cask-package-toolset            | github      | ${package-name}        | only for template file                                            |
-| color-moccur                    | github      | ee-autoloads           | ee isn't mirrored because it requires but doesn't provide edbcore |
-| color-theme-sanityinc-solarized | github      | color-theme            | backward compatibility                                            |
-| color-theme-sanityinc-tomorrow  | github      | color-theme            | backward compatibility                                            |
-| color-theme-solarized           | github      | color-theme            | backward compatibility                                            |
-| company                         | github      | semantic-idle          | backward compatibility                                            |
-| coq                             | github      | atomic-extents         | XEmacs compatibility                                              |
-| coq                             | github      | proof-x-symbol         | only for obsolete library                                         |
-| ddskk                           | github      | balloon-help           | XEmacs compatibility                                              |
-| ddskk                           | github      | jisx0213               | backward compatibility                                            |
-| ddskk                           | github      | nicola-ddskk-autoloads | generated internal file                                           |
-| ddskk                           | github      | skk-autoloads          | generated internal file                                           |
-| dictionary                      | github      | balloon-help           | XEmacs compatibility                                              |
-| dired+                          | wiki        | help+20                | backward compatibility                                            |
-| dired+                          | wiki        | subr-21                | backward compatibility                                            |
-| doremi-cmd                      | wiki        | color-theme            | backward compatibility                                            |
-| ecb                             | github      | semantic-analyze       | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                                       |
-| ecb                             | github      | semantic-ctxt          | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                                       |
-| ecb                             | github      | thing                  | XEmacs compatibility                                              |
-| el-autoyas                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
-| emacs-speaks-nonmem             | github      | org-publish            | pending: [[https://github.com/mattfidler/Emacs-Speaks-NONMEM/issues/29][#29]]                                                      |
-| emacspeak                       | github      | org-exp                | required by obsolete library                                      |
-| erlang                          | github      | tags                   | backward compatibility                                            |
-| es-lib                          | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]                             |
-| extend-dnd                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
-| folding                         | github      | mode-motion            | XEmacs compatibility                                              |
-| gnuplot                         | github      | toolbar                | XEmacs compatibility                                              |
-| gnus                            | builtin     | un-define              | XEmacs compatibility                                              |
-| guix                            | github      | guix-build-config      | distributed with GuixSD itself                                    |
-| guix                            | github      | guix-emacs             | distributed with GuixSD itself                                    |
-| help+                           | wiki        | info+20                | backward compatibility                                            |
-| hyperbole                       | git         | efs                    | XEmacs compatibility                                              |
-| hyperbole                       | git         | id-menubars            | unreleased, author says will be released eventually               |
-| hyperbole                       | git         | x-mouse                | unreleased, author says will be released eventually               |
-| icicles                         | wiki        | color-theme            | backward compatibility                                            |
-| jabber                          | git         | un-define              | XEmacs compatibility                                              |
-| jdee                            | github      | working                | stand-alone cedet compatibility                                   |
-| lacarte                         | wiki        | subr-21                | backward compatibility                                            |
-| lilypond                        | git         | ilisp                  | only required by a single undocumented command                    |
-| lispxmp                         | wiki        | newxmp                 | pending: newxmp has not been released yet (email)                 |
-| load-theme-buffer-local         | github      | color-theme            | backward compatibility                                            |
-| matlab-mode                     | git         | semantic-dep           | backward compatibility                                            |
-| matlab-mode                     | git         | semantic-format        | backward compatibility                                            |
-| matlab-mode                     | git         | semanticdb             | backward compatibility                                            |
-| matlab-mode                     | git         | srecode-map            | backward compatibility                                            |
-| menu-bar+                       | wiki        | help+20                | backward compatibility                                            |
-| menu-bar+                       | wiki        | info+20                | backward compatibility                                            |
-| mew                             | github      | mw32script             | Meadow Emacs compatibility                                        |
-| mew                             | github      | un-define              | XEmacs compatibility                                              |
-| mh-e                            | builtin     | toolbar                | XEmacs compatibility                                              |
-| mhc                             | github      | bitmap                 | XEmacs compatibility                                              |
-| mhc                             | github      | mhc-bm                 | Mule compatibility                                                |
-| mhc                             | github      | mhc-xmas               | XEmacs compatibility                                              |
-| mhc                             | github      | pcustom                | Mule compatibility                                                |
-| mhc                             | github      | poe                    | Mule compatibility                                                |
-| mkhtml                          | wiki        | info+20                | backward compatibility                                            |
-| molokai-theme                   | github      | color-theme            | backward compatibility                                            |
-| navi2ch                         | github      | bitmap                 | XEmacs compatibility                                              |
-| notes-mode                      | elpa        | npgp                   | backward compatibility                                            |
-| notes-mode                      | elpa        | pam                    | backward compatibility                                            |
-| nxhtml                          | orphaned    | company-mode           | backward compatibility ~                                          |
-| nxhtml                          | orphaned    | emacsw32               | examples only                                                     |
-| nxhtml                          | orphaned    | flymake-js             | not a proper package [[https://github.com/Anks/elisp/blob/master/flymake-js.el][source]]                                       |
-| nxhtml                          | orphaned    | typesetter             | not touched in ten years                                          |
-| nxhtml                          | orphaned    | w32-regdat             | Windows compatibility                                             |
-| nxhtml                          | orphaned    | w32shell               | Windows compatibility                                             |
-| org                             | git         | org-remember           | pending mailing list                                              |
-| org-caldav                      | github      | org-icalendar          | backward compatibility                                            |
-| org-readme                      | github      | org-html               | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                                       |
-| po-mode                         | minority    | po-compat              | backward compatibility                                            |
-| project-explorer                | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]                            |
-| python-mode                     | gitlab      | pymacs                 | it's complicated (email)                                          |
-| r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                                        |
-| rpm-spec-mode                   | github      | shindent               | pending: [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                                      |
-| semi                            | orphaned    | bitmap                 | only if image isn't available                                     |
-| slime                           | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                                   |
-| sly                             | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                                   |
-| tangotango-theme                | github      | color-theme            | backward compatibility                                            |
-| tc                              | github      | bitmap                 | pending: [[https://github.com/kozo2/tc/issues/5][#5]]                                                       |
-| twittering-mode                 | github      | alpaca                 | only required if epa isn't available                              |
-| twittering-mode                 | github      | un-define              | XEmacs compatibility                                              |
-| twittering-mode                 | github      | unicode                | backward compatibility                                            |
-| vcl-mode                        | github      | generic-mode           | XEmacs compatibility                                              |
-| vm                              | orphaned    | atomic-extents         | XEmacs compatibility                                              |
-| vm                              | orphaned    | highlight-headers      | XEmacs compatibility                                              |
-| vm                              | orphaned    | timer-funcs            | XEmacs compatibility                                              |
-| vm                              | orphaned    | vm-autoloads           | generated internal file                                           |
-| w3                              | elpa-branch | dtk-voices             | used to be part of emacspeak, not needed                          |
-| w3                              | elpa-branch | w3-site-init           | leftover noise                                                    |
-| w3                              | elpa-branch | x-font-menu            | XEmacs compatibility                                              |
-| w3                              | elpa-branch | xbm-button             | XEmacs compatibility                                              |
-| w3                              | elpa-branch | xpm-button             | XEmacs compatibility                                              |
-| w3m                             | orphaned    | un-define              | XEmacs compatibility                                              |
-| wanderlust                      | orphaned    | bbdb                   | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                                      |
-| wanderlust                      | orphaned    | bbdb-com               | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                                      |
-| wanderlust                      | orphaned    | bbdb-hooks             | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                                      |
-| wanderlust                      | orphaned    | bitmap                 | XEmacs compatibility                                              |
-| yatex                           | hg          | hilit19                | backward compatibility                                            |
+| Package (68)                    | Type        | Feature                | Reason                                              |
+|---------------------------------+-------------+------------------------+-----------------------------------------------------|
+| ac-octave                       | github      | octave-inf             | backward compatibility                              |
+| ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                              |
+| aozora-view                     | github      | ivs-aj1                | pending: [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                         |
+| apel                            | orphaned    | tcp                    | backward compatibility                              |
+| apel                            | orphaned    | timer-funcs            | XEmacs compatibility                                |
+| apel                            | orphaned    | tinycustom             | backward compatibility                              |
+| auto-complete                   | github      | semantic-ia            | backward compatibility                              |
+| bbdb                            | git         | vm-autoloads           | generated external file                             |
+| bts                             | github      | tenv                   | tests only  [[https://github.com/aki2o/emacs-bts/issues/16][#16]]                                     |
+| cask-package-toolset            | github      | ${package-name}        | only for template file                              |
+| color-theme-sanityinc-solarized | github      | color-theme            | backward compatibility                              |
+| color-theme-sanityinc-tomorrow  | github      | color-theme            | backward compatibility                              |
+| color-theme-solarized           | github      | color-theme            | backward compatibility                              |
+| company                         | github      | semantic-idle          | backward compatibility                              |
+| coq                             | github      | atomic-extents         | XEmacs compatibility                                |
+| coq                             | github      | proof-x-symbol         | only for obsolete library                           |
+| ddskk                           | github      | balloon-help           | XEmacs compatibility                                |
+| ddskk                           | github      | jisx0213               | backward compatibility                              |
+| ddskk                           | github      | nicola-ddskk-autoloads | generated internal file                             |
+| ddskk                           | github      | skk-autoloads          | generated internal file                             |
+| dictionary                      | github      | balloon-help           | XEmacs compatibility                                |
+| dired+                          | wiki        | help+20                | backward compatibility                              |
+| dired+                          | wiki        | subr-21                | backward compatibility                              |
+| doremi-cmd                      | wiki        | color-theme            | backward compatibility                              |
+| ecb                             | github      | semantic-analyze       | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
+| ecb                             | github      | semantic-ctxt          | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
+| ecb                             | github      | thing                  | XEmacs compatibility                                |
+| ee                              | git         | bbdb-autoloads         | generated external file                             |
+| el-autoyas                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
+| emacs-speaks-nonmem             | github      | org-publish            | pending: [[https://github.com/mattfidler/Emacs-Speaks-NONMEM/issues/29][#29]]                                        |
+| emacspeak                       | github      | org-exp                | required by obsolete library                        |
+| erlang                          | github      | tags                   | backward compatibility                              |
+| es-lib                          | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]               |
+| extend-dnd                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
+| folding                         | github      | mode-motion            | XEmacs compatibility                                |
+| gnuplot                         | github      | toolbar                | XEmacs compatibility                                |
+| gnus                            | builtin     | un-define              | XEmacs compatibility                                |
+| guix                            | github      | guix-build-config      | distributed with GuixSD itself                      |
+| guix                            | github      | guix-emacs             | distributed with GuixSD itself                      |
+| help+                           | wiki        | info+20                | backward compatibility                              |
+| hyperbole                       | git         | efs                    | XEmacs compatibility                                |
+| hyperbole                       | git         | id-menubars            | unreleased, author says will be released eventually |
+| hyperbole                       | git         | x-mouse                | unreleased, author says will be released eventually |
+| icicles                         | wiki        | color-theme            | backward compatibility                              |
+| jabber                          | git         | un-define              | XEmacs compatibility                                |
+| jdee                            | github      | working                | stand-alone cedet compatibility                     |
+| lacarte                         | wiki        | subr-21                | backward compatibility                              |
+| lilypond                        | git         | ilisp                  | only required by a single undocumented command      |
+| lispxmp                         | wiki        | newxmp                 | pending: newxmp has not been released yet (email)   |
+| load-theme-buffer-local         | github      | color-theme            | backward compatibility                              |
+| matlab-mode                     | git         | semantic-dep           | backward compatibility                              |
+| matlab-mode                     | git         | semantic-format        | backward compatibility                              |
+| matlab-mode                     | git         | semanticdb             | backward compatibility                              |
+| matlab-mode                     | git         | srecode-map            | backward compatibility                              |
+| menu-bar+                       | wiki        | help+20                | backward compatibility                              |
+| menu-bar+                       | wiki        | info+20                | backward compatibility                              |
+| mew                             | github      | mw32script             | Meadow Emacs compatibility                          |
+| mew                             | github      | un-define              | XEmacs compatibility                                |
+| mh-e                            | builtin     | toolbar                | XEmacs compatibility                                |
+| mhc                             | github      | bitmap                 | XEmacs compatibility                                |
+| mhc                             | github      | mhc-bm                 | Mule compatibility                                  |
+| mhc                             | github      | mhc-xmas               | XEmacs compatibility                                |
+| mhc                             | github      | pcustom                | Mule compatibility                                  |
+| mhc                             | github      | poe                    | Mule compatibility                                  |
+| mkhtml                          | wiki        | info+20                | backward compatibility                              |
+| molokai-theme                   | github      | color-theme            | backward compatibility                              |
+| navi2ch                         | github      | bitmap                 | XEmacs compatibility                                |
+| notes-mode                      | elpa        | npgp                   | backward compatibility                              |
+| notes-mode                      | elpa        | pam                    | backward compatibility                              |
+| nxhtml                          | orphaned    | company-mode           | backward compatibility ~                            |
+| nxhtml                          | orphaned    | emacsw32               | examples only                                       |
+| nxhtml                          | orphaned    | flymake-js             | not a proper package [[https://github.com/Anks/elisp/blob/master/flymake-js.el][source]]                         |
+| nxhtml                          | orphaned    | typesetter             | not touched in ten years                            |
+| nxhtml                          | orphaned    | w32-regdat             | Windows compatibility                               |
+| nxhtml                          | orphaned    | w32shell               | Windows compatibility                               |
+| org                             | git         | org-remember           | pending mailing list                                |
+| org-caldav                      | github      | org-icalendar          | backward compatibility                              |
+| org-readme                      | github      | org-html               | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
+| po-mode                         | minority    | po-compat              | backward compatibility                              |
+| project-explorer                | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
+| python-mode                     | gitlab      | pymacs                 | it's complicated (email)                            |
+| r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
+| rpm-spec-mode                   | github      | shindent               | pending: [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                        |
+| semi                            | orphaned    | bitmap                 | only if image isn't available                       |
+| slime                           | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                     |
+| sly                             | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                     |
+| tangotango-theme                | github      | color-theme            | backward compatibility                              |
+| tc                              | github      | bitmap                 | pending: [[https://github.com/kozo2/tc/issues/5][#5]]                                         |
+| twittering-mode                 | github      | alpaca                 | only required if epa isn't available                |
+| twittering-mode                 | github      | un-define              | XEmacs compatibility                                |
+| twittering-mode                 | github      | unicode                | backward compatibility                              |
+| vcl-mode                        | github      | generic-mode           | XEmacs compatibility                                |
+| vm                              | orphaned    | atomic-extents         | XEmacs compatibility                                |
+| vm                              | orphaned    | highlight-headers      | XEmacs compatibility                                |
+| vm                              | orphaned    | timer-funcs            | XEmacs compatibility                                |
+| vm                              | orphaned    | vm-autoloads           | generated internal file                             |
+| w3                              | elpa-branch | dtk-voices             | used to be part of emacspeak, not needed            |
+| w3                              | elpa-branch | w3-site-init           | leftover noise                                      |
+| w3                              | elpa-branch | x-font-menu            | XEmacs compatibility                                |
+| w3                              | elpa-branch | xbm-button             | XEmacs compatibility                                |
+| w3                              | elpa-branch | xpm-button             | XEmacs compatibility                                |
+| w3m                             | orphaned    | un-define              | XEmacs compatibility                                |
+| wanderlust                      | orphaned    | bbdb                   | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                        |
+| wanderlust                      | orphaned    | bbdb-com               | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                        |
+| wanderlust                      | orphaned    | bbdb-hooks             | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                        |
+| wanderlust                      | orphaned    | bitmap                 | XEmacs compatibility                                |
+| yatex                           | hg          | hilit19                | backward compatibility                              |
 
 * Set main library
 #+NAME: no-mainlib
