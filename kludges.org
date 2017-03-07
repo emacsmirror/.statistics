@@ -14,30 +14,22 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (15) | Type     | Feature             | Reason                                    |
-|--------------+----------+---------------------+-------------------------------------------|
-| bbdb         | git      | bbdb-site           | generated from *.el.in                    |
-| emacs        | builtin  | cus-load            | generated                                 |
-| emacs        | builtin  | leim-list           | generated                                 |
-| eshell       | builtin  | esh-groups          | generated                                 |
-| finder       | builtin  | finder-inf          | generated                                 |
-| geiser       | github   | geiser-install      | generated from *.el.in                    |
-| geiser       | github   | geiser-load         | generated from *.el.in                    |
-| mu4e         | github   | mu4e-meta           | generated from *.el.in                    |
-| navi2ch      | github   | navi2ch-config      | generated from *.el.in                    |
-| notmuch      | git      | notmuch-version     | generated from *.el.tmpl                  |
-| org-toodledo | github   | org-toodledo-test   | inside directory containing .nosearch     |
-| realgud      | github   | bashdb              | inside directory containing .nosearch     |
-| riece        | git      | riece-package-info  | generated from *.el.in                    |
-| sly          | github   | sly-buttons         | rejected [[https://github.com/capitaomorte/sly/pull/85][#85]]                              |
-| sly          | github   | sly-common          | rejected [[https://github.com/capitaomorte/sly/pull/85][#85]]                              |
-| sly          | github   | sly-completion      | rejected [[https://github.com/capitaomorte/sly/pull/85][#85]]                              |
-| sly          | github   | sly-messages        | rejected [[https://github.com/capitaomorte/sly/pull/85][#85]]                              |
-| sly          | github   | sly-parse           | rejected [[https://github.com/capitaomorte/sly/pull/85][#85]]                              |
-| sly          | github   | sly-tests           | rejected [[https://github.com/capitaomorte/sly/pull/85][#85]]                              |
-| ucs-utils    | github   | ucs-utils-6.0-delta | emir ignores filenames containing numbers |
-| wanderlust   | orphaned | wl-news             | generated from *.el.in                    |
-| wisi         | elpa     | wisi-compat-24.2    | emir ignores filenames containing numbers |
+| Package (8)  | Type    | Feature             | Reason                                    |
+|--------------+---------+---------------------+-------------------------------------------|
+| emacs        | builtin | cus-load            | generated                                 |
+| emacs        | builtin | leim-list           | generated                                 |
+| eshell       | builtin | esh-groups          | generated                                 |
+| finder       | builtin | finder-inf          | generated                                 |
+| org-toodledo | github  | org-toodledo-test   | inside directory containing .nosearch     |
+| realgud      | github  | bashdb              | inside directory containing .nosearch     |
+| sly          | github  | sly-buttons         | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly          | github  | sly-common          | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly          | github  | sly-completion      | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly          | github  | sly-messages        | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly          | github  | sly-parse           | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly          | github  | sly-tests           | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| ucs-utils    | github  | ucs-utils-6.0-delta | emir ignores filenames containing numbers |
+| wisi         | elpa    | wisi-compat-24.2    | emir ignores filenames containing numbers |
 
 * Drop provided features
 #+NAME: provided-drop
@@ -49,7 +41,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (99)         | Type     | Feature                        | Reason                                            |
+| Package (96)         | Type     | Feature                        | Reason                                            |
 |----------------------+----------+--------------------------------+---------------------------------------------------|
 | ac-anaconda          | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
@@ -62,7 +54,6 @@
 | anything-project     | github   | anything-match-plugin          | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |
 | apel                 | orphaned | install                        | TODO conflict                                     |
 | apel                 | orphaned | xemacs                         | XEmacs compatibility                              |
-| basic-c-compile      | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                        |
 | cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                        |
 | cask                 | github   | ert                            | TODO ert                                          |
@@ -194,7 +185,6 @@
 | paradox              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | ph                   | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                                        |
 | pony-mode            | github   | ert                            | pending ert [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                                   |
-| prodigy              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | projmake-mode        | github   | elisp-lint                     | TODO revisit                                      |
 | psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                        |
 | racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
@@ -220,7 +210,6 @@
 | wanderlust           | orphaned | rfc2368                        | TODO revisit                                      |
 | wanderlust           | orphaned | ssl                            | TODO revisit                                      |
 | wanderlust           | orphaned | utf7                           | TODO revisit                                      |
-| widget-mvc           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | window-purpose       | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | wordnut              | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/wordnut/pull/3][#3]]                                        |
 | wrap-region          | github   | ert                            | TODO ert                                          |
@@ -274,7 +263,6 @@
 | folding                         | github      | mode-motion            | XEmacs compatibility                                |
 | gnuplot                         | github      | toolbar                | XEmacs compatibility                                |
 | gnus                            | builtin     | un-define              | XEmacs compatibility                                |
-| guix                            | github      | guix-build-config      | distributed with GuixSD itself                      |
 | guix                            | github      | guix-emacs             | distributed with GuixSD itself                      |
 | help+                           | wiki        | info+20                | backward compatibility                              |
 | hyperbole                       | git         | efs                    | XEmacs compatibility                                |
