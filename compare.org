@@ -99,7 +99,7 @@
 | elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3680 |   3680 |       |       |       |  3230 |
+| github       | 3689 |   3689 |       |       |       |  3241 |
 | gitlab       |   24 |     24 |       |       |       |    24 |
 | git          |   57 |     57 |       |       |       |    44 |
 | subtree      |   23 |     23 |       |       |       |       |
@@ -114,13 +114,13 @@
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  759 |    759 |       |       |       |   178 |
-| file         |  305 |    305 |       |       |       |       |
+| file         |  304 |    304 |       |       |       |       |
 | minority     |   24 |     24 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   43 |     43 |       |       |       |       |
 | shelved      |  960 |        |   960 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6442 |   5059 |   960 |   426 |   155 |  3532 |
+| total        | 6450 |   5067 |   960 |   426 |   155 |  3543 |
 
 * Emacs
 ** New
@@ -363,7 +363,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (71)    | Secondary package               | Type      |
+| Primary package (72)    | Secondary package               | Type      |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -422,6 +422,7 @@
 | haskell-emacs           | haskell-emacs-text              | github    |
 | helm                    | helm-core                       | github    |
 | helm-bibtex             | ivy-bibtex                      | github    |
+| historian               | ivy-historian                   | github    |
 | ido-ubiquitous          | ido-completing-read+            | github    |
 | ivy                     | counsel                         | github    |
 | ivy                     | ivy-hydra                       | github    |
