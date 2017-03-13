@@ -29,7 +29,7 @@
            (emir--melpa-missing 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (620)                | Link                                      |
+| Package (617)                | Link                                      |
 |------------------------------+-------------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]                |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                              |
@@ -123,13 +123,11 @@
 | csp-mode                     | [[https://github.com/zonix/csp-mode][zonix/csp-mode]]                            |
 | csr-mode                     | [[https://github.com/trailbound/csr-mode][trailbound/csr-mode]]                       |
 | css-format                   | [[https://github.com/chalmagean/css-format.el][chalmagean/css-format.el]]                  |
-| css-helper                   | [[https://github.com/tungd/css-helper][tungd/css-helper]]                          |
 | cucumber-i18n                | [[https://github.com/senny/cucumber-i18n.el][senny/cucumber-i18n.el]]                    |
 | cui-about-me                 | [[https://github.com/gongo/cui-about-me.el][gongo/cui-about-me.el]]                     |
 | curl                         | [[https://github.com/cinsk/emacs-curl][cinsk/emacs-curl]]                          |
 | current-story                | [[https://github.com/charlietanksley/current-story][charlietanksley/current-story]]             |
 | cygstart                     | [[https://github.com/lieutar/cygstart.el][lieutar/cygstart.el]]                       |
-| cygwin-terminal-clipboard    | [[https://github.com/j0xaf/cygwin-terminal-clipboard][j0xaf/cygwin-terminal-clipboard]]           |
 | dae                          | [[https://github.com/larsmagne/dae.el][larsmagne/dae.el]]                          |
 | darken-text                  | [[https://github.com/renard/darken-text][renard/darken-text]]                        |
 | db-sql                       | [[https://github.com/renard/db-sql-el][renard/db-sql-el]]                          |
@@ -175,12 +173,12 @@
 | egit                         | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                          |
 | eimap                        | [[https://github.com/corecode/eimap][corecode/eimap]]                            |
 | el-index                     | [[https://github.com/medikoo/el-index][medikoo/el-index]]                          |
+| el2org                       | [[https://github.com/tumashu/el2org][tumashu/el2org]]                            |
 | elang                        | [[https://github.com/vkazanov/elang][vkazanov/elang]]                            |
 | elisp-slime-expand           | [[https://github.com/russell/elisp-slime-expand][russell/elisp-slime-expand]]                |
 | elk-test                     | [[https://github.com/nschum/elk-test][nschum/elk-test]]                           |
 | elpad-client                 | [[https://github.com/nicferrier/elpad-client][nicferrier/elpad-client]]                   |
 | eltex                        | [[https://github.com/abo-abo/eltex][abo-abo/eltex]]                             |
-| elwiki                       | [[https://github.com/aidalgol/elwiki][aidalgol/elwiki]]                           |
 | emacs-android                | [[https://github.com/cpc26/emacs-android][cpc26/emacs-android]]                       |
 | emacs-speaks-nonmem          | [[https://github.com/mattfidler/Emacs-Speaks-NONMEM][mattfidler/Emacs-Speaks-NONMEM]]            |
 | emacs-xcode                  | [[https://github.com/senny/emacs-xcode][senny/emacs-xcode]]                         |
@@ -301,7 +299,6 @@
 | highrise                     | [[https://github.com/hober/37emacs][hober/37emacs]]                             |
 | hippie-expand-distel         | [[https://github.com/rost/hippie-expand-distel][rost/hippie-expand-distel]]                 |
 | hl-tags-mode                 | [[https://github.com/deactivated/hl-tags-mode][deactivated/hl-tags-mode]]                  |
-| hse                          | [[https://github.com/ekschencn/hybrid-source-edit][ekschencn/hybrid-source-edit]]              |
 | hsearch                      | [[https://github.com/jschaf/hsearch][jschaf/hsearch]]                            |
 | html-fold                    | [[https://github.com/ataka/html-fold][ataka/html-fold]]                           |
 | html-key-chord-mode          | [[https://github.com/tomoya/html-key-chord-mode][tomoya/html-key-chord-mode]]                |
@@ -669,9 +666,8 @@
            (emir--melpa-missing 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (22)        | Link                                                                   |
+| Package (21)        | Link                                                                   |
 |---------------------+------------------------------------------------------------------------|
-| annot               |                                                                        |
 | auto-mounter        |                                                                        |
 | delight             | [[https://savannah.nongnu.org/projects/delight]]                           |
 | ebuild-mode         |                                                                        |

@@ -41,15 +41,12 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (96)         | Type     | Feature                        | Reason                                            |
+| Package (92)         | Type     | Feature                        | Reason                                            |
 |----------------------+----------+--------------------------------+---------------------------------------------------|
-| ac-anaconda          | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | alchemist            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | amd-mode             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | ample-regexps        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| anaconda-mode        | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
-| anaconda-mode        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | anything-project     | github   | anything                       | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |
 | anything-project     | github   | anything-match-plugin          | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |
 | apel                 | orphaned | install                        | TODO conflict                                     |
@@ -62,8 +59,6 @@
 | cerbere              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | codex                | github   | ert                            | pending ert [[https://github.com/sigma/codex/pull/1][#1]]                                    |
 | commander            | github   | ert                            | TODO ert                                          |
-| company-anaconda     | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
-| company-tern         | github   | init                           | pending [[https://github.com/proofit404/ac-anaconda/issues/4][ac-anaconda#4]]                             |
 | confluence           | orphaned | xml-rpc                        | TODO revisit                                      |
 | coq                  | github   | maths-menu                     | TODO revisit                                      |
 | coq                  | github   | mmm-auto                       | TODO revisit                                      |
@@ -122,7 +117,6 @@
 | flim                 | orphaned | smtpmail                       | TODO revisit                                      |
 | floobits             | github   | highlight                      | pending [[https://github.com/Floobits/floobits-emacs/pull/86][#86]]                                       |
 | flycheck             | github   | checkdoc-elisp-mode-regression | fake package used for testing                     |
-| flycheck             | github   | compressed                     | fake package used for testing                     |
 | flycheck             | github   | dummy-package                  | fake package used for testing                     |
 | flycheck             | github   | dummy-package-autoloads        | fake package used for testing                     |
 | flycheck             | github   | errors-and-warnings            | fake package used for testing                     |
@@ -224,7 +218,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (68)                    | Type        | Feature                | Reason                                              |
+| Package (67)                    | Type        | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                              |
@@ -255,7 +249,6 @@
 | ecb                             | github      | thing                  | XEmacs compatibility                                |
 | ee                              | git         | bbdb-autoloads         | generated external file                             |
 | el-autoyas                      | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
-| emacs-speaks-nonmem             | github      | org-publish            | pending: [[https://github.com/mattfidler/Emacs-Speaks-NONMEM/issues/29][#29]]                                        |
 | emacspeak                       | github      | org-exp                | required by obsolete library                        |
 | erlang                          | github      | tags                   | backward compatibility                              |
 | es-lib                          | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]               |
@@ -349,7 +342,7 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (19)         | Type        | Library                 | Reason                     |
+| Package (20)         | Type        | Library                 | Reason                     |
 |----------------------+-------------+-------------------------+----------------------------|
 | ada-ref-man          | elpa        | ada-ref-man.el          | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
 | auctex               | elpa-branch | tex.el                  | pkg/lib name mismatch      |
@@ -370,6 +363,7 @@
 | tao-theme            | github      | tao-yang-theme.el       | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |
 | ultratex             | github      | lisp/ultex.el           | no/mismatched main library |
 | uni-confusables      | elpa        | uni-confusables.el      | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
+| widget-mvc           | github      | widget-mvc.el           | pending [[https://github.com/kiwanami/emacs-widget-mvc/issues/17][#17]]                |
 
 * Set libraries
 #+NAME: slot--libraries
