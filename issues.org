@@ -31,7 +31,6 @@
 #+RESULTS: conflict
 
 * Packages with unsatisfied dependencies
-- https://github.com/tumashu/exwm-x/issues/2
 #+NAME: unsatisfied
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Type" "Feature" "Shelved")
@@ -56,7 +55,4 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Type   | Feature    | Shelved |
-|-------------+--------+------------+---------|
-| exwm-x      | github | owp-lentic |         |
 
