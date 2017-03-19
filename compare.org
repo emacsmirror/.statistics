@@ -115,12 +115,12 @@
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  759 |    759 |       |       |       |   178 |
 | file         |  303 |    303 |       |       |       |       |
-| minority     |   25 |     25 |       |       |       |       |
+| minority     |   26 |     26 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   43 |     43 |       |       |       |       |
 | shelved      |  969 |        |   969 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6465 |   5073 |   969 |   426 |   155 |  3554 |
+| total        | 6466 |   5074 |   969 |   426 |   155 |  3554 |
 
 * Emacs
 ** New
@@ -194,50 +194,46 @@
 #+NAME: gelpa-pending
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Reason")
-    (--map (assoc (car it) emir-pending-packages)
-           (epkg-sql [:select [name]
-                      :from gelpa-recipes
-                      :where (= status 'pending)
-                      :order-by [(asc name)]])))
+    (--filter (assoc (car it) emir-pending-packages)
+              (epkg-sql [:select [name]
+                         :from gelpa-recipes
+                         :where (= status 'pending)
+                         :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (1) | Reason                                     |
-|-------------+--------------------------------------------|
-| cl-print    | :core gelpa package, but not in Emacs 25.1 |
+
+** Special cases
+
+| Package (1) | Reason                                                      |
+|-------------+-------------------------------------------------------------|
+| cl-print    | :core imported as minority because only in master (26.0.50) |
 
 ** Prefer builtin
-- *Revisit*
-  - let-alist
-  - ntlm
-  - python
-  - soap-client
-- *Backport*
-  - cl-generic
-  - cl-lib
-- *Builtin version is more recent*
-  - pinentry
-- *Builtin version is an old implementation*
-  Therefore we mirror the Gelpa version.
-  - ada-mode
 #+NAME: gelpa-prefer-builtin
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package")
-    (epkg-sql [:select :distinct [packages:name]
-               :from [packages gelpa-recipes]
-               :where (= packages:name gelpa-recipes:closql-id)
-               :and (= packages:class 'builtin)
-               :order-by [(asc packages:name)]]))
+  (emir--with-org-header ("Package" "Reason")
+    (let ((externals (emir-gelpa--externals)))
+      (mapcar (-lambda ((name))
+                (or (and (equal (cadr (assoc name externals)) :core)
+                         (list name "Elpa has copy of builtin"))
+                    (assoc name emir--preferred-builtins)
+                    (list name "")))
+              (epkg-sql [:select :distinct [packages:name]
+                         :from [packages gelpa-recipes]
+                         :where (= packages:name gelpa-recipes:closql-id)
+                         :and (= packages:class 'builtin)
+                         :order-by [(asc packages:name)]]))))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (7) |
-|-------------|
-| cl-generic  |
-| cl-lib      |
-| let-alist   |
-| ntlm        |
-| pinentry    |
-| python      |
-| soap-client |
+| Package (7) | Reason                         |
+|-------------+--------------------------------|
+| cl-generic  | Elpa has backport of builtin   |
+| cl-lib      | Elpa has backport of builtin   |
+| let-alist   | Elpa has copy of builtin       |
+| ntlm        | Elpa has copy of builtin       |
+| pinentry    | Elpa imports outdated upstream |
+| python      | Elpa has copy of builtin       |
+| soap-client | Elpa has copy of builtin       |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
@@ -259,66 +255,67 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (58)               | Type   | Gelpa     | Method   | Reason               | Link                                         |
-|----------------------------+--------+-----------+----------+----------------------+----------------------------------------------|
-| ace-window                 | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
-| ack                        | github | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
-| aggressive-indent          | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
-| ahungry-theme              | github | :subtree! | :squash  |                      | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
-| async                      | github | :subtree! | :squash  | squash               | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
-| avy                        | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
-| beacon                     | github | :subtree! | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
-| bug-hunter                 | github | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
-| coffee-mode                | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67443674][#34#67443674]]         | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
-| company                    | github | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
-| company-math               | github | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
-| company-statistics         | github | :subtree! | :squash  | squash               | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
-| dash                       | github | :external |          | external             | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
-| dbus-codegen               | github | :subtree  | :squash  | squash               | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
-| delight                    | git    | :subtree  | :merge   |                      | [[https://savannah.nongnu.org/projects/delight]] |
-| diff-hl                    | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                               |
-| diffview                   | github | :subtree  | :merge   |                      | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
-| dts-mode                   | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164455502][#69#164455502]]        | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
-| easy-kill                  | github | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164356304][melpa#3383#164356304]] | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
-| eldoc-eval                 | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
-| electric-spacing           | github | :subtree! | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164462609][#69#164462609]]        | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
-| ergoemacs-mode             | github | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164897071][melpa#3383#164897071]] | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
-| exwm                       | github | :external |          | external             | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
-| ggtags                     | github | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
-| gnorb                      | github | :subtree  | :squash  | squash               | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
-| highlight-escape-sequences | github | :subtree  | :merge   |                      | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
-| hydra                      | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
-| hyperbole                  | git    | :external |          |                      | [[http://www.gnu.org/software/hyperbole]]        |
-| ioccur                     | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
-| ivy                        | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
-| js2-mode                   | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
-| json-mode                  | github | :subtree! | :merge   |                      | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
-| load-relative              | github | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
-| loc-changes                | github | :subtree! | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
-| loccur                     | github | :subtree! | :squash! | squash               | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
-| math-symbol-lists          | github | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                     |
-| nameless                   | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
-| names                      | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
-| on-screen                  | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164450677][#69#164450677]]        | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
-| org                        | git    | :core     |          |                      | [[http://orgmode.org]]                           |
-| pabbrev                    | github | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164418230][melpa#3383#164418230]] | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
-| parsec                     | github | :subtree  | :squash  |                      | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
-| psgml                      | github | :external |          |                      | [[https://github.com/lenst/psgml][lenst/psgml]]                                  |
-| realgud                    | github | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
-| rich-minority              | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
-| sotlisp                    | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
-| spinner                    | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
-| systemd                    | github | :subtree! | :merge   |                      | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
-| test-simple                | github | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
-| tiny                       | github | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
-| undo-tree                  | git    | :subtree! | :squash! | squash               | [[http://www.dr-qubit.org/emacs.php]]            |
-| vlf                        | github | :subtree! | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164299250][melpa#3383#164299250]] | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
-| wcheck-mode                | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68142129][#34#68142129]]         | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
-| web-server                 | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/pull/3394][melpa#3394]]           | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
-| websocket                  | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68123453][#34#68123453]]         | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
-| xelb                       | github | :external |          | external             | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
-| yasnippet                  | github | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
-| ztree                      | github | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
+| Package (59)               | Type     | Gelpa     | Method   | Reason               | Link                                         |
+|----------------------------+----------+-----------+----------+----------------------+----------------------------------------------|
+| ace-window                 | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
+| ack                        | github   | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
+| aggressive-indent          | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
+| ahungry-theme              | github   | :subtree! | :squash  |                      | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
+| async                      | github   | :subtree! | :squash  | squash               | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
+| avy                        | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
+| beacon                     | github   | :subtree! | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
+| bug-hunter                 | github   | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
+| cl-print                   | minority | :core     | :merge   |                      |                                              |
+| coffee-mode                | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67443674][#34#67443674]]         | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
+| company                    | github   | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
+| company-math               | github   | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
+| company-statistics         | github   | :subtree! | :squash  | squash               | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
+| dash                       | github   | :external |          | external             | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
+| dbus-codegen               | github   | :subtree  | :squash  | squash               | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
+| delight                    | git      | :subtree  | :merge   |                      | [[https://savannah.nongnu.org/projects/delight]] |
+| diff-hl                    | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                               |
+| diffview                   | github   | :subtree  | :merge   |                      | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
+| dts-mode                   | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164455502][#69#164455502]]        | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
+| easy-kill                  | github   | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164356304][melpa#3383#164356304]] | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
+| eldoc-eval                 | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
+| electric-spacing           | github   | :subtree! | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164462609][#69#164462609]]        | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
+| ergoemacs-mode             | github   | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164897071][melpa#3383#164897071]] | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
+| exwm                       | github   | :external |          | external             | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
+| ggtags                     | github   | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
+| gnorb                      | github   | :subtree  | :squash  | squash               | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
+| highlight-escape-sequences | github   | :subtree  | :merge   |                      | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
+| hydra                      | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
+| hyperbole                  | git      | :external |          |                      | [[http://www.gnu.org/software/hyperbole]]        |
+| ioccur                     | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
+| ivy                        | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
+| js2-mode                   | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
+| json-mode                  | github   | :subtree! | :merge   |                      | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
+| load-relative              | github   | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
+| loc-changes                | github   | :subtree! | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
+| loccur                     | github   | :subtree! | :squash! | squash               | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
+| math-symbol-lists          | github   | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                     |
+| nameless                   | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
+| names                      | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
+| on-screen                  | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164450677][#69#164450677]]        | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
+| org                        | git      | :core     |          |                      | [[http://orgmode.org]]                           |
+| pabbrev                    | github   | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164418230][melpa#3383#164418230]] | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
+| parsec                     | github   | :subtree  | :squash  |                      | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
+| psgml                      | github   | :external |          |                      | [[https://github.com/lenst/psgml][lenst/psgml]]                                  |
+| realgud                    | github   | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
+| rich-minority              | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
+| sotlisp                    | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
+| spinner                    | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
+| systemd                    | github   | :subtree! | :merge   |                      | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
+| test-simple                | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
+| tiny                       | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
+| undo-tree                  | git      | :subtree! | :squash! | squash               | [[http://www.dr-qubit.org/emacs.php]]            |
+| vlf                        | github   | :subtree! | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164299250][melpa#3383#164299250]] | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
+| wcheck-mode                | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68142129][#34#68142129]]         | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
+| web-server                 | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/pull/3394][melpa#3394]]           | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
+| websocket                  | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68123453][#34#68123453]]         | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
+| xelb                       | github   | :external |          | external             | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
+| yasnippet                  | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
+| ztree                      | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
 
 * Melpa
 ** New
@@ -478,9 +475,6 @@
 | ycmd                    | flycheck-ycmd                   | github    |
 
 ** Diverging repositories
-- *Revert?*
-  - lyrics was [[https://github.com/death/lyrics][death/lyrics]]
-  - scratch was [[https://github.com/ieure/scratch-el][ieure/scratch-el]]
 #+NAME: melpa-diverging-repositories
 #+BEGIN_SRC emacs-lisp
   (emir--with-org-header ("Package" "Mirror" "Melpa")

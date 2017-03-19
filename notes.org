@@ -71,6 +71,18 @@
 | yasnippet          | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         |
 | ztree              | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] |
 
+* Preferred builtins
+#+NAME: set--emir--preferred-builtins
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--preferred-builtins
+  (emir--save-variable 'emir--preferred-builtins value)
+#+END_SRC
+#+NAME: val--emir--preferred-builtins
+| Name       | Reason                         |
+|------------+--------------------------------|
+| cl-generic | Elpa has backport of builtin   |
+| cl-lib     | Elpa has backport of builtin   |
+| pinentry   | Elpa imports outdated upstream |
+
 * Diverging reason
 #+NAME: set--emir--diverging-reason
 #+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--diverging-reason
