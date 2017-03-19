@@ -173,14 +173,13 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (68)                    | Type        | Feature                | Reason                                              |
+| Package (67)                    | Type        | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending: [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                         |
 | auto-complete                   | github      | semantic-ia            | backward compatibility                              |
 | bbdb                            | git         | vm-autoloads           | generated external file                             |
-| bts                             | github      | tenv                   | tests only  [[https://github.com/aki2o/emacs-bts/issues/16][#16]]                                     |
 | cask-package-toolset            | github      | ${package-name}        | only for template file                              |
 | color-theme-sanityinc-solarized | github      | color-theme            | backward compatibility                              |
 | color-theme-sanityinc-tomorrow  | github      | color-theme            | backward compatibility                              |
