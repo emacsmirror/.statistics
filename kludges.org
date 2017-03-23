@@ -38,7 +38,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (89)         | Type     | Feature                        | Reason                                            |
+| Package (86)         | Type     | Feature                        | Reason                                            |
 |----------------------+----------+--------------------------------+---------------------------------------------------|
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | alchemist            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
@@ -116,7 +116,6 @@
 | mkhtml               | wiki     | htmlize                        | upstream considers it to be a drop-in replacement |
 | mupacs               | shelved  | lazy-lock                      | XEmacs compatibility                              |
 | nav                  | github   | ack                            | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                                      |
-| navi2ch              | github   | ert                            | pending ert [[https://github.com/naota/navi2ch/pull/39][#39]]                                   |
 | nxhtml               | orphaned | html-toc                       | TODO conflicting implementations                  |
 | oauth                | github   | hmac-sha1                      | pending [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                                        |
 | omni-log             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
@@ -135,7 +134,6 @@
 | projmake-mode        | github   | elisp-lint                     | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                                       |
 | psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                        |
 | racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| refine               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | riece                | git      | luna                           | TODO remove                                       |
 | riece                | git      | lunit                          | TODO remove                                       |
 | rinari               | github   | elunit                         | bundled is unsuitable for melpa                   |
@@ -158,7 +156,6 @@
 | wanderlust           | orphaned | rfc2368                        | TODO revisit                                      |
 | wanderlust           | orphaned | ssl                            | TODO revisit                                      |
 | wanderlust           | orphaned | utf7                           | TODO revisit                                      |
-| webpaste             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | window-purpose       | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | wordnut              | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/wordnut/pull/3][#3]]                                        |
 | wrap-region          | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
