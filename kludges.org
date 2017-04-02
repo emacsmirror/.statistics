@@ -38,7 +38,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (86)         | Type     | Feature                        | Reason                                            |
+| Package (85)         | Type     | Feature                        | Reason                                            |
 |----------------------+----------+--------------------------------+---------------------------------------------------|
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | alchemist            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
@@ -133,7 +133,6 @@
 | pony-mode            | github   | ert                            | pending ert [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                                   |
 | projmake-mode        | github   | elisp-lint                     | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                                       |
 | psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                        |
-| racer                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | riece                | git      | luna                           | TODO remove                                       |
 | riece                | git      | lunit                          | TODO remove                                       |
 | rinari               | github   | elunit                         | bundled is unsuitable for melpa                   |
@@ -170,7 +169,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (67)                    | Type        | Feature                | Reason                                              |
+| Package (68)                    | Type        | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                              |
@@ -245,6 +244,7 @@
 | org-readme                      | github      | org-html               | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
 | org-toodledo                    | github      | org-toodledo-test      | pending [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                          |
 | po-mode                         | minority    | po-compat              | backward compatibility                              |
+| pophint                         | github      | pophint-autoloads      | generated internal file                             |
 | project-explorer                | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
 | python-mode                     | gitlab      | pymacs                 | it's complicated (email)                            |
 | r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |

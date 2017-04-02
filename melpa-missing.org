@@ -29,7 +29,7 @@
            (emir--melpa-missing 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (616)                | Link                                      |
+| Package (628)                | Link                                      |
 |------------------------------+-------------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]                |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                              |
@@ -117,6 +117,7 @@
 | company-ess                  | [[https://github.com/Lompik/company-ess][Lompik/company-ess]]                        |
 | compile-bookmarks            | [[https://github.com/nschum/compile-bookmarks.el][nschum/compile-bookmarks.el]]               |
 | conspire                     | [[https://github.com/technomancy/conspire][technomancy/conspire]]                      |
+| constellations               | [[https://github.com/davep/constellations.el][davep/constellations.el]]                   |
 | coq                          | [[https://github.com/ProofGeneral/PG][ProofGeneral/PG]]                           |
 | cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                      |
 | crisp-mode                   | [[https://github.com/krisajenkins/crisp-mode][krisajenkins/crisp-mode]]                   |
@@ -237,12 +238,14 @@
 | frame-ctr                    | [[https://github.com/takaxp/frame-ctr][takaxp/frame-ctr]]                          |
 | framov                       | [[https://github.com/lieutar/framov.el][lieutar/framov.el]]                         |
 | fs-mode                      | [[https://github.com/suzp1984/fs-mode][suzp1984/fs-mode]]                          |
+| fscroll                      | [[https://github.com/davep/fscroll.el][davep/fscroll.el]]                          |
 | fsdired                      | [[https://github.com/jave/fsdired][jave/fsdired]]                              |
 | fullscreen-mode              | [[https://github.com/ryantm/fullscreen-mode][ryantm/fullscreen-mode]]                    |
 | fuzzy-find-in-project        | [[https://github.com/justinweiss/fuzzy-find-in-project][justinweiss/fuzzy-find-in-project]]         |
 | fuzzyjump                    | [[https://github.com/tomoya/fuzzyjump.el][tomoya/fuzzyjump.el]]                       |
 | ga                           | [[https://github.com/xwl/ga][xwl/ga]]                                    |
 | gaplay                       | [[https://github.com/te223/gaplay-el][te223/gaplay-el]]                           |
+| garble                       | [[https://github.com/davep/garble.el][davep/garble.el]]                           |
 | gdb-bp-session               | [[https://github.com/jglee1027/gdb-bp-session][jglee1027/gdb-bp-session]]                  |
 | generic-edit-special         | [[https://github.com/lewang/generic-edit-special][lewang/generic-edit-special]]               |
 | generic-range-opt            | [[https://github.com/tm8st/emacs-generic-range-opt][tm8st/emacs-generic-range-opt]]             |
@@ -309,6 +312,7 @@
 | ibuffer-perspective          | [[https://github.com/wstucker/ibuffer-perspective][wstucker/ibuffer-perspective]]              |
 | ical-event                   | [[https://github.com/jtatarik/ical-event][jtatarik/ical-event]]                       |
 | ical2org                     | [[https://github.com/cofi/ical2org][cofi/ical2org]]                             |
+| icmp-info                    | [[https://github.com/davep/icmp-info.el][davep/icmp-info.el]]                        |
 | ido-better-flex              | [[https://github.com/vic/ido-better-flex][vic/ido-better-flex]]                       |
 | ido-other-window             | [[https://github.com/timcharper/ido-other-window][timcharper/ido-other-window]]               |
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                           |
@@ -352,6 +356,7 @@
 | latex-wrap                   | [[https://github.com/abo-abo/latex-wrap][abo-abo/latex-wrap]]                        |
 | lazarus                      | [[https://github.com/ajvargo/Lazarus][ajvargo/Lazarus]]                           |
 | lazy-search                  | [[https://github.com/vapniks/lazy-search][vapniks/lazy-search]]                       |
+| lbdb                         | [[https://github.com/davep/lbdb.el][davep/lbdb.el]]                             |
 | less                         | [[https://github.com/xwl/less][xwl/less]]                                  |
 | less-mode                    | [[https://github.com/myfreeweb/less-mode][myfreeweb/less-mode]]                       |
 | let-recur                    | [[https://github.com/tali713/tail-call][tali713/tail-call]]                         |
@@ -395,6 +400,7 @@
 | multiple-line-edit           | [[https://github.com/k-talo/multiple-line-edit.el][k-talo/multiple-line-edit.el]]              |
 | muse-blog                    | [[https://github.com/jd/muse-blog.el][jd/muse-blog.el]]                           |
 | musicbrainz                  | [[https://github.com/larsmagne/musicbrainz.el][larsmagne/musicbrainz.el]]                  |
+| mutt-alias                   | [[https://github.com/davep/mutt-alias.el][davep/mutt-alias.el]]                       |
 | mv-shell                     | [[https://github.com/nflath/mv-shell][nflath/mv-shell]]                           |
 | mvc                          | [[https://github.com/wachikun/mvc][wachikun/mvc]]                              |
 | mysql                        | [[https://github.com/haxney/mysql][haxney/mysql]]                              |
@@ -404,6 +410,7 @@
 | ne2wm                        | [[https://github.com/tkf/ne2wm][tkf/ne2wm]]                                 |
 | networkmanager               | [[https://github.com/k-ten/networkmanager-el][k-ten/networkmanager-el]]                   |
 | ngircd                       | [[https://github.com/nicferrier/emacs-ngircd][nicferrier/emacs-ngircd]]                   |
+| ngn                          | [[https://github.com/davep/ngn.el][davep/ngn.el]]                              |
 | nimrod-mode                  | [[https://github.com/jameshfisher/nimrod-mode][jameshfisher/nimrod-mode]]                  |
 | nnir-spotlight               | [[https://github.com/renard/nnir-spotlight][renard/nnir-spotlight]]                     |
 | node-console                 | [[https://github.com/yuutayamada/node-console][yuutayamada/node-console]]                  |
@@ -412,6 +419,7 @@
 | noprefix                     | [[https://github.com/abo-abo/noprefix][abo-abo/noprefix]]                          |
 | notify                       | [[https://github.com/haxney/notify][haxney/notify]]                             |
 | nreplxmp                     | [[https://github.com/wakala/nreplxmp][wakala/nreplxmp]]                           |
+| nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                         |
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                         |
 | ob-clojurescript             | [[https://github.com/bloat/babel-clojurescript][bloat/babel-clojurescript]]                 |
 | ob-markdown                  | [[https://github.com/tnoda/ob-markdown][tnoda/ob-markdown]]                         |
@@ -550,6 +558,7 @@
 | smart-quotes                 | [[https://github.com/gareth-rees/smart-quotes][gareth-rees/smart-quotes]]                  |
 | smart-todo                   | [[https://github.com/gyordanov/smart-todo.el][gyordanov/smart-todo.el]]                   |
 | smartchr                     | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                    |
+| smartsig                     | [[https://github.com/davep/smartsig.el][davep/smartsig.el]]                         |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                     |
 | sofa                         | [[https://github.com/cinsk/emacs-sofa][cinsk/emacs-sofa]]                          |
 | songbook                     | [[https://github.com/crep4ever/songbook-emacs-mode][crep4ever/songbook-emacs-mode]]             |
@@ -588,6 +597,7 @@
 | theme-park-mode              | [[https://github.com/darrik/theme-park-mode][darrik/theme-park-mode]]                    |
 | thrift-mode                  | [[https://github.com/davidmiller/thrift-mode][davidmiller/thrift-mode]]                   |
 | tipshare                     | [[https://github.com/k1LoW/emacs-tipshare][k1LoW/emacs-tipshare]]                      |
+| tld                          | [[https://github.com/davep/tld.el][davep/tld.el]]                              |
 | tlh-util                     | [[https://github.com/tlh/tlh-util.el][tlh/tlh-util.el]]                           |
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                          |
 | todostack                    | [[https://github.com/EvansWinner/todostack.el][EvansWinner/todostack.el]]                  |
@@ -606,6 +616,7 @@
 | twittering-dframe            | [[https://github.com/k-ten/twittering-dframe][k-ten/twittering-dframe]]                   |
 | tx-mode                      | [[https://github.com/yoshiki/tx-mode][yoshiki/tx-mode]]                           |
 | ultratex                     | [[https://github.com/jhpalmieri/ultratex][jhpalmieri/ultratex]]                       |
+| unbind                       | [[https://github.com/davep/unbind.el][davep/unbind.el]]                           |
 | uncrustify                   | [[https://github.com/glima/Emacs-uncrustify][glima/Emacs-uncrustify]]                    |
 | unique-window-buffers        | [[https://github.com/lewang/unique-window-buffers][lewang/unique-window-buffers]]              |
 | utf8islove                   | [[https://github.com/robsimmons/utf8islove][robsimmons/utf8islove]]                     |
@@ -619,6 +630,7 @@
 | warp                         | [[https://github.com/yukihr/Warp][yukihr/Warp]]                               |
 | weak-ref                     | [[https://github.com/skeeto/elisp-weak-ref][skeeto/elisp-weak-ref]]                     |
 | weather                      | [[https://github.com/mad/weather.el][mad/weather.el]]                            |
+| webinfo                      | [[https://github.com/davep/webinfo.el][davep/webinfo.el]]                          |
 | whole-line-funcs             | [[https://github.com/lewang/le_emacs_whole_line_funcs][lewang/le_emacs_whole_line_funcs]]          |
 | wikidoc                      | [[https://github.com/nicferrier/elwikidoc][nicferrier/elwikidoc]]                      |
 | wikidot-mode                 | [[https://github.com/infochimps-customers/wikidot-mode][infochimps-customers/wikidot-mode]]         |
