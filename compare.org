@@ -99,7 +99,7 @@
 | elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3733 |   3733 |       |       |       |  3278 |
+| github       | 3733 |   3733 |       |       |       |  3300 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   56 |     56 |       |       |       |    44 |
 | subtree      |   23 |     23 |       |       |       |       |
@@ -113,14 +113,14 @@
 | fossil       |      |        |       |       |       |     0 |
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
-| wiki         |  759 |    759 |       |       |       |   178 |
+| wiki         |  742 |    742 |       |       |       |   161 |
 | file         |  287 |    287 |       |       |       |       |
 | minority     |   26 |     26 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| orphaned     |   43 |     43 |       |       |       |       |
+| orphaned     |   60 |     60 |       |       |       |       |
 | shelved      |  969 |        |   969 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6488 |   5096 |   969 |   426 |   155 |  3581 |
+| total        | 6488 |   5096 |   969 |   426 |   155 |  3586 |
 
 * Emacs
 ** New
@@ -363,7 +363,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (72)    | Secondary package               | Type      |
+| Primary package (73)    | Secondary package               | Type      |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -458,6 +458,11 @@
 | restclient              | restclient-helm                 | github    |
 | rinari                  | ruby-compilation                | github    |
 | ripgrep                 | projectile-ripgrep              | github    |
+| rtags                   | ac-rtags                        | github    |
+| rtags                   | company-rtags                   | github    |
+| rtags                   | flycheck-rtags                  | github    |
+| rtags                   | helm-rtags                      | github    |
+| rtags                   | ivy-rtags                       | github    |
 | sift                    | projectile-sift                 | github    |
 | smart-mode-line         | smart-mode-line-powerline-theme | github    |
 | sourcekit               | company-sourcekit               | github    |
