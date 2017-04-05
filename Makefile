@@ -21,6 +21,7 @@ SYNC += --exclude "index.html"
 
 HTML   = compare.html
 HTML  += emacsorphanage.html
+HTML  += emacswiki.html
 HTML  += kludges.html
 HTML  += issues.html
 HTML  += melpa-missing.html
