@@ -38,7 +38,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (85)         | Type     | Feature                        | Reason                                            |
+| Package (79)         | Type     | Feature                        | Reason                                            |
 |----------------------+----------+--------------------------------+---------------------------------------------------|
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | alchemist            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
@@ -77,7 +77,6 @@
 | dumb-jump            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | ecukes               | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
 | elim                 | shelved  | notify                         | shelved conflicting with mirrored implementation  |
-| elisp-refs           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | elixir-mode          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | emacspeak            | github   | amixer                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
 | emacspeak            | github   | nm                             | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
@@ -118,10 +117,6 @@
 | nav                  | github   | ack                            | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                                      |
 | nxhtml               | orphaned | html-toc                       | TODO conflicting implementations                  |
 | oauth                | github   | hmac-sha1                      | pending [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                                        |
-| omni-log             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| omni-quotes          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| omni-scratch         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| omni-tags            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | opensource           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | org                  | git      | htmlize                        | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]                                 |
 | org                  | git      | ob-scala                       | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]                      |
@@ -142,7 +137,6 @@
 | slime                | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                                    |
 | sly                  | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][#92]]                                       |
 | suggest              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| tox                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | travis               | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | tuareg               | github   | caml                           | upstream considers it to be a drop-in replacement |
 | twittering-mode      | github   | ssl                            | backward compatibility                            |
@@ -169,7 +163,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (68)                    | Type        | Feature                | Reason                                              |
+| Package (67)                    | Type        | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                              |
@@ -244,7 +238,6 @@
 | org-readme                      | github      | org-html               | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
 | org-toodledo                    | github      | org-toodledo-test      | pending [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                          |
 | po-mode                         | minority    | po-compat              | backward compatibility                              |
-| pophint                         | github      | pophint-autoloads      | generated internal file                             |
 | project-explorer                | github      | ack-and-a-half         | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
 | python-mode                     | gitlab      | pymacs                 | it's complicated (email)                            |
 | r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
