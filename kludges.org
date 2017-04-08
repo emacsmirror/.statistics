@@ -38,10 +38,9 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (79)         | Type     | Feature                        | Reason                                            |
+| Package (78)         | Type     | Feature                        | Reason                                            |
 |----------------------+----------+--------------------------------+---------------------------------------------------|
 | ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| alchemist            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | amd-mode             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | ample-regexps        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
 | anything-project     | github   | anything                       | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |

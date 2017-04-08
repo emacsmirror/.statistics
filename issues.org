@@ -29,6 +29,12 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (2)     | Package      | Shelved |
+|-----------------+--------------+---------|
+| assess-discover | assess       |         |
+| assess-discover | m-buffer     |         |
+| test-helper     | haxe-imports |         |
+| test-helper     | timonier     |         |
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -55,4 +61,7 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
+| Package (1)   | Type   | Feature       | Shelved |
+|---------------+--------+---------------+---------|
+| helm-git-grep | github | helm-elscreen |         |
 
