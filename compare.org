@@ -115,9 +115,9 @@
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  739 |    739 |       |       |       |   158 |
 | file         |  287 |    287 |       |       |       |       |
-| minority     |   26 |     26 |       |       |       |       |
+| minority     |   27 |     27 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| orphaned     |   60 |     60 |       |       |       |       |
+| orphaned     |   59 |     59 |       |       |       |       |
 | shelved      |  969 |        |   969 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | total        | 6489 |   5097 |   969 |   426 |   155 |  3587 |
@@ -535,7 +535,7 @@
 | color-theme           | orphaned | bzr       | bzr                           |
 | confluence            | orphaned | svn       | svn                           |
 | cython-mode           | minority | github    | mostly non-elisp              |
-| darcsum               | orphaned | darcs     | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                 |
+| darcsum               | minority | darcs     | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                 |
 | debian-bug            | minority | cvs       | mostly non-elisp              |
 | debian-changelog-mode | minority | cvs       | mostly non-elisp              |
 | dic-lookup-w3m        | orphaned | svn       | svn                           |
