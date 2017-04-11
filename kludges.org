@@ -38,109 +38,108 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (69)         | Type     | Feature                        | Reason                                            |
-|----------------------+----------+--------------------------------+---------------------------------------------------|
-| ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| amd-mode             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| ample-regexps        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| anything-project     | github   | anything                       | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |
-| anything-project     | github   | anything-match-plugin          | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                                        |
-| cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                                        |
-| cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                                        |
-| cask                 | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
-| cask-package-toolset | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| codex                | github   | ert                            | pending ert [[https://github.com/sigma/codex/pull/1][#1]]                                    |
-| commander            | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
-| coq                  | github   | maths-menu                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-auto                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-class                      | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-cmds                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-compat                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-cweb                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-mason                      | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-mode                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-region                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-rpm                        | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-sample                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-univ                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-utils                      | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | mmm-vars                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| coq                  | github   | texi-docstring-magic           | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                                      |
-| ddskk                | github   | install                        | TODO revisit                                      |
-| ddskk                | github   | ptexinfmt                      | TODO revisit                                      |
-| ddskk                | github   | vip                            | TODO revisit                                      |
-| diffscuss-mode       | subtree  | test-simple                    | pending [[https://github.com/tomheon/diffscuss/pull/42][#42]]                                       |
-| drag-stuff           | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
-| dumb-jump            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| ecukes               | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
-| elim                 | shelved  | notify                         | shelved conflicting with mirrored implementation  |
-| elixir-mode          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| emacspeak            | github   | amixer                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
-| emacspeak            | github   | nm                             | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
-| emacspeak            | github   | tetris                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                                       |
-| emr                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| epl                  | github   | dummy-package                  | fake package used for testing                     |
-| espuds               | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
-| eyuml                | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]                            |
-| fireplace            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| floobits             | github   | highlight                      | pending [[https://github.com/Floobits/floobits-emacs/pull/86][#86]]                                       |
-| flycheck             | github   | checkdoc-elisp-mode-regression | fake package used for testing                     |
-| flycheck             | github   | dummy-package                  | fake package used for testing                     |
-| flycheck             | github   | dummy-package-autoloads        | fake package used for testing                     |
-| flycheck             | github   | errors-and-warnings            | fake package used for testing                     |
-| flycheck             | github   | warnings                       | fake package used for testing                     |
-| git                  | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
-| go                   | github   | gnugo                          | upstream reverted my fix again [[https://github.com/eschulte/el-go/commit/ff45fb44d9cb6579d8511d8b6156ed0b34d5ac97#commitcomment-19895084][ff45fb44]]           |
-| google-this          | github   | noflet                         | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                                       |
-| helm-backup          | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][#22]]                                       |
-| helm-company         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| historyf             | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                                        |
-| ilisp                | shelved  | bridge                         | shelved bundling also bundled with mirrored       |
-| jump                 | github   | elunit                         | bundled is unsuitable for melpa                   |
-| karma                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| lookup               | github   | stem-english                   | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                                       |
-| loop                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| m-buffer             | github   | assess-discover                | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                                        |
-| markup               | github   | ert                            | pending ert [[https://github.com/leoc/markup.el/pull/2][#2]]                                    |
-| mic-paren            | file     | paren                          | upstream considers it to be a drop-in replacement |
-| mkhtml               | wiki     | htmlize                        | upstream considers it to be a drop-in replacement |
-| mupacs               | shelved  | lazy-lock                      | XEmacs compatibility                              |
-| nav                  | github   | ack                            | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                                      |
-| nxhtml               | orphaned | html-toc                       | TODO conflicting implementations                  |
-| oauth                | github   | hmac-sha1                      | pending [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                                        |
-| opensource           | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| org                  | git      | htmlize                        | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]                                 |
-| org                  | git      | ob-scala                       | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]                      |
-| org-sync             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| overseer             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| palette              | wiki     | eyedropper                     | upstream considers it to be a drop-in replacement |
-| paradox              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| ph                   | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                                        |
-| pony-mode            | github   | ert                            | pending ert [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                                   |
-| projmake-mode        | github   | elisp-lint                     | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                                       |
-| psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                                        |
-| riece                | git      | luna                           | TODO remove                                       |
-| riece                | git      | lunit                          | TODO remove                                       |
-| rinari               | github   | elunit                         | bundled is unsuitable for melpa                   |
-| ruby-end             | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
-| simple-server        | shelved  | httpd                          | shelved conflicting with mirrored implementation  |
-| slime                | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                                    |
-| sly                  | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][#92]]                                       |
-| suggest              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| tuareg               | github   | caml                           | upstream considers it to be a drop-in replacement |
-| twittering-mode      | github   | ssl                            | backward compatibility                            |
-| twittering-mode      | github   | test                           | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]                                      |
-| vm                   | orphaned | org-vm                         | TODO revisit                                      |
-| vm                   | orphaned | tapestry                       | TODO revisit                                      |
-| vm                   | orphaned | vcard                          | TODO revisit                                      |
-| wanderlust           | orphaned | bbdb-wl                        | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                      |
-| wanderlust           | orphaned | ptexinfmt                      | TODO revisit                                      |
-| wanderlust           | orphaned | rfc2368                        | TODO revisit                                      |
-| wanderlust           | orphaned | ssl                            | TODO revisit                                      |
-| wanderlust           | orphaned | utf7                           | TODO revisit                                      |
-| window-purpose       | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]                          |
-| wordnut              | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/wordnut/pull/3][#3]]                                        |
-| wrap-region          | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]                            |
+| Package (68)         | Type     | Feature                        | Reason                          |
+|----------------------+----------+--------------------------------+---------------------------------|
+| ag                   | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| amd-mode             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| ample-regexps        | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| anything-project     | github   | anything                       | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
+| anything-project     | github   | anything-match-plugin          | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
+| cake-inflector       | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                      |
+| cake2                | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                      |
+| cask                 | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]          |
+| cask-package-toolset | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| codex                | github   | ert                            | pending [[https://github.com/sigma/codex/pull/1][#1]] (ert)                |
+| commander            | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]          |
+| coq                  | github   | maths-menu                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-auto                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-class                      | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-cmds                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-compat                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-cweb                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-mason                      | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-mode                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-region                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-rpm                        | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-sample                     | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-univ                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-utils                      | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | mmm-vars                       | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| coq                  | github   | texi-docstring-magic           | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                    |
+| ddskk                | github   | install                        | TODO revisit                    |
+| ddskk                | github   | ptexinfmt                      | TODO revisit                    |
+| ddskk                | github   | vip                            | TODO revisit                    |
+| diffscuss-mode       | subtree  | test-simple                    | pending [[https://github.com/tomheon/diffscuss/pull/42][#42]]                     |
+| drag-stuff           | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]          |
+| dumb-jump            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| ecukes               | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]          |
+| elim                 | shelved  | notify                         | conflicting with mirrored       |
+| elixir-mode          | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| emacspeak            | github   | amixer                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                     |
+| emacspeak            | github   | nm                             | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                     |
+| emacspeak            | github   | tetris                         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                     |
+| emr                  | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| epl                  | github   | dummy-package                  | fake package used for testing   |
+| espuds               | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]          |
+| eyuml                | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]          |
+| fireplace            | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| floobits             | github   | highlight                      | pending [[https://github.com/Floobits/floobits-emacs/pull/86][#86]]                     |
+| flycheck             | github   | checkdoc-elisp-mode-regression | fake package used for testing   |
+| flycheck             | github   | dummy-package                  | fake package used for testing   |
+| flycheck             | github   | dummy-package-autoloads        | fake package used for testing   |
+| flycheck             | github   | errors-and-warnings            | fake package used for testing   |
+| flycheck             | github   | warnings                       | fake package used for testing   |
+| git                  | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]          |
+| go                   | github   | gnugo                          | rejected [[https://github.com/eschulte/el-go/pull/3][#3]]                     |
+| google-this          | github   | noflet                         | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                     |
+| helm-backup          | github   | env                            | pending [[https://github.com/antham/helm-backup/issues/22][#22]]                     |
+| helm-company         | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| historyf             | github   | el-expectations                | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                      |
+| ilisp                | shelved  | bridge                         | also bundled with mirrored      |
+| jump                 | github   | elunit                         | bundled is unsuitable for melpa |
+| karma                | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| lookup               | github   | stem-english                   | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                     |
+| loop                 | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| m-buffer             | github   | assess-discover                | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                      |
+| markup               | github   | ert                            | pending [[https://github.com/leoc/markup.el/pull/2][#2]] (ert)                |
+| mic-paren            | file     | paren                          | considered drop-in replacement  |
+| mkhtml               | wiki     | htmlize                        | considered drop-in replacement  |
+| mupacs               | shelved  | lazy-lock                      | XEmacs compatibility            |
+| nav                  | github   | ack                            | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                    |
+| nxhtml               | orphaned | html-toc                       | TODO conflicting implementation |
+| oauth                | github   | hmac-sha1                      | pending [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                      |
+| org                  | git      | htmlize                        | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]               |
+| org                  | git      | ob-scala                       | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]    |
+| org-sync             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| overseer             | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| palette              | wiki     | eyedropper                     | considered drop-in replacement  |
+| paradox              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| ph                   | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                      |
+| pony-mode            | github   | ert                            | pending [[https://github.com/davidmiller/pony-mode/pull/99][#99]] (ert)               |
+| projmake-mode        | github   | elisp-lint                     | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                     |
+| psgml                | github   | sgml-mode                      | pending [[https://github.com/lenst/psgml/issues/1][#1]]                      |
+| riece                | git      | luna                           | TODO remove                     |
+| riece                | git      | lunit                          | TODO remove                     |
+| rinari               | github   | elunit                         | bundled is unsuitable for melpa |
+| ruby-end             | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][wrap-region#31]]          |
+| simple-server        | shelved  | httpd                          | conflicting with mirrored       |
+| slime                | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                  |
+| sly                  | github   | cl-indent                      | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                  |
+| suggest              | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| tuareg               | github   | caml                           | considered drop-in replacement  |
+| twittering-mode      | github   | ssl                            | backward compatibility          |
+| twittering-mode      | github   | test                           | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]                    |
+| vm                   | orphaned | org-vm                         | TODO revisit                    |
+| vm                   | orphaned | tapestry                       | TODO revisit                    |
+| vm                   | orphaned | vcard                          | TODO revisit                    |
+| wanderlust           | orphaned | bbdb-wl                        | backward compatibility [[https://github.com/wanderlust/wanderlust/issues/139][#139]]     |
+| wanderlust           | orphaned | ptexinfmt                      | TODO revisit                    |
+| wanderlust           | orphaned | rfc2368                        | TODO revisit                    |
+| wanderlust           | orphaned | ssl                            | TODO revisit                    |
+| wanderlust           | orphaned | utf7                           | TODO revisit                    |
+| window-purpose       | github   | test-helper                    | pending [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner.el#38]]        |
+| wordnut              | github   | tdd-helper                     | pending [[https://github.com/gromnitsky/wordnut/pull/3][#3]]                      |
+| wrap-region          | github   | ert                            | pending [[https://github.com/rejeep/wrap-region.el/pull/31][#31]]                     |
 
 * Drop required features
 #+NAME: required-drop
