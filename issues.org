@@ -38,21 +38,21 @@
     (-mapcat
      (-lambda ((name class))
        (let (alist)
-         (-each (epkg-sql [:select feature :from required
+	 (-each (epkg-sql [:select feature :from required
                            :where (and (= package $s1)
                                        (isnull drop))]
                           name)
            (-lambda ((feature))
              (-if-let (provider (epkg-provided-by feature))
-                 (when (epkg-sql [:select class :from packages
+		 (when (epkg-sql [:select class :from packages
                                   :where (and (= name $s1)
                                               (= class 'shelved))]
-                                 name)
+				 provider)
                    (push (list feature provider) alist))
                (push (list feature nil) alist))))
-         (mapcar (-lambda ((feature provider))
+	 (mapcar (-lambda ((feature provider))
                    (list name class feature (or provider "")))
-                 (cl-sort alist #'string< :key #'car))))
+		 (cl-sort alist #'string< :key #'car))))
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied

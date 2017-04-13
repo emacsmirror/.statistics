@@ -14,19 +14,20 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (5) | Type    | Feature        | Reason                                    |
-|-------------+---------+----------------+-------------------------------------------|
-| emacs       | builtin | cus-load       | generated                                 |
-| emacs       | builtin | leim-list      | generated                                 |
-| eshell      | builtin | esh-groups     | generated                                 |
-| finder      | builtin | finder-inf     | generated                                 |
-| realgud     | github  | bashdb         | inside directory containing .nosearch     |
-| sly         | github  | sly-buttons    | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
-| sly         | github  | sly-common     | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
-| sly         | github  | sly-completion | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
-| sly         | github  | sly-messages   | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
-| sly         | github  | sly-parse      | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
-| sly         | github  | sly-tests      | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| Package (6) | Type     | Feature        | Reason                                    |
+|-------------+----------+----------------+-------------------------------------------|
+| edb         | orphaned | edbcore        | generated                                 |
+| emacs       | builtin  | cus-load       | generated                                 |
+| emacs       | builtin  | leim-list      | generated                                 |
+| eshell      | builtin  | esh-groups     | generated                                 |
+| finder      | builtin  | finder-inf     | generated                                 |
+| realgud     | github   | bashdb         | inside directory containing .nosearch     |
+| sly         | github   | sly-buttons    | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly         | github   | sly-common     | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly         | github   | sly-completion | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly         | github   | sly-messages   | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly         | github   | sly-parse      | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
+| sly         | github   | sly-tests      | inside directory containing .nosearch [[https://github.com/capitaomorte/sly/pull/85][#85]] |
 
 * Drop provided features
 #+NAME: provided-drop
@@ -38,10 +39,9 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (60)     | Type     | Feature               | Reason                          |
+| Package (55)     | Type     | Feature               | Reason                          |
 |------------------+----------+-----------------------+---------------------------------|
 | amd-mode         | github   | test-helper           | pending [[https://github.com/NicolasPetton/amd-mode.el/pull/11][#11]]                     |
-| ample-regexps    | github   | test-helper           | pending [[https://github.com/immerrr/ample-regexps.el/pull/6][#6]]                      |
 | anything-project | github   | anything              | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | anything-project | github   | anything-match-plugin | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | cake-inflector   | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                      |
@@ -69,7 +69,6 @@
 | ddskk            | github   | vip                   | TODO revisit                    |
 | diffscuss-mode   | subtree  | test-simple           | pending [[https://github.com/tomheon/diffscuss/pull/42][#42]]                     |
 | drag-stuff       | github   | ert                   | pending [[https://github.com/rejeep/drag-stuff.el/pull/24][#24]]                     |
-| dumb-jump        | github   | test-helper           | pending [[https://github.com/jacktasia/dumb-jump/pull/126][#126]]                    |
 | ecukes           | github   | ert                   | pending [[https://github.com/ecukes/espuds/pull/43][#43]]                     |
 | elim             | shelved  | notify                | conflicting with mirrored       |
 | elixir-mode      | github   | test-helper           | pending [[https://github.com/elixir-lang/emacs-elixir/issues/395][#395]]                    |
@@ -78,13 +77,12 @@
 | emacspeak        | github   | tetris                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                     |
 | epl              | github   | dummy-package         | pending [[https://github.com/cask/epl/pull/34][#34]]                     |
 | espuds           | github   | ert                   | pending [[https://github.com/ecukes/ecukes/pull/162][#162]]                    |
-| eyuml            | github   | env                   | pending [[https://github.com/antham/helm-backup/issues/22][helm-backup#22]]          |
-| floobits         | github   | highlight             | pending [[https://github.com/Floobits/floobits-emacs/pull/86][#86]]                     |
+| eyuml            | github   | env                   | pending [[https://github.com/antham/eyuml/pull/2][#2]]                      |
+| floobits         | github   | highlight             | pending [[https://github.com/Floobits/floobits-emacs/pull/94][#94]]                     |
 | git              | github   | ert                   | pending [[https://github.com/rejeep/git.el/pull/6][#6]]                      |
 | go               | github   | gnugo                 | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                      |
 | google-this      | github   | noflet                | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                     |
-| helm-backup      | github   | env                   | pending [[https://github.com/antham/helm-backup/issues/22][#22]]                     |
-| helm-company     | github   | test-helper           | pending [[https://github.com/manuel-uberti/helm-company/pull/11][#11]]                     |
+| helm-backup      | github   | env                   | pending [[https://github.com/antham/helm-backup/pull/23][#23]]                     |
 | historyf         | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                      |
 | ilisp            | shelved  | bridge                | also bundled with mirrored      |
 | jump             | github   | elunit                | bundled is unsuitable for melpa |
@@ -103,7 +101,6 @@
 | org-sync         | github   | test-helper           | pending [[https://github.com/arbox/org-sync/pull/27][#27]]                     |
 | overseer         | github   | test-helper           | pending [[https://github.com/tonini/overseer.el/pull/12][#12]]                     |
 | palette          | wiki     | eyedropper            | considered drop-in replacement  |
-| ph               | github   | tdd-helper            | pending [[https://github.com/gromnitsky/ph/pull/6][#6]]                      |
 | pony-mode        | github   | ert                   | pending [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                     |
 | projmake-mode    | github   | elisp-lint            | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                     |
 | psgml            | github   | sgml-mode             | pending [[https://github.com/lenst/psgml/issues/1][#1]]                      |
@@ -126,7 +123,6 @@
 | wanderlust       | orphaned | ssl                   | TODO revisit                    |
 | wanderlust       | orphaned | utf7                  | TODO revisit                    |
 | window-purpose   | github   | test-helper           | pending [[https://github.com/bmag/emacs-purpose/pull/104][#104]]                    |
-| wordnut          | github   | tdd-helper            | pending [[https://github.com/gromnitsky/wordnut/pull/3][#3]]                      |
 | wrap-region      | github   | ert                   | pending [[https://github.com/rejeep/wrap-region.el/pull/31][#31]]                     |
 
 * Drop required features
@@ -139,7 +135,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (66)                    | Type        | Feature                | Reason                                              |
+| Package (64)                    | Type        | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                              |
@@ -217,8 +213,6 @@
 | python-mode                     | gitlab      | pymacs                 | it's complicated (email)                            |
 | r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
 | rpm-spec-mode                   | github      | shindent               | pending: [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                        |
-| slime                           | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                     |
-| sly                             | github      | hyperspec              | pending: [[https://github.com/capitaomorte/sly/issues/86][sly#86]]                                     |
 | tangotango-theme                | github      | color-theme            | backward compatibility                              |
 | tc                              | github      | bitmap                 | pending: [[https://github.com/kozo2/tc/issues/5][#5]]                                         |
 | twittering-mode                 | github      | alpaca                 | only required if epa isn't available                |
@@ -259,13 +253,14 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (19)         | Type        | Library                 | Reason                     |
+| Package (20)         | Type        | Library                 | Reason                     |
 |----------------------+-------------+-------------------------+----------------------------|
 | ada-ref-man          | elpa        | ada-ref-man.el          | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
 | auctex               | elpa-branch | tex.el                  | pkg/lib name mismatch      |
 | chumpy-windows       | github      | window-jump.el          | no primary entry point     |
 | ddskk                | github      | skk.el                  | pkg/lib name mismatch      |
 | dired-hacks          | github      | dired-hacks-utils.el    | no primary entry point     |
+| edb                  | orphaned    | lisp/database.el        |                            |
 | emacs-speaks-nonmem  | github      | esn-start.el            | no/mismatched main library |
 | emux                 | github      | emux-base.el            | no/mismatched main library |
 | ert-runner           | github      | ert-runner.el           | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
