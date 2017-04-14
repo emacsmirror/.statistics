@@ -99,10 +99,10 @@
 | elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    6 |      6 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3741 |   3741 |       |       |       |  3311 |
+| github       | 3745 |   3745 |       |       |       |  3316 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   56 |     56 |       |       |       |    44 |
-| subtree      |   23 |     23 |       |       |       |       |
+| subtree      |   22 |     22 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | bitbucket    |   44 |     44 |       |       |       |    38 |
 | hg           |    1 |      1 |       |       |       |     1 |
@@ -113,14 +113,14 @@
 | fossil       |      |        |       |       |       |     0 |
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
-| wiki         |  739 |    739 |       |       |       |   158 |
-| file         |  287 |    287 |       |       |       |       |
-| minority     |   27 |     27 |       |       |       |       |
+| wiki         |  738 |    738 |       |       |       |   158 |
+| file         |  286 |    286 |       |       |       |       |
+| minority     |   28 |     28 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| orphaned     |   61 |     61 |       |       |       |       |
+| orphaned     |   62 |     62 |       |       |       |       |
 | shelved      |  970 |        |   970 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6496 |   5103 |   970 |   426 |   155 |  3594 |
+| total        | 6499 |   5106 |   970 |   426 |   155 |  3599 |
 
 * Emacs
 ** New
@@ -525,7 +525,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (29)          | Type     | Melpa     | Reason                        |
+| Package (30)          | Type     | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
@@ -540,6 +540,7 @@
 | debian-bug            | minority | cvs       | mostly non-elisp              |
 | debian-changelog-mode | minority | cvs       | mostly non-elisp              |
 | dic-lookup-w3m        | orphaned | svn       | svn                           |
+| diffscuss-mode        | minority | github    | mostly non-elisp              |
 | dsvn                  | minority | svn       | svn                           |
 | google-c-style        | minority | github    | mostly non-elisp              |
 | helm-ls-svn           | orphaned | svn       | svn                           |
