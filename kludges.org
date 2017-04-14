@@ -39,7 +39,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (46)     | Type     | Feature               | Reason                         |
+| Package (44)     | Type     | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
 | amd-mode         | github   | test-helper           | pending [[https://github.com/NicolasPetton/amd-mode.el/pull/11][#11]]                    |
 | anything-project | github   | anything              | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                     |
@@ -81,7 +81,6 @@
 | go               | github   | gnugo                 | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                     |
 | google-this      | github   | noflet                | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                    |
 | historyf         | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                     |
-| jump             | github   | elunit                | pending [[https://github.com/eschulte/jump.el/pull/12][#12]]                    |
 | karma            | github   | test-helper           | pending [[https://github.com/tonini/karma.el/pull/7][#7]]                     |
 | lookup           | github   | stem-english          | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                    |
 | m-buffer         | github   | assess-discover       | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                     |
@@ -100,7 +99,6 @@
 | psgml            | github   | sgml-mode             | pending [[https://github.com/lenst/psgml/issues/1][#1]]                     |
 | riece            | git      | luna                  | later                          |
 | riece            | git      | lunit                 | later                          |
-| rinari           | github   | elunit                | pending [[https://github.com/eschulte/rinari/pull/92][#92]]                    |
 | ruby-end         | github   | ert                   | pending [[https://github.com/rejeep/ruby-end.el/pull/16][#16]]                    |
 | slime            | github   | cl-indent             | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                 |
 | sly              | github   | cl-indent             | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                 |

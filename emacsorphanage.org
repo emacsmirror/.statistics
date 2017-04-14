@@ -18,7 +18,7 @@
 		    #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package (64)     | Mirror   | Melpa    | Reason                      |
+| Package (63)     | Mirror   | Melpa    | Reason                      |
 |------------------+----------+----------+-----------------------------|
 | apel             | orphaned | github   | 6. many feature conflicts   |
 | caml             | orphaned | svn      | 5. svn not supported        |
@@ -35,7 +35,6 @@
 | edb              | orphaned |          |                             |
 | elisp-depend     | orphaned | orphaned | 3. upstream unresponsive    |
 | elo              |          |          | 4. dropped of by maintainer |
-| elunit           | orphaned | orphaned |                             |
 | ert-expectations | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | eshell-manual    | orphaned |          | 3. upstream unresponsive    |
 | filladapt        | orphaned |          | 3. upstream unresponsive    |

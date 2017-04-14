@@ -55,10 +55,8 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2)   | Type   | Feature       | Shelved |
+| Package (1)   | Type   | Feature       | Shelved |
 |---------------+--------+---------------+---------|
 | helm-git-grep | github | helm-elscreen |         |
-| widgetjs      | github | jade          |         |
 
 - helm-git-grep [[https://github.com/yasuyk/helm-git-grep/issues/34][#34]]
-- widgetjs [[https://github.com/foretagsplatsen/emacs-js/issues/8][#8]]
