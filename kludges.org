@@ -39,7 +39,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (44)     | Type     | Feature               | Reason                         |
+| Package (40)     | Type     | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
 | amd-mode         | github   | test-helper           | pending [[https://github.com/NicolasPetton/amd-mode.el/pull/11][#11]]                    |
 | anything-project | github   | anything              | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                     |
@@ -47,7 +47,6 @@
 | cake-inflector   | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                     |
 | cake2            | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                     |
 | cask             | github   | ert                   | pending [[https://github.com/cask/cask/pull/386][#386]]                   |
-| codex            | github   | ert                   | pending [[https://github.com/sigma/codex/pull/1][#1]]                     |
 | commander        | github   | ert                   | pending [[https://github.com/rejeep/commander.el/pull/10][#10]]                    |
 | coq              | github   | maths-menu            | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
 | coq              | github   | mmm-auto              | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
@@ -68,15 +67,12 @@
 | ddskk            | github   | ptexinfmt             | later                          |
 | ddskk            | github   | vip                   | later                          |
 | drag-stuff       | github   | ert                   | pending [[https://github.com/rejeep/drag-stuff.el/pull/24][#24]]                    |
-| ecukes           | github   | ert                   | pending [[https://github.com/ecukes/espuds/pull/43][#43]]                    |
 | elixir-mode      | github   | test-helper           | pending [[https://github.com/elixir-lang/emacs-elixir/issues/395][#395]]                   |
 | emacspeak        | github   | amixer                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
 | emacspeak        | github   | nm                    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
 | emacspeak        | github   | tapestry              | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
 | emacspeak        | github   | tetris                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
 | epl              | github   | dummy-package         | pending [[https://github.com/cask/epl/pull/34][#34]]                    |
-| espuds           | github   | ert                   | pending [[https://github.com/ecukes/ecukes/pull/162][#162]]                   |
-| floobits         | github   | highlight             | pending [[https://github.com/Floobits/floobits-emacs/pull/94][#94]]                    |
 | git              | github   | ert                   | pending [[https://github.com/rejeep/git.el/pull/6][#6]]                     |
 | go               | github   | gnugo                 | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                     |
 | google-this      | github   | noflet                | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                    |
