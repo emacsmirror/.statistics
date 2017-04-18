@@ -39,29 +39,16 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (41)     | Type     | Feature               | Reason                         |
+| Package (38)     | Type     | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
 | amd-mode         | github   | test-helper           | pending [[https://github.com/NicolasPetton/amd-mode.el/pull/11][#11]]                    |
 | anything-project | github   | anything              | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                     |
 | anything-project | github   | anything-match-plugin | pending [[https://github.com/imakado/anything-project/pull/3][#3]]                     |
-| cake-inflector   | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/2][#2]]                     |
-| cake2            | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-cake2/pull/4][#4]]                     |
+| cake-inflector   | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-cake-inflector/pull/3][#3]]                     |
+| cake2            | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-cake2/pull/5][#5]]                     |
 | cask             | github   | ert                   | pending [[https://github.com/cask/cask/pull/386][#386]]                   |
 | commander        | github   | ert                   | pending [[https://github.com/rejeep/commander.el/pull/10][#10]]                    |
 | coq              | github   | maths-menu            | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-auto              | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-class             | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-cmds              | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-compat            | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-cweb              | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-mason             | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-mode              | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-region            | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-rpm               | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-sample            | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-univ              | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-utils             | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | mmm-vars              | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
 | coq              | github   | texi-docstring-magic  | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
 | ddskk            | github   | install               | later                          |
 | ddskk            | github   | ptexinfmt             | later                          |
@@ -76,7 +63,7 @@
 | git              | github   | ert                   | pending [[https://github.com/rejeep/git.el/pull/6][#6]]                     |
 | go               | github   | gnugo                 | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                     |
 | google-this      | github   | noflet                | pending [[https://github.com/Malabarba/emacs-google-this/pull/27][#27]]                    |
-| historyf         | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-historyf/pull/3][#3]]                     |
+| historyf         | github   | el-expectations       | pending [[https://github.com/k1LoW/emacs-historyf/pull/4][#4]]                     |
 | karma            | github   | test-helper           | pending [[https://github.com/tonini/karma.el/pull/7][#7]]                     |
 | lookup           | github   | stem-english          | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                    |
 | m-buffer         | github   | assess-discover       | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                     |
@@ -84,16 +71,13 @@
 | mic-paren        | file     | paren                 | considered drop-in replacement |
 | mkhtml           | wiki     | htmlize               | considered drop-in replacement |
 | nav              | github   | ack                   | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                   |
-| oauth            | github   | hmac-sha1             | pending [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                     |
+| oauth            | github   | hmac-sha1             | wontfix [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                     |
 | org              | git      | htmlize               | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]              |
 | org              | git      | ob-scala              | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]   |
-| org-jira         | github   | request               | pending [[https://github.com/ahungry/org-jira/pull/41][#41]]                    |
 | org-sync         | github   | test-helper           | pending [[https://github.com/arbox/org-sync/pull/27][#27]]                    |
 | overseer         | github   | test-helper           | pending [[https://github.com/tonini/overseer.el/pull/12][#12]]                    |
-| palette          | wiki     | eyedropper            | considered drop-in replacement |
 | pony-mode        | github   | ert                   | pending [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                    |
 | projmake-mode    | github   | elisp-lint            | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                    |
-| psgml            | github   | sgml-mode             | pending [[https://github.com/lenst/psgml/issues/1][#1]]                     |
 | riece            | git      | luna                  | later                          |
 | riece            | git      | lunit                 | later                          |
 | ruby-end         | github   | ert                   | pending [[https://github.com/rejeep/ruby-end.el/pull/16][#16]]                    |
