@@ -97,9 +97,9 @@
 |--------------+------+--------+-------+-------+-------+-------|
 | builtin      |  423 |        |       |   426 |     5 |       |
 | elpa         |   93 |     93 |       |       |   138 |       |
-| elpa-branch  |    6 |      6 |       |       |    12 |       |
+| elpa-branch  |    7 |      7 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3747 |   3747 |       |       |       |  3318 |
+| github       | 3747 |   3747 |       |       |       |  3319 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   56 |     56 |       |       |       |    44 |
 | subtree      |   22 |     22 |       |       |       |       |
@@ -113,7 +113,7 @@
 | fossil       |      |        |       |       |       |     0 |
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
-| wiki         |  738 |    738 |       |       |       |   158 |
+| wiki         |  737 |    737 |       |       |       |   157 |
 | file         |  286 |    286 |       |       |       |       |
 | minority     |   28 |     28 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
@@ -255,7 +255,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (59)               | Type     | Gelpa     | Method   | Reason               | Link                                         |
+| Package (58)               | Type     | Gelpa     | Method   | Reason               | Link                                         |
 |----------------------------+----------+-----------+----------+----------------------+----------------------------------------------|
 | ace-window                 | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -300,7 +300,6 @@
 | org                        | git      | :core     |          |                      | [[http://orgmode.org]]                           |
 | pabbrev                    | github   | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164418230][melpa#3383#164418230]] | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
 | parsec                     | github   | :subtree  | :squash  |                      | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
-| psgml                      | github   | :external |          |                      | [[https://github.com/lenst/psgml][lenst/psgml]]                                  |
 | realgud                    | github   | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
 | rich-minority              | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | sotlisp                    | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
