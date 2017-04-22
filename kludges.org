@@ -39,7 +39,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (34)     | Type     | Feature               | Reason                         |
+| Package (33)     | Type     | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
 | amd-mode         | github   | test-helper           | pending [[https://github.com/NicolasPetton/amd-mode.el/pull/11][#11]]                    |
 | anything-project | github   | anything              | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
@@ -63,7 +63,6 @@
 | karma            | github   | test-helper           | fixme [[https://github.com/tonini/karma.el/pull/7][#7]]                       |
 | lookup           | github   | stem-english          | staled [[https://github.com/lookup2/lookup2/pull/14][#14]]                     |
 | m-buffer         | github   | assess-discover       | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                     |
-| markup           | github   | ert                   | staled [[https://github.com/leoc/markup.el/pull/2][#2]]                      |
 | mic-paren        | file     | paren                 | considered drop-in replacement |
 | mkhtml           | wiki     | htmlize               | considered drop-in replacement |
 | nav              | github   | ack                   | staled [[https://github.com/ijt/emacs-nav/pull/103][#103]]                    |
