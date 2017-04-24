@@ -55,8 +55,3 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1)   | Type   | Feature       | Shelved |
-|---------------+--------+---------------+---------|
-| helm-git-grep | github | helm-elscreen |         |
-
-- helm-git-grep [[https://github.com/yasuyk/helm-git-grep/issues/34][#34]]

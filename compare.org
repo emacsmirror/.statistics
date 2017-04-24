@@ -99,7 +99,7 @@
 | elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    7 |      7 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3754 |   3754 |       |       |       |  3326 |
+| github       | 3755 |   3755 |       |       |       |  3328 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   56 |     56 |       |       |       |    44 |
 | subtree      |   22 |     22 |       |       |       |       |
@@ -120,7 +120,7 @@
 | orphaned     |   61 |     61 |       |       |       |       |
 | shelved      |  972 |        |   972 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6509 |   5114 |   972 |   426 |   155 |  3608 |
+| total        | 6510 |   5115 |   972 |   426 |   155 |  3610 |
 
 * Emacs
 ** New
@@ -343,9 +343,6 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
-| Package (1) | Reason                |
-|-------------+-----------------------|
-| flow-mode   | don't add; [[https://github.com/melpa/melpa/pull/4638][melpa#4638]] |
 
 ** Shared repositories
 #+NAME: secondary-packages
