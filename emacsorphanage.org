@@ -18,12 +18,10 @@
 		    #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package (63)     | Mirror   | Melpa    | Reason                      |
+| Package (60)     | Mirror   | Melpa    | Reason                      |
 |------------------+----------+----------+-----------------------------|
 | apel             | orphaned | github   | 6. many feature conflicts   |
 | caml             | orphaned | svn      | 5. svn not supported        |
-| cg               | orphaned | svn      | 5. svn not supported        |
-| clang-format     | orphaned | svn      | 5. svn not supported        |
 | color-theme      | orphaned | bzr      | 5. bzr not supported        |
 | confluence       | orphaned | svn      | 5. svn not supported        |
 | crontab-mode     | orphaned | orphaned | 3. upstream disappeared     |
@@ -40,7 +38,6 @@
 | filladapt        | orphaned |          | 3. upstream unresponsive    |
 | findr            | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | flim             | orphaned | github   | 6. many feature conflicts   |
-| helm-ls-svn      | orphaned | svn      | 5. svn not supported        |
 | hide-lines       | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | http-post-simple | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | hyperspec        | orphaned |          |                             |
