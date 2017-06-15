@@ -39,9 +39,8 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (33)     | Type     | Feature               | Reason                         |
+| Package (32)     | Type     | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
-| amd-mode         | github   | test-helper           | pending [[https://github.com/NicolasPetton/amd-mode.el/pull/11][#11]]                    |
 | anything-project | github   | anything              | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | anything-project | github   | anything-match-plugin | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | cask             | github   | ert                   | pending [[https://github.com/cask/cask/pull/386][#386]]                   |
@@ -99,13 +98,14 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (65)                    | Type        | Feature                | Reason                                              |
+| Package (66)                    | Type        | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | ada-mode                        | elpa        | ada-mode-compat-24.2   | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
 | auto-complete                   | github      | semantic-ia            | backward compatibility                              |
 | bbdb                            | git         | vm-autoloads           | generated external file                             |
+| centered-window-mode            | github      | mac-win                | pending [[https://github.com/anler/centered-window-mode/issues/28][#28]]                                         |
 | color-theme-sanityinc-solarized | github      | color-theme            | backward compatibility                              |
 | color-theme-sanityinc-tomorrow  | github      | color-theme            | backward compatibility                              |
 | color-theme-solarized           | github      | color-theme            | backward compatibility                              |

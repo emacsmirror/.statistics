@@ -99,7 +99,7 @@
 | elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    7 |      7 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3758 |   3758 |       |       |       |  3331 |
+| github       | 3794 |   3794 |       |       |       |  3368 |
 | gitlab       |   25 |     25 |       |       |       |    25 |
 | git          |   56 |     56 |       |       |       |    44 |
 | subtree      |   22 |     22 |       |       |       |       |
@@ -115,12 +115,12 @@
 |--------------+------+--------+-------+-------+-------+-------|
 | wiki         |  737 |    737 |       |       |       |   157 |
 | file         |  286 |    286 |       |       |       |       |
-| minority     |   28 |     28 |       |       |       |       |
+| minority     |   31 |     31 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| orphaned     |   61 |     61 |       |       |       |       |
+| orphaned     |   59 |     59 |       |       |       |       |
 | shelved      |  972 |        |   972 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6513 |   5118 |   972 |   426 |   155 |  3613 |
+| total        | 6550 |   5155 |   972 |   426 |   155 |  3650 |
 
 * Emacs
 ** New
@@ -359,7 +359,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (74)    | Secondary package               | Type      |
+| Primary package (75)    | Secondary package               | Type      |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -468,6 +468,7 @@
 | stan-mode               | stan-snippets                   | github    |
 | term-manager            | term-projectile                 | github    |
 | tern                    | tern-auto-complete              | github    |
+| treemacs                | treemacs-evil                   | github    |
 | use-package             | bind-key                        | github    |
 | use-package-chords      | bind-chord                      | github    |
 | w3m                     | shimbun                         | orphaned  |
@@ -526,8 +527,8 @@
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
 | cfengine-code-style   | minority | github    | mostly non-elisp              |
-| cg                    | orphaned | svn       | svn                           |
-| clang-format          | orphaned | svn       | svn                           |
+| cg                    | minority | svn       | svn                           |
+| clang-format          | minority | svn       | svn                           |
 | cmake-mode            | minority | github    | mostly non-elisp              |
 | color-theme           | orphaned | bzr       | bzr                           |
 | confluence            | orphaned | svn       | svn                           |
@@ -539,7 +540,7 @@
 | diffscuss-mode        | minority | github    | mostly non-elisp              |
 | dsvn                  | minority | svn       | svn                           |
 | google-c-style        | minority | github    | mostly non-elisp              |
-| helm-ls-svn           | orphaned | svn       | svn                           |
+| helm-ls-svn           | minority | svn       | svn                           |
 | llvm-mode             | minority | git       | mostly non-elisp              |
 | nemerle               | minority | github    | mostly non-elisp              |
 | ninja-mode            | minority | github    | mostly non-elisp              |

@@ -18,7 +18,7 @@
 		    #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package (60)     | Mirror   | Melpa    | Reason                      |
+| Package (61)     | Mirror   | Melpa    | Reason                      |
 |------------------+----------+----------+-----------------------------|
 | apel             | orphaned | github   | 6. many feature conflicts   |
 | caml             | orphaned | svn      | 5. svn not supported        |
@@ -67,6 +67,7 @@
 | shell-history    | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | showtip          | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | smarty-mode      | orphaned | orphaned | 2. upstream has disappeared |
+| sml-modeline     | orphaned | bzr      |                             |
 | sr-speedbar      | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | swbuff           | orphaned | orphaned | 5. cvs not supported        |
 | tail             | orphaned |          | 2. upstream has disappeared |
