@@ -99,10 +99,10 @@
 | elpa         |   93 |     93 |       |       |   138 |       |
 | elpa-branch  |    7 |      7 |       |       |    12 |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| github       | 3794 |   3794 |       |       |       |  3368 |
-| gitlab       |   25 |     25 |       |       |       |    25 |
+| github       | 3795 |   3795 |       |       |       |  3369 |
+| gitlab       |   26 |     26 |       |       |       |    26 |
 | git          |   56 |     56 |       |       |       |    44 |
-| subtree      |   22 |     22 |       |       |       |       |
+| subtree      |   23 |     23 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | bitbucket    |   44 |     44 |       |       |       |    38 |
 | hg           |    1 |      1 |       |       |       |     1 |
@@ -113,14 +113,14 @@
 | fossil       |      |        |       |       |       |     0 |
 | svn          |      |        |       |       |       |     9 |
 |--------------+------+--------+-------+-------+-------+-------|
-| wiki         |  737 |    737 |       |       |       |   157 |
+| wiki         |  736 |    736 |       |       |       |   157 |
 | file         |  286 |    286 |       |       |       |       |
-| minority     |   31 |     31 |       |       |       |       |
+| minority     |   32 |     32 |       |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | orphaned     |   59 |     59 |       |       |       |       |
 | shelved      |  972 |        |   972 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6550 |   5155 |   972 |   426 |   155 |  3650 |
+| total        | 6553 |   5158 |   972 |   426 |   155 |  3652 |
 
 * Emacs
 ** New
@@ -359,7 +359,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (75)    | Secondary package               | Type      |
+| Primary package (74)    | Secondary package               | Type      |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -440,7 +440,6 @@
 | nixos-options           | company-nixos-options           | github    |
 | nixos-options           | helm-nixos-options              | github    |
 | nixos-options           | nix-sandbox                     | github    |
-| nxhtml                  | sml-modeline                    | orphaned  |
 | opener                  | evil-opener                     | github    |
 | org                     | org-mac-iCal                    | git       |
 | org                     | org-mac-link                    | git       |
@@ -522,7 +521,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (30)          | Type     | Melpa     | Reason                        |
+| Package (31)          | Type     | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
@@ -549,6 +548,7 @@
 | pylint                | minority | github    | mostly non-elisp              |
 | ruby-additional       | minority | svn       | svn                           |
 | ruby-electric         | minority | svn       | svn                           |
+| sml-modeline          | orphaned | bzr       |                               |
 | tex-smart-umlauts     | minority | darcs     | darcs                         |
 | thrift                | minority | github    | mostly non-elisp              |
 | toggle                | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
