@@ -34,29 +34,27 @@
                            (asc melpa-recipes:name)]])))
 #+END_SRC
 #+RESULTS:
-| Dependee (12) | Author     | Depender                      | Fetcher | Author               |
-|---------------+------------+-------------------------------+---------+----------------------|
-| faces+        | Drew Adams | floobits                      | github  | Geoff Greer          |
-| filesets+     | Drew Adams | helm-filesets                 | github  | Graham Clark         |
-| fit-frame     | Drew Adams | anything-project              | github  |                      |
-| font-lock+    | Drew Adams | all-the-icons                 | github  | Dominic Charlesworth |
-| frame-fns     | Drew Adams | floobits                      | github  | Geoff Greer          |
-| hexrgb        | Drew Adams | jabber                        | git     |                      |
-| hexrgb        | Drew Adams | on-screen                     | github  | Michael Heerdegen    |
-| hexrgb        | Drew Adams | paper-theme                   | github  | Göktuğ Kayaalp       |
-| highlight     | Drew Adams | cider-eval-sexp-fu            | github  | Sylvain Benner       |
-| highlight     | Drew Adams | eval-sexp-fu                  | github  | Takeshi Banse        |
-| highlight     | Drew Adams | evil-extra-operator           | github  | Dewdrops             |
-| highlight     | Drew Adams | evil-search-highlight-persist | github  | Juanjo Alvarez       |
-| highlight     | Drew Adams | nrepl-eval-sexp-fu            | github  | Takeshi Banse        |
-| highlight     | Drew Adams | php-boris-minor-mode          | github  | steckerhalter        |
-| highlight     | Drew Adams | sonic-pi                      | github  | Joseph Wilk          |
-| lacarte       | Drew Adams | helm                          | github  | Thierry Volpiatto    |
-| menu-bar+     | Drew Adams | floobits                      | github  | Geoff Greer          |
-| strings       | Drew Adams | ergoemacs-mode                | github  | David Capello        |
-| thingatpt+    | Drew Adams | el-spice                      | github  | Vedang Manerikar     |
-| yaoddmuse     |            | company                       | github  | Nikolaj Schumacher   |
-| yaoddmuse     |            | org-readme                    | github  | Matthew L. Fidler    |
+| Dependee (8) | Author     | Depender                      | Fetcher | Author               |
+|--------------+------------+-------------------------------+---------+----------------------|
+| filesets+    | Drew Adams | helm-filesets                 | github  | Graham Clark         |
+| fit-frame    | Drew Adams | anything-project              | github  |                      |
+| font-lock+   | Drew Adams | all-the-icons                 | github  | Dominic Charlesworth |
+| font-lock+   | Drew Adams | jemdoc-mode                   | github  | Dimitar Dimitrov     |
+| hexrgb       | Drew Adams | jabber                        | git     |                      |
+| hexrgb       | Drew Adams | on-screen                     | github  | Michael Heerdegen    |
+| hexrgb       | Drew Adams | paper-theme                   | github  | Göktuğ Kayaalp       |
+| highlight    | Drew Adams | cider-eval-sexp-fu            | github  | Sylvain Benner       |
+| highlight    | Drew Adams | eval-sexp-fu                  | github  | Takeshi Banse        |
+| highlight    | Drew Adams | evil-extra-operator           | github  | Dewdrops             |
+| highlight    | Drew Adams | evil-search-highlight-persist | github  | Juanjo Alvarez       |
+| highlight    | Drew Adams | floobits                      | github  | Geoff Greer          |
+| highlight    | Drew Adams | nrepl-eval-sexp-fu            | github  | Takeshi Banse        |
+| highlight    | Drew Adams | php-boris-minor-mode          | github  | steckerhalter        |
+| highlight    | Drew Adams | sonic-pi                      | github  | Joseph Wilk          |
+| strings      | Drew Adams | ergoemacs-mode                | github  | David Capello        |
+| thingatpt+   | Drew Adams | el-spice                      | github  | Vedang Manerikar     |
+| yaoddmuse    |            | company                       | github  | Nikolaj Schumacher   |
+| yaoddmuse    |            | org-readme                    | github  | Matthew L. Fidler    |
 
 * Wiki packages on Melpa
 #+BEGIN_SRC emacs-lisp
@@ -71,7 +69,7 @@
 
 #+END_SRC
 #+RESULTS:
-| Author (44)                   | Package                 |
+| Author (41)                   | Package                 |
 |-------------------------------+-------------------------|
 |                               | ac-dabbrev              |
 |                               | aok                     |
@@ -100,7 +98,6 @@
 | Andy Stewart                  | chm-view                |
 | Andy Stewart                  | dired-sort              |
 | Andy Stewart                  | irfc                    |
-| Arni Magnusson                | dos                     |
 | Benjamin Rutt                 | backup-each-save        |
 | Benjamin Rutt                 | top-mode                |
 | Binu Jose Philip, Drew Adams  | w32browser-dlgopen      |
@@ -126,7 +123,6 @@
 | Drew Adams                    | doremi-cmd              |
 | Drew Adams                    | doremi-frm              |
 | Drew Adams                    | doremi-mac              |
-| Drew Adams                    | eyedropper              |
 | Drew Adams                    | face-remap+             |
 | Drew Adams                    | facemenu+               |
 | Drew Adams                    | faces+                  |
@@ -202,7 +198,6 @@
 | Kahlil (Kal) HODGSON          | swbuff-x                |
 | Kahlil (Kal) HODGSON          | tidy                    |
 | Kai Grossjohann               | message-x               |
-| Karl Chen                     | apache-mode             |
 | Kevin Rodgers                 | auto-capitalize         |
 | Kevin Rodgers                 | igrep                   |
 | Kumar Appaiah                 | muttrc-mode             |
@@ -218,7 +213,6 @@
 | Scott Frazer                  | etags-select            |
 | Scott Frazer                  | etags-table             |
 | Seiji Zenitani                | smart-compile           |
-| Simon Belak                   | sentence-highlight      |
 | Taiki SUGAWARA                | highlight-cl            |
 | Taiki SUGAWARA                | vline                   |
 | Takeshi Banse                 | el-swank-fuzzy          |
@@ -234,3 +228,753 @@
 | rubikitch                     | sequential-command      |
 | rubikitch                     | sticky                  |
 | rubikitch                     | usage-memo              |
+
+* Wiki packages on the Emacsmirror
+#+BEGIN_SRC emacs-lisp
+  (emir--with-org-header ("Author" "Package")
+    (cl-sort (mapcar (lambda (pkg)
+		       (list (or (caar (oref pkg maintainers))
+				 (caar (oref pkg authors))
+				 "")
+			     (oref pkg name)))
+		     (epkgs nil 'epkg-wiki-package-p))
+	     #'string< :key #'car))
+#+END_SRC
+#+RESULTS:
+| Author (239)                                        | Package                        |
+|-----------------------------------------------------+--------------------------------|
+|                                                     | ac-dabbrev                     |
+|                                                     | acd                            |
+|                                                     | aok                            |
+|                                                     | arrange-buffers                |
+|                                                     | atim-unscroll                  |
+|                                                     | auto-complete-extension        |
+|                                                     | auto-indent                    |
+|                                                     | auto-scroll                    |
+|                                                     | avenue-mode                    |
+|                                                     | background                     |
+|                                                     | basic                          |
+|                                                     | batch-mode                     |
+|                                                     | bbdb-mew                       |
+|                                                     | bencode                        |
+|                                                     | better-registers               |
+|                                                     | bibus                          |
+|                                                     | bm-ext                         |
+|                                                     | bpath                          |
+|                                                     | browse-urn                     |
+|                                                     | btjunkie-search                |
+|                                                     | buffer-ring                    |
+|                                                     | c-toggle-dot-pointer           |
+|                                                     | cg-mode                        |
+|                                                     | chinese-chess                  |
+|                                                     | chinese-chess-pvc              |
+|                                                     | cisco-router-mode              |
+|                                                     | claire-mode                    |
+|                                                     | clibpc                         |
+|                                                     | contentswitch                  |
+|                                                     | cook-mode                      |
+|                                                     | cppsense                       |
+|                                                     | csv-nav                        |
+|                                                     | dbk                            |
+|                                                     | di                             |
+|                                                     | diffstat                       |
+|                                                     | dired-extension                |
+|                                                     | dirnav                         |
+|                                                     | docmap                         |
+|                                                     | doit-mode                      |
+|                                                     | dos-indent                     |
+|                                                     | dot-emacs-helper               |
+|                                                     | dropdown-list                  |
+|                                                     | dynamic-ring                   |
+|                                                     | echoline-mode                  |
+|                                                     | eform                          |
+|                                                     | eight-puzzle                   |
+|                                                     | eim                            |
+|                                                     | emboss                         |
+|                                                     | emms-get-lyrics                |
+|                                                     | encrypt                        |
+|                                                     | eoops                          |
+|                                                     | erc-extension                  |
+|                                                     | erc-nick-notify                |
+|                                                     | ewb                            |
+|                                                     | external-abook                 |
+|                                                     | extview                        |
+|                                                     | fenc                           |
+|                                                     | festival                       |
+|                                                     | fic-ext-mode                   |
+|                                                     | file-journal                   |
+|                                                     | find-file-in-tags              |
+|                                                     | finkinfo                       |
+|                                                     | fix-buffers-list               |
+|                                                     | flymake-extension              |
+|                                                     | fold                           |
+|                                                     | fuzzy-format                   |
+|                                                     | fuzzy-match                    |
+|                                                     | glade-mode                     |
+|                                                     | globalff                       |
+|                                                     | globrep                        |
+|                                                     | gnus-extension                 |
+|                                                     | gnus-hardsort                  |
+|                                                     | gnus-notify+                   |
+|                                                     | gnus-summary-stripe            |
+|                                                     | gnus-switch                    |
+|                                                     | go-to-char                     |
+|                                                     | gob                            |
+|                                                     | google-define                  |
+|                                                     | gosh                           |
+|                                                     | goto-chg                       |
+|                                                     | gtk-perl                       |
+|                                                     | haskell-extension              |
+|                                                     | help-dwim                      |
+|                                                     | help-dwim-perlapi              |
+|                                                     | help-dwim-perldoc              |
+|                                                     | hsv2rgb                        |
+|                                                     | imdb                           |
+|                                                     | imdbs                          |
+|                                                     | imenu-tree                     |
+|                                                     | inf-perl                       |
+|                                                     | ipa                            |
+|                                                     | isearch-extension              |
+|                                                     | iswitchb-highlight             |
+|                                                     | java-complete                  |
+|                                                     | javacc-mode                    |
+|                                                     | jira                           |
+|                                                     | jpl-reformat                   |
+|                                                     | keep-end                       |
+|                                                     | keyboard-macro-timer           |
+|                                                     | line-comment-banner            |
+|                                                     | line-num                       |
+|                                                     | linkify                        |
+|                                                     | list-processes+                |
+|                                                     | mail-field                     |
+|                                                     | merriam                        |
+|                                                     | mm2mw                          |
+|                                                     | mss                            |
+|                                                     | mule-menu                      |
+|                                                     | multi-shell                    |
+|                                                     | multiverse                     |
+|                                                     | mybuffers                      |
+|                                                     | mz-comment-fix                 |
+|                                                     | newsticker-notify              |
+|                                                     | oddmuse                        |
+|                                                     | openpaste                      |
+|                                                     | org-search-goto                |
+|                                                     | org-search-goto-ml             |
+|                                                     | paste2                         |
+|                                                     | pastebox                       |
+|                                                     | pddl-mode                      |
+|                                                     | pdftools                       |
+|                                                     | phonetic                       |
+|                                                     | phutball                       |
+|                                                     | planner-hierarchy              |
+|                                                     | plt-completions                |
+|                                                     | point-ring                     |
+|                                                     | point-undo                     |
+|                                                     | prand                          |
+|                                                     | procmaillog                    |
+|                                                     | query                          |
+|                                                     | rcirc-late-fix                 |
+|                                                     | rcirc-pounce                   |
+|                                                     | rcirc-random-names             |
+|                                                     | reco                           |
+|                                                     | rect-extension                 |
+|                                                     | redo+                          |
+|                                                     | repdet                         |
+|                                                     | repeat-insert                  |
+|                                                     | ricette-mode                   |
+|                                                     | rmail-saver                    |
+|                                                     | run-assoc                      |
+|                                                     | rusewiki                       |
+|                                                     | school-points-off              |
+|                                                     | scrl-margs                     |
+|                                                     | show-help                      |
+|                                                     | singlebind                     |
+|                                                     | smart-dabbrev                  |
+|                                                     | spartan-wiki                   |
+|                                                     | sql-completion                 |
+|                                                     | sqled-mode                     |
+|                                                     | sqlplus                        |
+|                                                     | strptime                       |
+|                                                     | summarye                       |
+|                                                     | symlink-fix                    |
+|                                                     | tag                            |
+|                                                     | tagger                         |
+|                                                     | tags-tree                      |
+|                                                     | teco                           |
+|                                                     | tooltip-help                   |
+|                                                     | ts-mode                        |
+|                                                     | tsv-mode                       |
+|                                                     | type-test                      |
+|                                                     | ul                             |
+|                                                     | vbnet-mode                     |
+|                                                     | visible-lines                  |
+|                                                     | wcy-desktop                    |
+|                                                     | webgen-mode                    |
+|                                                     | wimpy-del                      |
+|                                                     | write-or-die                   |
+|                                                     | xs-mode                        |
+|                                                     | yaoddmuse                      |
+|                                                     | yatm                           |
+| Aaron S. Hawley                                     | bmi                            |
+| Aaron S. Hawley                                     | fdlcap                         |
+| Aaron S. Hawley                                     | plural                         |
+| Aaron S. Hawley                                     | regexpl                        |
+| Aaron S. Hawley                                     | wikirel                        |
+| Adrian Aichner                                      | gnuslog                        |
+| Adrian Kubala                                       | buffer-stack                   |
+| Aidan Schofield                                     | magpie                         |
+| Aidan Schofield                                     | move-and                       |
+| Akimichi Tatsukawa                                  | constraint                     |
+| Alan Shutko                                         | glimpse                        |
+| Alessandro Di Marco                                 | emms-player-streaming-fix      |
+| Alessandro Di Marco                                 | flyguess                       |
+| Alessandro Di Marco                                 | random-quote                   |
+| Alessandro Di Marco                                 | topsongs                       |
+| Alessandro Di Marco                                 | w3xt                           |
+| Alessandro Di Marco                                 | xsocks                         |
+| Alex Schroeder                                      | bidi                           |
+| Alex Schroeder                                      | disk                           |
+| Alex Schroeder                                      | erobot                         |
+| Alex Schroeder                                      | flashmaker                     |
+| Alex Schroeder                                      | idle-scroll                    |
+| Alex Schroeder                                      | kdic                           |
+| Alex Schroeder                                      | loops                          |
+| Alex Schroeder                                      | mu                             |
+| Alex Schroeder                                      | really-simple-wiki             |
+| Alex Schroeder                                      | sql-transform                  |
+| Alex Schroeder                                      | textmenu                       |
+| Alex Schroeder                                      | toolbox                        |
+| Alex Schroeder                                      | typing                         |
+| Alex Schroeder                                      | unparen                        |
+| Alex Schroeder                                      | wiki                           |
+| Alex Schroeder                                      | wiki-remote                    |
+| Alex Shinn                                          | fetchmail-mode                 |
+| Amir Mohammad Saied                                 | audel                          |
+| Anand B Pillai                                      | cricket                        |
+| Anders Lindgren                                     | ctypes                         |
+| Andrew Gwozdziewycz                                 | amigo                          |
+| Andrey Balaguta                                     | sql-with-placeholders          |
+| André Riemann                                       | centered-cursor-mode           |
+| André Riemann                                       | fliptext                       |
+| Andy Stewart                                        | alarm                          |
+| Andy Stewart                                        | anything-auto-install          |
+| Andy Stewart                                        | chm-view                       |
+| Andy Stewart                                        | dired-sort                     |
+| Andy Stewart                                        | doc-view-extension             |
+| Andy Stewart                                        | etags-extension                |
+| Andy Stewart                                        | find-func-extension            |
+| Andy Stewart                                        | fullscreen                     |
+| Andy Stewart                                        | gtk2hs                         |
+| Andy Stewart                                        | lazy-set-key                   |
+| Andy Stewart                                        | mail-notify                    |
+| Andy Stewart                                        | multi-scratch                  |
+| Andy Stewart                                        | newsticker-extension           |
+| Andy Stewart                                        | oicq                           |
+| Andy Stewart                                        | org-extension                  |
+| Andy Stewart                                        | org-oddmuse                    |
+| Andy Stewart                                        | rcirc-extension                |
+| Andy Stewart                                        | rcirc-notify+                  |
+| Andy Stewart                                        | shell-command-extension        |
+| Andy Stewart                                        | speedbar-extension             |
+| Andy Stewart                                        | thing-edit                     |
+| Andy Stewart                                        | wdired-extension               |
+| Andy Stewart                                        | window-extension               |
+| Andy Stewart                                        | windresize-extension           |
+| Avi Rozen                                           | grep-o-matic                   |
+| Avi Rozen                                           | repository-root                |
+| Ben Moseley                                         | markerpen                      |
+| Benjamin Drieu                                      | df-mode                        |
+| Benjamin Rutt                                       | backup-each-save               |
+| Benjamin Rutt                                       | top-mode                       |
+| Bill Carpenter.                                     | cscope                         |
+| Binu Jose Philip, Drew Adams                        | w32browser-dlgopen             |
+| Brent Goodrick                                      | bg-rlogin-setup                |
+| Bryan O'Sullivan                                    | x-migrant                      |
+| Bryan Waite, based on some code found at            | fixme-mode                     |
+| Carl Groner                                         | tumbl                          |
+| Cedric Lallain                                      | find-dired++                   |
+| Cedric Lallain                                      | log-buffer                     |
+| Cedric Lallain                                      | record-type                    |
+| Cedric Lallain                                      | tcp-client                     |
+| Cedric Lallain                                      | xcscope+                       |
+| Changyuan Yu                                        | couchdb-document               |
+| Changyuan Yu                                        | couchdb-document-text          |
+| Changyuan Yu                                        | mpris-dbus                     |
+| Changyuan Yu                                        | mpris-track-list               |
+| Changyuan Yu                                        | org-json                       |
+| Changyuan Yu                                        | stardict                       |
+| Charles Sebold                                      | vbs-repl                       |
+| Chong Yidong                                        | wikitext-mode                  |
+| Chris Done                                          | align-by-current-symbol        |
+| Chris Stucchio                                      | multi-eshell                   |
+| Christian Neukirchen                                | pastie                         |
+| Christoffer S. Hansen                               | policy-switch                  |
+| Christoph Conrad                                    | highlight-current-line         |
+| ChunYe Wang                                         | wcy-display-line-number        |
+| ChunYe Wang                                         | wcy-swbuff                     |
+| Craig Lawson                                        | dired-column-widths            |
+| Craig McDaniel                                      | ppindent                       |
+| Craig Muth                                          | control-lock                   |
+| Craig Muth                                          | hidesearch                     |
+| Dale K. Hawkins                                     | snipplr                        |
+| Damyan Pepper (gmail account, username damyanp)     | autosmiley                     |
+| Dan McCarthy                                        | acme-search                    |
+| Daniel Brockman                                     | rcirc-sound                    |
+| Daniel Colascione                                   | ntcmd                          |
+| David Edmondson                                     | erc-robot                      |
+| David Elentok                                       | dgpg                           |
+| David Lindquist                                     | ecmascript-mode                |
+| David Megginson                                     | steno                          |
+| David Shilvock                                      | mirror-mode                    |
+| David Shilvock                                      | projman                        |
+| David Vazquez                                       | erc-tex                        |
+| Davis Herring                                       | py-indent                      |
+| Davis Herring                                       | unbound                        |
+| Denis Martinez                                      | fcsh-mode                      |
+| Denny Zhang                                         | online-search                  |
+| Dhruva Krishnamurthy                                | emacsserver                    |
+| Dino Chiesa                                         | flymake-for-csharp             |
+| Dino Chiesa                                         | rfringe                        |
+| Dino Chiesa                                         | tfs                            |
+| Dino Chiesa, Alex Henning                           | thesaurus                      |
+| Dominique de Waleffe                                | popbiff                        |
+| Doug Alcorn                                         | date-calc                      |
+| Doug Alcorn                                         | mailcap-view                   |
+| Drew Adams                                          | apropos+                       |
+| Drew Adams                                          | apropos-fn+var                 |
+| Drew Adams                                          | apu                            |
+| Drew Adams                                          | autofit-frame                  |
+| Drew Adams                                          | autoload+                      |
+| Drew Adams                                          | bindings+                      |
+| Drew Adams                                          | browse-kill-ring+              |
+| Drew Adams                                          | buff-menu+                     |
+| Drew Adams                                          | calendar+                      |
+| Drew Adams                                          | cc-mode+                       |
+| Drew Adams                                          | cmds-menu                      |
+| Drew Adams                                          | col-highlight                  |
+| Drew Adams                                          | compile+                       |
+| Drew Adams                                          | compile-                       |
+| Drew Adams                                          | crosshairs                     |
+| Drew Adams                                          | cursor-chg                     |
+| Drew Adams                                          | cus-edit+                      |
+| Drew Adams                                          | descr-text+                    |
+| Drew Adams                                          | diff+                          |
+| Drew Adams                                          | diff-mode-                     |
+| Drew Adams                                          | dired+                         |
+| Drew Adams                                          | dired-details+                 |
+| Drew Adams                                          | dired-sort-menu+               |
+| Drew Adams                                          | doremi                         |
+| Drew Adams                                          | doremi-cmd                     |
+| Drew Adams                                          | doremi-frm                     |
+| Drew Adams                                          | doremi-mac                     |
+| Drew Adams                                          | ediff+                         |
+| Drew Adams                                          | face-remap+                    |
+| Drew Adams                                          | facemenu+                      |
+| Drew Adams                                          | faces+                         |
+| Drew Adams                                          | ffap-                          |
+| Drew Adams                                          | files+                         |
+| Drew Adams                                          | filesets+                      |
+| Drew Adams                                          | find-dired+                    |
+| Drew Adams                                          | find-dired-                    |
+| Drew Adams                                          | find-func+                     |
+| Drew Adams                                          | finder+                        |
+| Drew Adams                                          | fit-frame                      |
+| Drew Adams                                          | font-lock+                     |
+| Drew Adams                                          | frame+                         |
+| Drew Adams                                          | frame-cmds                     |
+| Drew Adams                                          | frame-fns                      |
+| Drew Adams                                          | grep+                          |
+| Drew Adams                                          | header2                        |
+| Drew Adams                                          | help+                          |
+| Drew Adams                                          | help-fns+                      |
+| Drew Adams                                          | help-macro+                    |
+| Drew Adams                                          | help-mode+                     |
+| Drew Adams                                          | hexrgb                         |
+| Drew Adams                                          | hide-comnt                     |
+| Drew Adams                                          | highlight                      |
+| Drew Adams                                          | highlight-chars                |
+| Drew Adams                                          | hl-defined                     |
+| Drew Adams                                          | hl-line+                       |
+| Drew Adams                                          | hl-spotlight                   |
+| Drew Adams                                          | icicles                        |
+| Drew Adams                                          | icomplete+                     |
+| Drew Adams                                          | imenu+                         |
+| Drew Adams                                          | info+                          |
+| Drew Adams                                          | isearch+                       |
+| Drew Adams                                          | isearch-prop                   |
+| Drew Adams                                          | lacarte                        |
+| Drew Adams                                          | lib-requires                   |
+| Drew Adams                                          | ls-lisp+                       |
+| Drew Adams                                          | macros+                        |
+| Drew Adams                                          | mb-depth+                      |
+| Drew Adams                                          | menu-bar+                      |
+| Drew Adams                                          | misc-cmds                      |
+| Drew Adams                                          | misc-fns                       |
+| Drew Adams                                          | mkhtml                         |
+| Drew Adams                                          | modeline-char                  |
+| Drew Adams                                          | modeline-posn                  |
+| Drew Adams                                          | mouse+                         |
+| Drew Adams                                          | mouse3                         |
+| Drew Adams                                          | naked                          |
+| Drew Adams                                          | narrow-indirect                |
+| Drew Adams                                          | novice+                        |
+| Drew Adams                                          | occur-schroeder                |
+| Drew Adams                                          | oneonone                       |
+| Drew Adams                                          | outline+                       |
+| Drew Adams                                          | palette                        |
+| Drew Adams                                          | pp+                            |
+| Drew Adams                                          | pp-c-l                         |
+| Drew Adams                                          | pretty-lambdada                |
+| Drew Adams                                          | replace+                       |
+| Drew Adams                                          | reveal-next                    |
+| Drew Adams                                          | ring+                          |
+| Drew Adams                                          | second-sel                     |
+| Drew Adams                                          | setnu+                         |
+| Drew Adams                                          | showkey                        |
+| Drew Adams                                          | simple+                        |
+| Drew Adams                                          | sort+                          |
+| Drew Adams                                          | strings                        |
+| Drew Adams                                          | subr+                          |
+| Drew Adams                                          | synonyms                       |
+| Drew Adams                                          | telnet-contrib                 |
+| Drew Adams                                          | thing-cmds                     |
+| Drew Adams                                          | thingatpt+                     |
+| Drew Adams                                          | thumb-frm                      |
+| Drew Adams                                          | timer+                         |
+| Drew Adams                                          | tool-bar+                      |
+| Drew Adams                                          | ucs-cmds                       |
+| Drew Adams                                          | unaccent                       |
+| Drew Adams                                          | vc+                            |
+| Drew Adams                                          | vc-                            |
+| Drew Adams                                          | vc-hooks+                      |
+| Drew Adams                                          | window+                        |
+| Drew Adams                                          | zones                          |
+| Drew Adams                                          | zoom-frm                       |
+| Drew Adams, Lennart Borgman                         | wid-edit+                      |
+| Drew Adams, Thierry Volpiatto                       | bookmark+                      |
+| Edward Robinson                                     | procomm-mode                   |
+| Emanuel Heitlinger                                  | texmed                         |
+| Esben Andreasen                                     | screencast                     |
+| Eugene V. Markov                                    | bookmark-add                   |
+| Eugene V. Markov                                    | recentf-buffer                 |
+| Fang lungang                                        | tiling                         |
+| Francis J. Wright                                   | dired-sort-menu                |
+| Francis J. Wright                                   | w32-symlinks                   |
+| Francis J. Wright, Simon Marshal, Drew Adams        | font-lock-menus                |
+| Fred White                                          | pic-basic-mode                 |
+| Fred White                                          | visual-basic-mode              |
+| Frederico Muñoz                                     | rcirc-dbus                     |
+| G. Dinesh Dutt                                      | email                          |
+| Gaofeng Huang                                       | pinbar                         |
+| Guanpeng Xu                                         | subedit                        |
+| Gustavo Sverzut Barbieri                            | edje-mode                      |
+| Gustavo Sverzut Barbieri                            | gobject-class                  |
+| HAMANO Kiyoto                                       | popup-select-window            |
+| Hans Halvorson (hhalvors -at- princeton -dot- edu)  | bibsnarf                       |
+| Hans Halvorson (www.princeton.edu/~hhalvors)        | env-print                      |
+| Hans Halvorson (www.princeton.edu/~hhalvors)        | gradebook                      |
+| Happy Kohpy                                         | longlines-jp                   |
+| Henrik Enberg                                       | rmail-spamprobe                |
+| Igor Sikaček                                        | awk-it                         |
+| Ilya Zakharevich                                    | nc                             |
+| Iñigo Serna                                         | devel-notes                    |
+| Jakub Narebski                                      | bst-mode                       |
+| Jakub NarÄbski                                  | sierotki                       |
+| Jan Rehders                                         | hideshowvis                    |
+| Jason Meade                                         | bug                            |
+| Jason Meade                                         | slurp                          |
+| Jason Spiro                                         | beginner                       |
+| Javier Oviedo                                       | joccur                         |
+| Jean-Baptiste Bourgoin                              | mpcel                          |
+| Jean-Philippe Theberge                              | hachette                       |
+| Jeff Bowden                                         | axcess                         |
+| Jeremy Cowgar                                       | edi-mode                       |
+| Jeremy Cowgar                                       | random-idle-quote              |
+| Jeremy Cowgar                                       | task-timer                     |
+| Jeremy Hankins nowan at nowan dot org               | saw-client                     |
+| Jim Hourihan                                        | bbdb-vcard-export              |
+| Joakim Hove                                         | mailrc                         |
+| Joao Cachopo                                        | ediff-trees                    |
+| Joe Bloggs                                          | bbdb-sms                       |
+| Joe Bloggs                                          | bs-ext                         |
+| Joe Bloggs                                          | extract-text                   |
+| Joe Bloggs                                          | keyword-arg-macros             |
+| Joe Bloggs                                          | sms                            |
+| Joel J. Adamson                                     | enscript                       |
+| Johan Claesson                                      | jcl-command-subset             |
+| John Connors                                        | ectags-select                  |
+| John Sturdy                                         | lyric-mode                     |
+| John Wiegley                                        | queue-mail                     |
+| John Wiegley                                        | xml-parse                      |
+| Jonathan Arkell                                     | cruisecontrol                  |
+| Jonathan Arkell                                     | devkitemacs                    |
+| Jonathan Arkell                                     | flip-tables                    |
+| Jonathan Arkell                                     | i-ching                        |
+| Jonathan Arkell                                     | save-and-dwim                  |
+| Jonathan Arkell                                     | work-timer                     |
+| Jorgen Schaefer                                     | bracketphobia                  |
+| Jorgen Schaefer                                     | duck                           |
+| Jorgen Schaefer                                     | emacs-wiki-finddead            |
+| Jorgen Schaefer                                     | erec                           |
+| Jorgen Schaefer                                     | golb                           |
+| Jorgen Schaefer                                     | idlehelp                       |
+| Jorgen Schaefer                                     | mudel                          |
+| Jorgen Schaefer                                     | outline-wiki                   |
+| Jorgen Schaefer                                     | scheme48                       |
+| Jorgen Schaefer                                     | srfi                           |
+| Joseph                                              | term-toggle                    |
+| Joyer Huang                                         | hexview-mode                   |
+| Julian Scheid                                       | guess-offset                   |
+| Kahlil (Kal) HODGSON                                | mirror                         |
+| Kahlil (Kal) HODGSON                                | plsql                          |
+| Kahlil (Kal) HODGSON                                | swbuff-x                       |
+| Kahlil (Kal) HODGSON                                | tidy                           |
+| Kahlil (Kal) HODGSON                                | timeclock-x                    |
+| Kahlil (Kal) HODGSON                                | title-time                     |
+| Kahlil Hodgson                                      | mouse-drag-fix                 |
+| Kai Grossjohann                                     | flobl                          |
+| Kai Grossjohann                                     | message-x                      |
+| Kai Grossjohann                                     | pc-keys                        |
+| Kalle Niemitalo                                     | sie                            |
+| Katsuya Iida                                        | rfc                            |
+| Kazuo YAGI                                          | memo-pop                       |
+| Kenichirou Oyama                                    | re-builder+                    |
+| Kevin A. Burton                                     | mc                             |
+| Kevin A. Burton                                     | sudo-save                      |
+| Kevin Rodgers                                       | auto-capitalize                |
+| Kevin Rodgers                                       | defshell                       |
+| Kevin Rodgers                                       | follow-mouse                   |
+| Kevin Rodgers                                       | ifind                          |
+| Kevin Rodgers                                       | igrep                          |
+| Kevin Rodgers                                       | igrep-next-error               |
+| Kevin Rodgers                                       | insert-time-string             |
+| Kevin Rodgers                                       | switch-to-new-buffer           |
+| Kirill Babikhin                                     | perltidy                       |
+| Kobayashi Takaaki                                   | kokopelli                      |
+| Konstantin Antipin                                  | org-assoc-tags                 |
+| Kumar Appaiah                                       | bc-mode                        |
+| Kumar Appaiah                                       | muttrc-mode                    |
+| Lawrence R. Dodd                                    | rmailgen                       |
+| Le wang (remove numbers)                            | mark-lines                     |
+| Lee Bigelow                                         | etxt                           |
+| Lennart Staflin                                     | corba                          |
+| MATSUYAMA Tomohiro                                  | auto-mark                      |
+| MATSUYAMA Tomohiro                                  | flydoc                         |
+| MATSUYAMA Tomohiro                                  | thing-opt                      |
+| MON KEY                                             | google-define-redux            |
+| Marco (Bj) Bardelli                                 | gst-inspect                    |
+| Marco Baringer                                      | vnesting                       |
+| Mario Domgörgen                                     | html-lite                      |
+| Mario Domgörgen                                     | oggel                          |
+| Mario Lang                                          | bf                             |
+| Mark Triggs                                         | gnus-notify                    |
+| Mark Triggs                                         | unit-test                      |
+| Martin Rudalics                                     | speck                          |
+| Mathias Dahl                                        | amarok                         |
+| Mathias Dahl                                        | electric-dot-and-dash          |
+| Mathias Dahl                                        | file-props                     |
+| Mathias Dahl                                        | hide-region                    |
+| Mathias Dahl                                        | java-class-doc                 |
+| Mathias Dahl                                        | ps2pdf                         |
+| Mathias Dahl                                        | shell-command-queue            |
+| Mathias Dahl                                        | tumme                          |
+| Mathias Dahl                                        | w32-find-dired                 |
+| Mathias Dahl                                        | w32-send-mapi                  |
+| Mathias Dahl                                        | w32-utl                        |
+| Mathias Kegelmann                                   | mogo                           |
+| Matsushita Akihisa                                  | abbrev-complete                |
+| Matsushita Akihisa                                  | mgrep                          |
+| Matthew L. Fidler                                   | auto-pair+                     |
+| Matthew L. Fidler                                   | message-outlook                |
+| Matthew Ozor                                        | mo-rot13                       |
+| Max Mikhanosha                                      | newpaste                       |
+| Michael Abraham Shulman                             | coroutine                      |
+| Michael Abraham Shulman                             | fortune-mode                   |
+| Michael Abraham Shulman                             | tagbody                        |
+| Michael Cook                                        | cygwin-mount                   |
+| Michael Heerdegen                                   | emacs-lock+                    |
+| Michael Schierl                                     | ireplace                       |
+| Michael Schierl                                     | stripes                        |
+| Michele Bini                                        | embeddedchangelog              |
+| Michele Bini                                        | mazemax                        |
+| Michele Bini                                        | mtrace                         |
+| Michele Bini                                        | superego                       |
+| Michele Bini                                        | unidiff                        |
+| Mikael Brockman                                     | portage                        |
+| Mike Williams                                       | byrd-biff                      |
+| Miles Bader                                         | echo-bell                      |
+| Mutsumi Komuro                                      | rewrite                        |
+| Nascif A. Abousalh Neto                             | flymake-helper                 |
+| Nelson Elhage                                       | perl-find-library              |
+| Nic Ferrier                                         | imapua                         |
+| Niels Widger                                        | irfc                           |
+| Olexandr Sydorchuk                                  | celssc-mode                    |
+| Oliver Scholz                                       | gnus-propfont                  |
+| Oliver Scholz                                       | hexcolour                      |
+| Oliver Scholz                                       | typopunct                      |
+| Olivier Ramonat                                     | require-or-install             |
+| Patrick Anderson                                    | interpreter-minor              |
+| Patrick Anderson                                    | w32-shell-execute              |
+| Patrick Anderson                                    | w32-shell-verb                 |
+| Paul Huff                                           | otp                            |
+| Peter Breton                                        | lnk                            |
+| Phil Hagelberg                                      | pcmpl-ssh                      |
+| Phil Hagelberg                                      | steersman                      |
+| Pierre Gaston                                       | no-word                        |
+| Qichen Huang                                        | unicad                         |
+| Rafal Jedruszek                                     | highlight-tail                 |
+| Raffael Herzog                                      | jde-maven                      |
+| Raymond Wiker                                       | x-face-magic                   |
+| Riccardo Murri                                      | googleaccount                  |
+| Riccardo Murri                                      | pylit                          |
+| Rick Bielawski                                      | anchored-transpose             |
+| Rick Bielawski                                      | column-marker                  |
+| Rick Bielawski                                      | columnize                      |
+| Rick Bielawski                                      | ddl-mode                       |
+| Rick Bielawski                                      | nmcobol-mode                   |
+| Rick Bielawski                                      | popup-ruler                    |
+| Rick Bielawski                                      | tal-indent                     |
+| Rick Bielawski                                      | tal-mode                       |
+| Rick Sladkey                                        | rect-mark                      |
+| Rob Giardina                                        | dired-details                  |
+| Robert Fitzgerald                                   | any-ini-mode                   |
+| Robert P. Hamrick                                   | remind-to-diary                |
+| Rodrigo Lazo                                        | jabber-chatx                   |
+| Rolf Ebert                                          | ada-gpr                        |
+| Ron Lawrence                                        | member-functions               |
+| Rubens Fernandes                                    | intel-hex-mode                 |
+| Ryan C. Thompson                                    | protbuf-by-name                |
+| Ryan Davis and Phil Hagelberg                       | project-local-variables        |
+| S. Irie                                             | grab-and-drag                  |
+| S. Irie                                             | popup-pos-tip                  |
+| S. Irie                                             | trans-ej                       |
+| Scott Andrew Borton                                 | wpdl-mode                      |
+| Scott Frazer                                        | etags-select                   |
+| Scott Frazer                                        | etags-stack                    |
+| Scott Frazer                                        | etags-table                    |
+| Scott Frazer                                        | file-template                  |
+| Scott Frazer                                        | grep-buffers                   |
+| Scott Frazer                                        | grep-ed                        |
+| Scott Frazer                                        | mdabbrev                       |
+| Scott Frazer                                        | motion-and-kill-dwim           |
+| Sean M. Burke                                       | rtf-mode                       |
+| Sean O'Rourke                                       | itunes                         |
+| Sebastien Varrette                                  | tempo-c-cpp                    |
+| Seiji Zenitani                                      | a-menu                         |
+| Seiji Zenitani                                      | smart-compile                  |
+| Seong-Kook Shin                                     | vc-jump                        |
+| Seong-Kook Shin                                     | xlicense                       |
+| Seth Falcon                                         | extract-ical                   |
+| Shawn Betts                                         | mailx                          |
+| Shelagh Manton                                      | ac-lilypond                    |
+| Slavomir Kaslev                                     | etom                           |
+| Stefan Kamphausen                                   | ska-skel-matlab                |
+| Steve Yegge                                         | htmlr                          |
+| Suraj Acharya                                       | java-mode-indent-annotations   |
+| Sylvain Bougerel                                    | profiles                       |
+| TN                                                  | application                    |
+| Tabitha Tipper                                      | cheezburger                    |
+| Tad Ashlock                                         | mthesaur                       |
+| Tadamegu Furukawa                                   | cmd-mode                       |
+| Taiki SUGAWARA                                      | highlight-cl                   |
+| Taiki SUGAWARA                                      | lcomp                          |
+| Taiki SUGAWARA                                      | paint                          |
+| Taiki SUGAWARA                                      | trans-regions                  |
+| Taiki SUGAWARA                                      | vline                          |
+| Takashi MITSUISHI                                   | mail-cmple-addr                |
+| Takeshi Banse                                       | el-swank-fuzzy                 |
+| Tamas Patrovics                                     | autoinfo                       |
+| Tamas Patrovics                                     | pushy                          |
+| Tamas Patrovics                                     | timid                          |
+| Tassilo Horn                                        | exec-abbrev-cmd                |
+| Teemu Likonen                                       | ergo-movement-mode             |
+| Thierry Volpiatto                                   | warn-mail                      |
+| ThierryVolpiatto                                    | thumb-page                     |
+| Thomas Alexander Gerds                              | ess-edit                       |
+| Thomas Alexander Gerds                              | latex-frame-mode               |
+| Thomas Alexander Gerds                              | muse-ess                       |
+| Tim Read                                            | ansys-mod                      |
+| Tobias.Naehring                                     | cexp                           |
+| Tobias.Naehring                                     | msearch                        |
+| Tom Wurgler, Bill Benedetto                         | etop                           |
+| Trey Jackson                                        | framemove                      |
+| Trey Jackson                                        | rmail-extras                   |
+| U-ITIHQ\Tobias.Naehring                             | calc-inline                    |
+| Uwe Brauer                                          | wikipedia-mode                 |
+| Vegard Øye                                          | viper-in-more-modes            |
+| Vektor                                              | layout-restore                 |
+| Victor Ren                                          | windows-path                   |
+| Vinicius Jose Latorre                               | ascii                          |
+| Vinicius Jose Latorre                               | blank-mode                     |
+| Vinicius Jose Latorre                               | dialog                         |
+| Vinicius Jose Latorre                               | highline                       |
+| Vinicius Jose Latorre                               | rational                       |
+| Vinicius Jose Latorre                               | spell-number                   |
+| Vinicius Jose Latorre                               | switch-file                    |
+| Vinicius Jose Latorre                               | sys                            |
+| Vinicius Jose Latorre                               | versions                       |
+| Vinicius Jose Latorre                               | xray                           |
+| Wenbin                                              | tempo-x                        |
+| Yan Tang                                            | ebs                            |
+| Ye Wenbin                                           | compile-dwim                   |
+| Ye Wenbin                                           | emoticons                      |
+| Ye Wenbin                                           | muse-tree                      |
+| Ye Wenbin                                           | perlcritic                     |
+| Ye Wenbin                                           | php-doc                        |
+| Ye Wenbin                                           | rss                            |
+| Ye Wenbin                                           | shell-completion               |
+| Ye Wenbin                                           | template-simple                |
+| Yen-Chin,Lee                                        | auto-complete-etags            |
+| Yen-Chin,Lee                                        | auto-complete-verilog          |
+| Yoni Rabkin                                         | el-markup                      |
+| Yoni Rabkin                                         | stuffcast                      |
+| Yoshida Masato                                      | gnus-spotlight                 |
+| Yuto Hayamizu                                       | widen-window                   |
+| Zajcev Evgeny                                       | moikrug                        |
+| ahei                                                | auto-complete+                 |
+| ahei                                                | linum+                         |
+| ffrances                                            | kis-interface                  |
+| ffrances                                            | kis-project                    |
+| hhalvors at princeton dot edu                       | amazon                         |
+| jonnay                                              | emdroid                        |
+| kahlil (kal) hodgson                                | alt-font-menu                  |
+| khiker                                              | dabbrev-expand-multiple        |
+| khiker                                              | elscreen-edit-server           |
+| khiker                                              | html-parse                     |
+| khiker                                              | lua-block                      |
+| khiker                                              | parenthesis                    |
+| khiker                                              | ruby-block                     |
+| mulander                                            | blip                           |
+| none, if you want be a maintainer please e-mail me. | mcskels                        |
+| none, mail me if you want to maintain this code.    | buqis                          |
+| none, mail me if you want to maintain this code.    | wl-list                        |
+| raman                                               | atom-blogger                   |
+| rubikitch                                           | anything-kyr                   |
+| rubikitch                                           | anything-kyr-config            |
+| rubikitch                                           | auto-install                   |
+| rubikitch                                           | d-insert-assert                |
+| rubikitch                                           | d-insert-import                |
+| rubikitch                                           | display-buffer-for-wide-screen |
+| rubikitch                                           | display-hatebu                 |
+| rubikitch                                           | eijiro                         |
+| rubikitch                                           | el-expectations                |
+| rubikitch                                           | eldoc-extension                |
+| rubikitch                                           | emacs-init-check               |
+| rubikitch                                           | icicles-iswitchb               |
+| rubikitch                                           | install-elisp                  |
+| rubikitch                                           | lispxmp                        |
+| rubikitch                                           | minor-mode-hack                |
+| rubikitch                                           | mode-line-frame                |
+| rubikitch                                           | recentf-ext                    |
+| rubikitch                                           | screenshot                     |
+| rubikitch                                           | sequential-command             |
+| rubikitch                                           | space-chord                    |
+| rubikitch                                           | sticky                         |
+| rubikitch                                           | unify-buffer                   |
+| rubikitch                                           | usage-memo                     |
+| thorne                                              | rep-words                      |
+| thorne                                              | wc                             |
+| tie-mode at tensilica dot com                       | tie-mode                       |
+| tkld                                                | mail-signature                 |
+| wandad guscheh                                      | vhdl-process-wave              |
+| Ævar Arnfjörð Bjarmason                             | emms-seek-minor-mode           |
