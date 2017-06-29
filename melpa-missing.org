@@ -2,31 +2,15 @@
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
   (require 'emir)
-
-  (defun emir--melpa-missing (predicate)
-    (cl-set-difference
-     (epkgs 'name predicate)
-     (mapcar #'car (epkg-sql [:select name :from melpa-recipes]))
-     :test #'equal))
-
-  (defun emir--mirror-link (pkg)
-    (if (oref pkg repopage-format)
-	(format "[[%s][%s/%s]]"
-		(oref pkg repopage)
-		(oref pkg upstream-user)
-		(oref pkg upstream-name))
-      (--if-let (or (oref pkg repopage)
-                    (oref pkg homepage))
-          (format "[[%s]]" it)
-	"")))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 * Github
 #+NAME: missing-github
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Link")
-    (--map (list it (emir--mirror-link (epkg it)))
-           (emir--melpa-missing 'epkg-github-package)))
+  (epkg-with-org-header ("Package" "Link")
+    (--keep (and (not (melpa-get it))
+                 (list it (epkg-org-link it)))
+	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
 | Package (622)                | Link                                    |
@@ -657,18 +641,20 @@
 * Gitlab
 #+NAME: missing-gitlab
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Link")
-    (--map (list it (emir--mirror-link (epkg it)))
-           (emir--melpa-missing 'epkg-gitlab-package)))
+  (epkg-with-org-header ("Package" "Link")
+    (--keep (and (not (melpa-get it))
+                 (list it (epkg-org-link it)))
+	    (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
 
 * Git
 #+NAME: missing-git
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Link")
-    (--map (list it (emir--mirror-link (epkg it)))
-           (emir--melpa-missing 'epkg-git-package)))
+  (epkg-with-org-header ("Package" "Link")
+    (--keep (and (not (melpa-get it))
+                 (list it (epkg-org-link it)))
+	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
 | Package (21)        | Link                                                                   |
@@ -698,9 +684,10 @@
 * Bitbucket
 #+NAME: missing-bitbucket
 #+BEGIN_SRC emacs-lisp
-(emir--with-org-header ("Package" "Link")
-  (--map (list it (emir--mirror-link (epkg it)))
-         (emir--melpa-missing 'epkg-bitbucket-package)))
+  (epkg-with-org-header ("Package" "Link")
+    (--keep (and (not (melpa-get it))
+                 (list it (epkg-org-link it)))
+	    (epkgs 'name 'epkg-bitbucket-package)))
 #+END_SRC
 #+RESULTS: missing-bitbucket
 | Package (8)        | Link                           |

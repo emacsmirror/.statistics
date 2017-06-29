@@ -2,33 +2,6 @@
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
   (require 'emir)
-
-  (defun emir--melpa-link (name)
-    (-let [(fetcher repo repopage url)
-           (car (epkg-sql [:select [fetcher repo repopage url]
-                           :from melpa-recipes
-                           :where (= name $s1)]
-                          name))]
-      (if (memq fetcher '(github gitlab bitbucket))
-          (format "[[%s][%s]]" repopage repo)
-        (--if-let (or repopage
-                      (and url
-                           (string-match-p "\\`https?://" url)
-                           (replace-regexp-in-string "\\.git\\'" "" url)))
-            (format "[[%s]]" it)
-          ""))))
-
-  (defun emir--mirror-link (pkg)
-    (if (oref pkg repopage-format)
-        (format "[[%s][%s/%s]]"
-                (oref pkg repopage)
-                (oref pkg upstream-user)
-                (oref pkg upstream-name))
-      (--if-let (or (oref pkg repopage)
-                    (oref pkg homepage))
-          (format "[[%s]]" it)
-        "")))
-
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 * Summary
@@ -37,17 +10,17 @@
   (require 'finder-inf)
   (let* ((builtin      (length package--builtins))
          (builtin-emir (length (epkgs 'name 'epkg-builtin-package-p)))
-         (builtin-elpa (length (epkg-sql [:select *
-                                          :from gelpa-packages
-                                          :where (= type ':core)])))
-         (elpa         (length (epkg-sql [:select *
-                                          :from gelpa-packages
-                                          :where type :in $v1
-                                          :and (isnull unreleased)]
-                                         [:dir :subtree])))
-         (elpa-branch  (length (epkg-sql [:select *
-                                          :from gelpa-packages
-                                          :where (= type ':external)])))
+         (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
+                                          :where class :in $v1]
+                                         [builtin])))
+         (elpa         (length (epkg-sql [:select * :from gelpa-recipes
+                                          :where class :in $v1
+                                          :and (notnull released)]
+                                         [subtree])))
+         (elpa-branch  (length (epkg-sql [:select * :from gelpa-recipes
+                                          :where class :in $v1
+                                          :and (notnull released)]
+                                         [external])))
          (shelved      (length (epkgs 'name 'epkg-shelved-package-p)))
          (table `(("Archive/Type" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
                   hline
@@ -79,7 +52,7 @@
     (dolist (class (epkgs 'class 'epkg-mirrored-package--eieio-childp))
       (cl-incf (nth 1 (assq class table)))
       (cl-incf (nth 2 (assq class table))))
-    (dolist (fetcher (epkg-sql [:select fetcher :from melpa-recipes]))
+    (dolist (fetcher (epkg-sql [:select class :from melpa-recipes]))
       (cl-incf (nth 6 (assq (car fetcher) table))))
     `(,@table
       ("total"
@@ -95,9 +68,9 @@
 #+RESULTS: summary
 | Archive/Type | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |--------------+------+--------+-------+-------+-------+-------|
-| builtin      |  423 |        |       |   426 |     5 |       |
-| elpa         |   93 |     93 |       |       |   138 |       |
-| elpa-branch  |    7 |      7 |       |       |    12 |       |
+| builtin      |  423 |        |       |   426 |     6 |       |
+| elpa         |   93 |     93 |       |       |   148 |       |
+| elpa-branch  |    7 |      7 |       |       |    13 |       |
 |--------------+------+--------+-------+-------+-------+-------|
 | github       | 3795 |   3795 |       |       |       |  3369 |
 | gitlab       |   26 |     26 |       |       |       |    26 |
@@ -120,38 +93,16 @@
 | orphaned     |   59 |     59 |       |       |       |       |
 | shelved      |  972 |        |   972 |       |       |       |
 |--------------+------+--------+-------+-------+-------+-------|
-| total        | 6553 |   5158 |   972 |   426 |   155 |  3652 |
+| total        | 6553 |   5158 |   972 |   426 |   167 |  3652 |
 
 * Emacs
-** New
-#+NAME: builtin-new
-#+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package")
-    (epkg-sql [:select :distinct [builtin-libraries:closql-id]
-               :from [packages builtin-libraries]
-               :where (isnull packages:class)
-               :order-by [(asc builtin-libraries:closql-id)]]))
-#+END_SRC
-#+RESULTS: builtin-new
-
-** Removed
-#+NAME: builtin-removed
-#+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package")
-    (epkg-sql [:select :distinct [packages:name]
-               :from [packages builtin-libraries]
-               :where (isnull builtin-libraries:closql-id)
-               :order-by [(asc packages:name)]]))
-#+END_SRC
-#+RESULTS: builtin-removed
-
 ** Prefer elpa
 #+NAME: builtin-prefer-elpa
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type")
+  (epkg-with-org-header ("Package" "Type")
     (epkg-sql [:select :distinct [packages:name packages:class]
                :from [packages builtin-libraries]
-               :where (= packages:name builtin-libraries:closql-id)
+               :where (= packages:name builtin-libraries:package)
                :and packages:class :in $v1
                :order-by [(asc packages:name)]]
               [elpa elpa-branch]))
@@ -165,10 +116,10 @@
 ** Prefer upstream
 #+NAME: builtin-prefer-upstream
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type")
+  (epkg-with-org-header ("Package" "Type")
     (epkg-sql [:select :distinct [packages:name packages:class]
                :from [packages builtin-libraries]
-               :where (= packages:name builtin-libraries:closql-id)
+               :where (= packages:name builtin-libraries:package)
                :and packages:class :not :in $v1
                :order-by [(asc packages:name)]]
               [builtin elpa elpa-branch]))
@@ -182,10 +133,10 @@
 ** New
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type")
-    (epkg-sql [:select [name type]
+  (epkg-with-org-header ("Package" "Type")
+    (epkg-sql [:select [name class]
                :from gelpa-recipes
-               :where (= status 'new)
+               :where (isnull epkg-package)
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: gelpa-new
@@ -193,14 +144,31 @@
 ** Pending
 #+NAME: gelpa-pending
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Reason")
-    (--filter (assoc (car it) emir-pending-packages)
-              (epkg-sql [:select [name]
-                         :from gelpa-recipes
-                         :where (= status 'pending)
-                         :order-by [(asc name)]])))
+  (epkg-with-org-header ("Package" "Reason")
+    (--keep (assoc (car it) emir-pending-packages)
+            (epkg-sql [:select [name]
+                       :from gelpa-recipes
+                       :where (isnull epkg-package)
+                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
+
+** Unreleased
+#+NAME: gelpa-unreleased
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Class")
+    (epkg-sql [:select [name class] :from gelpa-recipes
+               :where class :in $v1
+               :and (isnull released)]
+              [subtree external])))
+#+END_SRC
+#+RESULTS: gelpa-unreleased
+| Package (4)      | Class   |
+|------------------+---------|
+| package-fixes    | subtree |
+| shell-quasiquote | subtree |
+| sm-c-mode        | subtree |
+| systemd          | subtree |
 
 ** Special cases
 
@@ -211,18 +179,17 @@
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Reason")
-    (let ((externals (emir-gelpa--externals)))
-      (mapcar (-lambda ((name))
-                (or (and (equal (cadr (assoc name externals)) :core)
-                         (list name "Elpa has copy of builtin"))
-                    (assoc name emir--preferred-builtins)
-                    (list name "")))
-              (epkg-sql [:select :distinct [packages:name]
-                         :from [packages gelpa-recipes]
-                         :where (= packages:name gelpa-recipes:closql-id)
-                         :and (= packages:class 'builtin)
-                         :order-by [(asc packages:name)]]))))
+  (epkg-with-org-header ("Package" "Reason")
+    (mapcar (-lambda ((name))
+              (or (and (gelpa-builtin-recipe-p (gelpa-get name))
+                       (list name "Elpa has copy of builtin"))
+                  (assoc name emir--preferred-builtins)
+                  (list name "")))
+            (epkg-sql [:select :distinct [packages:name]
+                       :from [packages gelpa-recipes]
+                       :where (= packages:name gelpa-recipes:name)
+                       :and (= packages:class 'builtin)
+                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
 | Package (7) | Reason                         |
@@ -238,122 +205,118 @@
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Gelpa" "Method" "Reason" "Link")
-    (mapcar (-lambda ((name type gelpa method))
-              (list name type gelpa
-                    (or method "")
-                    (or (cadr (assoc name emir--preferred-upstreams)) "")
-                    (emir--mirror-link (epkg name))))
+  (epkg-with-org-header ("Package" "Type" "Gelpa" "Link")
+    (mapcar (-lambda ((name class gelpa))
+              (list name class gelpa (epkg-org-link name)))
             (epkg-sql [:select :distinct [packages:name
                                           packages:class
-                                          gelpa-recipes:type
-                                          gelpa-recipes:method]
+                                          gelpa-recipes:class]
                        :from [packages gelpa-recipes]
-                       :where (= packages:name gelpa-recipes:closql-id)
+                       :where (= packages:name gelpa-recipes:epkg-package)
                        :and packages:class :not :in $v1
                        :order-by [(asc packages:name)]]
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (58)               | Type     | Gelpa     | Method   | Reason               | Link                                         |
-|----------------------------+----------+-----------+----------+----------------------+----------------------------------------------|
-| ace-window                 | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
-| ack                        | github   | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
-| aggressive-indent          | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
-| ahungry-theme              | github   | :subtree! | :squash  |                      | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
-| async                      | github   | :subtree! | :squash  | squash               | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
-| avy                        | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
-| beacon                     | github   | :subtree! | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
-| bug-hunter                 | github   | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
-| cl-print                   | minority | :core     | :merge   |                      |                                              |
-| coffee-mode                | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67443674][#34#67443674]]         | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
-| company                    | github   | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
-| company-math               | github   | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
-| company-statistics         | github   | :subtree! | :squash  | squash               | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
-| dash                       | github   | :external |          | external             | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
-| dbus-codegen               | github   | :subtree  | :squash  | squash               | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
-| delight                    | git      | :subtree  | :merge   |                      | [[https://savannah.nongnu.org/projects/delight]] |
-| diff-hl                    | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                               |
-| diffview                   | github   | :subtree  | :merge   |                      | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
-| dts-mode                   | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164455502][#69#164455502]]        | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
-| easy-kill                  | github   | :subtree  | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164356304][melpa#3383#164356304]] | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
-| eldoc-eval                 | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
-| electric-spacing           | github   | :subtree! | :merge   | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164462609][#69#164462609]]        | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
-| ergoemacs-mode             | github   | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164897071][melpa#3383#164897071]] | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
-| exwm                       | github   | :external |          | external             | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
-| ggtags                     | github   | :subtree  | :merge   | [[https://github.com/leoliu/sokoban/issues/2][leoliu/sokoban#2]]     | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
-| gnorb                      | github   | :subtree  | :squash  | squash               | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
-| highlight-escape-sequences | github   | :subtree  | :merge   |                      | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
-| hydra                      | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
-| hyperbole                  | git      | :external |          |                      | [[http://www.gnu.org/software/hyperbole]]        |
-| ioccur                     | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67275846][#34#67275846]]         | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
-| ivy                        | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
-| js2-mode                   | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67203059][#34#67203059]]         | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
-| json-mode                  | github   | :subtree! | :merge   |                      | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
-| load-relative              | github   | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
-| loc-changes                | github   | :subtree! | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
-| loccur                     | github   | :subtree! | :squash! | squash               | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
-| math-symbol-lists          | github   | :subtree  | :squash  | squash [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164841865][#69#164841865]] | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                     |
-| nameless                   | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
-| names                      | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
-| on-screen                  | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164450677][#69#164450677]]        | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
-| org                        | git      | :core     |          |                      | [[http://orgmode.org]]                           |
-| pabbrev                    | github   | :external |          | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164418230][melpa#3383#164418230]] | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
-| parsec                     | github   | :subtree  | :squash  |                      | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
-| realgud                    | github   | :subtree! | :squash  |                      | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
-| rich-minority              | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
-| sotlisp                    | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
-| spinner                    | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383][melpa#3383]]           | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
-| systemd                    | github   | :subtree! | :merge   |                      | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
-| test-simple                | github   | :subtree  | :squash  | [[https://github.com/emacsmirror/p.old/issues/69#issuecomment-164446621][#69#164446621]]        | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
-| tiny                       | github   | :subtree! | :squash  | squash               | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
-| undo-tree                  | git      | :subtree! | :squash! | squash               | [[http://www.dr-qubit.org/emacs.php]]            |
-| vlf                        | github   | :subtree! | :merge   | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164299250][melpa#3383#164299250]] | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
-| wcheck-mode                | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68142129][#34#68142129]]         | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
-| web-server                 | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/pull/3394][melpa#3394]]           | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
-| websocket                  | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-68123453][#34#68123453]]         | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
-| xelb                       | github   | :external |          | external             | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
-| yasnippet                  | github   | :subtree  | :merge   | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
-| ztree                      | github   | :subtree  | :squash  | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
+| Package (58)               | Type     | Gelpa    | Link                                         |
+|----------------------------+----------+----------+----------------------------------------------|
+| ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
+| ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
+| aggressive-indent          | github   | subtree  | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
+| ahungry-theme              | github   | subtree  | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
+| async                      | github   | subtree  | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
+| avy                        | github   | subtree  | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
+| beacon                     | github   | subtree  | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
+| bug-hunter                 | github   | subtree  | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
+| cl-print                   | minority | builtin  |                                              |
+| coffee-mode                | github   | subtree  | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
+| company                    | github   | subtree  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
+| company-math               | github   | subtree  | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
+| company-statistics         | github   | subtree  | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
+| dash                       | github   | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
+| dbus-codegen               | github   | subtree  | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
+| delight                    | git      | subtree  | [[https://savannah.nongnu.org/projects/delight]] |
+| diff-hl                    | github   | subtree  | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                               |
+| diffview                   | github   | subtree  | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
+| dts-mode                   | github   | subtree  | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
+| easy-kill                  | github   | subtree  | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
+| eldoc-eval                 | github   | subtree  | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
+| electric-spacing           | github   | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
+| ergoemacs-mode             | github   | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
+| exwm                       | github   | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
+| ggtags                     | github   | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
+| gnorb                      | github   | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
+| highlight-escape-sequences | github   | subtree  | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
+| hydra                      | github   | subtree  | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
+| hyperbole                  | git      | external | [[http://www.gnu.org/software/hyperbole]]        |
+| ioccur                     | github   | subtree  | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
+| ivy                        | github   | subtree  | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
+| js2-mode                   | github   | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
+| json-mode                  | github   | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
+| load-relative              | github   | subtree  | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
+| loc-changes                | github   | subtree  | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
+| loccur                     | github   | subtree  | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
+| math-symbol-lists          | github   | subtree  | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                     |
+| nameless                   | github   | subtree  | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
+| names                      | github   | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
+| on-screen                  | github   | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
+| org                        | git      | builtin  | [[http://orgmode.org]]                           |
+| pabbrev                    | github   | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
+| parsec                     | github   | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
+| realgud                    | github   | subtree  | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
+| rich-minority              | github   | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
+| sotlisp                    | github   | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
+| spinner                    | github   | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
+| systemd                    | github   | subtree  | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
+| test-simple                | github   | subtree  | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
+| tiny                       | github   | subtree  | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
+| undo-tree                  | git      | subtree  | [[http://www.dr-qubit.org/emacs.php]]            |
+| vlf                        | github   | subtree  | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
+| wcheck-mode                | github   | subtree  | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
+| web-server                 | github   | subtree  | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
+| websocket                  | github   | subtree  | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
+| xelb                       | github   | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
+| yasnippet                  | github   | subtree  | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
+| ztree                      | github   | subtree  | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
 
 * Melpa
 ** New
 #+NAME: melpa-new
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Link")
-    (mapcar (-lambda ((name fetcher))
-              (list name
-                    fetcher
-                    (emir--melpa-link name)))
-            (epkg-sql [:select [name fetcher]
-                       :from melpa-recipes
-                       :where (= status 'new)
-                       :order-by [(asc name)]])))
+  (epkg-with-org-header ("Package" "Type" "Link")
+    (-keep (-lambda ((name class url))
+             (and (not (or (emir--lookup-url url)
+                           (cadr (assoc name emir-secondary-packages))))
+                  (list name class (melpa-org-link name))))
+           (epkg-sql [:select [name class url]
+                      :from melpa-recipes
+                      :where (isnull epkg-package)
+                      :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
 
 ** Pending
 #+NAME: melpa-pending
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Reason")
-    (--map (assoc (car it) emir-pending-packages)
-           (epkg-sql [:select [name]
-                      :from melpa-recipes
-                      :where (= status 'pending)
-                      :order-by [(asc name)]])))
+  (epkg-with-org-header ("Package" "Reason")
+    (--keep (assoc (car it) emir-pending-packages)
+            (epkg-sql [:select [name]
+                       :from melpa-recipes
+                       :where (isnull epkg-package)
+                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
 
 ** Shared repositories
 #+NAME: secondary-packages
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Primary package" "Secondary package" "Type")
+  (epkg-with-org-header ("Primary package" "Secondary package" "Type")
     (epkg-sql [:select :distinct [packages:name
                                   melpa-recipes:name
                                   packages:class]
                :from [packages melpa-recipes]
-               :where (= packages:name melpa-recipes:closql-id)
-               :and :not (= melpa-recipes:closql-id
+               :where (= packages:name melpa-recipes:epkg-package)
+               :and :not (= melpa-recipes:epkg-package
                             melpa-recipes:name)
                :order-by [(asc packages:name)
                           (asc melpa-recipes:name)]]))
@@ -482,17 +445,17 @@
 ** Diverging repositories
 #+NAME: melpa-diverging-repositories
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Mirror" "Melpa")
+  (epkg-with-org-header ("Package" "Mirror" "Melpa")
     (-keep (-lambda ((name))
              (list name
-                   (emir--mirror-link (epkg name))
-                   (emir--melpa-link name)))
+                   (epkg-org-link  name)
+                   (melpa-org-link name)))
            (epkg-sql [:select :distinct [packages:name]
                       :from [packages melpa-recipes]
-                      :where    (= melpa-recipes:closql-id packages:name)
-                      :and      (= melpa-recipes:closql-id melpa-recipes:name)
-                      :and      (= melpa-recipes:fetcher  'github)
-                      :and      (= packages:class         'github)
+                      :where    (= melpa-recipes:epkg-package packages:name)
+                      :and      (= melpa-recipes:epkg-package melpa-recipes:name)
+                      :and      (= melpa-recipes:class       'github)
+                      :and      (= packages:class            'github)
                       :and :not (= packages:url melpa-recipes:url)
                       :order-by [(asc packages:name)]])))
 #+END_SRC
@@ -501,7 +464,7 @@
 ** Diverging types
 #+NAME: melpa-diverging-types
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Melpa" "Reason")
+  (epkg-with-org-header ("Package" "Type" "Melpa" "Reason")
     (-keep (-lambda ((name class fetcher repo))
              (and (not (or (and (eq class 'subtree)  (eq fetcher 'github))
                            (and (eq class 'subtree)  (eq fetcher 'git))
@@ -509,15 +472,15 @@
                            (and (eq class 'file)     (eq fetcher 'github)
                                 (string-prefix-p "emacsmirror/" repo))))
                   (list name class fetcher
-                        (or (cadr (assoc name emir--diverging-reason)) ""))))
+                        (cadr (assoc name emir--diverging-reason)))))
            (epkg-sql [:select :distinct [packages:name
                                          packages:class
-                                         melpa-recipes:fetcher
+                                         melpa-recipes:class
                                          melpa-recipes:repo]
                       :from [packages melpa-recipes]
-                      :where    (= melpa-recipes:closql-id packages:name)
-                      :and      (= melpa-recipes:closql-id melpa-recipes:name)
-                      :and :not (= melpa-recipes:fetcher   packages:class)
+                      :where    (= melpa-recipes:epkg-package packages:name)
+                      :and      (= melpa-recipes:epkg-package melpa-recipes:name)
+                      :and :not (= melpa-recipes:class        packages:class)
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types

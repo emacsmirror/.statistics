@@ -17,10 +17,10 @@
         (-if-let (elt (assq feature alist))
             (push name (cdr elt))
           (cl-pushnew (list feature name) alist))))
-    (emir--with-org-header ("Feature" "Package" "Shelved")
+    (epkg-with-org-header ("Feature" "Package" "Shelved")
       (mapcar (-lambda ((feature package))
                 (list feature package
-                      (or (epkg-shelved-package-p (epkg package)) "")))
+                      (epkg-shelved-package-p (epkg package))))
               (-mapcat (-lambda ((feature . providers))
                          (and (> (length providers) 1)
                               (list (list feature providers))
@@ -33,7 +33,7 @@
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Feature" "Shelved")
+  (epkg-with-org-header ("Package" "Type" "Feature" "Shelved")
     (-mapcat
      (-lambda ((name class))
        (let (alist)
@@ -50,7 +50,7 @@
                    (push (list feature provider) alist))
                (push (list feature nil) alist))))
 	 (mapcar (-lambda ((feature provider))
-                   (list name class feature (or provider "")))
+                   (list name class feature provider))
 		 (cl-sort alist #'string< :key #'car))))
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC

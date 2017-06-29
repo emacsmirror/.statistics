@@ -2,20 +2,21 @@
 [[https://emacsmirror.net/stats][up]]
 #+NAME: overview
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Mirror" "Melpa" "Reason")
+  (epkg-with-org-header ("Package" "Mirror" "Melpa" "Reason")
     (--map (-let* ((name (cdr (assq 'name it)))
-		   (epkg (epkg name))
-		   ((fetcher repo)
-		    (emir--melpa-get name [fetcher repo])))
-	     (list name
-		   (if epkg (epkg-type epkg) "")
-		   (if (string-prefix-p "emacsorphanage/" repo)
-		       "orphaned"
-		     (or fetcher ""))
-		   (or (cadr (assoc name emir--orphanage-reason)) "")))
-	   (cl-sort (let ((ghub-unpaginate t))
-		      (ghub-get "/orgs/emacsorphanage/repos"))
-		    #'string< :key (lambda (it) (cdr (assq 'name it))))))
+                   (pkg  (epkg name))
+                   (rcp  (melpa-get name)))
+             (list name
+                   (if pkg (closql--abbrev-class (eieio-object-class pkg)) "")
+                   (if rcp
+                       (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
+                           "orphaned"
+                         (closql--abbrev-class (eieio-object-class rcp)))
+                     "")
+                   (or (cadr (assoc name emir--orphanage-reason)) "")))
+           (cl-sort (let ((ghub-unpaginate t))
+                      (ghub-get "/orgs/emacsorphanage/repos"))
+                    #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
 | Package (61)     | Mirror   | Melpa    | Reason                      |

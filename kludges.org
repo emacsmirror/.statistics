@@ -7,7 +7,7 @@
 * Add provided features
 #+NAME: provided-join
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Feature" "Reason")
+  (epkg-with-org-header ("Package" "Type" "Feature" "Reason")
     (epkg-sql [:select [name class feature join]
                :from [packages provided]
                :where (and (= name package) (notnull join))
@@ -32,7 +32,7 @@
 * Drop provided features
 #+NAME: provided-drop
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Feature" "Reason")
+  (epkg-with-org-header ("Package" "Type" "Feature" "Reason")
     (epkg-sql [:select [name class feature drop]
                :from [packages provided]
                :where (and (= name package) (notnull drop))
@@ -91,7 +91,7 @@
 * Drop required features
 #+NAME: required-drop
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Feature" "Reason")
+  (epkg-with-org-header ("Package" "Type" "Feature" "Reason")
     (epkg-sql [:select [name class feature drop]
                :from [packages required]
                :where (and (= name package) (notnull drop))
@@ -205,16 +205,15 @@
 * Set main library
 #+NAME: no-mainlib
 #+BEGIN_SRC emacs-lisp
-   (emir--with-org-header ("Package" "Type" "Library" "Reason")
-     (mapcar (-lambda ((name type library))
-               (list name type library
-                     (or (cadr (assoc name emir--library-reason)) "")))
+  (epkg-with-org-header ("Package" "Type" "Library" "Reason")
+    (mapcar (-lambda ((name type library))
+              (list name type library
+                    (cadr (assoc name emir--library-reason))))
             (epkg-sql [:select [name class library] :from packages
                        :where (notnull library)
                        :and class :in $v1
                        :order-by [(asc name)]]
                       (closql--where-class-in
-                       (epkg-db)
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
@@ -244,7 +243,7 @@
 * Set libraries
 #+NAME: slot--libraries
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Library")
+  (epkg-with-org-header ("Package" "Type" "Library")
     (epkg-sql [:select [name class libraries:library]
                :from [packages libraries]
                :where (= name package)
@@ -252,7 +251,6 @@
                :order-by [(asc package)
                           (asc libraries:library)]]
               (closql--where-class-in
-               (epkg-db)
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--libraries
@@ -293,13 +291,12 @@
 * Set branch
 #+NAME: slot--upstream-branch
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Package" "Type" "Branch")
+  (epkg-with-org-header ("Package" "Type" "Branch")
     (epkg-sql [:select [name class upstream-branch] :from packages
                :where (notnull upstream-branch)
                :and class :in $v1
                :order-by [(asc name)]]
               (closql--where-class-in
-               (epkg-db)
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch

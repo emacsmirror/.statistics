@@ -3,13 +3,13 @@
 
 * Wiki packages required by no-wiki packages
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Dependee" "Author" "Depender" "Fetcher" "Author")
+  (epkg-with-org-header ("Dependee" "Author" "Depender" "Fetcher" "Author")
     (-mapcat
      (-lambda ((dependee _dependee-type))
        (let ((dependee-pkg (epkg dependee)))
 	 (-mapcat (-lambda ((depender . _))
 		    (let ((depender-pkg  (epkg depender))
-			  (depender-type (caar (epkg-sql [:select fetcher
+			  (depender-type (caar (epkg-sql [:select class
 							  :from melpa-recipes
 							  :where (= name $s1)]
 							 depender))))
@@ -17,18 +17,17 @@
 			   (not (eq depender-type 'wiki))
 			   ;; (not (epkg-wiki-package-p depender-pkg))
 			   (list (list dependee
-				       (or (caar (oref dependee-pkg authors))"")
+				       (caar (oref dependee-pkg authors))
 				       depender
 				       ;; (epkg-type depender-pkg)
 				       depender-type
-				       (or (caar (oref depender-pkg authors))"")
-				       )))
-		      ))
+				       (caar (oref depender-pkg authors))
+				       )))))
 		  (epkg-reverse-dependencies dependee))))
      ;; (epkgs [name class] 'epkg-wiki-package-p))
      (epkg-sql [:select :distinct [packages:name packages:class]
 		:from [packages melpa-recipes]
-		:where (= packages:name melpa-recipes:closql-id)
+		:where (= packages:name melpa-recipes:epkg-package)
 		:and   (= packages:class 'wiki)
 		:order-by [(asc packages:name)
                            (asc melpa-recipes:name)]])))
@@ -58,12 +57,12 @@
 
 * Wiki packages on Melpa
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Author" "Package")
+  (epkg-with-org-header ("Author" "Package")
     (cl-sort (mapcar (-lambda ((name))
 		       (list (or (caar (oref (epkg name) authors)) "")
 			     name))
 		     (epkg-sql [:select name :from melpa-recipes
-				:where (= fetcher 'wiki)
+				:where (= class 'wiki)
 				:order-by [(asc name)]]))
 	     #'string< :key #'car))
 
@@ -231,7 +230,7 @@
 
 * Wiki packages on the Emacsmirror
 #+BEGIN_SRC emacs-lisp
-  (emir--with-org-header ("Author" "Package")
+  (epkg-with-org-header ("Author" "Package")
     (cl-sort (mapcar (lambda (pkg)
 		       (list (or (caar (oref pkg maintainers))
 				 (caar (oref pkg authors))
