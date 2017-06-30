@@ -87,13 +87,13 @@
 | svn         |      |        |       |       |       |     9 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  735 |    735 |       |       |       |   156 |
-| file        |  286 |    286 |       |       |       |       |
-| minority    |   32 |     32 |       |       |       |       |
+| file        |  279 |    279 |       |       |       |       |
+| minority    |   30 |     30 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   59 |     59 |       |       |       |       |
-| shelved     |  974 |        |   974 |       |       |       |
+| shelved     |  983 |        |   983 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6570 |   5173 |   974 |   426 |   167 |  3663 |
+| total       | 6570 |   5164 |   983 |   426 |   167 |  3663 |
 
 * Emacs
 ** Prefer elpa
@@ -505,7 +505,7 @@
 | dsvn                  | minority | svn       | svn                           |
 | google-c-style        | minority | github    | mostly non-elisp              |
 | helm-ls-svn           | minority | svn       | svn                           |
-| llvm-mode             | minority | git       | mostly non-elisp              |
+| llvm-mode             | shelved  | git       | mostly non-elisp              |
 | nemerle               | minority | github    | mostly non-elisp              |
 | ninja-mode            | minority | github    | mostly non-elisp              |
 | ox-clip               | minority | github    | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] |
