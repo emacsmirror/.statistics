@@ -22,8 +22,8 @@ SYNC += --exclude "index.html"
 HTML   = compare.html
 HTML  += emacsorphanage.html
 HTML  += emacswiki.html
-HTML  += kludges.html
 HTML  += issues.html
+HTML  += kludges.html
 HTML  += melpa-missing.html
 
 BABEL  = notes.org $(HTML:.html=.org)
