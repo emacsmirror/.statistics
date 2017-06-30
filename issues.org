@@ -33,7 +33,7 @@
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Type" "Feature" "Shelved")
+  (epkg-with-org-header ("Package" "Class" "Feature" "Shelved")
     (-mapcat
      (-lambda ((name class))
        (let (alist)

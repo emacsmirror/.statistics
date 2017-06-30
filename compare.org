@@ -22,7 +22,7 @@
                                           :and (notnull released)]
                                          [external])))
          (shelved      (length (epkgs 'name 'epkg-shelved-package-p)))
-         (table `(("Archive/Type" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
+         (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
                   hline
                   (builtin     ,builtin-emir "" "" ,builtin ,builtin-elpa "")
                   (elpa        0  0  "" "" ,elpa "")
@@ -66,40 +66,40 @@
                            table)))))
 #+END_SRC
 #+RESULTS: summary
-| Archive/Type | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
-|--------------+------+--------+-------+-------+-------+-------|
-| builtin      |  423 |        |       |   426 |     6 |       |
-| elpa         |   98 |     98 |       |       |   148 |       |
-| elpa-branch  |    7 |      7 |       |       |    13 |       |
-|--------------+------+--------+-------+-------+-------+-------|
-| github       | 3806 |   3806 |       |       |       |  3381 |
-| gitlab       |   26 |     26 |       |       |       |    26 |
-| git          |   56 |     56 |       |       |       |    44 |
-| subtree      |   23 |     23 |       |       |       |       |
-|--------------+------+--------+-------+-------+-------+-------|
-| bitbucket    |   44 |     44 |       |       |       |    38 |
-| hg           |    1 |      1 |       |       |       |     1 |
-|--------------+------+--------+-------+-------+-------+-------|
-| bzr          |      |        |       |       |       |     2 |
-| cvs          |      |        |       |       |       |     4 |
-| darcs        |      |        |       |       |       |     2 |
-| fossil       |      |        |       |       |       |     0 |
-| svn          |      |        |       |       |       |     9 |
-|--------------+------+--------+-------+-------+-------+-------|
-| wiki         |  735 |    735 |       |       |       |   156 |
-| file         |  286 |    286 |       |       |       |       |
-| minority     |   32 |     32 |       |       |       |       |
-|--------------+------+--------+-------+-------+-------+-------|
-| orphaned     |   59 |     59 |       |       |       |       |
-| shelved      |  974 |        |   974 |       |       |       |
-|--------------+------+--------+-------+-------+-------+-------|
-| total        | 6570 |   5173 |   974 |   426 |   167 |  3663 |
+|             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
+|-------------+------+--------+-------+-------+-------+-------|
+| builtin     |  423 |        |       |   426 |     6 |       |
+| elpa        |   98 |     98 |       |       |   148 |       |
+| elpa-branch |    7 |      7 |       |       |    13 |       |
+|-------------+------+--------+-------+-------+-------+-------|
+| github      | 3806 |   3806 |       |       |       |  3381 |
+| gitlab      |   26 |     26 |       |       |       |    26 |
+| git         |   56 |     56 |       |       |       |    44 |
+| subtree     |   23 |     23 |       |       |       |       |
+|-------------+------+--------+-------+-------+-------+-------|
+| bitbucket   |   44 |     44 |       |       |       |    38 |
+| hg          |    1 |      1 |       |       |       |     1 |
+|-------------+------+--------+-------+-------+-------+-------|
+| bzr         |      |        |       |       |       |     2 |
+| cvs         |      |        |       |       |       |     4 |
+| darcs       |      |        |       |       |       |     2 |
+| fossil      |      |        |       |       |       |     0 |
+| svn         |      |        |       |       |       |     9 |
+|-------------+------+--------+-------+-------+-------+-------|
+| wiki        |  735 |    735 |       |       |       |   156 |
+| file        |  286 |    286 |       |       |       |       |
+| minority    |   32 |     32 |       |       |       |       |
+|-------------+------+--------+-------+-------+-------+-------|
+| orphaned    |   59 |     59 |       |       |       |       |
+| shelved     |  974 |        |   974 |       |       |       |
+|-------------+------+--------+-------+-------+-------+-------|
+| total       | 6570 |   5173 |   974 |   426 |   167 |  3663 |
 
 * Emacs
 ** Prefer elpa
 #+NAME: builtin-prefer-elpa
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Type")
+  (epkg-with-org-header ("Package" "Class")
     (epkg-sql [:select :distinct [packages:name packages:class]
                :from [packages builtin-libraries]
                :where (= packages:name builtin-libraries:package)
@@ -108,15 +108,15 @@
               [elpa elpa-branch]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
-| Package (2) | Type |
-|-------------+------|
-| ada-mode    | elpa |
-| seq         | elpa |
+| Package (2) | Class |
+|-------------+-------|
+| ada-mode    | elpa  |
+| seq         | elpa  |
 
 ** Prefer upstream
 #+NAME: builtin-prefer-upstream
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Type")
+  (epkg-with-org-header ("Package" "Class")
     (epkg-sql [:select :distinct [packages:name packages:class]
                :from [packages builtin-libraries]
                :where (= packages:name builtin-libraries:package)
@@ -125,87 +125,85 @@
               [builtin elpa elpa-branch]))
 #+END_SRC
 #+RESULTS: builtin-prefer-upstream
-| Package (1) | Type |
-|-------------+------|
-| org         | git  |
+| Package (1) | Class |
+|-------------+-------|
+| org         | git   |
 
 * Gelpa
 ** New
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Type")
-    (epkg-sql [:select [name class]
-               :from gelpa-recipes
-               :where (isnull epkg-package)
-               :order-by [(asc name)]]))
+  (epkg-with-org-header ("Package" "Gelpa")
+    (--filter (not (assoc name emir-pending-packages))
+              (epkg-sql [:select [name class]
+                         :from gelpa-recipes
+                         :where (isnull epkg-package)
+                         :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-new
 
 ** Pending
 #+NAME: gelpa-pending
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Reason")
-    (--keep (assoc (car it) emir-pending-packages)
-            (epkg-sql [:select [name]
-                       :from gelpa-recipes
-                       :where (isnull epkg-package)
-                       :order-by [(asc name)]])))
+  (epkg-with-org-header ("Package" "Gelpa" "Reason")
+    (-keep (-lambda ((name class))
+             (--when-let (cadr (assoc (car it) emir-pending-packages))
+               (list name class it)))
+           (epkg-sql [:select [name class]
+                      :from gelpa-recipes
+                      :where (isnull epkg-package)
+                      :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
 
 ** Unreleased
 #+NAME: gelpa-unreleased
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Class")
+  (epkg-with-org-header ("Package" "Gelpa")
     (epkg-sql [:select [name class] :from gelpa-recipes
                :where class :in $v1
                :and (isnull released)]
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (4)      | Class   |
+| Package (4)      | Gelpa   |
 |------------------+---------|
 | package-fixes    | subtree |
 | shell-quasiquote | subtree |
 | sm-c-mode        | subtree |
 | systemd          | subtree |
 
-** Special cases
-
-| Package (1) | Reason                                                      |
-|-------------+-------------------------------------------------------------|
-| cl-print    | :core imported as minority because only in master (26.0.50) |
-
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Reason")
-    (mapcar (-lambda ((name))
-              (or (and (gelpa-builtin-recipe-p (gelpa-get name))
-                       (list name "Elpa has copy of builtin"))
-                  (assoc name emir--preferred-builtins)
-                  (list name "")))
-            (epkg-sql [:select :distinct [packages:name]
+  (epkg-with-org-header ("Package" "Gelpa" "Reason")
+    (mapcar (-lambda ((name class))
+              (nconc (list name class)
+                     (or (and (gelpa-builtin-recipe-p (gelpa-get name))
+                              (list "Elpa has copy of builtin"))
+                         (cdr (assoc name emir--preferred-builtins))
+                         "")))
+            (epkg-sql [:select :distinct [packages:name gelpa-recipes:class]
                        :from [packages gelpa-recipes]
                        :where (= packages:name gelpa-recipes:name)
                        :and (= packages:class 'builtin)
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (7) | Reason                         |
-|-------------+--------------------------------|
-| cl-generic  | Elpa has backport of builtin   |
-| cl-lib      | Elpa has backport of builtin   |
-| let-alist   | Elpa has copy of builtin       |
-| ntlm        | Elpa has copy of builtin       |
-| pinentry    | Elpa imports outdated upstream |
-| python      | Elpa has copy of builtin       |
-| soap-client | Elpa has copy of builtin       |
+| Package (7) | Gelpa   | Reason                         |
+|-------------+---------+--------------------------------|
+| cl-generic  | subtree | Elpa has backport of builtin   |
+| cl-lib      | subtree | Elpa has backport of builtin   |
+| let-alist   | builtin | Elpa has copy of builtin       |
+| ntlm        | builtin | Elpa has copy of builtin       |
+| pinentry    | subtree | Elpa imports outdated upstream |
+| python      | builtin | Elpa has copy of builtin       |
+| soap-client | builtin | Elpa has copy of builtin       |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Type" "Gelpa" "Link")
+  (epkg-with-org-header ("Package" "Class" "Gelpa" "Link")
     (mapcar (-lambda ((name class gelpa))
               (list name class gelpa (epkg-org-link name)))
             (epkg-sql [:select :distinct [packages:name
@@ -218,7 +216,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (59)               | Type     | Gelpa    | Link                                         |
+| Package (59)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -284,9 +282,10 @@
 ** New
 #+NAME: melpa-new
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Type" "Link")
+  (epkg-with-org-header ("Package" "Melpa" "Link")
     (-keep (-lambda ((name class url))
-             (and (not (or (emir--lookup-url url)
+             (and (not (assoc name emir-pending-packages))
+                  (not (or (emir--lookup-url url)
                            (cadr (assoc name emir-secondary-packages))))
                   (list name class (melpa-org-link name))))
            (epkg-sql [:select [name class url]
@@ -299,19 +298,21 @@
 ** Pending
 #+NAME: melpa-pending
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Reason")
-    (--keep (assoc (car it) emir-pending-packages)
-            (epkg-sql [:select [name]
-                       :from melpa-recipes
-                       :where (isnull epkg-package)
-                       :order-by [(asc name)]])))
+  (epkg-with-org-header ("Package" "Melpa" "Reason")
+    (-keep (-lambda ((name class))
+             (--when-let (cadr (assoc (car it) emir-pending-packages))
+               (list name class it)))
+           (epkg-sql [:select [name class]
+                      :from melpa-recipes
+                      :where (isnull epkg-package)
+                      :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
 
 ** Shared repositories
 #+NAME: secondary-packages
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Primary package" "Secondary package" "Type")
+  (epkg-with-org-header ("Primary package" "Secondary package" "Class")
     (epkg-sql [:select :distinct [packages:name
                                   melpa-recipes:name
                                   packages:class]
@@ -323,7 +324,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (74)    | Secondary package               | Type      |
+| Primary package (74)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -465,7 +466,7 @@
 ** Diverging types
 #+NAME: melpa-diverging-types
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Type" "Melpa" "Reason")
+  (epkg-with-org-header ("Package" "Class" "Melpa" "Reason")
     (-keep (-lambda ((name class fetcher repo))
              (and (not (or (and (eq class 'subtree)  (eq fetcher 'github))
                            (and (eq class 'subtree)  (eq fetcher 'git))
@@ -485,7 +486,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (31)          | Type     | Melpa     | Reason                        |
+| Package (31)          | Class    | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
