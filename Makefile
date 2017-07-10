@@ -24,6 +24,7 @@ HTML  += emacsorphanage.html
 HTML  += emacswiki.html
 HTML  += issues.html
 HTML  += kludges.html
+HTML  += licenses.html
 HTML  += melpa-missing.html
 
 BABEL  = notes.org $(HTML:.html=.org)

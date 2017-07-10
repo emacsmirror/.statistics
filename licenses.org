@@ -1,0 +1,220 @@
+#+SETUPFILE: .orgconfig
+#+NAME: setup
+#+BEGIN_SRC emacs-lisp :results silent
+  (require 'epkg)
+
+  (defun emir--format-license-table (table)
+    (setcar (assq nil table) "(unknown)")
+    (let ((total (apply '+ (mapcar 'cadr table)))
+	  (gpl   (apply '+ (mapcar (lambda (l) (cadr (assoc l table)))
+				   '("GPL-3" "GPL-2" "GPL-1" "GPL")))))
+      (cl-flet ((percent (n) (round (* (/ n total 1.0) 100))))
+	`(("License" "Count" "Percent")
+	  hline ,@(mapcar (pcase-lambda (`(,license ,count))
+			    (list license count (percent count)))
+			  table)
+	  hline ("total GPL" ,gpl ,(percent gpl))
+	  hline ("total" ,total 100)))))
+#+END_SRC
+[[https://emacsmirror.net/stats][up]]
+
+* Introduction
+
+This page contains statistics about the licenses used by known Emacs
+packages.  The information used here is available from the Emacsmirror
+database (also known as the Epkg database).
+
+For more information about the Emacsmirror and its many use-cases, see
+https://emacsmirror.net,
+https://emacsair.me/2016/04/16/re-introducing-the-emacsmirror,
+https://emacsair.me/2016/05/17/assimilate-emacs-packages-as-git-submodules,
+https://emacsmirror.net/manual/epkg,
+https://emacsmirror.net/manual/borg,
+https://github.com/emacscollective/{emacs.g,closql,epkg,borg,emir},
+https://github.com/emacsmirror/epkgs,
+https://github.com/emacsmirror/epkg-reports,
+https://github.com/tarsius/elx.
+
+(If you cannot access Github due to non-free javascript, then you can
+also use ~git clone https://github.com/<user>/<repo>.git~.)
+
+I will periodically update the below statistics.  If you want to do so
+yourself, or run other SQL queries, then you will need the packages
+~epkg~, ~closql~, and ~emacsql~.
+
+(While these packages are available from Melpa, currently you have to
+use their ~next~ branches, except for ~emacsql~.  This will change in a
+week or two, when I have wrapped up some ongoing refactoring that also
+resulted in some changes to the database scheme.)
+
+You also need the ~epkgs~ and ~epkgs-stats~ data repositories.  But you
+don't need the packages ~borg~, ~emir~, or ~elx~.
+
+The license information stored in the Emacsmirror database and
+summarized below, was extracted using my very old ~elx~ package.  The
+extracted information may be wrong in some cases, please read the
+source to determine how reliable the information presented here is.
+The used heuristics could certainly be improved, I haven't touched
+them in many years.  (And I would be happy to contribute this to
+Emacs, possibly as part of ~lisp-mnt~.)
+
+Note that if a license is ~(unknown)~, that does not necessarily mean
+that a package is released under no license at all or under an unknown
+license.  It may also mean that there is a typo in the license text
+which causes the used extraction heuristics to fail.
+
+I have created this page to accompany this (<= link pending)
+conversation on ~emacs-devel~.
+
+* Licenses used by packages on Melpa
+
+https://melpa.org
+
+#+NAME: count-melpa
+#+BEGIN_SRC emacs-lisp
+  (emir--format-license-table
+   (epkg-sql [:select :distinct [packages:license (funcall count *)] :as count
+              :from [packages melpa-recipes]
+              :where (= packages:name melpa-recipes:epkg-package)
+              :group-by packages:license
+              :order-by count :desc]))
+#+END_SRC
+#+RESULTS: count-melpa
+| License       | Count | Percent |
+|---------------+-------+---------|
+| GPL-3         |  2268 |      62 |
+| GPL-2         |   634 |      17 |
+| (unknown)     |   509 |      14 |
+| as-is         |   117 |       3 |
+| MIT           |    45 |       1 |
+| public-domain |    41 |       1 |
+| GPL           |    29 |       1 |
+| Apache-2.0    |    18 |       0 |
+| GPL-1         |     4 |       0 |
+| BSD           |     3 |       0 |
+| CeCILL-B      |     2 |       0 |
+| EPL           |     1 |       0 |
+| MS-PL         |     1 |       0 |
+|---------------+-------+---------|
+| total GPL     |  2935 |      80 |
+|---------------+-------+---------|
+| total         |  3672 |     100 |
+
+* Licenses used by packages on the Emacsmirror
+
+The Emacsmirror is a growing collection of Emacs Lisp packages. All
+mirrored packages are available as Git repositories. In most cases
+this is done by mirroring the upstream Git repository, but if upstream
+uses something else, then the mirror nevertheless makes the package
+available as a Git repository.
+
+https://emacsmirror.net
+
+#+NAME: count-emacsmirror
+#+BEGIN_SRC emacs-lisp
+  (emir--format-license-table
+   (epkg-sql [:select [license (funcall count *)] :as count
+              :from packages
+              :where (and (not (= class 'builtin))
+                          (not (= class 'elpa))
+                          (not (= class 'elpa-branch))
+                          (not (= class 'shelved)))
+              :group-by license
+              :order-by count :desc]))
+#+END_SRC
+#+RESULTS: count-emacsmirror
+| License       | Count | Percent |
+|---------------+-------+---------|
+| GPL-3         |  2723 |      54 |
+| GPL-2         |  1406 |      28 |
+| (unknown)     |   640 |      13 |
+| as-is         |   118 |       2 |
+| public-domain |    56 |       1 |
+| MIT           |    49 |       1 |
+| GPL           |    39 |       1 |
+| Apache-2.0    |    17 |       0 |
+| GPL-1         |    13 |       0 |
+| BSD           |     3 |       0 |
+| CeCILL-B      |     2 |       0 |
+| EPL           |     1 |       0 |
+| MS-PL         |     1 |       0 |
+|---------------+-------+---------|
+| total GPL     |  4181 |      82 |
+|---------------+-------+---------|
+| total         |  5068 |     100 |
+
+* Licenses uses by packages on the Emacsattic
+
+Once its upstream has disappeared a package is usually moved from the
+Emacsmirror to the Emacsattic, where it is no longer updated. (The
+Emacsattic is a Github “organization” separate from the Emacsmirror
+organization, but it is considered part of the Emacsmirror project.)
+
+https://emacsmirror.net
+
+#+NAME: count-emacsattic
+#+BEGIN_SRC emacs-lisp
+  (emir--format-license-table
+   (epkg-sql [:select [license (funcall count *)] :as count
+              :from packages
+              :where (= class 'shelved)
+              :group-by license
+              :order-by count :desc]))
+#+END_SRC
+#+RESULTS: count-emacsattic
+| License       | Count | Percent |
+|---------------+-------+---------|
+| GPL-2         |   509 |      52 |
+| (unknown)     |   296 |      30 |
+| GPL-3         |   141 |      14 |
+| GPL           |    16 |       2 |
+| GPL-1         |     9 |       1 |
+| as-is         |     6 |       1 |
+| Apache-2.0    |     3 |       0 |
+| public-domain |     2 |       0 |
+| MIT           |     1 |       0 |
+|---------------+-------+---------|
+| total GPL     |   675 |      69 |
+|---------------+-------+---------|
+| total         |   983 |     100 |
+
+* Licenses uses by all known packages
+
+This includes all "known packages", including built-in, Elpa, and
+shelved packages (those in the Emacsattic).  Or in other words, all
+packages that have an entry in the Emacsmirror database.
+
+An overview of those packages, the version control systems used by
+their upstreams, and the availability in other "package archives",
+can be found [[https://emacsmirror.net/stats/compare.html][here]].
+
+#+NAME: count-all
+#+BEGIN_SRC emacs-lisp
+  (emir--format-license-table
+   (epkg-sql [:select [license (funcall count *)] :as count
+              :from packages
+              :group-by license
+              :order-by count :desc]))
+#+END_SRC
+#+RESULTS: count-all
+| License       | Count | Percent |
+|---------------+-------+---------|
+| GPL-3         |  3380 |      51 |
+| GPL-2         |  1918 |      29 |
+| (unknown)     |   940 |      14 |
+| as-is         |   124 |       2 |
+| public-domain |    63 |       1 |
+| GPL           |    55 |       1 |
+| MIT           |    50 |       1 |
+| GPL-1         |    22 |       0 |
+| Apache-2.0    |    20 |       0 |
+| BSD           |     3 |       0 |
+| CeCILL-B      |     2 |       0 |
+| EPL           |     1 |       0 |
+| MS-PL         |     1 |       0 |
+|---------------+-------+---------|
+| total GPL     |  5375 |      82 |
+|---------------+-------+---------|
+| total         |  6579 |     100 |
+
+
