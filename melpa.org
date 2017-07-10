@@ -4,6 +4,13 @@
   (require 'emir)
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
+
+The below packages, which are available from the Emacsmirror,
+are missing from Melpa.
+
+For packages that Melpa (and the Emacsmirror) import from the
+Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
+
 * Github
 #+NAME: missing-github
 #+BEGIN_SRC emacs-lisp
