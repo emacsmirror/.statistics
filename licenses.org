@@ -6,65 +6,61 @@
   (defun emir--format-license-table (table)
     (setcar (assq nil table) "(unknown)")
     (let ((total (apply '+ (mapcar 'cadr table)))
-	  (gpl   (apply '+ (mapcar (lambda (l) (cadr (assoc l table)))
-				   '("GPL-3" "GPL-2" "GPL-1" "GPL")))))
-      (cl-flet ((percent (n) (round (* (/ n total 1.0) 100))))
-	`(("License" "Count" "Percent")
-	  hline ,@(mapcar (pcase-lambda (`(,license ,count))
-			    (list license count (percent count)))
-			  table)
-	  hline ("total GPL" ,gpl ,(percent gpl))
-	  hline ("total" ,total 100)))))
+          (gnu   (apply '+ (mapcar (pcase-lambda (`(,license ,count))
+                                     (if (string-match-p "GPL" license) count 0))
+                                   table))))
+        (cl-flet ((percent (n) (round (* (/ n total 1.0) 100))))
+          `(("License" "Count" "Percent")
+            hline ,@(mapcar (pcase-lambda (`(,license ,count))
+                              (list license count (percent count)))
+                            table)
+            hline ("total GNU" ,gnu ,(percent gnu))
+            hline ("total" ,total 100)))))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 
 * Introduction
 
 This page contains statistics about the licenses used by known Emacs
-packages.  The information used here is available from the Emacsmirror
-database (also known as the Epkg database).
+packages.  *These statistics are not legal advice.  They are
+distributed in the hope that they will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.*
 
-For more information about the Emacsmirror and its many use-cases, see
-https://emacsmirror.net,
-https://emacsair.me/2016/04/16/re-introducing-the-emacsmirror,
-https://emacsair.me/2016/05/17/assimilate-emacs-packages-as-git-submodules,
-https://emacsmirror.net/manual/epkg,
-https://emacsmirror.net/manual/borg,
-https://github.com/emacscollective/{emacs.g,closql,epkg,borg,emir},
-https://github.com/emacsmirror/epkgs,
-https://github.com/emacsmirror/epkg-reports,
-https://github.com/tarsius/elx.
+The information used here is available from the Emacsmirror database
+(also known as the Epkg database).  For more information about the
+Emacsmirror see these [[https://emacsair.me/2016/04/16/re-introducing-the-emacsmirror][blog]] [[https://emacsair.me/2016/05/17/assimilate-emacs-packages-as-git-submodules][posts]].
 
-(If you cannot access Github due to non-free javascript, then you can
-also use ~git clone https://github.com/<user>/<repo>.git~.)
+I have created this page to accompany [[http://lists.gnu.org/archive/html/emacs-devel/2017-07/msg00341.html][this]] conversation on
+~emacs-devel~.
 
-I will periodically update the below statistics.  If you want to do so
-yourself, or run other SQL queries, then you will need the packages
-~epkg~, ~closql~, and ~emacsql~.
+I will periodically update the these statistics.  If you want to do so
+yourself, then read the relevant documentation.  You may also ask me
+for guidance.
 
-(While these packages are available from Melpa, currently you have to
-use their ~next~ branches, except for ~emacsql~.  This will change in a
-week or two, when I have wrapped up some ongoing refactoring that also
-resulted in some changes to the database scheme.)
+This information is extracted using the function ~elx-license~, which is
+provided by my package [[https://github.com/tarsius/elx][elx]] (~git clone https://github.com/tarsius/elx.git~).
 
-You also need the ~epkgs~ and ~epkgs-stats~ data repositories.  But you
-don't need the packages ~borg~, ~emir~, or ~elx~.
+The license is determined from the contents of the "main library" of
+the package alone (the library whose name matches the name of the
+package).  First this function looks for a permission statement for a
+license published by the Free Software Foundation, if any.  If that
+fails, then the value of the "License" header keyword is considered.
+Finally it searches for brief, and potentially ambiguous, permission
+statements for non-FSF licenses.  For FSF licenses a "+" is appended
+if the text "or (at your option) any later version", or similar was
+found.  An effort is made to normalize the returned value.  This
+function also accounts for some commonly used variations in wording,
+typos, and other complications.
 
-The license information stored in the Emacsmirror database and
-summarized below, was extracted using my very old ~elx~ package.  The
-extracted information may be wrong in some cases, please read the
-source to determine how reliable the information presented here is.
-The used heuristics could certainly be improved, I haven't touched
-them in many years.  (And I would be happy to contribute this to
-Emacs, possibly as part of ~lisp-mnt~.)
-
-Note that if a license is ~(unknown)~, that does not necessarily mean
-that a package is released under no license at all or under an unknown
-license.  It may also mean that there is a typo in the license text
-which causes the used extraction heuristics to fail.
-
-I have created this page to accompany this (<= link pending)
-conversation on ~emacs-devel~.
+However the returned value is sometimes false or ambiguous.  In
+particular note that if a license is "unknown", then that merely means
+that it is /not known/ what license applies.  This may be because the
+library lacks a permission statement altogether (possibly because an
+accompanying ~LICENSE~ file is considered sufficient by the upstream),
+but it may also be because ~elx-license~ does not attempt to detect the
+used non-standard and/or non-fsf permission statement, or because of
+typos in the statement, or for a number of other reasons.
 
 * Licenses used by packages on Melpa
 
@@ -82,21 +78,27 @@ https://melpa.org
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3         |  2268 |      62 |
-| GPL-2         |   634 |      17 |
-| (unknown)     |   509 |      14 |
-| as-is         |   117 |       3 |
-| MIT           |    45 |       1 |
-| public-domain |    41 |       1 |
-| GPL           |    29 |       1 |
+| GPL-3+        |  2230 |      61 |
+| GPL-2+        |   611 |      17 |
+| (unknown)     |   511 |      14 |
+| as-is         |    91 |       2 |
+| MIT           |    70 |       2 |
+| public-domain |    52 |       1 |
+| GPL-3         |    41 |       1 |
+| GPL-2         |    31 |       1 |
 | Apache-2.0    |    18 |       0 |
-| GPL-1         |     4 |       0 |
+| GPL-1+        |     4 |       0 |
 | BSD           |     3 |       0 |
-| CeCILL-B      |     2 |       0 |
+| GPL           |     2 |       0 |
+| LGPL          |     2 |       0 |
+| AGPL-3        |     1 |       0 |
+| AGPL-3+       |     1 |       0 |
+| BSD-3         |     1 |       0 |
 | EPL           |     1 |       0 |
-| MS-PL         |     1 |       0 |
+| LGPL-3+       |     1 |       0 |
+| LGPL-3.0      |     1 |       0 |
 |---------------+-------+---------|
-| total GPL     |  2935 |      80 |
+| total GNU     |  2925 |      80 |
 |---------------+-------+---------|
 | total         |  3672 |     100 |
 
@@ -125,21 +127,27 @@ https://emacsmirror.net
 #+RESULTS: count-emacsmirror
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3         |  2723 |      54 |
-| GPL-2         |  1406 |      28 |
-| (unknown)     |   640 |      13 |
-| as-is         |   118 |       2 |
-| public-domain |    56 |       1 |
-| MIT           |    49 |       1 |
-| GPL           |    39 |       1 |
-| Apache-2.0    |    17 |       0 |
-| GPL-1         |    13 |       0 |
+| GPL-3+        |  2684 |      53 |
+| GPL-2+        |  1341 |      26 |
+| (unknown)     |   648 |      13 |
+| as-is         |    92 |       2 |
+| GPL-2         |    74 |       1 |
+| MIT           |    74 |       1 |
+| public-domain |    67 |       1 |
+| GPL-3         |    41 |       1 |
+| Apache-2.0    |    18 |       0 |
+| GPL-1+        |    13 |       0 |
+| GPL           |     5 |       0 |
 | BSD           |     3 |       0 |
-| CeCILL-B      |     2 |       0 |
+| LGPL-3+       |     2 |       0 |
+| AGPL-3        |     1 |       0 |
+| AGPL-3+       |     1 |       0 |
+| BSD-3         |     1 |       0 |
 | EPL           |     1 |       0 |
-| MS-PL         |     1 |       0 |
+| LGPL          |     1 |       0 |
+| LGPL-3.0      |     1 |       0 |
 |---------------+-------+---------|
-| total GPL     |  4181 |      82 |
+| total GNU     |  4164 |      82 |
 |---------------+-------+---------|
 | total         |  5068 |     100 |
 
@@ -174,15 +182,15 @@ https://emacsmirror.net
 | public-domain |     2 |       0 |
 | MIT           |     1 |       0 |
 |---------------+-------+---------|
-| total GPL     |   675 |      69 |
+| total GNU     |   675 |      69 |
 |---------------+-------+---------|
 | total         |   983 |     100 |
 
 * Licenses uses by all known packages
 
-This includes all "known packages", including built-in, Elpa, and
-shelved packages (those in the Emacsattic).  Or in other words, all
-packages that have an entry in the Emacsmirror database.
+This includes built-in, Elpa, and those from the Emacsattic.  Or in
+other words, this includes each and every packages that has an entry
+in the Emacsmirror database.
 
 An overview of those packages, the version control systems used by
 their upstreams, and the availability in other "package archives",
@@ -199,21 +207,28 @@ can be found [[https://emacsmirror.net/stats/compare.html][here]].
 #+RESULTS: count-all
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3         |  3380 |      51 |
-| GPL-2         |  1918 |      29 |
-| (unknown)     |   940 |      14 |
-| as-is         |   124 |       2 |
-| public-domain |    63 |       1 |
-| GPL           |    55 |       1 |
-| MIT           |    50 |       1 |
-| GPL-1         |    22 |       0 |
-| Apache-2.0    |    20 |       0 |
+| GPL-3+        |  2782 |      42 |
+| GPL-2+        |  1344 |      20 |
+| (unknown)     |   948 |      14 |
+| GPL-3         |   600 |       9 |
+| GPL-2         |   583 |       9 |
+| as-is         |    98 |       1 |
+| MIT           |    75 |       1 |
+| public-domain |    74 |       1 |
+| Apache-2.0    |    21 |       0 |
+| GPL           |    21 |       0 |
+| GPL-1+        |    13 |       0 |
+| GPL-1         |     9 |       0 |
 | BSD           |     3 |       0 |
-| CeCILL-B      |     2 |       0 |
+| LGPL-3+       |     2 |       0 |
+| AGPL-3        |     1 |       0 |
+| AGPL-3+       |     1 |       0 |
+| BSD-3         |     1 |       0 |
 | EPL           |     1 |       0 |
-| MS-PL         |     1 |       0 |
+| LGPL          |     1 |       0 |
+| LGPL-3.0      |     1 |       0 |
 |---------------+-------+---------|
-| total GPL     |  5375 |      82 |
+| total GNU     |  5358 |      81 |
 |---------------+-------+---------|
 | total         |  6579 |     100 |
 
