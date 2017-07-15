@@ -72,7 +72,7 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3815 |   3815 |       |       |       |  3390 |
+| github      | 3824 |   3824 |       |       |       |  3404 |
 | gitlab      |   26 |     26 |       |       |       |    26 |
 | git         |   56 |     56 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -86,14 +86,14 @@
 | fossil      |      |        |       |       |       |     0 |
 | svn         |      |        |       |       |       |     9 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  735 |    735 |       |       |       |   156 |
-| file        |  279 |    279 |       |       |       |       |
+| wiki        |  734 |    734 |       |       |       |   156 |
+| file        |  278 |    278 |       |       |       |       |
 | minority    |   30 |     30 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   59 |     59 |       |       |       |       |
-| shelved     |  983 |        |   983 |       |       |       |
+| shelved     |  986 |        |   986 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6579 |   5173 |   983 |   426 |   167 |  3672 |
+| total       | 6589 |   5180 |   986 |   426 |   167 |  3686 |
 
 * Emacs
 ** Prefer elpa
@@ -324,13 +324,17 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (74)    | Secondary package               | Class     |
+| Primary package (75)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
 | axiom-environment       | ob-axiom                        | bitbucket |
 | biblio                  | biblio-core                     | github    |
 | button-lock             | wiki-nav                        | github    |
+| calfw                   | calfw-cal                       | github    |
+| calfw                   | calfw-howm                      | github    |
+| calfw                   | calfw-ical                      | github    |
+| calfw                   | calfw-org                       | github    |
 | chumpy-windows          | spaces                          | github    |
 | chumpy-windows          | splitter                        | github    |
 | chumpy-windows          | window-jump                     | github    |
