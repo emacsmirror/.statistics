@@ -1,0 +1,202 @@
+#+SETUPFILE: .orgconfig
+[[https://emacsmirror.net/stats][up]]
+
+* Packages with unknown licenses available from Melpa
+
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Class" "Link")
+    (epkg-sql [:select :distinct [packages:name packages:class packages:repopage]
+               :from [packages melpa-recipes]
+               :where (and (= packages:name melpa-recipes:epkg-package)
+                           (isnull packages:license))
+               :group-by packages:repopage])
+    ;; (epkg-sql [:select [name class repopage] :from packages
+    ;;               :where (isnull license)
+    ;;               :and class :in $v1
+    ;;               :order-by [(asc repopage)]]
+    ;;              (closql-where-class-in
+    ;;               ;; 'epkg-mirrored-package--eieio-childp
+    ;;               'epkg-github-package
+    ;;               ))
+    )
+#+END_SRC
+#+RESULTS:
+| Package (177)           | Class     | Link                                                  |
+|-------------------------+-----------+-------------------------------------------------------|
+| yatex                   | hg        |                                                       |
+| achievements            | bitbucket | https://bitbucket.org/gvol/emacs-achievements         |
+| gap-mode                | bitbucket | https://bitbucket.org/gvol/gap-mode                   |
+| ttl-mode                | bitbucket | https://bitbucket.org/nxg/ttl-mode                    |
+| riscv-mode              | github    | https://github.com/AdamNiederer/riscv-mode            |
+| zig-mode                | github    | https://github.com/AndreaOrru/zig-mode                |
+| airline-themes          | github    | https://github.com/AnthonyDiGirolamo/airline-themes   |
+| ghc                     | github    | https://github.com/DanielG/ghc-mod                    |
+| darkane-theme           | github    | https://github.com/FelixFortis/emacs-darkane-theme    |
+| kpm-list                | github    | https://github.com/KMahoney/kpm-list                  |
+| google-this             | github    | https://github.com/Malabarba/emacs-google-this        |
+| ruby-dev                | github    | https://github.com/Mon-Ouie/ruby-dev.el               |
+| zerodark-theme          | github    | https://github.com/NicolasPetton/zerodark-theme       |
+| erc-view-log            | github    | https://github.com/Niluge-KiWi/erc-view-log           |
+| omnisharp               | github    | https://github.com/OmniSharp/omnisharp-emacs          |
+| nyan-prompt             | github    | https://github.com/PuercoPop/nyan-prompt              |
+| password-vault          | github    | https://github.com/PuercoPop/password-vault           |
+| iasm-mode               | github    | https://github.com/RAttab/iasm-mode                   |
+| refheap                 | github    | https://github.com/Raynes/refheap.el                  |
+| zonokai-theme           | github    | https://github.com/ZehCnaS34/zonokai-emacs            |
+| reverse-im              | github    | https://github.com/a13/reverse-im.el                  |
+| octopress               | github    | https://github.com/aaronbieber/octopress.el           |
+| wavefront-obj-mode      | github    | https://github.com/abend/wavefront-obj-mode           |
+| coq-commenter           | github    | https://github.com/ailrun/coq-commenter               |
+| subshell-proc           | github    | https://github.com/andrewmains12/subshell-proc        |
+| nord-theme              | github    | https://github.com/arcticicestudio/nord-emacs         |
+| scheme-complete         | github    | https://github.com/ashinn/scheme-complete             |
+| tronesque-theme         | github    | https://github.com/aurelienbottazini/tronesque        |
+| avk-emacs-themes        | github    | https://github.com/avkoval/avk-emacs-themes           |
+| solarized-theme         | github    | https://github.com/bbatsov/solarized-emacs            |
+| aurora-config-mode      | github    | https://github.com/bdd/aurora-config-mode.el          |
+| xml+                    | github    | https://github.com/bddean/xml-plus                    |
+| flymake-puppet          | github    | https://github.com/benprew/flymake-puppet             |
+| cmm-mode                | github    | https://github.com/bgamari/cmm-mode                   |
+| forecast                | github    | https://github.com/cadadr/forecast.el                 |
+| gherkin-mode            | github    | https://github.com/candera/gherkin-mode               |
+| rails-new               | github    | https://github.com/cheunghy/rails-new                 |
+| ruby-guard              | github    | https://github.com/cheunghy/ruby-guard                |
+| namespaces              | github    | https://github.com/chrisbarrett/elisp-namespaces      |
+| chumpy-windows          | github    | https://github.com/chumpage/chumpy-windows            |
+| ob-blockdiag            | github    | https://github.com/corpix/ob-blockdiag.el             |
+| scrooge                 | github    | https://github.com/cosmicexplorer/emacs-scrooge       |
+| f3                      | github    | https://github.com/cosmicexplorer/f3                  |
+| dired-single            | github    | https://github.com/crocket/dired-single               |
+| fetch                   | github    | https://github.com/crshd/fetch.el                     |
+| gift-mode               | github    | https://github.com/csrhodes/gift-mode                 |
+| dakrone-light-theme     | github    | https://github.com/dakrone/dakrone-light-theme        |
+| dakrone-theme           | github    | https://github.com/dakrone/dakrone-theme              |
+| rufo                    | github    | https://github.com/danielma/rufo.el                   |
+| org-wc                  | github    | https://github.com/dato/org-wc                        |
+| tt-mode                 | github    | https://github.com/davorg/tt-mode                     |
+| shen-elisp              | github    | https://github.com/deech/shen-elisp                   |
+| rcirc-groups            | github    | https://github.com/dimitri/rcirc-groups               |
+| midje-mode              | github    | https://github.com/dnaumov/midje-mode                 |
+| n3-mode                 | github    | https://github.com/doriantaylor/n3-mode-for-emacs     |
+| dtrace-script-mode      | github    | https://github.com/dotemacs/dtrace-script-mode        |
+| ecukes                  | github    | https://github.com/ecukes/ecukes                      |
+| memento                 | github    | https://github.com/ehartc/memento                     |
+| thesaurus               | wiki      | https://github.com/emacsmirror/emacswiki.org          |
+| lively                  | orphaned  | https://github.com/emacsorphanage/lively              |
+| transpose-frame         | orphaned  | https://github.com/emacsorphanage/transpose-frame     |
+| vc-fossil               | orphaned  | https://github.com/emacsorphanage/vc-fossil           |
+| turkish                 | github    | https://github.com/emres/turkish-mode                 |
+| edit-at-point           | github    | https://github.com/enoson/edit-at-point.el            |
+| eno                     | github    | https://github.com/enoson/eno.el                      |
+| psc-ide                 | github    | https://github.com/epost/psc-ide-emacs                |
+| extempore-mode          | github    | https://github.com/extemporelang/extempore-emacs-mode |
+| maker-mode              | github    | https://github.com/fommil/maker-mode                  |
+| omtose-phellack-theme   | github    | https://github.com/franksn/omtose-phellack-theme      |
+| inform7-mode            | github    | https://github.com/fred-o/inform7-mode                |
+| monochrome-theme        | github    | https://github.com/fxn/monochrome-theme.el            |
+| tumblesocks             | github    | https://github.com/gcr/tumblesocks                    |
+| uzumaki                 | github    | https://github.com/geyslan/uzumaki                    |
+| read-aloud              | github    | https://github.com/gromnitsky/read-aloud.el           |
+| wordnut                 | github    | https://github.com/gromnitsky/wordnut                 |
+| http-twiddle            | github    | https://github.com/hassy/http-twiddle                 |
+| hoa-pp-mode             | github    | https://github.com/hoaproject/Contributions-Emacs-Pp  |
+| scratch                 | github    | https://github.com/ieure/scratch-el                   |
+| bpr                     | github    | https://github.com/ilya-babanov/emacs-bpr             |
+| imgix                   | github    | https://github.com/imgix/imgix-emacs                  |
+| euslisp-mode            | github    | https://github.com/iory/euslisp-mode                  |
+| wordsmith-mode          | github    | https://github.com/istib/wordsmith-mode               |
+| phoenix-dark-mono-theme | github    | https://github.com/j0ni/phoenix-dark-mono             |
+| phoenix-dark-pink-theme | github    | https://github.com/j0ni/phoenix-dark-pink             |
+| folding                 | github    | https://github.com/jaalto/project-emacs--folding-mode |
+| geiser                  | github    | https://github.com/jaor/geiser                        |
+| js2-closure             | github    | https://github.com/jart/js2-closure                   |
+| ghost-blog              | github    | https://github.com/javaguirre/ghost-blog-emacs        |
+| elscreen-buffer-group   | github    | https://github.com/jeffgran/elscreen-buffer-group     |
+| jg-quicknav             | github    | https://github.com/jeffgran/jg-quicknav               |
+| glsl-mode               | github    | https://github.com/jimhourihan/glsl-mode              |
+| atom-one-dark-theme     | github    | https://github.com/jonathanchu/atom-one-dark-theme    |
+| org-beautify-theme      | github    | https://github.com/jonnay/org-beautify-theme          |
+| wsd-mode                | github    | https://github.com/josteink/wsd-mode                  |
+| iflipb                  | github    | https://github.com/jrosdahl/iflipb                    |
+| org-jekyll              | github    | https://github.com/juanre/org-jekyll                  |
+| flymake-rust            | github    | https://github.com/jxs/flymake-rust                   |
+| tj-mode                 | github    | https://github.com/katspaugh/tj-mode                  |
+| jaunte                  | github    | https://github.com/kawaguchi/jaunte.el                |
+| flymake-solidity        | github    | https://github.com/kootenpv/flymake-solidity          |
+| kaomoji                 | github    | https://github.com/kuanyui/kaomoji.el                 |
+| ta                      | github    | https://github.com/kuanyui/ta.el                      |
+| tldr                    | github    | https://github.com/kuanyui/tldr.el                    |
+| gnu-apl-mode            | github    | https://github.com/lokedhs/gnu-apl-mode               |
+| evil-cleverparens       | github    | https://github.com/luxbock/evil-cleverparens          |
+| sourcetalk              | github    | https://github.com/malroc/sourcetalk_emacs            |
+| helm-charinfo           | github    | https://github.com/mandoku/helm-charinfo              |
+| mandoku-tls             | github    | https://github.com/mandoku/mandoku-tls                |
+| underline-with-char     | github    | https://github.com/marcowahl/underline-with-char      |
+| ujelly-theme            | github    | https://github.com/marktran/color-theme-ujelly        |
+| pycoverage              | github    | https://github.com/mattharrison/pycoverage.el         |
+| govet                   | github    | https://github.com/meshelton/govet                    |
+| abyss-theme             | github    | https://github.com/mgrbyte/emacs-abyss-theme          |
+| package-filter          | github    | https://github.com/milkypostman/package-filter        |
+| powerline               | github    | https://github.com/milkypostman/powerline             |
+| gnuplot-mode            | github    | https://github.com/mkmcc/gnuplot-mode                 |
+| jumblr                  | github    | https://github.com/mkmcc/jumblr                       |
+| hlint-refactor          | github    | https://github.com/mpickering/hlint-refactor-mode     |
+| parse-csv               | github    | https://github.com/mrc/el-csv                         |
+| fxrd-mode               | github    | https://github.com/msherry/fxrd-mode                  |
+| busybee-theme           | github    | https://github.com/mswift42/busybee-theme             |
+| mustang-theme           | github    | https://github.com/mswift42/mustang-theme             |
+| obsidian-theme          | github    | https://github.com/mswift42/obsidian-theme            |
+| ess-R-object-popup      | github    | https://github.com/myuhe/ess-R-object-popup.el        |
+| tinysegmenter           | github    | https://github.com/myuhe/tinysegmenter.el             |
+| spacemacs-theme         | github    | https://github.com/nashamri/spacemacs-theme           |
+| thread-dump             | github    | https://github.com/nd/thread-dump.el                  |
+| conda                   | github    | https://github.com/necaris/conda.el                   |
+| uuid                    | github    | https://github.com/nicferrier/emacs-uuid              |
+| niflheim-theme          | github    | https://github.com/niflheim-theme/emacs               |
+| wide-column             | github    | https://github.com/phillord/wide-column               |
+| prettier-js             | github    | https://github.com/prettier/prettier-emacs            |
+| el-pocket               | github    | https://github.com/pterygota/el-pocket                |
+| crab                    | github    | https://github.com/puffnfresh/crab-emacs              |
+| nu-mode                 | github    | https://github.com/pyluyten/emacs-nu                  |
+| ac-sly                  | github    | https://github.com/qoocku/ac-sly                      |
+| dfmt                    | github    | https://github.com/qsimpleq/elisp-dfmt                |
+| ruby-test-mode          | github    | https://github.com/r0man/ruby-test-mode               |
+| dedukti-mode            | github    | https://github.com/rafoo/dedukti-mode                 |
+| flycheck-dedukti        | github    | https://github.com/rafoo/flycheck-dedukti             |
+| cpputils-cmake          | github    | https://github.com/redguardtoo/cpputils-cmake         |
+| evil-mark-replace       | github    | https://github.com/redguardtoo/evil-mark-replace      |
+| bifocal                 | github    | https://github.com/riscy/bifocal-mode                 |
+| flycheck-scala-sbt      | github    | https://github.com/rjmac/flycheck-scala-sbt           |
+| sentence-highlight      | github    | https://github.com/sbelak/sentence-highlight          |
+| org-link-minor-mode     | github    | https://github.com/seanohalpin/org-link-minor-mode    |
+| distel-completion-lib   | github    | https://github.com/sebastiw/distel-completion         |
+| lusty-explorer          | github    | https://github.com/sjbach/lusty-emacs                 |
+| darkokai-theme          | github    | https://github.com/sjrmanning/darkokai                |
+| slim-mode               | github    | https://github.com/slim-template/emacs-slim           |
+| sprintly-mode           | github    | https://github.com/sprintly/sprintly-mode             |
+| ob-spice                | github    | https://github.com/stardiviner/ob-spice               |
+| firebelly-theme         | github    | https://github.com/startling/firebelly                |
+| pydoc                   | github    | https://github.com/statmobile/pydoc                   |
+| smali-mode              | github    | https://github.com/strazzere/Emacs-Smali              |
+| preseed-generic-mode    | github    | https://github.com/suntong/preseed-generic-mode       |
+| jbeans-theme            | github    | https://github.com/synic/jbeans-emacs                 |
+| flappymacs              | github    | https://github.com/taksatou/flappymacs                |
+| inf-php                 | github    | https://github.com/taksatou/inf-php                   |
+| gntp                    | github    | https://github.com/tekai/gntp.el                      |
+| projekt                 | github    | https://github.com/tekai/projekt                      |
+| soundcloud              | github    | https://github.com/thieman/soundcloud.el              |
+| dired-launch            | github    | https://github.com/thomp/dired-launch                 |
+| sensitive               | github    | https://github.com/timvisher/sensitive.el             |
+| sequences               | github    | https://github.com/timvisher/sequences.el             |
+| vimgolf                 | github    | https://github.com/timvisher/vimgolf.el               |
+| tql-mode                | github    | https://github.com/tiros-dev/tql-mode                 |
+| nm                      | github    | https://github.com/tjim/nevermore                     |
+| chinese-pyim-greatdict  | github    | https://github.com/tumashu/chinese-pyim-greatdict     |
+| color-theme-approximate | github    | https://github.com/tungd/color-theme-approximate      |
+| direnv                  | github    | https://github.com/wbolster/emacs-direnv              |
+| sicp                    | github    | https://github.com/webframp/sicp-info                 |
+| sparkline               | github    | https://github.com/woudshoo/sparkline                 |
+| sudden-death            | github    | https://github.com/yewton/sudden-death.el             |
+| url-shortener           | github    | https://github.com/yuyang0/url-shortener              |
+| indent-tools            | gitlab    | https://gitlab.com/emacs-stuff/indent-tools           |
+| aria2                   | gitlab    | https://gitlab.com/ukaszg/aria2                       |
