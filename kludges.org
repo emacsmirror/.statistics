@@ -39,7 +39,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (34)     | Class    | Feature               | Reason                         |
+| Package (33)     | Class    | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
 | anything-project | github   | anything              | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | anything-project | github   | anything-match-plugin | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
@@ -61,7 +61,6 @@
 | epl              | github   | dummy-package         | pending [[https://github.com/cask/epl/pull/34][#34]]                    |
 | git              | github   | ert                   | pending [[https://github.com/rejeep/git.el/pull/6][#6]]                     |
 | go               | github   | gnugo                 | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                     |
-| js2-refactor     | github   | test-helper           | pending [[https://github.com/magnars/js2-refactor.el/pull/94][#94]]                    |
 | karma            | github   | test-helper           | fixme [[https://github.com/tonini/karma.el/pull/7][#7]]                       |
 | lookup           | github   | stem-english          | staled [[https://github.com/lookup2/lookup2/pull/14][#14]]                     |
 | m-buffer         | github   | assess-discover       | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                     |
@@ -102,7 +101,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (66)                    | Class       | Feature                | Reason                                              |
+| Package (65)                    | Class       | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
@@ -172,7 +171,6 @@
 | nxhtml                          | orphaned    | typesetter             | not touched in ten years                            |
 | nxhtml                          | orphaned    | w32-regdat             | Windows compatibility                               |
 | nxhtml                          | orphaned    | w32shell               | Windows compatibility                               |
-| ob-coffeescript                 | github      | inf-template           | pending [[https://github.com/brantou/ob-coffeescript/issues/1][#1]]                                          |
 | org                             | git         | org-remember           | backward compatibility                              |
 | org-caldav                      | github      | org-icalendar          | backward compatibility                              |
 | org-readme                      | github      | org-html               | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |

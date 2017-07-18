@@ -80,13 +80,13 @@ https://melpa.org
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2247 |      61 |
+| GPL-3+        |  2253 |      61 |
 | GPL-2+        |   614 |      17 |
-| (unknown)     |   206 |       6 |
-| MIT           |   169 |       5 |
+| (unknown)     |   205 |       6 |
+| MIT           |   170 |       5 |
 | GPL-3         |    99 |       3 |
 | as-is         |    72 |       2 |
-| (pending)     |    66 |       2 |
+| (pending)     |    59 |       2 |
 | BSD-2-clause  |    43 |       1 |
 | GPL-2         |    41 |       1 |
 | unlicense     |    30 |       1 |
@@ -111,9 +111,9 @@ https://melpa.org
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3014 |      82 |
+| total GNU     |  3020 |      82 |
 |---------------+-------+---------|
-| total         |  3686 |     100 |
+| total         |  3685 |     100 |
 
 * Licenses used by packages on the Emacsmirror
 
@@ -140,14 +140,14 @@ https://emacsmirror.net
 #+RESULTS: count-emacsmirror
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2697 |      53 |
+| GPL-3+        |  2703 |      53 |
 | GPL-2+        |  1344 |      26 |
-| (unknown)     |   313 |       6 |
-| MIT           |   168 |       3 |
+| (unknown)     |   312 |       6 |
+| MIT           |   169 |       3 |
 | GPL-3         |   102 |       2 |
 | GPL-2         |    83 |       2 |
 | as-is         |    76 |       1 |
-| (pending)     |    76 |       1 |
+| (pending)     |    70 |       1 |
 | BSD-2-clause  |    43 |       1 |
 | public-domain |    36 |       1 |
 | unlicense     |    32 |       1 |
@@ -171,7 +171,7 @@ https://emacsmirror.net
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4251 |      84 |
+| total GNU     |  4257 |      84 |
 |---------------+-------+---------|
 | total         |  5075 |     100 |
 
@@ -234,14 +234,14 @@ can be found [[https://emacsmirror.net/stats/compare.html][here]].
 #+RESULTS: count-all
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2796 |      42 |
+| GPL-3+        |  2802 |      43 |
 | GPL-2+        |  1353 |      21 |
 | GPL-3         |   663 |      10 |
-| (unknown)     |   599 |       9 |
+| (unknown)     |   598 |       9 |
 | GPL-2         |   595 |       9 |
-| MIT           |   170 |       3 |
+| MIT           |   171 |       3 |
 | as-is         |    84 |       1 |
-| (pending)     |    76 |       1 |
+| (pending)     |    70 |       1 |
 | BSD-2-clause  |    43 |       1 |
 | public-domain |    43 |       1 |
 | unlicense     |    32 |       0 |
@@ -266,7 +266,7 @@ can be found [[https://emacsmirror.net/stats/compare.html][here]].
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5457 |      83 |
+| total GNU     |  5463 |      83 |
 |---------------+-------+---------|
 | total         |  6589 |     100 |
 
