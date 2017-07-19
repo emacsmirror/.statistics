@@ -2,7 +2,6 @@
 [[https://emacsmirror.net/stats][up]]
 
 * Packages with unknown licenses available from Melpa
-
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Link")
     (epkg-sql [:select :distinct [packages:name packages:class packages:repopage]
@@ -21,7 +20,7 @@
     )
 #+END_SRC
 #+RESULTS:
-| Package (173)           | Class     | Link                                                  |
+| Package (160)           | Class     | Link                                                  |
 |-------------------------+-----------+-------------------------------------------------------|
 | yatex                   | hg        |                                                       |
 | achievements            | bitbucket | https://bitbucket.org/gvol/emacs-achievements         |
@@ -57,17 +56,14 @@
 | xml+                    | github    | https://github.com/bddean/xml-plus                    |
 | flymake-puppet          | github    | https://github.com/benprew/flymake-puppet             |
 | cmm-mode                | github    | https://github.com/bgamari/cmm-mode                   |
-| forecast                | github    | https://github.com/cadadr/forecast.el                 |
 | gherkin-mode            | github    | https://github.com/candera/gherkin-mode               |
 | rails-new               | github    | https://github.com/cheunghy/rails-new                 |
 | ruby-guard              | github    | https://github.com/cheunghy/ruby-guard                |
-| namespaces              | github    | https://github.com/chrisbarrett/elisp-namespaces      |
 | chumpy-windows          | github    | https://github.com/chumpage/chumpy-windows            |
 | ob-blockdiag            | github    | https://github.com/corpix/ob-blockdiag.el             |
 | scrooge                 | github    | https://github.com/cosmicexplorer/emacs-scrooge       |
 | f3                      | github    | https://github.com/cosmicexplorer/f3                  |
 | dired-single            | github    | https://github.com/crocket/dired-single               |
-| fetch                   | github    | https://github.com/crshd/fetch.el                     |
 | gift-mode               | github    | https://github.com/csrhodes/gift-mode                 |
 | dakrone-light-theme     | github    | https://github.com/dakrone/dakrone-light-theme        |
 | dakrone-theme           | github    | https://github.com/dakrone/dakrone-theme              |
@@ -81,7 +77,7 @@
 | dtrace-script-mode      | github    | https://github.com/dotemacs/dtrace-script-mode        |
 | ecukes                  | github    | https://github.com/ecukes/ecukes                      |
 | memento                 | github    | https://github.com/ehartc/memento                     |
-| thesaurus               | wiki      | https://github.com/emacsmirror/emacswiki.org          |
+| tfs                     | wiki      | https://github.com/emacsmirror/emacswiki.org          |
 | lively                  | orphaned  | https://github.com/emacsorphanage/lively              |
 | transpose-frame         | orphaned  | https://github.com/emacsorphanage/transpose-frame     |
 | vc-fossil               | orphaned  | https://github.com/emacsorphanage/vc-fossil           |
@@ -99,8 +95,6 @@
 | read-aloud              | github    | https://github.com/gromnitsky/read-aloud.el           |
 | wordnut                 | github    | https://github.com/gromnitsky/wordnut                 |
 | http-twiddle            | github    | https://github.com/hassy/http-twiddle                 |
-| hoa-pp-mode             | github    | https://github.com/hoaproject/Contributions-Emacs-Pp  |
-| scratch                 | github    | https://github.com/ieure/scratch-el                   |
 | bpr                     | github    | https://github.com/ilya-babanov/emacs-bpr             |
 | imgix                   | github    | https://github.com/imgix/imgix-emacs                  |
 | euslisp-mode            | github    | https://github.com/iory/euslisp-mode                  |
@@ -143,11 +137,6 @@
 | hlint-refactor          | github    | https://github.com/mpickering/hlint-refactor-mode     |
 | parse-csv               | github    | https://github.com/mrc/el-csv                         |
 | fxrd-mode               | github    | https://github.com/msherry/fxrd-mode                  |
-| busybee-theme           | github    | https://github.com/mswift42/busybee-theme             |
-| mustang-theme           | github    | https://github.com/mswift42/mustang-theme             |
-| obsidian-theme          | github    | https://github.com/mswift42/obsidian-theme            |
-| ess-R-object-popup      | github    | https://github.com/myuhe/ess-R-object-popup.el        |
-| tinysegmenter           | github    | https://github.com/myuhe/tinysegmenter.el             |
 | spacemacs-theme         | github    | https://github.com/nashamri/spacemacs-theme           |
 | thread-dump             | github    | https://github.com/nd/thread-dump.el                  |
 | conda                   | github    | https://github.com/necaris/conda.el                   |
@@ -166,7 +155,6 @@
 | cpputils-cmake          | github    | https://github.com/redguardtoo/cpputils-cmake         |
 | evil-mark-replace       | github    | https://github.com/redguardtoo/evil-mark-replace      |
 | flycheck-scala-sbt      | github    | https://github.com/rjmac/flycheck-scala-sbt           |
-| sentence-highlight      | github    | https://github.com/sbelak/sentence-highlight          |
 | org-link-minor-mode     | github    | https://github.com/seanohalpin/org-link-minor-mode    |
 | distel-completion-lib   | github    | https://github.com/sebastiw/distel-completion         |
 | lusty-explorer          | github    | https://github.com/sjbach/lusty-emacs                 |
@@ -188,11 +176,9 @@
 | tql-mode                | github    | https://github.com/tiros-dev/tql-mode                 |
 | nm                      | github    | https://github.com/tjim/nevermore                     |
 | chinese-pyim-greatdict  | github    | https://github.com/tumashu/chinese-pyim-greatdict     |
-| color-theme-approximate | github    | https://github.com/tungd/color-theme-approximate      |
 | direnv                  | github    | https://github.com/wbolster/emacs-direnv              |
 | sicp                    | github    | https://github.com/webframp/sicp-info                 |
 | sparkline               | github    | https://github.com/woudshoo/sparkline                 |
 | sudden-death            | github    | https://github.com/yewton/sudden-death.el             |
 | url-shortener           | github    | https://github.com/yuyang0/url-shortener              |
-| indent-tools            | gitlab    | https://gitlab.com/emacs-stuff/indent-tools           |
 | aria2                   | gitlab    | https://gitlab.com/ukaszg/aria2                       |
