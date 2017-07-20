@@ -72,7 +72,7 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3824 |   3824 |       |       |       |  3404 |
+| github      | 3828 |   3828 |       |       |       |  3409 |
 | gitlab      |   26 |     26 |       |       |       |    26 |
 | git         |   56 |     56 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -84,16 +84,16 @@
 | cvs         |      |        |       |       |       |     4 |
 | darcs       |      |        |       |       |       |     2 |
 | fossil      |      |        |       |       |       |     0 |
-| svn         |      |        |       |       |       |     9 |
+| svn         |      |        |       |       |       |     8 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  734 |    734 |       |       |       |   156 |
 | file        |  278 |    278 |       |       |       |       |
-| minority    |   30 |     30 |       |       |       |       |
+| minority    |   29 |     29 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   59 |     59 |       |       |       |       |
 | shelved     |  986 |        |   986 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6589 |   5180 |   986 |   426 |   167 |  3686 |
+| total       | 6592 |   5183 |   986 |   426 |   167 |  3690 |
 
 * Emacs
 ** Prefer elpa
@@ -351,6 +351,7 @@
 | dictionary              | connection                      | github    |
 | dictionary              | link                            | github    |
 | dired-hacks             | dired-avfs                      | github    |
+| dired-hacks             | dired-collapse                  | github    |
 | dired-hacks             | dired-filter                    | github    |
 | dired-hacks             | dired-hacks-utils               | github    |
 | dired-hacks             | dired-narrow                    | github    |
@@ -490,7 +491,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (31)          | Class    | Melpa     | Reason                        |
+| Package (30)          | Class    | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
@@ -516,7 +517,6 @@
 | po-mode               | minority | git       | mostly non-elisp              |
 | pylint                | minority | github    | mostly non-elisp              |
 | ruby-additional       | minority | svn       | svn                           |
-| ruby-electric         | minority | svn       | svn                           |
 | sml-modeline          | orphaned | bzr       |                               |
 | tex-smart-umlauts     | minority | darcs     | darcs                         |
 | thrift                | minority | github    | mostly non-elisp              |
