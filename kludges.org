@@ -39,12 +39,13 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (33)     | Class    | Feature               | Reason                         |
+| Package (34)     | Class    | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
 | anything-project | github   | anything              | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | anything-project | github   | anything-match-plugin | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | cask             | github   | ert                   | pending [[https://github.com/cask/cask/pull/386][#386]]                   |
 | commander        | github   | ert                   | pending [[https://github.com/rejeep/commander.el/pull/10][#10]]                    |
+| confluence       | orphaned | xml-rpc               | later                          |
 | coq              | github   | maths-menu            | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
 | coq              | github   | texi-docstring-magic  | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
 | ddskk            | github   | dash                  | later                          |
@@ -65,7 +66,6 @@
 | lookup           | github   | stem-english          | staled [[https://github.com/lookup2/lookup2/pull/14][#14]]                     |
 | m-buffer         | github   | assess-discover       | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                     |
 | mic-paren        | file     | paren                 | considered drop-in replacement |
-| minitest         | github   | test-helper           | pending [[https://github.com/arthurnn/minitest-emacs/pull/38][#38]]                    |
 | mkhtml           | wiki     | htmlize               | considered drop-in replacement |
 | nav              | github   | ack                   | staled [[https://github.com/ijt/emacs-nav/pull/103][#103]]                    |
 | oauth            | github   | hmac-sha1             | wontfix [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                     |
@@ -77,6 +77,9 @@
 | projmake-mode    | github   | elisp-lint            | staled [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                     |
 | riece            | git      | luna                  | later                          |
 | riece            | git      | lunit                 | later                          |
+| ruby-additional  | orphaned | inf-ruby              | later                          |
+| ruby-additional  | orphaned | ruby-electric         | later                          |
+| ruby-additional  | orphaned | ruby-mode             | later                          |
 | ruby-end         | github   | ert                   | pending [[https://github.com/rejeep/ruby-end.el/pull/16][#16]]                    |
 | slime            | github   | cl-indent             | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                 |
 | sly              | github   | cl-indent             | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                 |

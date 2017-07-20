@@ -160,15 +160,18 @@
 | Package          | Reason                      |
 |------------------+-----------------------------|
 | apel             | 6. many feature conflicts   |
-| caml             | 5. svn not supported        |
+| caml             | A. semi-manual svn import   |
+| cg               | A. semi-manual svn import   |
+| clang-format     | A. semi-manual svn import   |
 | color-theme      | 5. bzr not supported        |
-| confluence       | 5. svn not supported        |
+| confluence       | A. semi-manual svn import   |
 | crontab-mode     | 3. upstream disappeared     |
 | dedicated        | 2. upstream has disappeared |
-| dic-lookup-w3m   | 5. svn not supported        |
+| dic-lookup-w3m   | A. semi-manual svn import   |
 | dirtree          | 9. wiki needed by non-wiki  |
 | doom             | 3. upstream unresponsive    |
 | ecasound         | 3. upstream disappeared     |
+| edb              | C. unmaintained, needed fix |
 | elisp-depend     | 3. upstream unresponsive    |
 | elo              | 4. dropped of by maintainer |
 | ert-expectations | 9. wiki needed by non-wiki  |
@@ -176,8 +179,10 @@
 | filladapt        | 3. upstream unresponsive    |
 | findr            | 9. wiki needed by non-wiki  |
 | flim             | 6. many feature conflicts   |
+| helm-ls-svn      | A. semi-manual svn import   |
 | hide-lines       | 9. wiki needed by non-wiki  |
 | http-post-simple | 9. wiki needed by non-wiki  |
+| hyperspec        | B. multiple non-upstreams   |
 | key-chord        | 9. wiki needed by non-wiki  |
 | keydef           | 2. upstream disappeared     |
 | levenshtein      | 9. wiki needed by non-wiki  |
@@ -185,7 +190,6 @@
 | lively           | 3. upstream unresponsive    |
 | look-mode        | 9. wiki needed by non-wiki  |
 | lsdb             | 5. tarball not supported    |
-| magit-filenotify | [[https://github.com/emacsorphanage/magit-filenotify/issues/19][#19]]                         |
 | miniedit         | 2. upstream disappeared     |
 | multi-term       | 9. wiki needed by non-wiki  |
 | nxhtml           | 5. bzr not supported        |
@@ -197,7 +201,7 @@
 | picolisp         | 8. should contact upstream  |
 | pointback        | 2. upstream disappeared     |
 | read-char-spec   | 3. upstream unresponsive    |
-| ruby-additional  | 5. svn not supported        |
+| ruby-additional  | A. semi-manual svn import   |
 | semi             | 6. many feature conflicts   |
 | session          | 5. tarball not supported    |
 | setnu            | 3. upstream unresponsive    |
@@ -205,6 +209,7 @@
 | shell-history    | 9. wiki needed by non-wiki  |
 | showtip          | 9. wiki needed by non-wiki  |
 | smarty-mode      | 2. upstream has disappeared |
+| sml-modeline     | 5. bzr not supported        |
 | sr-speedbar      | 9. wiki needed by non-wiki  |
 | swbuff           | 5. cvs not supported        |
 | tail             | 2. upstream has disappeared |
@@ -215,7 +220,7 @@
 | vc-fossil        | 5. fossil not supported     |
 | vm               | 5. bzr not supported        |
 | w32-browser      | 9. wiki needed by non-wiki  |
-| w3m              | 5. cvs not supported        |
+| w3m              | A. cvs not supported       |
 | wanderlust       | 6. many feature conflicts   |
 | windata          | 9. wiki needed by non-wiki  |
 

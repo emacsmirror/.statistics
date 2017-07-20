@@ -19,19 +19,21 @@
                     #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package (61)     | Mirror   | Melpa    | Reason                      |
+| Package (64)     | Mirror   | Melpa    | Reason                      |
 |------------------+----------+----------+-----------------------------|
 | apel             | orphaned | github   | 6. many feature conflicts   |
-| caml             | orphaned | svn      | 5. svn not supported        |
+| caml             | orphaned | svn      | A. semi-manual svn import   |
+| cg               | orphaned | svn      | A. semi-manual svn import   |
+| clang-format     | orphaned | svn      | A. semi-manual svn import   |
 | color-theme      | orphaned | bzr      | 5. bzr not supported        |
-| confluence       | orphaned | svn      | 5. svn not supported        |
+| confluence       | orphaned | svn      | A. semi-manual svn import   |
 | crontab-mode     | orphaned | orphaned | 3. upstream disappeared     |
 | dedicated        | orphaned | orphaned | 2. upstream has disappeared |
-| dic-lookup-w3m   | orphaned | svn      | 5. svn not supported        |
+| dic-lookup-w3m   | orphaned | svn      | A. semi-manual svn import   |
 | dirtree          | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | doom             | orphaned | orphaned | 3. upstream unresponsive    |
 | ecasound         | orphaned |          | 3. upstream disappeared     |
-| edb              | orphaned |          |                             |
+| edb              | orphaned |          | C. unmaintained, needed fix |
 | elisp-depend     | orphaned | orphaned | 3. upstream unresponsive    |
 | elo              |          |          | 4. dropped of by maintainer |
 | ert-expectations | orphaned | orphaned | 9. wiki needed by non-wiki  |
@@ -39,9 +41,10 @@
 | filladapt        | orphaned |          | 3. upstream unresponsive    |
 | findr            | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | flim             | orphaned | github   | 6. many feature conflicts   |
+| helm-ls-svn      | orphaned | svn      | A. semi-manual svn import   |
 | hide-lines       | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | http-post-simple | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| hyperspec        | orphaned |          |                             |
+| hyperspec        | orphaned |          | B. multiple non-upstreams   |
 | key-chord        | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | keydef           | orphaned | orphaned | 2. upstream disappeared     |
 | levenshtein      | orphaned | orphaned | 9. wiki needed by non-wiki  |
@@ -60,7 +63,7 @@
 | picolisp         | orphaned |          | 8. should contact upstream  |
 | pointback        | orphaned | orphaned | 2. upstream disappeared     |
 | read-char-spec   | orphaned |          | 3. upstream unresponsive    |
-| ruby-additional  | minority | svn      | 5. svn not supported        |
+| ruby-additional  | orphaned | svn      | A. semi-manual svn import   |
 | semi             | orphaned | github   | 6. many feature conflicts   |
 | session          | orphaned | orphaned | 5. tarball not supported    |
 | setnu            | orphaned |          | 3. upstream unresponsive    |
@@ -68,7 +71,7 @@
 | shell-history    | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | showtip          | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | smarty-mode      | orphaned | orphaned | 2. upstream has disappeared |
-| sml-modeline     | orphaned | bzr      |                             |
+| sml-modeline     | orphaned | bzr      | 5. bzr not supported        |
 | sr-speedbar      | orphaned | orphaned | 9. wiki needed by non-wiki  |
 | swbuff           | orphaned | orphaned | 5. cvs not supported        |
 | tail             | orphaned |          | 2. upstream has disappeared |
@@ -79,7 +82,7 @@
 | vc-fossil        | orphaned | orphaned | 5. fossil not supported     |
 | vm               | orphaned |          | 5. bzr not supported        |
 | w32-browser      | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| w3m              | orphaned | cvs      | 5. cvs not supported        |
+| w3m              | orphaned | cvs      | A. semi-manual cvs import   |
 | wanderlust       | orphaned | github   | 6. many feature conflicts   |
 | windata          | orphaned | orphaned | 9. wiki needed by non-wiki  |
 
@@ -170,3 +173,14 @@ Reasons:
    Not importing these packages from the wiki anymore is a step into
    that direction.  Also see Melpa issue
    [#2342](https://github.com/melpa/melpa/issues/2342).
+
+10. Like (5), but these ~svn~ and ~cvs~ repositories contain the full
+    history, imported using ~git svn~ or ~git cvsimport~.
+
+11. Multiple packages bundle this but none of them is the authorities
+    upstream.  Attempts to get the various non-upstreams talking have
+    failed so far.
+
+12. Unmaintained for many years and need a feature fix.  I should
+    probably use the (10) approach instead, but I haven't done so yet
+    (?)  because this is not available from Melpa.

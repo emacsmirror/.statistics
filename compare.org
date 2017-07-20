@@ -88,9 +88,9 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  734 |    734 |       |       |       |   156 |
 | file        |  278 |    278 |       |       |       |       |
-| minority    |   29 |     29 |       |       |       |       |
+| minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   59 |     59 |       |       |       |       |
+| orphaned    |   63 |     63 |       |       |       |       |
 | shelved     |  986 |        |   986 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | total       | 6592 |   5183 |   986 |   426 |   167 |  3690 |
@@ -496,8 +496,8 @@
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
 | cfengine-code-style   | minority | github    | mostly non-elisp              |
-| cg                    | minority | svn       | svn                           |
-| clang-format          | minority | svn       | svn                           |
+| cg                    | orphaned | svn       | svn                           |
+| clang-format          | orphaned | svn       | svn                           |
 | cmake-mode            | minority | github    | mostly non-elisp              |
 | color-theme           | orphaned | bzr       | bzr                           |
 | confluence            | orphaned | svn       | svn                           |
@@ -509,14 +509,14 @@
 | diffscuss-mode        | minority | github    | mostly non-elisp              |
 | dsvn                  | minority | svn       | svn                           |
 | google-c-style        | minority | github    | mostly non-elisp              |
-| helm-ls-svn           | minority | svn       | svn                           |
+| helm-ls-svn           | orphaned | svn       | svn                           |
 | llvm-mode             | shelved  | git       | mostly non-elisp              |
 | nemerle               | minority | github    | mostly non-elisp              |
 | ninja-mode            | minority | github    | mostly non-elisp              |
 | ox-clip               | minority | github    | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] |
 | po-mode               | minority | git       | mostly non-elisp              |
 | pylint                | minority | github    | mostly non-elisp              |
-| ruby-additional       | minority | svn       | svn                           |
+| ruby-additional       | orphaned | svn       | svn                           |
 | sml-modeline          | orphaned | bzr       |                               |
 | tex-smart-umlauts     | minority | darcs     | darcs                         |
 | thrift                | minority | github    | mostly non-elisp              |
