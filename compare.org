@@ -88,9 +88,9 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  734 |    734 |       |       |       |   156 |
 | file        |  278 |    278 |       |       |       |       |
-| minority    |   25 |     25 |       |       |       |       |
+| minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   63 |     63 |       |       |       |       |
+| orphaned    |   64 |     64 |       |       |       |       |
 | shelved     |  986 |        |   986 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | total       | 6592 |   5183 |   986 |   426 |   167 |  3690 |
@@ -507,7 +507,7 @@
 | debian-changelog-mode | minority | cvs       | mostly non-elisp              |
 | dic-lookup-w3m        | orphaned | svn       | svn                           |
 | diffscuss-mode        | minority | github    | mostly non-elisp              |
-| dsvn                  | minority | svn       | svn                           |
+| dsvn                  | orphaned | svn       | svn                           |
 | google-c-style        | minority | github    | mostly non-elisp              |
 | helm-ls-svn           | orphaned | svn       | svn                           |
 | llvm-mode             | shelved  | git       | mostly non-elisp              |

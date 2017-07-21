@@ -39,7 +39,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (34)     | Class    | Feature               | Reason                         |
+| Package (35)     | Class    | Feature               | Reason                         |
 |------------------+----------+-----------------------+--------------------------------|
 | anything-project | github   | anything              | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
 | anything-project | github   | anything-match-plugin | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
@@ -54,6 +54,8 @@
 | ddskk            | github   | ptexinfmt             | later                          |
 | ddskk            | github   | vip                   | later                          |
 | drag-stuff       | github   | ert                   | pending [[https://github.com/rejeep/drag-stuff.el/pull/24][#24]]                    |
+| dsvn             | orphaned | psvn                  | later                          |
+| dsvn             | orphaned | vc-svn                | later                          |
 | elixir-mode      | github   | test-helper           | pending [[https://github.com/elixir-lang/emacs-elixir/issues/395][#395]]                   |
 | emacspeak        | github   | amixer                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
 | emacspeak        | github   | nm                    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
