@@ -41,28 +41,16 @@ yourself, then read the relevant documentation.  You may also ask me
 for guidance.
 
 This information is extracted using the function ~elx-license~, which is
-provided by my package [[https://github.com/tarsius/elx][elx]] (~git clone https://github.com/tarsius/elx.git~).
+provided by my package [[https://github.com/tarsius/elx][elx]].  This package is currently undergoing big
+changes.
 
-The license is determined from the contents of the "main library" of
-the package alone (the library whose name matches the name of the
-package).  First this function looks for a permission statement for a
-license published by the Free Software Foundation, if any.  If that
-fails, then the value of the "License" header keyword is considered.
-Finally it searches for brief, and potentially ambiguous, permission
-statements for non-FSF licenses.  For FSF licenses a "+" is appended
-if the text "or (at your option) any later version", or similar was
-found.  An effort is made to normalize the returned value.  This
-function also accounts for some commonly used variations in wording,
-typos, and other complications.
-
-However the returned value is sometimes false or ambiguous.  In
-particular note that if a license is "unknown", then that merely means
-that it is /not known/ what license applies.  This may be because the
-library lacks a permission statement altogether (possibly because an
-accompanying ~LICENSE~ file is considered sufficient by the upstream),
-but it may also be because ~elx-license~ does not attempt to detect the
-used non-standard and/or non-fsf permission statement, or because of
-typos in the statement, or for a number of other reasons.
+The extracted value is sometimes false or ambiguous.  In particular
+note that if a license is "unknown", then that merely means that it is
+/not known/ what license applies.  This may be because the library lacks
+a permission statement and ~LICENSE~ file altogether, but it may also be
+because ~elx-license~ does not attempt to detect the used non-standard
+and/or non-fsf permission statement, or because of typos in the
+statement, or for a number of other reasons.
 
 * Licenses used by packages on Melpa
 
