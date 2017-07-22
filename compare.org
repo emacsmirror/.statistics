@@ -72,9 +72,9 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3828 |   3828 |       |       |       |  3409 |
+| github      | 3834 |   3834 |       |       |       |  3421 |
 | gitlab      |   26 |     26 |       |       |       |    26 |
-| git         |   56 |     56 |       |       |       |    44 |
+| git         |   55 |     55 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   44 |     44 |       |       |       |    38 |
@@ -91,9 +91,9 @@
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   64 |     64 |       |       |       |       |
-| shelved     |  986 |        |   986 |       |       |       |
+| shelved     |  993 |        |   993 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6592 |   5183 |   986 |   426 |   167 |  3690 |
+| total       | 6604 |   5188 |   993 |   426 |   167 |  3702 |
 
 * Emacs
 ** Prefer elpa
@@ -491,7 +491,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (30)          | Class    | Melpa     | Reason                        |
+| Package (37)          | Class    | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
@@ -501,6 +501,7 @@
 | cmake-mode            | minority | github    | mostly non-elisp              |
 | color-theme           | orphaned | bzr       | bzr                           |
 | confluence            | orphaned | svn       | svn                           |
+| cursor-in-brackets    | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | cython-mode           | minority | github    | mostly non-elisp              |
 | darcsum               | minority | darcs     | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                 |
 | debian-bug            | minority | cvs       | mostly non-elisp              |
@@ -508,11 +509,17 @@
 | dic-lookup-w3m        | orphaned | svn       | svn                           |
 | diffscuss-mode        | minority | github    | mostly non-elisp              |
 | dsvn                  | orphaned | svn       | svn                           |
+| dummy-h-mode          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
+| flycheck-scala-sbt    | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | google-c-style        | minority | github    | mostly non-elisp              |
+| gregorio-mode         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | helm-ls-svn           | orphaned | svn       | svn                           |
+| judge-indent          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | llvm-mode             | shelved  | git       | mostly non-elisp              |
+| metafmt               | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | nemerle               | minority | github    | mostly non-elisp              |
 | ninja-mode            | minority | github    | mostly non-elisp              |
+| org-password-manager  | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | ox-clip               | minority | github    | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] |
 | po-mode               | minority | git       | mostly non-elisp              |
 | pylint                | minority | github    | mostly non-elisp              |
