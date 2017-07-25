@@ -72,7 +72,7 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3837 |   3837 |       |       |       |  3425 |
+| github      | 3838 |   3838 |       |       |       |  3426 |
 | gitlab      |   26 |     26 |       |       |       |    26 |
 | git         |   55 |     55 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -93,7 +93,7 @@
 | orphaned    |   64 |     64 |       |       |       |       |
 | shelved     |  993 |        |   993 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6607 |   5191 |   993 |   426 |   167 |  3706 |
+| total       | 6608 |   5192 |   993 |   426 |   167 |  3707 |
 
 * Emacs
 ** Prefer elpa
@@ -324,7 +324,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (75)    | Secondary package               | Class     |
+| Primary package (76)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -401,6 +401,7 @@
 | kaesar                  | kaesar-mode                     | github    |
 | kubernetes              | kubernetes-evil                 | github    |
 | load-theme-buffer-local | color-theme-buffer-local        | github    |
+| mac-pseudo-daemon       | osx-pseudo-daemon               | github    |
 | magit                   | git-commit                      | github    |
 | magit                   | magit-popup                     | github    |
 | nameframe               | nameframe-perspective           | github    |
