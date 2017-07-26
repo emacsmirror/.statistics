@@ -72,7 +72,7 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3831 |   3831 |       |       |       |  3420 |
+| github      | 3831 |   3831 |       |       |       |  3422 |
 | gitlab      |   26 |     26 |       |       |       |    26 |
 | git         |   54 |     54 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -93,7 +93,7 @@
 | orphaned    |   64 |     64 |       |       |       |       |
 | shelved     | 1004 |        |  1004 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6608 |   5181 |  1004 |   426 |   167 |  3701 |
+| total       | 6608 |   5181 |  1004 |   426 |   167 |  3703 |
 
 * Emacs
 ** Prefer elpa
@@ -324,7 +324,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (76)    | Secondary package               | Class     |
+| Primary package (78)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -340,6 +340,7 @@
 | chumpy-windows          | window-jump                     | github    |
 | circe                   | tracking                        | github    |
 | clojure-mode            | clojure-mode-extra-font-locking | github    |
+| cnfonts                 | chinese-fonts-setup             | github    |
 | codesearch              | projectile-codesearch           | github    |
 | copyit                  | copyit-pandoc                   | github    |
 | ctl-mode                | gs-mode                         | github    |
@@ -421,6 +422,7 @@
 | prosjekt                | anything-prosjekt               | github    |
 | prosjekt                | dirtree-prosjekt                | github    |
 | prosjekt                | helm-prosjekt                   | github    |
+| pyim                    | chinese-pyim                    | github    |
 | request                 | request-deferred                | github    |
 | restclient              | restclient-helm                 | github    |
 | rinari                  | ruby-compilation                | github    |
