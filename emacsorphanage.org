@@ -19,72 +19,78 @@
                     #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package (64)     | Mirror   | Melpa    | Reason                      |
-|------------------+----------+----------+-----------------------------|
-| apel             | orphaned | github   | 6. many feature conflicts   |
-| caml             | orphaned | svn      | A. semi-manual svn import   |
-| cg               | orphaned | svn      | A. semi-manual svn import   |
-| clang-format     | orphaned | svn      | A. semi-manual svn import   |
-| color-theme      | orphaned | bzr      | 5. bzr not supported        |
-| confluence       | orphaned | svn      | A. semi-manual svn import   |
-| crontab-mode     | orphaned | orphaned | 3. upstream disappeared     |
-| dedicated        | orphaned | orphaned | 2. upstream has disappeared |
-| dic-lookup-w3m   | orphaned | svn      | A. semi-manual svn import   |
-| dirtree          | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| doom             | orphaned | orphaned | 3. upstream unresponsive    |
-| ecasound         | orphaned |          | 3. upstream disappeared     |
-| edb              | orphaned |          | C. unmaintained, needed fix |
-| elisp-depend     | orphaned | orphaned | 3. upstream unresponsive    |
-| elo              |          |          | 4. dropped of by maintainer |
-| ert-expectations | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| eshell-manual    | orphaned |          | 3. upstream unresponsive    |
-| filladapt        | orphaned |          | 3. upstream unresponsive    |
-| findr            | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| flim             | orphaned | github   | 6. many feature conflicts   |
-| helm-ls-svn      | orphaned | svn      | A. semi-manual svn import   |
-| hide-lines       | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| http-post-simple | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| hyperspec        | orphaned |          | B. multiple non-upstreams   |
-| key-chord        | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| keydef           | orphaned | orphaned | 2. upstream disappeared     |
-| levenshtein      | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| linkd            | orphaned |          | 7. include the images       |
-| lively           | orphaned | orphaned | 3. upstream unresponsive    |
-| look-mode        | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| lsdb             | orphaned |          | 5. tarball not supported    |
-| miniedit         | orphaned | orphaned | 2. upstream disappeared     |
-| multi-term       | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| nxhtml           | orphaned |          | 5. bzr not supported        |
-| oberon           | orphaned | orphaned | 3. upstream unresponsive    |
-| org-bullets      | orphaned | orphaned | [[https://github.com/sabof/org-bullets/issues/18][#18]]                         |
-| org-grep         | orphaned | orphaned | 1. the maintainer has died  |
-| osd              | orphaned |          | 2. upstream disappeared     |
-| pager            | orphaned | orphaned | 2. upstream disappeared     |
-| picolisp         | orphaned |          | 8. should contact upstream  |
-| pointback        | orphaned | orphaned | 2. upstream disappeared     |
-| read-char-spec   | orphaned |          | 3. upstream unresponsive    |
-| ruby-additional  | orphaned | svn      | A. semi-manual svn import   |
-| semi             | orphaned | github   | 6. many feature conflicts   |
-| session          | orphaned | orphaned | 5. tarball not supported    |
-| setnu            | orphaned |          | 3. upstream unresponsive    |
-| shell-command    | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| shell-history    | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| showtip          | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| smarty-mode      | orphaned | orphaned | 2. upstream has disappeared |
-| sml-modeline     | orphaned | bzr      | 5. bzr not supported        |
-| sr-speedbar      | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| swbuff           | orphaned | orphaned | 5. cvs not supported        |
-| tail             | orphaned |          | 2. upstream has disappeared |
-| text-translator  | orphaned |          | 5. bzr not supported        |
-| transpose-frame  | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| tree-mode        | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| vala-mode        | orphaned | orphaned | 2. upstream has disappeared |
-| vc-fossil        | orphaned | orphaned | 5. fossil not supported     |
-| vm               | orphaned |          | 5. bzr not supported        |
-| w32-browser      | orphaned | orphaned | 9. wiki needed by non-wiki  |
-| w3m              | orphaned | cvs      | A. semi-manual cvs import   |
-| wanderlust       | orphaned | github   | 6. many feature conflicts   |
-| windata          | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| Package (70)            | Mirror   | Melpa    | Reason                      |
+|-------------------------+----------+----------+-----------------------------|
+| apel                    | orphaned | github   | 6. many feature conflicts   |
+| caml                    | orphaned | svn      | A. semi-manual svn import   |
+| cg                      | orphaned | svn      | A. semi-manual svn import   |
+| clang-format            | orphaned | svn      | A. semi-manual svn import   |
+| color-theme             | orphaned | bzr      | 5. bzr not supported        |
+| confluence              | orphaned | svn      | A. semi-manual svn import   |
+| crontab-mode            | orphaned | orphaned | 3. upstream disappeared     |
+| csv-nav                 | wiki     | wiki     |                             |
+| dedicated               | orphaned | orphaned | 2. upstream has disappeared |
+| dic-lookup-w3m          | orphaned | svn      | A. semi-manual svn import   |
+| dirtree                 | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| doom                    | orphaned | orphaned | 3. upstream unresponsive    |
+| dsvn                    | orphaned | svn      |                             |
+| ecasound                | orphaned |          | 3. upstream disappeared     |
+| edb                     | orphaned |          | C. unmaintained, needed fix |
+| elisp-depend            | orphaned | orphaned | 3. upstream unresponsive    |
+| elo                     |          |          | 4. dropped of by maintainer |
+| ert-expectations        | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| eshell-manual           | orphaned |          | 3. upstream unresponsive    |
+| filladapt               | orphaned |          | 3. upstream unresponsive    |
+| findr                   | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| flim                    | orphaned | github   | 6. many feature conflicts   |
+| goto-chg                | wiki     | wiki     |                             |
+| helm-ls-svn             | orphaned | svn      | A. semi-manual svn import   |
+| hide-lines              | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| http-post-simple        | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| hyperspec               | orphaned |          | B. multiple non-upstreams   |
+| key-chord               | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| keydef                  | orphaned | orphaned | 2. upstream disappeared     |
+| levenshtein             | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| linkd                   | orphaned |          | 7. include the images       |
+| lively                  | orphaned | orphaned | 3. upstream unresponsive    |
+| look-mode               | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| lsdb                    | orphaned |          | 5. tarball not supported    |
+| miniedit                | orphaned | orphaned | 2. upstream disappeared     |
+| multi-term              | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| nxhtml                  | orphaned |          | 5. bzr not supported        |
+| oberon                  | orphaned | orphaned | 3. upstream unresponsive    |
+| org-bullets             | orphaned | orphaned | [[https://github.com/sabof/org-bullets/issues/18][#18]]                         |
+| org-grep                | orphaned | orphaned | 1. the maintainer has died  |
+| osd                     | orphaned |          | 2. upstream disappeared     |
+| pager                   | orphaned | orphaned | 2. upstream disappeared     |
+| picolisp                | orphaned |          | 8. should contact upstream  |
+| pointback               | orphaned | orphaned | 2. upstream disappeared     |
+| project-local-variables | wiki     | wiki     |                             |
+| read-char-spec          | orphaned |          | 3. upstream unresponsive    |
+| rfringe                 | wiki     | wiki     |                             |
+| ruby-additional         | orphaned | svn      | A. semi-manual svn import   |
+| semi                    | orphaned | github   | 6. many feature conflicts   |
+| session                 | orphaned | orphaned | 5. tarball not supported    |
+| setnu                   | orphaned |          | 3. upstream unresponsive    |
+| shell-command           | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| shell-history           | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| showtip                 | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| smarty-mode             | orphaned | orphaned | 2. upstream has disappeared |
+| sml-modeline            | orphaned | bzr      | 5. bzr not supported        |
+| sr-speedbar             | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| swbuff                  | orphaned | orphaned | 5. cvs not supported        |
+| tail                    | orphaned |          | 2. upstream has disappeared |
+| text-translator         | orphaned |          | 5. bzr not supported        |
+| tidy                    | wiki     | wiki     |                             |
+| transpose-frame         | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| tree-mode               | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| vala-mode               | orphaned | orphaned | 2. upstream has disappeared |
+| vc-fossil               | orphaned | orphaned | 5. fossil not supported     |
+| vm                      | orphaned |          | 5. bzr not supported        |
+| w32-browser             | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| w3m                     | orphaned | cvs      | A. semi-manual cvs import   |
+| wanderlust              | orphaned | github   | 6. many feature conflicts   |
+| windata                 | orphaned | orphaned | 9. wiki needed by non-wiki  |
 
 - The ~Mirror~ column specifies where the Emacsmirror mirrors a package
   from.  This should be ~orphaned~, meaning that the mirror gets it from

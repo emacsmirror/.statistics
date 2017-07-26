@@ -72,9 +72,9 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3838 |   3838 |       |       |       |  3426 |
+| github      | 3831 |   3831 |       |       |       |  3420 |
 | gitlab      |   26 |     26 |       |       |       |    26 |
-| git         |   55 |     55 |       |       |       |    44 |
+| git         |   54 |     54 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   44 |     44 |       |       |       |    38 |
@@ -87,13 +87,13 @@
 | svn         |      |        |       |       |       |     8 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  734 |    734 |       |       |       |   156 |
-| file        |  278 |    278 |       |       |       |       |
+| file        |  275 |    275 |       |       |       |       |
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   64 |     64 |       |       |       |       |
-| shelved     |  993 |        |   993 |       |       |       |
+| shelved     | 1004 |        |  1004 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6608 |   5192 |   993 |   426 |   167 |  3707 |
+| total       | 6608 |   5181 |  1004 |   426 |   167 |  3701 |
 
 * Emacs
 ** Prefer elpa
@@ -492,7 +492,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (37)          | Class    | Melpa     | Reason                        |
+| Package (39)          | Class    | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
@@ -518,12 +518,14 @@
 | judge-indent          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | llvm-mode             | shelved  | git       | mostly non-elisp              |
 | metafmt               | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
+| mwe-log-commands      | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | nemerle               | minority | github    | mostly non-elisp              |
 | ninja-mode            | minority | github    | mostly non-elisp              |
 | org-password-manager  | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | ox-clip               | minority | github    | unrelated in one git repo [[https://github.com/jkitchin/scimax/issues/21][#21]] |
 | po-mode               | minority | git       | mostly non-elisp              |
 | pylint                | minority | github    | mostly non-elisp              |
+| redshank              | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | ruby-additional       | orphaned | svn       | svn                           |
 | sml-modeline          | orphaned | bzr       |                               |
 | tex-smart-umlauts     | minority | darcs     | darcs                         |
