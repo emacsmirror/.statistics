@@ -2,6 +2,7 @@
 
 DOMAIN         ?= emacsmirror.net
 PUBLIC         ?= https://$(DOMAIN)
+CFRONT_DIST    ?= E1IXJGPIOM4EUW
 PUBLISH_BUCKET ?= s3://$(DOMAIN)
 PREVIEW_BUCKET ?= s3://preview.$(DOMAIN)
 S3_ZONE        ?= s3-website.eu-central-1
@@ -100,6 +101,8 @@ preview:
 publish:
 	@echo "Uploading to $(PUBLISH_BUCKET)..."
 	@aws s3 sync $(SRC) $(PUBLISH_BUCKET)$(DST) --delete $(SYNC)
+	@aws cloudfront create-invalidation \
+	--distribution-id $(CFRONT_DIST) --paths "/stats/*"
 
 clean:
 	@echo "Cleaning..."

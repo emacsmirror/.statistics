@@ -4,9 +4,14 @@
   (require 'epkg)
 
   (defun emir--format-license-table (table)
-    (setcar (assq nil table) "(unknown)")
+    (--when-let (assq nil table)
+      (setcar it "((unknown))"))
     (--when-let (assoc "pending" table)
-      (setcar it  "(pending)"))
+      (setcar it  "((pending))"))
+    (--when-let (assoc "failure" table)
+      (setcar it  "((failure))"))
+    (--when-let (assoc "none" table)
+      (setcar it  "((none))"))
     (let ((total (apply '+ (mapcar 'cadr table)))
           (gnu   (apply '+ (mapcar (pcase-lambda (`(,license ,count))
                                      (if (string-match-p "GPL" license) count 0))
@@ -68,15 +73,16 @@ https://melpa.org
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2294 |      62 |
-| GPL-2+        |   616 |      17 |
-| (unknown)     |   179 |       5 |
+| GPL-3+        |  2295 |      62 |
+| GPL-2+        |   617 |      17 |
 | MIT (x11)     |   117 |       3 |
-| MIT           |   101 |       3 |
-| GPL-3         |    97 |       3 |
-| BSD-2-clause  |    64 |       2 |
+| MIT           |   102 |       3 |
+| GPL-3         |    98 |       3 |
+| ((pending))   |    85 |       2 |
+| BSD-2-clause  |    65 |       2 |
+| ((failure))   |    64 |       2 |
+| ((none))      |    61 |       2 |
 | GPL-2         |    40 |       1 |
-| (pending)     |    34 |       1 |
 | unlicense     |    30 |       1 |
 | Apache-2.0    |    26 |       1 |
 | BSD-3-clause  |    26 |       1 |
@@ -102,9 +108,9 @@ https://melpa.org
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3060 |      83 |
+| total GNU     |  3063 |      83 |
 |---------------+-------+---------|
-| total         |  3701 |     100 |
+| total         |  3703 |     100 |
 
 * Licenses used by packages on the Emacsmirror
 
@@ -133,13 +139,14 @@ https://emacsmirror.net
 |---------------+-------+---------|
 | GPL-3+        |  2744 |      54 |
 | GPL-2+        |  1344 |      26 |
-| (unknown)     |   277 |       5 |
+| ((none))      |   124 |       2 |
 | MIT (x11)     |   116 |       2 |
-| MIT           |   102 |       2 |
-| GPL-3         |    99 |       2 |
+| MIT           |   103 |       2 |
+| GPL-3         |   101 |       2 |
+| ((failure))   |   100 |       2 |
+| ((pending))   |    93 |       2 |
 | GPL-2         |    82 |       2 |
-| BSD-2-clause  |    67 |       1 |
-| (pending)     |    44 |       1 |
+| BSD-2-clause  |    68 |       1 |
 | public-domain |    36 |       1 |
 | unlicense     |    32 |       1 |
 | WTFPL         |    30 |       1 |
@@ -165,108 +172,7 @@ https://emacsmirror.net
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4287 |      84 |
+| total GNU     |  4289 |      84 |
 |---------------+-------+---------|
 | total         |  5076 |     100 |
-
-* Licenses uses by packages on the Emacsattic
-
-Once its upstream has disappeared a package is usually moved from the
-Emacsmirror to the Emacsattic, where it is no longer updated. (The
-Emacsattic is a Github “organization” separate from the Emacsmirror
-organization, but it is considered part of the Emacsmirror project.)
-
-https://emacsmirror.net
-
-#+NAME: count-emacsattic
-#+BEGIN_SRC emacs-lisp
-  (emir--format-license-table
-   (epkg-sql [:select [license (funcall count *)] :as count
-              :from packages
-              :where (= class 'shelved)
-              :group-by license
-              :order-by count :desc]))
-#+END_SRC
-#+RESULTS: count-emacsattic
-| License       | Count | Percent |
-|---------------+-------+---------|
-| GPL-2         |   512 |      51 |
-| (unknown)     |   284 |      28 |
-| GPL-3         |   143 |      14 |
-| GPL           |    16 |       2 |
-| GPL-3+        |    13 |       1 |
-| GPL-1         |     9 |       1 |
-| GPL-2+        |     8 |       1 |
-| as-is         |     8 |       1 |
-| Apache-2.0    |     3 |       0 |
-| MIT           |     2 |       0 |
-| WTFPL         |     2 |       0 |
-| public-domain |     2 |       0 |
-| BSD-2-clause  |     1 |       0 |
-| BSD-3-clause  |     1 |       0 |
-|---------------+-------+---------|
-| total GNU     |   701 |      70 |
-|---------------+-------+---------|
-| total         |  1004 |     100 |
-
-* Licenses uses by all known packages
-
-This includes built-in, Elpa, and those from the Emacsattic.  Or in
-other words, this includes each and every packages that has an entry
-in the Emacsmirror database.
-
-An overview of those packages, the version control systems used by
-their upstreams, and the availability in other "package archives",
-can be found [[https://emacsmirror.net/stats/compare.html][here]].
-
-#+NAME: count-all
-#+BEGIN_SRC emacs-lisp
-  (emir--format-license-table
-   (epkg-sql [:select [license (funcall count *)] :as count
-              :from packages
-              :group-by license
-              :order-by count :desc]))
-#+END_SRC
-#+RESULTS: count-all
-| License       | Count | Percent |
-|---------------+-------+---------|
-| GPL-3+        |  2855 |      43 |
-| GPL-2+        |  1355 |      21 |
-| GPL-3         |   661 |      10 |
-| GPL-2         |   594 |       9 |
-| (unknown)     |   564 |       9 |
-| MIT (x11)     |   116 |       2 |
-| MIT           |   104 |       2 |
-| BSD-2-clause  |    68 |       1 |
-| (pending)     |    44 |       1 |
-| public-domain |    43 |       1 |
-| WTFPL         |    32 |       0 |
-| unlicense     |    32 |       0 |
-| Apache-2.0    |    29 |       0 |
-| BSD-3-clause  |    29 |       0 |
-| as-is         |    24 |       0 |
-| GPL           |    21 |       0 |
-| GPL-1         |     9 |       0 |
-| GPL-1+        |     6 |       0 |
-| ISC (and)     |     3 |       0 |
-| Artistic-2.0  |     2 |       0 |
-| CC-BY-3.0     |     2 |       0 |
-| ISC           |     2 |       0 |
-| LGPL-3+       |     2 |       0 |
-| AGPL-3        |     1 |       0 |
-| AGPL-3+       |     1 |       0 |
-| BSD           |     1 |       0 |
-| BSD-3         |     1 |       0 |
-| EPL           |     1 |       0 |
-| EPL-1.0       |     1 |       0 |
-| ISC (and/or)  |     1 |       0 |
-| LGPL          |     1 |       0 |
-| LGPL-3        |     1 |       0 |
-| LGPL-3.0      |     1 |       0 |
-| MPL-2         |     1 |       0 |
-|---------------+-------+---------|
-| total GNU     |  5508 |      83 |
-|---------------+-------+---------|
-| total         |  6608 |     100 |
-
 
