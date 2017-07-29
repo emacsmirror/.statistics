@@ -72,7 +72,7 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3831 |   3831 |       |       |       |  3422 |
+| github      | 3838 |   3838 |       |       |       |  3432 |
 | gitlab      |   26 |     26 |       |       |       |    26 |
 | git         |   54 |     54 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -93,7 +93,7 @@
 | orphaned    |   64 |     64 |       |       |       |       |
 | shelved     | 1032 |        |  1032 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6608 |   5153 |  1032 |   426 |   167 |  3703 |
+| total       | 6615 |   5160 |  1032 |   426 |   167 |  3713 |
 
 * Emacs
 ** Prefer elpa
@@ -324,7 +324,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (78)    | Secondary package               | Class     |
+| Primary package (80)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -371,6 +371,7 @@
 | emacsql                 | emacsql-psql                    | github    |
 | emacsql                 | emacsql-sqlite                  | github    |
 | esqlite                 | esqlite-helm                    | github    |
+| evil                    | evil-test-helpers               | github    |
 | factor-mode             | fuel                            | git       |
 | flx                     | flx-ido                         | github    |
 | flyspell-correct        | flyspell-correct-helm           | github    |
@@ -415,6 +416,8 @@
 | opener                  | evil-opener                     | github    |
 | org                     | org-mac-iCal                    | git       |
 | org                     | org-mac-link                    | git       |
+| org-projectile          | org-category-capture            | github    |
+| org-projectile          | org-projectile-helm             | github    |
 | ox-twiki                | ox-tiddly                       | github    |
 | pig-mode                | pig-snippets                    | github    |
 | pollen-mode             | company-pollen                  | github    |
