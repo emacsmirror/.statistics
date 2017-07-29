@@ -239,7 +239,7 @@
 	     #'string< :key #'car))
 #+END_SRC
 #+RESULTS:
-| Author (239)                                        | Package                        |
+| Author (232)                                        | Package                        |
 |-----------------------------------------------------+--------------------------------|
 |                                                     | ac-dabbrev                     |
 |                                                     | acd                            |
@@ -280,7 +280,6 @@
 |                                                     | dirnav                         |
 |                                                     | docmap                         |
 |                                                     | doit-mode                      |
-|                                                     | dos-indent                     |
 |                                                     | dot-emacs-helper               |
 |                                                     | dropdown-list                  |
 |                                                     | dynamic-ring                   |
@@ -326,9 +325,7 @@
 |                                                     | help-dwim                      |
 |                                                     | help-dwim-perlapi              |
 |                                                     | help-dwim-perldoc              |
-|                                                     | hsv2rgb                        |
 |                                                     | imdb                           |
-|                                                     | imdbs                          |
 |                                                     | imenu-tree                     |
 |                                                     | inf-perl                       |
 |                                                     | ipa                            |
@@ -361,10 +358,8 @@
 |                                                     | paste2                         |
 |                                                     | pastebox                       |
 |                                                     | pddl-mode                      |
-|                                                     | pdftools                       |
 |                                                     | phonetic                       |
 |                                                     | phutball                       |
-|                                                     | planner-hierarchy              |
 |                                                     | plt-completions                |
 |                                                     | point-ring                     |
 |                                                     | point-undo                     |
@@ -392,7 +387,6 @@
 |                                                     | sql-completion                 |
 |                                                     | sqled-mode                     |
 |                                                     | sqlplus                        |
-|                                                     | strptime                       |
 |                                                     | summarye                       |
 |                                                     | symlink-fix                    |
 |                                                     | tag                            |
@@ -409,7 +403,6 @@
 |                                                     | wcy-desktop                    |
 |                                                     | webgen-mode                    |
 |                                                     | wimpy-del                      |
-|                                                     | write-or-die                   |
 |                                                     | xs-mode                        |
 |                                                     | yaoddmuse                      |
 |                                                     | yatm                           |
@@ -480,13 +473,11 @@
 | Andy Stewart                                        | windresize-extension           |
 | Avi Rozen                                           | grep-o-matic                   |
 | Avi Rozen                                           | repository-root                |
-| Ben Moseley                                         | markerpen                      |
 | Benjamin Drieu                                      | df-mode                        |
 | Benjamin Rutt                                       | backup-each-save               |
 | Benjamin Rutt                                       | top-mode                       |
 | Bill Carpenter.                                     | cscope                         |
 | Binu Jose Philip, Drew Adams                        | w32browser-dlgopen             |
-| Brent Goodrick                                      | bg-rlogin-setup                |
 | Bryan O'Sullivan                                    | x-migrant                      |
 | Bryan Waite, based on some code found at            | fixme-mode                     |
 | Carl Groner                                         | tumbl                          |
@@ -511,8 +502,6 @@
 | ChunYe Wang                                         | wcy-swbuff                     |
 | Craig Lawson                                        | dired-column-widths            |
 | Craig McDaniel                                      | ppindent                       |
-| Craig Muth                                          | control-lock                   |
-| Craig Muth                                          | hidesearch                     |
 | Dale K. Hawkins                                     | snipplr                        |
 | Damyan Pepper (gmail account, username damyanp)     | autosmiley                     |
 | Dan McCarthy                                        | acme-search                    |
@@ -615,7 +604,6 @@
 | Drew Adams                                          | naked                          |
 | Drew Adams                                          | narrow-indirect                |
 | Drew Adams                                          | novice+                        |
-| Drew Adams                                          | occur-schroeder                |
 | Drew Adams                                          | oneonone                       |
 | Drew Adams                                          | outline+                       |
 | Drew Adams                                          | palette                        |
@@ -665,11 +653,8 @@
 | Gaofeng Huang                                       | pinbar                         |
 | Guanpeng Xu                                         | subedit                        |
 | Gustavo Sverzut Barbieri                            | edje-mode                      |
-| Gustavo Sverzut Barbieri                            | gobject-class                  |
 | HAMANO Kiyoto                                       | popup-select-window            |
-| Hans Halvorson (hhalvors -at- princeton -dot- edu)  | bibsnarf                       |
 | Hans Halvorson (www.princeton.edu/~hhalvors)        | env-print                      |
-| Hans Halvorson (www.princeton.edu/~hhalvors)        | gradebook                      |
 | Happy Kohpy                                         | longlines-jp                   |
 | Henrik Enberg                                       | rmail-spamprobe                |
 | Igor Sikaček                                        | awk-it                         |
@@ -861,7 +846,6 @@
 | Seiji Zenitani                                      | smart-compile                  |
 | Seong-Kook Shin                                     | vc-jump                        |
 | Seong-Kook Shin                                     | xlicense                       |
-| Seth Falcon                                         | extract-ical                   |
 | Shawn Betts                                         | mailx                          |
 | Shelagh Manton                                      | ac-lilypond                    |
 | Slavomir Kaslev                                     | etom                           |
@@ -872,7 +856,6 @@
 | TN                                                  | application                    |
 | Tabitha Tipper                                      | cheezburger                    |
 | Tad Ashlock                                         | mthesaur                       |
-| Tadamegu Furukawa                                   | cmd-mode                       |
 | Taiki SUGAWARA                                      | highlight-cl                   |
 | Taiki SUGAWARA                                      | lcomp                          |
 | Taiki SUGAWARA                                      | paint                          |
@@ -932,7 +915,6 @@
 | ahei                                                | linum+                         |
 | ffrances                                            | kis-interface                  |
 | ffrances                                            | kis-project                    |
-| hhalvors at princeton dot edu                       | amazon                         |
 | jonnay                                              | emdroid                        |
 | kahlil (kal) hodgson                                | alt-font-menu                  |
 | khiker                                              | dabbrev-expand-multiple        |
