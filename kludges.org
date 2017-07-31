@@ -39,61 +39,41 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (34)     | Class    | Feature               | Reason                         |
-|------------------+----------+-----------------------+--------------------------------|
-| anything-project | github   | anything              | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
-| anything-project | github   | anything-match-plugin | staled [[https://github.com/imakado/anything-project/pull/3][#3]]                      |
-| cask             | github   | ert                   | pending [[https://github.com/cask/cask/pull/386][#386]]                   |
-| commander        | github   | ert                   | pending [[https://github.com/rejeep/commander.el/pull/10][#10]]                    |
-| confluence       | orphaned | xml-rpc               | later                          |
-| coq              | github   | maths-menu            | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| coq              | github   | texi-docstring-magic  | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                   |
-| ddskk            | github   | dash                  | later                          |
-| ddskk            | github   | htmlize               | later                          |
-| ddskk            | github   | install               | later                          |
-| ddskk            | github   | ptexinfmt             | later                          |
-| ddskk            | github   | vip                   | later                          |
-| drag-stuff       | github   | ert                   | pending [[https://github.com/rejeep/drag-stuff.el/pull/24][#24]]                    |
-| dsvn             | orphaned | psvn                  | later                          |
-| dsvn             | orphaned | vc-svn                | later                          |
-| elixir-mode      | github   | test-helper           | pending [[https://github.com/elixir-lang/emacs-elixir/issues/395][#395]]                   |
-| emacspeak        | github   | amixer                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
-| emacspeak        | github   | nm                    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
-| emacspeak        | github   | tapestry              | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
-| emacspeak        | github   | tetris                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                    |
-| epl              | github   | dummy-package         | pending [[https://github.com/cask/epl/pull/34][#34]]                    |
-| git              | github   | ert                   | pending [[https://github.com/rejeep/git.el/pull/6][#6]]                     |
-| go               | github   | gnugo                 | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                     |
-| karma            | github   | test-helper           | fixme [[https://github.com/tonini/karma.el/pull/7][#7]]                       |
-| lookup           | github   | stem-english          | staled [[https://github.com/lookup2/lookup2/pull/14][#14]]                     |
-| m-buffer         | github   | assess-discover       | pending [[https://github.com/phillord/m-buffer-el/pull/6][#6]]                     |
-| mic-paren        | file     | paren                 | considered drop-in replacement |
-| mkhtml           | wiki     | htmlize               | considered drop-in replacement |
-| nav              | github   | ack                   | staled [[https://github.com/ijt/emacs-nav/pull/103][#103]]                    |
-| oauth            | github   | hmac-sha1             | wontfix [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                     |
-| org              | git      | htmlize               | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]              |
-| org              | git      | ob-scala              | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]]   |
-| overseer         | github   | test-helper           | pending [[https://github.com/tonini/overseer.el/pull/12][#12]]                    |
-| pony-mode        | github   | ert                   | fixme [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                      |
-| projmake-mode    | github   | elisp-lint            | staled [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                     |
-| riece            | git      | luna                  | later                          |
-| riece            | git      | lunit                 | later                          |
-| ruby-additional  | orphaned | inf-ruby              | later                          |
-| ruby-additional  | orphaned | ruby-electric         | later                          |
-| ruby-additional  | orphaned | ruby-mode             | later                          |
-| ruby-end         | github   | ert                   | pending [[https://github.com/rejeep/ruby-end.el/pull/16][#16]]                    |
-| slime            | github   | cl-indent             | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                 |
-| sly              | github   | cl-indent             | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]                 |
-| tuareg           | github   | caml                  | considered drop-in replacement |
-| twittering-mode  | github   | ssl                   | backward compatibility         |
-| twittering-mode  | github   | test                  | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]                   |
-| vm               | orphaned | vcard                 | later                          |
-| wanderlust       | orphaned | bbdb-wl               | backward compatibility [[https://github.com/wanderlust/wanderlust/issues/139][#139]]    |
-| wanderlust       | orphaned | ptexinfmt             | later                          |
-| wanderlust       | orphaned | rfc2368               | later                          |
-| wanderlust       | orphaned | ssl                   | later                          |
-| wanderlust       | orphaned | utf7                  | later                          |
-| wrap-region      | github   | ert                   | pending [[https://github.com/rejeep/wrap-region.el/pull/31][#31]]                    |
+| Package (24)    | Class    | Feature       | Reason                       |
+|-----------------+----------+---------------+------------------------------|
+| cask            | github   | ert           | pending [[https://github.com/cask/cask/pull/386][#386]]                 |
+| commander       | github   | ert           | pending [[https://github.com/rejeep/commander.el/pull/10][#10]]                  |
+| coq             | github   | maths-menu    | pending [[https://github.com/ProofGeneral/PG/issues/171][#171]]                 |
+| drag-stuff      | github   | ert           | pending [[https://github.com/rejeep/drag-stuff.el/pull/24][#24]]                  |
+| elixir-mode     | github   | test-helper   | pending [[https://github.com/elixir-lang/emacs-elixir/issues/395][#395]]                 |
+| emacspeak       | github   | amixer        | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                  |
+| emacspeak       | github   | nm            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                  |
+| emacspeak       | github   | tapestry      | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                  |
+| emacspeak       | github   | tetris        | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                  |
+| epl             | github   | dummy-package | pending [[https://github.com/cask/epl/pull/34][#34]]                  |
+| git             | github   | ert           | pending [[https://github.com/rejeep/git.el/pull/6][#6]]                   |
+| go              | github   | gnugo         | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                   |
+| karma           | github   | test-helper   | pending [[https://github.com/tonini/karma.el/pull/7][#7]]                   |
+| lookup          | github   | stem-english  | pending [[https://github.com/lookup2/lookup2/pull/14][#14]]                  |
+| nav             | github   | ack           | pending [[https://github.com/ijt/emacs-nav/pull/103][#103]]                 |
+| oauth           | github   | hmac-sha1     | wontfix [[https://github.com/psanford/emacs-oauth/pull/5][#5]]                   |
+| org             | git      | htmlize       | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]            |
+| org             | git      | ob-scala      | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]] |
+| overseer        | github   | test-helper   | pending [[https://github.com/tonini/overseer.el/pull/12][#12]]                  |
+| pony-mode       | github   | ert           | pending [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                  |
+| projmake-mode   | github   | elisp-lint    | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                  |
+| ruby-end        | github   | ert           | pending [[https://github.com/rejeep/ruby-end.el/pull/16][#16]]                  |
+| slime           | github   | cl-indent     | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]               |
+| sly             | github   | cl-indent     | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]               |
+| tuareg          | github   | caml          | pending [[https://github.com/ocaml/tuareg/pull/138][138]]                  |
+| twittering-mode | github   | ssl           | backward compatibility       |
+| twittering-mode | github   | test          | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]                 |
+| wanderlust      | orphaned | bbdb-wl       | backward compatibility [[https://github.com/wanderlust/wanderlust/issues/139][#139]]  |
+| wanderlust      | orphaned | ptexinfmt     | wontfix                      |
+| wanderlust      | orphaned | rfc2368       | wontfix                      |
+| wanderlust      | orphaned | ssl           | wontfix                      |
+| wanderlust      | orphaned | utf7          | wontfix                      |
+| wrap-region     | github   | ert           | pending [[https://github.com/rejeep/wrap-region.el/pull/31][#31]]                  |
 
 * Drop required features
 #+NAME: required-drop
@@ -105,7 +85,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (65)                    | Class       | Feature                | Reason                                              |
+| Package (64)                    | Class       | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
@@ -165,7 +145,6 @@
 | mhc                             | github      | mhc-xmas               | XEmacs compatibility                                |
 | mhc                             | github      | pcustom                | Mule compatibility                                  |
 | mhc                             | github      | poe                    | Mule compatibility                                  |
-| mkhtml                          | wiki        | info+20                | backward compatibility                              |
 | molokai-theme                   | github      | color-theme            | backward compatibility                              |
 | navi2ch                         | github      | bitmap                 | XEmacs compatibility                                |
 | notes-mode                      | elpa        | npgp                   | backward compatibility                              |
@@ -187,6 +166,7 @@
 | tangotango-theme                | github      | color-theme            | backward compatibility                              |
 | tc                              | github      | bitmap                 | pending [[https://github.com/kozo2/tc/issues/5][#5]]                                          |
 | twittering-mode                 | github      | alpaca                 | only required if epa isn't available                |
+| twittering-mode                 | github      | revive                 | false-positive                                      |
 | twittering-mode                 | github      | un-define              | XEmacs compatibility                                |
 | twittering-mode                 | github      | unicode                | backward compatibility                              |
 | ucs-utils                       | github      | ucs-utils-6.0-delta    | backward compatibility                              |
@@ -223,7 +203,7 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (20)         | Class       | Library                 | Reason                     |
+| Package (21)         | Class       | Library                 | Reason                     |
 |----------------------+-------------+-------------------------+----------------------------|
 | ada-ref-man          | elpa        | ada-ref-man.el          | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
 | auctex               | elpa-branch | tex.el                  | pkg/lib name mismatch      |
@@ -240,6 +220,7 @@
 | literate-starter-kit | github      | init.el                 | not a package              |
 | majapahit-theme      | gitlab      | majapahit-dark-theme.el | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 | ne2wm                | github      | ne2wm-setup.el          | no/mismatched main library |
+| profile-dotemacs     | file        | profile-dotemacs.el     |                            |
 | punpun-theme         | github      | punpun-dark-theme.el    | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | spacemacs-theme      | github      | spacemacs-dark-theme.el | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | tao-theme            | github      | tao-yang-theme.el       | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |
@@ -260,7 +241,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--libraries
-| Package (7)        | Class | Library                      |
+| Package (6)        | Class | Library                      |
 |--------------------+-------+------------------------------|
 | bookmark+          | wiki  | bookmark+-1.el               |
 | bookmark+          | wiki  | bookmark+-bmu.el             |
@@ -285,8 +266,6 @@
 | icicles            | wiki  | icicles-opt.el               |
 | icicles            | wiki  | icicles-var.el               |
 | icicles            | wiki  | icicles.el                   |
-| mkhtml             | wiki  | mkhtml-htmlize.el            |
-| mkhtml             | wiki  | mkhtml.el                    |
 | sequential-command | wiki  | sequential-command-config.el |
 | sequential-command | wiki  | sequential-command.el        |
 | thing-edit         | wiki  | thing-edit-extension.el      |
@@ -306,9 +285,10 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (3)         | Class  | Branch      |
+| Package (4)         | Class  | Branch      |
 |---------------------+--------+-------------|
 | distinguished-theme | github | develop     |
 | ebuild-mode         | git    | ebuild-mode |
+| neato-graph-bar     | gitlab | release     |
 | propfont-mixed      | github | github      |
 

@@ -72,12 +72,12 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3838 |   3838 |       |       |       |  3432 |
-| gitlab      |   26 |     26 |       |       |       |    26 |
+| github      | 3837 |   3837 |       |       |       |  3430 |
+| gitlab      |   27 |     27 |       |       |       |    27 |
 | git         |   54 |     54 |       |       |       |    44 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   44 |     44 |       |       |       |    38 |
+| bitbucket   |   45 |     45 |       |       |       |    39 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | bzr         |      |        |       |       |       |     2 |
@@ -86,14 +86,14 @@
 | fossil      |      |        |       |       |       |     0 |
 | svn         |      |        |       |       |       |     8 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  716 |    716 |       |       |       |   156 |
-| file        |  265 |    265 |       |       |       |       |
+| wiki        |  715 |    715 |       |       |       |   156 |
+| file        |  262 |    262 |       |       |       |       |
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   64 |     64 |       |       |       |       |
+| orphaned    |   65 |     65 |       |       |       |       |
 | shelved     | 1032 |        |  1032 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6615 |   5160 |  1032 |   426 |   167 |  3713 |
+| total       | 6613 |   5158 |  1032 |   426 |   167 |  3713 |
 
 * Emacs
 ** Prefer elpa
@@ -497,7 +497,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (39)          | Class    | Melpa     | Reason                        |
+| Package (40)          | Class    | Melpa     | Reason                        |
 |-----------------------+----------+-----------+-------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]]  |
 | caml                  | orphaned | svn       | svn                           |
@@ -523,6 +523,7 @@
 | judge-indent          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | llvm-mode             | shelved  | git       | mostly non-elisp              |
 | metafmt               | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
+| mic-paren             | shelved  | github    |                               |
 | mwe-log-commands      | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]      |
 | nemerle               | minority | github    | mostly non-elisp              |
 | ninja-mode            | minority | github    | mostly non-elisp              |
