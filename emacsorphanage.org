@@ -19,8 +19,9 @@
                     #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package (70)            | Mirror   | Melpa    | Reason                      |
+| Package (71)            | Mirror   | Melpa    | Reason                      |
 |-------------------------+----------+----------+-----------------------------|
+| anything-project        | orphaned |          |                             |
 | apel                    | orphaned | github   | 6. many feature conflicts   |
 | caml                    | orphaned | svn      | A. semi-manual svn import   |
 | cg                      | orphaned | svn      | A. semi-manual svn import   |
