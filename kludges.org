@@ -39,7 +39,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (24)    | Class    | Feature       | Reason                       |
+| Package (23)    | Class    | Feature       | Reason                       |
 |-----------------+----------+---------------+------------------------------|
 | cask            | github   | ert           | pending [[https://github.com/cask/cask/pull/386][#386]]                 |
 | commander       | github   | ert           | pending [[https://github.com/rejeep/commander.el/pull/10][#10]]                  |
@@ -65,7 +65,6 @@
 | ruby-end        | github   | ert           | pending [[https://github.com/rejeep/ruby-end.el/pull/16][#16]]                  |
 | slime           | github   | cl-indent     | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]               |
 | sly             | github   | cl-indent     | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]               |
-| tuareg          | github   | caml          | pending [[https://github.com/ocaml/tuareg/pull/138][138]]                  |
 | twittering-mode | github   | ssl           | backward compatibility       |
 | twittering-mode | github   | test          | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]                 |
 | wanderlust      | orphaned | bbdb-wl       | backward compatibility [[https://github.com/wanderlust/wanderlust/issues/139][#139]]  |
