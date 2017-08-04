@@ -10,6 +10,8 @@
       (setcar it  "((pending))"))
     (--when-let (assoc "failure" table)
       (setcar it  "((failure))"))
+    (--when-let (assoc "failure(p)" table)
+      (setcar it  "((failure/p))"))
     (--when-let (assoc "none" table)
       (setcar it  "((none))"))
     (let ((total (apply '+ (mapcar 'cadr table)))
@@ -68,46 +70,48 @@ https://melpa.org
               :from [packages melpa-recipes]
               :where (= packages:name melpa-recipes:epkg-package)
               :group-by packages:license
-              :order-by count :desc]))
+              :order-by [(desc count) (asc license)]]))
 #+END_SRC
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2336 |      63 |
-| GPL-2+        |   610 |      16 |
+| GPL-3+        |  2340 |      63 |
+| GPL-2+        |   612 |      16 |
 | MIT (x11)     |   119 |       3 |
-| GPL-3         |   105 |       3 |
-| MIT           |   104 |       3 |
-| ((pending))   |   104 |       3 |
-| ((failure))   |    70 |       2 |
-| BSD-2-clause  |    65 |       2 |
-| GPL-2         |    34 |       1 |
+| GPL-3         |   108 |       3 |
+| MIT           |   106 |       3 |
+| ((pending))   |   103 |       3 |
+| BSD-2-clause  |    66 |       2 |
+| GPL-2         |    35 |       1 |
+| BSD-3-clause  |    34 |       1 |
 | unlicense     |    31 |       1 |
-| BSD-3-clause  |    29 |       1 |
 | Apache-2.0    |    27 |       1 |
-| public-domain |    21 |       1 |
-| as-is         |    15 |       0 |
+| ((failure))   |    27 |       1 |
+| public-domain |    23 |       1 |
+| as-is         |    20 |       1 |
 | WTFPL         |    12 |       0 |
+| ((failure/p)) |    11 |       0 |
 | GPL-1+        |     4 |       0 |
+| WTFPL-2       |     4 |       0 |
+| GPL           |     3 |       0 |
 | ISC (and)     |     3 |       0 |
+| ISC (and/or)  |     3 |       0 |
 | LGPL-3+       |     3 |       0 |
-| AGPL-3        |     2 |       0 |
+| AGPL-3+       |     2 |       0 |
 | Artistic-2.0  |     2 |       0 |
 | CC-BY-3.0     |     2 |       0 |
-| GPL           |     2 |       0 |
-| ISC           |     2 |       0 |
+| CeCILL-B      |     2 |       0 |
 | LGPL          |     2 |       0 |
-| AGPL-3+       |     1 |       0 |
+| MS-PL         |     2 |       0 |
+| AGPL-3        |     1 |       0 |
 | BSD           |     1 |       0 |
-| BSD-3         |     1 |       0 |
 | EPL           |     1 |       0 |
 | EPL-1.0       |     1 |       0 |
-| ISC (and/or)  |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3101 |      84 |
+| total GNU     |  3112 |      84 |
 |---------------+-------+---------|
 | total         |  3713 |     100 |
 
@@ -131,45 +135,47 @@ https://emacsmirror.net
                           (not (= class 'elpa-branch))
                           (not (= class 'shelved)))
               :group-by license
-              :order-by count :desc]))
+              :order-by [(desc count) (asc license)]]))
 #+END_SRC
 #+RESULTS: count-emacsmirror
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2790 |      55 |
-| GPL-2+        |  1337 |      26 |
-| ((pending))   |   140 |       3 |
+| GPL-3+        |  2795 |      55 |
+| GPL-2+        |  1340 |      27 |
+| ((pending))   |   139 |       3 |
 | MIT (x11)     |   118 |       2 |
-| GPL-3         |   109 |       2 |
-| MIT           |   106 |       2 |
-| ((failure))   |   106 |       2 |
-| GPL-2         |    70 |       1 |
-| BSD-2-clause  |    68 |       1 |
-| public-domain |    34 |       1 |
+| GPL-3         |   112 |       2 |
+| MIT           |   108 |       2 |
+| GPL-2         |    71 |       1 |
+| BSD-2-clause  |    69 |       1 |
+| ((failure))   |    48 |       1 |
+| public-domain |    41 |       1 |
+| BSD-3-clause  |    37 |       1 |
 | unlicense     |    33 |       1 |
-| BSD-3-clause  |    32 |       1 |
 | WTFPL         |    31 |       1 |
 | Apache-2.0    |    27 |       1 |
-| as-is         |    16 |       0 |
+| as-is         |    23 |       0 |
+| ((failure/p)) |    11 |       0 |
+| GPL           |    10 |       0 |
 | GPL-1+        |     6 |       0 |
-| GPL           |     5 |       0 |
+| WTFPL-2       |     5 |       0 |
 | LGPL-3+       |     4 |       0 |
 | ISC (and)     |     3 |       0 |
-| AGPL-3        |     2 |       0 |
+| ISC (and/or)  |     3 |       0 |
+| MS-PL         |     3 |       0 |
+| AGPL-3+       |     2 |       0 |
 | Artistic-2.0  |     2 |       0 |
 | CC-BY-3.0     |     2 |       0 |
-| ISC           |     2 |       0 |
-| AGPL-3+       |     1 |       0 |
+| CeCILL-B      |     2 |       0 |
+| AGPL-3        |     1 |       0 |
 | BSD           |     1 |       0 |
-| BSD-3         |     1 |       0 |
 | EPL           |     1 |       0 |
 | EPL-1.0       |     1 |       0 |
-| ISC (and/or)  |     1 |       0 |
 | LGPL          |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4327 |      86 |
+| total GNU     |  4344 |      86 |
 |---------------+-------+---------|
 | total         |  5053 |     100 |
