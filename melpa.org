@@ -20,7 +20,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (618)                | Link                                    |
+| Package (611)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -138,12 +138,10 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | dired-xattr                  | [[https://github.com/renard/dired-xattr][renard/dired-xattr]]                      |
 | distel                       | [[https://github.com/massemanet/distel][massemanet/distel]]                       |
 | ditz                         | [[https://github.com/kentaro/emacs-ditz][kentaro/emacs-ditz]]                      |
-| dna-debug                    | [[https://github.com/jave/dna-debug][jave/dna-debug]]                          |
 | doc-mode                     | [[https://github.com/nschum/doc-mode][nschum/doc-mode]]                         |
 | docsetutil                   | [[https://github.com/leoliu/docsetutil-el][leoliu/docsetutil-el]]                    |
 | door-gnus                    | [[https://github.com/yyr/door-gnus][yyr/door-gnus]]                           |
 | doxygen                      | [[https://github.com/TreeRex/doxygen-el][TreeRex/doxygen-el]]                      |
-| dragbox                      | [[https://github.com/jave/dragbox][jave/dragbox]]                            |
 | drela-mode                   | [[https://github.com/cloudchamber/Drela-mode][cloudchamber/Drela-mode]]                 |
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            |
 | durendal                     | [[https://github.com/technomancy/durendal][technomancy/durendal]]                    |
@@ -172,8 +170,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | emacs-speaks-nonmem          | [[https://github.com/mattfidler/Emacs-Speaks-NONMEM][mattfidler/Emacs-Speaks-NONMEM]]          |
 | emacspeak                    | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       |
 | emir                         | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    |
-| emmental                     | [[https://github.com/jave/emmental][jave/emmental]]                           |
-| emsane                       | [[https://github.com/jave/emsane][jave/emsane]]                             |
 | emux                         | [[https://github.com/re5et/emux][re5et/emux]]                              |
 | epackage                     | [[https://github.com/jaalto/project--emacs-epackage][jaalto/project--emacs-epackage]]          |
 | epom                         | [[https://github.com/aufrank/epom][aufrank/epom]]                            |
@@ -466,7 +462,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | picolisp-wiki-mode           | [[https://github.com/tj64/picolisp-wiki-mode][tj64/picolisp-wiki-mode]]                 |
 | plain-org-wiki               | [[https://github.com/abo-abo/plain-org-wiki][abo-abo/plain-org-wiki]]                  |
 | plone-mode                   | [[https://github.com/jone/plone-mode.el][jone/plone-mode.el]]                      |
-| pocketcompletion             | [[https://github.com/jave/pocketcompletion][jave/pocketcompletion]]                   |
 | popup+                       | [[https://github.com/scjung/popup-plus][scjung/popup-plus]]                       |
 | popup-frame                  | [[https://github.com/Sarcasm/popup-frame][Sarcasm/popup-frame]]                     |
 | popup-global-mark-ring       | [[https://github.com/whitypig/popup-global-mark-ring][whitypig/popup-global-mark-ring]]         |
@@ -520,7 +515,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | selftest                     | [[https://github.com/hober/selftest-el][hober/selftest-el]]                       |
 | seognil                      | [[https://github.com/md11235/seognil][md11235/seognil]]                         |
 | sequence                     | [[https://github.com/nicferrier/emacs-sequence][nicferrier/emacs-sequence]]               |
-| sh-proxy                     | [[https://github.com/jave/sh-proxy][jave/sh-proxy]]                           |
 | shoes-off                    | [[https://github.com/nicferrier/shoes-off][nicferrier/shoes-off]]                    |
 | short-lambda                 | [[https://github.com/abo-abo/short-lambda][abo-abo/short-lambda]]                    |
 | show-arglist                 | [[https://github.com/peccu/show-arglist.el][peccu/show-arglist.el]]                   |
@@ -636,7 +630,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | yatest                       | [[https://github.com/lieutar/yatest.el][lieutar/yatest.el]]                       |
 | yeoman                       | [[https://github.com/julienXX/yeoman.el][julienXX/yeoman.el]]                      |
 | yql                          | [[https://github.com/wfarr/yql-el][wfarr/yql-el]]                            |
-| zen-mode                     | [[https://github.com/jave/zen-mode][jave/zen-mode]]                           |
 | zendmd-comint                | [[https://github.com/jhanson/zendmd-comint.el][jhanson/zendmd-comint.el]]                |
 | zone-matrix                  | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        |
 | zwiebel                      | [[https://github.com/silentbicycle/zwiebel][silentbicycle/zwiebel]]                   |
@@ -650,6 +643,15 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
+| Package (7)      | Link                  |
+|------------------+-----------------------|
+| dna-debug        | [[https://gitlab.com/jave/dna-debug][jave/dna-debug]]        |
+| dragbox          | [[https://gitlab.com/jave/dragbox][jave/dragbox]]          |
+| emmental         | [[https://gitlab.com/jave/emmental][jave/emmental]]         |
+| emsane           | [[https://gitlab.com/jave/emsane][jave/emsane]]           |
+| pocketcompletion | [[https://gitlab.com/jave/pocketcompletion][jave/pocketcompletion]] |
+| sh-proxy         | [[https://gitlab.com/jave/sh-proxy][jave/sh-proxy]]         |
+| zen-mode         | [[https://gitlab.com/jave/zen-mode][jave/zen-mode]]         |
 
 * Git
 #+NAME: missing-git
