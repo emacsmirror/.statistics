@@ -72,10 +72,10 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3831 |   3831 |       |       |       |  3430 |
+| github      | 3841 |   3841 |       |       |       |  3442 |
 | gitlab      |   34 |     34 |       |       |       |    27 |
-| git         |   54 |     54 |       |       |       |    44 |
-| subtree     |   23 |     23 |       |       |       |       |
+| git         |   52 |     52 |       |       |       |    43 |
+| subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    39 |
 | hg          |    1 |      1 |       |       |       |     1 |
@@ -93,7 +93,7 @@
 | orphaned    |   65 |     65 |       |       |       |       |
 | shelved     |  991 |        |   991 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6572 |   5158 |   991 |   426 |   167 |  3713 |
+| total       | 6581 |   5167 |   991 |   426 |   167 |  3724 |
 
 * Emacs
 ** Prefer elpa
@@ -372,7 +372,6 @@
 | emacsql                 | emacsql-sqlite                  | github    |
 | esqlite                 | esqlite-helm                    | github    |
 | evil                    | evil-test-helpers               | github    |
-| factor-mode             | fuel                            | git       |
 | flx                     | flx-ido                         | github    |
 | flyspell-correct        | flyspell-correct-helm           | github    |
 | flyspell-correct        | flyspell-correct-ivy            | github    |
@@ -401,6 +400,7 @@
 | jump                    | inflections                     | github    |
 | kaesar                  | kaesar-file                     | github    |
 | kaesar                  | kaesar-mode                     | github    |
+| kaleidoscope            | kaleidoscope-evil-state-flash   | github    |
 | kubernetes              | kubernetes-evil                 | github    |
 | load-theme-buffer-local | color-theme-buffer-local        | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon               | github    |

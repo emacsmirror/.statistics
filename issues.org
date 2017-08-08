@@ -61,9 +61,10 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2) | Class  | Feature        | Shelved |
-|-------------+--------+----------------+---------|
-| exwm-x      | github | owp-el2org     |         |
-| exwm-x      | github | owp-web-server |         |
-| pyim        | github | owp-el2org     |         |
-| pyim        | github | owp-web-server |         |
+| Package (3)        | Class  | Feature            | Shelved |
+|--------------------+--------+--------------------+---------|
+| exwm-x             | github | owp-el2org         |         |
+| exwm-x             | github | owp-web-server     |         |
+| flycheck-popup-tip | github | undercover-init.el |         |
+| pyim               | github | owp-el2org         |         |
+| pyim               | github | owp-web-server     |         |
