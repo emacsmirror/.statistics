@@ -39,7 +39,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (23)    | Class    | Feature       | Reason                       |
+| Package (22)    | Class    | Feature       | Reason                       |
 |-----------------+----------+---------------+------------------------------|
 | cask            | github   | ert           | pending [[https://github.com/cask/cask/pull/386][#386]]                 |
 | commander       | github   | ert           | pending [[https://github.com/rejeep/commander.el/pull/10][#10]]                  |
@@ -60,7 +60,6 @@
 | org             | git      | htmlize       | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]            |
 | org             | git      | ob-scala      | pending [[https://github.com/ensime/emacs-scala-mode/pull/107#issuecomment-222553618][scala-mode#107]], [[https://github.com/ensime/emacs-scala-mode/issues/114][#114]] |
 | overseer        | github   | test-helper   | pending [[https://github.com/tonini/overseer.el/pull/12][#12]]                  |
-| pony-mode       | github   | ert           | pending [[https://github.com/davidmiller/pony-mode/pull/99][#99]]                  |
 | projmake-mode   | github   | elisp-lint    | pending [[https://github.com/ericbmerritt/projmake-mode/pull/15][#15]]                  |
 | ruby-end        | github   | ert           | pending [[https://github.com/rejeep/ruby-end.el/pull/16][#16]]                  |
 | slime           | github   | cl-indent     | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]               |
@@ -221,7 +220,7 @@
 | ne2wm                | github      | ne2wm-setup.el          | no/mismatched main library |
 | profile-dotemacs     | file        | profile-dotemacs.el     |                            |
 | punpun-theme         | github      | punpun-dark-theme.el    | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
-| spacemacs-theme      | github      | spacemacs-dark-theme.el | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
+| spacemacs-theme      | github      | spacemacs-common.el     | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | tao-theme            | github      | tao-yang-theme.el       | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |
 | ultratex             | github      | lisp/ultex.el           | no/mismatched main library |
 | uni-confusables      | elpa        | uni-confusables.el      | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |

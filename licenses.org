@@ -75,23 +75,22 @@ https://melpa.org
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2345 |      63 |
-| GPL-2+        |   613 |      17 |
+| GPL-3+        |  2349 |      63 |
+| GPL-2+        |   612 |      16 |
+| MIT           |   120 |       3 |
 | MIT (x11)     |   119 |       3 |
-| GPL-3         |   108 |       3 |
-| MIT           |   106 |       3 |
-| ((pending))   |   102 |       3 |
-| BSD-2-clause  |    65 |       2 |
+| GPL-3         |   110 |       3 |
+| ((pending))   |    86 |       2 |
+| BSD-2-clause  |    66 |       2 |
 | BSD-3-clause  |    34 |       1 |
-| GPL-2         |    30 |       1 |
-| unlicense     |    30 |       1 |
+| unlicense     |    31 |       1 |
+| GPL-2         |    29 |       1 |
+| Apache-2.0    |    27 |       1 |
 | ((failure))   |    27 |       1 |
-| Apache-2.0    |    26 |       1 |
-| public-domain |    25 |       1 |
+| public-domain |    23 |       1 |
 | as-is         |    20 |       1 |
 | WTFPL         |    12 |       0 |
 | ((failure/p)) |     9 |       0 |
-| ((unknown))   |     4 |       0 |
 | GPL-1+        |     4 |       0 |
 | WTFPL-2       |     4 |       0 |
 | AGPL-3+       |     3 |       0 |
@@ -104,13 +103,14 @@ https://melpa.org
 | CeCILL-B      |     2 |       0 |
 | LGPL          |     2 |       0 |
 | MS-PL         |     2 |       0 |
+| ((unknown))   |     1 |       0 |
 | BSD           |     1 |       0 |
 | EPL           |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3113 |      84 |
+| total GNU     |  3117 |      84 |
 |---------------+-------+---------|
 | total         |  3713 |     100 |
 
@@ -139,24 +139,23 @@ https://emacsmirror.net
 #+RESULTS: count-emacsmirror
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2802 |      55 |
-| GPL-2+        |  1340 |      27 |
-| ((pending))   |   130 |       3 |
-| GPL-3         |   118 |       2 |
+| GPL-3+        |  2806 |      56 |
+| GPL-2+        |  1339 |      26 |
+| MIT           |   122 |       2 |
+| GPL-3         |   121 |       2 |
 | MIT (x11)     |   118 |       2 |
-| MIT           |   108 |       2 |
-| BSD-2-clause  |    68 |       1 |
-| GPL-2         |    66 |       1 |
+| ((pending))   |   114 |       2 |
+| BSD-2-clause  |    69 |       1 |
+| GPL-2         |    65 |       1 |
 | ((failure))   |    48 |       1 |
-| public-domain |    43 |       1 |
+| public-domain |    41 |       1 |
 | BSD-3-clause  |    37 |       1 |
-| unlicense     |    32 |       1 |
+| unlicense     |    33 |       1 |
 | WTFPL         |    31 |       1 |
-| Apache-2.0    |    26 |       1 |
+| Apache-2.0    |    27 |       1 |
 | as-is         |    23 |       0 |
 | GPL           |     9 |       0 |
 | ((failure/p)) |     9 |       0 |
-| ((unknown))   |     6 |       0 |
 | GPL-1+        |     6 |       0 |
 | WTFPL-2       |     5 |       0 |
 | LGPL-3+       |     4 |       0 |
@@ -164,6 +163,7 @@ https://emacsmirror.net
 | ISC (and)     |     3 |       0 |
 | ISC (and/or)  |     3 |       0 |
 | MS-PL         |     3 |       0 |
+| ((unknown))   |     2 |       0 |
 | Artistic-2.0  |     2 |       0 |
 | CC-BY-3.0     |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
@@ -174,6 +174,6 @@ https://emacsmirror.net
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4351 |      86 |
+| total GNU     |  4356 |      86 |
 |---------------+-------+---------|
 | total         |  5053 |     100 |
