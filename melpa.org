@@ -20,7 +20,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (611)                | Link                                    |
+| Package (612)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -49,6 +49,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | atom                         | [[https://github.com/fperrin/atom][fperrin/atom]]                            |
 | atom-syndication             | [[https://github.com/dmj/atom-syndication][dmj/atom-syndication]]                    |
 | augment                      | [[https://github.com/technomancy/augment][technomancy/augment]]                     |
+| aurora-config-mode           | [[https://github.com/bdd/aurora-config-mode.el][bdd/aurora-config-mode.el]]               |
 | aurquery                     | [[https://github.com/CMB/aurquery-el][CMB/aurquery-el]]                         |
 | auto-complete-clang-objc     | [[https://github.com/tharpa/auto-complete-clang-objc][tharpa/auto-complete-clang-objc]]         |
 | auto-complete-golang         | [[https://github.com/koko1000ban/auto-complete-golang][koko1000ban/auto-complete-golang]]        |
@@ -662,13 +663,12 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (21)        | Link                                                                   |
+| Package (19)        | Link                                                                   |
 |---------------------+------------------------------------------------------------------------|
 | auto-mounter        |                                                                        |
 | delight             | [[https://savannah.nongnu.org/projects/delight]]                           |
 | ebuild-mode         |                                                                        |
 | ee                  |                                                                        |
-| factor-mode         |                                                                        |
 | globalizer          |                                                                        |
 | gpicker             |                                                                        |
 | hyperbole           | [[http://www.gnu.org/software/hyperbole]]                                  |
@@ -676,7 +676,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | lilypond            |                                                                        |
 | org                 | [[http://orgmode.org]]                                                     |
 | os                  | [[http://orgmode.org/worg/org-contrib/gsoc2012/student-projects/org-sync]] |
-| pelican-mode        |                                                                        |
 | pmd                 |                                                                        |
 | project-buffer-mode | [[http://repo.or.cz/w/project-buffer-mode.git]]                            |
 | python-pep8         |                                                                        |
