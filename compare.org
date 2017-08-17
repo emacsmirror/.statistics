@@ -72,13 +72,13 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3849 |   3849 |       |       |       |  3453 |
+| github      | 3848 |   3848 |       |       |       |  3420 |
 | gitlab      |   36 |     36 |       |       |       |    28 |
 | git         |   52 |     52 |       |       |       |    43 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   45 |     45 |       |       |       |    39 |
-| hg          |    1 |      1 |       |       |       |     1 |
+| bitbucket   |   45 |     45 |       |       |       |    37 |
+| hg          |    1 |      1 |       |       |       |     0 |
 |-------------+------+--------+-------+-------+-------+-------|
 | bzr         |      |        |       |       |       |     2 |
 | cvs         |      |        |       |       |       |     4 |
@@ -88,12 +88,12 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  715 |    715 |       |       |       |   156 |
 | file        |  262 |    262 |       |       |       |       |
-| minority    |   23 |     23 |       |       |       |       |
+| minority    |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   65 |     65 |       |       |       |       |
+| orphaned    |   69 |     69 |       |       |       |       |
 | shelved     |  991 |        |   991 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6591 |   5177 |   991 |   426 |   167 |  3736 |
+| total       | 6593 |   5179 |   991 |   426 |   167 |  3700 |
 
 * Emacs
 ** Prefer elpa
@@ -499,7 +499,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (39)          | Class    | Melpa     | Reason                       |
+| Package (38)          | Class    | Melpa     | Reason                       |
 |-----------------------+----------+-----------+------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
 | caml                  | orphaned | svn       | svn                          |
@@ -518,7 +518,6 @@
 | diffscuss-mode        | minority | github    | mostly non-elisp             |
 | dsvn                  | orphaned | svn       | svn                          |
 | dummy-h-mode          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| flycheck-scala-sbt    | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | google-c-style        | minority | github    | mostly non-elisp             |
 | gregorio-mode         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | helm-ls-svn           | orphaned | svn       | svn                          |

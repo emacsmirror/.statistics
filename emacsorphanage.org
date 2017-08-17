@@ -14,12 +14,11 @@
                          (closql--abbrev-class (eieio-object-class rcp)))
                      "")
                    (or (cadr (assoc name emir--orphanage-reason)) "")))
-           (cl-sort (let ((ghub-unpaginate t))
-                      (ghub-get "/orgs/emacsorphanage/repos"))
+           (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil nil nil t)
                     #'string< :key (lambda (it) (cdr (assq 'name it))))))
 #+END_SRC
 #+RESULTS: overview
-| Package (71)            | Mirror   | Melpa    | Reason                      |
+| Package (75)            | Mirror   | Melpa    | Reason                      |
 |-------------------------+----------+----------+-----------------------------|
 | anything-project        | orphaned |          |                             |
 | apel                    | orphaned | github   | 6. many feature conflicts   |
@@ -55,10 +54,13 @@
 | linkd                   | orphaned |          | 7. include the images       |
 | lively                  | orphaned | orphaned | 3. upstream unresponsive    |
 | look-mode               | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| lookup                  | orphaned |          |                             |
 | lsdb                    | orphaned |          | 5. tarball not supported    |
 | miniedit                | orphaned | orphaned | 2. upstream disappeared     |
 | multi-term              | orphaned | orphaned | 9. wiki needed by non-wiki  |
+| nav                     | orphaned | github   |                             |
 | nxhtml                  | orphaned |          | 5. bzr not supported        |
+| oauth                   | orphaned | github   |                             |
 | oberon                  | orphaned | orphaned | 3. upstream unresponsive    |
 | org-bullets             | orphaned | orphaned | [[https://github.com/sabof/org-bullets/issues/18][#18]]                         |
 | org-grep                | orphaned | orphaned | 1. the maintainer has died  |
@@ -67,6 +69,7 @@
 | picolisp                | orphaned |          | 8. should contact upstream  |
 | pointback               | orphaned | orphaned | 2. upstream disappeared     |
 | project-local-variables | wiki     | wiki     |                             |
+| projmake-mode           | orphaned | github   |                             |
 | read-char-spec          | orphaned |          | 3. upstream unresponsive    |
 | rfringe                 | wiki     | wiki     |                             |
 | ruby-additional         | orphaned | svn      | A. semi-manual svn import   |

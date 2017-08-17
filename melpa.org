@@ -20,7 +20,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (612)                | Link                                    |
+| Package (644)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -59,6 +59,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | auto-pep8                    | [[https://github.com/deactivated/auto-pep8.el][deactivated/auto-pep8.el]]                |
 | auto-scratch                 | [[https://github.com/lovekonakona/auto-scratch][lovekonakona/auto-scratch]]               |
 | autocompletion-php-functions | [[https://github.com/ashizawa/autocompletion-php-functions][ashizawa/autocompletion-php-functions]]   |
+| avk-emacs-themes             | [[https://github.com/avkoval/avk-emacs-themes][avkoval/avk-emacs-themes]]                |
 | avmmf                        | [[https://github.com/davep/avmmf.el][davep/avmmf.el]]                          |
 | aws                          | [[https://github.com/ieure/aws-el][ieure/aws-el]]                            |
 | backups-mode                 | [[https://github.com/chadbraunduin/backups-mode][chadbraunduin/backups-mode]]              |
@@ -72,6 +73,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | bookiez                      | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                    |
 | bookmark-extensions          | [[https://github.com/thierryvolpiatto/emacs-bmk-ext][thierryvolpiatto/emacs-bmk-ext]]          |
 | borg                         | [[https://github.com/emacscollective/borg][emacscollective/borg]]                    |
+| bpr                          | [[https://github.com/ilya-babanov/emacs-bpr][ilya-babanov/emacs-bpr]]                  |
 | breadcrumb                   | [[https://github.com/pheaver/breadcrumb][pheaver/breadcrumb]]                      |
 | buffer-action                | [[https://github.com/xwl/buffer-action][xwl/buffer-action]]                       |
 | buffer-timer                 | [[https://github.com/hardaker/elisp-buffer-timer][hardaker/elisp-buffer-timer]]             |
@@ -109,7 +111,9 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | conspire                     | [[https://github.com/technomancy/conspire][technomancy/conspire]]                    |
 | constellations               | [[https://github.com/davep/constellations.el][davep/constellations.el]]                 |
 | coq                          | [[https://github.com/ProofGeneral/PG][ProofGeneral/PG]]                         |
+| coq-commenter                | [[https://github.com/ailrun/coq-commenter][ailrun/coq-commenter]]                    |
 | cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                    |
+| crab                         | [[https://github.com/puffnfresh/crab-emacs][puffnfresh/crab-emacs]]                   |
 | crisp-mode                   | [[https://github.com/krisajenkins/crisp-mode][krisajenkins/crisp-mode]]                 |
 | csmart-mode                  | [[https://github.com/kwitek/csmart][kwitek/csmart]]                           |
 | csp-mode                     | [[https://github.com/zonix/csp-mode][zonix/csp-mode]]                          |
@@ -119,8 +123,10 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | cui-about-me                 | [[https://github.com/gongo/cui-about-me.el][gongo/cui-about-me.el]]                   |
 | curl                         | [[https://github.com/cinsk/emacs-curl][cinsk/emacs-curl]]                        |
 | current-story                | [[https://github.com/charlietanksley/current-story][charlietanksley/current-story]]           |
+| cycle-buffer                 | [[https://github.com/VladimirAlexiev/emacs-cycle-buffer][VladimirAlexiev/emacs-cycle-buffer]]      |
 | cygstart                     | [[https://github.com/lieutar/cygstart.el][lieutar/cygstart.el]]                     |
 | dae                          | [[https://github.com/larsmagne/dae.el][larsmagne/dae.el]]                        |
+| darkane-theme                | [[https://github.com/FelixFortis/emacs-darkane-theme][FelixFortis/emacs-darkane-theme]]         |
 | darken-text                  | [[https://github.com/renard/darken-text][renard/darken-text]]                      |
 | db-sql                       | [[https://github.com/renard/db-sql-el][renard/db-sql-el]]                        |
 | dbus-codegen                 | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                    |
@@ -133,7 +139,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | diff-ediff                   | [[https://github.com/matthewlmcclure/diff-ediff][matthewlmcclure/diff-ediff]]              |
 | diff-git                     | [[https://github.com/alanfalloon/diff-git.el][alanfalloon/diff-git.el]]                 |
 | dired-hacks                  | [[https://github.com/Fuco1/dired-hacks][Fuco1/dired-hacks]]                       |
-| dired-sequence               | [[https://github.com/jave/dired-sequence][jave/dired-sequence]]                     |
 | dired-sync                   | [[https://github.com/renard/dired-sync][renard/dired-sync]]                       |
 | dired-view                   | [[https://github.com/xwl/dired-view][xwl/dired-view]]                          |
 | dired-xattr                  | [[https://github.com/renard/dired-xattr][renard/dired-xattr]]                      |
@@ -147,6 +152,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            |
 | durendal                     | [[https://github.com/technomancy/durendal][technomancy/durendal]]                    |
 | dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                    |
+| easy-after-load              | [[https://github.com/pd/easy-after-load][pd/easy-after-load]]                      |
 | easy-highlight               | [[https://github.com/syohex/emacs-easy-highlight][syohex/emacs-easy-highlight]]             |
 | easy-imenu-index-generator   | [[https://github.com/tm8st/emacs-easy-imenu-index-generator][tm8st/emacs-easy-imenu-index-generator]]  |
 | easy-todo                    | [[https://github.com/xwl/easy-todo][xwl/easy-todo]]                           |
@@ -157,11 +163,13 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | echo-pick                    | [[https://github.com/nschum/echo-pick.el][nschum/echo-pick.el]]                     |
 | edbc                         | [[https://github.com/redraiment/edbc][redraiment/edbc]]                         |
 | edice                        | [[https://github.com/capitaomorte/edice][capitaomorte/edice]]                      |
+| edit-at-point                | [[https://github.com/enoson/edit-at-point.el][enoson/edit-at-point.el]]                 |
 | edit-thing                   | [[https://github.com/deactivated/edit-thing-el][deactivated/edit-thing-el]]               |
 | eev                          | [[https://github.com/edrx/eev][edrx/eev]]                                |
 | egit                         | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                        |
 | eimap                        | [[https://github.com/corecode/eimap][corecode/eimap]]                          |
 | el-index                     | [[https://github.com/medikoo/el-index][medikoo/el-index]]                        |
+| el-pocket                    | [[https://github.com/pterygota/el-pocket][pterygota/el-pocket]]                     |
 | elang                        | [[https://github.com/vkazanov/elang][vkazanov/elang]]                          |
 | elisp-slime-expand           | [[https://github.com/russell/elisp-slime-expand][russell/elisp-slime-expand]]              |
 | elk-test                     | [[https://github.com/nschum/elk-test][nschum/elk-test]]                         |
@@ -172,6 +180,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | emacspeak                    | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       |
 | emir                         | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    |
 | emux                         | [[https://github.com/re5et/emux][re5et/emux]]                              |
+| eno                          | [[https://github.com/enoson/eno.el][enoson/eno.el]]                           |
 | epackage                     | [[https://github.com/jaalto/project--emacs-epackage][jaalto/project--emacs-epackage]]          |
 | epom                         | [[https://github.com/aufrank/epom][aufrank/epom]]                            |
 | eproject-peepopen            | [[https://github.com/mbarnett/eproject-peepopen][mbarnett/eproject-peepopen]]              |
@@ -186,10 +195,12 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | ertorrent                    | [[https://github.com/spacebat/ertorrent][spacebat/ertorrent]]                      |
 | es                           | [[https://github.com/leathekd/es.el][leathekd/es.el]]                          |
 | espect                       | [[https://github.com/rafl/espect][rafl/espect]]                             |
+| ess-R-object-popup           | [[https://github.com/myuhe/ess-R-object-popup.el][myuhe/ess-R-object-popup.el]]             |
 | esv                          | [[https://github.com/csebold/esv.el][csebold/esv.el]]                          |
 | etags-update                 | [[https://github.com/mattkeller/etags-update][mattkeller/etags-update]]                 |
 | etest                        | [[https://github.com/philjackson/etest][philjackson/etest]]                       |
 | etexshow                     | [[https://github.com/pgundlach/etexshow][pgundlach/etexshow]]                      |
+| euslisp-mode                 | [[https://github.com/iory/euslisp-mode][iory/euslisp-mode]]                       |
 | evelnote                     | [[https://github.com/hadashiA/evelnote-for-evernote][hadashiA/evelnote-for-evernote]]          |
 | eviews                       | [[https://github.com/vapniks/eviews-mode][vapniks/eviews-mode]]                     |
 | evil-elscreen                | [[https://github.com/coldnew/evil-elscreen][coldnew/evil-elscreen]]                   |
@@ -206,7 +217,9 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | find-in-repo                 | [[https://github.com/Wilfred/find-in-repo.el][Wilfred/find-in-repo.el]]                 |
 | findwalker                   | [[https://github.com/mhayashi1120/Emacs-findwalker][mhayashi1120/Emacs-findwalker]]           |
 | finkinfo-mode                | [[https://github.com/xwl/finkinfo-mode][xwl/finkinfo-mode]]                       |
+| firebelly-theme              | [[https://github.com/startling/firebelly][startling/firebelly]]                     |
 | firefox-remote               | [[https://github.com/ruediger/emacs-firefox-remote][ruediger/emacs-firefox-remote]]           |
+| flappymacs                   | [[https://github.com/taksatou/flappymacs][taksatou/flappymacs]]                     |
 | flowtimer                    | [[https://github.com/jrockway/time-utils-el][jrockway/time-utils-el]]                  |
 | fluiddb                      | [[https://github.com/hdurer/fluiddb.el][hdurer/fluiddb.el]]                       |
 | flycheck-protobuf            | [[https://github.com/edvorg/flycheck-protobuf][edvorg/flycheck-protobuf]]                |
@@ -234,6 +247,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | generic-range-opt            | [[https://github.com/tm8st/emacs-generic-range-opt][tm8st/emacs-generic-range-opt]]           |
 | geocode                      | [[https://github.com/hober/geocode-el][hober/geocode-el]]                        |
 | gershwin-mode                | [[https://github.com/gershwin/emacs-gershwin-mode][gershwin/emacs-gershwin-mode]]            |
+| ghost-blog                   | [[https://github.com/javaguirre/ghost-blog-emacs][javaguirre/ghost-blog-emacs]]             |
 | git-auto-commit              | [[https://github.com/renard/git-auto-commit][renard/git-auto-commit]]                  |
 | git-code-review              | [[https://github.com/psanford/git-code-review-el][psanford/git-code-review-el]]             |
 | git-emacs                    | [[https://github.com/tsgates/git-emacs][tsgates/git-emacs]]                       |
@@ -286,6 +300,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | highrise                     | [[https://github.com/hober/37emacs][hober/37emacs]]                           |
 | hippie-expand-distel         | [[https://github.com/rost/hippie-expand-distel][rost/hippie-expand-distel]]               |
 | hl-tags-mode                 | [[https://github.com/deactivated/hl-tags-mode][deactivated/hl-tags-mode]]                |
+| hlint-refactor               | [[https://github.com/mpickering/hlint-refactor-mode][mpickering/hlint-refactor-mode]]          |
 | hsearch                      | [[https://github.com/jschaf/hsearch][jschaf/hsearch]]                          |
 | html-fold                    | [[https://github.com/ataka/html-fold][ataka/html-fold]]                         |
 | html-key-chord-mode          | [[https://github.com/tomoya/html-key-chord-mode][tomoya/html-key-chord-mode]]              |
@@ -298,23 +313,30 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | icmp-info                    | [[https://github.com/davep/icmp-info.el][davep/icmp-info.el]]                      |
 | ido-better-flex              | [[https://github.com/vic/ido-better-flex][vic/ido-better-flex]]                     |
 | ido-other-window             | [[https://github.com/timcharper/ido-other-window][timcharper/ido-other-window]]             |
+| ids-edit                     | [[https://github.com/kawabata/ids-edit][kawabata/ids-edit]]                       |
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                         |
 | ii-mode                      | [[https://github.com/krl/ii-mode][krl/ii-mode]]                             |
+| imgix                        | [[https://github.com/imgix/imgix-emacs][imgix/imgix-emacs]]                       |
 | includeme                    | [[https://github.com/jart/includeme][jart/includeme]]                          |
 | indent-hints-mode            | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                |
 | indicate-changes             | [[https://github.com/renard/indicate-change][renard/indicate-change]]                  |
 | indirect-region              | [[https://github.com/renard/indirect-region][renard/indirect-region]]                  |
 | inertial-scroll              | [[https://github.com/kiwanami/emacs-inertial-scroll][kiwanami/emacs-inertial-scroll]]          |
 | inf-js                       | [[https://github.com/bkyle/inf-js][bkyle/inf-js]]                            |
+| inf-php                      | [[https://github.com/taksatou/inf-php][taksatou/inf-php]]                        |
 | inf-ruby-bond                | [[https://github.com/pd/inf-ruby-bond][pd/inf-ruby-bond]]                        |
 | infix                        | [[https://github.com/rspeele/infix-dot-el][rspeele/infix-dot-el]]                    |
 | inform-mode                  | [[https://github.com/rupertl/inform-mode][rupertl/inform-mode]]                     |
+| inform7-mode                 | [[https://github.com/fred-o/inform7-mode][fred-o/inform7-mode]]                     |
 | insert-time                  | [[https://github.com/rmm5t/insert-time.el][rmm5t/insert-time.el]]                    |
 | ios-config-mode              | [[https://github.com/nibrahim/IOS-config-mode][nibrahim/IOS-config-mode]]                |
 | isea                         | [[https://github.com/nicferrier/emacs-isea][nicferrier/emacs-isea]]                   |
 | iswitch-menu                 | [[https://github.com/joodie/iswitch-menu][joodie/iswitch-menu]]                     |
 | itimer                       | [[https://github.com/pheaver/itimer-el][pheaver/itimer-el]]                       |
+| ivariants                    | [[https://github.com/kawabata/emacs-ivariants][kawabata/emacs-ivariants]]                |
+| ivs-edit                     | [[https://github.com/kawabata/ivs-edit][kawabata/ivs-edit]]                       |
 | jamar                        | [[https://github.com/kliph/jamar-el][kliph/jamar-el]]                          |
+| jaunte                       | [[https://github.com/kawaguchi/jaunte.el][kawaguchi/jaunte.el]]                     |
 | java-mode-plus               | [[https://github.com/skeeto/emacs-java][skeeto/emacs-java]]                       |
 | jb-misc-functions            | [[https://github.com/vapniks/jb-misc-functions][vapniks/jb-misc-functions]]               |
 | jda                          | [[https://github.com/jglee1027/jda-minor-mode][jglee1027/jda-minor-mode]]                |
@@ -348,7 +370,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | linum-relativenumber         | [[https://github.com/scottjad/linum-relativenumber][scottjad/linum-relativenumber]]           |
 | lisp-editing                 | [[https://github.com/nicferrier/emacs-lisp-editing-tools][nicferrier/emacs-lisp-editing-tools]]     |
 | lispy-mnemonic               | [[https://github.com/itsjeyd/lispy-mnemonic][itsjeyd/lispy-mnemonic]]                  |
-| lookup                       | [[https://github.com/lookup2/lookup2][lookup2/lookup2]]                         |
 | ltsv                         | [[https://github.com/syohex/emacs-ltsv][syohex/emacs-ltsv]]                       |
 | lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   |
 | magit-identities             | [[https://github.com/renard/magit-identities][renard/magit-identities]]                 |
@@ -359,11 +380,13 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | mailq                        | [[https://github.com/dimitri/mailq-el][dimitri/mailq-el]]                        |
 | makefile-runner              | [[https://github.com/danamlund/emacs-makefile-runner][danamlund/emacs-makefile-runner]]         |
 | mandoku-meta-kr              | [[https://github.com/cwittern/KR][cwittern/KR]]                             |
+| mandoku-tls                  | [[https://github.com/mandoku/mandoku-tls][mandoku/mandoku-tls]]                     |
 | manued                       | [[https://github.com/yamauchih/manued][yamauchih/manued]]                        |
 | mark-forward-sexp            | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]               |
 | mark-select                  | [[https://github.com/namikister/mark-select][namikister/mark-select]]                  |
 | masquerade-mode              | [[https://github.com/dsevilla/masquerade-mode-el][dsevilla/masquerade-mode-el]]             |
 | maven-mode                   | [[https://github.com/bkyle/maven-mode][bkyle/maven-mode]]                        |
+| memento                      | [[https://github.com/ehartc/memento][ehartc/memento]]                          |
 | metapost-mode+               | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                 |
 | mew-ical                     | [[https://github.com/tagoh/mew-ical][tagoh/mew-ical]]                          |
 | mew-unread                   | [[https://github.com/tortkis/mew-unread][tortkis/mew-unread]]                      |
@@ -374,6 +397,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | modelica-mode                | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            |
 | mojo                         | [[https://github.com/samsonjs/mojo.el][samsonjs/mojo.el]]                        |
 | moneylog                     | [[https://github.com/watter/moneylog-el][watter/moneylog-el]]                      |
+| monochrome-theme             | [[https://github.com/fxn/monochrome-theme.el][fxn/monochrome-theme.el]]                 |
 | movie                        | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      |
 | mplayer-mode                 | [[https://github.com/markhepburn/mplayer-mode][markhepburn/mplayer-mode]]                |
 | mru-yank                     | [[https://github.com/lewang/le_emacs_MRU_yank][lewang/le_emacs_MRU_yank]]                |
@@ -388,13 +412,16 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | mvc                          | [[https://github.com/wachikun/mvc][wachikun/mvc]]                            |
 | mysql                        | [[https://github.com/haxney/mysql][haxney/mysql]]                            |
 | mythryl-mode                 | [[https://github.com/phr/mythryl-mode][phr/mythryl-mode]]                        |
+| n3-mode                      | [[https://github.com/doriantaylor/n3-mode-for-emacs][doriantaylor/n3-mode-for-emacs]]          |
 | namelist-mode                | [[https://github.com/yyr/namelist-mode][yyr/namelist-mode]]                       |
 | nazna                        | [[https://github.com/baron/nazna.el][baron/nazna.el]]                          |
 | ne2wm                        | [[https://github.com/tkf/ne2wm][tkf/ne2wm]]                               |
 | networkmanager               | [[https://github.com/k-ten/networkmanager-el][k-ten/networkmanager-el]]                 |
 | ngircd                       | [[https://github.com/nicferrier/emacs-ngircd][nicferrier/emacs-ngircd]]                 |
 | ngn                          | [[https://github.com/davep/ngn.el][davep/ngn.el]]                            |
+| niflheim-theme               | [[https://github.com/niflheim-theme/emacs][niflheim-theme/emacs]]                    |
 | nimrod-mode                  | [[https://github.com/jameshfisher/nimrod-mode][jameshfisher/nimrod-mode]]                |
+| nnir-est                     | [[https://github.com/kawabata/nnir-est][kawabata/nnir-est]]                       |
 | nnir-spotlight               | [[https://github.com/renard/nnir-spotlight][renard/nnir-spotlight]]                   |
 | node-console                 | [[https://github.com/yuutayamada/node-console][yuutayamada/node-console]]                |
 | noob-arrows-mode             | [[https://github.com/n3mo/noob-arrows-mode.el][n3mo/noob-arrows-mode.el]]                |
@@ -404,6 +431,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | nreplxmp                     | [[https://github.com/wakala/nreplxmp][wakala/nreplxmp]]                         |
 | nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                       |
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                       |
+| nyan-prompt                  | [[https://github.com/PuercoPop/nyan-prompt][PuercoPop/nyan-prompt]]                   |
 | ob-clojurescript             | [[https://github.com/bloat/babel-clojurescript][bloat/babel-clojurescript]]               |
 | ob-markdown                  | [[https://github.com/tnoda/ob-markdown][tnoda/ob-markdown]]                       |
 | octopress-tentacle           | [[https://github.com/brighid/octopress-tentacle][brighid/octopress-tentacle]]              |
@@ -424,6 +452,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | org-helpers                  | [[https://github.com/leoc/org-helpers.el][leoc/org-helpers.el]]                     |
 | org-hlc                      | [[https://github.com/tj64/org-hlc][tj64/org-hlc]]                            |
 | org-hyde                     | [[https://github.com/punchagan/org-hyde][punchagan/org-hyde]]                      |
+| org-jekyll                   | [[https://github.com/juanre/org-jekyll][juanre/org-jekyll]]                       |
 | org-mac-protocol             | [[https://github.com/claviclaws/org-mac-protocol][claviclaws/org-mac-protocol]]             |
 | org-magit                    | [[https://github.com/sigma/org-magit][sigma/org-magit]]                         |
 | org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     |
@@ -441,6 +470,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | osm-mode                     | [[https://github.com/ruediger/osm-mode][ruediger/osm-mode]]                       |
 | osxpkg                       | [[https://github.com/renard/osxpkg][renard/osxpkg]]                           |
 | owl-functional-mode          | [[https://github.com/vakkermans/owl-functional-mode][vakkermans/owl-functional-mode]]          |
+| ox-pandoc                    | [[https://github.com/kawabata/ox-pandoc][kawabata/ox-pandoc]]                      |
 | package-demo                 | [[https://github.com/vermiculus/package-demo][vermiculus/package-demo]]                 |
 | package-store                | [[https://github.com/nicferrier/emacs-package-store][nicferrier/emacs-package-store]]          |
 | page-mode                    | [[https://github.com/BartMassey/emacs-page][BartMassey/emacs-page]]                   |
@@ -472,6 +502,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | projectur                    | [[https://github.com/vderyagin/projectur][vderyagin/projectur]]                     |
 | projutils                    | [[https://github.com/fgallina/projutils.el][fgallina/projutils.el]]                   |
 | pry                          | [[https://github.com/jacott/emacs-pry][jacott/emacs-pry]]                        |
+| psc-ide                      | [[https://github.com/epost/psc-ide-emacs][epost/psc-ide-emacs]]                     |
 | psl-mode                     | [[https://github.com/skeeto/psl-mode][skeeto/psl-mode]]                         |
 | pulseaudio                   | [[https://github.com/suzp1984/pulseaudio-mode][suzp1984/pulseaudio-mode]]                |
 | puppet-pi-mode               | [[https://github.com/t9md/puppet-pi-mode.el][t9md/puppet-pi-mode.el]]                  |
@@ -520,6 +551,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | short-lambda                 | [[https://github.com/abo-abo/short-lambda][abo-abo/short-lambda]]                    |
 | show-arglist                 | [[https://github.com/peccu/show-arglist.el][peccu/show-arglist.el]]                   |
 | showoff-mode                 | [[https://github.com/developernotes/showoff-mode][developernotes/showoff-mode]]             |
+| sicp                         | [[https://github.com/webframp/sicp-info][webframp/sicp-info]]                      |
 | simo                         | [[https://github.com/lieutar/simo.el][lieutar/simo.el]]                         |
 | simple-slides                | [[https://github.com/joodie/emacs-simple-slides][joodie/emacs-simple-slides]]              |
 | simplegv-mode                | [[https://github.com/jordonbiondo/simplegv-mode][jordonbiondo/simplegv-mode]]              |
@@ -574,7 +606,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | thrift-mode                  | [[https://github.com/davidmiller/thrift-mode][davidmiller/thrift-mode]]                 |
 | tipshare                     | [[https://github.com/k1LoW/emacs-tipshare][k1LoW/emacs-tipshare]]                    |
 | tld                          | [[https://github.com/davep/tld.el][davep/tld.el]]                            |
-| tlh-util                     | [[https://github.com/tlh/tlh-util.el][tlh/tlh-util.el]]                         |
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                        |
 | todostack                    | [[https://github.com/EvansWinner/todostack.el][EvansWinner/todostack.el]]                |
 | tora-mode                    | [[https://github.com/syohex/emacs-tora-mode][syohex/emacs-tora-mode]]                  |
@@ -632,6 +663,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | yeoman                       | [[https://github.com/julienXX/yeoman.el][julienXX/yeoman.el]]                      |
 | yql                          | [[https://github.com/wfarr/yql-el][wfarr/yql-el]]                            |
 | zendmd-comint                | [[https://github.com/jhanson/zendmd-comint.el][jhanson/zendmd-comint.el]]                |
+| zerodark-theme               | [[https://github.com/NicolasPetton/zerodark-theme][NicolasPetton/zerodark-theme]]            |
 | zone-matrix                  | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        |
 | zwiebel                      | [[https://github.com/silentbicycle/zwiebel][silentbicycle/zwiebel]]                   |
 
@@ -644,8 +676,9 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
-| Package (7)      | Link                  |
+| Package (8)      | Link                  |
 |------------------+-----------------------|
+| dired-sequence   | [[https://gitlab.com/jave/dired-sequence][jave/dired-sequence]]   |
 | dna-debug        | [[https://gitlab.com/jave/dna-debug][jave/dna-debug]]        |
 | dragbox          | [[https://gitlab.com/jave/dragbox][jave/dragbox]]          |
 | emmental         | [[https://gitlab.com/jave/emmental][jave/emmental]]         |
@@ -694,11 +727,13 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-bitbucket-package)))
 #+END_SRC
 #+RESULTS: missing-bitbucket
-| Package (8)        | Link                           |
+| Package (10)       | Link                           |
 |--------------------+--------------------------------|
 | ac-source-ispell   | [[https://bitbucket.org/tequilasunset/ac-source-ispell][tequilasunset/ac-source-ispell]] |
+| achievements       | [[https://bitbucket.org/gvol/emacs-achievements][gvol/emacs-achievements]]        |
 | clay-mode          | [[https://bitbucket.org/prafulla/clay-mode][prafulla/clay-mode]]             |
 | darkroom-mode      | [[https://bitbucket.org/phromo/darkroom-mode][phromo/darkroom-mode]]           |
+| gap-mode           | [[https://bitbucket.org/gvol/gap-mode][gvol/gap-mode]]                  |
 | lotto-check        | [[https://bitbucket.org/kaisyu/lotto-check][kaisyu/lotto-check]]             |
 | ogre-material-mode | [[https://bitbucket.org/sevas/ogre-material-mode][sevas/ogre-material-mode]]       |
 | omake              | [[https://bitbucket.org/dmcooke/omake-mode][dmcooke/omake-mode]]             |
