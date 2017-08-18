@@ -39,28 +39,17 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (11)    | Class    | Feature     | Reason                      |
-|-----------------+----------+-------------+-----------------------------|
-| coq             | github   | maths-menu  | pending [[https://github.com/ProofGeneral/PG/issues/197][#197]]                |
-| elixir-mode     | github   | test-helper | pending [[https://github.com/elixir-lang/emacs-elixir/issues/395][#395]]                |
-| emacspeak       | github   | amixer      | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                 |
-| emacspeak       | github   | nm          | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                 |
-| emacspeak       | github   | tapestry    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                 |
-| emacspeak       | github   | tetris      | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]                 |
-| go              | github   | gnugo       | wontfix [[https://github.com/eschulte/el-go/pull/3][#3]]                  |
-| karma           | github   | test-helper | pending [[https://github.com/tonini/karma.el/pull/7][#7]]                  |
-| org             | git      | htmlize     | pending [[https://github.com/hniksic/emacs-htmlize/issues/7][htmlize#7]]           |
-| org             | git      | ob-scala    | pending [[https://github.com/ensime/emacs-scala-mode/issues/114][scala-mode#114]]      |
-| overseer        | github   | test-helper | pending [[https://github.com/tonini/overseer.el/pull/12][#12]]                 |
-| slime           | github   | cl-indent   | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]              |
-| sly             | github   | cl-indent   | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]              |
-| twittering-mode | github   | ssl         | backward compatibility      |
-| twittering-mode | github   | test        | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]                |
-| wanderlust      | orphaned | bbdb-wl     | backward compatibility [[https://github.com/wanderlust/wanderlust/issues/139][#139]] |
-| wanderlust      | orphaned | ptexinfmt   | wontfix                     |
-| wanderlust      | orphaned | rfc2368     | wontfix                     |
-| wanderlust      | orphaned | ssl         | wontfix                     |
-| wanderlust      | orphaned | utf7        | wontfix                     |
+| Package (5)     | Class  | Feature    | Reason                 |
+|-----------------+--------+------------+------------------------|
+| coq             | github | maths-menu | pending [[https://github.com/ProofGeneral/PG/issues/197][#197]]           |
+| emacspeak       | github | amixer     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | nm         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | tapestry   | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | tetris     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| slime           | github | cl-indent  | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]         |
+| sly             | github | cl-indent  | pending [[https://github.com/capitaomorte/sly/issues/92][sly#92]]         |
+| twittering-mode | github | ssl        | backward compatibility |
+| twittering-mode | github | test       | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
 
 * Drop required features
 #+NAME: required-drop
@@ -72,7 +61,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (64)                    | Class       | Feature                | Reason                                              |
+| Package (63)                    | Class       | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
@@ -168,12 +157,34 @@
 | w3                              | elpa-branch | xbm-button             | XEmacs compatibility                                |
 | w3                              | elpa-branch | xpm-button             | XEmacs compatibility                                |
 | w3m                             | orphaned    | un-define              | XEmacs compatibility                                |
-| wanderlust                      | orphaned    | bbdb                   | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                        |
-| wanderlust                      | orphaned    | bbdb-com               | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                        |
-| wanderlust                      | orphaned    | bbdb-hooks             | backward compatibility: [[https://github.com/wanderlust/wanderlust/issues/139][#139]]                        |
-| wanderlust                      | orphaned    | bitmap                 | XEmacs compatibility                                |
 | wisi                            | elpa        | wisi-compat-24.2       | backward compatibility                              |
 | yatex                           | hg          | hilit19                | backward compatibility                              |
+
+* Patched packages
+#+NAME: patched
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Class")
+    (epkg-sql [:select [name class]
+               :from packages
+               :where (= patched 't)
+               :order-by [(asc name)]]))
+#+END_SRC
+#+RESULTS: patched
+| Package (13)     | Class  |
+|------------------+--------|
+| anything-project | github |
+| apel             | github |
+| elixir-mode      | github |
+| flim             | github |
+| go               | github |
+| karma            | github |
+| lookup           | github |
+| nav              | github |
+| oauth            | github |
+| overseer         | github |
+| projmake-mode    | github |
+| semi             | github |
+| wanderlust       | github |
 
 * Set main library
 #+NAME: no-mainlib
@@ -272,10 +283,13 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (4)         | Class  | Branch      |
-|---------------------+--------+-------------|
-| distinguished-theme | github | develop     |
-| ebuild-mode         | git    | ebuild-mode |
-| neato-graph-bar     | gitlab | release     |
-| propfont-mixed      | github | github      |
+| Package (7)         | Class  | Branch       |
+|---------------------+--------+--------------|
+| apel                | github | apel-wl      |
+| distinguished-theme | github | develop      |
+| ebuild-mode         | git    | ebuild-mode  |
+| flim                | github | flim-1_14-wl |
+| neato-graph-bar     | gitlab | release      |
+| propfont-mixed      | github | github       |
+| semi                | github | semi-1_14-wl |
 

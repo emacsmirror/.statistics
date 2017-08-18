@@ -166,70 +166,65 @@
   (emir--save-variable 'emir--orphanage-reason value)
 #+END_SRC
 #+NAME: val--emir--orphanage-reason
-| Package          | Reason                      |
-|------------------+-----------------------------|
-| apel             | 6. many feature conflicts   |
-| caml             | A. semi-manual svn import   |
-| cg               | A. semi-manual svn import   |
-| clang-format     | A. semi-manual svn import   |
-| color-theme      | 5. bzr not supported        |
-| confluence       | A. semi-manual svn import   |
-| crontab-mode     | 3. upstream disappeared     |
-| dedicated        | 2. upstream has disappeared |
-| dic-lookup-w3m   | A. semi-manual svn import   |
-| dirtree          | 9. wiki needed by non-wiki  |
-| doom             | 3. upstream unresponsive    |
-| ecasound         | 3. upstream disappeared     |
-| edb              | C. unmaintained, needed fix |
-| elisp-depend     | 3. upstream unresponsive    |
-| elo              | 4. dropped of by maintainer |
-| ert-expectations | 9. wiki needed by non-wiki  |
-| eshell-manual    | 3. upstream unresponsive    |
-| filladapt        | 3. upstream unresponsive    |
-| findr            | 9. wiki needed by non-wiki  |
-| flim             | 6. many feature conflicts   |
-| helm-ls-svn      | A. semi-manual svn import   |
-| hide-lines       | 9. wiki needed by non-wiki  |
-| http-post-simple | 9. wiki needed by non-wiki  |
-| hyperspec        | B. multiple non-upstreams   |
-| key-chord        | 9. wiki needed by non-wiki  |
-| keydef           | 2. upstream disappeared     |
-| levenshtein      | 9. wiki needed by non-wiki  |
-| linkd            | 7. include the images       |
-| lively           | 3. upstream unresponsive    |
-| look-mode        | 9. wiki needed by non-wiki  |
-| lsdb             | 5. tarball not supported    |
-| miniedit         | 2. upstream disappeared     |
-| multi-term       | 9. wiki needed by non-wiki  |
-| nxhtml           | 5. bzr not supported        |
-| oberon           | 3. upstream unresponsive    |
-| org-bullets      | [[https://github.com/sabof/org-bullets/issues/18][#18]]                         |
-| org-grep         | 1. the maintainer has died  |
-| osd              | 2. upstream disappeared     |
-| pager            | 2. upstream disappeared     |
-| picolisp         | 8. should contact upstream  |
-| pointback        | 2. upstream disappeared     |
-| read-char-spec   | 3. upstream unresponsive    |
-| ruby-additional  | A. semi-manual svn import   |
-| semi             | 6. many feature conflicts   |
-| session          | 5. tarball not supported    |
-| setnu            | 3. upstream unresponsive    |
-| shell-command    | 9. wiki needed by non-wiki  |
-| shell-history    | 9. wiki needed by non-wiki  |
-| showtip          | 9. wiki needed by non-wiki  |
-| smarty-mode      | 2. upstream has disappeared |
-| sml-modeline     | 5. bzr not supported        |
-| sr-speedbar      | 9. wiki needed by non-wiki  |
-| swbuff           | 5. cvs not supported        |
-| tail             | 2. upstream has disappeared |
-| text-translator  | 5. bzr not supported        |
-| transpose-frame  | 9. wiki needed by non-wiki  |
-| tree-mode        | 9. wiki needed by non-wiki  |
-| vala-mode        | 2. upstream has disappeared |
-| vc-fossil        | 5. fossil not supported     |
-| vm               | 5. bzr not supported        |
-| w32-browser      | 9. wiki needed by non-wiki  |
-| w3m              | A. cvs not supported       |
-| wanderlust       | 6. many feature conflicts   |
-| windata          | 9. wiki needed by non-wiki  |
+| Package          | Reason                  |
+|------------------+-------------------------|
+| caml             | semi-manual svn import  |
+| cg               | semi-manual svn import  |
+| clang-format     | semi-manual svn import  |
+| color-theme      | bzr not supported       |
+| confluence       | semi-manual svn import  |
+| crontab-mode     | upstream disappeared    |
+| dedicated        | upstream disappeared    |
+| dic-lookup-w3m   | semi-manual svn import  |
+| dirtree          | wiki needed by non-wiki |
+| doom             | upstream unresponsive   |
+| dsvn             | semi-manual svn import  |
+| ecasound         | upstream disappeared    |
+| edb              | upstream unresponsive   |
+| elisp-depend     | upstream unresponsive   |
+| ert-expectations | wiki needed by non-wiki |
+| eshell-manual    | upstream unresponsive   |
+| filladapt        | upstream unresponsive   |
+| findr            | wiki needed by non-wiki |
+| helm-ls-svn      | semi-manual svn import  |
+| hide-lines       | wiki needed by non-wiki |
+| http-post-simple | wiki needed by non-wiki |
+| hyperspec        | multiple non-upstreams  |
+| key-chord        | wiki needed by non-wiki |
+| keydef           | upstream disappeared    |
+| levenshtein      | wiki needed by non-wiki |
+| linkd            | wiki multiple files     |
+| lively           | upstream unresponsive   |
+| look-mode        | wiki needed by non-wiki |
+| miniedit         | upstream disappeared    |
+| multi-term       | wiki needed by non-wiki |
+| nxhtml           | bzr not supported       |
+| oberon           | upstream unresponsive   |
+| org-bullets      | upstream unresponsive   |
+| org-grep         | maintainer is dead      |
+| osd              | upstream disappeared    |
+| pager            | upstream disappeared    |
+| picolisp         | manual tarball import   |
+| pointback        | upstream disappeared    |
+| read-char-spec   | upstream unresponsive   |
+| ruby-additional  | semi-manual svn import  |
+| session          | manual tarball import   |
+| setnu            | upstream unresponsive   |
+| shell-command    | wiki needed by non-wiki |
+| shell-history    | wiki needed by non-wiki |
+| showtip          | wiki needed by non-wiki |
+| smarty-mode      | upstream disappeared    |
+| sml-modeline     | bzr not supported       |
+| sr-speedbar      | wiki needed by non-wiki |
+| swbuff           | cvs not supported       |
+| tail             | upstream disappeared    |
+| text-translator  | bzr not supported       |
+| transpose-frame  | wiki needed by non-wiki |
+| tree-mode        | wiki needed by non-wiki |
+| vala-mode        | upstream disappeared    |
+| vc-fossil        | fossil not supported    |
+| vm               | bzr not supported       |
+| w32-browser      | wiki needed by non-wiki |
+| w3m              | cvs not supported       |
+| windata          | wiki needed by non-wiki |
 
