@@ -168,17 +168,17 @@
 #+NAME: val--emir--orphanage-reason
 | Package          | Reason                  |
 |------------------+-------------------------|
-| caml             | semi-manual svn import  |
-| cg               | semi-manual svn import  |
-| clang-format     | semi-manual svn import  |
-| color-theme      | bzr not supported       |
-| confluence       | semi-manual svn import  |
+| caml             | semi-automatic import   |
+| cg               | semi-automatic import   |
+| clang-format     | semi-automatic import   |
+| color-theme      | semi-automatic import   |
+| confluence       | semi-automatic import   |
 | crontab-mode     | upstream disappeared    |
 | dedicated        | upstream disappeared    |
-| dic-lookup-w3m   | semi-manual svn import  |
+| dic-lookup-w3m   | semi-automatic import   |
 | dirtree          | wiki needed by non-wiki |
 | doom             | upstream unresponsive   |
-| dsvn             | semi-manual svn import  |
+| dsvn             | semi-automatic import   |
 | ecasound         | upstream disappeared    |
 | edb              | upstream unresponsive   |
 | elisp-depend     | upstream unresponsive   |
@@ -186,7 +186,7 @@
 | eshell-manual    | upstream unresponsive   |
 | filladapt        | upstream unresponsive   |
 | findr            | wiki needed by non-wiki |
-| helm-ls-svn      | semi-manual svn import  |
+| helm-ls-svn      | semi-automatic import   |
 | hide-lines       | wiki needed by non-wiki |
 | http-post-simple | wiki needed by non-wiki |
 | hyperspec        | multiple non-upstreams  |
@@ -198,7 +198,7 @@
 | look-mode        | wiki needed by non-wiki |
 | miniedit         | upstream disappeared    |
 | multi-term       | wiki needed by non-wiki |
-| nxhtml           | bzr not supported       |
+| nxhtml           | semi-automatic import   |
 | oberon           | upstream unresponsive   |
 | org-bullets      | upstream unresponsive   |
 | org-grep         | maintainer is dead      |
@@ -207,24 +207,24 @@
 | picolisp         | manual tarball import   |
 | pointback        | upstream disappeared    |
 | read-char-spec   | upstream unresponsive   |
-| ruby-additional  | semi-manual svn import  |
+| ruby-additional  | semi-automatic import   |
 | session          | manual tarball import   |
 | setnu            | upstream unresponsive   |
 | shell-command    | wiki needed by non-wiki |
 | shell-history    | wiki needed by non-wiki |
 | showtip          | wiki needed by non-wiki |
 | smarty-mode      | upstream disappeared    |
-| sml-modeline     | bzr not supported       |
+| sml-modeline     | manual tarball import   |
 | sr-speedbar      | wiki needed by non-wiki |
-| swbuff           | cvs not supported       |
+| swbuff           | semi-automatic import   |
 | tail             | upstream disappeared    |
-| text-translator  | bzr not supported       |
+| text-translator  | semi-automatic import   |
 | transpose-frame  | wiki needed by non-wiki |
 | tree-mode        | wiki needed by non-wiki |
 | vala-mode        | upstream disappeared    |
-| vc-fossil        | fossil not supported    |
-| vm               | bzr not supported       |
+| vc-fossil        | semi-automatic import   |
+| vm               | semi-automatic import   |
 | w32-browser      | wiki needed by non-wiki |
-| w3m              | cvs not supported       |
+| w3m              | semi-automatic import   |
 | windata          | wiki needed by non-wiki |
 

@@ -3,9 +3,9 @@
 #+BEGIN_SRC emacs-lisp :results silent
   (require 'emir)
 
-  (setq emir--orphans-cache
-        (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil nil nil t)
-                 #'string< :key (lambda (it) (cdr (assq 'name it)))))
+  (defconst emir--orphans-cache
+    (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil nil nil t)
+             #'string< :key (lambda (it) (cdr (assq 'name it)))))
 
   (defun emir--list-orphans (&rest only)
     (epkg-with-org-header ("Package" "Mirror" "Melpa")
@@ -64,7 +64,7 @@ that are available from there).
 | tail         | orphaned |          |
 | vala-mode    | orphaned | orphaned |
 
-* Upstream is unresponsive but there are dependents
+* Upstream is unresponsive but there are issues
 
 The upstream repositories for these packages still existed (or at
 least they still existed when the packages were added here), but the
@@ -77,9 +77,7 @@ the orphanage to fix these issues.
   talking have failed so far.
 
 #+BEGIN_SRC emacs-lisp
-  (emir--list-orphans
-   "upstream unresponsive"
-   "multiple non-upstreams")
+  (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+END_SRC
 #+RESULTS:
 | Package (11)   | Mirror   | Melpa    |
@@ -90,7 +88,7 @@ the orphanage to fix these issues.
 | eshell-manual  | orphaned |          |
 | filladapt      | orphaned |          |
 | hyperspec      | orphaned |          |
-| lively         | orphaned | orphaned |
+| lively         | orphaned |          |
 | oberon         | orphaned | orphaned |
 | org-bullets    | orphaned | orphaned |
 | read-char-spec | orphaned |          |
@@ -108,9 +106,7 @@ that direction.
 Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 
 #+BEGIN_SRC emacs-lisp
-  (emir--list-orphans
-   "wiki needed by non-wiki"
-   "wiki multiple files")
+  (emir--list-orphans "wiki needed by non-wiki" "wiki multiple files")
 #+END_SRC
 #+RESULTS:
 | Package (18)     | Mirror   | Melpa    |
@@ -134,28 +130,22 @@ Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 | w32-browser      | orphaned | orphaned |
 | windata          | orphaned | orphaned |
 
-* Imported from non-git repostiory
+* Imported from non-git/hg repository
 
 The tools used to maintain the Emacsmirror do not support ~bzr~, ~cvs~,
-~darcs~, ~fossil~, or importing from a tarball.  So I manually import the
-upstream repositories/tarballs into a ~git~ repository on the orphanage
-and then import the resulting ~git~ repositories as if that were the
-actual upstream.
+~darcs~, ~fossil~.  So I manually import the upstream repositories into
+a ~git~ repository on the orphanage and then import the resulting ~git~
+repositories as if that were the actual upstream.
 
 I do not regularly update these repositories.  If you find that they
 are outdated, then please let me know.  However many of these package
 repositories have not seen a commit in a decade.
 
 #+BEGIN_SRC emacs-lisp
-  (emir--list-orphans
-   "semi-manual cvs import"
-   "semi-manual svn import"
-   "bzr not supported"
-   "cvs not supported"
-   "fossil not supported")
+  (emir--list-orphans "semi-automatic import")
 #+END_SRC
 #+RESULTS:
-| Package (16)    | Mirror   | Melpa    |
+| Package (15)    | Mirror   | Melpa    |
 |-----------------+----------+----------|
 | caml            | orphaned | svn      |
 | cg              | orphaned | svn      |
@@ -167,7 +157,6 @@ repositories have not seen a commit in a decade.
 | helm-ls-svn     | orphaned | svn      |
 | nxhtml          | orphaned |          |
 | ruby-additional | orphaned | svn      |
-| sml-modeline    | orphaned | bzr      |
 | swbuff          | orphaned | orphaned |
 | text-translator | orphaned |          |
 | vc-fossil       | orphaned | orphaned |
@@ -179,10 +168,11 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "manual tarball import")
 #+END_SRC
 #+RESULTS:
-| Package (2) | Mirror   | Melpa    |
-|-------------+----------+----------|
-| picolisp    | orphaned |          |
-| session     | orphaned | orphaned |
+| Package (3)  | Mirror   | Melpa    |
+|--------------+----------+----------|
+| picolisp     | orphaned |          |
+| session      | orphaned | orphaned |
+| sml-modeline | orphaned | orphaned |
 
 * The maintainer is dead
 

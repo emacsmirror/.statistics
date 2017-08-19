@@ -170,21 +170,24 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: patched
-| Package (13)     | Class  |
-|------------------+--------|
-| anything-project | github |
-| apel             | github |
-| elixir-mode      | github |
-| flim             | github |
-| go               | github |
-| karma            | github |
-| lookup           | github |
-| nav              | github |
-| oauth            | github |
-| overseer         | github |
-| projmake-mode    | github |
-| semi             | github |
-| wanderlust       | github |
+| Package (16)     | Class    |
+|------------------+----------|
+| anything-project | github   |
+| apel             | github   |
+| elixir-mode      | github   |
+| flim             | github   |
+| go               | github   |
+| karma            | github   |
+| lookup           | github   |
+| nav              | github   |
+| nxhtml           | orphaned |
+| oauth            | github   |
+| overseer         | github   |
+| projmake-mode    | github   |
+| semi             | github   |
+| swbuff           | orphaned |
+| vm               | orphaned |
+| wanderlust       | github   |
 
 * Set main library
 #+NAME: no-mainlib

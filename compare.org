@@ -72,15 +72,15 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3857 |   3857 |       |       |       |  3396 |
+| github      | 3857 |   3857 |       |       |       |  3399 |
 | gitlab      |   36 |     36 |       |       |       |    28 |
-| git         |   52 |     52 |       |       |       |    41 |
+| git         |   52 |     52 |       |       |       |    42 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    37 |
 | hg          |    1 |      1 |       |       |       |     0 |
 |-------------+------+--------+-------+-------+-------+-------|
-| bzr         |      |        |       |       |       |     2 |
+| bzr         |      |        |       |       |       |     1 |
 | cvs         |      |        |       |       |       |     4 |
 | darcs       |      |        |       |       |       |     2 |
 | fossil      |      |        |       |       |       |     0 |
@@ -93,7 +93,7 @@
 | orphaned    |   59 |     59 |       |       |       |       |
 | shelved     |  991 |        |   991 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6592 |   5178 |   991 |   426 |   167 |  3674 |
+| total       | 6592 |   5178 |   991 |   426 |   167 |  3677 |
 
 * Emacs
 ** Prefer elpa
@@ -294,6 +294,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
+| Package (1) | Melpa  | Link          |
+|-------------+--------+---------------|
+| quiz        | github | [[https://github.com/davep/quiz.el][davep/quiz.el]] |
 
 ** Pending
 #+NAME: melpa-pending
@@ -475,6 +478,9 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
+| Package (1) | Mirror              | Melpa                       |
+|-------------+---------------------+-----------------------------|
+| psci        | [[https://github.com/ardumont/emacs-psci][ardumont/emacs-psci]] | [[https://github.com/purescript-emacs/emacs-psci][purescript-emacs/emacs-psci]] |
 
 ** Diverging types
 #+NAME: melpa-diverging-types
@@ -499,7 +505,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (38)          | Class    | Melpa     | Reason                       |
+| Package (37)          | Class    | Melpa     | Reason                       |
 |-----------------------+----------+-----------+------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
 | caml                  | orphaned | svn       | svn                          |
@@ -533,7 +539,6 @@
 | pylint                | minority | github    | mostly non-elisp             |
 | redshank              | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | ruby-additional       | orphaned | svn       | svn                          |
-| sml-modeline          | orphaned | bzr       |                              |
 | tex-smart-umlauts     | minority | darcs     | darcs                        |
 | thrift                | minority | github    | mostly non-elisp             |
 | toggle                | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |

@@ -20,7 +20,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (669)                | Link                                    |
+| Package (665)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -153,7 +153,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            |
 | durendal                     | [[https://github.com/technomancy/durendal][technomancy/durendal]]                    |
 | dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                    |
-| easy-after-load              | [[https://github.com/pd/easy-after-load][pd/easy-after-load]]                      |
 | easy-highlight               | [[https://github.com/syohex/emacs-easy-highlight][syohex/emacs-easy-highlight]]             |
 | easy-imenu-index-generator   | [[https://github.com/tm8st/emacs-easy-imenu-index-generator][tm8st/emacs-easy-imenu-index-generator]]  |
 | easy-todo                    | [[https://github.com/xwl/easy-todo][xwl/easy-todo]]                           |
@@ -300,7 +299,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | highrise                     | [[https://github.com/hober/37emacs][hober/37emacs]]                           |
 | hippie-expand-distel         | [[https://github.com/rost/hippie-expand-distel][rost/hippie-expand-distel]]               |
 | hl-tags-mode                 | [[https://github.com/deactivated/hl-tags-mode][deactivated/hl-tags-mode]]                |
-| hlint-refactor               | [[https://github.com/mpickering/hlint-refactor-mode][mpickering/hlint-refactor-mode]]          |
 | hsearch                      | [[https://github.com/jschaf/hsearch][jschaf/hsearch]]                          |
 | html-fold                    | [[https://github.com/ataka/html-fold][ataka/html-fold]]                         |
 | html-key-chord-mode          | [[https://github.com/tomoya/html-key-chord-mode][tomoya/html-key-chord-mode]]              |
@@ -488,7 +486,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | pickel                       | [[https://github.com/tlh/pickel.el][tlh/pickel.el]]                           |
 | picolisp-wiki-mode           | [[https://github.com/tj64/picolisp-wiki-mode][tj64/picolisp-wiki-mode]]                 |
 | plain-org-wiki               | [[https://github.com/abo-abo/plain-org-wiki][abo-abo/plain-org-wiki]]                  |
-| plantuml-mode                | [[https://github.com/skuro/plantuml-mode][skuro/plantuml-mode]]                     |
 | plone-mode                   | [[https://github.com/jone/plone-mode.el][jone/plone-mode.el]]                      |
 | popup+                       | [[https://github.com/scjung/popup-plus][scjung/popup-plus]]                       |
 | popup-frame                  | [[https://github.com/Sarcasm/popup-frame][Sarcasm/popup-frame]]                     |
@@ -499,7 +496,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | projectur                    | [[https://github.com/vderyagin/projectur][vderyagin/projectur]]                     |
 | projutils                    | [[https://github.com/fgallina/projutils.el][fgallina/projutils.el]]                   |
 | pry                          | [[https://github.com/jacott/emacs-pry][jacott/emacs-pry]]                        |
-| psc-ide                      | [[https://github.com/epost/psc-ide-emacs][epost/psc-ide-emacs]]                     |
 | psl-mode                     | [[https://github.com/skeeto/psl-mode][skeeto/psl-mode]]                         |
 | pulseaudio                   | [[https://github.com/suzp1984/pulseaudio-mode][suzp1984/pulseaudio-mode]]                |
 | puppet-pi-mode               | [[https://github.com/t9md/puppet-pi-mode.el][t9md/puppet-pi-mode.el]]                  |
@@ -721,7 +717,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (21)        | Link                                                                   |
+| Package (20)        | Link                                                                   |
 |---------------------+------------------------------------------------------------------------|
 | auto-mounter        |                                                                        |
 | delight             | [[https://savannah.nongnu.org/projects/delight]]                           |
@@ -736,7 +732,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | os                  | [[http://orgmode.org/worg/org-contrib/gsoc2012/student-projects/org-sync]] |
 | pmd                 |                                                                        |
 | project-buffer-mode | [[http://repo.or.cz/w/project-buffer-mode.git]]                            |
-| pushover            | [[http://github.com/swflint/pushover.el]]                                  |
 | python-pep8         |                                                                        |
 | python-pylint       |                                                                        |
 | rcirc-ssh           |                                                                        |
