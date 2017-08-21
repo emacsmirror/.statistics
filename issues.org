@@ -61,3 +61,11 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
+| Package (1) | Class  | Feature    | Shelved |
+|-------------+--------+------------+---------|
+| nix-mode    | github | nix        |         |
+| nix-mode    | github | nix-geiser |         |
+| nix-mode    | github | nix-guile  |         |
+| nix-mode    | github | nix-misc   |         |
+
+https://github.com/NixOS/nix-mode/issues/32

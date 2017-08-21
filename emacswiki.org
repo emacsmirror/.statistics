@@ -238,7 +238,7 @@
 	     #'string< :key #'car))
 #+END_SRC
 #+RESULTS:
-| Author (232)                                        | Package                        |
+| Author (215)                                        | Package                        |
 |-----------------------------------------------------+--------------------------------|
 |                                                     | ac-dabbrev                     |
 |                                                     | acd                            |
@@ -266,13 +266,11 @@
 |                                                     | chinese-chess                  |
 |                                                     | chinese-chess-pvc              |
 |                                                     | cisco-router-mode              |
-|                                                     | claire-mode                    |
 |                                                     | clibpc                         |
 |                                                     | contentswitch                  |
 |                                                     | cook-mode                      |
 |                                                     | cppsense                       |
 |                                                     | csv-nav                        |
-|                                                     | dbk                            |
 |                                                     | di                             |
 |                                                     | diffstat                       |
 |                                                     | dired-extension                |
@@ -283,7 +281,6 @@
 |                                                     | dropdown-list                  |
 |                                                     | dynamic-ring                   |
 |                                                     | echoline-mode                  |
-|                                                     | eform                          |
 |                                                     | eight-puzzle                   |
 |                                                     | eim                            |
 |                                                     | emboss                         |
@@ -331,7 +328,6 @@
 |                                                     | isearch-extension              |
 |                                                     | iswitchb-highlight             |
 |                                                     | java-complete                  |
-|                                                     | javacc-mode                    |
 |                                                     | jira                           |
 |                                                     | jpl-reformat                   |
 |                                                     | keep-end                       |
@@ -358,12 +354,9 @@
 |                                                     | pastebox                       |
 |                                                     | pddl-mode                      |
 |                                                     | phonetic                       |
-|                                                     | phutball                       |
 |                                                     | plt-completions                |
-|                                                     | point-ring                     |
 |                                                     | point-undo                     |
 |                                                     | prand                          |
-|                                                     | procmaillog                    |
 |                                                     | query                          |
 |                                                     | rcirc-late-fix                 |
 |                                                     | rcirc-pounce                   |
@@ -372,7 +365,6 @@
 |                                                     | rect-extension                 |
 |                                                     | redo+                          |
 |                                                     | repdet                         |
-|                                                     | repeat-insert                  |
 |                                                     | ricette-mode                   |
 |                                                     | rmail-saver                    |
 |                                                     | run-assoc                      |
@@ -387,7 +379,6 @@
 |                                                     | sqled-mode                     |
 |                                                     | sqlplus                        |
 |                                                     | summarye                       |
-|                                                     | symlink-fix                    |
 |                                                     | tag                            |
 |                                                     | tagger                         |
 |                                                     | tags-tree                      |
@@ -442,7 +433,6 @@
 | Amir Mohammad Saied                                 | audel                          |
 | Anand B Pillai                                      | cricket                        |
 | Anders Lindgren                                     | ctypes                         |
-| Andrew Gwozdziewycz                                 | amigo                          |
 | Andrey Balaguta                                     | sql-with-placeholders          |
 | André Riemann                                       | centered-cursor-mode           |
 | André Riemann                                       | fliptext                       |
@@ -475,7 +465,6 @@
 | Benjamin Drieu                                      | df-mode                        |
 | Benjamin Rutt                                       | backup-each-save               |
 | Benjamin Rutt                                       | top-mode                       |
-| Bill Carpenter.                                     | cscope                         |
 | Binu Jose Philip, Drew Adams                        | w32browser-dlgopen             |
 | Bryan O'Sullivan                                    | x-migrant                      |
 | Bryan Waite, based on some code found at            | fixme-mode                     |
@@ -495,7 +484,6 @@
 | Chong Yidong                                        | wikitext-mode                  |
 | Chris Done                                          | align-by-current-symbol        |
 | Chris Stucchio                                      | multi-eshell                   |
-| Christian Neukirchen                                | pastie                         |
 | Christoffer S. Hansen                               | policy-switch                  |
 | Christoph Conrad                                    | highlight-current-line         |
 | ChunYe Wang                                         | wcy-swbuff                     |
@@ -517,7 +505,6 @@
 | Davis Herring                                       | unbound                        |
 | Denis Martinez                                      | fcsh-mode                      |
 | Denny Zhang                                         | online-search                  |
-| Dhruva Krishnamurthy                                | emacsserver                    |
 | Dino Chiesa                                         | flymake-for-csharp             |
 | Dino Chiesa                                         | rfringe                        |
 | Dino Chiesa                                         | tfs                            |
@@ -636,7 +623,6 @@
 | Drew Adams, Lennart Borgman                         | wid-edit+                      |
 | Drew Adams, Thierry Volpiatto                       | bookmark+                      |
 | Edward Robinson                                     | procomm-mode                   |
-| Emanuel Heitlinger                                  | texmed                         |
 | Esben Andreasen                                     | screencast                     |
 | Eugene V. Markov                                    | bookmark-add                   |
 | Eugene V. Markov                                    | recentf-buffer                 |
@@ -652,7 +638,6 @@
 | Guanpeng Xu                                         | subedit                        |
 | Gustavo Sverzut Barbieri                            | edje-mode                      |
 | HAMANO Kiyoto                                       | popup-select-window            |
-| Hans Halvorson (www.princeton.edu/~hhalvors)        | env-print                      |
 | Happy Kohpy                                         | longlines-jp                   |
 | Henrik Enberg                                       | rmail-spamprobe                |
 | Igor Sikaček                                        | awk-it                         |
@@ -667,7 +652,6 @@
 | Javier Oviedo                                       | joccur                         |
 | Jean-Baptiste Bourgoin                              | mpcel                          |
 | Jean-Philippe Theberge                              | hachette                       |
-| Jeff Bowden                                         | axcess                         |
 | Jeremy Cowgar                                       | edi-mode                       |
 | Jeremy Cowgar                                       | random-idle-quote              |
 | Jeremy Cowgar                                       | task-timer                     |
@@ -686,12 +670,6 @@
 | John Sturdy                                         | lyric-mode                     |
 | John Wiegley                                        | queue-mail                     |
 | John Wiegley                                        | xml-parse                      |
-| Jonathan Arkell                                     | cruisecontrol                  |
-| Jonathan Arkell                                     | devkitemacs                    |
-| Jonathan Arkell                                     | flip-tables                    |
-| Jonathan Arkell                                     | i-ching                        |
-| Jonathan Arkell                                     | save-and-dwim                  |
-| Jonathan Arkell                                     | work-timer                     |
 | Jorgen Schaefer                                     | bracketphobia                  |
 | Jorgen Schaefer                                     | duck                           |
 | Jorgen Schaefer                                     | emacs-wiki-finddead            |
@@ -700,7 +678,6 @@
 | Jorgen Schaefer                                     | idlehelp                       |
 | Jorgen Schaefer                                     | mudel                          |
 | Jorgen Schaefer                                     | outline-wiki                   |
-| Jorgen Schaefer                                     | scheme48                       |
 | Jorgen Schaefer                                     | srfi                           |
 | Joseph                                              | term-toggle                    |
 | Joyer Huang                                         | hexview-mode                   |
@@ -781,7 +758,6 @@
 | Michele Bini                                        | superego                       |
 | Michele Bini                                        | unidiff                        |
 | Mikael Brockman                                     | portage                        |
-| Mike Williams                                       | byrd-biff                      |
 | Miles Bader                                         | echo-bell                      |
 | Mutsumi Komuro                                      | rewrite                        |
 | Nascif A. Abousalh Neto                             | flymake-helper                 |
@@ -796,7 +772,6 @@
 | Patrick Anderson                                    | interpreter-minor              |
 | Patrick Anderson                                    | w32-shell-execute              |
 | Patrick Anderson                                    | w32-shell-verb                 |
-| Paul Huff                                           | otp                            |
 | Peter Breton                                        | lnk                            |
 | Phil Hagelberg                                      | pcmpl-ssh                      |
 | Phil Hagelberg                                      | steersman                      |
@@ -837,8 +812,6 @@
 | Scott Frazer                                        | grep-ed                        |
 | Scott Frazer                                        | mdabbrev                       |
 | Scott Frazer                                        | motion-and-kill-dwim           |
-| Sean M. Burke                                       | rtf-mode                       |
-| Sean O'Rourke                                       | itunes                         |
 | Sebastien Varrette                                  | tempo-c-cpp                    |
 | Seiji Zenitani                                      | a-menu                         |
 | Seiji Zenitani                                      | smart-compile                  |
@@ -913,7 +886,6 @@
 | ahei                                                | linum+                         |
 | ffrances                                            | kis-interface                  |
 | ffrances                                            | kis-project                    |
-| jonnay                                              | emdroid                        |
 | kahlil (kal) hodgson                                | alt-font-menu                  |
 | khiker                                              | dabbrev-expand-multiple        |
 | khiker                                              | elscreen-edit-server           |
@@ -921,11 +893,9 @@
 | khiker                                              | lua-block                      |
 | khiker                                              | parenthesis                    |
 | khiker                                              | ruby-block                     |
-| mulander                                            | blip                           |
 | none, if you want be a maintainer please e-mail me. | mcskels                        |
 | none, mail me if you want to maintain this code.    | buqis                          |
 | none, mail me if you want to maintain this code.    | wl-list                        |
-| raman                                               | atom-blogger                   |
 | rubikitch                                           | anything-kyr                   |
 | rubikitch                                           | anything-kyr-config            |
 | rubikitch                                           | auto-install                   |
@@ -949,9 +919,6 @@
 | rubikitch                                           | sticky                         |
 | rubikitch                                           | unify-buffer                   |
 | rubikitch                                           | usage-memo                     |
-| thorne                                              | rep-words                      |
-| thorne                                              | wc                             |
-| tie-mode at tensilica dot com                       | tie-mode                       |
 | tkld                                                | mail-signature                 |
 | wandad guscheh                                      | vhdl-process-wave              |
 | Ævar Arnfjörð Bjarmason                             | emms-seek-minor-mode           |

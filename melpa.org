@@ -20,7 +20,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (665)                | Link                                    |
+| Package (650)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -60,7 +60,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | auto-pep8                    | [[https://github.com/deactivated/auto-pep8.el][deactivated/auto-pep8.el]]                |
 | auto-scratch                 | [[https://github.com/lovekonakona/auto-scratch][lovekonakona/auto-scratch]]               |
 | autocompletion-php-functions | [[https://github.com/ashizawa/autocompletion-php-functions][ashizawa/autocompletion-php-functions]]   |
-| avk-emacs-themes             | [[https://github.com/avkoval/avk-emacs-themes][avkoval/avk-emacs-themes]]                |
 | avmmf                        | [[https://github.com/davep/avmmf.el][davep/avmmf.el]]                          |
 | aws                          | [[https://github.com/ieure/aws-el][ieure/aws-el]]                            |
 | backups-mode                 | [[https://github.com/chadbraunduin/backups-mode][chadbraunduin/backups-mode]]              |
@@ -74,7 +73,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | bookiez                      | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                    |
 | bookmark-extensions          | [[https://github.com/thierryvolpiatto/emacs-bmk-ext][thierryvolpiatto/emacs-bmk-ext]]          |
 | borg                         | [[https://github.com/emacscollective/borg][emacscollective/borg]]                    |
-| bpr                          | [[https://github.com/ilya-babanov/emacs-bpr][ilya-babanov/emacs-bpr]]                  |
 | breadcrumb                   | [[https://github.com/pheaver/breadcrumb][pheaver/breadcrumb]]                      |
 | buffer-action                | [[https://github.com/xwl/buffer-action][xwl/buffer-action]]                       |
 | buffer-timer                 | [[https://github.com/hardaker/elisp-buffer-timer][hardaker/elisp-buffer-timer]]             |
@@ -127,7 +125,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | cycle-buffer                 | [[https://github.com/VladimirAlexiev/emacs-cycle-buffer][VladimirAlexiev/emacs-cycle-buffer]]      |
 | cygstart                     | [[https://github.com/lieutar/cygstart.el][lieutar/cygstart.el]]                     |
 | dae                          | [[https://github.com/larsmagne/dae.el][larsmagne/dae.el]]                        |
-| darkane-theme                | [[https://github.com/FelixFortis/emacs-darkane-theme][FelixFortis/emacs-darkane-theme]]         |
 | darken-text                  | [[https://github.com/renard/darken-text][renard/darken-text]]                      |
 | db-sql                       | [[https://github.com/renard/db-sql-el][renard/db-sql-el]]                        |
 | dbus-codegen                 | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                    |
@@ -215,7 +212,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | find-in-repo                 | [[https://github.com/Wilfred/find-in-repo.el][Wilfred/find-in-repo.el]]                 |
 | findwalker                   | [[https://github.com/mhayashi1120/Emacs-findwalker][mhayashi1120/Emacs-findwalker]]           |
 | finkinfo-mode                | [[https://github.com/xwl/finkinfo-mode][xwl/finkinfo-mode]]                       |
-| firebelly-theme              | [[https://github.com/startling/firebelly][startling/firebelly]]                     |
 | firefox-remote               | [[https://github.com/ruediger/emacs-firefox-remote][ruediger/emacs-firefox-remote]]           |
 | flowtimer                    | [[https://github.com/jrockway/time-utils-el][jrockway/time-utils-el]]                  |
 | fluiddb                      | [[https://github.com/hdurer/fluiddb.el][hdurer/fluiddb.el]]                       |
@@ -619,7 +615,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | transcript                   | [[https://github.com/nasfarley88/transcript-el][nasfarley88/transcript-el]]               |
 | trelloel                     | [[https://github.com/jdodds/trelloel][jdodds/trelloel]]                         |
 | trindle                      | [[https://github.com/daic-h/trindle][daic-h/trindle]]                          |
-| tronesque-theme              | [[https://github.com/aurelienbottazini/tronesque][aurelienbottazini/tronesque]]             |
 | try-code                     | [[https://github.com/lewang/try-code][lewang/try-code]]                         |
 | tumblr                       | [[https://github.com/travisjeffery/emacs-tumblr][travisjeffery/emacs-tumblr]]              |
 | tumblr-gist                  | [[https://github.com/dleslie/tumblr-gist.el][dleslie/tumblr-gist.el]]                  |
@@ -661,16 +656,6 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | worklog                      | [[https://github.com/credmp/worklog][credmp/worklog]]                          |
 | wsh-repl                     | [[https://github.com/jonnay/wsh-repl][jonnay/wsh-repl]]                         |
 | wubi                         | [[https://github.com/xwl/wubi][xwl/wubi]]                                |
-| xah-css-mode                 | [[https://github.com/xahlee/xah-css-mode][xahlee/xah-css-mode]]                     |
-| xah-elisp-mode               | [[https://github.com/xahlee/xah-elisp-mode][xahlee/xah-elisp-mode]]                   |
-| xah-find                     | [[https://github.com/xahlee/xah-find][xahlee/xah-find]]                         |
-| xah-fly-keys                 | [[https://github.com/xahlee/xah-fly-keys][xahlee/xah-fly-keys]]                     |
-| xah-get-thing                | [[https://github.com/xahlee/xah-get-thing-or-selection][xahlee/xah-get-thing-or-selection]]       |
-| xah-lookup                   | [[https://github.com/xahlee/lookup-word-on-internet][xahlee/lookup-word-on-internet]]          |
-| xah-math-input               | [[https://github.com/xahlee/xah-math-input][xahlee/xah-math-input]]                   |
-| xah-reformat-code            | [[https://github.com/xahlee/xah-reformat-code][xahlee/xah-reformat-code]]                |
-| xah-replace-pairs            | [[https://github.com/xahlee/xah-replace-pairs][xahlee/xah-replace-pairs]]                |
-| xahk-mode                    | [[https://github.com/xahlee/xahk-mode.el][xahlee/xahk-mode.el]]                     |
 | xargs-grep                   | [[https://github.com/lewang/le_emacs_xargs_grep][lewang/le_emacs_xargs_grep]]              |
 | xdg-paths                    | [[https://github.com/tomprince/xdg-paths-el][tomprince/xdg-paths-el]]                  |
 | xelb                         | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                             |

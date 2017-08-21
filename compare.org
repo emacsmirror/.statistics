@@ -72,10 +72,10 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3857 |   3857 |       |       |       |  3399 |
+| github      | 3856 |   3856 |       |       |       |  3412 |
 | gitlab      |   36 |     36 |       |       |       |    28 |
-| git         |   52 |     52 |       |       |       |    42 |
-| subtree     |   24 |     24 |       |       |       |       |
+| git         |   51 |     51 |       |       |       |    41 |
+| subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    37 |
 | hg          |    1 |      1 |       |       |       |     0 |
@@ -86,14 +86,14 @@
 | fossil      |      |        |       |       |       |     0 |
 | svn         |      |        |       |       |       |     8 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  715 |    715 |       |       |       |   156 |
+| wiki        |  682 |    682 |       |       |       |   156 |
 | file        |  262 |    262 |       |       |       |       |
 | minority    |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   59 |     59 |       |       |       |       |
-| shelved     |  991 |        |   991 |       |       |       |
+| orphaned    |   56 |     56 |       |       |       |       |
+| shelved     | 1027 |        |  1027 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6592 |   5178 |   991 |   426 |   167 |  3677 |
+| total       | 6588 |   5138 |  1027 |   426 |   167 |  3689 |
 
 * Emacs
 ** Prefer elpa
@@ -294,9 +294,6 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
-| Package (1) | Melpa  | Link          |
-|-------------+--------+---------------|
-| quiz        | github | [[https://github.com/davep/quiz.el][davep/quiz.el]] |
 
 ** Pending
 #+NAME: melpa-pending
@@ -478,9 +475,6 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (1) | Mirror              | Melpa                       |
-|-------------+---------------------+-----------------------------|
-| psci        | [[https://github.com/ardumont/emacs-psci][ardumont/emacs-psci]] | [[https://github.com/purescript-emacs/emacs-psci][purescript-emacs/emacs-psci]] |
 
 ** Diverging types
 #+NAME: melpa-diverging-types
@@ -491,7 +485,9 @@
                            (and (eq class 'subtree)  (eq fetcher 'git))
                            (and (eq class 'orphaned) (eq fetcher 'github))
                            (and (eq class 'file)     (eq fetcher 'github)
-                                (string-prefix-p "emacsmirror/" repo))))
+                                (string-prefix-p "emacsmirror/" repo))
+                           (and (eq class 'shelved)  (eq fetcher 'github)
+                                (string-prefix-p "emacsattic/" repo))))
                   (list name class fetcher
                         (cadr (assoc name emir--diverging-reason)))))
            (epkg-sql [:select :distinct [packages:name
@@ -505,7 +501,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (37)          | Class    | Melpa     | Reason                       |
+| Package (36)          | Class    | Melpa     | Reason                       |
 |-----------------------+----------+-----------+------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
 | caml                  | orphaned | svn       | svn                          |
@@ -530,7 +526,6 @@
 | judge-indent          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | llvm-mode             | shelved  | git       | mostly non-elisp             |
 | metafmt               | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| mic-paren             | shelved  | github    |                              |
 | mwe-log-commands      | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | nemerle               | minority | github    | mostly non-elisp             |
 | ninja-mode            | minority | github    | mostly non-elisp             |
