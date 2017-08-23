@@ -75,14 +75,14 @@ https://melpa.org
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2406 |      65 |
+| GPL-3+        |  2409 |      65 |
 | GPL-2+        |   618 |      17 |
 | MIT (x11)     |   123 |       3 |
-| GPL-3         |   121 |       3 |
+| GPL-3         |   122 |       3 |
 | MIT           |   120 |       3 |
 | BSD-2-clause  |    65 |       2 |
-| ((failure))   |    35 |       1 |
 | BSD-3-clause  |    34 |       1 |
+| ((failure))   |    34 |       1 |
 | unlicense     |    31 |       1 |
 | Apache-2.0    |    27 |       1 |
 | public-domain |    25 |       1 |
@@ -102,15 +102,15 @@ https://melpa.org
 | LGPL          |     2 |       0 |
 | MS-PL         |     2 |       0 |
 | BSD           |     1 |       0 |
+| LGPL-2.1      |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
-| ((pending))   |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3167 |      86 |
+| total GNU     |  3172 |      86 |
 |---------------+-------+---------|
-| total         |  3689 |     100 |
+| total         |  3692 |     100 |
 
 * Licenses used by packages on the Emacsmirror
 
@@ -137,17 +137,17 @@ https://emacsmirror.net
 #+RESULTS: count-emacsmirror
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2867 |      57 |
+| GPL-3+        |  2870 |      57 |
 | GPL-2+        |  1343 |      27 |
-| GPL-3         |   125 |       2 |
+| GPL-3         |   126 |       3 |
 | MIT           |   123 |       2 |
 | MIT (x11)     |   122 |       2 |
 | BSD-2-clause  |    68 |       1 |
-| ((pending))   |    53 |       1 |
-| ((failure))   |    51 |       1 |
+| ((failure))   |    50 |       1 |
+| ((pending))   |    50 |       1 |
 | public-domain |    44 |       1 |
 | BSD-3-clause  |    37 |       1 |
-| GPL-2         |    35 |       1 |
+| GPL-2         |    34 |       1 |
 | unlicense     |    33 |       1 |
 | WTFPL         |    32 |       1 |
 | Apache-2.0    |    27 |       1 |
@@ -165,11 +165,12 @@ https://emacsmirror.net
 | CeCILL-B      |     2 |       0 |
 | BSD           |     1 |       0 |
 | LGPL          |     1 |       0 |
+| LGPL-2.1      |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4390 |      87 |
+| total GNU     |  4394 |      87 |
 |---------------+-------+---------|
 | total         |  5033 |     100 |

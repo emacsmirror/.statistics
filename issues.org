@@ -29,12 +29,14 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (2) | Package | Shelved |
-|-------------+---------+---------|
-| ptexinfmt   | riece   |         |
-| ptexinfmt   | w3m     |         |
-| rfc2368     | rfc2368 |         |
-| rfc2368     | w3m     |         |
+| Feature (3) | Package   | Shelved |
+|-------------+-----------+---------|
+| folding     | emacspeak |         |
+| folding     | folding   |         |
+| ptexinfmt   | riece     |         |
+| ptexinfmt   | w3m       |         |
+| rfc2368     | rfc2368   |         |
+| rfc2368     | w3m       |         |
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -61,11 +63,5 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature    | Shelved |
-|-------------+--------+------------+---------|
-| nix-mode    | github | nix        |         |
-| nix-mode    | github | nix-geiser |         |
-| nix-mode    | github | nix-guile  |         |
-| nix-mode    | github | nix-misc   |         |
 
 https://github.com/NixOS/nix-mode/issues/32
