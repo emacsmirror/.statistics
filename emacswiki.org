@@ -33,11 +33,12 @@
                            (asc melpa-recipes:name)]])))
 #+END_SRC
 #+RESULTS:
-| Dependee (7) | Author     | Depender                      | Fetcher | Author               |
+| Dependee (8) | Author     | Depender                      | Fetcher | Author               |
 |--------------+------------+-------------------------------+---------+----------------------|
 | filesets+    | Drew Adams | helm-filesets                 | github  | Graham Clark         |
 | font-lock+   | Drew Adams | all-the-icons                 | github  | Dominic Charlesworth |
 | font-lock+   | Drew Adams | jemdoc-mode                   | github  | Dimitar Dimitrov     |
+| help-fns+    | Drew Adams | nu-mode                       | github  |                      |
 | hexrgb       | Drew Adams | jabber                        | git     |                      |
 | hexrgb       | Drew Adams | on-screen                     | github  | Michael Heerdegen    |
 | hexrgb       | Drew Adams | paper-theme                   | github  | Göktuğ Kayaalp       |
@@ -67,7 +68,7 @@
 
 #+END_SRC
 #+RESULTS:
-| Author (40)                   | Package                 |
+| Author (39)                   | Package                 |
 |-------------------------------+-------------------------|
 |                               | ac-dabbrev              |
 |                               | aok                     |
@@ -209,7 +210,6 @@
 | Ryan Davis and Phil Hagelberg | project-local-variables |
 | Scott Frazer                  | etags-select            |
 | Scott Frazer                  | etags-table             |
-| Seiji Zenitani                | smart-compile           |
 | Taiki SUGAWARA                | highlight-cl            |
 | Taiki SUGAWARA                | vline                   |
 | Takeshi Banse                 | el-swank-fuzzy          |
