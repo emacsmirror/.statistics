@@ -72,9 +72,9 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3856 |   3856 |       |       |       |  3415 |
+| github      | 3858 |   3858 |       |       |       |  3415 |
 | gitlab      |   36 |     36 |       |       |       |    28 |
-| git         |   51 |     51 |       |       |       |    42 |
+| git         |   52 |     52 |       |       |       |    42 |
 | subtree     |   21 |     21 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    37 |
@@ -86,14 +86,14 @@
 | fossil      |      |        |       |       |       |     0 |
 | svn         |      |        |       |       |       |     8 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  682 |    682 |       |       |       |   155 |
+| wiki        |  681 |    681 |       |       |       |   155 |
 | file        |  262 |    262 |       |       |       |       |
-| minority    |   22 |     22 |       |       |       |       |
+| minority    |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1027 |        |  1027 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6587 |   5137 |  1027 |   426 |   167 |  3692 |
+| total       | 6590 |   5140 |  1027 |   426 |   167 |  3692 |
 
 * Emacs
 ** Prefer elpa
@@ -324,7 +324,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (82)    | Secondary package               | Class     |
+| Primary package (79)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -341,7 +341,6 @@
 | chumpy-windows          | window-jump                     | github    |
 | circe                   | tracking                        | github    |
 | clojure-mode            | clojure-mode-extra-font-locking | github    |
-| cnfonts                 | chinese-fonts-setup             | github    |
 | codesearch              | projectile-codesearch           | github    |
 | copyit                  | copyit-pandoc                   | github    |
 | ctl-mode                | gs-mode                         | github    |
@@ -419,7 +418,6 @@
 | org                     | org-mac-link                    | git       |
 | org-projectile          | org-category-capture            | github    |
 | org-projectile          | org-projectile-helm             | github    |
-| org2web                 | org-webpage                     | github    |
 | ox-twiki                | ox-tiddly                       | github    |
 | pig-mode                | pig-snippets                    | github    |
 | pollen-mode             | company-pollen                  | github    |
@@ -427,7 +425,6 @@
 | prosjekt                | anything-prosjekt               | github    |
 | prosjekt                | dirtree-prosjekt                | github    |
 | prosjekt                | helm-prosjekt                   | github    |
-| pyim                    | chinese-pyim                    | github    |
 | request                 | request-deferred                | github    |
 | restclient              | restclient-helm                 | github    |
 | rinari                  | ruby-compilation                | github    |
@@ -501,7 +498,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (36)          | Class    | Melpa     | Reason                       |
+| Package (37)          | Class    | Melpa     | Reason                       |
 |-----------------------+----------+-----------+------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
 | caml                  | orphaned | svn       | svn                          |
@@ -534,6 +531,7 @@
 | pylint                | minority | github    | mostly non-elisp             |
 | redshank              | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | ruby-additional       | orphaned | svn       | svn                          |
+| smart-compile         | minority | github    |                              |
 | tex-smart-umlauts     | minority | darcs     | darcs                        |
 | thrift                | minority | github    | mostly non-elisp             |
 | toggle                | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
