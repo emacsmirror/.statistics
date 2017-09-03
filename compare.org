@@ -72,9 +72,9 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3858 |   3858 |       |       |       |  3415 |
+| github      | 3864 |   3864 |       |       |       |  3422 |
 | gitlab      |   38 |     38 |       |       |       |    30 |
-| git         |   52 |     52 |       |       |       |    42 |
+| git         |   53 |     53 |       |       |       |    43 |
 | subtree     |   21 |     21 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    37 |
@@ -93,7 +93,7 @@
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1027 |        |  1027 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6592 |   5142 |  1027 |   426 |   167 |  3694 |
+| total       | 6599 |   5149 |  1027 |   426 |   167 |  3702 |
 
 * Emacs
 ** Prefer elpa
@@ -443,6 +443,7 @@
 | term-manager            | term-projectile                 | github    |
 | tern                    | tern-auto-complete              | github    |
 | treemacs                | treemacs-evil                   | github    |
+| treemacs                | treemacs-projectile             | github    |
 | use-package             | bind-key                        | github    |
 | use-package-chords      | bind-chord                      | github    |
 | w3m                     | shimbun                         | orphaned  |
