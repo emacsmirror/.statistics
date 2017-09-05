@@ -72,7 +72,7 @@
 | elpa        |   98 |     98 |       |       |   148 |       |
 | elpa-branch |    7 |      7 |       |       |    13 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3864 |   3864 |       |       |       |  3422 |
+| github      | 3857 |   3857 |       |       |       |  3425 |
 | gitlab      |   38 |     38 |       |       |       |    30 |
 | git         |   53 |     53 |       |       |       |    43 |
 | subtree     |   21 |     21 |       |       |       |       |
@@ -91,9 +91,9 @@
 | minority    |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1027 |        |  1027 |       |       |       |
+| shelved     | 1036 |        |  1036 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6599 |   5149 |  1027 |   426 |   167 |  3702 |
+| total       | 6601 |   5142 |  1036 |   426 |   167 |  3705 |
 
 * Emacs
 ** Prefer elpa
@@ -499,7 +499,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (37)          | Class    | Melpa     | Reason                       |
+| Package (38)          | Class    | Melpa     | Reason                       |
 |-----------------------+----------+-----------+------------------------------|
 | autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
 | caml                  | orphaned | svn       | svn                          |
@@ -528,6 +528,7 @@
 | nemerle               | minority | github    | mostly non-elisp             |
 | ninja-mode            | minority | github    | mostly non-elisp             |
 | org-password-manager  | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| outline-magic         | shelved  | github    |                              |
 | po-mode               | minority | git       | mostly non-elisp             |
 | pylint                | minority | github    | mostly non-elisp             |
 | redshank              | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
