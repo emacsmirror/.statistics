@@ -69,10 +69,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  423 |        |       |   426 |     6 |       |
-| elpa        |   98 |     98 |       |       |   148 |       |
-| elpa-branch |    7 |      7 |       |       |    13 |       |
+| elpa        |  108 |    108 |       |       |   159 |       |
+| elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3857 |   3857 |       |       |       |  3425 |
+| github      | 3863 |   3863 |       |       |       |  3432 |
 | gitlab      |   38 |     38 |       |       |       |    30 |
 | git         |   53 |     53 |       |       |       |    43 |
 | subtree     |   21 |     21 |       |       |       |       |
@@ -91,9 +91,9 @@
 | minority    |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1036 |        |  1036 |       |       |       |
+| shelved     | 1037 |        |  1037 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6601 |   5142 |  1036 |   426 |   167 |  3705 |
+| total       | 6619 |   5159 |  1037 |   426 |   179 |  3712 |
 
 * Emacs
 ** Prefer elpa
@@ -134,7 +134,7 @@
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa")
-    (--filter (not (assoc name emir-pending-packages))
+    (--filter (not (assoc 'name emir-pending-packages))
               (epkg-sql [:select [name class]
                          :from gelpa-recipes
                          :where (isnull epkg-package)
@@ -147,7 +147,7 @@
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa" "Reason")
     (-keep (-lambda ((name class))
-             (--when-let (cadr (assoc (car it) emir-pending-packages))
+             (--when-let (cadr (assoc name emir-pending-packages))
                (list name class it)))
            (epkg-sql [:select [name class]
                       :from gelpa-recipes
@@ -216,7 +216,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (59)               | Class    | Gelpa    | Link                                         |
+| Package (60)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -274,6 +274,7 @@
 | wcheck-mode                | github   | subtree  | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
 | web-server                 | github   | subtree  | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
 | websocket                  | github   | subtree  | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
+| which-key                  | github   | subtree  | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]                      |
 | xelb                       | github   | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
 | yasnippet                  | github   | subtree  | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
 | ztree                      | github   | subtree  | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
