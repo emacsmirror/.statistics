@@ -5,13 +5,67 @@
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 
-The below packages, which are available from the Emacsmirror,
-are missing from Melpa.
+* Imported from the Emascwiki
 
 For packages that Melpa (and the Emacsmirror) import from the
 Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 
-* Github
+* Imported from the Emacsorphanage
+
+The upstreams of these packages use some version control system
+other than Git or Mercurial.  As you can see there are very few
+such packages, which is why support was removed from Melpa (not
+having to support five vcs for the benefit of a handful of
+packages makes it more appealing to improve the remaining code).
+
+Note: Actually non of these packages are being imported from
+the orphanage just yet.  But that might happen any time now.
+
+- ~shimbun~ isn't listed below because it is part of the ~w3m~ repository.
+
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Vcs" "Last commit" "Commits last year")
+    (-keep (pcase-lambda (`(,name ,vcs))
+             (let ((default-directory
+                     (if (member vcs '("darcs" "fossil"))
+                         (format "~/git/emacs/import/%s/%s/%s_%s/"
+                                 vcs name name vcs)
+                       (format "~/git/emacs/import/%s/%s/" vcs name))))
+               (and (melpa-get name)
+                    (list name vcs
+                          (magit-git-string
+                           "show" "-q" "--date=relative" "--format=%cd")
+                          (length
+                           (magit-git-lines
+                            "log" "--since=1 year ago" "--oneline"))))))
+            emir--other-vcs))
+#+END_SRC
+#+RESULTS:
+| Package (14)      | Vcs    | Last commit           | Commits last year |
+|-------------------+--------+-----------------------+-------------------|
+| caml              | svn    | 1 year, 11 months ago |                 0 |
+| cg                | svn    | 7 months ago          |                 2 |
+| clang-format      | svn    | 4 weeks ago           |                26 |
+| color-theme       | bzr    | 8 years ago           |                 0 |
+| confluence        | svn    | 6 weeks ago           |                 1 |
+| darcsum           | darcs  | 4 hours ago           |                 1 |
+| dic-lookup-w3m    | svn    | 5 weeks ago           |                 4 |
+| dsvn              | svn    | 6 weeks ago           |                 1 |
+| helm-ls-svn       | svn    | 2 years, 2 months ago |                 0 |
+| ruby-additional   | svn    | 3 weeks ago           |                12 |
+| swbuff            | cvs    | 10 years ago          |                 0 |
+| tex-smart-umlauts | darcs  | 4 hours ago           |                 1 |
+| vc-fossil         | fossil | 4 hours ago           |                 1 |
+| w3m               | cvs    | 3 weeks ago           |                74 |
+
+* Missing from Melpa
+
+The below packages, which are available from the Emacsmirror, are
+missing from Melpa.  Not all of those packages should be added to
+Melpa, and if you decide to create submit recipes for some of them,
+then please first make sure they meet the minimal requirements.
+
+** Github
 #+NAME: missing-github
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
@@ -660,7 +714,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | zone-matrix                  | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        |
 | zwiebel                      | [[https://github.com/silentbicycle/zwiebel][silentbicycle/zwiebel]]                   |
 
-* Gitlab
+** Gitlab
 #+NAME: missing-gitlab
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
@@ -680,7 +734,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | sh-proxy         | [[https://gitlab.com/jave/sh-proxy][jave/sh-proxy]]         |
 | zen-mode         | [[https://gitlab.com/jave/zen-mode][jave/zen-mode]]         |
 
-* Git
+** Git
 #+NAME: missing-git
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
@@ -712,7 +766,7 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | speechd             | [[http://www.freebsoft.org/speechd-el]]                                    |
 | stgit               | [[http://www.procode.org/stgit]]                                           |
 
-* Bitbucket
+** Bitbucket
 #+NAME: missing-bitbucket
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
@@ -733,4 +787,5 @@ Emacswiki, see [[https://emacsmirror.net/stats/emacswiki.html][this page]].
 | omake              | [[https://bitbucket.org/dmcooke/omake-mode][dmcooke/omake-mode]]             |
 | python-extras      | [[https://bitbucket.org/mickey/python-extras][mickey/python-extras]]           |
 | w32-fullscreen     | [[https://bitbucket.org/phromo/w32-fullscreen][phromo/w32-fullscreen]]          |
+
 

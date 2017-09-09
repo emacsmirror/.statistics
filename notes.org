@@ -228,3 +228,28 @@
 | w3m               | semi-automatic import   |
 | windata           | wiki needed by non-wiki |
 
+* Other vcs
+#+NAME: set--emir--other-vcs
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--other-vcs
+  (emir--save-variable 'emir--other-vcs value)
+#+END_SRC
+#+NAME: val--emir--other-vcs
+| Package           | Vcs    |
+|-------------------+--------|
+| caml              | svn    |
+| cg                | svn    |
+| clang-format      | svn    |
+| color-theme       | bzr    |
+| confluence        | svn    |
+| darcsum           | darcs  |
+| dic-lookup-w3m    | svn    |
+| dsvn              | svn    |
+| helm-ls-svn       | svn    |
+| nxhtml            | bzr    |
+| ruby-additional   | svn    |
+| swbuff            | cvs    |
+| tex-smart-umlauts | darcs  |
+| text-translator   | bzr    |
+| vc-fossil         | fossil |
+| vm                | bzr    |
+| w3m               | cvs    |
