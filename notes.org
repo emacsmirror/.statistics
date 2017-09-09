@@ -166,63 +166,65 @@
   (emir--save-variable 'emir--orphanage-reason value)
 #+END_SRC
 #+NAME: val--emir--orphanage-reason
-| Package          | Reason                  |
-|------------------+-------------------------|
-| caml             | semi-automatic import   |
-| cg               | semi-automatic import   |
-| clang-format     | semi-automatic import   |
-| color-theme      | semi-automatic import   |
-| confluence       | semi-automatic import   |
-| crontab-mode     | upstream disappeared    |
-| dedicated        | upstream disappeared    |
-| dic-lookup-w3m   | semi-automatic import   |
-| dirtree          | wiki needed by non-wiki |
-| doom             | upstream unresponsive   |
-| dsvn             | semi-automatic import   |
-| ecasound         | upstream disappeared    |
-| edb              | upstream unresponsive   |
-| elisp-depend     | upstream unresponsive   |
-| ert-expectations | wiki needed by non-wiki |
-| filladapt        | upstream unresponsive   |
-| findr            | wiki needed by non-wiki |
-| helm-ls-svn      | semi-automatic import   |
-| hide-lines       | wiki needed by non-wiki |
-| http-post-simple | wiki needed by non-wiki |
-| hyperspec        | multiple non-upstreams  |
-| key-chord        | wiki needed by non-wiki |
-| keydef           | upstream disappeared    |
-| levenshtein      | wiki needed by non-wiki |
-| linkd            | wiki multiple files     |
-| look-mode        | wiki needed by non-wiki |
-| miniedit         | upstream disappeared    |
-| multi-term       | wiki needed by non-wiki |
-| nxhtml           | semi-automatic import   |
-| oberon           | upstream unresponsive   |
-| org-bullets      | upstream unresponsive   |
-| org-grep         | maintainer is dead      |
-| osd              | upstream disappeared    |
-| pager            | upstream disappeared    |
-| picolisp         | manual tarball import   |
-| pointback        | upstream disappeared    |
-| read-char-spec   | upstream unresponsive   |
-| ruby-additional  | semi-automatic import   |
-| session          | manual tarball import   |
-| setnu            | upstream unresponsive   |
-| shell-command    | wiki needed by non-wiki |
-| shell-history    | wiki needed by non-wiki |
-| showtip          | wiki needed by non-wiki |
-| smarty-mode      | upstream disappeared    |
-| sml-modeline     | manual tarball import   |
-| sr-speedbar      | wiki needed by non-wiki |
-| swbuff           | semi-automatic import   |
-| tail             | upstream disappeared    |
-| text-translator  | semi-automatic import   |
-| transpose-frame  | wiki needed by non-wiki |
-| tree-mode        | wiki needed by non-wiki |
-| vala-mode        | upstream disappeared    |
-| vc-fossil        | semi-automatic import   |
-| vm               | semi-automatic import   |
-| w32-browser      | wiki needed by non-wiki |
-| w3m              | semi-automatic import   |
-| windata          | wiki needed by non-wiki |
+| Package           | Reason                  |
+|-------------------+-------------------------|
+| caml              | semi-automatic import   |
+| cg                | semi-automatic import   |
+| clang-format      | semi-automatic import   |
+| color-theme       | semi-automatic import   |
+| confluence        | semi-automatic import   |
+| crontab-mode      | upstream disappeared    |
+| darcsum           | semi-automatic import   |
+| dedicated         | upstream disappeared    |
+| dic-lookup-w3m    | semi-automatic import   |
+| dirtree           | wiki needed by non-wiki |
+| doom              | upstream unresponsive   |
+| dsvn              | semi-automatic import   |
+| ecasound          | upstream disappeared    |
+| edb               | upstream unresponsive   |
+| elisp-depend      | upstream unresponsive   |
+| ert-expectations  | wiki needed by non-wiki |
+| filladapt         | upstream unresponsive   |
+| findr             | wiki needed by non-wiki |
+| helm-ls-svn       | semi-automatic import   |
+| hide-lines        | wiki needed by non-wiki |
+| http-post-simple  | wiki needed by non-wiki |
+| hyperspec         | multiple non-upstreams  |
+| key-chord         | wiki needed by non-wiki |
+| keydef            | upstream disappeared    |
+| levenshtein       | wiki needed by non-wiki |
+| linkd             | wiki multiple files     |
+| look-mode         | wiki needed by non-wiki |
+| miniedit          | upstream disappeared    |
+| multi-term        | wiki needed by non-wiki |
+| nxhtml            | semi-automatic import   |
+| oberon            | upstream unresponsive   |
+| org-bullets       | upstream unresponsive   |
+| org-grep          | maintainer is dead      |
+| osd               | upstream disappeared    |
+| pager             | upstream disappeared    |
+| picolisp          | manual tarball import   |
+| pointback         | upstream disappeared    |
+| read-char-spec    | upstream unresponsive   |
+| ruby-additional   | semi-automatic import   |
+| session           | manual tarball import   |
+| setnu             | upstream unresponsive   |
+| shell-command     | wiki needed by non-wiki |
+| shell-history     | wiki needed by non-wiki |
+| showtip           | wiki needed by non-wiki |
+| smarty-mode       | upstream disappeared    |
+| sml-modeline      | manual tarball import   |
+| sr-speedbar       | wiki needed by non-wiki |
+| swbuff            | semi-automatic import   |
+| tail              | upstream disappeared    |
+| tex-smart-umlauts | semi-automatic import   |
+| text-translator   | semi-automatic import   |
+| transpose-frame   | wiki needed by non-wiki |
+| tree-mode         | wiki needed by non-wiki |
+| vala-mode         | upstream disappeared    |
+| vc-fossil         | semi-automatic import   |
+| vm                | semi-automatic import   |
+| w32-browser       | wiki needed by non-wiki |
+| w3m               | semi-automatic import   |
+| windata           | wiki needed by non-wiki |
 

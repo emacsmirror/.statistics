@@ -4,8 +4,9 @@
   (require 'emir)
 
   (defconst emir--orphans-cache
-    (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil nil nil t)
-             #'string< :key (lambda (it) (cdr (assq 'name it)))))
+    (cl-delete-if (lambda (it) (equal (cdr (assq 'name it)) "p"))
+                  (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil nil nil t)
+                           #'string< :key (lambda (it) (cdr (assq 'name it))))))
 
   (defun emir--list-orphans (&rest only)
     (epkg-with-org-header ("Package" "Mirror" "Melpa")
@@ -142,23 +143,25 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "semi-automatic import")
 #+END_SRC
 #+RESULTS:
-| Package (15)    | Mirror   | Melpa    |
-|-----------------+----------+----------|
-| caml            | orphaned | svn      |
-| cg              | orphaned | svn      |
-| clang-format    | orphaned | svn      |
-| color-theme     | orphaned | bzr      |
-| confluence      | orphaned | svn      |
-| dic-lookup-w3m  | orphaned | svn      |
-| dsvn            | orphaned | svn      |
-| helm-ls-svn     | orphaned | svn      |
-| nxhtml          | orphaned |          |
-| ruby-additional | orphaned | svn      |
-| swbuff          | orphaned | orphaned |
-| text-translator | orphaned |          |
-| vc-fossil       | orphaned | orphaned |
-| vm              | orphaned |          |
-| w3m             | orphaned | cvs      |
+| Package (17)      | Mirror   | Melpa    |
+|-------------------+----------+----------|
+| caml              | orphaned | svn      |
+| cg                | orphaned | svn      |
+| clang-format      | orphaned | svn      |
+| color-theme       | orphaned | bzr      |
+| confluence        | orphaned | svn      |
+| darcsum           | orphaned | darcs    |
+| dic-lookup-w3m    | orphaned | svn      |
+| dsvn              | orphaned | svn      |
+| helm-ls-svn       | orphaned | svn      |
+| nxhtml            | orphaned |          |
+| ruby-additional   | orphaned | svn      |
+| swbuff            | orphaned | orphaned |
+| tex-smart-umlauts | orphaned | darcs    |
+| text-translator   | orphaned |          |
+| vc-fossil         | orphaned | orphaned |
+| vm                | orphaned |          |
+| w3m               | orphaned | cvs      |
 
 * Imported from tarball
 #+BEGIN_SRC emacs-lisp

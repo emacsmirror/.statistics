@@ -72,7 +72,7 @@
 | elpa        |  108 |    108 |       |       |   159 |       |
 | elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3863 |   3863 |       |       |       |  3432 |
+| github      | 3864 |   3864 |       |       |       |  3432 |
 | gitlab      |   38 |     38 |       |       |       |    30 |
 | git         |   53 |     53 |       |       |       |    43 |
 | subtree     |   21 |     21 |       |       |       |       |
@@ -81,19 +81,19 @@
 | hg          |    1 |      1 |       |       |       |     0 |
 |-------------+------+--------+-------+-------+-------+-------|
 | bzr         |      |        |       |       |       |     1 |
-| cvs         |      |        |       |       |       |     4 |
+| cvs         |      |        |       |       |       |     2 |
 | darcs       |      |        |       |       |       |     2 |
 | fossil      |      |        |       |       |       |     0 |
 | svn         |      |        |       |       |       |     8 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  681 |    681 |       |       |       |   155 |
 | file        |  262 |    262 |       |       |       |       |
-| minority    |   23 |     23 |       |       |       |       |
+| minority    |   19 |     19 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1037 |        |  1037 |       |       |       |
+| orphaned    |   58 |     58 |       |       |       |       |
+| shelved     | 1039 |        |  1039 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6619 |   5159 |  1037 |   426 |   179 |  3712 |
+| total       | 6620 |   5158 |  1039 |   426 |   179 |  3710 |
 
 * Emacs
 ** Prefer elpa
@@ -500,44 +500,42 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (38)          | Class    | Melpa     | Reason                       |
-|-----------------------+----------+-----------+------------------------------|
-| autotest              | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
-| caml                  | orphaned | svn       | svn                          |
-| cfengine-code-style   | minority | github    | mostly non-elisp             |
-| cg                    | orphaned | svn       | svn                          |
-| clang-format          | orphaned | svn       | svn                          |
-| cmake-mode            | minority | github    | mostly non-elisp             |
-| color-theme           | orphaned | bzr       | bzr                          |
-| confluence            | orphaned | svn       | svn                          |
-| cursor-in-brackets    | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| cython-mode           | minority | github    | mostly non-elisp             |
-| darcsum               | minority | darcs     | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                |
-| debian-bug            | minority | cvs       | mostly non-elisp             |
-| debian-changelog-mode | minority | cvs       | mostly non-elisp             |
-| dic-lookup-w3m        | orphaned | svn       | svn                          |
-| diffscuss-mode        | minority | github    | mostly non-elisp             |
-| dsvn                  | orphaned | svn       | svn                          |
-| dummy-h-mode          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| google-c-style        | minority | github    | mostly non-elisp             |
-| gregorio-mode         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| helm-ls-svn           | orphaned | svn       | svn                          |
-| judge-indent          | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| llvm-mode             | shelved  | git       | mostly non-elisp             |
-| metafmt               | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| mwe-log-commands      | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| nemerle               | minority | github    | mostly non-elisp             |
-| ninja-mode            | minority | github    | mostly non-elisp             |
-| org-password-manager  | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| outline-magic         | shelved  | github    |                              |
-| po-mode               | minority | git       | mostly non-elisp             |
-| pylint                | minority | github    | mostly non-elisp             |
-| redshank              | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| ruby-additional       | orphaned | svn       | svn                          |
-| smart-compile         | minority | github    |                              |
-| tex-smart-umlauts     | minority | darcs     | darcs                        |
-| thrift                | minority | github    | mostly non-elisp             |
-| toggle                | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
-| w3m                   | orphaned | cvs       | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]               |
-| wisp-mode             | minority | bitbucket | mostly non-elisp             |
+| Package (36)         | Class    | Melpa     | Reason                       |
+|----------------------+----------+-----------+------------------------------|
+| autotest             | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
+| caml                 | orphaned | svn       | svn                          |
+| cfengine-code-style  | minority | github    | mostly non-elisp             |
+| cg                   | orphaned | svn       | svn                          |
+| clang-format         | orphaned | svn       | svn                          |
+| cmake-mode           | minority | github    | mostly non-elisp             |
+| color-theme          | orphaned | bzr       | bzr                          |
+| confluence           | orphaned | svn       | svn                          |
+| cursor-in-brackets   | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| cython-mode          | minority | github    | mostly non-elisp             |
+| darcsum              | orphaned | darcs     | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                |
+| dic-lookup-w3m       | orphaned | svn       | svn                          |
+| diffscuss-mode       | minority | github    | mostly non-elisp             |
+| dsvn                 | orphaned | svn       | svn                          |
+| dummy-h-mode         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| google-c-style       | minority | github    | mostly non-elisp             |
+| gregorio-mode        | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| helm-ls-svn          | orphaned | svn       | svn                          |
+| judge-indent         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| llvm-mode            | shelved  | git       | mostly non-elisp             |
+| metafmt              | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| mwe-log-commands     | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| nemerle              | minority | github    | mostly non-elisp             |
+| ninja-mode           | minority | github    | mostly non-elisp             |
+| org-password-manager | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| outline-magic        | shelved  | github    |                              |
+| po-mode              | minority | git       | mostly non-elisp             |
+| pylint               | minority | github    | mostly non-elisp             |
+| redshank             | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
+| ruby-additional      | orphaned | svn       | svn                          |
+| smart-compile        | minority | github    |                              |
+| tex-smart-umlauts    | orphaned | darcs     | darcs                        |
+| thrift               | minority | github    | mostly non-elisp             |
+| toggle               | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
+| w3m                  | orphaned | cvs       | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]               |
+| wisp-mode            | minority | bitbucket | mostly non-elisp             |
 
