@@ -143,9 +143,8 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "semi-automatic import")
 #+END_SRC
 #+RESULTS:
-| Package (17)      | Mirror   | Melpa    |
+| Package (16)      | Mirror   | Melpa    |
 |-------------------+----------+----------|
-| caml              | orphaned | svn      |
 | cg                | orphaned | svn      |
 | clang-format      | orphaned | svn      |
 | color-theme       | orphaned | bzr      |

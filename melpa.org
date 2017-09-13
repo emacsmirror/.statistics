@@ -18,7 +18,7 @@ such packages, which is why support was removed from Melpa (not
 having to support five vcs for the benefit of a handful of
 packages makes it more appealing to improve the remaining code).
 
-Note: Actually non of these packages are being imported from
+Note: Actually none of these packages are being imported from
 the orphanage just yet.  But that might happen any time now.
 
 - ~shimbun~ isn't listed below because it is part of the ~w3m~ repository.
@@ -41,21 +41,20 @@ the orphanage just yet.  But that might happen any time now.
             emir--other-vcs))
 #+END_SRC
 #+RESULTS:
-| Package (14)      | Vcs    | Last commit           | Commits last year |
+| Package (13)      | Vcs    | Last commit           | Commits last year |
 |-------------------+--------+-----------------------+-------------------|
-| caml              | svn    | 1 year, 11 months ago |                 0 |
 | cg                | svn    | 7 months ago          |                 2 |
-| clang-format      | svn    | 4 weeks ago           |                26 |
+| clang-format      | svn    | 5 weeks ago           |                24 |
 | color-theme       | bzr    | 8 years ago           |                 0 |
 | confluence        | svn    | 6 weeks ago           |                 1 |
 | darcsum           | darcs  | 3 years, 4 months ago |                 0 |
 | dic-lookup-w3m    | svn    | 6 weeks ago           |                 4 |
 | dsvn              | svn    | 6 weeks ago           |                 1 |
 | helm-ls-svn       | svn    | 2 years, 2 months ago |                 0 |
-| ruby-additional   | svn    | 3 weeks ago           |                11 |
+| ruby-additional   | svn    | 4 weeks ago           |                11 |
 | swbuff            | cvs    | 10 years ago          |                 0 |
 | tex-smart-umlauts | darcs  | 1 year, 5 months ago  |                 0 |
-| vc-fossil         | fossil | 4 weeks ago           |                 1 |
+| vc-fossil         | fossil | 5 weeks ago           |                 1 |
 | w3m               | cvs    | 4 weeks ago           |                74 |
 
 * Missing from Melpa

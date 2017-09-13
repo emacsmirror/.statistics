@@ -72,10 +72,10 @@
 | elpa        |  108 |    108 |       |       |   159 |       |
 | elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3865 |   3865 |       |       |       |  3434 |
+| github      | 3865 |   3865 |       |       |       |  3435 |
 | gitlab      |   38 |     38 |       |       |       |    30 |
 | git         |   53 |     53 |       |       |       |    43 |
-| subtree     |   21 |     21 |       |       |       |       |
+| subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    39 |
 | hg          |    1 |      1 |       |       |       |     0 |
@@ -84,13 +84,13 @@
 | cvs         |      |        |       |       |       |     2 |
 | darcs       |      |        |       |       |       |     2 |
 | fossil      |      |        |       |       |       |     0 |
-| svn         |      |        |       |       |       |     8 |
+| svn         |      |        |       |       |       |     7 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  681 |    681 |       |       |       |   155 |
 | file        |  262 |    262 |       |       |       |       |
 | minority    |   19 |     19 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   58 |     58 |       |       |       |       |
+| orphaned    |   57 |     57 |       |       |       |       |
 | shelved     | 1039 |        |  1039 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | total       | 6621 |   5159 |  1039 |   426 |   179 |  3714 |
@@ -500,10 +500,9 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (36)         | Class    | Melpa     | Reason                       |
+| Package (35)         | Class    | Melpa     | Reason                       |
 |----------------------+----------+-----------+------------------------------|
 | autotest             | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
-| caml                 | orphaned | svn       | svn                          |
 | cfengine-code-style  | minority | github    | mostly non-elisp             |
 | cg                   | orphaned | svn       | svn                          |
 | clang-format         | orphaned | svn       | svn                          |
