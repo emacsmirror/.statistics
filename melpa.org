@@ -43,26 +43,26 @@ the orphanage just yet.  But that might happen any time now.
 #+RESULTS:
 | Package (13)      | Vcs    | Last commit           | Commits last year |
 |-------------------+--------+-----------------------+-------------------|
-| cg                | svn    | 7 months ago          |                 2 |
-| clang-format      | svn    | 5 weeks ago           |                24 |
+| cg                | svn    | 5 days ago            |                 3 |
+| clang-format      | svn    | 9 days ago            |                29 |
 | color-theme       | bzr    | 8 years ago           |                 0 |
-| confluence        | svn    | 6 weeks ago           |                 1 |
+| confluence        | svn    | 7 weeks ago           |                 1 |
 | darcsum           | darcs  | 3 years, 4 months ago |                 0 |
 | dic-lookup-w3m    | svn    | 6 weeks ago           |                 4 |
-| dsvn              | svn    | 6 weeks ago           |                 1 |
+| dsvn              | svn    | 7 weeks ago           |                 1 |
 | helm-ls-svn       | svn    | 2 years, 2 months ago |                 0 |
 | ruby-additional   | svn    | 4 weeks ago           |                11 |
 | swbuff            | cvs    | 10 years ago          |                 0 |
 | tex-smart-umlauts | darcs  | 1 year, 5 months ago  |                 0 |
 | vc-fossil         | fossil | 5 weeks ago           |                 1 |
-| w3m               | cvs    | 4 weeks ago           |                74 |
+| w3m               | cvs    | 5 days ago            |                85 |
 
 * Missing from Melpa
 
 The below packages, which are available from the Emacsmirror, are
 missing from Melpa.  Not all of those packages should be added to
-Melpa, and if you decide to create submit recipes for some of them,
-then please first make sure they meet the minimal requirements.
+Melpa, and if you decide to submit recipes for some of them, then
+please first make sure they meet the minimal requirements.
 
 ** Github
 #+NAME: missing-github
@@ -73,7 +73,7 @@ then please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (636)                | Link                                    |
+| Package (639)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -151,6 +151,7 @@ then please first make sure they meet the minimal requirements.
 | clip2org                     | [[https://github.com/thamer/clip2org][thamer/clip2org]]                         |
 | clojure-refactoring-mode     | [[https://github.com/joodie/clojure-refactoring][joodie/clojure-refactoring]]              |
 | cluck                        | [[https://github.com/ddp/cluck][ddp/cluck]]                               |
+| cn-outline                   | [[https://github.com/mori-dev/cn-outline][mori-dev/cn-outline]]                     |
 | code-imports                 | [[https://github.com/ahyatt/code-imports][ahyatt/code-imports]]                     |
 | codepad                      | [[https://github.com/ruediger/emacs-codepad][ruediger/emacs-codepad]]                  |
 | codethumb                    | [[https://github.com/tkf/emacs-codethumb][tkf/emacs-codethumb]]                     |
@@ -338,6 +339,7 @@ then please first make sure they meet the minimal requirements.
 | helm-projectile-all          | [[https://github.com/spatz/helm-projectile-all][spatz/helm-projectile-all]]               |
 | helm-shell-history           | [[https://github.com/yuutayamada/helm-shell-history][yuutayamada/helm-shell-history]]          |
 | helm-slime                   | [[https://github.com/emacs-helm/helm-slime][emacs-helm/helm-slime]]                   |
+| helm-words                   | [[https://github.com/pronobis/helm-words][pronobis/helm-words]]                     |
 | hide-url                     | [[https://github.com/tkf/hide-url.el][tkf/hide-url.el]]                         |
 | highlight-sexp               | [[https://github.com/daimrod/highlight-sexp][daimrod/highlight-sexp]]                  |
 | highrise                     | [[https://github.com/hober/37emacs][hober/37emacs]]                           |
@@ -515,6 +517,7 @@ then please first make sure they meet the minimal requirements.
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    |
 | per-window-point             | [[https://github.com/alpaker/Per-Window-Point][alpaker/Per-Window-Point]]                |
+| perl-completion              | [[https://github.com/imakado/perl-completion][imakado/perl-completion]]                 |
 | perl-utils                   | [[https://github.com/syohex/emacs-perl-utils][syohex/emacs-perl-utils]]                 |
 | perlbrew-mini                | [[https://github.com/dams/perlbrew-mini.el][dams/perlbrew-mini.el]]                   |
 | perlmonks                    | [[https://github.com/metaperl/emacs-perlmonks][metaperl/emacs-perlmonks]]                |
