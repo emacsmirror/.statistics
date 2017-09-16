@@ -3,57 +3,56 @@
 
 * Wiki packages required by none-wiki packages
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Dependee" "Author" "Depender" "Fetcher" "Author")
+  (epkg-with-org-header ("Dependee" "Author" "Depender" "Type" "Fetcher" "Author")
     (-mapcat
      (-lambda ((dependee _dependee-type))
        (let ((dependee-pkg (epkg dependee)))
-	 (-mapcat (-lambda ((depender . _))
-		    (let ((depender-pkg  (epkg depender))
-			  (depender-type (caar (epkg-sql [:select class
-							  :from melpa-recipes
-							  :where (= name $s1)]
-							 depender))))
-		      (and depender-type
-			   (not (eq depender-type 'wiki))
-			   ;; (not (epkg-wiki-package-p depender-pkg))
-			   (list (list dependee
-				       (caar (oref dependee-pkg authors))
-				       depender
-				       ;; (epkg-type depender-pkg)
-				       depender-type
-				       (caar (oref depender-pkg authors))
-				       )))))
-		  (epkg-reverse-dependencies dependee))))
+         (-mapcat (-lambda ((depender . features))
+                    (let ((depender-pkg  (epkg depender))
+                          (depender-type (caar (epkg-sql [:select class
+                                                          :from melpa-recipes
+                                                          :where (= name $s1)]
+                                                         depender))))
+                      (and depender-type
+                           (not (eq depender-type 'wiki))
+                           ;; (not (epkg-wiki-package-p depender-pkg))
+                           `((,dependee
+                              ,(caar (oref dependee-pkg authors))
+                              ,depender
+                              ,(if (-any #'symbolp features) "hard" "soft")
+                              ,depender-type
+                              ,(caar (oref depender-pkg authors)))))))
+                  (epkg-reverse-dependencies dependee))))
      ;; (epkgs [name class] 'epkg-wiki-package-p))
      (epkg-sql [:select :distinct [packages:name packages:class]
-		:from [packages melpa-recipes]
-		:where (= packages:name melpa-recipes:epkg-package)
-		:and   (= packages:class 'wiki)
-		:order-by [(asc packages:name)
+                :from [packages melpa-recipes]
+                :where (= packages:name melpa-recipes:epkg-package)
+                :and   (= packages:class 'wiki)
+                :order-by [(asc packages:name)
                            (asc melpa-recipes:name)]])))
 #+END_SRC
 #+RESULTS:
-| Dependee (8) | Author     | Depender                      | Fetcher | Author               |
-|--------------+------------+-------------------------------+---------+----------------------|
-| filesets+    | Drew Adams | helm-filesets                 | github  | Graham Clark         |
-| font-lock+   | Drew Adams | all-the-icons                 | github  | Dominic Charlesworth |
-| font-lock+   | Drew Adams | jemdoc-mode                   | github  | Dimitar Dimitrov     |
-| help-fns+    | Drew Adams | nu-mode                       | github  |                      |
-| hexrgb       | Drew Adams | jabber                        | git     |                      |
-| hexrgb       | Drew Adams | on-screen                     | github  | Michael Heerdegen    |
-| hexrgb       | Drew Adams | paper-theme                   | github  | Göktuğ Kayaalp       |
-| highlight    | Drew Adams | cider-eval-sexp-fu            | github  | Sylvain Benner       |
-| highlight    | Drew Adams | eval-sexp-fu                  | github  | Takeshi Banse        |
-| highlight    | Drew Adams | evil-extra-operator           | github  | Dewdrops             |
-| highlight    | Drew Adams | evil-search-highlight-persist | github  | Juanjo Alvarez       |
-| highlight    | Drew Adams | floobits                      | github  | Geoff Greer          |
-| highlight    | Drew Adams | nrepl-eval-sexp-fu            | github  | Takeshi Banse        |
-| highlight    | Drew Adams | php-boris-minor-mode          | github  | steckerhalter        |
-| highlight    | Drew Adams | sonic-pi                      | github  | Joseph Wilk          |
-| strings      | Drew Adams | ergoemacs-mode                | github  | David Capello        |
-| thingatpt+   | Drew Adams | el-spice                      | github  | Vedang Manerikar     |
-| yaoddmuse    |            | company                       | github  | Nikolaj Schumacher   |
-| yaoddmuse    |            | org-readme                    | github  | Matthew L. Fidler    |
+| Dependee (8) | Author     | Depender                      | Type | Fetcher | Author               |
+|--------------+------------+-------------------------------+------+---------+----------------------|
+| filesets+    | Drew Adams | helm-filesets                 | soft | github  | Graham Clark         |
+| font-lock+   | Drew Adams | all-the-icons                 | hard | github  | Dominic Charlesworth |
+| font-lock+   | Drew Adams | jemdoc-mode                   | soft | github  | Dimitar Dimitrov     |
+| help-fns+    | Drew Adams | nu-mode                       | hard | github  |                      |
+| hexrgb       | Drew Adams | jabber                        | hard | git     |                      |
+| hexrgb       | Drew Adams | on-screen                     | soft | github  | Michael Heerdegen    |
+| hexrgb       | Drew Adams | paper-theme                   | hard | github  | Göktuğ Kayaalp       |
+| highlight    | Drew Adams | cider-eval-sexp-fu            | hard | github  | Sylvain Benner       |
+| highlight    | Drew Adams | eval-sexp-fu                  | hard | github  | Takeshi Banse        |
+| highlight    | Drew Adams | evil-extra-operator           | hard | github  | Dewdrops             |
+| highlight    | Drew Adams | evil-search-highlight-persist | hard | github  | Juanjo Alvarez       |
+| highlight    | Drew Adams | floobits                      | hard | github  | Geoff Greer          |
+| highlight    | Drew Adams | nrepl-eval-sexp-fu            | hard | github  | Takeshi Banse        |
+| highlight    | Drew Adams | php-boris-minor-mode          | hard | github  | steckerhalter        |
+| highlight    | Drew Adams | sonic-pi                      | hard | github  | Joseph Wilk          |
+| strings      | Drew Adams | ergoemacs-mode                | soft | github  | David Capello        |
+| thingatpt+   | Drew Adams | el-spice                      | hard | github  | Vedang Manerikar     |
+| yaoddmuse    |            | company                       | soft | github  | Nikolaj Schumacher   |
+| yaoddmuse    |            | org-readme                    | soft | github  | Matthew L. Fidler    |
 
 * Wiki packages on Melpa
 #+BEGIN_SRC emacs-lisp
