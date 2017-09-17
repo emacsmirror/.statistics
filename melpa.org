@@ -43,8 +43,8 @@ the orphanage just yet.  But that might happen any time now.
 #+RESULTS:
 | Package (13)      | Vcs    | Last commit           | Commits last year |
 |-------------------+--------+-----------------------+-------------------|
-| cg                | svn    | 5 days ago            |                 3 |
-| clang-format      | svn    | 9 days ago            |                29 |
+| cg                | svn    | 6 days ago            |                 3 |
+| clang-format      | svn    | 10 days ago           |                29 |
 | color-theme       | bzr    | 8 years ago           |                 0 |
 | confluence        | svn    | 7 weeks ago           |                 1 |
 | darcsum           | darcs  | 3 years, 4 months ago |                 0 |
@@ -55,7 +55,7 @@ the orphanage just yet.  But that might happen any time now.
 | swbuff            | cvs    | 10 years ago          |                 0 |
 | tex-smart-umlauts | darcs  | 1 year, 5 months ago  |                 0 |
 | vc-fossil         | fossil | 5 weeks ago           |                 1 |
-| w3m               | cvs    | 5 days ago            |                85 |
+| w3m               | cvs    | 7 days ago            |                85 |
 
 * Missing from Melpa
 
@@ -73,7 +73,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (639)                | Link                                    |
+| Package (638)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -711,7 +711,6 @@ please first make sure they meet the minimal requirements.
 | yeoman                       | [[https://github.com/julienXX/yeoman.el][julienXX/yeoman.el]]                      |
 | yql                          | [[https://github.com/wfarr/yql-el][wfarr/yql-el]]                            |
 | zendmd-comint                | [[https://github.com/jhanson/zendmd-comint.el][jhanson/zendmd-comint.el]]                |
-| zig-mode                     | [[https://github.com/AndreaOrru/zig-mode][AndreaOrru/zig-mode]]                     |
 | zone-matrix                  | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        |
 | zwiebel                      | [[https://github.com/silentbicycle/zwiebel][silentbicycle/zwiebel]]                   |
 

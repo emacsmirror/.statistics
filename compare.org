@@ -72,9 +72,9 @@
 | elpa        |  108 |    108 |       |       |   159 |       |
 | elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3872 |   3872 |       |       |       |  3439 |
+| github      | 3873 |   3873 |       |       |       |  3441 |
 | gitlab      |   39 |     39 |       |       |       |    31 |
-| git         |   53 |     53 |       |       |       |    42 |
+| git         |   53 |     53 |       |       |       |    40 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    39 |
@@ -86,14 +86,14 @@
 | fossil      |      |        |       |       |       |     0 |
 | svn         |      |        |       |       |       |     7 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  681 |    681 |       |       |       |   155 |
+| wiki        |  680 |    680 |       |       |       |   154 |
 | file        |  262 |    262 |       |       |       |       |
 | minority    |   19 |     19 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   57 |     57 |       |       |       |       |
 | shelved     | 1039 |        |  1039 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6629 |   5167 |  1039 |   426 |   179 |  3719 |
+| total       | 6629 |   5167 |  1039 |   426 |   179 |  3718 |
 
 * Emacs
 ** Prefer elpa
@@ -325,7 +325,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (79)    | Secondary package               | Class     |
+| Primary package (78)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -415,8 +415,6 @@
 | nixos-options           | helm-nixos-options              | github    |
 | nixos-options           | nix-sandbox                     | github    |
 | opener                  | evil-opener                     | github    |
-| org                     | org-mac-iCal                    | git       |
-| org                     | org-mac-link                    | git       |
 | org-projectile          | org-category-capture            | github    |
 | org-projectile          | org-projectile-helm             | github    |
 | ox-twiki                | ox-tiddly                       | github    |
