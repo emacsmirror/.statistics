@@ -40,25 +40,21 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (10)    | Class    | Feature     | Reason                 |
-|-----------------+----------+-------------+------------------------|
-| coq             | github   | maths-menu  | pending [[https://github.com/ProofGeneral/PG/issues/197][#197]]           |
-| emacspeak       | github   | amixer      | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github   | folding     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github   | nm          | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github   | sudoku      | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github   | tapestry    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github   | tetris      | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| evil-goggles    | github   | evil-tests  | pending [[https://github.com/edkolev/evil-goggles/issues/15][#15]]            |
-| indium          | github   | test-helper | pending [[https://github.com/NicolasPetton/Indium/pull/99][#99]]            |
-| riece           | git      | ptexinfmt   | todo                   |
-| slime           | github   | cl-indent   | todo                   |
-| twittering-mode | github   | ssl         | backward compatibility |
-| twittering-mode | github   | test        | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
-| w3m             | orphaned | ptexinfmt   | todo                   |
-| w3m             | orphaned | rfc2368     | todo                   |
-| winnow          | github   | test-helper | pending [[https://github.com/dgtized/winnow.el/pull/1][#1]]             |
-| zephir-mode     | github   | test-helper | pending [[https://github.com/sergeyklay/zephir-mode/pull/7][#7]]             |
+| Package (6)     | Class    | Feature    | Reason                 |
+|-----------------+----------+------------+------------------------|
+| coq             | github   | maths-menu | pending [[https://github.com/ProofGeneral/PG/issues/197][#197]]           |
+| emacspeak       | github   | amixer     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github   | folding    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github   | nm         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github   | sudoku     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github   | tapestry   | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github   | tetris     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| riece           | git      | ptexinfmt  | todo                   |
+| slime           | github   | cl-indent  | todo                   |
+| twittering-mode | github   | ssl        | backward compatibility |
+| twittering-mode | github   | test       | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
+| w3m             | orphaned | ptexinfmt  | todo                   |
+| w3m             | orphaned | rfc2368    | todo                   |
 
 * Drop required features
 #+NAME: required-drop
@@ -70,7 +66,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (64)                    | Class       | Feature                | Reason                                              |
+| Package (65)                    | Class       | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
@@ -149,6 +145,7 @@
 | python-mode                     | gitlab      | pymacs                 | it's complicated (email)                            |
 | r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
 | rpm-spec-mode                   | github      | shindent               | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                         |
+| sift                            | github      | test-helper            | pending [[https://github.com/nlamirault/sift.el/pull/7][#7]]                                          |
 | tangotango-theme                | github      | color-theme            | backward compatibility                              |
 | tc                              | github      | bitmap                 | pending [[https://github.com/kozo2/tc/issues/5][#5]]                                          |
 | twittering-mode                 | github      | alpaca                 | only required if epa isn't available                |
