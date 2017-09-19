@@ -66,7 +66,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (65)                    | Class       | Feature                | Reason                                              |
+| Package (64)                    | Class       | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
@@ -145,7 +145,6 @@
 | python-mode                     | gitlab      | pymacs                 | it's complicated (email)                            |
 | r-autoyas                       | github      | yasnippet-bundle       | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
 | rpm-spec-mode                   | github      | shindent               | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                         |
-| sift                            | github      | test-helper            | pending [[https://github.com/nlamirault/sift.el/pull/7][#7]]                                          |
 | tangotango-theme                | github      | color-theme            | backward compatibility                              |
 | tc                              | github      | bitmap                 | pending [[https://github.com/kozo2/tc/issues/5][#5]]                                          |
 | twittering-mode                 | github      | alpaca                 | only required if epa isn't available                |
@@ -177,11 +176,10 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: patched
-| Package (16)     | Class    |
+| Package (14)     | Class    |
 |------------------+----------|
 | anything-project | github   |
 | apel             | github   |
-| elixir-mode      | github   |
 | flim             | github   |
 | go               | github   |
 | karma            | github   |
@@ -189,7 +187,6 @@
 | nav              | github   |
 | nxhtml           | orphaned |
 | oauth            | github   |
-| overseer         | github   |
 | projmake-mode    | github   |
 | semi             | github   |
 | swbuff           | orphaned |
