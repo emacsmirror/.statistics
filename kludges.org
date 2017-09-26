@@ -290,9 +290,10 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (8)         | Class   | Branch       |
+| Package (9)         | Class   | Branch       |
 |---------------------+---------+--------------|
 | apel                | github  | apel-wl      |
+| borg-queen          | github  | initial-dev  |
 | caml                | subtree | trunk        |
 | distinguished-theme | github  | develop      |
 | ebuild-mode         | git     | ebuild-mode  |
