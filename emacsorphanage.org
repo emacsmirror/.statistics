@@ -145,22 +145,22 @@ repositories have not seen a commit in a decade.
 #+RESULTS:
 | Package (16)      | Mirror   | Melpa    |
 |-------------------+----------+----------|
-| cg                | orphaned | svn      |
-| clang-format      | orphaned | svn      |
-| color-theme       | orphaned | bzr      |
-| confluence        | orphaned | svn      |
-| darcsum           | orphaned | darcs    |
-| dic-lookup-w3m    | orphaned | svn      |
-| dsvn              | orphaned | svn      |
-| helm-ls-svn       | orphaned | svn      |
+| cg                | orphaned | orphaned |
+| clang-format      | orphaned | orphaned |
+| color-theme       | orphaned | orphaned |
+| confluence        | orphaned | orphaned |
+| darcsum           | orphaned | orphaned |
+| dic-lookup-w3m    | orphaned | orphaned |
+| dsvn              | orphaned | orphaned |
+| helm-ls-svn       | orphaned | orphaned |
 | nxhtml            | orphaned |          |
-| ruby-additional   | orphaned | svn      |
+| ruby-additional   | orphaned | orphaned |
 | swbuff            | orphaned | orphaned |
-| tex-smart-umlauts | orphaned | darcs    |
+| tex-smart-umlauts | orphaned | orphaned |
 | text-translator   | orphaned |          |
 | vc-fossil         | orphaned | orphaned |
 | vm                | orphaned |          |
-| w3m               | orphaned | cvs      |
+| w3m               | orphaned | orphaned |
 
 * Imported from tarball
 #+BEGIN_SRC emacs-lisp
