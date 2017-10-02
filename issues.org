@@ -29,6 +29,10 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (1) | Package    | Shelved |
+|-------------+------------+---------|
+| basic-mode  | basic      |         |
+| basic-mode  | basic-mode |         |
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
