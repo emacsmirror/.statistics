@@ -48,10 +48,10 @@ packages makes it more appealing to improve the remaining code.
 | dic-lookup-w3m    | svn    | 9 weeks ago           |                 4 |
 | dsvn              | svn    | 9 weeks ago           |                 1 |
 | helm-ls-svn       | svn    | 2 years, 3 months ago |                 0 |
-| ruby-additional   | svn    | 6 weeks ago           |                11 |
+| ruby-additional   | svn    | 7 weeks ago           |                11 |
 | swbuff            | cvs    | 10 years ago          |                 0 |
 | tex-smart-umlauts | darcs  | 1 year, 5 months ago  |                 0 |
-| vc-fossil         | fossil | 7 weeks ago           |                 1 |
+| vc-fossil         | fossil | 8 weeks ago           |                 1 |
 | w3m               | cvs    | 3 weeks ago           |                77 |
 
 * Missing from Melpa
@@ -62,6 +62,9 @@ Melpa, and if you decide to submit recipes for some of them, then
 please first make sure they meet the minimal requirements.
 
 ** Github
+
+- Maybe follow [[https://github.com/melpa/melpa/issues/5010][melpa#5010]]'s lead.
+
 #+NAME: missing-github
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
@@ -70,7 +73,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (637)                | Link                                    |
+| Package (639)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -689,6 +692,7 @@ please first make sure they meet the minimal requirements.
 | wipe                         | [[https://github.com/didierverna/wipe][didierverna/wipe]]                        |
 | wmctrl                       | [[https://github.com/tkf/emacs-wmctrl][tkf/emacs-wmctrl]]                        |
 | wmii                         | [[https://github.com/fsmunoz/wmii-el][fsmunoz/wmii-el]]                         |
+| wolfram-mode                 | [[https://github.com/kawabata/wolfram-mode][kawabata/wolfram-mode]]                   |
 | wordnik                      | [[https://github.com/hober/wordnik-el][hober/wordnik-el]]                        |
 | wordpress-mode               | [[https://github.com/danlamanna/wordpress-mode][danlamanna/wordpress-mode]]               |
 | wordsmith-mode               | [[https://github.com/istib/wordsmith-mode][istib/wordsmith-mode]]                    |
@@ -708,6 +712,7 @@ please first make sure they meet the minimal requirements.
 | yql                          | [[https://github.com/wfarr/yql-el][wfarr/yql-el]]                            |
 | zendmd-comint                | [[https://github.com/jhanson/zendmd-comint.el][jhanson/zendmd-comint.el]]                |
 | zone-matrix                  | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        |
+| zonokai-theme                | [[https://github.com/ZehCnaS34/zonokai-emacs][ZehCnaS34/zonokai-emacs]]                 |
 | zwiebel                      | [[https://github.com/silentbicycle/zwiebel][silentbicycle/zwiebel]]                   |
 
 ** Gitlab

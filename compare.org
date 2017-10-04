@@ -66,9 +66,9 @@
 | elpa        |  108 |    108 |       |       |   159 |       |
 | elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3879 |   3879 |       |       |       |  3465 |
+| github      | 3880 |   3880 |       |       |       |  3464 |
 | gitlab      |   39 |     39 |       |       |       |    31 |
-| git         |   52 |     52 |       |       |       |    39 |
+| git         |   52 |     52 |       |       |       |    38 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    39 |
@@ -81,7 +81,7 @@
 | orphaned    |   57 |     57 |       |       |       |       |
 | shelved     | 1045 |        |  1045 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6637 |   5169 |  1045 |   426 |   179 |  3729 |
+| total       | 6638 |   5170 |  1045 |   426 |   179 |  3727 |
 
 * Emacs
 ** Prefer elpa
@@ -313,7 +313,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (78)    | Secondary package               | Class     |
+| Primary package (79)    | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
@@ -391,6 +391,8 @@
 | kaesar                  | kaesar-mode                     | github    |
 | kaleidoscope            | kaleidoscope-evil-state-flash   | github    |
 | kubernetes              | kubernetes-evil                 | github    |
+| lean-mode               | company-lean                    | github    |
+| lean-mode               | helm-lean                       | github    |
 | load-theme-buffer-local | color-theme-buffer-local        | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon               | github    |
 | magit                   | git-commit                      | github    |
@@ -486,7 +488,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (26)         | Class    | Melpa     | Reason                       |
+| Package (25)         | Class    | Melpa     | Reason                       |
 |----------------------+----------+-----------+------------------------------|
 | autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]           |
 | cfengine-code-style  | minority | github    | mostly non-elisp             |
@@ -509,7 +511,6 @@
 | paper-theme          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]]   |
 | po-mode              | minority | git       | mostly non-elisp             |
 | pylint               | minority | github    | mostly non-elisp             |
-| redshank             | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | smart-compile        | minority | github    |                              |
 | thrift               | minority | github    | mostly non-elisp             |
 | toggle               | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
