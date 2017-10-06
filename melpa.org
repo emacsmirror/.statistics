@@ -40,19 +40,19 @@ packages makes it more appealing to improve the remaining code.
 #+RESULTS:
 | Package (13)      | Vcs    | Last commit           | Commits last year |
 |-------------------+--------+-----------------------+-------------------|
-| cg                | svn    | 3 weeks ago           |                 3 |
+| cg                | svn    | 4 weeks ago           |                 3 |
 | clang-format      | svn    | 4 weeks ago           |                27 |
 | color-theme       | bzr    | 8 years ago           |                 0 |
-| confluence        | svn    | 9 weeks ago           |                 1 |
-| darcsum           | darcs  | 3 years, 4 months ago |                 0 |
+| confluence        | svn    | 10 weeks ago          |                 1 |
+| darcsum           | darcs  | 3 years, 5 months ago |                 0 |
 | dic-lookup-w3m    | svn    | 9 weeks ago           |                 4 |
-| dsvn              | svn    | 9 weeks ago           |                 1 |
+| dsvn              | svn    | 10 weeks ago          |                 1 |
 | helm-ls-svn       | svn    | 2 years, 3 months ago |                 0 |
 | ruby-additional   | svn    | 7 weeks ago           |                11 |
 | swbuff            | cvs    | 10 years ago          |                 0 |
 | tex-smart-umlauts | darcs  | 1 year, 5 months ago  |                 0 |
 | vc-fossil         | fossil | 8 weeks ago           |                 1 |
-| w3m               | cvs    | 3 weeks ago           |                75 |
+| w3m               | cvs    | 4 weeks ago           |                74 |
 
 * Missing from Melpa
 
@@ -73,7 +73,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (639)                | Link                                    |
+| Package (640)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -358,6 +358,7 @@ please first make sure they meet the minimal requirements.
 | ido-other-window             | [[https://github.com/timcharper/ido-other-window][timcharper/ido-other-window]]             |
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                         |
 | ii-mode                      | [[https://github.com/krl/ii-mode][krl/ii-mode]]                             |
+| imake                        | [[https://github.com/tarsius/imake][tarsius/imake]]                           |
 | imgix                        | [[https://github.com/imgix/imgix-emacs][imgix/imgix-emacs]]                       |
 | includeme                    | [[https://github.com/jart/includeme][jart/includeme]]                          |
 | indent-hints-mode            | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                |
