@@ -59,8 +59,10 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class | Feature  | Shelved  |
-|-------------+-------+----------+----------|
-| jabber      | git   | festival | festival |
+| Package (2) | Class  | Feature     | Shelved  |
+|-------------+--------+-------------+----------|
+| jabber      | git    | festival    | festival |
+| lispy       | github | mash-python |          |
 
 - jabber: [[mu4e:msgid:87k20ldzkg.fsf@bernoul.li][Organizing the quest]]
+- lispy: [[https://github.com/abo-abo/lispy/issues/377][#377]]

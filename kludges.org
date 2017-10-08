@@ -66,7 +66,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (64)                    | Class       | Feature                | Reason                                              |
+| Package (63)                    | Class       | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
@@ -87,7 +87,6 @@
 | dired+                          | wiki        | help+20                | backward compatibility                              |
 | dired+                          | wiki        | subr-21                | backward compatibility                              |
 | doremi-cmd                      | wiki        | color-theme            | backward compatibility                              |
-| ebdb                            | elpa-branch | vm-autoloads           | generated external file                             |
 | ecb                             | github      | semantic-analyze       | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
 | ecb                             | github      | semantic-ctxt          | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
 | ecb                             | github      | thing                  | XEmacs compatibility                                |
