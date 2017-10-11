@@ -66,7 +66,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (63)                    | Class       | Feature                | Reason                                              |
+| Package (64)                    | Class       | Feature                | Reason                                              |
 |---------------------------------+-------------+------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf             | backward compatibility                              |
 | aozora-view                     | github      | ivs-aj1                | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
@@ -111,6 +111,7 @@
 | lacarte                         | wiki        | subr-21                | backward compatibility                              |
 | lilypond                        | git         | ilisp                  | only required by a single undocumented command      |
 | lispxmp                         | wiki        | newxmp                 | pending: newxmp has not been released yet (email)   |
+| lispy                           | github      | mash-python            | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                           |
 | load-theme-buffer-local         | github      | color-theme            | backward compatibility                              |
 | matlab-mode                     | git         | semantic-dep           | backward compatibility                              |
 | matlab-mode                     | git         | semantic-format        | backward compatibility                              |
