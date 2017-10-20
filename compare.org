@@ -66,7 +66,7 @@
 | elpa        |  108 |    108 |       |       |   159 |       |
 | elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3903 |   3903 |       |       |       |  3487 |
+| github      | 3904 |   3904 |       |       |       |  3487 |
 | gitlab      |   39 |     39 |       |       |       |    31 |
 | git         |   53 |     53 |       |       |       |    39 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1048 |        |  1048 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6664 |   5193 |  1048 |   426 |   179 |  3750 |
+| total       | 6665 |   5194 |  1048 |   426 |   179 |  3750 |
 
 * Emacs
 ** Prefer elpa
@@ -488,7 +488,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (25)         | Class    | Melpa     | Reason                       |
+| Package (24)         | Class    | Melpa     | Reason                       |
 |----------------------+----------+-----------+------------------------------|
 | autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]           |
 | cfengine-code-style  | minority | github    | mostly non-elisp             |
@@ -502,7 +502,6 @@
 | gregorio-mode        | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | judge-indent         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | llvm-mode            | shelved  | git       | mostly non-elisp             |
-| metafmt              | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | mwe-log-commands     | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
 | nemerle              | minority | github    | mostly non-elisp             |
 | ninja-mode           | minority | github    | mostly non-elisp             |
