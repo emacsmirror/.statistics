@@ -72,7 +72,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (639)                | Link                                    |
+| Package (615)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -102,7 +102,6 @@ please first make sure they meet the minimal requirements.
 | atom                         | [[https://github.com/fperrin/atom][fperrin/atom]]                            |
 | atom-syndication             | [[https://github.com/dmj/atom-syndication][dmj/atom-syndication]]                    |
 | augment                      | [[https://github.com/technomancy/augment][technomancy/augment]]                     |
-| aurora-config-mode           | [[https://github.com/bdd/aurora-config-mode.el][bdd/aurora-config-mode.el]]               |
 | aurquery                     | [[https://github.com/CMB/aurquery-el][CMB/aurquery-el]]                         |
 | auto-complete-clang-objc     | [[https://github.com/tharpa/auto-complete-clang-objc][tharpa/auto-complete-clang-objc]]         |
 | auto-complete-golang         | [[https://github.com/koko1000ban/auto-complete-golang][koko1000ban/auto-complete-golang]]        |
@@ -110,7 +109,6 @@ please first make sure they meet the minimal requirements.
 | auto-complete-ya-gtags       | [[https://github.com/whitypig/auto-complete-ya-gtags][whitypig/auto-complete-ya-gtags]]         |
 | auto-document                | [[https://github.com/rubikitch/auto-document][rubikitch/auto-document]]                 |
 | auto-pep8                    | [[https://github.com/deactivated/auto-pep8.el][deactivated/auto-pep8.el]]                |
-| auto-scratch                 | [[https://github.com/lovekonakona/auto-scratch][lovekonakona/auto-scratch]]               |
 | autocompletion-php-functions | [[https://github.com/ashizawa/autocompletion-php-functions][ashizawa/autocompletion-php-functions]]   |
 | avmmf                        | [[https://github.com/davep/avmmf.el][davep/avmmf.el]]                          |
 | aws                          | [[https://github.com/ieure/aws-el][ieure/aws-el]]                            |
@@ -198,7 +196,6 @@ please first make sure they meet the minimal requirements.
 | docsetutil                   | [[https://github.com/leoliu/docsetutil-el][leoliu/docsetutil-el]]                    |
 | door-gnus                    | [[https://github.com/yyr/door-gnus][yyr/door-gnus]]                           |
 | doxygen                      | [[https://github.com/TreeRex/doxygen-el][TreeRex/doxygen-el]]                      |
-| drela-mode                   | [[https://github.com/cloudchamber/Drela-mode][cloudchamber/Drela-mode]]                 |
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            |
 | durendal                     | [[https://github.com/technomancy/durendal][technomancy/durendal]]                    |
 | dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                    |
@@ -241,7 +238,6 @@ please first make sure they meet the minimal requirements.
 | ertorrent                    | [[https://github.com/spacebat/ertorrent][spacebat/ertorrent]]                      |
 | es                           | [[https://github.com/leathekd/es.el][leathekd/es.el]]                          |
 | espect                       | [[https://github.com/rafl/espect][rafl/espect]]                             |
-| ess-R-object-popup           | [[https://github.com/myuhe/ess-R-object-popup.el][myuhe/ess-R-object-popup.el]]             |
 | esv                          | [[https://github.com/csebold/esv.el][csebold/esv.el]]                          |
 | etags-update                 | [[https://github.com/mattkeller/etags-update][mattkeller/etags-update]]                 |
 | etest                        | [[https://github.com/philjackson/etest][philjackson/etest]]                       |
@@ -257,7 +253,6 @@ please first make sure they meet the minimal requirements.
 | exwm                         | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                             |
 | ezbl                         | [[https://github.com/haxney/ezbl][haxney/ezbl]]                             |
 | fab                          | [[https://github.com/davidmiller/fabmacs][davidmiller/fabmacs]]                     |
-| find-file-suggest            | [[https://github.com/cjauvin/find-file-suggest][cjauvin/find-file-suggest]]               |
 | find-git                     | [[https://github.com/lieutar/find-git.el][lieutar/find-git.el]]                     |
 | find-in-repo                 | [[https://github.com/Wilfred/find-in-repo.el][Wilfred/find-in-repo.el]]                 |
 | findwalker                   | [[https://github.com/mhayashi1120/Emacs-findwalker][mhayashi1120/Emacs-findwalker]]           |
@@ -267,7 +262,6 @@ please first make sure they meet the minimal requirements.
 | flycheck-protobuf            | [[https://github.com/edvorg/flycheck-protobuf][edvorg/flycheck-protobuf]]                |
 | flycheck-typescript-tslint   | [[https://github.com/Simplify/flycheck-typescript-tslint][Simplify/flycheck-typescript-tslint]]     |
 | flymake-csslint              | [[https://github.com/arnested/flymake-csslint][arnested/flymake-csslint]]                |
-| flymake-pylint               | [[https://github.com/btoconnor/flymake-pylint][btoconnor/flymake-pylint]]                |
 | font-lock-ext                | [[https://github.com/sensorflo/font-lock-ext][sensorflo/font-lock-ext]]                 |
 | font-lock-regression-suite   | [[https://github.com/Lindydancer/font-lock-regression-suite][Lindydancer/font-lock-regression-suite]]  |
 | forml-mode                   | [[https://github.com/jvshahid/forml-mode][jvshahid/forml-mode]]                     |
@@ -287,7 +281,6 @@ please first make sure they meet the minimal requirements.
 | generic-edit-special         | [[https://github.com/lewang/generic-edit-special][lewang/generic-edit-special]]             |
 | generic-range-opt            | [[https://github.com/tm8st/emacs-generic-range-opt][tm8st/emacs-generic-range-opt]]           |
 | geocode                      | [[https://github.com/hober/geocode-el][hober/geocode-el]]                        |
-| gershwin-mode                | [[https://github.com/gershwin/emacs-gershwin-mode][gershwin/emacs-gershwin-mode]]            |
 | ghost-blog                   | [[https://github.com/javaguirre/ghost-blog-emacs][javaguirre/ghost-blog-emacs]]             |
 | git-auto-commit              | [[https://github.com/renard/git-auto-commit][renard/git-auto-commit]]                  |
 | git-code-review              | [[https://github.com/psanford/git-code-review-el][psanford/git-code-review-el]]             |
@@ -296,7 +289,6 @@ please first make sure they meet the minimal requirements.
 | git-modes                    | [[https://github.com/magit/git-modes][magit/git-modes]]                         |
 | git-show                     | [[https://github.com/jpablobr/git-show][jpablobr/git-show]]                       |
 | git-time-machine             | [[https://github.com/psanford/git-time-machine-el][psanford/git-time-machine-el]]            |
-| gitch                        | [[https://github.com/rjprins/gitch][rjprins/gitch]]                           |
 | githorg                      | [[https://github.com/ieure/githorg][ieure/githorg]]                           |
 | github                       | [[https://github.com/abhiyerra/github.el][abhiyerra/github.el]]                     |
 | github-api-v3                | [[https://github.com/rsanders/github-api-v3.el][rsanders/github-api-v3.el]]               |
@@ -312,7 +304,6 @@ please first make sure they meet the minimal requirements.
 | google-calendar              | [[https://github.com/slaanesh/Google-Calendar-Elisp][slaanesh/Google-Calendar-Elisp]]          |
 | gopher                       | [[https://github.com/ardekantur/gopher.el][ardekantur/gopher.el]]                    |
 | gosh-mode                    | [[https://github.com/mhayashi1120/Emacs-gosh-mode][mhayashi1120/Emacs-gosh-mode]]            |
-| goto-pattern                 | [[https://github.com/cjauvin/goto-pattern][cjauvin/goto-pattern]]                    |
 | gplus-mode                   | [[https://github.com/ellencubed/gplus-mode][ellencubed/gplus-mode]]                   |
 | gradle                       | [[https://github.com/vhallac/gradle-el][vhallac/gradle-el]]                       |
 | graphviz-dot                 | [[https://github.com/xwl/graphviz-dot][xwl/graphviz-dot]]                        |
@@ -341,7 +332,6 @@ please first make sure they meet the minimal requirements.
 | hide-url                     | [[https://github.com/tkf/hide-url.el][tkf/hide-url.el]]                         |
 | highlight-sexp               | [[https://github.com/daimrod/highlight-sexp][daimrod/highlight-sexp]]                  |
 | highrise                     | [[https://github.com/hober/37emacs][hober/37emacs]]                           |
-| hippie-expand-distel         | [[https://github.com/rost/hippie-expand-distel][rost/hippie-expand-distel]]               |
 | hl-tags-mode                 | [[https://github.com/deactivated/hl-tags-mode][deactivated/hl-tags-mode]]                |
 | hsearch                      | [[https://github.com/jschaf/hsearch][jschaf/hsearch]]                          |
 | html-fold                    | [[https://github.com/ataka/html-fold][ataka/html-fold]]                         |
@@ -363,12 +353,9 @@ please first make sure they meet the minimal requirements.
 | indicate-changes             | [[https://github.com/renard/indicate-change][renard/indicate-change]]                  |
 | indirect-region              | [[https://github.com/renard/indirect-region][renard/indirect-region]]                  |
 | inertial-scroll              | [[https://github.com/kiwanami/emacs-inertial-scroll][kiwanami/emacs-inertial-scroll]]          |
-| inf-js                       | [[https://github.com/bkyle/inf-js][bkyle/inf-js]]                            |
-| inf-php                      | [[https://github.com/taksatou/inf-php][taksatou/inf-php]]                        |
 | inf-ruby-bond                | [[https://github.com/pd/inf-ruby-bond][pd/inf-ruby-bond]]                        |
 | infix                        | [[https://github.com/rspeele/infix-dot-el][rspeele/infix-dot-el]]                    |
 | inform-mode                  | [[https://github.com/rupertl/inform-mode][rupertl/inform-mode]]                     |
-| inform7-mode                 | [[https://github.com/fred-o/inform7-mode][fred-o/inform7-mode]]                     |
 | insert-time                  | [[https://github.com/rmm5t/insert-time.el][rmm5t/insert-time.el]]                    |
 | ios-config-mode              | [[https://github.com/nibrahim/IOS-config-mode][nibrahim/IOS-config-mode]]                |
 | isea                         | [[https://github.com/nicferrier/emacs-isea][nicferrier/emacs-isea]]                   |
@@ -424,7 +411,6 @@ please first make sure they meet the minimal requirements.
 | mark-forward-sexp            | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]               |
 | mark-select                  | [[https://github.com/namikister/mark-select][namikister/mark-select]]                  |
 | masquerade-mode              | [[https://github.com/dsevilla/masquerade-mode-el][dsevilla/masquerade-mode-el]]             |
-| maven-mode                   | [[https://github.com/bkyle/maven-mode][bkyle/maven-mode]]                        |
 | memento                      | [[https://github.com/ehartc/memento][ehartc/memento]]                          |
 | metapost-mode+               | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                 |
 | mew-ical                     | [[https://github.com/tagoh/mew-ical][tagoh/mew-ical]]                          |
@@ -487,7 +473,6 @@ please first make sure they meet the minimal requirements.
 | org-helpers                  | [[https://github.com/leoc/org-helpers.el][leoc/org-helpers.el]]                     |
 | org-hlc                      | [[https://github.com/tj64/org-hlc][tj64/org-hlc]]                            |
 | org-hyde                     | [[https://github.com/punchagan/org-hyde][punchagan/org-hyde]]                      |
-| org-jekyll                   | [[https://github.com/juanre/org-jekyll][juanre/org-jekyll]]                       |
 | org-mac-protocol             | [[https://github.com/claviclaws/org-mac-protocol][claviclaws/org-mac-protocol]]             |
 | org-magit                    | [[https://github.com/sigma/org-magit][sigma/org-magit]]                         |
 | org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     |
@@ -510,7 +495,6 @@ please first make sure they meet the minimal requirements.
 | page-mode                    | [[https://github.com/BartMassey/emacs-page][BartMassey/emacs-page]]                   |
 | paredit-c                    | [[https://github.com/dandavison/paredit-c][dandavison/paredit-c]]                    |
 | parfait-mode                 | [[https://github.com/sorellabs/parfait-mode][sorellabs/parfait-mode]]                  |
-| partially                    | [[https://github.com/mbriggs/partially.el][mbriggs/partially.el]]                    |
 | paste                        | [[https://github.com/nicferrier/pasteel][nicferrier/pasteel]]                      |
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    |
@@ -547,8 +531,6 @@ please first make sure they meet the minimal requirements.
 | qooxdoo                      | [[https://github.com/jdodds/qooxdoo.el][jdodds/qooxdoo.el]]                       |
 | qtref                        | [[https://github.com/whitypig/qtref][whitypig/qtref]]                          |
 | quick-jump                   | [[https://github.com/jixiuf/quick-jump][jixiuf/quick-jump]]                       |
-| quickfix-mode                | [[https://github.com/ulises/quickfix-mode][ulises/quickfix-mode]]                    |
-| railgun                      | [[https://github.com/mbriggs/railgun.el][mbriggs/railgun.el]]                      |
 | rails-new                    | [[https://github.com/cheunghy/rails-new][cheunghy/rails-new]]                      |
 | rails-test-toggler           | [[https://github.com/mbriggs/rails-test-toggler][mbriggs/rails-test-toggler]]              |
 | rb                           | [[https://github.com/nicferrier/emacs-rhythmbox][nicferrier/emacs-rhythmbox]]              |
@@ -563,15 +545,12 @@ please first make sure they meet the minimal requirements.
 | recs-mode                    | [[https://github.com/tlh/recs-mode.el][tlh/recs-mode.el]]                        |
 | reddit-mode                  | [[https://github.com/death/reddit-mode][death/reddit-mode]]                       |
 | redmine                      | [[https://github.com/fukamachi/redmine-el][fukamachi/redmine-el]]                    |
-| reflected-buffers            | [[https://github.com/tkf/reflected-buffers][tkf/reflected-buffers]]                   |
 | remind-conf-mode             | [[https://github.com/sshelagh/remind-conf-mode][sshelagh/remind-conf-mode]]               |
 | revealjs-mode                | [[https://github.com/cjohansen/revealjs-mode][cjohansen/revealjs-mode]]                 |
 | review                       | [[https://github.com/gigamonkey/review][gigamonkey/review]]                       |
 | ri                           | [[https://github.com/technomancy/ri.el][technomancy/ri.el]]                       |
-| rmoo                         | [[https://github.com/toddsundsted/rmoo][toddsundsted/rmoo]]                       |
 | rotate-text                  | [[https://github.com/nschum/rotate-text.el][nschum/rotate-text.el]]                   |
 | ruby-comint                  | [[https://github.com/jpablobr/ruby-comint.el][jpablobr/ruby-comint.el]]                 |
-| ruby-dev                     | [[https://github.com/Mon-Ouie/ruby-dev.el][Mon-Ouie/ruby-dev.el]]                    |
 | ruby-guard                   | [[https://github.com/cheunghy/ruby-guard][cheunghy/ruby-guard]]                     |
 | rubyinterpol                 | [[https://github.com/ober/rubyinterpol][ober/rubyinterpol]]                       |
 | rustfmt                      | [[https://github.com/fbergroth/emacs-rustfmt][fbergroth/emacs-rustfmt]]                 |
@@ -623,7 +602,6 @@ please first make sure they meet the minimal requirements.
 | stgit                        | [[https://github.com/ctmarinas/stgit][ctmarinas/stgit]]                         |
 | stickies                     | [[https://github.com/tkosaka/emacs-lisp-stickies][tkosaka/emacs-lisp-stickies]]             |
 | string-template              | [[https://github.com/renard/string-template-el][renard/string-template-el]]               |
-| subshell-proc                | [[https://github.com/andrewmains12/subshell-proc][andrewmains12/subshell-proc]]             |
 | sudden-death                 | [[https://github.com/yewton/sudden-death.el][yewton/sudden-death.el]]                  |
 | sunrise-commander            | [[https://github.com/escherdragon/sunrise-commander][escherdragon/sunrise-commander]]          |
 | swallow-window               | [[https://github.com/pd/swallow-window.el][pd/swallow-window.el]]                    |
@@ -643,7 +621,6 @@ please first make sure they meet the minimal requirements.
 | terrible-template            | [[https://github.com/yonkeltron/terrible-template][yonkeltron/terrible-template]]            |
 | test-framework               | [[https://github.com/epsil/test-framework.el][epsil/test-framework.el]]                 |
 | test-more                    | [[https://github.com/syohex/emacs-test-more][syohex/emacs-test-more]]                  |
-| testkick                     | [[https://github.com/hadashiA/testkick][hadashiA/testkick]]                       |
 | text-align                   | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      |
 | textlint                     | [[https://github.com/DamienCassou/textlint][DamienCassou/textlint]]                   |
 | textsnip                     | [[https://github.com/functionreturnfunction/textsnip.el][functionreturnfunction/textsnip.el]]      |
@@ -701,7 +678,6 @@ please first make sure they meet the minimal requirements.
 | xdg-paths                    | [[https://github.com/tomprince/xdg-paths-el][tomprince/xdg-paths-el]]                  |
 | xelb                         | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                             |
 | xrc                          | [[https://github.com/spacebat/xrc][spacebat/xrc]]                            |
-| xrefresh                     | [[https://github.com/justmoon/xrefresh-emacs][justmoon/xrefresh-emacs]]                 |
 | xyzzy                        | [[https://github.com/tomoya/xyzzy.el][tomoya/xyzzy.el]]                         |
 | ya-cppref                    | [[https://github.com/whitypig/ya-cppref][whitypig/ya-cppref]]                      |
 | yafastnav                    | [[https://github.com/tm8st/emacs-yafastnav][tm8st/emacs-yafastnav]]                   |
