@@ -75,20 +75,20 @@ https://melpa.org
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2475 |      66 |
+| GPL-3+        |  2476 |      66 |
 | GPL-2+        |   616 |      16 |
 | MIT (x11)     |   128 |       3 |
 | MIT           |   123 |       3 |
 | GPL-3         |   121 |       3 |
-| BSD-2-clause  |    67 |       2 |
+| BSD-2-clause  |    68 |       2 |
 | BSD-3-clause  |    35 |       1 |
 | Apache-2.0    |    33 |       1 |
 | unlicense     |    31 |       1 |
 | public-domain |    26 |       1 |
 | as-is         |    19 |       1 |
-| ((failure/p)) |    15 |       0 |
 | ((failure))   |    14 |       0 |
 | WTFPL         |    13 |       0 |
+| ((failure/p)) |    13 |       0 |
 | GPL-1+        |     4 |       0 |
 | WTFPL-2       |     4 |       0 |
 | AGPL-3+       |     3 |       0 |
@@ -109,7 +109,7 @@ https://melpa.org
 | MPL-2         |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3229 |      86 |
+| total GNU     |  3230 |      86 |
 |---------------+-------+---------|
 | total         |  3756 |     100 |
 
@@ -138,12 +138,12 @@ https://emacsmirror.net
 #+RESULTS: count-emacsmirror
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  2949 |      58 |
+| GPL-3+          |  2951 |      58 |
 | GPL-2+          |  1340 |      27 |
 | MIT (x11)       |   127 |       3 |
 | MIT             |   127 |       3 |
 | GPL-3           |   126 |       2 |
-| BSD-2-clause    |    70 |       1 |
+| BSD-2-clause    |    71 |       1 |
 | public-domain   |    48 |       1 |
 | BSD-3-clause    |    38 |       1 |
 | unlicense       |    33 |       1 |
@@ -151,8 +151,8 @@ https://emacsmirror.net
 | Apache-2.0      |    31 |       1 |
 | as-is           |    23 |       0 |
 | ((failure))     |    23 |       0 |
-| ((failure/p))   |    18 |       0 |
-| ((pending))     |    17 |       0 |
+| ((failure/p))   |    16 |       0 |
+| ((pending))     |    16 |       0 |
 | GPL-2           |     7 |       0 |
 | GPL-1+          |     6 |       0 |
 | WTFPL-2         |     5 |       0 |
@@ -177,6 +177,6 @@ https://emacsmirror.net
 | MPL-2           |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4441 |      88 |
+| total GNU       |  4443 |      88 |
 |-----------------+-------+---------|
 | total           |  5054 |     100 |
