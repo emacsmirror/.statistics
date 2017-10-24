@@ -62,26 +62,26 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  423 |        |       |   426 |     6 |       |
-| elpa        |  108 |    108 |       |       |   159 |       |
+| builtin     |  456 |        |       |   458 |     6 |       |
+| elpa        |  106 |    106 |       |       |   159 |       |
 | elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3884 |   3884 |       |       |       |  3498 |
+| github      | 3883 |   3883 |       |       |       |  3499 |
 | gitlab      |   39 |     39 |       |       |       |    31 |
 | git         |   53 |     53 |       |       |       |    39 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   45 |     45 |       |       |       |    39 |
+| bitbucket   |   45 |     45 |       |       |       |    40 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  678 |    678 |       |       |       |   153 |
 | file        |  258 |    258 |       |       |       |       |
-| minority    |   21 |     21 |       |       |       |       |
+| minority    |   20 |     20 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1079 |        |  1079 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6676 |   5174 |  1079 |   426 |   179 |  3761 |
+| total       | 6705 |   5170 |  1079 |   458 |   179 |  3763 |
 
 * Emacs
 ** Prefer elpa
@@ -96,10 +96,9 @@
               [elpa elpa-branch]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
-| Package (2) | Class |
+| Package (1) | Class |
 |-------------+-------|
 | ada-mode    | elpa  |
-| seq         | elpa  |
 
 ** Prefer upstream
 #+NAME: builtin-prefer-upstream
@@ -170,7 +169,7 @@
                      (or (and (gelpa-builtin-recipe-p (gelpa-get name))
                               (list "Elpa has copy of builtin"))
                          (cdr (assoc name emir--preferred-builtins))
-                         "")))
+                         (list ""))))
             (epkg-sql [:select :distinct [packages:name gelpa-recipes:class]
                        :from [packages gelpa-recipes]
                        :where (= packages:name gelpa-recipes:name)
@@ -178,15 +177,18 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (7) | Gelpa   | Reason                         |
-|-------------+---------+--------------------------------|
-| cl-generic  | subtree | Elpa has backport of builtin   |
-| cl-lib      | subtree | Elpa has backport of builtin   |
-| let-alist   | builtin | Elpa has copy of builtin       |
-| ntlm        | builtin | Elpa has copy of builtin       |
-| pinentry    | subtree | Elpa imports outdated upstream |
-| python      | builtin | Elpa has copy of builtin       |
-| soap-client | builtin | Elpa has copy of builtin       |
+| Package (10) | Gelpa   | Reason                         |
+|--------------+---------+--------------------------------|
+| cl-generic   | subtree | Elpa has backport of builtin   |
+| cl-lib       | subtree | Elpa has backport of builtin   |
+| cl-print     | builtin | Elpa has copy of builtin       |
+| let-alist    | builtin | Elpa has copy of builtin       |
+| ntlm         | builtin | Elpa has copy of builtin       |
+| pinentry     | subtree | Elpa imports outdated upstream |
+| python       | builtin | Elpa has copy of builtin       |
+| seq          | subtree | Elpa has backport of builtin   |
+| soap-client  | builtin | Elpa has copy of builtin       |
+| svg          | subtree | Elpa imports outdated upstream |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
@@ -204,68 +206,67 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (60)               | Class    | Gelpa    | Link                                         |
-|----------------------------+----------+----------+----------------------------------------------|
-| ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
-| ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
-| aggressive-indent          | github   | subtree  | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
-| ahungry-theme              | github   | subtree  | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
-| async                      | github   | subtree  | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
-| avy                        | github   | subtree  | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
-| beacon                     | github   | subtree  | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
-| bug-hunter                 | github   | subtree  | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
-| cl-print                   | minority | builtin  |                                              |
-| coffee-mode                | github   | subtree  | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
-| company                    | github   | subtree  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
-| company-math               | github   | subtree  | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
-| company-statistics         | github   | subtree  | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
-| dash                       | github   | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
-| dbus-codegen               | github   | subtree  | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
-| delight                    | git      | subtree  | [[https://savannah.nongnu.org/projects/delight]] |
-| diff-hl                    | github   | subtree  | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                               |
-| diffview                   | github   | subtree  | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
-| dts-mode                   | github   | subtree  | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
-| easy-kill                  | github   | subtree  | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
-| eldoc-eval                 | github   | subtree  | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
-| electric-spacing           | github   | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
-| ergoemacs-mode             | github   | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
-| exwm                       | github   | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
-| ggtags                     | github   | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
-| gnorb                      | github   | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
-| highlight-escape-sequences | github   | subtree  | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
-| hydra                      | github   | subtree  | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
-| hyperbole                  | git      | external | [[http://www.gnu.org/software/hyperbole]]        |
-| ioccur                     | github   | subtree  | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
-| ivy                        | github   | subtree  | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
-| js2-mode                   | github   | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
-| json-mode                  | github   | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
-| load-relative              | github   | subtree  | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
-| loc-changes                | github   | subtree  | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
-| loccur                     | github   | subtree  | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
-| math-symbol-lists          | github   | subtree  | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                     |
-| nameless                   | github   | subtree  | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
-| names                      | github   | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
-| on-screen                  | github   | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
-| org                        | git      | builtin  | [[http://orgmode.org]]                           |
-| pabbrev                    | github   | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
-| parsec                     | github   | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
-| realgud                    | github   | subtree  | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
-| rich-minority              | github   | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
-| sotlisp                    | github   | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
-| spinner                    | github   | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
-| systemd                    | github   | subtree  | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
-| test-simple                | github   | subtree  | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
-| tiny                       | github   | subtree  | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
-| undo-tree                  | git      | subtree  | [[http://www.dr-qubit.org/emacs.php]]            |
-| vdiff                      | github   | subtree  | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                          |
-| vlf                        | github   | subtree  | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
-| wcheck-mode                | github   | subtree  | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
-| web-server                 | github   | subtree  | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
-| websocket                  | github   | subtree  | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
-| which-key                  | github   | subtree  | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]                      |
-| xelb                       | github   | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
-| yasnippet                  | github   | subtree  | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
-| ztree                      | github   | subtree  | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
+| Package (59)               | Class  | Gelpa    | Link                                         |
+|----------------------------+--------+----------+----------------------------------------------|
+| ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
+| ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
+| aggressive-indent          | github | subtree  | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
+| ahungry-theme              | github | subtree  | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
+| async                      | github | subtree  | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
+| avy                        | github | subtree  | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
+| beacon                     | github | subtree  | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
+| bug-hunter                 | github | subtree  | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
+| coffee-mode                | github | subtree  | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
+| company                    | github | subtree  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
+| company-math               | github | subtree  | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
+| company-statistics         | github | subtree  | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
+| dash                       | github | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
+| dbus-codegen               | github | subtree  | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
+| delight                    | git    | subtree  | [[https://savannah.nongnu.org/projects/delight]] |
+| diff-hl                    | github | subtree  | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                               |
+| diffview                   | github | subtree  | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
+| dts-mode                   | github | subtree  | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
+| easy-kill                  | github | subtree  | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
+| eldoc-eval                 | github | subtree  | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
+| electric-spacing           | github | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
+| ergoemacs-mode             | github | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
+| exwm                       | github | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
+| ggtags                     | github | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
+| gnorb                      | github | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
+| highlight-escape-sequences | github | subtree  | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
+| hydra                      | github | subtree  | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
+| hyperbole                  | git    | external | [[http://www.gnu.org/software/hyperbole]]        |
+| ioccur                     | github | subtree  | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
+| ivy                        | github | subtree  | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
+| js2-mode                   | github | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
+| json-mode                  | github | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
+| load-relative              | github | subtree  | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
+| loc-changes                | github | subtree  | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
+| loccur                     | github | subtree  | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
+| math-symbol-lists          | github | subtree  | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                     |
+| nameless                   | github | subtree  | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
+| names                      | github | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
+| on-screen                  | github | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
+| org                        | git    | builtin  | [[http://orgmode.org]]                           |
+| pabbrev                    | github | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
+| parsec                     | github | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
+| realgud                    | github | subtree  | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
+| rich-minority              | github | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
+| sotlisp                    | github | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
+| spinner                    | github | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
+| systemd                    | github | subtree  | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
+| test-simple                | github | subtree  | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
+| tiny                       | github | subtree  | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
+| undo-tree                  | git    | subtree  | [[http://www.dr-qubit.org/emacs.php]]            |
+| vdiff                      | github | subtree  | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                          |
+| vlf                        | github | subtree  | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
+| wcheck-mode                | github | subtree  | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
+| web-server                 | github | subtree  | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
+| websocket                  | github | subtree  | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
+| which-key                  | github | subtree  | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]                      |
+| xelb                       | github | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
+| yasnippet                  | github | subtree  | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
+| ztree                      | github | subtree  | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
 
 * Melpa
 ** New
@@ -317,6 +318,7 @@
 |-------------------------+---------------------------------+-----------|
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
+| axiom-environment       | company-axiom                   | bitbucket |
 | axiom-environment       | ob-axiom                        | bitbucket |
 | biblio                  | biblio-core                     | github    |
 | button-lock             | wiki-nav                        | github    |
@@ -488,30 +490,31 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (24)         | Class    | Melpa     | Reason                       |
-|----------------------+----------+-----------+------------------------------|
-| autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]           |
-| cfengine-code-style  | minority | github    | mostly non-elisp             |
-| cmake-mode           | minority | github    | mostly non-elisp             |
-| cursor-in-brackets   | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| cython-mode          | minority | github    | mostly non-elisp             |
-| diffscuss-mode       | minority | github    | mostly non-elisp             |
-| dummy-h-mode         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| forecast             | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]]   |
-| google-c-style       | minority | github    | mostly non-elisp             |
-| gregorio-mode        | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| judge-indent         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| llvm-mode            | shelved  | git       | mostly non-elisp             |
-| mwe-log-commands     | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| nemerle              | minority | github    | mostly non-elisp             |
-| ninja-mode           | minority | github    | mostly non-elisp             |
-| org-password-manager | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| outline-magic        | shelved  | github    |                              |
-| paper-theme          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]]   |
-| po-mode              | minority | git       | mostly non-elisp             |
-| pylint               | minority | github    | mostly non-elisp             |
-| smart-compile        | minority | github    |                              |
-| thrift               | minority | github    | mostly non-elisp             |
-| toggle               | minority | github    | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
-| wisp-mode            | minority | bitbucket | mostly non-elisp             |
+| Package (25)         | Class    | Melpa     | Reason                     |
+|----------------------+----------+-----------+----------------------------|
+| autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
+| cfengine-code-style  | minority | github    | mostly non-elisp           |
+| cmake-mode           | minority | github    | mostly non-elisp           |
+| cursor-in-brackets   | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| cython-mode          | minority | github    | mostly non-elisp           |
+| diffscuss-mode       | minority | github    | mostly non-elisp           |
+| dummy-h-mode         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| forecast             | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
+| google-c-style       | minority | github    | mostly non-elisp           |
+| gregorio-mode        | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| judge-indent         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| less-css-mode        | builtin  | github    | Emacs 26.0.90 has newer    |
+| llvm-mode            | shelved  | git       | mostly non-elisp           |
+| mwe-log-commands     | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| nemerle              | minority | github    | mostly non-elisp           |
+| ninja-mode           | minority | github    | mostly non-elisp           |
+| org-password-manager | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| outline-magic        | shelved  | github    | TODO remove from melpa     |
+| paper-theme          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
+| po-mode              | minority | git       | mostly non-elisp           |
+| pylint               | minority | github    | mostly non-elisp           |
+| smart-compile        | minority | github    | all-in-one repo            |
+| thrift               | minority | github    | mostly non-elisp           |
+| toggle               | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
+| wisp-mode            | minority | bitbucket | mostly non-elisp           |
 

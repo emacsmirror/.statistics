@@ -82,6 +82,8 @@
 | cl-generic | Elpa has backport of builtin   |
 | cl-lib     | Elpa has backport of builtin   |
 | pinentry   | Elpa imports outdated upstream |
+| seq        | Elpa has backport of builtin   |
+| svg        | Elpa imports outdated upstream |
 
 * Diverging reason
 #+NAME: set--emir--diverging-reason
@@ -89,49 +91,33 @@
   (emir--save-variable 'emir--diverging-reason value)
 #+END_SRC
 #+NAME: val--emir--diverging-reason
-| Package               | Reason                       |
-|-----------------------+------------------------------|
-| autotest              | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]           |
-| caml                  | svn                          |
-| cfengine-code-style   | mostly non-elisp             |
-| cg                    | svn                          |
-| clang-format          | svn                          |
-| cmake-mode            | mostly non-elisp             |
-| color-theme           | bzr                          |
-| confluence            | svn                          |
-| cursor-in-brackets    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| cython-mode           | mostly non-elisp             |
-| darcsum               | darcs [[https://github.com/emacsorphanage/darcsum/commit/e6d8b3b07fa2145210520861cf7f7062bfc6feb9][e6d8b3b]]                |
-| debian-bug            | mostly non-elisp             |
-| debian-changelog-mode | mostly non-elisp             |
-| dic-lookup-w3m        | svn                          |
-| diffscuss-mode        | mostly non-elisp             |
-| dsvn                  | svn                          |
-| dummy-h-mode          | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| flycheck-scala-sbt    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| forecast              | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]]   |
-| google-c-style        | mostly non-elisp             |
-| gregorio-mode         | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| helm-ls-svn           | svn                          |
-| judge-indent          | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| llvm-mode             | mostly non-elisp             |
-| metafmt               | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| mwe-log-commands      | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| nemerle               | mostly non-elisp             |
-| ninja-mode            | mostly non-elisp             |
-| org-password-manager  | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| ox-clip               | all-in-one repo [[https://github.com/jkitchin/scimax/issues/21][#21]]          |
-| paper-theme           | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]]   |
-| po-mode               | mostly non-elisp             |
-| pylint                | mostly non-elisp             |
-| redshank              | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]     |
-| ruby-additional       | svn                          |
-| ruby-electric         | svn                          |
-| tex-smart-umlauts     | darcs                        |
-| thrift                | mostly non-elisp             |
-| toggle                | unrelated in one git repo [[https://github.com/zenspider/elisp/issues/5][#5]] |
-| w3m                   | cvs [[https://github.com/melpa/melpa/pull/3378#issuecomment-221855624][melpa#3378]]               |
-| wisp-mode             | mostly non-elisp             |
+| Package              | Reason                     |
+|----------------------+----------------------------|
+| autotest             | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
+| cfengine-code-style  | mostly non-elisp           |
+| cmake-mode           | mostly non-elisp           |
+| cursor-in-brackets   | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| cython-mode          | mostly non-elisp           |
+| diffscuss-mode       | mostly non-elisp           |
+| dummy-h-mode         | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| forecast             | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
+| google-c-style       | mostly non-elisp           |
+| gregorio-mode        | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| judge-indent         | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| less-css-mode        | Emacs 26.0.90 has newer    |
+| llvm-mode            | mostly non-elisp           |
+| mwe-log-commands     | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| nemerle              | mostly non-elisp           |
+| ninja-mode           | mostly non-elisp           |
+| org-password-manager | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
+| outline-magic        | TODO remove from melpa     |
+| paper-theme          | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
+| po-mode              | mostly non-elisp           |
+| pylint               | mostly non-elisp           |
+| smart-compile        | all-in-one repo            |
+| thrift               | mostly non-elisp           |
+| toggle               | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
+| wisp-mode            | mostly non-elisp           |
 
 * Library reason
 #+NAME: set--emir--library-reason
