@@ -41,7 +41,7 @@ packages makes it more appealing to improve the remaining code.
 | Package (12)      | Vcs   | Last commit           | Commits last year |
 |-------------------+-------+-----------------------+-------------------|
 | cg                | svn   | 6 weeks ago           |                 3 |
-| clang-format      | svn   | 6 weeks ago           |                27 |
+| clang-format      | svn   | 11 days ago           |                29 |
 | color-theme       | bzr   | 9 years ago           |                 0 |
 | confluence        | svn   | 3 months ago          |                 1 |
 | darcsum           | darcs | 3 years, 5 months ago |                 0 |
@@ -51,7 +51,7 @@ packages makes it more appealing to improve the remaining code.
 | ruby-additional   | svn   | 2 weeks ago           |                12 |
 | swbuff            | cvs   | 10 years ago          |                 0 |
 | tex-smart-umlauts | darcs | 1 year, 6 months ago  |                 0 |
-| w3m               | cvs   | 3 weeks ago           |                87 |
+| w3m               | cvs   | 4 days ago            |                92 |
 
 * Missing from Melpa
 
@@ -72,7 +72,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (609)                | Link                                    |
+| Package (608)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -522,7 +522,6 @@ please first make sure they meet the minimal requirements.
 | pulseaudio                   | [[https://github.com/suzp1984/pulseaudio-mode][suzp1984/pulseaudio-mode]]                |
 | puppet-pi-mode               | [[https://github.com/t9md/puppet-pi-mode.el][t9md/puppet-pi-mode.el]]                  |
 | pvr                          | [[https://github.com/larsmagne/pvr.el][larsmagne/pvr.el]]                        |
-| pyim-greatdict               | [[https://github.com/tumashu/pyim-greatdict][tumashu/pyim-greatdict]]                  |
 | pylookup                     | [[https://github.com/tsgates/pylookup][tsgates/pylookup]]                        |
 | qa-mode                      | [[https://github.com/senny/qa-mode][senny/qa-mode]]                           |
 | qooxdoo                      | [[https://github.com/jdodds/qooxdoo.el][jdodds/qooxdoo.el]]                       |
