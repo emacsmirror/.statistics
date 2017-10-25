@@ -84,20 +84,20 @@ force:
 	-e "Code block returned no value."
 
 
-%.html: force
+%.html:
 	@echo "Generating $@..."
 	@$(BATCH) $(subst html,org,$@) --eval "(progn\
 	(require 'org)\
 	(let ((org-babel-confirm-evaluate-answer-no 'noeval))\
 	  (org-html-export-to-html)))" 2>&1 |\
-	grep "Evaluation of this emacs-lisp code block"
+	grep -v "Evaluation of this emacs-lisp code block" | true
 	@rm -f $@~
 
-preview:
+preview: html
 	@echo "Uploading to $(PREVIEW_BUCKET)..."
 	@aws s3 sync $(SRC) $(PREVIEW_BUCKET)$(DST) --delete $(SYNC)
 
-publish:
+publish: html
 	@echo "Uploading to $(PUBLISH_BUCKET)..."
 	@aws s3 sync $(SRC) $(PUBLISH_BUCKET)$(DST) --delete $(SYNC)
 	@aws cloudfront create-invalidation \
