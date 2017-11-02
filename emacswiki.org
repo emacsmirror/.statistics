@@ -32,12 +32,11 @@
                            (asc melpa-recipes:name)]])))
 #+END_SRC
 #+RESULTS:
-| Dependee (8) | Author     | Depender                      | Type | Fetcher | Author               |
+| Dependee (7) | Author     | Depender                      | Type | Fetcher | Author               |
 |--------------+------------+-------------------------------+------+---------+----------------------|
 | filesets+    | Drew Adams | helm-filesets                 | soft | github  | Graham Clark         |
 | font-lock+   | Drew Adams | all-the-icons                 | hard | github  | Dominic Charlesworth |
 | font-lock+   | Drew Adams | jemdoc-mode                   | soft | github  | Dimitar Dimitrov     |
-| help-fns+    | Drew Adams | nu-mode                       | hard | github  |                      |
 | hexrgb       | Drew Adams | jabber                        | hard | git     |                      |
 | hexrgb       | Drew Adams | on-screen                     | soft | github  | Michael Heerdegen    |
 | hexrgb       | Drew Adams | paper-theme                   | hard | github  | Göktuğ Kayaalp       |
