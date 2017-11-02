@@ -70,7 +70,7 @@ babel: $(BABEL)
 html:  $(HTML)
 force:
 
-%.org: force
+%.org:
 	@echo "Updating $@..."
 	@$(BATCH) $@ --eval "(progn\
 	(load \"$(CUSTOM_FILE)\")\
@@ -84,7 +84,7 @@ force:
 	-e "Code block returned no value."
 
 
-%.html:
+%.html: %.org
 	@echo "Generating $@..."
 	@$(BATCH) $(subst html,org,$@) --eval "(progn\
 	(require 'org)\
