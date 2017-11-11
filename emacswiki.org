@@ -77,159 +77,159 @@
 #+RESULTS:
 | Author (38)                   | Package                 | Downloads |
 |-------------------------------+-------------------------+-----------|
-| Adrian Kubala                 | buffer-stack            |      1196 |
-| Alex Schroeder                | disk                    |       668 |
-| Alex Schroeder                | typing                  |      2093 |
-| André Riemann                 | centered-cursor-mode    |      2732 |
-| André Riemann                 | fliptext                |       514 |
-| Andy Stewart                  | auto-install            |      5403 |
-| Andy Stewart                  | chm-view                |      1108 |
-| Andy Stewart                  | dired-sort              |     22634 |
-| Andy Stewart                  | irfc                    |      1565 |
-| Benjamin Rutt                 | backup-each-save        |      1093 |
-| Benjamin Rutt                 | top-mode                |      1509 |
-| Binu Jose Philip, Drew Adams  | w32browser-dlgopen      |       781 |
-| Chris Stucchio                | multi-eshell            |      2336 |
-| Davis Herring                 | unbound                 |      2375 |
-| Dino Chiesa                   | rfringe                 |     20794 |
-| Dino Chiesa                   | tfs                     |       712 |
-| Dino Chiesa, Alex Henning     | thesaurus               |      1425 |
-| Drew Adams                    | apropos-fn+var          |      1019 |
-| Drew Adams                    | apu                     |       759 |
-| Drew Adams                    | autofit-frame           |       956 |
-| Drew Adams                    | browse-kill-ring+       |      1961 |
-| Drew Adams                    | cmds-menu               |       732 |
-| Drew Adams                    | col-highlight           |      5462 |
-| Drew Adams                    | crosshairs              |      3690 |
-| Drew Adams                    | cursor-chg              |      2079 |
-| Drew Adams                    | cus-edit+               |      1011 |
-| Drew Adams                    | dired+                  |     82868 |
-| Drew Adams                    | dired-details+          |      6621 |
-| Drew Adams                    | dired-sort-menu+        |      1972 |
-| Drew Adams                    | doremi                  |      2617 |
-| Drew Adams                    | doremi-cmd              |      1693 |
-| Drew Adams                    | doremi-frm              |      1466 |
-| Drew Adams                    | doremi-mac              |       805 |
-| Drew Adams                    | face-remap+             |       612 |
-| Drew Adams                    | facemenu+               |      1060 |
-| Drew Adams                    | faces+                  |      1653 |
-| Drew Adams                    | files+                  |       902 |
-| Drew Adams                    | filesets+               |      1133 |
-| Drew Adams                    | find-dired+             |       839 |
-| Drew Adams                    | finder+                 |       728 |
-| Drew Adams                    | fit-frame               |      1357 |
-| Drew Adams                    | font-lock+              |     15045 |
-| Drew Adams                    | frame-cmds              |      6987 |
-| Drew Adams                    | frame-fns               |      6801 |
-| Drew Adams                    | grep+                   |      1658 |
-| Drew Adams                    | header2                 |      4359 |
-| Drew Adams                    | help+                   |      2361 |
-| Drew Adams                    | help-fns+               |    144074 |
-| Drew Adams                    | help-mode+              |      1946 |
-| Drew Adams                    | hexrgb                  |      8525 |
-| Drew Adams                    | hide-comnt              |     91143 |
-| Drew Adams                    | highlight               |    187512 |
-| Drew Adams                    | highlight-chars         |      2567 |
-| Drew Adams                    | hl-defined              |       965 |
-| Drew Adams                    | hl-line+                |      8449 |
-| Drew Adams                    | hl-spotlight            |      1095 |
-| Drew Adams                    | icicles                 |     17281 |
-| Drew Adams                    | icomplete+              |      2617 |
-| Drew Adams                    | imenu+                  |      2378 |
-| Drew Adams                    | info+                   |    177611 |
-| Drew Adams                    | isearch+                |      3526 |
-| Drew Adams                    | isearch-prop            |       897 |
-| Drew Adams                    | lacarte                 |      2310 |
-| Drew Adams                    | lib-requires            |      2271 |
-| Drew Adams                    | macros+                 |       709 |
-| Drew Adams                    | mb-depth+               |       663 |
-| Drew Adams                    | menu-bar+               |      1511 |
-| Drew Adams                    | misc-cmds               |      1271 |
-| Drew Adams                    | misc-fns                |       728 |
-| Drew Adams                    | modeline-char           |       551 |
-| Drew Adams                    | modeline-posn           |      1328 |
-| Drew Adams                    | mouse+                  |      1138 |
-| Drew Adams                    | mouse3                  |       911 |
-| Drew Adams                    | naked                   |       531 |
-| Drew Adams                    | narrow-indirect         |      1148 |
-| Drew Adams                    | novice+                 |       530 |
-| Drew Adams                    | oneonone                |       863 |
-| Drew Adams                    | palette                 |      1756 |
-| Drew Adams                    | pp+                     |       835 |
-| Drew Adams                    | pp-c-l                  |      1020 |
-| Drew Adams                    | pretty-lambdada         |      3225 |
-| Drew Adams                    | replace+                |      1163 |
-| Drew Adams                    | reveal-next             |       526 |
-| Drew Adams                    | second-sel              |       748 |
-| Drew Adams                    | showkey                 |      1051 |
-| Drew Adams                    | simple+                 |       684 |
-| Drew Adams                    | strings                 |       997 |
-| Drew Adams                    | subr+                   |       737 |
-| Drew Adams                    | synonyms                |      2287 |
-| Drew Adams                    | thing-cmds              |       948 |
-| Drew Adams                    | thingatpt+              |      2065 |
-| Drew Adams                    | thumb-frm               |       600 |
-| Drew Adams                    | tool-bar+               |       979 |
-| Drew Adams                    | ucs-cmds                |       709 |
-| Drew Adams                    | window+                 |      1002 |
-| Drew Adams                    | zones                   |       730 |
-| Drew Adams                    | zoom-frm                |      4104 |
-| Drew Adams, Lennart Borgman   | wid-edit+               |       593 |
-| Drew Adams, Thierry Volpiatto | bookmark+               |     26211 |
-| Francis J. Wright             | dired-sort-menu         |      1853 |
-| Igor Sikaček                  | awk-it                  |      1386 |
-| Jan Rehders                   | hideshowvis             |      2845 |
-| Joe Bloggs                    | bs-ext                  |       764 |
-| Kahlil (Kal) HODGSON          | plsql                   |      1270 |
-| Kahlil (Kal) HODGSON          | swbuff-x                |       667 |
-| Kahlil (Kal) HODGSON          | tidy                    |     30171 |
-| Kai Grossjohann               | message-x               |       573 |
-| Kevin Rodgers                 | auto-capitalize         |      1301 |
-| Kevin Rodgers                 | igrep                   |      2022 |
-| Kumar Appaiah                 | muttrc-mode             |      1554 |
-| Martin Rudalics               | speck                   |      1042 |
-| Mathias Dahl                  | hide-region             |       925 |
-| Michael Cook                  | cygwin-mount            |      2102 |
-| Miles Bader                   | echo-bell               |       685 |
-| Rafal Jedruszek               | highlight-tail          |      2004 |
-| Rick Bielawski                | anchored-transpose      |       926 |
-| Rick Bielawski                | column-marker           |      6658 |
-| Rob Giardina                  | dired-details           |     14504 |
-| Ryan Davis and Phil Hagelberg | project-local-variables |     30621 |
-| Scott Frazer                  | etags-select            |      3255 |
-| Scott Frazer                  | etags-table             |      2055 |
-| Taiki SUGAWARA                | highlight-cl            |      1167 |
-| Taiki SUGAWARA                | vline                   |      5166 |
-| Takeshi Banse                 | el-swank-fuzzy          |       814 |
-| Trey Jackson                  | framemove               |      3018 |
-| Vinicius Jose Latorre         | ascii                   |      2753 |
-| Vinicius Jose Latorre         | blank-mode              |      2275 |
-| Yoshida Masato                | gnus-spotlight          |       566 |
-| khiker                        | ruby-block              |      7428 |
-|                               | ac-dabbrev              |      3817 |
-|                               | aok                     |       718 |
-|                               | batch-mode              |      1634 |
-|                               | better-registers        |       863 |
-|                               | csv-nav                 |     28005 |
-|                               | dropdown-list           |     10294 |
-|                               | eldoc-extension         |      2529 |
-|                               | fuzzy-format            |       861 |
-|                               | fuzzy-match             |      1765 |
-|                               | jira                    |      2512 |
-|                               | list-processes+         |      1042 |
-|                               | point-undo              |      2359 |
-|                               | redo+                   |      6647 |
-|                               | sqlplus                 |      1937 |
-|                               | summarye                |       834 |
-|                               | wimpy-del               |       528 |
-|                               | yaoddmuse               |      2369 |
-| rubikitch                     | lispxmp                 |      1927 |
-| rubikitch                     | minor-mode-hack         |       748 |
-| rubikitch                     | recentf-ext             |      7054 |
-| rubikitch                     | screenshot              |      1131 |
-| rubikitch                     | sequential-command      |      2529 |
-| rubikitch                     | sticky                  |       923 |
-| rubikitch                     | usage-memo              |       633 |
+| Adrian Kubala                 | buffer-stack            |      1205 |
+| Alex Schroeder                | disk                    |       672 |
+| Alex Schroeder                | typing                  |      2116 |
+| André Riemann                 | centered-cursor-mode    |      2778 |
+| André Riemann                 | fliptext                |       516 |
+| Andy Stewart                  | auto-install            |      5459 |
+| Andy Stewart                  | chm-view                |      1115 |
+| Andy Stewart                  | dired-sort              |     23078 |
+| Andy Stewart                  | irfc                    |      1585 |
+| Benjamin Rutt                 | backup-each-save        |      1106 |
+| Benjamin Rutt                 | top-mode                |      1519 |
+| Binu Jose Philip, Drew Adams  | w32browser-dlgopen      |       786 |
+| Chris Stucchio                | multi-eshell            |      2360 |
+| Davis Herring                 | unbound                 |      2392 |
+| Dino Chiesa                   | rfringe                 |     20803 |
+| Dino Chiesa                   | tfs                     |       716 |
+| Dino Chiesa, Alex Henning     | thesaurus               |      1436 |
+| Drew Adams                    | apropos-fn+var          |      1023 |
+| Drew Adams                    | apu                     |       761 |
+| Drew Adams                    | autofit-frame           |       959 |
+| Drew Adams                    | browse-kill-ring+       |      1987 |
+| Drew Adams                    | cmds-menu               |       735 |
+| Drew Adams                    | col-highlight           |      5518 |
+| Drew Adams                    | crosshairs              |      3725 |
+| Drew Adams                    | cursor-chg              |      2099 |
+| Drew Adams                    | cus-edit+               |      1015 |
+| Drew Adams                    | dired+                  |     83441 |
+| Drew Adams                    | dired-details+          |      6690 |
+| Drew Adams                    | dired-sort-menu+        |      1987 |
+| Drew Adams                    | doremi                  |      2647 |
+| Drew Adams                    | doremi-cmd              |      1713 |
+| Drew Adams                    | doremi-frm              |      1482 |
+| Drew Adams                    | doremi-mac              |       810 |
+| Drew Adams                    | face-remap+             |       618 |
+| Drew Adams                    | facemenu+               |      1075 |
+| Drew Adams                    | faces+                  |      1676 |
+| Drew Adams                    | files+                  |       908 |
+| Drew Adams                    | filesets+               |      1142 |
+| Drew Adams                    | find-dired+             |       844 |
+| Drew Adams                    | finder+                 |       732 |
+| Drew Adams                    | fit-frame               |      1367 |
+| Drew Adams                    | font-lock+              |     16331 |
+| Drew Adams                    | frame-cmds              |      7076 |
+| Drew Adams                    | frame-fns               |      6893 |
+| Drew Adams                    | grep+                   |      1678 |
+| Drew Adams                    | header2                 |      4402 |
+| Drew Adams                    | help+                   |      2379 |
+| Drew Adams                    | help-fns+               |    148603 |
+| Drew Adams                    | help-mode+              |      1963 |
+| Drew Adams                    | hexrgb                  |      8603 |
+| Drew Adams                    | hide-comnt              |     95560 |
+| Drew Adams                    | highlight               |    192101 |
+| Drew Adams                    | highlight-chars         |      2600 |
+| Drew Adams                    | hl-defined              |       970 |
+| Drew Adams                    | hl-line+                |      8548 |
+| Drew Adams                    | hl-spotlight            |      1104 |
+| Drew Adams                    | icicles                 |     17390 |
+| Drew Adams                    | icomplete+              |      2633 |
+| Drew Adams                    | imenu+                  |      2402 |
+| Drew Adams                    | info+                   |    182391 |
+| Drew Adams                    | isearch+                |      3550 |
+| Drew Adams                    | isearch-prop            |       905 |
+| Drew Adams                    | lacarte                 |      2326 |
+| Drew Adams                    | lib-requires            |      2283 |
+| Drew Adams                    | macros+                 |       714 |
+| Drew Adams                    | mb-depth+               |       666 |
+| Drew Adams                    | menu-bar+               |      1527 |
+| Drew Adams                    | misc-cmds               |      1285 |
+| Drew Adams                    | misc-fns                |       733 |
+| Drew Adams                    | modeline-char           |       554 |
+| Drew Adams                    | modeline-posn           |      1349 |
+| Drew Adams                    | mouse+                  |      1143 |
+| Drew Adams                    | mouse3                  |       924 |
+| Drew Adams                    | naked                   |       532 |
+| Drew Adams                    | narrow-indirect         |      1158 |
+| Drew Adams                    | novice+                 |       534 |
+| Drew Adams                    | oneonone                |       868 |
+| Drew Adams                    | palette                 |      1774 |
+| Drew Adams                    | pp+                     |       838 |
+| Drew Adams                    | pp-c-l                  |      1028 |
+| Drew Adams                    | pretty-lambdada         |      3253 |
+| Drew Adams                    | replace+                |      1173 |
+| Drew Adams                    | reveal-next             |       528 |
+| Drew Adams                    | second-sel              |       752 |
+| Drew Adams                    | showkey                 |      1063 |
+| Drew Adams                    | simple+                 |       688 |
+| Drew Adams                    | strings                 |      1004 |
+| Drew Adams                    | subr+                   |       745 |
+| Drew Adams                    | synonyms                |      2302 |
+| Drew Adams                    | thing-cmds              |       955 |
+| Drew Adams                    | thingatpt+              |      2074 |
+| Drew Adams                    | thumb-frm               |       602 |
+| Drew Adams                    | tool-bar+               |       987 |
+| Drew Adams                    | ucs-cmds                |       710 |
+| Drew Adams                    | window+                 |      1009 |
+| Drew Adams                    | zones                   |       743 |
+| Drew Adams                    | zoom-frm                |      4165 |
+| Drew Adams, Lennart Borgman   | wid-edit+               |       594 |
+| Drew Adams, Thierry Volpiatto | bookmark+               |     26413 |
+| Francis J. Wright             | dired-sort-menu         |      1876 |
+| Igor Sikaček                  | awk-it                  |      1391 |
+| Jan Rehders                   | hideshowvis             |      2887 |
+| Joe Bloggs                    | bs-ext                  |       766 |
+| Kahlil (Kal) HODGSON          | plsql                   |      1286 |
+| Kahlil (Kal) HODGSON          | swbuff-x                |       669 |
+| Kahlil (Kal) HODGSON          | tidy                    |     30639 |
+| Kai Grossjohann               | message-x               |       583 |
+| Kevin Rodgers                 | auto-capitalize         |      1309 |
+| Kevin Rodgers                 | igrep                   |      2047 |
+| Kumar Appaiah                 | muttrc-mode             |      1572 |
+| Martin Rudalics               | speck                   |      1051 |
+| Mathias Dahl                  | hide-region             |       942 |
+| Michael Cook                  | cygwin-mount            |      2120 |
+| Miles Bader                   | echo-bell               |       688 |
+| Rafal Jedruszek               | highlight-tail          |      2021 |
+| Rick Bielawski                | anchored-transpose      |       931 |
+| Rick Bielawski                | column-marker           |      6753 |
+| Rob Giardina                  | dired-details           |     14654 |
+| Ryan Davis and Phil Hagelberg | project-local-variables |     31043 |
+| Scott Frazer                  | etags-select            |      3329 |
+| Scott Frazer                  | etags-table             |      2081 |
+| Taiki SUGAWARA                | highlight-cl            |      1174 |
+| Taiki SUGAWARA                | vline                   |      5224 |
+| Takeshi Banse                 | el-swank-fuzzy          |       817 |
+| Trey Jackson                  | framemove               |      3064 |
+| Vinicius Jose Latorre         | ascii                   |      2784 |
+| Vinicius Jose Latorre         | blank-mode              |      2298 |
+| Yoshida Masato                | gnus-spotlight          |       569 |
+| khiker                        | ruby-block              |      7479 |
+|                               | ac-dabbrev              |      3842 |
+|                               | aok                     |       721 |
+|                               | batch-mode              |      1645 |
+|                               | better-registers        |       867 |
+|                               | csv-nav                 |     28415 |
+|                               | dropdown-list           |     10410 |
+|                               | eldoc-extension         |      2541 |
+|                               | fuzzy-format            |       869 |
+|                               | fuzzy-match             |      1775 |
+|                               | jira                    |      2529 |
+|                               | list-processes+         |      1047 |
+|                               | point-undo              |      2403 |
+|                               | redo+                   |      6721 |
+|                               | sqlplus                 |      1975 |
+|                               | summarye                |       837 |
+|                               | wimpy-del               |       530 |
+|                               | yaoddmuse               |      2380 |
+| rubikitch                     | lispxmp                 |      1942 |
+| rubikitch                     | minor-mode-hack         |       752 |
+| rubikitch                     | recentf-ext             |      7134 |
+| rubikitch                     | screenshot              |      1135 |
+| rubikitch                     | sequential-command      |      2550 |
+| rubikitch                     | sticky                  |       930 |
+| rubikitch                     | usage-memo              |       636 |
 
 * Wiki packages on the Emacsmirror
 #+BEGIN_SRC emacs-lisp
