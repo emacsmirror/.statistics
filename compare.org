@@ -63,25 +63,25 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |        |       |   458 |     6 |       |
-| elpa        |  106 |    106 |       |       |   159 |       |
+| elpa        |  107 |    107 |       |       |   160 |       |
 | elpa-branch |    8 |      8 |       |       |    14 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3888 |   3888 |       |       |       |  3507 |
+| github      | 3894 |   3894 |       |       |       |  3514 |
 | gitlab      |   39 |     39 |       |       |       |    31 |
-| git         |   53 |     53 |       |       |       |    39 |
+| git         |   54 |     54 |       |       |       |    42 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   45 |     45 |       |       |       |    40 |
+| bitbucket   |   44 |     44 |       |       |       |    37 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  678 |    678 |       |       |       |   153 |
-| file        |  258 |    258 |       |       |       |       |
+| wiki        |  677 |    677 |       |       |       |   153 |
+| file        |  253 |    253 |       |       |       |       |
 | minority    |   20 |     20 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1080 |        |  1080 |       |       |       |
+| shelved     | 1086 |        |  1086 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6711 |   5175 |  1080 |   458 |   179 |  3771 |
+| total       | 6718 |   5176 |  1086 |   458 |   180 |  3778 |
 
 * Emacs
 ** Prefer elpa
@@ -314,137 +314,137 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (79)    | Secondary package               | Class     |
-|-------------------------+---------------------------------+-----------|
-| ac-php                  | ac-php-core                     | github    |
-| ac-php                  | company-php                     | github    |
-| axiom-environment       | company-axiom                   | bitbucket |
-| axiom-environment       | ob-axiom                        | bitbucket |
-| biblio                  | biblio-core                     | github    |
-| button-lock             | wiki-nav                        | github    |
-| calfw                   | calfw-cal                       | github    |
-| calfw                   | calfw-howm                      | github    |
-| calfw                   | calfw-ical                      | github    |
-| calfw                   | calfw-org                       | github    |
-| cfml-mode               | cftag-mode                      | github    |
-| chumpy-windows          | spaces                          | github    |
-| chumpy-windows          | splitter                        | github    |
-| chumpy-windows          | window-jump                     | github    |
-| circe                   | tracking                        | github    |
-| clojure-mode            | clojure-mode-extra-font-locking | github    |
-| codesearch              | projectile-codesearch           | github    |
-| copyit                  | copyit-pandoc                   | github    |
-| ctl-mode                | gs-mode                         | github    |
-| dash                    | dash-functional                 | github    |
-| datetime-format         | timecop                         | github    |
-| ddskk                   | ccc                             | github    |
-| ddskk                   | cdb                             | github    |
-| deferred                | concurrent                      | github    |
-| dictionary              | connection                      | github    |
-| dictionary              | link                            | github    |
-| dired-hacks             | dired-avfs                      | github    |
-| dired-hacks             | dired-collapse                  | github    |
-| dired-hacks             | dired-filter                    | github    |
-| dired-hacks             | dired-hacks-utils               | github    |
-| dired-hacks             | dired-narrow                    | github    |
-| dired-hacks             | dired-open                      | github    |
-| dired-hacks             | dired-rainbow                   | github    |
-| dired-hacks             | dired-ranger                    | github    |
-| dired-hacks             | dired-subtree                   | github    |
-| distel-completion-lib   | auto-complete-distel            | github    |
-| distel-completion-lib   | company-distel                  | github    |
-| dix                     | dix-evil                        | github    |
-| django-mode             | django-snippets                 | github    |
-| eclim                   | ac-emacs-eclim                  | github    |
-| eclim                   | company-emacs-eclim             | github    |
-| elfeed                  | elfeed-web                      | github    |
-| emacsql                 | emacsql-mysql                   | github    |
-| emacsql                 | emacsql-psql                    | github    |
-| emacsql                 | emacsql-sqlite                  | github    |
-| esqlite                 | esqlite-helm                    | github    |
-| evil                    | evil-test-helpers               | github    |
-| flx                     | flx-ido                         | github    |
-| flyspell-correct        | flyspell-correct-helm           | github    |
-| flyspell-correct        | flyspell-correct-ivy            | github    |
-| flyspell-correct        | flyspell-correct-popup          | github    |
-| git-emacs               | git-blamed                      | github    |
-| git-modes               | gitattributes-mode              | github    |
-| git-modes               | gitconfig-mode                  | github    |
-| git-modes               | gitignore-mode                  | github    |
-| gitlab                  | helm-gitlab                     | github    |
-| gitlab                  | ivy-gitlab                      | github    |
-| go-mode                 | go-guru                         | github    |
-| go-mode                 | go-rename                       | github    |
-| groovy-mode             | grails-mode                     | github    |
-| haskell-emacs           | haskell-emacs-base              | github    |
-| haskell-emacs           | haskell-emacs-text              | github    |
-| helm                    | helm-core                       | github    |
-| helm-bibtex             | ivy-bibtex                      | github    |
-| historian               | ivy-historian                   | github    |
-| ido-completing-read+    | ido-ubiquitous                  | github    |
-| ivy                     | counsel                         | github    |
-| ivy                     | ivy-hydra                       | github    |
-| ivy                     | swiper                          | github    |
-| jade-mode               | stylus-mode                     | github    |
-| jade-mode               | sws-mode                        | github    |
-| jedi                    | jedi-core                       | github    |
-| jump                    | inflections                     | github    |
-| kaesar                  | kaesar-file                     | github    |
-| kaesar                  | kaesar-mode                     | github    |
-| kaleidoscope            | kaleidoscope-evil-state-flash   | github    |
-| kubernetes              | kubernetes-evil                 | github    |
-| lean-mode               | company-lean                    | github    |
-| lean-mode               | helm-lean                       | github    |
-| load-theme-buffer-local | color-theme-buffer-local        | github    |
-| mac-pseudo-daemon       | osx-pseudo-daemon               | github    |
-| magit                   | git-commit                      | github    |
-| magit                   | magit-popup                     | github    |
-| nameframe               | nameframe-perspective           | github    |
-| nameframe               | nameframe-projectile            | github    |
-| nand2tetris             | company-nand2tetris             | github    |
-| nand2tetris             | nand2tetris-assembler           | github    |
-| nixos-options           | company-nixos-options           | github    |
-| nixos-options           | helm-nixos-options              | github    |
-| nixos-options           | nix-sandbox                     | github    |
-| opener                  | evil-opener                     | github    |
-| org-projectile          | org-category-capture            | github    |
-| org-projectile          | org-projectile-helm             | github    |
-| ox-twiki                | ox-tiddly                       | github    |
-| pig-mode                | pig-snippets                    | github    |
-| pollen-mode             | company-pollen                  | github    |
-| processing-mode         | processing-snippets             | github    |
-| prosjekt                | anything-prosjekt               | github    |
-| prosjekt                | dirtree-prosjekt                | github    |
-| prosjekt                | helm-prosjekt                   | github    |
-| request                 | request-deferred                | github    |
-| restclient              | restclient-helm                 | github    |
-| rinari                  | ruby-compilation                | github    |
-| ripgrep                 | projectile-ripgrep              | github    |
-| rtags                   | ac-rtags                        | github    |
-| rtags                   | company-rtags                   | github    |
-| rtags                   | flycheck-rtags                  | github    |
-| rtags                   | helm-rtags                      | github    |
-| rtags                   | ivy-rtags                       | github    |
-| sift                    | projectile-sift                 | github    |
-| smart-mode-line         | smart-mode-line-powerline-theme | github    |
-| sourcekit               | company-sourcekit               | github    |
-| speechd                 | speechd-el                      | git       |
-| springboard             | ido-springboard                 | github    |
-| stan-mode               | stan-snippets                   | github    |
-| term-manager            | term-projectile                 | github    |
-| tern                    | tern-auto-complete              | github    |
-| treemacs                | treemacs-evil                   | github    |
-| treemacs                | treemacs-projectile             | github    |
-| use-package             | bind-key                        | github    |
-| use-package-chords      | bind-chord                      | github    |
-| w3m                     | shimbun                         | orphaned  |
-| wgrep                   | wgrep-ack                       | github    |
-| wgrep                   | wgrep-ag                        | github    |
-| wgrep                   | wgrep-helm                      | github    |
-| wgrep                   | wgrep-pt                        | github    |
-| ycm                     | company-ycm                     | github    |
-| ycmd                    | company-ycmd                    | github    |
-| ycmd                    | flycheck-ycmd                   | github    |
+| Primary package (79)    | Secondary package               | Class    |
+|-------------------------+---------------------------------+----------|
+| ac-php                  | ac-php-core                     | github   |
+| ac-php                  | company-php                     | github   |
+| axiom-environment       | company-axiom                   | git      |
+| axiom-environment       | ob-axiom                        | git      |
+| biblio                  | biblio-core                     | github   |
+| button-lock             | wiki-nav                        | github   |
+| calfw                   | calfw-cal                       | github   |
+| calfw                   | calfw-howm                      | github   |
+| calfw                   | calfw-ical                      | github   |
+| calfw                   | calfw-org                       | github   |
+| cfml-mode               | cftag-mode                      | github   |
+| chumpy-windows          | spaces                          | github   |
+| chumpy-windows          | splitter                        | github   |
+| chumpy-windows          | window-jump                     | github   |
+| circe                   | tracking                        | github   |
+| clojure-mode            | clojure-mode-extra-font-locking | github   |
+| codesearch              | projectile-codesearch           | github   |
+| copyit                  | copyit-pandoc                   | github   |
+| ctl-mode                | gs-mode                         | github   |
+| dash                    | dash-functional                 | github   |
+| datetime-format         | timecop                         | github   |
+| ddskk                   | ccc                             | github   |
+| ddskk                   | cdb                             | github   |
+| deferred                | concurrent                      | github   |
+| dictionary              | connection                      | github   |
+| dictionary              | link                            | github   |
+| dired-hacks             | dired-avfs                      | github   |
+| dired-hacks             | dired-collapse                  | github   |
+| dired-hacks             | dired-filter                    | github   |
+| dired-hacks             | dired-hacks-utils               | github   |
+| dired-hacks             | dired-narrow                    | github   |
+| dired-hacks             | dired-open                      | github   |
+| dired-hacks             | dired-rainbow                   | github   |
+| dired-hacks             | dired-ranger                    | github   |
+| dired-hacks             | dired-subtree                   | github   |
+| distel-completion-lib   | auto-complete-distel            | github   |
+| distel-completion-lib   | company-distel                  | github   |
+| dix                     | dix-evil                        | github   |
+| django-mode             | django-snippets                 | github   |
+| eclim                   | ac-emacs-eclim                  | github   |
+| eclim                   | company-emacs-eclim             | github   |
+| elfeed                  | elfeed-web                      | github   |
+| emacsql                 | emacsql-mysql                   | github   |
+| emacsql                 | emacsql-psql                    | github   |
+| emacsql                 | emacsql-sqlite                  | github   |
+| esqlite                 | esqlite-helm                    | github   |
+| evil                    | evil-test-helpers               | github   |
+| flx                     | flx-ido                         | github   |
+| flyspell-correct        | flyspell-correct-helm           | github   |
+| flyspell-correct        | flyspell-correct-ivy            | github   |
+| flyspell-correct        | flyspell-correct-popup          | github   |
+| git-emacs               | git-blamed                      | github   |
+| git-modes               | gitattributes-mode              | github   |
+| git-modes               | gitconfig-mode                  | github   |
+| git-modes               | gitignore-mode                  | github   |
+| gitlab                  | helm-gitlab                     | github   |
+| gitlab                  | ivy-gitlab                      | github   |
+| go-mode                 | go-guru                         | github   |
+| go-mode                 | go-rename                       | github   |
+| groovy-mode             | grails-mode                     | github   |
+| haskell-emacs           | haskell-emacs-base              | github   |
+| haskell-emacs           | haskell-emacs-text              | github   |
+| helm                    | helm-core                       | github   |
+| helm-bibtex             | ivy-bibtex                      | github   |
+| historian               | ivy-historian                   | github   |
+| ido-completing-read+    | ido-ubiquitous                  | github   |
+| ivy                     | counsel                         | github   |
+| ivy                     | ivy-hydra                       | github   |
+| ivy                     | swiper                          | github   |
+| jade-mode               | stylus-mode                     | github   |
+| jade-mode               | sws-mode                        | github   |
+| jedi                    | jedi-core                       | github   |
+| jump                    | inflections                     | github   |
+| kaesar                  | kaesar-file                     | github   |
+| kaesar                  | kaesar-mode                     | github   |
+| kaleidoscope            | kaleidoscope-evil-state-flash   | github   |
+| kubernetes              | kubernetes-evil                 | github   |
+| lean-mode               | company-lean                    | github   |
+| lean-mode               | helm-lean                       | github   |
+| load-theme-buffer-local | color-theme-buffer-local        | github   |
+| mac-pseudo-daemon       | osx-pseudo-daemon               | github   |
+| magit                   | git-commit                      | github   |
+| magit                   | magit-popup                     | github   |
+| nameframe               | nameframe-perspective           | github   |
+| nameframe               | nameframe-projectile            | github   |
+| nand2tetris             | company-nand2tetris             | github   |
+| nand2tetris             | nand2tetris-assembler           | github   |
+| nixos-options           | company-nixos-options           | github   |
+| nixos-options           | helm-nixos-options              | github   |
+| nixos-options           | nix-sandbox                     | github   |
+| opener                  | evil-opener                     | github   |
+| org-projectile          | org-category-capture            | github   |
+| org-projectile          | org-projectile-helm             | github   |
+| ox-twiki                | ox-tiddly                       | github   |
+| pig-mode                | pig-snippets                    | github   |
+| pollen-mode             | company-pollen                  | github   |
+| processing-mode         | processing-snippets             | github   |
+| prosjekt                | anything-prosjekt               | github   |
+| prosjekt                | dirtree-prosjekt                | github   |
+| prosjekt                | helm-prosjekt                   | github   |
+| request                 | request-deferred                | github   |
+| restclient              | restclient-helm                 | github   |
+| rinari                  | ruby-compilation                | github   |
+| ripgrep                 | projectile-ripgrep              | github   |
+| rtags                   | ac-rtags                        | github   |
+| rtags                   | company-rtags                   | github   |
+| rtags                   | flycheck-rtags                  | github   |
+| rtags                   | helm-rtags                      | github   |
+| rtags                   | ivy-rtags                       | github   |
+| sift                    | projectile-sift                 | github   |
+| smart-mode-line         | smart-mode-line-powerline-theme | github   |
+| sourcekit               | company-sourcekit               | github   |
+| speechd                 | speechd-el                      | git      |
+| springboard             | ido-springboard                 | github   |
+| stan-mode               | stan-snippets                   | github   |
+| term-manager            | term-projectile                 | github   |
+| tern                    | tern-auto-complete              | github   |
+| treemacs                | treemacs-evil                   | github   |
+| treemacs                | treemacs-projectile             | github   |
+| use-package             | bind-key                        | github   |
+| use-package-chords      | bind-chord                      | github   |
+| w3m                     | shimbun                         | orphaned |
+| wgrep                   | wgrep-ack                       | github   |
+| wgrep                   | wgrep-ag                        | github   |
+| wgrep                   | wgrep-helm                      | github   |
+| wgrep                   | wgrep-pt                        | github   |
+| ycm                     | company-ycm                     | github   |
+| ycmd                    | company-ycmd                    | github   |
+| ycmd                    | flycheck-ycmd                   | github   |
 
 ** Diverging repositories
 #+NAME: melpa-diverging-repositories
@@ -490,7 +490,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (25)         | Class    | Melpa     | Reason                     |
+| Package (26)         | Class    | Melpa     | Reason                     |
 |----------------------+----------+-----------+----------------------------|
 | autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | cfengine-code-style  | minority | github    | mostly non-elisp           |
@@ -514,6 +514,7 @@
 | po-mode              | minority | git       | mostly non-elisp           |
 | pylint               | minority | github    | mostly non-elisp           |
 | smart-compile        | minority | github    | all-in-one repo            |
+| summarye             | shelved  | wiki      |                            |
 | thrift               | minority | github    | mostly non-elisp           |
 | toggle               | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | wisp-mode            | minority | bitbucket | mostly non-elisp           |
