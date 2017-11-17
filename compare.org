@@ -64,9 +64,9 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |        |       |   458 |     6 |       |
 | elpa        |  107 |    107 |       |       |   160 |       |
-| elpa-branch |    8 |      8 |       |       |    14 |       |
+| elpa-branch |    8 |      8 |       |       |    15 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3894 |   3894 |       |       |       |  3514 |
+| github      | 3904 |   3904 |       |       |       |  3524 |
 | gitlab      |   39 |     39 |       |       |       |    31 |
 | git         |   54 |     54 |       |       |       |    42 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -74,14 +74,14 @@
 | bitbucket   |   44 |     44 |       |       |       |    37 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  677 |    677 |       |       |       |   153 |
+| wiki        |  675 |    675 |       |       |       |   151 |
 | file        |  253 |    253 |       |       |       |       |
 | minority    |   20 |     20 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1086 |        |  1086 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6718 |   5176 |  1086 |   458 |   180 |  3778 |
+| total       | 6726 |   5184 |  1086 |   458 |   181 |  3786 |
 
 * Emacs
 ** Prefer elpa
@@ -206,7 +206,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (59)               | Class  | Gelpa    | Link                                         |
+| Package (60)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -214,6 +214,7 @@
 | ahungry-theme              | github | subtree  | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
 | async                      | github | subtree  | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
 | avy                        | github | subtree  | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
+| bbdb                       | git    | external | [[http://bbdb.sourceforge.net]]                  |
 | beacon                     | github | subtree  | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
 | bug-hunter                 | github | subtree  | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
 | coffee-mode                | github | subtree  | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |

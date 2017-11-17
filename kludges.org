@@ -40,7 +40,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (6)     | Class    | Feature    | Reason                 |
+| Package (8)     | Class    | Feature    | Reason                 |
 |-----------------+----------+------------+------------------------|
 | coq             | github   | maths-menu | pending [[https://github.com/ProofGeneral/PG/issues/197][#197]]           |
 | emacspeak       | github   | amixer     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
@@ -50,11 +50,13 @@
 | emacspeak       | github   | tapestry   | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github   | tetris     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | riece           | git      | ptexinfmt  | todo                   |
+| simple-paren    | github   | run        | pending [[https://github.com/andreas-roehler/simple-paren/pull/2][#2]]             |
 | slime           | github   | cl-indent  | todo                   |
 | twittering-mode | github   | ssl        | backward compatibility |
 | twittering-mode | github   | test       | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
 | w3m             | orphaned | ptexinfmt  | todo                   |
 | w3m             | orphaned | rfc2368    | todo                   |
+| ycmd            | github   | run        | pending [[https://github.com/abingham/emacs-ycmd/pull/455][#455]]           |
 
 * Drop required features
 #+NAME: required-drop
