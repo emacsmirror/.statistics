@@ -5,7 +5,9 @@
 
   (defconst emir--orphans-cache
     (cl-delete-if (lambda (it) (equal (cdr (assq 'name it)) "p"))
-                  (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil nil nil t)
+                  (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil
+                                     :unpaginate t
+                                     :auth 'emir)
                            #'string< :key (lambda (it) (cdr (assq 'name it))))))
 
   (defun emir--list-orphans (&rest only)
