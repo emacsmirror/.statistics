@@ -63,8 +63,8 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |        |       |   458 |     6 |       |
-| elpa        |  107 |    107 |       |       |   160 |       |
-| elpa-branch |    8 |      8 |       |       |    15 |       |
+| elpa        |  108 |    108 |       |       |   161 |       |
+| elpa-branch |    8 |      8 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 3909 |   3909 |       |       |       |  3528 |
 | gitlab      |   40 |     40 |       |       |       |    32 |
@@ -81,7 +81,7 @@
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1087 |        |  1087 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6733 |   5190 |  1087 |   458 |   181 |  3791 |
+| total       | 6734 |   5191 |  1087 |   458 |   183 |  3791 |
 
 * Emacs
 ** Prefer elpa
@@ -206,7 +206,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (60)               | Class  | Gelpa    | Link                                         |
+| Package (61)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -255,6 +255,7 @@
 | rich-minority              | github | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | sotlisp                    | github | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
 | spinner                    | github | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
+| sql-indent                 | github | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                          |
 | systemd                    | github | subtree  | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
 | test-simple                | github | subtree  | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
 | tiny                       | github | subtree  | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
