@@ -66,7 +66,7 @@
 | elpa        |  108 |    108 |       |       |   161 |       |
 | elpa-branch |    8 |      8 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3909 |   3909 |       |       |       |  3528 |
+| github      | 3916 |   3916 |       |       |       |  3536 |
 | gitlab      |   40 |     40 |       |       |       |    32 |
 | git         |   54 |     54 |       |       |       |    42 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1087 |        |  1087 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6734 |   5191 |  1087 |   458 |   183 |  3791 |
+| total       | 6741 |   5198 |  1087 |   458 |   183 |  3799 |
 
 * Emacs
 ** Prefer elpa
@@ -316,7 +316,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (79)    | Secondary package               | Class    |
+| Primary package (80)    | Secondary package               | Class    |
 |-------------------------+---------------------------------+----------|
 | ac-php                  | ac-php-core                     | github   |
 | ac-php                  | company-php                     | github   |
@@ -336,6 +336,7 @@
 | clojure-mode            | clojure-mode-extra-font-locking | github   |
 | codesearch              | projectile-codesearch           | github   |
 | copyit                  | copyit-pandoc                   | github   |
+| crystal-mode            | flycheck-crystal                | github   |
 | ctl-mode                | gs-mode                         | github   |
 | dash                    | dash-functional                 | github   |
 | datetime-format         | timecop                         | github   |
