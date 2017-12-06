@@ -75,11 +75,11 @@ https://melpa.org
 #+RESULTS: count-melpa
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2511 |      66 |
+| GPL-3+        |  2523 |      66 |
 | GPL-2+        |   612 |      16 |
-| GPL-3         |   128 |       3 |
-| MIT (x11)     |   128 |       3 |
-| MIT           |   124 |       3 |
+| GPL-3         |   130 |       3 |
+| MIT (x11)     |   129 |       3 |
+| MIT           |   125 |       3 |
 | BSD-2-clause  |    69 |       2 |
 | BSD-3-clause  |    38 |       1 |
 | Apache-2.0    |    34 |       1 |
@@ -88,9 +88,9 @@ https://melpa.org
 | as-is         |    21 |       1 |
 | ((failure/p)) |    14 |       0 |
 | WTFPL         |    13 |       0 |
+| ((failure))   |     5 |       0 |
 | GPL-1+        |     4 |       0 |
 | WTFPL-2       |     4 |       0 |
-| ((failure))   |     4 |       0 |
 | AGPL-3+       |     3 |       0 |
 | BEER-WARE     |     3 |       0 |
 | ISC (and)     |     3 |       0 |
@@ -108,9 +108,9 @@ https://melpa.org
 | MPL-2         |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3267 |      86 |
+| total GNU     |  3281 |      86 |
 |---------------+-------+---------|
-| total         |  3791 |     100 |
+| total         |  3808 |     100 |
 
 * Licenses used by packages on the Emacsmirror
 
@@ -137,11 +137,11 @@ https://emacsmirror.net
 #+RESULTS: count-emacsmirror
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  2986 |      59 |
+| GPL-3+          |  2997 |      59 |
 | GPL-2+          |  1336 |      26 |
-| GPL-3           |   134 |       3 |
-| MIT (x11)       |   127 |       3 |
-| MIT             |   127 |       3 |
+| GPL-3           |   136 |       3 |
+| MIT (x11)       |   128 |       3 |
+| MIT             |   128 |       3 |
 | BSD-2-clause    |    73 |       1 |
 | public-domain   |    48 |       1 |
 | BSD-3-clause    |    41 |       1 |
@@ -175,6 +175,6 @@ https://emacsmirror.net
 | Ruby            |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4479 |      88 |
+| total GNU       |  4492 |      88 |
 |-----------------+-------+---------|
-| total           |  5075 |     100 |
+| total           |  5090 |     100 |
