@@ -29,6 +29,10 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (1) | Package   | Shelved |
+|-------------+-----------+---------|
+| analog      | analog    | t       |
+| analog      | emacspeak |         |
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -55,9 +59,11 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2) | Class       | Feature        | Shelved  |
+| Package (3) | Class       | Feature        | Shelved  |
 |-------------+-------------+----------------+----------|
 | jabber      | git         | festival       | festival |
+| smart-jump  | github      | clojure        |          |
+| smart-jump  | github      | erlang-mode    |          |
 | w3          | elpa-branch | dtk-css-speech |          |
 
 - jabber: [[mu4e:msgid:87k20ldzkg.fsf@bernoul.li][Organizing the quest]]
@@ -81,223 +87,229 @@ available over https.
 
 #+NAME: insecure
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "Url")
-    (-filter (pcase-lambda (`(,name ,class ,url))
-               (or (not url)
-                   (string-prefix-p "http://" url)
-                   (string-prefix-p "git://" url)))
-             (epkg-sql [:select [name class url]
-                        :from packages
-                        :where class :in $v1
-                        :order-by [(asc url) (asc name)]]
-                       (closql-where-class-in
-                        'epkg-mirrored-package--eieio-childp))))
+  (epkg-with-org-header ("Package" "Class" "Year" "M" "Dep" "Url")
+    (-keep (pcase-lambda (`(,name ,class ,updated ,url))
+             (and (or (not url)
+                      (string-prefix-p "http://" url)
+                      (string-prefix-p "git://" url))
+                  (list name class
+                        (substring updated 0 4)
+                        (and (melpa-get name) t)
+                        (let ((deps (epkg-reverse-dependencies (epkg name))))
+                          (and deps (length deps)))
+                        url)))
+           (epkg-sql [:select [name class updated url]
+                      :from packages
+                      :where class :in $v1
+                      :order-by [(asc url) (asc name)]]
+                     (closql-where-class-in
+                      'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: insecure
-| Package (204)             | Class | Url                                                                                         |
-|---------------------------+-------+---------------------------------------------------------------------------------------------|
-| speechd                   | git   | git://git.freebsoft.org/git/speechd-el                                                      |
-| eide                      | git   | git://git.tuxfamily.org/gitroot/eide/emacs-ide.git                                          |
-| notmuch                   | git   | git://notmuchmail.org/git/notmuch                                                           |
-| org                       | git   | git://orgmode.org/org-mode.git                                                              |
-| os                        | git   | git://orgmode.org/org-sync.git                                                              |
-| anything                  | git   | git://repo.or.cz/anything-config.git                                                        |
-| globalizer                | git   | git://repo.or.cz/meg.git                                                                    |
-| org-fstree                | git   | git://repo.or.cz/org-fstree.git                                                             |
-| project-buffer-mode       | git   | git://repo.or.cz/project-buffer-mode.git                                                    |
-| show-functions            | file  | http://aurelien.tisne.free.fr/emacs-pages/emacs/show-functions.el                           |
-| autolisp                  | file  | http://autocad.xarch.at/lsp_tools/ntemacs/autolisp.el                                       |
-| cmucl-wire                | file  | http://emarsden.chez.com/downloads/cmucl-wire.el                                            |
-| coffee                    | file  | http://emarsden.chez.com/downloads/coffee.el                                                |
-| dict-web                  | file  | http://emarsden.chez.com/downloads/dict-web.el                                              |
-| ipp                       | file  | http://emarsden.chez.com/downloads/ipp.el                                                   |
-| watson                    | file  | http://emarsden.chez.com/downloads/watson.el                                                |
-| command-frequency         | file  | http://ergoemacs.org/emacs/command-frequency.el                                             |
-| loop-constructs           | file  | http://gmarceau.qc.ca/loop-constructs.el                                                    |
-| plugin                    | file  | http://gmarceau.qc.ca/plugin.el                                                             |
-| record                    | file  | http://gmarceau.qc.ca/record.el                                                             |
-| spread                    | file  | http://gmarceau.qc.ca/spread.el                                                             |
-| cc-tempo-electric-support | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/cc-tempo-electric-support.el      |
-| dir-shell                 | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/dir-shell.el                      |
-| flyspell-timer            | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/flyspell-timer.el                 |
-| jfolding                  | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/jfolding.el                       |
-| labbook                   | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/labbook.el                        |
-| lazy-desktop              | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/lazy-desktop.el                   |
-| muse-definition           | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/muse-definition.el                |
-| muse-settings             | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/muse-settings.el                  |
-| muse-trail                | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/muse-trail.el                     |
-| pgg-crypt                 | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/pgg-crypt.el                      |
-| tmmofl-x                  | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/tmmofl-x.el                       |
-| variant-abbc              | file  | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/variant-abbc.el                   |
-| messkeyw                  | file  | http://karl.kleinpaste.org/gnus/messkeyw.el                                                 |
-| pack-windows              | file  | http://lampwww.epfl.ch/~schinz/elisp/pack-windows.el                                        |
-| cocol                     | file  | http://lgarc.narod.ru/xemacs/cocol.el                                                       |
-| himarks-mode              | file  | http://lgarc.narod.ru/xemacs/himarks-mode.el                                                |
-| multr                     | file  | http://lgarc.narod.ru/xemacs/multr.el                                                       |
-| prefixkey                 | file  | http://lgarc.narod.ru/xemacs/prefixkey.el                                                   |
-| rdict                     | file  | http://lgarc.narod.ru/xemacs/rdict.el                                                       |
-| tpum                      | file  | http://lgarc.narod.ru/xemacs/tpum.el                                                        |
-| qemu                      | file  | http://racin.free.fr/files/qemu.el                                                          |
-| task-mode                 | file  | http://racin.free.fr/old/pub/task-mode/0.8rc1/task.el                                       |
-| gnus-checker              | file  | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/gnus-checker.el                       |
-| prove                     | file  | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/prove.el                              |
-| smallurl                  | file  | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/smallurl.el                           |
-| nntodo                    | file  | http://sachachua.com/notebook/emacs/nntodo.el                                               |
-| agchat                    | file  | http://splode.com/~friedman/software/emacs-lisp/src/agchat.el                               |
-| bbdb-pilot-jwz            | file  | http://splode.com/~friedman/software/emacs-lisp/src/bbdb-pilot-jwz.el                       |
-| buffer-fns                | file  | http://splode.com/~friedman/software/emacs-lisp/src/buffer-fns.el                           |
-| bytecomp-fns              | file  | http://splode.com/~friedman/software/emacs-lisp/src/bytecomp-fns.el                         |
-| comint-popup              | file  | http://splode.com/~friedman/software/emacs-lisp/src/comint-popup.el                         |
-| cvs-scramble              | file  | http://splode.com/~friedman/software/emacs-lisp/src/cvs-scramble.el                         |
-| czscm                     | file  | http://splode.com/~friedman/software/emacs-lisp/src/czscm.el                                |
-| dbfrobs                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/dbfrobs.el                              |
-| deep-copy                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/deep-copy.el                            |
-| diacriticalize            | file  | http://splode.com/~friedman/software/emacs-lisp/src/diacriticalize.el                       |
-| disptime                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/disptime.el                             |
-| doh                       | file  | http://splode.com/~friedman/software/emacs-lisp/src/doh.el                                  |
-| emacs-name                | file  | http://splode.com/~friedman/software/emacs-lisp/src/emacs-name.el                           |
-| emacs-variants            | file  | http://splode.com/~friedman/software/emacs-lisp/src/emacs-variants.el                       |
-| escreen                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/escreen.el                              |
-| face-fns                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/face-fns.el                             |
-| fff-elisp                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/fff-elisp.el                            |
-| fff-rfc                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/fff-rfc.el                              |
-| fff                       | file  | http://splode.com/~friedman/software/emacs-lisp/src/fff.el                                  |
-| file-fns                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/file-fns.el                             |
-| flame                     | file  | http://splode.com/~friedman/software/emacs-lisp/src/flame.el                                |
-| flash-paren               | file  | http://splode.com/~friedman/software/emacs-lisp/src/flash-paren.el                          |
-| fmailutils                | file  | http://splode.com/~friedman/software/emacs-lisp/src/fmailutils.el                           |
-| fshell                    | file  | http://splode.com/~friedman/software/emacs-lisp/src/fshell.el                               |
-| ftcp                      | file  | http://splode.com/~friedman/software/emacs-lisp/src/ftcp.el                                 |
-| ftelnet                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/ftelnet.el                              |
-| host-fns                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/host-fns.el                             |
-| infobook                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/infobook.el                             |
-| inktc                     | file  | http://splode.com/~friedman/software/emacs-lisp/src/inktc.el                                |
-| invoice                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/invoice.el                              |
-| kbd-fns                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/kbd-fns.el                              |
-| lat1conv                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/lat1conv.el                             |
-| linuxproc                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/linuxproc.el                            |
-| list-fns                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/list-fns.el                             |
-| listbuf                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/listbuf.el                              |
-| load-fns                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/load-fns.el                             |
-| lude                      | file  | http://splode.com/~friedman/software/emacs-lisp/src/lude.el                                 |
-| map-win                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/map-win.el                              |
-| meditate                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/meditate.el                             |
-| moo                       | file  | http://splode.com/~friedman/software/emacs-lisp/src/moo.el                                  |
-| motion-fns                | file  | http://splode.com/~friedman/software/emacs-lisp/src/motion-fns.el                           |
-| nf-procmail-mode          | file  | http://splode.com/~friedman/software/emacs-lisp/src/nf-procmail-mode.el                     |
-| ns-browse                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/ns-browse.el                            |
-| obarray-fns               | file  | http://splode.com/~friedman/software/emacs-lisp/src/obarray-fns.el                          |
-| order-head                | file  | http://splode.com/~friedman/software/emacs-lisp/src/order-head.el                           |
-| pb-popup                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/pb-popup.el                             |
-| proc-filters              | file  | http://splode.com/~friedman/software/emacs-lisp/src/proc-filters.el                         |
-| protbuf                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/protbuf.el                              |
-| qpdecode                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/qpdecode.el                             |
-| rmail-frobs               | file  | http://splode.com/~friedman/software/emacs-lisp/src/rmail-frobs.el                          |
-| save-undo                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/save-undo.el                            |
-| sendmail-alias            | file  | http://splode.com/~friedman/software/emacs-lisp/src/sendmail-alias.el                       |
-| setq-trap                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/setq-trap.el                            |
-| shop                      | file  | http://splode.com/~friedman/software/emacs-lisp/src/shop.el                                 |
-| spookmime                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/spookmime.el                            |
-| string-fns                | file  | http://splode.com/~friedman/software/emacs-lisp/src/string-fns.el                           |
-| suggbind                  | file  | http://splode.com/~friedman/software/emacs-lisp/src/suggbind.el                             |
-| timestamp                 | file  | http://splode.com/~friedman/software/emacs-lisp/src/timestamp.el                            |
-| twiddle                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/twiddle.el                              |
-| twiki-outline             | file  | http://splode.com/~friedman/software/emacs-lisp/src/twiki-outline.el                        |
-| update-dns                | file  | http://splode.com/~friedman/software/emacs-lisp/src/update-dns.el                           |
-| upside-down               | file  | http://splode.com/~friedman/software/emacs-lisp/src/upside-down.el                          |
-| viewtex                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/viewtex.el                              |
-| vkill                     | file  | http://splode.com/~friedman/software/emacs-lisp/src/vkill.el                                |
-| what-domain               | file  | http://splode.com/~friedman/software/emacs-lisp/src/what-domain.el                          |
-| win-disp-util             | file  | http://splode.com/~friedman/software/emacs-lisp/src/win-disp-util.el                        |
-| xterm-frobs               | file  | http://splode.com/~friedman/software/emacs-lisp/src/xterm-frobs.el                          |
-| xterm-title               | file  | http://splode.com/~friedman/software/emacs-lisp/src/xterm-title.el                          |
-| yow-fns                   | file  | http://splode.com/~friedman/software/emacs-lisp/src/yow-fns.el                              |
-| ysq-modeline              | file  | http://splode.com/~friedman/software/emacs-lisp/src/ysq-modeline.el                         |
-| ysq                       | file  | http://splode.com/~friedman/software/emacs-lisp/src/ysq.el                                  |
-| amixer                    | file  | http://sugarshark.com/elisp/mylisp/amixer.el                                                |
-| emacs-wiki-boxes          | file  | http://sugarshark.com/elisp/mylisp/emacs-wiki-boxes.el                                      |
-| pom                       | file  | http://sugarshark.com/elisp/mylisp/pom.el                                                   |
-| bash-org                  | file  | http://tess.oconnor.cx/elisp/bash-org.el                                                    |
-| couchdb                   | file  | http://tess.oconnor.cx/elisp/couchdb.el                                                     |
-| cygwin-link               | file  | http://tess.oconnor.cx/elisp/cygwin-link.el                                                 |
-| dom5                      | file  | http://tess.oconnor.cx/elisp/dom5.el                                                        |
-| edom                      | file  | http://tess.oconnor.cx/elisp/edom.el                                                        |
-| growl                     | file  | http://tess.oconnor.cx/elisp/growl.el                                                       |
-| hl-sexp                   | file  | http://tess.oconnor.cx/elisp/hl-sexp.el                                                     |
-| mallow                    | file  | http://tess.oconnor.cx/elisp/mallow.el                                                      |
-| osx-plist                 | file  | http://tess.oconnor.cx/elisp/osx-plist.el                                                   |
-| scrape                    | file  | http://tess.oconnor.cx/elisp/scrape.el                                                      |
-| soap                      | file  | http://tess.oconnor.cx/elisp/soap.el                                                        |
-| technorati                | file  | http://tess.oconnor.cx/elisp/technorati.el                                                  |
-| tokipona                  | file  | http://tess.oconnor.cx/elisp/tokipona.el                                                    |
-| xml-event                 | file  | http://tess.oconnor.cx/elisp/xml-event.el                                                   |
-| xml-stream                | file  | http://tess.oconnor.cx/elisp/xml-stream.el                                                  |
-| lookout                   | file  | http://ulf.epplejasper.de/downloads/lookout.el                                              |
-| u-appt                    | file  | http://ulf.epplejasper.de/downloads/u-appt.el                                               |
-| u-color-cycle             | file  | http://ulf.epplejasper.de/downloads/u-color-cycle.el                                        |
-| u-mandelbrot              | file  | http://ulf.epplejasper.de/downloads/u-mandelbrot.el                                         |
-| randomsig                 | file  | http://www.backmes.de/scripts+programs/randomsig.el                                         |
-| grep-edit                 | file  | http://www.bookshelf.jp/elc/grep-edit.el                                                    |
-| gresreg                   | file  | http://www.bookshelf.jp/elc/gresreg.el                                                      |
-| list-register             | file  | http://www.bookshelf.jp/elc/list-register.el                                                |
-| moccur-edit               | file  | http://www.bookshelf.jp/elc/moccur-edit.el                                                  |
-| fm                        | file  | http://www.damtp.cam.ac.uk/user/sje30/emacs/fm.el                                           |
-| show-point-mode           | file  | http://www.dr-qubit.org/emacs-misc/show-point-mode.el                                       |
-| undo-tree                 | git   | http://www.dr-qubit.org/git/undo-tree.git                                                   |
-| brief                     | file  | http://www.emacs.mirkolinkonline.de/download/brief.el                                       |
-| file-ext                  | file  | http://www.emacs.mirkolinkonline.de/download/file-ext.el                                    |
-| desktop-menu              | file  | http://www.geekware.de/software/emacs/desktop-menu.el                                       |
-| highlight-regexp          | file  | http://www.geekware.de/software/emacs/highlight-regexp.el                                   |
-| ibs                       | file  | http://www.geekware.de/software/emacs/ibs.el                                                |
-| chasen                    | file  | http://www.geocities.co.jp/SiliconValley-PaloAlto/7043/spamfilter/chasen.el.txt             |
-| japanese-tokenizer        | file  | http://www.geocities.co.jp/SiliconValley-PaloAlto/7043/spamfilter/japanese-tokenizer.el.txt |
-| spamfilter                | file  | http://www.geocities.co.jp/SiliconValley-PaloAlto/7043/spamfilter/spamfilter.el.txt         |
-| gnus-highlight            | file  | http://www.hardakers.net/elisp/gnus-highlight.el                                            |
-| autocap                   | file  | http://www.loveshack.ukfsn.org/emacs/autocap.el                                             |
-| cif                       | file  | http://www.loveshack.ukfsn.org/emacs/cif.el                                                 |
-| diary-outlook             | file  | http://www.loveshack.ukfsn.org/emacs/diary-outlook.el                                       |
-| haskell-latex             | file  | http://www.loveshack.ukfsn.org/emacs/haskell-latex.el                                       |
-| html-php                  | file  | http://www.loveshack.ukfsn.org/emacs/html-php.el                                            |
-| indent-tabs-maybe         | file  | http://www.loveshack.ukfsn.org/emacs/indent-tabs-maybe.el                                   |
-| ldap-mode                 | file  | http://www.loveshack.ukfsn.org/emacs/ldap-mode.el                                           |
-| ldif-ns                   | file  | http://www.loveshack.ukfsn.org/emacs/ldif-ns.el                                             |
-| maths-menu                | file  | http://www.loveshack.ukfsn.org/emacs/maths-menu.el                                          |
-| multi-comment             | file  | http://www.loveshack.ukfsn.org/emacs/multi-comment.el                                       |
-| multi-mode                | file  | http://www.loveshack.ukfsn.org/emacs/multi-mode.el                                          |
-| noweb                     | file  | http://www.loveshack.ukfsn.org/emacs/noweb.el                                               |
-| pair-mode                 | file  | http://www.loveshack.ukfsn.org/emacs/pair-mode.el                                           |
-| pdb                       | file  | http://www.loveshack.ukfsn.org/emacs/pdb.el                                                 |
-| phrase                    | file  | http://www.loveshack.ukfsn.org/emacs/phrase.el                                              |
-| protect-files             | file  | http://www.loveshack.ukfsn.org/emacs/protect-files.el                                       |
-| rfcview                   | file  | http://www.loveshack.ukfsn.org/emacs/rfcview.el                                             |
-| uniesc                    | file  | http://www.loveshack.ukfsn.org/emacs/uniesc.el                                              |
-| auto-lang                 | file  | http://www.marquardt-home.de/auto-lang.el                                                   |
-| todoo                     | file  | http://www.mulix.org/code/todoo/todoo.el                                                    |
-| quack                     | file  | http://www.neilvandyke.org/quack/quack.el                                                   |
-| profile-dotemacs          | file  | http://www.randomsample.de/profile-dotemacs.el                                              |
-| gedcom                    | file  | http://www.rempe-online.de/genealogie/lines/gedcom.el                                       |
-| find-files                | file  | http://www.robf.de/Hacking/elisp/find-files.el                                              |
-| active-menu               | file  | http://www.skamphausen.de/cgi-bin/ska/download/active-menu.el                               |
-| mouse-focus               | file  | http://www.skamphausen.de/cgi-bin/ska/download/mouse-focus.el                               |
-| multiselect               | file  | http://www.skamphausen.de/cgi-bin/ska/download/multiselect.el                               |
-| swiss-move                | file  | http://www.skamphausen.de/cgi-bin/ska/download/swiss-move.el                                |
-| taskjuggler-mode          | file  | http://www.skamphausen.de/cgi-bin/ska/download/taskjuggler-mode.el                          |
-| texletter                 | file  | http://www.skamphausen.de/cgi-bin/ska/download/texletter.el                                 |
-| track-scroll              | file  | http://www.skamphausen.de/cgi-bin/ska/download/track-scroll.el                              |
-| watch-sexp                | file  | http://www.skamphausen.de/cgi-bin/ska/download/watch-sexp.el                                |
-| c-comment-edit            | file  | http://www.wonderworks.com/download/c-comment-edit.el                                       |
-| redo                      | file  | http://www.wonderworks.com/download/redo.el                                                 |
-| dar                       | file  | http://www.xsteve.at/prg/emacs/dar.el                                                       |
-| grabbox                   | file  | http://www.xsteve.at/prg/emacs/grabbox.el                                                   |
-| ion3                      | file  | http://www.xsteve.at/prg/emacs/ion3.el                                                      |
-| mouse-embrace             | file  | http://www.xsteve.at/prg/emacs/mouse-embrace.el                                             |
-| progr-align               | file  | http://www.xsteve.at/prg/emacs/progr-align.el                                               |
-| psvn                      | file  | http://www.xsteve.at/prg/emacs/psvn.el                                                      |
-| pwsafe                    | file  | http://www.xsteve.at/prg/emacs/pwsafe.el                                                    |
-| quick-task                | file  | http://www.xsteve.at/prg/emacs/quick-task.el                                                |
-| sww                       | file  | http://www.xsteve.at/prg/emacs/sww.el                                                       |
-| woof                      | file  | http://www.xsteve.at/prg/emacs/woof.el                                                      |
-| x-dict                    | file  | http://www.xsteve.at/prg/emacs/x-dict.el                                                    |
-| xwindow-ring              | file  | http://www.xsteve.at/prg/emacs/xwindow-ring.el                                              |
-| diamondsms                | file  | http://yrk.nfshost.com/repos/diamondsms/diamondsms.el                                       |
+| Package (204)             | Class | Year | M | Dep | Url                                                                                         |
+|---------------------------+-------+------+---+-----+---------------------------------------------------------------------------------------------|
+| speechd                   | git   | 2016 |   |     | git://git.freebsoft.org/git/speechd-el                                                      |
+| eide                      | git   | 2017 | t |     | git://git.tuxfamily.org/gitroot/eide/emacs-ide.git                                          |
+| notmuch                   | git   | 2017 | t |   4 | git://notmuchmail.org/git/notmuch                                                           |
+| org                       | git   | 2017 |   | 302 | git://orgmode.org/org-mode.git                                                              |
+| os                        | git   | 2014 |   |     | git://orgmode.org/org-sync.git                                                              |
+| anything                  | git   | 2017 | t |  35 | git://repo.or.cz/anything-config.git                                                        |
+| globalizer                | git   | 2007 |   |     | git://repo.or.cz/meg.git                                                                    |
+| org-fstree                | git   | 2009 | t |     | git://repo.or.cz/org-fstree.git                                                             |
+| project-buffer-mode       | git   | 2010 |   |     | git://repo.or.cz/project-buffer-mode.git                                                    |
+| show-functions            | file  | 2010 |   |     | http://aurelien.tisne.free.fr/emacs-pages/emacs/show-functions.el                           |
+| autolisp                  | file  | 2011 |   |     | http://autocad.xarch.at/lsp_tools/ntemacs/autolisp.el                                       |
+| cmucl-wire                | file  | 2009 |   |     | http://emarsden.chez.com/downloads/cmucl-wire.el                                            |
+| coffee                    | file  | 2009 |   |     | http://emarsden.chez.com/downloads/coffee.el                                                |
+| dict-web                  | file  | 2009 |   |   1 | http://emarsden.chez.com/downloads/dict-web.el                                              |
+| ipp                       | file  | 2009 |   |     | http://emarsden.chez.com/downloads/ipp.el                                                   |
+| watson                    | file  | 2010 |   |     | http://emarsden.chez.com/downloads/watson.el                                                |
+| command-frequency         | file  | 2012 |   |   1 | http://ergoemacs.org/emacs/command-frequency.el                                             |
+| loop-constructs           | file  | 2010 |   |   1 | http://gmarceau.qc.ca/loop-constructs.el                                                    |
+| plugin                    | file  | 2010 |   |     | http://gmarceau.qc.ca/plugin.el                                                             |
+| record                    | file  | 2010 |   |   1 | http://gmarceau.qc.ca/record.el                                                             |
+| spread                    | file  | 2010 |   |     | http://gmarceau.qc.ca/spread.el                                                             |
+| cc-tempo-electric-support | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/cc-tempo-electric-support.el      |
+| dir-shell                 | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/dir-shell.el                      |
+| flyspell-timer            | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/flyspell-timer.el                 |
+| jfolding                  | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/jfolding.el                       |
+| labbook                   | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/labbook.el                        |
+| lazy-desktop              | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/lazy-desktop.el                   |
+| muse-definition           | file  | 2010 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/muse-definition.el                |
+| muse-settings             | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/muse-settings.el                  |
+| muse-trail                | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/muse-trail.el                     |
+| pgg-crypt                 | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/pgg-crypt.el                      |
+| tmmofl-x                  | file  | 2009 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/tmmofl-x.el                       |
+| variant-abbc              | file  | 2010 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/variant-abbc.el                   |
+| messkeyw                  | file  | 2010 |   |     | http://karl.kleinpaste.org/gnus/messkeyw.el                                                 |
+| pack-windows              | file  | 2009 |   |     | http://lampwww.epfl.ch/~schinz/elisp/pack-windows.el                                        |
+| cocol                     | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/cocol.el                                                       |
+| himarks-mode              | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/himarks-mode.el                                                |
+| multr                     | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/multr.el                                                       |
+| prefixkey                 | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/prefixkey.el                                                   |
+| rdict                     | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/rdict.el                                                       |
+| tpum                      | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/tpum.el                                                        |
+| qemu                      | file  | 2010 |   |     | http://racin.free.fr/files/qemu.el                                                          |
+| task-mode                 | file  | 2010 |   |     | http://racin.free.fr/old/pub/task-mode/0.8rc1/task.el                                       |
+| gnus-checker              | file  | 2010 |   |     | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/gnus-checker.el                       |
+| prove                     | file  | 2010 |   |     | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/prove.el                              |
+| smallurl                  | file  | 2010 |   |     | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/smallurl.el                           |
+| nntodo                    | file  | 2010 |   |     | http://sachachua.com/notebook/emacs/nntodo.el                                               |
+| agchat                    | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/agchat.el                               |
+| bbdb-pilot-jwz            | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/bbdb-pilot-jwz.el                       |
+| buffer-fns                | file  | 2017 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/buffer-fns.el                           |
+| bytecomp-fns              | file  | 2011 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/bytecomp-fns.el                         |
+| comint-popup              | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/comint-popup.el                         |
+| cvs-scramble              | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/cvs-scramble.el                         |
+| czscm                     | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/czscm.el                                |
+| dbfrobs                   | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/dbfrobs.el                              |
+| deep-copy                 | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/deep-copy.el                            |
+| diacriticalize            | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/diacriticalize.el                       |
+| disptime                  | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/disptime.el                             |
+| doh                       | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/doh.el                                  |
+| emacs-name                | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/emacs-name.el                           |
+| emacs-variants            | file  | 2016 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/emacs-variants.el                       |
+| escreen                   | file  | 2017 | t |   1 | http://splode.com/~friedman/software/emacs-lisp/src/escreen.el                              |
+| face-fns                  | file  | 2017 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/face-fns.el                             |
+| fff-elisp                 | file  | 2017 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/fff-elisp.el                            |
+| fff-rfc                   | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/fff-rfc.el                              |
+| fff                       | file  | 2009 |   |   2 | http://splode.com/~friedman/software/emacs-lisp/src/fff.el                                  |
+| file-fns                  | file  | 2017 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/file-fns.el                             |
+| flame                     | file  | 2015 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/flame.el                                |
+| flash-paren               | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/flash-paren.el                          |
+| fmailutils                | file  | 2011 |   |   4 | http://splode.com/~friedman/software/emacs-lisp/src/fmailutils.el                           |
+| fshell                    | file  | 2012 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/fshell.el                               |
+| ftcp                      | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/ftcp.el                                 |
+| ftelnet                   | file  | 2012 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/ftelnet.el                              |
+| host-fns                  | file  | 2017 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/host-fns.el                             |
+| infobook                  | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/infobook.el                             |
+| inktc                     | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/inktc.el                                |
+| invoice                   | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/invoice.el                              |
+| kbd-fns                   | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/kbd-fns.el                              |
+| lat1conv                  | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/lat1conv.el                             |
+| linuxproc                 | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/linuxproc.el                            |
+| list-fns                  | file  | 2017 |   |   3 | http://splode.com/~friedman/software/emacs-lisp/src/list-fns.el                             |
+| listbuf                   | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/listbuf.el                              |
+| load-fns                  | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/load-fns.el                             |
+| lude                      | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/lude.el                                 |
+| map-win                   | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/map-win.el                              |
+| meditate                  | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/meditate.el                             |
+| moo                       | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/moo.el                                  |
+| motion-fns                | file  | 2017 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/motion-fns.el                           |
+| nf-procmail-mode          | file  | 2012 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/nf-procmail-mode.el                     |
+| ns-browse                 | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/ns-browse.el                            |
+| obarray-fns               | file  | 2009 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/obarray-fns.el                          |
+| order-head                | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/order-head.el                           |
+| pb-popup                  | file  | 2009 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/pb-popup.el                             |
+| proc-filters              | file  | 2017 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/proc-filters.el                         |
+| protbuf                   | file  | 2009 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/protbuf.el                              |
+| qpdecode                  | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/qpdecode.el                             |
+| rmail-frobs               | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/rmail-frobs.el                          |
+| save-undo                 | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/save-undo.el                            |
+| sendmail-alias            | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/sendmail-alias.el                       |
+| setq-trap                 | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/setq-trap.el                            |
+| shop                      | file  | 2009 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/shop.el                                 |
+| spookmime                 | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/spookmime.el                            |
+| string-fns                | file  | 2017 |   |   2 | http://splode.com/~friedman/software/emacs-lisp/src/string-fns.el                           |
+| suggbind                  | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/suggbind.el                             |
+| timestamp                 | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/timestamp.el                            |
+| twiddle                   | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/twiddle.el                              |
+| twiki-outline             | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/twiki-outline.el                        |
+| update-dns                | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/update-dns.el                           |
+| upside-down               | file  | 2013 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/upside-down.el                          |
+| viewtex                   | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/viewtex.el                              |
+| vkill                     | file  | 2009 | t |     | http://splode.com/~friedman/software/emacs-lisp/src/vkill.el                                |
+| what-domain               | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/what-domain.el                          |
+| win-disp-util             | file  | 2017 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/win-disp-util.el                        |
+| xterm-frobs               | file  | 2016 | t |   1 | http://splode.com/~friedman/software/emacs-lisp/src/xterm-frobs.el                          |
+| xterm-title               | file  | 2009 | t |     | http://splode.com/~friedman/software/emacs-lisp/src/xterm-title.el                          |
+| yow-fns                   | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/yow-fns.el                              |
+| ysq-modeline              | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/ysq-modeline.el                         |
+| ysq                       | file  | 2015 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/ysq.el                                  |
+| amixer                    | file  | 2010 |   |     | http://sugarshark.com/elisp/mylisp/amixer.el                                                |
+| emacs-wiki-boxes          | file  | 2009 |   |     | http://sugarshark.com/elisp/mylisp/emacs-wiki-boxes.el                                      |
+| pom                       | file  | 2009 |   |     | http://sugarshark.com/elisp/mylisp/pom.el                                                   |
+| bash-org                  | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/bash-org.el                                                    |
+| couchdb                   | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/couchdb.el                                                     |
+| cygwin-link               | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/cygwin-link.el                                                 |
+| dom5                      | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/dom5.el                                                        |
+| edom                      | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/edom.el                                                        |
+| growl                     | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/growl.el                                                       |
+| hl-sexp                   | file  | 2010 | t |     | http://tess.oconnor.cx/elisp/hl-sexp.el                                                     |
+| mallow                    | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/mallow.el                                                      |
+| osx-plist                 | file  | 2010 | t |     | http://tess.oconnor.cx/elisp/osx-plist.el                                                   |
+| scrape                    | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/scrape.el                                                      |
+| soap                      | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/soap.el                                                        |
+| technorati                | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/technorati.el                                                  |
+| tokipona                  | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/tokipona.el                                                    |
+| xml-event                 | file  | 2010 |   |   1 | http://tess.oconnor.cx/elisp/xml-event.el                                                   |
+| xml-stream                | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/xml-stream.el                                                  |
+| lookout                   | file  | 2009 |   |     | http://ulf.epplejasper.de/downloads/lookout.el                                              |
+| u-appt                    | file  | 2009 |   |     | http://ulf.epplejasper.de/downloads/u-appt.el                                               |
+| u-color-cycle             | file  | 2009 |   |     | http://ulf.epplejasper.de/downloads/u-color-cycle.el                                        |
+| u-mandelbrot              | file  | 2010 |   |     | http://ulf.epplejasper.de/downloads/u-mandelbrot.el                                         |
+| randomsig                 | file  | 2010 |   |     | http://www.backmes.de/scripts+programs/randomsig.el                                         |
+| grep-edit                 | file  | 2010 |   |     | http://www.bookshelf.jp/elc/grep-edit.el                                                    |
+| gresreg                   | file  | 2010 |   |     | http://www.bookshelf.jp/elc/gresreg.el                                                      |
+| list-register             | file  | 2009 | t |     | http://www.bookshelf.jp/elc/list-register.el                                                |
+| moccur-edit               | file  | 2009 |   |   1 | http://www.bookshelf.jp/elc/moccur-edit.el                                                  |
+| fm                        | file  | 2013 | t |   2 | http://www.damtp.cam.ac.uk/user/sje30/emacs/fm.el                                           |
+| show-point-mode           | file  | 2015 |   |     | http://www.dr-qubit.org/emacs-misc/show-point-mode.el                                       |
+| undo-tree                 | git   | 2017 | t |   4 | http://www.dr-qubit.org/git/undo-tree.git                                                   |
+| brief                     | file  | 2009 |   |     | http://www.emacs.mirkolinkonline.de/download/brief.el                                       |
+| file-ext                  | file  | 2009 |   |     | http://www.emacs.mirkolinkonline.de/download/file-ext.el                                    |
+| desktop-menu              | file  | 2009 |   |     | http://www.geekware.de/software/emacs/desktop-menu.el                                       |
+| highlight-regexp          | file  | 2009 |   |     | http://www.geekware.de/software/emacs/highlight-regexp.el                                   |
+| ibs                       | file  | 2009 |   |     | http://www.geekware.de/software/emacs/ibs.el                                                |
+| chasen                    | file  | 2017 |   |   1 | http://www.geocities.co.jp/SiliconValley-PaloAlto/7043/spamfilter/chasen.el.txt             |
+| japanese-tokenizer        | file  | 2017 |   |   1 | http://www.geocities.co.jp/SiliconValley-PaloAlto/7043/spamfilter/japanese-tokenizer.el.txt |
+| spamfilter                | file  | 2017 |   |   2 | http://www.geocities.co.jp/SiliconValley-PaloAlto/7043/spamfilter/spamfilter.el.txt         |
+| gnus-highlight            | file  | 2009 |   |     | http://www.hardakers.net/elisp/gnus-highlight.el                                            |
+| autocap                   | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/autocap.el                                             |
+| cif                       | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/cif.el                                                 |
+| diary-outlook             | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/diary-outlook.el                                       |
+| haskell-latex             | file  | 2010 |   |     | http://www.loveshack.ukfsn.org/emacs/haskell-latex.el                                       |
+| html-php                  | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/html-php.el                                            |
+| indent-tabs-maybe         | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/indent-tabs-maybe.el                                   |
+| ldap-mode                 | file  | 2009 | t |     | http://www.loveshack.ukfsn.org/emacs/ldap-mode.el                                           |
+| ldif-ns                   | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/ldif-ns.el                                             |
+| maths-menu                | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/maths-menu.el                                          |
+| multi-comment             | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/multi-comment.el                                       |
+| multi-mode                | file  | 2010 |   |   5 | http://www.loveshack.ukfsn.org/emacs/multi-mode.el                                          |
+| noweb                     | file  | 2010 |   |     | http://www.loveshack.ukfsn.org/emacs/noweb.el                                               |
+| pair-mode                 | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/pair-mode.el                                           |
+| pdb                       | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/pdb.el                                                 |
+| phrase                    | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/phrase.el                                              |
+| protect-files             | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/protect-files.el                                       |
+| rfcview                   | file  | 2010 |   |     | http://www.loveshack.ukfsn.org/emacs/rfcview.el                                             |
+| uniesc                    | file  | 2009 |   |     | http://www.loveshack.ukfsn.org/emacs/uniesc.el                                              |
+| auto-lang                 | file  | 2010 |   |     | http://www.marquardt-home.de/auto-lang.el                                                   |
+| todoo                     | file  | 2010 |   |     | http://www.mulix.org/code/todoo/todoo.el                                                    |
+| quack                     | file  | 2016 | t |     | http://www.neilvandyke.org/quack/quack.el                                                   |
+| profile-dotemacs          | file  | 2017 |   |     | http://www.randomsample.de/profile-dotemacs.el                                              |
+| gedcom                    | file  | 2009 |   |     | http://www.rempe-online.de/genealogie/lines/gedcom.el                                       |
+| find-files                | file  | 2009 |   |     | http://www.robf.de/Hacking/elisp/find-files.el                                              |
+| active-menu               | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/active-menu.el                               |
+| mouse-focus               | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/mouse-focus.el                               |
+| multiselect               | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/multiselect.el                               |
+| swiss-move                | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/swiss-move.el                                |
+| taskjuggler-mode          | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/taskjuggler-mode.el                          |
+| texletter                 | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/texletter.el                                 |
+| track-scroll              | file  | 2011 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/track-scroll.el                              |
+| watch-sexp                | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/watch-sexp.el                                |
+| c-comment-edit            | file  | 2010 |   |     | http://www.wonderworks.com/download/c-comment-edit.el                                       |
+| redo                      | file  | 2009 |   |   3 | http://www.wonderworks.com/download/redo.el                                                 |
+| dar                       | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/dar.el                                                       |
+| grabbox                   | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/grabbox.el                                                   |
+| ion3                      | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/ion3.el                                                      |
+| mouse-embrace             | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/mouse-embrace.el                                             |
+| progr-align               | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/progr-align.el                                               |
+| psvn                      | file  | 2015 | t |   1 | http://www.xsteve.at/prg/emacs/psvn.el                                                      |
+| pwsafe                    | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/pwsafe.el                                                    |
+| quick-task                | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/quick-task.el                                                |
+| sww                       | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/sww.el                                                       |
+| woof                      | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/woof.el                                                      |
+| x-dict                    | file  | 2009 | t |     | http://www.xsteve.at/prg/emacs/x-dict.el                                                    |
+| xwindow-ring              | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/xwindow-ring.el                                              |
+| diamondsms                | file  | 2010 |   |     | http://yrk.nfshost.com/repos/diamondsms/diamondsms.el                                       |
 

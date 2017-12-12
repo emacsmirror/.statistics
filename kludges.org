@@ -247,37 +247,29 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--libraries
-| Package (6)        | Class | Library                      |
-|--------------------+-------+------------------------------|
-| bookmark+          | wiki  | bookmark+-1.el               |
-| bookmark+          | wiki  | bookmark+-bmu.el             |
-| bookmark+          | wiki  | bookmark+-chg.el             |
-| bookmark+          | wiki  | bookmark+-doc.el             |
-| bookmark+          | wiki  | bookmark+-key.el             |
-| bookmark+          | wiki  | bookmark+-lit.el             |
-| bookmark+          | wiki  | bookmark+-mac.el             |
-| bookmark+          | wiki  | bookmark+.el                 |
-| d-insert-import    | wiki  | d-insert-import-data.el      |
-| d-insert-import    | wiki  | d-insert-import.el           |
-| icicles            | wiki  | icicles-chg.el               |
-| icicles            | wiki  | icicles-cmd1.el              |
-| icicles            | wiki  | icicles-cmd2.el              |
-| icicles            | wiki  | icicles-doc1.el              |
-| icicles            | wiki  | icicles-doc2.el              |
-| icicles            | wiki  | icicles-face.el              |
-| icicles            | wiki  | icicles-fn.el                |
-| icicles            | wiki  | icicles-mac.el               |
-| icicles            | wiki  | icicles-mcmd.el              |
-| icicles            | wiki  | icicles-mode.el              |
-| icicles            | wiki  | icicles-opt.el               |
-| icicles            | wiki  | icicles-var.el               |
-| icicles            | wiki  | icicles.el                   |
-| sequential-command | wiki  | sequential-command-config.el |
-| sequential-command | wiki  | sequential-command.el        |
-| thing-edit         | wiki  | thing-edit-extension.el      |
-| thing-edit         | wiki  | thing-edit.el                |
-| yaoddmuse          | wiki  | yaoddmuse-extension.el       |
-| yaoddmuse          | wiki  | yaoddmuse.el                 |
+| Package (2) | Class | Library          |
+|-------------+-------+------------------|
+| bookmark+   | wiki  | bookmark+-1.el   |
+| bookmark+   | wiki  | bookmark+-bmu.el |
+| bookmark+   | wiki  | bookmark+-chg.el |
+| bookmark+   | wiki  | bookmark+-doc.el |
+| bookmark+   | wiki  | bookmark+-key.el |
+| bookmark+   | wiki  | bookmark+-lit.el |
+| bookmark+   | wiki  | bookmark+-mac.el |
+| bookmark+   | wiki  | bookmark+.el     |
+| icicles     | wiki  | icicles-chg.el   |
+| icicles     | wiki  | icicles-cmd1.el  |
+| icicles     | wiki  | icicles-cmd2.el  |
+| icicles     | wiki  | icicles-doc1.el  |
+| icicles     | wiki  | icicles-doc2.el  |
+| icicles     | wiki  | icicles-face.el  |
+| icicles     | wiki  | icicles-fn.el    |
+| icicles     | wiki  | icicles-mac.el   |
+| icicles     | wiki  | icicles-mcmd.el  |
+| icicles     | wiki  | icicles-mode.el  |
+| icicles     | wiki  | icicles-opt.el   |
+| icicles     | wiki  | icicles-var.el   |
+| icicles     | wiki  | icicles.el       |
 
 * Set branch
 #+NAME: slot--upstream-branch

@@ -40,18 +40,18 @@ packages makes it more appealing to improve the remaining code.
 #+RESULTS:
 | Package (12)      | Vcs   | Last commit           | Commits last year |
 |-------------------+-------+-----------------------+-------------------|
-| cg                | svn   | 13 days ago           |                 4 |
-| clang-format      | svn   | 5 weeks ago           |                25 |
+| cg                | svn   | 3 weeks ago           |                 4 |
+| clang-format      | svn   | 6 weeks ago           |                24 |
 | color-theme       | bzr   | 9 years ago           |                 0 |
 | confluence        | svn   | 4 months ago          |                 1 |
-| darcsum           | darcs | 3 years, 6 months ago |                 0 |
+| darcsum           | darcs | 3 years, 7 months ago |                 0 |
 | dic-lookup-w3m    | svn   | 4 months ago          |                 4 |
 | dsvn              | svn   | 4 months ago          |                 1 |
 | helm-ls-svn       | svn   | 2 years, 5 months ago |                 0 |
-| ruby-additional   | svn   | 8 weeks ago           |                11 |
+| ruby-additional   | svn   | 9 weeks ago           |                11 |
 | swbuff            | cvs   | 10 years ago          |                 0 |
-| tex-smart-umlauts | darcs | 1 year, 7 months ago  |                 0 |
-| w3m               | cvs   | 2 weeks ago           |                93 |
+| tex-smart-umlauts | darcs | 1 year, 8 months ago  |                 0 |
+| w3m               | cvs   | 3 weeks ago           |                93 |
 
 * Missing from Melpa
 
@@ -72,7 +72,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (603)                | Link                                    |
+| Package (604)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -302,6 +302,7 @@ please first make sure they meet the minimal requirements.
 | gosh-mode                    | [[https://github.com/mhayashi1120/Emacs-gosh-mode][mhayashi1120/Emacs-gosh-mode]]            |
 | gplus-mode                   | [[https://github.com/ellencubed/gplus-mode][ellencubed/gplus-mode]]                   |
 | gradle                       | [[https://github.com/vhallac/gradle-el][vhallac/gradle-el]]                       |
+| graphql                      | [[https://github.com/vermiculus/graphql.el][vermiculus/graphql.el]]                   |
 | graphviz-dot                 | [[https://github.com/xwl/graphviz-dot][xwl/graphviz-dot]]                        |
 | grc                          | [[https://github.com/leathekd/grc][leathekd/grc]]                            |
 | griffin                      | [[https://github.com/tokenrove/griffin][tokenrove/griffin]]                       |
