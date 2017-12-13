@@ -101,7 +101,7 @@ publish: html
 	@echo "Uploading to $(PUBLISH_BUCKET)..."
 	@aws s3 sync $(SRC) $(PUBLISH_BUCKET)$(DST) --delete $(SYNC)
 	@aws cloudfront create-invalidation \
-	--distribution-id $(CFRONT_DIST) --paths "/stats/*"
+	--distribution-id $(CFRONT_DIST) --paths "/stats/*" > /dev/null
 
 clean:
 	@echo "Cleaning..."
