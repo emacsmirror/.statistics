@@ -29,10 +29,6 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (1) | Package   | Shelved |
-|-------------+-----------+---------|
-| analog      | analog    | t       |
-| analog      | emacspeak |         |
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -59,14 +55,16 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (3) | Class       | Feature        | Shelved  |
-|-------------+-------------+----------------+----------|
-| jabber      | git         | festival       | festival |
-| smart-jump  | github      | clojure        |          |
-| smart-jump  | github      | erlang-mode    |          |
-| w3          | elpa-branch | dtk-css-speech |          |
+| Package (1) | Class  | Feature     | Shelved |
+|-------------+--------+-------------+---------|
+| smart-jump  | github | clojure     |         |
+| smart-jump  | github | erlang-mode |         |
 
-- jabber: [[mu4e:msgid:87k20ldzkg.fsf@bernoul.li][Organizing the quest]]
+- smart-jump [[https://github.com/jojojames/smart-jump/issues/8][#8]]
+
+* Fetch errors
+
+- faustine [[https://github.com/melpa/melpa/pull/4900#issuecomment-351236280][melpa#4900]]
 
 * Insecure packages
 

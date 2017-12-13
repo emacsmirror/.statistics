@@ -14,11 +14,12 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (6) | Class    | Feature        | Reason                                    |
+| Package (7) | Class    | Feature        | Reason                                    |
 |-------------+----------+----------------+-------------------------------------------|
 | edb         | orphaned | edbcore        | generated                                 |
 | emacs       | builtin  | cus-load       | generated                                 |
 | emacs       | builtin  | leim-list      | generated                                 |
+| emacspeak   | github   | dtk-css-speech | inside directory containing .nosearch     |
 | eshell      | builtin  | esh-groups     | generated                                 |
 | finder      | builtin  | finder-inf     | generated                                 |
 | realgud     | github   | bashdb         | inside directory containing .nosearch     |
@@ -44,6 +45,7 @@
 |-----------------+----------+------------+------------------------|
 | coq             | github   | maths-menu | pending [[https://github.com/ProofGeneral/PG/issues/197][#197]]           |
 | emacspeak       | github   | amixer     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github   | analog     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github   | folding    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github   | nm         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github   | sudoku     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
@@ -177,7 +179,7 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: patched
-| Package (14)     | Class    |
+| Package (15)     | Class    |
 |------------------+----------|
 | anything-project | github   |
 | apel             | github   |
@@ -189,6 +191,7 @@
 | nxhtml           | orphaned |
 | oauth            | github   |
 | projmake-mode    | github   |
+| ruby-additional  | orphaned |
 | semi             | github   |
 | swbuff           | orphaned |
 | vm               | orphaned |
@@ -209,7 +212,7 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (21)         | Class       | Library                 | Reason                     |
+| Package (22)         | Class       | Library                 | Reason                     |
 |----------------------+-------------+-------------------------+----------------------------|
 | ada-ref-man          | elpa        | ada-ref-man.el          | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
 | auctex               | elpa-branch | tex.el                  | pkg/lib name mismatch      |
@@ -222,6 +225,7 @@
 | ert-runner           | github      | ert-runner.el           | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
 | eziam-theme          | github      | eziam-dark-theme.el     | two-variant theme          |
 | farmhouse-theme      | github      | farmhouse-dark-theme.el | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
+| git-undo             | github      | git-undo.el             |                            |
 | html5                | github      | html5-ncr.el            | no/mismatched main library |
 | literate-starter-kit | github      | init.el                 | not a package              |
 | majapahit-theme      | gitlab      | majapahit-dark-theme.el | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
@@ -283,13 +287,14 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (11)        | Class   | Branch       |
+| Package (12)        | Class   | Branch       |
 |---------------------+---------+--------------|
 | apel                | github  | apel-wl      |
 | borg-queen          | github  | initial-dev  |
 | caml                | subtree | trunk        |
 | distinguished-theme | github  | develop      |
 | ebuild-mode         | git     | ebuild-mode  |
+| ensime              | github  | 3.0          |
 | flim                | github  | flim-1_14-wl |
 | neato-graph-bar     | gitlab  | release      |
 | nord-theme          | github  | develop      |
