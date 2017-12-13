@@ -128,8 +128,6 @@ https://emacsmirror.net
    (epkg-sql [:select [license (funcall count *)] :as count
               :from packages
               :where (and (not (= class 'builtin))
-                          (not (= class 'elpa))
-                          (not (= class 'elpa-branch))
                           (not (= class 'shelved)))
               :group-by license
               :order-by [(desc count) (asc license)]]))
@@ -137,10 +135,10 @@ https://emacsmirror.net
 #+RESULTS: count-emacsmirror
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  2998 |      59 |
-| GPL-2+          |  1335 |      26 |
-| GPL-3           |   135 |       3 |
-| MIT (x11)       |   128 |       3 |
+| GPL-3+          |  3108 |      60 |
+| GPL-2+          |  1338 |      26 |
+| GPL-3           |   136 |       3 |
+| MIT (x11)       |   128 |       2 |
 | MIT             |   127 |       2 |
 | BSD-2-clause    |    73 |       1 |
 | public-domain   |    48 |       1 |
@@ -149,8 +147,7 @@ https://emacsmirror.net
 | Apache-2.0      |    32 |       1 |
 | WTFPL           |    32 |       1 |
 | as-is           |    28 |       1 |
-| ((failure/p))   |    15 |       0 |
-| ((pending))     |    12 |       0 |
+| ((failure/p))   |    16 |       0 |
 | GPL-1+          |     6 |       0 |
 | WTFPL-2         |     5 |       0 |
 | GPL-2           |     4 |       0 |
@@ -173,8 +170,9 @@ https://emacsmirror.net
 | LGPL-3.0        |     1 |       0 |
 | MPL-2           |     1 |       0 |
 | Ruby            |     1 |       0 |
+| ((pending))     |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4491 |      88 |
+| total GNU       |  4605 |      89 |
 |-----------------+-------+---------|
-| total           |  5088 |     100 |
+| total           |  5192 |     100 |

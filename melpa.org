@@ -72,7 +72,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (604)                | Link                                    |
+| Package (592)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -275,7 +275,6 @@ please first make sure they meet the minimal requirements.
 | gaplay                       | [[https://github.com/te223/gaplay-el][te223/gaplay-el]]                         |
 | gdb-bp-session               | [[https://github.com/jglee1027/gdb-bp-session][jglee1027/gdb-bp-session]]                |
 | generic-edit-special         | [[https://github.com/lewang/generic-edit-special][lewang/generic-edit-special]]             |
-| generic-range-opt            | [[https://github.com/tm8st/emacs-generic-range-opt][tm8st/emacs-generic-range-opt]]           |
 | geocode                      | [[https://github.com/hober/geocode-el][hober/geocode-el]]                        |
 | git-auto-commit              | [[https://github.com/renard/git-auto-commit][renard/git-auto-commit]]                  |
 | git-code-review              | [[https://github.com/psanford/git-code-review-el][psanford/git-code-review-el]]             |
@@ -343,7 +342,6 @@ please first make sure they meet the minimal requirements.
 | ido-other-window             | [[https://github.com/timcharper/ido-other-window][timcharper/ido-other-window]]             |
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                         |
 | ii-mode                      | [[https://github.com/krl/ii-mode][krl/ii-mode]]                             |
-| imgix                        | [[https://github.com/imgix/imgix-emacs][imgix/imgix-emacs]]                       |
 | includeme                    | [[https://github.com/jart/includeme][jart/includeme]]                          |
 | indent-hints-mode            | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                |
 | indicate-changes             | [[https://github.com/renard/indicate-change][renard/indicate-change]]                  |
@@ -358,7 +356,6 @@ please first make sure they meet the minimal requirements.
 | iswitch-menu                 | [[https://github.com/joodie/iswitch-menu][joodie/iswitch-menu]]                     |
 | itimer                       | [[https://github.com/pheaver/itimer-el][pheaver/itimer-el]]                       |
 | jamar                        | [[https://github.com/kliph/jamar-el][kliph/jamar-el]]                          |
-| jaunte                       | [[https://github.com/kawaguchi/jaunte.el][kawaguchi/jaunte.el]]                     |
 | java-mode-plus               | [[https://github.com/skeeto/emacs-java][skeeto/emacs-java]]                       |
 | jb-misc-functions            | [[https://github.com/vapniks/jb-misc-functions][vapniks/jb-misc-functions]]               |
 | jda                          | [[https://github.com/jglee1027/jda-minor-mode][jglee1027/jda-minor-mode]]                |
@@ -407,7 +404,6 @@ please first make sure they meet the minimal requirements.
 | mark-forward-sexp            | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]               |
 | mark-select                  | [[https://github.com/namikister/mark-select][namikister/mark-select]]                  |
 | masquerade-mode              | [[https://github.com/dsevilla/masquerade-mode-el][dsevilla/masquerade-mode-el]]             |
-| memento                      | [[https://github.com/ehartc/memento][ehartc/memento]]                          |
 | metapost-mode+               | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                 |
 | mew-ical                     | [[https://github.com/tagoh/mew-ical][tagoh/mew-ical]]                          |
 | mew-unread                   | [[https://github.com/tortkis/mew-unread][tortkis/mew-unread]]                      |
@@ -430,7 +426,6 @@ please first make sure they meet the minimal requirements.
 | mvc                          | [[https://github.com/wachikun/mvc][wachikun/mvc]]                            |
 | mysql                        | [[https://github.com/haxney/mysql][haxney/mysql]]                            |
 | mythryl-mode                 | [[https://github.com/phr/mythryl-mode][phr/mythryl-mode]]                        |
-| n3-mode                      | [[https://github.com/doriantaylor/n3-mode-for-emacs][doriantaylor/n3-mode-for-emacs]]          |
 | namelist-mode                | [[https://github.com/yyr/namelist-mode][yyr/namelist-mode]]                       |
 | nazna                        | [[https://github.com/baron/nazna.el][baron/nazna.el]]                          |
 | ne2wm                        | [[https://github.com/tkf/ne2wm][tkf/ne2wm]]                               |
@@ -525,8 +520,6 @@ please first make sure they meet the minimal requirements.
 | qooxdoo                      | [[https://github.com/jdodds/qooxdoo.el][jdodds/qooxdoo.el]]                       |
 | qtref                        | [[https://github.com/whitypig/qtref][whitypig/qtref]]                          |
 | quick-jump                   | [[https://github.com/jixiuf/quick-jump][jixiuf/quick-jump]]                       |
-| rails-new                    | [[https://github.com/cheunghy/rails-new][cheunghy/rails-new]]                      |
-| rails-test-toggler           | [[https://github.com/mbriggs/rails-test-toggler][mbriggs/rails-test-toggler]]              |
 | rb                           | [[https://github.com/nicferrier/emacs-rhythmbox][nicferrier/emacs-rhythmbox]]              |
 | rcfiles                      | [[https://github.com/didierverna/el-rcfiles][didierverna/el-rcfiles]]                  |
 | rcirc-robots                 | [[https://github.com/nicferrier/rcirc-robots][nicferrier/rcirc-robots]]                 |
@@ -545,7 +538,6 @@ please first make sure they meet the minimal requirements.
 | ri                           | [[https://github.com/technomancy/ri.el][technomancy/ri.el]]                       |
 | rotate-text                  | [[https://github.com/nschum/rotate-text.el][nschum/rotate-text.el]]                   |
 | ruby-comint                  | [[https://github.com/jpablobr/ruby-comint.el][jpablobr/ruby-comint.el]]                 |
-| ruby-guard                   | [[https://github.com/cheunghy/ruby-guard][cheunghy/ruby-guard]]                     |
 | rubyinterpol                 | [[https://github.com/ober/rubyinterpol][ober/rubyinterpol]]                       |
 | rustfmt                      | [[https://github.com/fbergroth/emacs-rustfmt][fbergroth/emacs-rustfmt]]                 |
 | s3                           | [[https://github.com/thorstadt/s3.el][thorstadt/s3.el]]                         |
@@ -584,7 +576,6 @@ please first make sure they meet the minimal requirements.
 | sofa                         | [[https://github.com/cinsk/emacs-sofa][cinsk/emacs-sofa]]                        |
 | songbook                     | [[https://github.com/crep4ever/songbook-emacs-mode][crep4ever/songbook-emacs-mode]]           |
 | sourcepawn-mode              | [[https://github.com/agrif/sourcepawn-mode][agrif/sourcepawn-mode]]                   |
-| sourcetalk                   | [[https://github.com/malroc/sourcetalk_emacs][malroc/sourcetalk_emacs]]                 |
 | spinasm-mode                 | [[https://github.com/segoh/spinasm-mode][segoh/spinasm-mode]]                      |
 | spinner                      | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                    |
 | spss                         | [[https://github.com/vapniks/spss-mode][vapniks/spss-mode]]                       |
@@ -595,7 +586,6 @@ please first make sure they meet the minimal requirements.
 | stgit                        | [[https://github.com/ctmarinas/stgit][ctmarinas/stgit]]                         |
 | stickies                     | [[https://github.com/tkosaka/emacs-lisp-stickies][tkosaka/emacs-lisp-stickies]]             |
 | string-template              | [[https://github.com/renard/string-template-el][renard/string-template-el]]               |
-| sudden-death                 | [[https://github.com/yewton/sudden-death.el][yewton/sudden-death.el]]                  |
 | sunrise-commander            | [[https://github.com/escherdragon/sunrise-commander][escherdragon/sunrise-commander]]          |
 | swallow-window               | [[https://github.com/pd/swallow-window.el][pd/swallow-window.el]]                    |
 | swarmhacker                  | [[https://github.com/nicferrier/emacs-swarmhacker][nicferrier/emacs-swarmhacker]]            |
@@ -621,7 +611,6 @@ please first make sure they meet the minimal requirements.
 | theme-park-mode              | [[https://github.com/darrik/theme-park-mode][darrik/theme-park-mode]]                  |
 | thrift-mode                  | [[https://github.com/davidmiller/thrift-mode][davidmiller/thrift-mode]]                 |
 | tipshare                     | [[https://github.com/k1LoW/emacs-tipshare][k1LoW/emacs-tipshare]]                    |
-| tj-mode                      | [[https://github.com/katspaugh/tj-mode][katspaugh/tj-mode]]                       |
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                        |
 | todostack                    | [[https://github.com/EvansWinner/todostack.el][EvansWinner/todostack.el]]                |
 | tora-mode                    | [[https://github.com/syohex/emacs-tora-mode][syohex/emacs-tora-mode]]                  |
@@ -640,7 +629,6 @@ please first make sure they meet the minimal requirements.
 | uncrustify                   | [[https://github.com/glima/Emacs-uncrustify][glima/Emacs-uncrustify]]                  |
 | unique-window-buffers        | [[https://github.com/lewang/unique-window-buffers][lewang/unique-window-buffers]]            |
 | utf8islove                   | [[https://github.com/robsimmons/utf8islove][robsimmons/utf8islove]]                   |
-| uzumaki                      | [[https://github.com/geyslan/uzumaki][geyslan/uzumaki]]                         |
 | vc-browse                    | [[https://github.com/ieure/vc-browse][ieure/vc-browse]]                         |
 | vc-mks                       | [[https://github.com/pusto/vc-mks.el][pusto/vc-mks.el]]                         |
 | vc-partial-commit            | [[https://github.com/fperrin/vc-partial-commit][fperrin/vc-partial-commit]]               |
@@ -708,13 +696,12 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (19)        | Link                                                                   |
+| Package (18)        | Link                                                                   |
 |---------------------+------------------------------------------------------------------------|
 | auto-mounter        |                                                                        |
 | delight             | [[https://savannah.nongnu.org/projects/delight]]                           |
 | ebuild-mode         |                                                                        |
 | ee                  |                                                                        |
-| globalizer          |                                                                        |
 | gpicker             |                                                                        |
 | hyperbole           | [[http://www.gnu.org/software/hyperbole]]                                  |
 | im-notification     |                                                                        |

@@ -104,7 +104,7 @@ available over https.
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: insecure
-| Package (204)             | Class | Year | M | Dep | Url                                                                                         |
+| Package (203)             | Class | Year | M | Dep | Url                                                                                         |
 |---------------------------+-------+------+---+-----+---------------------------------------------------------------------------------------------|
 | speechd                   | git   | 2016 |   |     | git://git.freebsoft.org/git/speechd-el                                                      |
 | eide                      | git   | 2017 | t |     | git://git.tuxfamily.org/gitroot/eide/emacs-ide.git                                          |
@@ -112,7 +112,6 @@ available over https.
 | org                       | git   | 2017 |   | 302 | git://orgmode.org/org-mode.git                                                              |
 | os                        | git   | 2014 |   |     | git://orgmode.org/org-sync.git                                                              |
 | anything                  | git   | 2017 | t |  35 | git://repo.or.cz/anything-config.git                                                        |
-| globalizer                | git   | 2007 |   |     | git://repo.or.cz/meg.git                                                                    |
 | org-fstree                | git   | 2009 | t |     | git://repo.or.cz/org-fstree.git                                                             |
 | project-buffer-mode       | git   | 2010 |   |     | git://repo.or.cz/project-buffer-mode.git                                                    |
 | show-functions            | file  | 2010 |   |     | http://aurelien.tisne.free.fr/emacs-pages/emacs/show-functions.el                           |
