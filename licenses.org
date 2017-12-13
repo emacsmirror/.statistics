@@ -25,45 +25,35 @@
                             table)
             hline ("total GNU" ,gnu ,(percent gnu))
             hline ("total" ,total 100)))))
+
+  (defun emir--insert-melpa-packages-using-licenses (&rest licenses)
+    (epkg-with-org-header ("Package" "License" "Class" "Link")
+      (epkg-sql [:select :distinct
+                 [packages:name packages:license packages:class packages:repopage]
+                 :from [packages melpa-recipes]
+                 :where (= packages:name melpa-recipes:epkg-package)
+                 :and license :in $v1
+                 :group-by packages:repopage
+                 :order-by [(asc packages:name)]]
+                (apply #'vector licenses))))
+
+  (defun emir--insert-mirror-packages-using-licenses (&rest licenses)
+    (epkg-with-org-header ("Package" "License" "Class" "M" "Link")
+      (mapcar (pcase-lambda (`(,name ,license ,class ,repopage))
+                (list name license class
+                      (if (melpa-get name) t "")
+                      (and (not (eq class 'wiki)) repopage)))
+              (epkg-sql [:select [name license class repopage] :from packages
+                         :where license :in $v1
+                         :and (not (= class 'shelved))
+                         :order-by [(asc name)]]
+                        (apply #'vector licenses)
+                        [shelved]))))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 
-* Introduction
-
-This page contains statistics about the licenses used by known Emacs
-packages.  *These statistics are not legal advice.  They are
-distributed in the hope that they will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or
-FITNESS FOR A PARTICULAR PURPOSE.*
-
-The information used here is available from the Emacsmirror database
-(also known as the Epkg database).  For more information about the
-Emacsmirror see these [[https://emacsair.me/2016/04/16/re-introducing-the-emacsmirror][blog]] [[https://emacsair.me/2016/05/17/assimilate-emacs-packages-as-git-submodules][posts]].
-
-I have created this page to accompany [[http://lists.gnu.org/archive/html/emacs-devel/2017-07/msg00341.html][this]] conversation on
-~emacs-devel~.
-
-I will periodically update the these statistics.  If you want to do so
-yourself, then read the relevant documentation.  You may also ask me
-for guidance.
-
-This information is extracted using the function ~elx-license~, which is
-provided by my package [[https://github.com/tarsius/elx][elx]].  This package is currently undergoing big
-changes.
-
-The extracted value is sometimes false or ambiguous.  In particular
-note that if a license is "unknown", then that merely means that it is
-/not known/ what license applies.  This may be because the library lacks
-a permission statement and ~LICENSE~ file altogether, but it may also be
-because ~elx-license~ does not attempt to detect the used non-standard
-and/or non-fsf permission statement, or because of typos in the
-statement, or for a number of other reasons.
-
 * Licenses used by packages on Melpa
-
-https://melpa.org
-
-#+NAME: count-melpa
+** Overview
 #+BEGIN_SRC emacs-lisp
   (emir--format-license-table
    (epkg-sql [:select :distinct [packages:license (funcall count *)] :as count
@@ -72,7 +62,7 @@ https://melpa.org
               :group-by packages:license
               :order-by [(desc count) (asc license)]]))
 #+END_SRC
-#+RESULTS: count-melpa
+#+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
 | GPL-3+        |  2526 |      66 |
@@ -112,17 +102,208 @@ https://melpa.org
 |---------------+-------+---------|
 | total         |  3809 |     100 |
 
+** Removed packages
+#+BEGIN_SRC emacs-lisp
+  (let ((removed
+         '(;; [[orgit-rev:~/git/emacs/melpa/::7aa634e8]]
+           "smali-mode"
+           ;; [[orgit-rev:~/git/emacs/melpa/::cf92ce1a]]
+           "achievements"
+           "avk-emacs-themes"
+           "bpr"
+           "coq-commenter"
+           "crab"
+           "darkane-theme"
+           "easy-after-load"
+           "edit-at-point"
+           "el-pocket"
+           "eno"
+           "ess-R-object-popup"
+           "euslisp-mode"
+           "firebelly-theme"
+           "flappymacs"
+           "flycheck-scala-sbt"
+           "gap-mode"
+           "ghost-blog"
+           "hlint-refactor"
+           "ids-edit"
+           "imgix"
+           "inf-php"
+           "inform7-mode"
+           "ivariants"
+           "ivs-edit"
+           "jaunte"
+           "mandoku-tls"
+           "memento"
+           "monochrome-theme"
+           "n3-mode"
+           "niflheim-theme"
+           "nnir-est"
+           "nyan-prompt"
+           "org-jekyll"
+           "ox-pandoc"
+           "psc-ide"
+           "sicp"
+           "yatex"
+           "zerodark-theme"
+           ;; [[orgit-rev:~/git/emacs/melpa/::c3366117]]
+           "crontab-mode"
+           "harvest"
+           "helm-ctest"
+           "inline-crypt"
+           "plantuml-mode"
+           "pushover"
+           "py-gnitset"
+           "pyim-greatdict"
+           "railgun"
+           "rails-new"
+           "refheap"
+           "ruby-dev"
+           "ruby-guard"
+           "sly-repl-ansi-color"
+           "smartwin"
+           "sourcetalk"
+           "stgit"
+           "subshell-proc"
+           "sudden-death"
+           "syslog-mode"
+           "tj-mode"
+           "tronesque-theme"
+           "turkish"
+           "uzumaki"
+           "vimgolf"
+           "wordsmith-mode"
+           "xah-css-mode"
+           "xah-elisp-mode"
+           "xah-find"
+           "xah-fly-keys"
+           "xah-get-thing"
+           "xah-lookup"
+           "xah-math-input"
+           "xah-reformat-code"
+           "xah-replace-pairs"
+           "xahk-mode"
+           "zig-mode"
+           ;; [[orgit-log:~/git/emacs/melpa/::master]]
+           "slime-ritz"
+           ;; [[orgit-rev:~/git/emacs/melpa/::b20f5126]]
+           "lively"
+           ;; [[orgit-rev:~/git/emacs/melpa/::e5476274]]
+           "slime-annot"
+           )))
+    (epkg-with-org-header ("Package" "R" "License" "Class" "Link")
+      (--keep (-when-let (pkg (epkg it))
+                (list it
+                      (if (melpa-get it) "t" "")
+                      (oref pkg license)
+                      (substring (symbol-name (class-of pkg)) 5 -8)
+                      (oref pkg repopage)))
+              removed)))
+#+END_SRC
+#+RESULTS:
+| Package (74)        | R | License         | Class     | Link                                                    |
+|---------------------+---+-----------------+-----------+---------------------------------------------------------|
+| achievements        | t | MIT             | bitbucket | https://bitbucket.org/gvol/emacs-achievements           |
+| avk-emacs-themes    | t | GPL-3+          | github    | https://github.com/avkoval/avk-emacs-themes             |
+| bpr                 | t | unlicense       | github    | https://github.com/ilya-babanov/emacs-bpr               |
+| coq-commenter       | t | GPL-3+          | github    | https://github.com/ailrun/coq-commenter                 |
+| crab                |   | pending         | shelved   | https://github.com/puffnfresh/crab-emacs                |
+| easy-after-load     | t | GPL-3+          | github    | https://github.com/pd/easy-after-load                   |
+| edit-at-point       | t | failure(p)      | github    | https://github.com/enoson/edit-at-point.el              |
+| el-pocket           | t | GPL-3+          | github    | https://github.com/pterygota/el-pocket                  |
+| eno                 | t | failure(p)      | github    | https://github.com/enoson/eno.el                        |
+| ess-R-object-popup  |   | pending         | shelved   | https://github.com/myuhe/ess-R-object-popup.el          |
+| euslisp-mode        | t | GPL-3+          | github    | https://github.com/iory/euslisp-mode                    |
+| flappymacs          | t | MIT (x11)       | github    | https://github.com/taksatou/flappymacs                  |
+| flycheck-scala-sbt  |   | failure         | shelved   | https://github.com/rjmac/flycheck-scala-sbt             |
+| gap-mode            | t | MIT             | bitbucket | https://bitbucket.org/gvol/gap-mode                     |
+| ghost-blog          | t | GPL-3+          | github    | https://github.com/javaguirre/ghost-blog-emacs          |
+| hlint-refactor      | t | MIT (x11)       | github    | https://github.com/mpickering/hlint-refactor-mode       |
+| ids-edit            | t | GPL-3+          | github    | https://github.com/kawabata/ids-edit                    |
+| imgix               |   | pending         | shelved   | https://github.com/imgix/imgix-emacs                    |
+| inf-php             |   | pending         | shelved   | https://github.com/taksatou/inf-php                     |
+| inform7-mode        |   | pending         | shelved   | https://github.com/fred-o/inform7-mode                  |
+| ivariants           | t | GPL-3+          | github    | https://github.com/kawabata/emacs-ivariants             |
+| ivs-edit            | t | GPL-3+          | github    | https://github.com/kawabata/ivs-edit                    |
+| jaunte              |   | pending         | shelved   | https://github.com/kawaguchi/jaunte.el                  |
+| mandoku-tls         | t | GPL-3+          | github    | https://github.com/mandoku/mandoku-tls                  |
+| memento             |   | pending         | shelved   | https://github.com/ehartc/memento                       |
+| monochrome-theme    | t | MIT             | github    | https://github.com/fxn/monochrome-theme.el              |
+| n3-mode             |   | pending         | shelved   | https://github.com/doriantaylor/n3-mode-for-emacs       |
+| nnir-est            | t | GPL-3+          | github    | https://github.com/kawabata/nnir-est                    |
+| nyan-prompt         |   | COPYLOVE        | github    | https://github.com/PuercoPop/nyan-prompt                |
+| org-jekyll          |   | pending         | shelved   | https://github.com/juanre/org-jekyll                    |
+| ox-pandoc           | t | GPL-3+          | github    | https://github.com/kawabata/ox-pandoc                   |
+| psc-ide             | t | GPL-3+          | github    | https://github.com/epost/psc-ide-emacs                  |
+| sicp                | t | GPL-3+          | github    | https://github.com/webframp/sicp-info                   |
+| yatex               | t | BSD-2-clause    | hg        |                                                         |
+| zerodark-theme      | t | GPL-3+          | github    | https://github.com/NicolasPetton/zerodark-theme         |
+| crontab-mode        |   | GPL-2           | shelved   | https://github.com/emacsorphanage/crontab-mode          |
+| harvest             | t | GPL-3+          | github    | https://github.com/kostajh/harvest.el                   |
+| helm-ctest          | t | GPL-3+          | github    | https://github.com/danlamanna/helm-ctest                |
+| inline-crypt        | t | GPL-2+          | github    | https://github.com/Sodel-the-Vociferous/inline-crypt-el |
+| plantuml-mode       | t | GPL-3+          | github    | https://github.com/skuro/plantuml-mode                  |
+| pushover            | t | GPL-3+          | git       |                                                         |
+| py-gnitset          | t | GPL-3+          | github    | https://github.com/quodlibetor/py-gnitset               |
+| pyim-greatdict      |   | pending         | shelved   | https://github.com/tumashu/pyim-greatdict               |
+| railgun             |   | pending         | shelved   | https://github.com/mbriggs/railgun.el                   |
+| rails-new           |   | pending         | shelved   | https://github.com/cheunghy/rails-new                   |
+| refheap             |   | none            | shelved   | https://github.com/Raynes/refheap.el                    |
+| ruby-dev            |   | pending         | shelved   | https://github.com/Mon-Ouie/ruby-dev.el                 |
+| ruby-guard          |   | pending         | shelved   | https://github.com/cheunghy/ruby-guard                  |
+| sly-repl-ansi-color |   | GPL-2+          | github    | https://github.com/PuercoPop/sly-repl-ansi-color        |
+| smartwin            |   | GPL-2           | github    | https://github.com/jerryxgh/smartwin                    |
+| sourcetalk          |   | pending         | shelved   | https://github.com/malroc/sourcetalk_emacs              |
+| stgit               |   | GPL-2           | github    | https://github.com/ctmarinas/stgit                      |
+| subshell-proc       |   | pending         | shelved   | https://github.com/andrewmains12/subshell-proc          |
+| sudden-death        |   | pending         | shelved   | https://github.com/yewton/sudden-death.el               |
+| syslog-mode         |   | GPL-2           | github    | https://github.com/vapniks/syslog-mode                  |
+| tj-mode             |   | pending         | shelved   | https://github.com/katspaugh/tj-mode                    |
+| turkish             | t | MIT             | github    | https://github.com/emres/turkish-mode                   |
+| uzumaki             |   | pending         | shelved   | https://github.com/geyslan/uzumaki                      |
+| vimgolf             |   | CC BY-NC-SA 3.0 | github    | https://github.com/timvisher/vimgolf.el                 |
+| wordsmith-mode      | t | GPL-3+          | github    | https://github.com/istib/wordsmith-mode                 |
+| xah-css-mode        | t | GPL-3           | github    | https://github.com/xahlee/xah-css-mode                  |
+| xah-elisp-mode      | t | GPL-3           | github    | https://github.com/xahlee/xah-elisp-mode                |
+| xah-find            | t | GPL-3           | github    | https://github.com/xahlee/xah-find                      |
+| xah-fly-keys        | t | GPL-3           | github    | https://github.com/xahlee/xah-fly-keys                  |
+| xah-get-thing       | t | GPL-3           | github    | https://github.com/xahlee/xah-get-thing-or-selection    |
+| xah-lookup          | t | GPL-3           | github    | https://github.com/xahlee/lookup-word-on-internet       |
+| xah-math-input      | t | GPL-3           | github    | https://github.com/xahlee/xah-math-input                |
+| xah-reformat-code   | t | GPL-3           | github    | https://github.com/xahlee/xah-reformat-code             |
+| xah-replace-pairs   | t | GPL-3           | github    | https://github.com/xahlee/xah-replace-pairs             |
+| xahk-mode           | t | GPL-3           | github    | https://github.com/xahlee/xahk-mode.el                  |
+| zig-mode            | t | GPL-3+          | github    | https://github.com/AndreaOrru/zig-mode                  |
+| slime-ritz          |   | EPL             | shelved   |                                                         |
+| lively              | t | GPL-3+          | github    | https://github.com/purcell/lively                       |
+| slime-annot         |   | none            | shelved   |                                                         |
+
+** No license specified
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-melpa-packages-using-licenses "pending")
+#+END_SRC
+#+RESULTS:
+
+** Failure to extract license
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-melpa-packages-using-licenses "failure")
+#+END_SRC
+#+RESULTS:
+| Package (4)     | License | Class    | Link                                              |
+|-----------------+---------+----------+---------------------------------------------------|
+| clang-format    | failure | orphaned | https://github.com/emacsorphanage/clang-format    |
+| redshank        | failure | shelved  |                                                   |
+| ruby-additional | failure | orphaned | https://github.com/emacsorphanage/ruby-additional |
+| summarye        | failure | shelved  | https://github.com/emacsmirror/emacswiki.org      |
+
+** Problematic licenses
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-melpa-packages-using-licenses "GPL" "GPL-2")
+#+END_SRC
+#+RESULTS:
+
 * Licenses used by packages on the Emacsmirror
-
-The Emacsmirror is a growing collection of Emacs Lisp packages. All
-mirrored packages are available as Git repositories. In most cases
-this is done by mirroring the upstream Git repository, but if upstream
-uses something else, then the mirror nevertheless makes the package
-available as a Git repository.
-
-https://emacsmirror.net
-
-#+NAME: count-emacsmirror
+** Overview
 #+BEGIN_SRC emacs-lisp
   (emir--format-license-table
    (epkg-sql [:select [license (funcall count *)] :as count
@@ -132,7 +313,7 @@ https://emacsmirror.net
               :group-by license
               :order-by [(desc count) (asc license)]]))
 #+END_SRC
-#+RESULTS: count-emacsmirror
+#+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
 | GPL-3+          |  3108 |      60 |
@@ -176,3 +357,79 @@ https://emacsmirror.net
 | total GNU       |  4605 |      89 |
 |-----------------+-------+---------|
 | total           |  5192 |     100 |
+
+** No license specified
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-mirror-packages-using-licenses "pending")
+#+END_SRC
+#+RESULTS:
+| Package (1) | License | Class | M | Link                                                                       |
+|-------------+---------+-------+---+----------------------------------------------------------------------------|
+| ada-ref-man | pending | elpa  |   | https://git.savannah.gnu.org/cgit/emacs/elpa.git/tree/packages/ada-ref-man |
+
+** Unknown license
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Class" "License")
+    (epkg-sql [:select [name class license] :from packages
+               :where (isnull license)
+               :and :not packages:class :in $v1
+               :order-by [(asc name)]]
+              [shelved])))
+#+END_SRC
+#+RESULTS:
+
+** Failure to extract license
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-mirror-packages-using-licenses "failure" "failure(p)")
+#+END_SRC
+#+RESULTS:
+| Package (18)          | License    | Class    | M | Link                                                                           |
+|-----------------------+------------+----------+---+--------------------------------------------------------------------------------|
+| clang-format          | failure    | orphaned | t | https://github.com/emacsorphanage/clang-format                                 |
+| cython-mode           | failure(p) | minority | t |                                                                                |
+| edit-at-point         | failure(p) | github   | t | https://github.com/enoson/edit-at-point.el                                     |
+| emacs-setup           | failure(p) | github   | t | https://github.com/echosa/emacs-setup                                          |
+| eno                   | failure(p) | github   | t | https://github.com/enoson/eno.el                                               |
+| fuel                  | failure(p) | subtree  | t |                                                                                |
+| ghc                   | failure(p) | github   | t | https://github.com/DanielG/ghc-mod                                             |
+| gherkin-mode          | failure(p) | github   | t | https://github.com/candera/gherkin-mode                                        |
+| glsl-mode             | failure(p) | github   | t | https://github.com/jimhourihan/glsl-mode                                       |
+| golint                | failure(p) | subtree  | t |                                                                                |
+| main-line             | failure(p) | github   | t | https://github.com/emacsfodder/emacs-mainline                                  |
+| manued                | failure(p) | github   |   | https://github.com/yamauchih/manued                                            |
+| nm                    | failure(p) | github   | t | https://github.com/tjim/nevermore                                              |
+| omtose-phellack-theme | failure(p) | github   | t | https://github.com/franksn/omtose-phellack-theme                               |
+| ruby-additional       | failure    | orphaned | t | https://github.com/emacsorphanage/ruby-additional                              |
+| trr                   | failure(p) | github   | t | https://github.com/kawabata/emacs-trr                                          |
+| tumblesocks           | failure(p) | github   | t | https://github.com/gcr/tumblesocks                                             |
+| uni-confusables       | failure(p) | elpa     |   | https://git.savannah.gnu.org/cgit/emacs/elpa.git/tree/packages/uni-confusables |
+
+[[mu4e:msgid:87ing5dw09.fsf@bernoul.li][Organizing the quest]]
+
+- Responses
+  - glsl-mode [[https://github.com/jimhourihan/glsl-mode/issues/8][#8]] "No version means any version"
+  - gherkin-mode [[https://github.com/candera/gherkin-mode/issues/2][#2]] (incomplete)
+- Huge effort
+  - clang-format: BSD-3-clause
+  - ruby-additional: ruby
+
+** Problematic licenses
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-mirror-packages-using-licenses "GPL" "GPL-2")
+#+END_SRC
+#+RESULTS:
+| Package (5)    | License | Class  | M | Link                                       |
+|----------------+---------+--------+---+--------------------------------------------|
+| coq            | GPL     | github |   | https://github.com/ProofGeneral/PG         |
+| gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck |
+| smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin       |
+| stgit          | GPL-2   | github |   | https://github.com/ctmarinas/stgit         |
+| syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode     |
+
+Pending:
+- coq [[https://github.com/ProofGeneral/PG/issues/198][#198]]
+- gnus-autocheck [[https://github.com/slaanesh/gnus-autocheck/issues/2][#2]]
+- smartwin [[https://github.com/jerryxgh/smartwin/issues/3][#3]]
+- stgit [[https://github.com/ctmarinas/stgit/issues/7][#7]]
+- syslog-mode [[https://github.com/vapniks/syslog-mode/issues/15][#15]]
+
