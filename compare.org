@@ -66,22 +66,22 @@
 | elpa        |  109 |    109 |       |       |   162 |       |
 | elpa-branch |    8 |      8 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3924 |   3924 |       |       |       |  3545 |
+| github      | 3913 |   3913 |       |       |       |  3550 |
 | gitlab      |   41 |     41 |       |       |       |    33 |
-| git         |   54 |     54 |       |       |       |    42 |
+| git         |   53 |     53 |       |       |       |    42 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   44 |     44 |       |       |       |    37 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  673 |    673 |       |       |       |   151 |
+| wiki        |  665 |    665 |       |       |       |   146 |
 | file        |  253 |    253 |       |       |       |       |
-| minority    |   20 |     20 |       |       |       |       |
+| minority    |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1090 |        |  1090 |       |       |       |
+| shelved     | 1107 |        |  1107 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6752 |   5206 |  1090 |   458 |   184 |  3809 |
+| total       | 6752 |   5189 |  1107 |   458 |   184 |  3809 |
 
 * Emacs
 ** Prefer elpa
@@ -494,7 +494,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (27)         | Class    | Melpa     | Reason                     |
+| Package (30)         | Class    | Melpa     | Reason                     |
 |----------------------+----------+-----------+----------------------------|
 | autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | cfengine-code-style  | minority | github    | mostly non-elisp           |
@@ -517,9 +517,12 @@
 | paper-theme          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | po-mode              | minority | git       | mostly non-elisp           |
 | pylint               | minority | github    | mostly non-elisp           |
+| rfringe              | minority | github    | all-in-one repo            |
 | sequential-command   | shelved  | wiki      |                            |
 | smart-compile        | minority | github    | all-in-one repo            |
 | summarye             | shelved  | wiki      |                            |
+| tfs                  | minority | github    | all-in-one repo            |
+| thesaurus            | minority | github    | all-in-one repo            |
 | thrift               | minority | github    | mostly non-elisp           |
 | toggle               | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | wisp-mode            | minority | bitbucket | mostly non-elisp           |
