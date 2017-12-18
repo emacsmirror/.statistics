@@ -55,12 +55,6 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature     | Shelved |
-|-------------+--------+-------------+---------|
-| smart-jump  | github | clojure     |         |
-| smart-jump  | github | erlang-mode |         |
-
-- smart-jump [[https://github.com/jojojames/smart-jump/issues/8][#8]]
 
 * Fetch errors
 
@@ -109,7 +103,7 @@ available over https.
 | speechd                   | git   | 2016 |   |     | git://git.freebsoft.org/git/speechd-el                                                      |
 | eide                      | git   | 2017 | t |     | git://git.tuxfamily.org/gitroot/eide/emacs-ide.git                                          |
 | notmuch                   | git   | 2017 | t |   4 | git://notmuchmail.org/git/notmuch                                                           |
-| org                       | git   | 2017 |   | 302 | git://orgmode.org/org-mode.git                                                              |
+| org                       | git   | 2017 |   | 303 | git://orgmode.org/org-mode.git                                                              |
 | os                        | git   | 2014 |   |     | git://orgmode.org/org-sync.git                                                              |
 | anything                  | git   | 2017 | t |  35 | git://repo.or.cz/anything-config.git                                                        |
 | org-fstree                | git   | 2009 | t |     | git://repo.or.cz/org-fstree.git                                                             |
