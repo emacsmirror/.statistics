@@ -133,7 +133,7 @@ Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 * Imported from non-git/hg repository
 
 The tools used to maintain the Emacsmirror do not support ~bzr~, ~cvs~,
-~darcs~, ~fossil~.  So I manually import the upstream repositories into
+~darcs~, or ~fossil~.  So I manually import the upstream repositories into
 a ~git~ repository on the orphanage and then import the resulting ~git~
 repositories as if that were the actual upstream.
 

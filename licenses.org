@@ -65,19 +65,19 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2528 |      66 |
+| GPL-3+        |  2544 |      66 |
 | GPL-2+        |   611 |      16 |
-| MIT (x11)     |   129 |       3 |
-| GPL-3         |   128 |       3 |
-| MIT           |   124 |       3 |
+| GPL-3         |   132 |       3 |
+| MIT (x11)     |   131 |       3 |
+| MIT           |   127 |       3 |
 | BSD-2-clause  |    70 |       2 |
 | BSD-3-clause  |    38 |       1 |
-| Apache-2.0    |    34 |       1 |
+| Apache-2.0    |    35 |       1 |
 | unlicense     |    33 |       1 |
 | public-domain |    24 |       1 |
 | as-is         |    21 |       1 |
 | WTFPL         |    13 |       0 |
-| ((failure/p)) |    13 |       0 |
+| ((failure/p)) |    12 |       0 |
 | ((failure))   |     5 |       0 |
 | GPL-1+        |     4 |       0 |
 | WTFPL-2       |     4 |       0 |
@@ -93,14 +93,15 @@
 | MS-PL         |     2 |       0 |
 | CC0 1.0       |     1 |       0 |
 | COPYLOVE      |     1 |       0 |
+| GPL-2         |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3283 |      86 |
+| total GNU     |  3304 |      86 |
 |---------------+-------+---------|
-| total         |  3809 |     100 |
+| total         |  3835 |     100 |
 
 ** Removed packages
 #+BEGIN_SRC emacs-lisp
@@ -301,6 +302,9 @@
   (emir--insert-melpa-packages-using-licenses "GPL" "GPL-2")
 #+END_SRC
 #+RESULTS:
+| Package (1) | License | Class  | Link                                           |
+|-------------+---------+--------+------------------------------------------------|
+| buckwalter  | GPL-2   | github | https://github.com/joehakimrahme/buckwalter.el |
 
 * Licenses used by packages on the Emacsmirror
 ** Overview
@@ -316,22 +320,22 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  3111 |      60 |
+| GPL-3+          |  3128 |      60 |
 | GPL-2+          |  1333 |      26 |
-| GPL-3           |   135 |       3 |
-| MIT (x11)       |   128 |       2 |
-| MIT             |   127 |       2 |
+| GPL-3           |   139 |       3 |
+| MIT (x11)       |   130 |       2 |
+| MIT             |   130 |       2 |
 | BSD-2-clause    |    74 |       1 |
 | public-domain   |    47 |       1 |
 | BSD-3-clause    |    41 |       1 |
 | unlicense       |    35 |       1 |
-| Apache-2.0      |    32 |       1 |
+| Apache-2.0      |    33 |       1 |
 | WTFPL           |    32 |       1 |
 | as-is           |    28 |       1 |
-| ((failure/p))   |    15 |       0 |
+| ((failure/p))   |    14 |       0 |
 | GPL-1+          |     6 |       0 |
+| GPL-2           |     5 |       0 |
 | WTFPL-2         |     5 |       0 |
-| GPL-2           |     4 |       0 |
 | LGPL-3+         |     4 |       0 |
 | AGPL-3+         |     3 |       0 |
 | ISC (and)       |     3 |       0 |
@@ -354,9 +358,9 @@
 | ((pending))     |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4602 |      89 |
+| total GNU       |  4624 |      89 |
 |-----------------+-------+---------|
-| total           |  5189 |     100 |
+| total           |  5216 |     100 |
 
 ** No license specified
 #+BEGIN_SRC emacs-lisp
@@ -383,7 +387,7 @@
   (emir--insert-mirror-packages-using-licenses "failure" "failure(p)")
 #+END_SRC
 #+RESULTS:
-| Package (17)          | License    | Class    | M | Link                                                                           |
+| Package (16)          | License    | Class    | M | Link                                                                           |
 |-----------------------+------------+----------+---+--------------------------------------------------------------------------------|
 | clang-format          | failure    | orphaned | t | https://github.com/emacsorphanage/clang-format                                 |
 | cython-mode           | failure(p) | minority | t |                                                                                |
@@ -391,7 +395,6 @@
 | emacs-setup           | failure(p) | github   | t | https://github.com/echosa/emacs-setup                                          |
 | eno                   | failure(p) | github   | t | https://github.com/enoson/eno.el                                               |
 | ghc                   | failure(p) | github   | t | https://github.com/DanielG/ghc-mod                                             |
-| gherkin-mode          | failure(p) | github   | t | https://github.com/candera/gherkin-mode                                        |
 | glsl-mode             | failure(p) | github   | t | https://github.com/jimhourihan/glsl-mode                                       |
 | golint                | failure(p) | subtree  | t |                                                                                |
 | main-line             | failure(p) | github   | t | https://github.com/emacsfodder/emacs-mainline                                  |
@@ -417,15 +420,17 @@
   (emir--insert-mirror-packages-using-licenses "GPL" "GPL-2")
 #+END_SRC
 #+RESULTS:
-| Package (5)    | License | Class  | M | Link                                       |
-|----------------+---------+--------+---+--------------------------------------------|
-| coq            | GPL     | github |   | https://github.com/ProofGeneral/PG         |
-| gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck |
-| smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin       |
-| stgit          | GPL-2   | github |   | https://github.com/ctmarinas/stgit         |
-| syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode     |
+| Package (6)    | License | Class  | M | Link                                           |
+|----------------+---------+--------+---+------------------------------------------------|
+| buckwalter     | GPL-2   | github | t | https://github.com/joehakimrahme/buckwalter.el |
+| coq            | GPL     | github |   | https://github.com/ProofGeneral/PG             |
+| gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck     |
+| smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin           |
+| stgit          | GPL-2   | github |   | https://github.com/ctmarinas/stgit             |
+| syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode         |
 
 Pending:
+- buckwalter [[https://github.com/melpa/melpa/pull/5144][melpa#5144]]
 - coq [[https://github.com/ProofGeneral/PG/issues/198][#198]]
 - gnus-autocheck [[https://github.com/slaanesh/gnus-autocheck/issues/2][#2]]
 - smartwin [[https://github.com/jerryxgh/smartwin/issues/3][#3]]
