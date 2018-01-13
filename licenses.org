@@ -65,9 +65,9 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2544 |      66 |
-| GPL-2+        |   611 |      16 |
-| GPL-3         |   132 |       3 |
+| GPL-3+        |  2545 |      66 |
+| GPL-2+        |   612 |      16 |
+| GPL-3         |   133 |       3 |
 | MIT (x11)     |   131 |       3 |
 | MIT           |   127 |       3 |
 | BSD-2-clause  |    70 |       2 |
@@ -99,9 +99,9 @@
 | MPL-2         |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3304 |      86 |
+| total GNU     |  3307 |      86 |
 |---------------+-------+---------|
-| total         |  3835 |     100 |
+| total         |  3838 |     100 |
 
 ** Removed packages
 #+BEGIN_SRC emacs-lisp
@@ -320,9 +320,9 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  3128 |      60 |
+| GPL-3+          |  3129 |      60 |
 | GPL-2+          |  1333 |      26 |
-| GPL-3           |   139 |       3 |
+| GPL-3           |   140 |       3 |
 | MIT (x11)       |   130 |       2 |
 | MIT             |   130 |       2 |
 | BSD-2-clause    |    74 |       1 |
@@ -358,9 +358,9 @@
 | ((pending))     |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4624 |      89 |
+| total GNU       |  4626 |      89 |
 |-----------------+-------+---------|
-| total           |  5216 |     100 |
+| total           |  5218 |     100 |
 
 ** No license specified
 #+BEGIN_SRC emacs-lisp

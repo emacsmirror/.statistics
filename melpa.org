@@ -40,18 +40,18 @@ packages makes it more appealing to improve the remaining code.
 #+RESULTS:
 | Package (12)      | Vcs   | Last commit           | Commits last year |
 |-------------------+-------+-----------------------+-------------------|
-| cg                | svn   | 6 weeks ago           |                 4 |
+| cg                | svn   | 7 weeks ago           |                 4 |
 | clang-format      | svn   | 5 weeks ago           |                26 |
 | color-theme       | bzr   | 9 years ago           |                 0 |
-| confluence        | svn   | 5 months ago          |                 1 |
+| confluence        | svn   | 6 months ago          |                 1 |
 | darcsum           | darcs | 3 years, 8 months ago |                 0 |
 | dic-lookup-w3m    | svn   | 5 months ago          |                 4 |
-| dsvn              | svn   | 5 months ago          |                 1 |
+| dsvn              | svn   | 6 months ago          |                 1 |
 | helm-ls-svn       | svn   | 2 years, 6 months ago |                 0 |
 | ruby-additional   | svn   | 3 months ago          |                11 |
 | swbuff            | cvs   | 10 years ago          |                 0 |
-| tex-smart-umlauts | darcs | 1 year, 8 months ago  |                 0 |
-| w3m               | cvs   | 13 days ago           |               101 |
+| tex-smart-umlauts | darcs | 1 year, 9 months ago  |                 0 |
+| w3m               | cvs   | 4 days ago            |               101 |
 
 * Missing from Melpa
 
@@ -72,7 +72,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (592)                | Link                                    |
+| Package (599)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -117,6 +117,7 @@ please first make sure they meet the minimal requirements.
 | bd-set-mark                  | [[https://github.com/lewang/bd-set-mark][lewang/bd-set-mark]]                      |
 | better-jump                  | [[https://github.com/Fuco1/better-jump][Fuco1/better-jump]]                       |
 | bibeltex                     | [[https://github.com/ruediger/bibeltex][ruediger/bibeltex]]                       |
+| bidi                         | [[https://github.com/kensanata/emacs-bidi][kensanata/emacs-bidi]]                    |
 | bing-api                     | [[https://github.com/coordinate/bingapiel][coordinate/bingapiel]]                    |
 | binmove                      | [[https://github.com/beketa/binmove][beketa/binmove]]                          |
 | bookem                       | [[https://github.com/kjfletch/bookem-el][kjfletch/bookem-el]]                      |
@@ -338,6 +339,7 @@ please first make sure they meet the minimal requirements.
 | ical-event                   | [[https://github.com/jtatarik/ical-event][jtatarik/ical-event]]                     |
 | ical2org                     | [[https://github.com/cofi/ical2org][cofi/ical2org]]                           |
 | icmp-info                    | [[https://github.com/davep/icmp-info.el][davep/icmp-info.el]]                      |
+| idle-scroll                  | [[https://github.com/kensanata/idle-scroll][kensanata/idle-scroll]]                   |
 | ido-better-flex              | [[https://github.com/vic/ido-better-flex][vic/ido-better-flex]]                     |
 | ido-other-window             | [[https://github.com/timcharper/ido-other-window][timcharper/ido-other-window]]             |
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                         |
@@ -367,6 +369,7 @@ please first make sure they meet the minimal requirements.
 | json-sexp-mode               | [[https://github.com/TaylanUB/json-sexp-mode][TaylanUB/json-sexp-mode]]                 |
 | juick                        | [[https://github.com/mad/emacs-juick-el][mad/emacs-juick-el]]                      |
 | kappa                        | [[https://github.com/rhz/kappa-emacs][rhz/kappa-emacs]]                         |
+| kdic                         | [[https://github.com/kensanata/kdic][kensanata/kdic]]                          |
 | keats                        | [[https://github.com/rejeep/keats][rejeep/keats]]                            |
 | key-cast                     | [[https://github.com/k1LoW/emacs-key-cast][k1LoW/emacs-key-cast]]                    |
 | keyadvice                    | [[https://github.com/Fuco1/keyadvice.el][Fuco1/keyadvice.el]]                      |
@@ -389,6 +392,7 @@ please first make sure they meet the minimal requirements.
 | lisp-editing                 | [[https://github.com/nicferrier/emacs-lisp-editing-tools][nicferrier/emacs-lisp-editing-tools]]     |
 | lispy-mnemonic               | [[https://github.com/itsjeyd/lispy-mnemonic][itsjeyd/lispy-mnemonic]]                  |
 | lookup                       | [[https://github.com/lookup2/lookup2][lookup2/lookup2]]                         |
+| loops                        | [[https://github.com/kensanata/loops][kensanata/loops]]                         |
 | lsdb                         | [[https://github.com/ikazuhiro/lsdb][ikazuhiro/lsdb]]                          |
 | ltsv                         | [[https://github.com/syohex/emacs-ltsv][syohex/emacs-ltsv]]                       |
 | lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   |
@@ -416,6 +420,7 @@ please first make sure they meet the minimal requirements.
 | movie                        | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      |
 | mplayer-mode                 | [[https://github.com/markhepburn/mplayer-mode][markhepburn/mplayer-mode]]                |
 | mru-yank                     | [[https://github.com/lewang/le_emacs_MRU_yank][lewang/le_emacs_MRU_yank]]                |
+| mu                           | [[https://github.com/kensanata/mu][kensanata/mu]]                            |
 | mu4e                         | [[https://github.com/djcb/mu][djcb/mu]]                                 |
 | multi-column-mode            | [[https://github.com/diiq/multi-column-mode][diiq/multi-column-mode]]                  |
 | multi-mode-util              | [[https://github.com/tarao/multi-mode-util][tarao/multi-mode-util]]                   |
@@ -485,6 +490,7 @@ please first make sure they meet the minimal requirements.
 | page-mode                    | [[https://github.com/BartMassey/emacs-page][BartMassey/emacs-page]]                   |
 | paredit-c                    | [[https://github.com/dandavison/paredit-c][dandavison/paredit-c]]                    |
 | parfait-mode                 | [[https://github.com/sorellabs/parfait-mode][sorellabs/parfait-mode]]                  |
+| parseclj                     | [[https://github.com/lambdaisland/parseclj][lambdaisland/parseclj]]                   |
 | paste                        | [[https://github.com/nicferrier/pasteel][nicferrier/pasteel]]                      |
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    |
@@ -641,6 +647,7 @@ please first make sure they meet the minimal requirements.
 | weak-ref                     | [[https://github.com/skeeto/elisp-weak-ref][skeeto/elisp-weak-ref]]                   |
 | weather                      | [[https://github.com/mad/weather.el][mad/weather.el]]                          |
 | whole-line-funcs             | [[https://github.com/lewang/le_emacs_whole_line_funcs][lewang/le_emacs_whole_line_funcs]]        |
+| wiki                         | [[https://github.com/kensanata/wiki][kensanata/wiki]]                          |
 | wikidoc                      | [[https://github.com/nicferrier/elwikidoc][nicferrier/elwikidoc]]                    |
 | wikidot-mode                 | [[https://github.com/infochimps-customers/wikidot-mode][infochimps-customers/wikidot-mode]]       |
 | window-margin                | [[https://github.com/aculich/window-margin.el][aculich/window-margin.el]]                |
