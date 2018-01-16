@@ -62,11 +62,11 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  456 |        |       |   458 |     6 |       |
+| builtin     |  455 |        |       |   458 |     6 |       |
 | elpa        |  109 |    109 |       |       |   162 |       |
 | elpa-branch |    8 |      8 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3948 |   3948 |       |       |       |  3578 |
+| github      | 3949 |   3949 |       |       |       |  3578 |
 | gitlab      |   41 |     41 |       |       |       |    33 |
 | git         |   53 |     53 |       |       |       |    42 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1105 |        |  1105 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6779 |   5218 |  1105 |   458 |   184 |  3838 |
+| total       | 6779 |   5219 |  1105 |   458 |   184 |  3838 |
 
 * Emacs
 ** Prefer elpa
@@ -177,18 +177,17 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (10) | Gelpa   | Reason                         |
-|--------------+---------+--------------------------------|
-| cl-generic   | subtree | Elpa has backport of builtin   |
-| cl-lib       | subtree | Elpa has backport of builtin   |
-| cl-print     | builtin | Elpa has copy of builtin       |
-| let-alist    | builtin | Elpa has copy of builtin       |
-| ntlm         | builtin | Elpa has copy of builtin       |
-| pinentry     | subtree | Elpa imports outdated upstream |
-| python       | builtin | Elpa has copy of builtin       |
-| seq          | subtree | Elpa has backport of builtin   |
-| soap-client  | builtin | Elpa has copy of builtin       |
-| svg          | subtree | Elpa imports outdated upstream |
+| Package (9) | Gelpa   | Reason                         |
+|-------------+---------+--------------------------------|
+| cl-generic  | subtree | Elpa has backport of builtin   |
+| cl-lib      | subtree | Elpa has backport of builtin   |
+| cl-print    | builtin | Elpa has copy of builtin       |
+| let-alist   | builtin | Elpa has copy of builtin       |
+| ntlm        | builtin | Elpa has copy of builtin       |
+| python      | builtin | Elpa has copy of builtin       |
+| seq         | subtree | Elpa has backport of builtin   |
+| soap-client | builtin | Elpa has copy of builtin       |
+| svg         | subtree | Elpa imports outdated upstream |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
@@ -206,7 +205,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (61)               | Class  | Gelpa    | Link                                         |
+| Package (62)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -251,6 +250,7 @@
 | org                        | git    | builtin  | [[http://orgmode.org]]                           |
 | pabbrev                    | github | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
 | parsec                     | github | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
+| pinentry                   | github | subtree  | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                             |
 | realgud                    | github | subtree  | [[https://github.com/rocky/emacs-dbgr][rocky/emacs-dbgr]]                             |
 | rich-minority              | github | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | sotlisp                    | github | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
