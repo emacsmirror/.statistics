@@ -67,7 +67,7 @@
 |---------------+-------+---------|
 | GPL-3+        |  2545 |      66 |
 | GPL-2+        |   612 |      16 |
-| GPL-3         |   133 |       3 |
+| GPL-3         |   134 |       3 |
 | MIT (x11)     |   131 |       3 |
 | MIT           |   127 |       3 |
 | BSD-2-clause  |    70 |       2 |
@@ -93,7 +93,6 @@
 | MS-PL         |     2 |       0 |
 | CC0 1.0       |     1 |       0 |
 | COPYLOVE      |     1 |       0 |
-| GPL-2         |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
@@ -302,9 +301,6 @@
   (emir--insert-melpa-packages-using-licenses "GPL" "GPL-2")
 #+END_SRC
 #+RESULTS:
-| Package (1) | License | Class  | Link                                           |
-|-------------+---------+--------+------------------------------------------------|
-| buckwalter  | GPL-2   | github | https://github.com/joehakimrahme/buckwalter.el |
 
 * Licenses used by packages on the Emacsmirror
 ** Overview
@@ -321,8 +317,8 @@
 | License         | Count | Percent |
 |-----------------+-------+---------|
 | GPL-3+          |  3130 |      60 |
-| GPL-2+          |  1333 |      26 |
-| GPL-3           |   140 |       3 |
+| GPL-2+          |  1332 |      26 |
+| GPL-3           |   141 |       3 |
 | MIT (x11)       |   130 |       2 |
 | MIT             |   130 |       2 |
 | BSD-2-clause    |    74 |       1 |
@@ -334,8 +330,8 @@
 | as-is           |    28 |       1 |
 | ((failure/p))   |    14 |       0 |
 | GPL-1+          |     6 |       0 |
-| GPL-2           |     5 |       0 |
 | WTFPL-2         |     5 |       0 |
+| GPL-2           |     4 |       0 |
 | LGPL-3+         |     4 |       0 |
 | AGPL-3+         |     3 |       0 |
 | ISC (and)       |     3 |       0 |
@@ -358,9 +354,9 @@
 | ((pending))     |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4627 |      89 |
+| total GNU       |  4626 |      89 |
 |-----------------+-------+---------|
-| total           |  5219 |     100 |
+| total           |  5218 |     100 |
 
 ** No license specified
 #+BEGIN_SRC emacs-lisp
@@ -420,17 +416,15 @@
   (emir--insert-mirror-packages-using-licenses "GPL" "GPL-2")
 #+END_SRC
 #+RESULTS:
-| Package (6)    | License | Class  | M | Link                                           |
-|----------------+---------+--------+---+------------------------------------------------|
-| buckwalter     | GPL-2   | github | t | https://github.com/joehakimrahme/buckwalter.el |
-| coq            | GPL     | github |   | https://github.com/ProofGeneral/PG             |
-| gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck     |
-| smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin           |
-| stgit          | GPL-2   | github |   | https://github.com/ctmarinas/stgit             |
-| syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode         |
+| Package (5)    | License | Class  | M | Link                                       |
+|----------------+---------+--------+---+--------------------------------------------|
+| coq            | GPL     | github |   | https://github.com/ProofGeneral/PG         |
+| gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck |
+| smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin       |
+| stgit          | GPL-2   | github |   | https://github.com/ctmarinas/stgit         |
+| syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode     |
 
 Pending:
-- buckwalter [[https://github.com/melpa/melpa/pull/5144][melpa#5144]]
 - coq [[https://github.com/ProofGeneral/PG/issues/198][#198]]
 - gnus-autocheck [[https://github.com/slaanesh/gnus-autocheck/issues/2][#2]]
 - smartwin [[https://github.com/jerryxgh/smartwin/issues/3][#3]]
