@@ -71,13 +71,13 @@
 | MIT (x11)     |   131 |       3 |
 | MIT           |   127 |       3 |
 | BSD-2-clause  |    70 |       2 |
-| BSD-3-clause  |    38 |       1 |
+| BSD-3-clause  |    39 |       1 |
 | Apache-2.0    |    34 |       1 |
 | unlicense     |    32 |       1 |
 | public-domain |    26 |       1 |
 | as-is         |    21 |       1 |
 | WTFPL         |    13 |       0 |
-| ((failure/p)) |    12 |       0 |
+| ((failure/p)) |    11 |       0 |
 | ((failure))   |     5 |       0 |
 | GPL-1+        |     4 |       0 |
 | WTFPL-2       |     4 |       0 |
@@ -254,7 +254,7 @@
 | sly-repl-ansi-color |   | GPL-2+          | github    | https://github.com/PuercoPop/sly-repl-ansi-color        |
 | smartwin            |   | GPL-2           | github    | https://github.com/jerryxgh/smartwin                    |
 | sourcetalk          |   | pending         | shelved   | https://github.com/malroc/sourcetalk_emacs              |
-| stgit               |   | GPL-2           | github    | https://github.com/ctmarinas/stgit                      |
+| stgit               |   | GPL-2+          | github    | https://github.com/ctmarinas/stgit                      |
 | subshell-proc       |   | pending         | shelved   | https://github.com/andrewmains12/subshell-proc          |
 | sudden-death        |   | pending         | shelved   | https://github.com/yewton/sudden-death.el               |
 | syslog-mode         |   | GPL-2           | github    | https://github.com/vapniks/syslog-mode                  |
@@ -317,23 +317,23 @@
 | License         | Count | Percent |
 |-----------------+-------+---------|
 | GPL-3+          |  3130 |      60 |
-| GPL-2+          |  1332 |      26 |
+| GPL-2+          |  1333 |      26 |
 | GPL-3           |   141 |       3 |
 | MIT (x11)       |   130 |       2 |
 | MIT             |   130 |       2 |
 | BSD-2-clause    |    74 |       1 |
 | public-domain   |    49 |       1 |
-| BSD-3-clause    |    41 |       1 |
+| BSD-3-clause    |    42 |       1 |
 | unlicense       |    34 |       1 |
 | Apache-2.0      |    32 |       1 |
 | WTFPL           |    32 |       1 |
 | as-is           |    28 |       1 |
-| ((failure/p))   |    14 |       0 |
+| ((failure/p))   |    13 |       0 |
 | GPL-1+          |     6 |       0 |
 | WTFPL-2         |     5 |       0 |
-| GPL-2           |     4 |       0 |
 | LGPL-3+         |     4 |       0 |
 | AGPL-3+         |     3 |       0 |
+| GPL-2           |     3 |       0 |
 | ISC (and)       |     3 |       0 |
 | MS-PL           |     3 |       0 |
 | Artistic-2.0    |     2 |       0 |
@@ -383,14 +383,13 @@
   (emir--insert-mirror-packages-using-licenses "failure" "failure(p)")
 #+END_SRC
 #+RESULTS:
-| Package (16)          | License    | Class    | M | Link                                                                           |
+| Package (15)          | License    | Class    | M | Link                                                                           |
 |-----------------------+------------+----------+---+--------------------------------------------------------------------------------|
 | clang-format          | failure    | orphaned | t | https://github.com/emacsorphanage/clang-format                                 |
 | cython-mode           | failure(p) | minority | t |                                                                                |
 | edit-at-point         | failure(p) | github   | t | https://github.com/enoson/edit-at-point.el                                     |
 | emacs-setup           | failure(p) | github   | t | https://github.com/echosa/emacs-setup                                          |
 | eno                   | failure(p) | github   | t | https://github.com/enoson/eno.el                                               |
-| ghc                   | failure(p) | github   | t | https://github.com/DanielG/ghc-mod                                             |
 | glsl-mode             | failure(p) | github   | t | https://github.com/jimhourihan/glsl-mode                                       |
 | golint                | failure(p) | subtree  | t |                                                                                |
 | main-line             | failure(p) | github   | t | https://github.com/emacsfodder/emacs-mainline                                  |
@@ -404,30 +403,25 @@
 
 [[mu4e:msgid:87ing5dw09.fsf@bernoul.li][Organizing the quest]]
 
-- Responses
-  - glsl-mode [[https://github.com/jimhourihan/glsl-mode/issues/8][#8]] "No version means any version"
-  - gherkin-mode [[https://github.com/candera/gherkin-mode/issues/2][#2]] (incomplete)
-- Huge effort
-  - clang-format: BSD-3-clause
-  - ruby-additional: ruby
+- clang-format: BSD-3-clause (huge effort)
+- glsl-mode [[https://github.com/jimhourihan/glsl-mode/issues/8][#8]] "No version means any version"
+- ruby-additional: ruby (huge effort)
 
 ** Problematic licenses
 #+BEGIN_SRC emacs-lisp
   (emir--insert-mirror-packages-using-licenses "GPL" "GPL-2")
 #+END_SRC
 #+RESULTS:
-| Package (5)    | License | Class  | M | Link                                       |
+| Package (4)    | License | Class  | M | Link                                       |
 |----------------+---------+--------+---+--------------------------------------------|
 | coq            | GPL     | github |   | https://github.com/ProofGeneral/PG         |
 | gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck |
 | smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin       |
-| stgit          | GPL-2   | github |   | https://github.com/ctmarinas/stgit         |
 | syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode     |
 
 Pending:
 - coq [[https://github.com/ProofGeneral/PG/issues/198][#198]]
 - gnus-autocheck [[https://github.com/slaanesh/gnus-autocheck/issues/2][#2]]
 - smartwin [[https://github.com/jerryxgh/smartwin/issues/3][#3]]
-- stgit [[https://github.com/ctmarinas/stgit/issues/7][#7]]
 - syslog-mode [[https://github.com/vapniks/syslog-mode/issues/15][#15]]
 

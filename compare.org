@@ -62,7 +62,7 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  455 |        |       |   458 |     6 |       |
+| builtin     |  455 |        |       |   457 |     6 |       |
 | elpa        |  109 |    109 |       |       |   162 |       |
 | elpa-branch |    8 |      8 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -74,14 +74,14 @@
 | bitbucket   |   45 |     45 |       |       |       |    38 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  658 |    658 |       |       |       |   146 |
+| wiki        |  657 |    657 |       |       |       |   146 |
 | file        |  253 |    253 |       |       |       |       |
 | minority    |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1105 |        |  1105 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6779 |   5219 |  1105 |   458 |   184 |  3838 |
+| total       | 6778 |   5218 |  1105 |   457 |   184 |  3838 |
 
 * Emacs
 ** Prefer elpa
@@ -247,7 +247,7 @@
 | nameless                   | github | subtree  | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
 | names                      | github | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
 | on-screen                  | github | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
-| org                        | git    | builtin  | [[http://orgmode.org]]                           |
+| org                        | git    | builtin  | [[https://orgmode.org]]                          |
 | pabbrev                    | github | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
 | parsec                     | github | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
 | pinentry                   | github | subtree  | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                             |
