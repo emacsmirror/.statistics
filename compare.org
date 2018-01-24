@@ -66,7 +66,7 @@
 | elpa        |  109 |    109 |       |       |   162 |       |
 | elpa-branch |    8 |      8 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3971 |   3971 |       |       |       |  3601 |
+| github      | 3971 |   3971 |       |       |       |  3598 |
 | gitlab      |   41 |     41 |       |       |       |    33 |
 | git         |   54 |     54 |       |       |       |    43 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1106 |        |  1106 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6802 |   5241 |  1106 |   457 |   184 |  3862 |
+| total       | 6802 |   5241 |  1106 |   457 |   184 |  3859 |
 
 * Emacs
 ** Prefer elpa
@@ -494,7 +494,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (30)         | Class    | Melpa     | Reason                     |
+| Package (27)         | Class    | Melpa     | Reason                     |
 |----------------------+----------+-----------+----------------------------|
 | autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | cfengine-code-style  | minority | github    | mostly non-elisp           |
@@ -517,12 +517,9 @@
 | paper-theme          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | po-mode              | minority | git       | mostly non-elisp           |
 | pylint               | minority | github    | mostly non-elisp           |
-| rfringe              | minority | github    | all-in-one repo            |
 | sequential-command   | shelved  | wiki      |                            |
 | smart-compile        | minority | github    | all-in-one repo            |
 | summarye             | shelved  | wiki      |                            |
-| tfs                  | minority | github    | all-in-one repo            |
-| thesaurus            | minority | github    | all-in-one repo            |
 | thrift               | minority | github    | mostly non-elisp           |
 | toggle               | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | wisp-mode            | minority | bitbucket | mostly non-elisp           |
