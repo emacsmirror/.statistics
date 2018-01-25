@@ -6,239 +6,87 @@
 - dropdown-list [[https://github.com/melpa/melpa/commit/57ede036207f6eef8e3cf7e700426061466e5c50][melpa#]]
 
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Dependee" "Author" "Depender" "Type" "Fetcher" "Author")
+  (epkg-with-org-header ("Dependee" "Author" "Depender" "Type" "Author")
     (-mapcat
-     (-lambda ((dependee _dependee-type))
-       (let ((dependee-pkg (epkg dependee)))
-         (-mapcat (-lambda ((depender . features))
-                    (let ((depender-pkg  (epkg depender))
-                          (depender-type (caar (epkg-sql [:select class
-                                                          :from melpa-recipes
-                                                          :where (= name $s1)]
-                                                         depender))))
-                      (and depender-type
-                           (not (eq depender-type 'wiki))
-                           ;; (not (epkg-wiki-package-p depender-pkg))
-                           `((,dependee
-                              ,(caar (oref dependee-pkg authors))
-                              ,depender
-                              ,(if (-any #'symbolp features) "hard" "soft")
-                              ,depender-type
-                              ,(caar (oref depender-pkg authors)))))))
-                  (epkg-reverse-dependencies dependee))))
-     ;; (epkgs [name class] 'epkg-wiki-package-p))
-     (epkg-sql [:select :distinct [packages:name packages:class]
-                :from [packages melpa-recipes]
-                :where (= packages:name melpa-recipes:epkg-package)
-                :and   (= packages:class 'wiki)
-                :order-by [(asc packages:name)
-                           (asc melpa-recipes:name)]])))
+     (lambda (dependee)
+       (-mapcat (-lambda ((depender . features))
+                  (let ((depender-pkg (epkg depender)))
+                    (and (not (epkg-wiki-package-p depender-pkg))
+                         `((,(oref dependee name)
+                            ,(caar (oref dependee authors))
+                            ,depender
+                            ,(if (-any #'symbolp features) "hard" "soft")
+                            ,(caar (oref depender-pkg authors)))))))
+                (epkg-reverse-dependencies dependee)))
+     (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS:
-| Dependee (8) | Author       | Depender                      | Type | Fetcher | Author               |
-|--------------+--------------+-------------------------------+------+---------+----------------------|
-| etags-select | Scott Frazer | evil-collection               | soft | github  | James Nguyen         |
-| filesets+    | Drew Adams   | helm-filesets                 | soft | github  | Graham Clark         |
-| font-lock+   | Drew Adams   | all-the-icons                 | hard | github  | Dominic Charlesworth |
-| font-lock+   | Drew Adams   | jemdoc-mode                   | soft | github  | Dimitar Dimitrov     |
-| hexrgb       | Drew Adams   | bibliothek                    | hard | github  | Göktuğ Kayaalp       |
-| hexrgb       | Drew Adams   | jabber                        | hard | git     |                      |
-| hexrgb       | Drew Adams   | on-screen                     | soft | github  | Michael Heerdegen    |
-| hexrgb       | Drew Adams   | paper-theme                   | hard | github  | Göktuğ Kayaalp       |
-| highlight    | Drew Adams   | cider-eval-sexp-fu            | hard | github  | Sylvain Benner       |
-| highlight    | Drew Adams   | eval-sexp-fu                  | hard | github  | Takeshi Banse        |
-| highlight    | Drew Adams   | evil-extra-operator           | hard | github  | Dewdrops             |
-| highlight    | Drew Adams   | evil-search-highlight-persist | hard | github  | Juanjo Alvarez       |
-| highlight    | Drew Adams   | floobits                      | hard | github  | Geoff Greer          |
-| highlight    | Drew Adams   | nrepl-eval-sexp-fu            | hard | github  | Takeshi Banse        |
-| highlight    | Drew Adams   | php-boris-minor-mode          | hard | github  | steckerhalter        |
-| highlight    | Drew Adams   | sonic-pi                      | hard | github  | Joseph Wilk          |
-| highlight    | Drew Adams   | spiral                        | hard | github  | Daniel Barreto       |
-| strings      | Drew Adams   | ergoemacs-mode                | soft | github  | David Capello        |
-| thingatpt+   | Drew Adams   | el-spice                      | hard | github  | Vedang Manerikar     |
-| thingatpt+   | Drew Adams   | exato                         | hard | github  | Filipe Silva         |
-| yaoddmuse    |              | company                       | soft | github  | Nikolaj Schumacher   |
-| yaoddmuse    |              | org-readme                    | soft | github  | Matthew L. Fidler    |
+| Dependee (44)       | Author                        | Depender          | Type | Author                                            |
+|---------------------+-------------------------------+-------------------+------+---------------------------------------------------|
+| anything-kyr-config | rubikitch                     | anything          | soft | Tamas Patrovics                                   |
+| background          |                               | anything          | soft | Tamas Patrovics                                   |
+| bookmark+           | Drew Adams, Thierry Volpiatto | one-key           | hard | Andy Stewart                                      |
+| cygwin-mount        | Michael Cook                  | vm                | hard |                                                   |
+| dropdown-list       |                               | thesaurus         | soft | Dino Chiesa, Alex Henning                         |
+| el-expectations     | rubikitch                     | bts               | hard | Hiroaki Otsu                                      |
+| el-expectations     | rubikitch                     | caskxy            | soft | Hiroaki Otsu                                      |
+| el-expectations     | rubikitch                     | gauche-mode       | hard |                                                   |
+| erc-robot           | David Edmondson               | mallow            | hard | Edward O'Connor                                   |
+| etags-select        | Scott Frazer                  | evil-collection   | soft | James Nguyen                                      |
+| extract-text        | Joe Bloggs                    | gnus-summary-ext  | soft | Joe Bloggs                                        |
+| filesets+           | Drew Adams                    | helm-filesets     | soft | Graham Clark                                      |
+| fit-frame           | Drew Adams                    | xmonad            | hard | Jonas Bernoulli                                   |
+| font-lock+          | Drew Adams                    | all-the-icons     | hard | Dominic Charlesworth                              |
+| font-lock+          | Drew Adams                    | highlight         | soft | Drew Adams                                        |
+| font-lock+          | Drew Adams                    | jemdoc-mode       | soft | Dimitar Dimitrov                                  |
+| frame-cmds          | Drew Adams                    | frame-ctr         | hard | Takaaki ISHIKAWA                                  |
+| frame-fns           | Drew Adams                    | highlight         | soft | Drew Adams                                        |
+| help-dwim           |                               | pde               | hard | Ye Wenbin                                         |
+| hexrgb              | Drew Adams                    | bibliothek        | hard | Göktuğ Kayaalp                                    |
+| hexrgb              | Drew Adams                    | jabber            | hard |                                                   |
+| hexrgb              | Drew Adams                    | on-screen         | soft | Michael Heerdegen                                 |
+| hexrgb              | Drew Adams                    | one-key           | hard | Andy Stewart                                      |
+| hexrgb              | Drew Adams                    | paper-theme       | hard | Göktuğ Kayaalp                                    |
+| highline            | Vinicius Jose Latorre         | emms              | hard | Jorgen Schäfer                                    |
+| highline            | Vinicius Jose Latorre         | frb               | hard |                                                   |
+| htmlr               | Alex Schroeder                | newsticker        | hard | Ulf Jasper                                        |
+| icicles             | Drew Adams                    | rcodetools        | hard |                                                   |
+| igrep               | Kevin Rodgers                 | emhacks           | hard |                                                   |
+| imdb                |                               | movie             | hard | Lars Magne Ingebrigtsen                           |
+| imenu-tree          |                               | pde               | hard | Ye Wenbin                                         |
+| ipa                 |                               | anything          | soft | Tamas Patrovics                                   |
+| menu-bar+           | Drew Adams                    | highlight         | soft | Drew Adams                                        |
+| oddmuse             |                               | company           | soft | Nikolaj Schumacher                                |
+| org-json            | Changyuan Yu                  | es-mode           | hard | Lee Hinman                                        |
+| policy-switch       | Christoffer S. Hansen         | one-key           | soft | Andy Stewart                                      |
+| redo+               |                               | vim-mode          | soft | Frank Fischer                                     |
+| repository-root     | Avi Rozen                     | anything          | soft | Tamas Patrovics                                   |
+| run-assoc           |                               | look-dired        | hard | Joe Bloggs                                        |
+| run-assoc           |                               | one-key           | soft | Andy Stewart                                      |
+| strings             | Drew Adams                    | ergoemacs-mode    | soft | David Capello                                     |
+| template-simple     | Ye Wenbin                     | pde               | hard | Ye Wenbin                                         |
+| tempo-x             | Wenbin                        | pde               | hard | Ye Wenbin                                         |
+| thing-opt           | MATSUYAMA Tomohiro            | generic-range-opt | hard |                                                   |
+| thingatpt+          | Drew Adams                    | el-spice          | hard | Vedang Manerikar                                  |
+| thingatpt+          | Drew Adams                    | exato             | hard | Filipe Silva                                      |
+| tooltip-help        |                               | org-pua           | hard | Henry G. Weller                                   |
+| tumme               | Mathias Dahl                  | imagetext         | hard | Kevin Ryde                                        |
+| unit-test           | Mark Triggs                   | sbt               | soft |                                                   |
+| vline               | Taiki SUGAWARA                | nxhtml            | soft | Lennart Borgman (lennart O borgman A gmail O com) |
+| wikipedia-mode      | Chong Yidong                  | wikipediafs       | hard | Ben Voui                                          |
+| xml-parse           | John Wiegley                  | doxymacs          | hard |                                                   |
+| yaoddmuse           |                               | company           | soft | Nikolaj Schumacher                                |
+| yaoddmuse           |                               | one-key           | soft | Andy Stewart                                      |
+| yaoddmuse           |                               | org-readme        | soft | Matthew L. Fidler                                 |
+| zones               | Drew Adams                    | highlight         | soft | Drew Adams                                        |
+| zoom-frm            | Drew Adams                    | hyperbole         | soft | Bob Weiner                                        |
 
-* Wiki packages on Melpa
-
-- Remove all Emacswiki packages [[https://github.com/melpa/melpa/pull/5008][melpa#5008]]
-- Drew Adams [[https://github.com/melpa/melpa/issues/5034][melpa#5034]]
-- rubikitch [[https://github.com/melpa/melpa/issues/5020][melpa#5020]]
-
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Author" "Package" "Downloads")
-    (let ((counts
-           (with-current-buffer (url-retrieve-synchronously
-                                 "https://melpa.org/download_counts.json")
-             (json-read-from-string
-              (decode-coding-string
-               (buffer-substring-no-properties
-                (1+ url-http-end-of-headers)
-                (point-max))
-               'utf-8)))))
-      (cl-sort (mapcar (-lambda ((name))
-                         (list (caar (oref (epkg name) authors))
-                               name
-                               (cdr (assq (intern name) counts))))
-                       (epkg-sql [:select name :from melpa-recipes
-                                  :where (= class 'wiki)
-                                  :order-by [(asc name)]]))
-               #'string< :key #'car)))
-#+END_SRC
-#+RESULTS:
-| Author (34)                   | Package                 | Downloads |
-|-------------------------------+-------------------------+-----------|
-| Adrian Kubala                 | buffer-stack            |      1232 |
-| Andy Stewart                  | auto-install            |      5586 |
-| Andy Stewart                  | chm-view                |      1134 |
-| Andy Stewart                  | dired-sort              |     24549 |
-| Andy Stewart                  | irfc                    |      1634 |
-| Benjamin Rutt                 | backup-each-save        |      1159 |
-| Benjamin Rutt                 | top-mode                |      1560 |
-| Binu Jose Philip, Drew Adams  | w32browser-dlgopen      |       804 |
-| Chris Stucchio                | multi-eshell            |      2417 |
-| Davis Herring                 | unbound                 |      2476 |
-| Drew Adams                    | apropos-fn+var          |      1043 |
-| Drew Adams                    | apu                     |       770 |
-| Drew Adams                    | autofit-frame           |       981 |
-| Drew Adams                    | browse-kill-ring+       |      2080 |
-| Drew Adams                    | cmds-menu               |       747 |
-| Drew Adams                    | col-highlight           |      5702 |
-| Drew Adams                    | crosshairs              |      3855 |
-| Drew Adams                    | cursor-chg              |      2158 |
-| Drew Adams                    | cus-edit+               |      1037 |
-| Drew Adams                    | dired+                  |     85195 |
-| Drew Adams                    | dired-details+          |      6867 |
-| Drew Adams                    | dired-sort-menu+        |      2049 |
-| Drew Adams                    | doremi                  |      2748 |
-| Drew Adams                    | doremi-cmd              |      1757 |
-| Drew Adams                    | doremi-frm              |      1526 |
-| Drew Adams                    | doremi-mac              |       821 |
-| Drew Adams                    | face-remap+             |       627 |
-| Drew Adams                    | facemenu+               |      1105 |
-| Drew Adams                    | faces+                  |      1728 |
-| Drew Adams                    | files+                  |       934 |
-| Drew Adams                    | filesets+               |      1164 |
-| Drew Adams                    | find-dired+             |       871 |
-| Drew Adams                    | finder+                 |       743 |
-| Drew Adams                    | fit-frame               |      1401 |
-| Drew Adams                    | font-lock+              |     21372 |
-| Drew Adams                    | frame-cmds              |      7675 |
-| Drew Adams                    | frame-fns               |      7500 |
-| Drew Adams                    | grep+                   |      1722 |
-| Drew Adams                    | header2                 |      4535 |
-| Drew Adams                    | help+                   |      2457 |
-| Drew Adams                    | help-fns+               |    164639 |
-| Drew Adams                    | help-mode+              |      2022 |
-| Drew Adams                    | hexrgb                  |      8826 |
-| Drew Adams                    | hide-comnt              |    111152 |
-| Drew Adams                    | highlight               |    208224 |
-| Drew Adams                    | highlight-chars         |      2689 |
-| Drew Adams                    | hl-defined              |      1000 |
-| Drew Adams                    | hl-line+                |      8844 |
-| Drew Adams                    | hl-spotlight            |      1126 |
-| Drew Adams                    | icicles                 |     17677 |
-| Drew Adams                    | icomplete+              |      2681 |
-| Drew Adams                    | imenu+                  |      2477 |
-| Drew Adams                    | info+                   |    198454 |
-| Drew Adams                    | isearch+                |      3594 |
-| Drew Adams                    | isearch-prop            |       927 |
-| Drew Adams                    | lacarte                 |      2390 |
-| Drew Adams                    | lib-requires            |      2332 |
-| Drew Adams                    | macros+                 |       726 |
-| Drew Adams                    | mb-depth+               |       671 |
-| Drew Adams                    | menu-bar+               |      1553 |
-| Drew Adams                    | misc-cmds               |      1316 |
-| Drew Adams                    | misc-fns                |       747 |
-| Drew Adams                    | modeline-char           |       566 |
-| Drew Adams                    | modeline-posn           |      1378 |
-| Drew Adams                    | mouse+                  |      1160 |
-| Drew Adams                    | mouse3                  |       949 |
-| Drew Adams                    | naked                   |       541 |
-| Drew Adams                    | narrow-indirect         |      1197 |
-| Drew Adams                    | novice+                 |       542 |
-| Drew Adams                    | oneonone                |       884 |
-| Drew Adams                    | palette                 |      1828 |
-| Drew Adams                    | pp+                     |       857 |
-| Drew Adams                    | pp-c-l                  |      1059 |
-| Drew Adams                    | pretty-lambdada         |      3328 |
-| Drew Adams                    | replace+                |      1199 |
-| Drew Adams                    | reveal-next             |       536 |
-| Drew Adams                    | second-sel              |       769 |
-| Drew Adams                    | showkey                 |      1097 |
-| Drew Adams                    | simple+                 |       699 |
-| Drew Adams                    | strings                 |      1025 |
-| Drew Adams                    | subr+                   |       772 |
-| Drew Adams                    | synonyms                |      2370 |
-| Drew Adams                    | thing-cmds              |       968 |
-| Drew Adams                    | thingatpt+              |      2183 |
-| Drew Adams                    | thumb-frm               |       612 |
-| Drew Adams                    | tool-bar+               |      1020 |
-| Drew Adams                    | ucs-cmds                |       723 |
-| Drew Adams                    | window+                 |      1023 |
-| Drew Adams                    | zones                   |       764 |
-| Drew Adams                    | zoom-frm                |      4651 |
-| Drew Adams, Lennart Borgman   | wid-edit+               |       605 |
-| Drew Adams, Thierry Volpiatto | bookmark+               |     27088 |
-| Francis J. Wright             | dired-sort-menu         |      1954 |
-| Igor Sikaček                  | awk-it                  |      1414 |
-| Jan Rehders                   | hideshowvis             |      3048 |
-| Joe Bloggs                    | bs-ext                  |       773 |
-| Kahlil (Kal) HODGSON          | plsql                   |      1318 |
-| Kahlil (Kal) HODGSON          | swbuff-x                |       678 |
-| Kahlil (Kal) HODGSON          | tidy                    |     32241 |
-| Kai Grossjohann               | message-x               |       603 |
-| Kevin Rodgers                 | auto-capitalize         |      1341 |
-| Kevin Rodgers                 | igrep                   |      2096 |
-| Kumar Appaiah                 | muttrc-mode             |      1627 |
-| Martin Rudalics               | speck                   |      1071 |
-| Mathias Dahl                  | hide-region             |       976 |
-| Michael Cook                  | cygwin-mount            |      2195 |
-| Miles Bader                   | echo-bell               |       696 |
-| Rafal Jedruszek               | highlight-tail          |      2062 |
-| Rick Bielawski                | anchored-transpose      |       954 |
-| Rick Bielawski                | column-marker           |      7014 |
-| Rob Giardina                  | dired-details           |     15032 |
-| Ryan Davis and Phil Hagelberg | project-local-variables |     32426 |
-| Scott Frazer                  | etags-select            |      3576 |
-| Scott Frazer                  | etags-table             |      2153 |
-| Taiki SUGAWARA                | highlight-cl            |      1202 |
-| Taiki SUGAWARA                | vline                   |      5423 |
-| Takeshi Banse                 | el-swank-fuzzy          |       824 |
-| Trey Jackson                  | framemove               |      3202 |
-| Vinicius Jose Latorre         | ascii                   |      2863 |
-| Vinicius Jose Latorre         | blank-mode              |      2362 |
-| Yoshida Masato                | gnus-spotlight          |       576 |
-| khiker                        | ruby-block              |      7656 |
-|                               | ac-dabbrev              |      3932 |
-|                               | aok                     |       729 |
-|                               | batch-mode              |      1678 |
-|                               | better-registers        |       883 |
-|                               | csv-nav                 |     29793 |
-|                               | dropdown-list           |     10760 |
-|                               | eldoc-extension         |      2624 |
-|                               | fuzzy-format            |       889 |
-|                               | fuzzy-match             |      1805 |
-|                               | jira                    |      2589 |
-|                               | list-processes+         |      1080 |
-|                               | point-undo              |      2525 |
-|                               | redo+                   |      6939 |
-|                               | sqlplus                 |      2061 |
-|                               | summarye                |       849 |
-|                               | wimpy-del               |       536 |
-|                               | yaoddmuse               |      2432 |
-| rubikitch                     | lispxmp                 |      1988 |
-| rubikitch                     | minor-mode-hack         |       769 |
-| rubikitch                     | recentf-ext             |      7410 |
-| rubikitch                     | screenshot              |      1175 |
-| rubikitch                     | sequential-command      |      2623 |
-| rubikitch                     | sticky                  |       948 |
-| rubikitch                     | usage-memo              |       644 |
-
-* Wiki packages on the Emacsmirror
+* Wiki packages
 
 - Alex Schroeder [[https://github.com/emacsmirror/p/issues/3][emacsmirror#3]]
+- rubykitch [[https://github.com/melpa/melpa/issues/5020][melpa#5020]]
+- [[https://github.com/melpa/melpa/pull/5008#issuecomment-360103510][melpa#5008^1]]
+- [[https://github.com/melpa/melpa/pull/5008#issuecomment-360501258][melpa#5008^2]]
 
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Author" "Package")
@@ -557,7 +405,6 @@
 | Drew Adams                                      | help-mode+                     |
 | Drew Adams                                      | hexrgb                         |
 | Drew Adams                                      | hide-comnt                     |
-| Drew Adams                                      | highlight                      |
 | Drew Adams                                      | highlight-chars                |
 | Drew Adams                                      | hl-defined                     |
 | Drew Adams                                      | hl-line+                       |

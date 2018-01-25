@@ -36,7 +36,7 @@
                   (bitbucket   0  0  "" "" "" 0)
                   (hg          0  0  "" "" "" 0)
                   hline
-                  (wiki        0  0  "" "" "" 0)
+                  (wiki        0  0  "" "" "" "")
                   (file        0  0  "" "" "" "")
                   (minority    0  0  "" "" "" "")
                   hline
@@ -63,25 +63,25 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  455 |        |       |   457 |     6 |       |
-| elpa        |  109 |    109 |       |       |   162 |       |
-| elpa-branch |    8 |      8 |       |       |    16 |       |
+| elpa        |  110 |    110 |       |       |   163 |       |
+| elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3971 |   3971 |       |       |       |  3598 |
+| github      | 3972 |   3972 |       |       |       |  3599 |
 | gitlab      |   41 |     41 |       |       |       |    33 |
-| git         |   54 |     54 |       |       |       |    43 |
+| git         |   55 |     55 |       |       |       |    43 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    38 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  657 |    657 |       |       |       |   146 |
+| wiki        |  656 |    656 |       |       |       |       |
 | file        |  253 |    253 |       |       |       |       |
 | minority    |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1106 |        |  1106 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6802 |   5241 |  1106 |   457 |   184 |  3859 |
+| total       | 6803 |   5242 |  1106 |   457 |   185 |  3714 |
 
 * Emacs
 ** Prefer elpa
@@ -205,13 +205,14 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (62)               | Class  | Gelpa    | Link                                         |
+| Package (63)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
 | aggressive-indent          | github | subtree  | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
 | ahungry-theme              | github | subtree  | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
 | async                      | github | subtree  | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
+| auctex                     | git    | external |                                              |
 | avy                        | github | subtree  | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
 | bbdb                       | git    | external | [[http://bbdb.sourceforge.net]]                  |
 | beacon                     | github | subtree  | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
@@ -494,7 +495,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (27)         | Class    | Melpa     | Reason                     |
+| Package (25)         | Class    | Melpa     | Reason                     |
 |----------------------+----------+-----------+----------------------------|
 | autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | cfengine-code-style  | minority | github    | mostly non-elisp           |
@@ -517,9 +518,7 @@
 | paper-theme          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | po-mode              | minority | git       | mostly non-elisp           |
 | pylint               | minority | github    | mostly non-elisp           |
-| sequential-command   | shelved  | wiki      |                            |
 | smart-compile        | minority | github    | all-in-one repo            |
-| summarye             | shelved  | wiki      |                            |
 | thrift               | minority | github    | mostly non-elisp           |
 | toggle               | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | wisp-mode            | minority | bitbucket | mostly non-elisp           |

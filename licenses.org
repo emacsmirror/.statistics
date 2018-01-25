@@ -65,22 +65,22 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2560 |      66 |
-| GPL-2+        |   613 |      16 |
-| GPL-3         |   137 |       4 |
-| MIT (x11)     |   132 |       3 |
+| GPL-3+        |  2515 |      68 |
+| GPL-2+        |   515 |      14 |
+| GPL-3         |   136 |       4 |
+| MIT (x11)     |   132 |       4 |
 | MIT           |   128 |       3 |
 | BSD-2-clause  |    70 |       2 |
-| BSD-3-clause  |    39 |       1 |
+| BSD-3-clause  |    38 |       1 |
 | Apache-2.0    |    35 |       1 |
 | unlicense     |    32 |       1 |
 | public-domain |    26 |       1 |
 | as-is         |    22 |       1 |
 | WTFPL         |    13 |       0 |
 | ((failure/p)) |    10 |       0 |
-| ((failure))   |     5 |       0 |
 | GPL-1+        |     4 |       0 |
 | WTFPL-2       |     4 |       0 |
+| ((failure))   |     4 |       0 |
 | AGPL-3+       |     3 |       0 |
 | Artistic-2.0  |     3 |       0 |
 | BEER-WARE     |     3 |       0 |
@@ -91,16 +91,15 @@
 | LGPL          |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
-| MS-PL         |     2 |       0 |
 | CC0 1.0       |     1 |       0 |
 | COPYLOVE      |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3327 |      86 |
+| total GNU     |  3183 |      86 |
 |---------------+-------+---------|
-| total         |  3862 |     100 |
+| total         |  3714 |     100 |
 
 ** Removed packages
 #+BEGIN_SRC emacs-lisp
@@ -289,12 +288,11 @@
   (emir--insert-melpa-packages-using-licenses "failure")
 #+END_SRC
 #+RESULTS:
-| Package (4)     | License | Class    | Link                                              |
+| Package (3)     | License | Class    | Link                                              |
 |-----------------+---------+----------+---------------------------------------------------|
 | clang-format    | failure | orphaned | https://github.com/emacsorphanage/clang-format    |
 | redshank        | failure | shelved  |                                                   |
 | ruby-additional | failure | orphaned | https://github.com/emacsorphanage/ruby-additional |
-| summarye        | failure | shelved  | https://github.com/emacsmirror/emacswiki.org      |
 
 ** Problematic licenses
 #+BEGIN_SRC emacs-lisp
@@ -316,7 +314,7 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  3144 |      60 |
+| GPL-3+          |  3145 |      60 |
 | GPL-2+          |  1334 |      25 |
 | GPL-3           |   144 |       3 |
 | MIT (x11)       |   131 |       2 |
@@ -354,9 +352,9 @@
 | ((pending))     |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4645 |      89 |
+| total GNU       |  4646 |      89 |
 |-----------------+-------+---------|
-| total           |  5241 |     100 |
+| total           |  5242 |     100 |
 
 ** No license specified
 #+BEGIN_SRC emacs-lisp
