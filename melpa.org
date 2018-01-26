@@ -67,7 +67,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (599)                | Link                                    |
+| Package (600)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -577,6 +577,7 @@ please first make sure they meet the minimal requirements.
 | sofa                         | [[https://github.com/cinsk/emacs-sofa][cinsk/emacs-sofa]]                        |
 | songbook                     | [[https://github.com/crep4ever/songbook-emacs-mode][crep4ever/songbook-emacs-mode]]           |
 | sourcepawn-mode              | [[https://github.com/agrif/sourcepawn-mode][agrif/sourcepawn-mode]]                   |
+| speechd                      | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     |
 | spinasm-mode                 | [[https://github.com/segoh/spinasm-mode][segoh/spinasm-mode]]                      |
 | spinner                      | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                    |
 | spss                         | [[https://github.com/vapniks/spss-mode][vapniks/spss-mode]]                       |
@@ -698,7 +699,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (19)        | Link                                                                   |
+| Package (18)        | Link                                                                   |
 |---------------------+------------------------------------------------------------------------|
 | auctex              |                                                                        |
 | auto-mounter        |                                                                        |
@@ -718,7 +719,6 @@ please first make sure they meet the minimal requirements.
 | rcirc-ssh           |                                                                        |
 | riece               | [[http://www.nongnu.org/riece]]                                            |
 | slate-config-mode   |                                                                        |
-| speechd             | [[http://www.freebsoft.org/speechd-el]]                                    |
 
 ** Bitbucket
 #+NAME: missing-bitbucket

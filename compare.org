@@ -66,9 +66,9 @@
 | elpa        |  110 |    110 |       |       |   163 |       |
 | elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3972 |   3972 |       |       |       |  3599 |
+| github      | 3973 |   3973 |       |       |       |  3595 |
 | gitlab      |   41 |     41 |       |       |       |    33 |
-| git         |   55 |     55 |       |       |       |    43 |
+| git         |   55 |     55 |       |       |       |    42 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    38 |
@@ -79,9 +79,9 @@
 | minority    |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1106 |        |  1106 |       |       |       |
+| shelved     | 1105 |        |  1105 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6803 |   5242 |  1106 |   457 |   185 |  3714 |
+| total       | 6803 |   5243 |  1105 |   457 |   185 |  3709 |
 
 * Emacs
 ** Prefer elpa
@@ -431,7 +431,7 @@
 | sift                    | projectile-sift                   | github   |
 | smart-mode-line         | smart-mode-line-powerline-theme   | github   |
 | sourcekit               | company-sourcekit                 | github   |
-| speechd                 | speechd-el                        | git      |
+| speechd                 | speechd-el                        | github   |
 | springboard             | ido-springboard                   | github   |
 | stan-mode               | stan-snippets                     | github   |
 | term-manager            | term-projectile                   | github   |
@@ -495,31 +495,25 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (25)         | Class    | Melpa     | Reason                     |
-|----------------------+----------+-----------+----------------------------|
-| autotest             | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
-| cfengine-code-style  | minority | github    | mostly non-elisp           |
-| cmake-mode           | minority | github    | mostly non-elisp           |
-| cursor-in-brackets   | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
-| cython-mode          | minority | github    | mostly non-elisp           |
-| diffscuss-mode       | minority | github    | mostly non-elisp           |
-| dummy-h-mode         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
-| forecast             | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
-| google-c-style       | minority | github    | mostly non-elisp           |
-| gregorio-mode        | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
-| judge-indent         | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
-| less-css-mode        | builtin  | github    | Emacs 26.0.90 has newer    |
-| llvm-mode            | shelved  | git       | mostly non-elisp           |
-| mwe-log-commands     | shelved  | github    | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
-| nemerle              | minority | github    | mostly non-elisp           |
-| ninja-mode           | minority | github    | mostly non-elisp           |
-| org-password-manager | shelved  | git       | upstream gone [[https://github.com/melpa/melpa/issues/4622][melpa#4622]]   |
-| outline-magic        | shelved  | github    | TODO remove from melpa     |
-| paper-theme          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
-| po-mode              | minority | git       | mostly non-elisp           |
-| pylint               | minority | github    | mostly non-elisp           |
-| smart-compile        | minority | github    | all-in-one repo            |
-| thrift               | minority | github    | mostly non-elisp           |
-| toggle               | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
-| wisp-mode            | minority | bitbucket | mostly non-elisp           |
+| Package (19)        | Class    | Melpa     | Reason                     |
+|---------------------+----------+-----------+----------------------------|
+| autotest            | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
+| cfengine-code-style | minority | github    | mostly non-elisp           |
+| cmake-mode          | minority | github    | mostly non-elisp           |
+| cython-mode         | minority | github    | mostly non-elisp           |
+| diffscuss-mode      | minority | github    | mostly non-elisp           |
+| forecast            | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
+| google-c-style      | minority | github    | mostly non-elisp           |
+| less-css-mode       | builtin  | github    | Emacs 26.0.90 has newer    |
+| llvm-mode           | shelved  | git       | mostly non-elisp           |
+| nemerle             | minority | github    | mostly non-elisp           |
+| ninja-mode          | minority | github    | mostly non-elisp           |
+| outline-magic       | shelved  | github    | TODO remove from melpa     |
+| paper-theme         | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
+| po-mode             | minority | git       | mostly non-elisp           |
+| pylint              | minority | github    | mostly non-elisp           |
+| smart-compile       | minority | github    | all-in-one repo            |
+| thrift              | minority | github    | mostly non-elisp           |
+| toggle              | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
+| wisp-mode           | minority | bitbucket | mostly non-elisp           |
 

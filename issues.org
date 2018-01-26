@@ -106,9 +106,8 @@ available over https.
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: insecure
-| Package (202)             | Class | Year | M | Dep | Url                                                                                         |
+| Package (201)             | Class | Year | M | Dep | Url                                                                                         |
 |---------------------------+-------+------+---+-----+---------------------------------------------------------------------------------------------|
-| speechd                   | git   | 2016 |   |     | git://git.freebsoft.org/git/speechd-el                                                      |
 | eide                      | git   | 2017 | t |     | git://git.tuxfamily.org/gitroot/eide/emacs-ide.git                                          |
 | notmuch                   | git   | 2018 | t |   6 | git://notmuchmail.org/git/notmuch                                                           |
 | os                        | git   | 2014 |   |     | git://orgmode.org/org-sync.git                                                              |
