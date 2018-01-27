@@ -29,14 +29,6 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (2) | Package     | Shelved |
-|-------------+-------------+---------|
-| forecast    | bibliothek  |         |
-| forecast    | forecast    |         |
-| paper-theme | bibliothek  |         |
-| paper-theme | paper-theme |         |
-
-- bibliothek: [[https://github.com/melpa/melpa/pull/5228][melpa#5228]]
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -63,10 +55,6 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-
-* Fetch errors
-
-- faustine [[https://github.com/melpa/melpa/pull/4900#issuecomment-351236280][melpa#4900]]
 
 * Insecure packages
 

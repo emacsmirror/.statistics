@@ -66,7 +66,7 @@
 | elpa        |  110 |    110 |       |       |   163 |       |
 | elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3973 |   3973 |       |       |       |  3595 |
+| github      | 3973 |   3973 |       |       |       |  3596 |
 | gitlab      |   41 |     41 |       |       |       |    33 |
 | git         |   55 |     55 |       |       |       |    42 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -76,12 +76,12 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  656 |    656 |       |       |       |       |
 | file        |  253 |    253 |       |       |       |       |
-| minority    |   23 |     23 |       |       |       |       |
+| minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1105 |        |  1105 |       |       |       |
+| shelved     | 1104 |        |  1104 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6803 |   5243 |  1105 |   457 |   185 |  3709 |
+| total       | 6803 |   5244 |  1104 |   457 |   185 |  3710 |
 
 * Emacs
 ** Prefer elpa
@@ -495,9 +495,10 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (19)        | Class    | Melpa     | Reason                     |
+| Package (20)        | Class    | Melpa     | Reason                     |
 |---------------------+----------+-----------+----------------------------|
 | autotest            | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
+| bibliothek          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | cfengine-code-style | minority | github    | mostly non-elisp           |
 | cmake-mode          | minority | github    | mostly non-elisp           |
 | cython-mode         | minority | github    | mostly non-elisp           |
