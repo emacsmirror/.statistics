@@ -1,9 +1,7 @@
 #+SETUPFILE: .orgconfig
 [[https://emacsmirror.net/stats][up]]
 
-* Wiki packages required by none-wiki packages
-
-- dropdown-list [[https://github.com/melpa/melpa/commit/57ede036207f6eef8e3cf7e700426061466e5c50][melpa#]]
+* Wiki packages required by non-wiki packages
 
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Dependee" "Author" "Depender" "Type" "Author")

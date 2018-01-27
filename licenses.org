@@ -65,22 +65,20 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2512 |      68 |
+| GPL-3+        |  2515 |      68 |
 | GPL-2+        |   515 |      14 |
 | GPL-3         |   136 |       4 |
 | MIT (x11)     |   131 |       4 |
-| MIT           |   128 |       3 |
+| MIT           |   130 |       4 |
 | BSD-2-clause  |    70 |       2 |
-| BSD-3-clause  |    38 |       1 |
-| Apache-2.0    |    35 |       1 |
+| BSD-3-clause  |    40 |       1 |
+| Apache-2.0    |    36 |       1 |
 | unlicense     |    32 |       1 |
 | public-domain |    26 |       1 |
-| as-is         |    22 |       1 |
+| as-is         |    23 |       1 |
 | WTFPL         |    13 |       0 |
-| ((failure/p)) |    10 |       0 |
-| GPL-1+        |     4 |       0 |
+| GPL-1+        |     6 |       0 |
 | WTFPL-2       |     4 |       0 |
-| ((failure))   |     4 |       0 |
 | AGPL-3+       |     3 |       0 |
 | Artistic-2.0  |     3 |       0 |
 | BEER-WARE     |     3 |       0 |
@@ -91,15 +89,27 @@
 | LGPL          |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
+| UIUC          |     2 |       0 |
 | CC0 1.0       |     1 |       0 |
 | COPYLOVE      |     1 |       0 |
+| GPL           |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3180 |      86 |
+| total GNU     |  3186 |      86 |
 |---------------+-------+---------|
 | total         |  3710 |     100 |
+
+** Issues
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-melpa-packages-using-licenses
+    "GPL" "GPL-2" "failure" "pending")
+#+END_SRC
+#+RESULTS:
+| Package (1) | License | Class   | Link |
+|-------------+---------+---------+------|
+| redshank    | GPL     | shelved |      |
 
 ** Removed packages
 #+BEGIN_SRC emacs-lisp
@@ -208,13 +218,13 @@
 | coq-commenter       | t | GPL-3+          | github    | https://github.com/ailrun/coq-commenter                 |
 | crab                |   | pending         | shelved   | https://github.com/puffnfresh/crab-emacs                |
 | easy-after-load     | t | GPL-3+          | github    | https://github.com/pd/easy-after-load                   |
-| edit-at-point       | t | failure(p)      | github    | https://github.com/enoson/edit-at-point.el              |
+| edit-at-point       | t | MIT             | github    | https://github.com/enoson/edit-at-point.el              |
 | el-pocket           | t | GPL-3+          | github    | https://github.com/pterygota/el-pocket                  |
-| eno                 | t | failure(p)      | github    | https://github.com/enoson/eno.el                        |
+| eno                 | t | MIT             | github    | https://github.com/enoson/eno.el                        |
 | ess-R-object-popup  |   | pending         | shelved   | https://github.com/myuhe/ess-R-object-popup.el          |
 | euslisp-mode        | t | GPL-3+          | github    | https://github.com/iory/euslisp-mode                    |
 | flappymacs          | t | MIT (x11)       | github    | https://github.com/taksatou/flappymacs                  |
-| flycheck-scala-sbt  |   | failure         | shelved   | https://github.com/rjmac/flycheck-scala-sbt             |
+| flycheck-scala-sbt  |   | public-domain   | shelved   | https://github.com/rjmac/flycheck-scala-sbt             |
 | gap-mode            | t | MIT             | bitbucket | https://bitbucket.org/gvol/gap-mode                     |
 | ghost-blog          | t | GPL-3+          | github    | https://github.com/javaguirre/ghost-blog-emacs          |
 | hlint-refactor      | t | MIT (x11)       | github    | https://github.com/mpickering/hlint-refactor-mode       |
@@ -277,29 +287,6 @@
 | lively              | t | GPL-3+          | github    | https://github.com/purcell/lively                       |
 | slime-annot         |   | none            | shelved   |                                                         |
 
-** No license specified
-#+BEGIN_SRC emacs-lisp
-  (emir--insert-melpa-packages-using-licenses "pending")
-#+END_SRC
-#+RESULTS:
-
-** Failure to extract license
-#+BEGIN_SRC emacs-lisp
-  (emir--insert-melpa-packages-using-licenses "failure")
-#+END_SRC
-#+RESULTS:
-| Package (3)     | License | Class    | Link                                              |
-|-----------------+---------+----------+---------------------------------------------------|
-| clang-format    | failure | orphaned | https://github.com/emacsorphanage/clang-format    |
-| redshank        | failure | shelved  |                                                   |
-| ruby-additional | failure | orphaned | https://github.com/emacsorphanage/ruby-additional |
-
-** Problematic licenses
-#+BEGIN_SRC emacs-lisp
-  (emir--insert-melpa-packages-using-licenses "GPL" "GPL-2")
-#+END_SRC
-#+RESULTS:
-
 * Licenses used by packages on the Emacsmirror
 ** Overview
 #+BEGIN_SRC emacs-lisp
@@ -314,20 +301,19 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  3147 |      60 |
+| GPL-3+          |  3151 |      60 |
 | GPL-2+          |  1335 |      25 |
 | GPL-3           |   144 |       3 |
-| MIT             |   131 |       2 |
+| MIT             |   133 |       3 |
 | MIT (x11)       |   130 |       2 |
 | BSD-2-clause    |    74 |       1 |
 | public-domain   |    49 |       1 |
-| BSD-3-clause    |    42 |       1 |
+| BSD-3-clause    |    44 |       1 |
+| Apache-2.0      |    34 |       1 |
 | unlicense       |    34 |       1 |
-| Apache-2.0      |    33 |       1 |
 | WTFPL           |    32 |       1 |
-| as-is           |    29 |       1 |
-| ((failure/p))   |    12 |       0 |
-| GPL-1+          |     6 |       0 |
+| as-is           |    31 |       1 |
+| GPL-1+          |     8 |       0 |
 | WTFPL-2         |     5 |       0 |
 | LGPL-3+         |     4 |       0 |
 | AGPL-3+         |     3 |       0 |
@@ -340,7 +326,6 @@
 | ISC (and/or)    |     2 |       0 |
 | LGPL-2.1        |     2 |       0 |
 | LGPL-3          |     2 |       0 |
-| ((failure))     |     2 |       0 |
 | BEER-WARE       |     1 |       0 |
 | CC BY-NC-SA 3.0 |     1 |       0 |
 | CC0 1.0         |     1 |       0 |
@@ -349,64 +334,17 @@
 | LGPL-3.0        |     1 |       0 |
 | MPL-2           |     1 |       0 |
 | Ruby            |     1 |       0 |
-| ((pending))     |     1 |       0 |
+| UIUC            |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4649 |      89 |
+| total GNU       |  4655 |      89 |
 |-----------------+-------+---------|
-| total           |  5244 |     100 |
+| total           |  5243 |     100 |
 
-** No license specified
+** Issues
 #+BEGIN_SRC emacs-lisp
-  (emir--insert-mirror-packages-using-licenses "pending")
-#+END_SRC
-#+RESULTS:
-| Package (1) | License | Class | M | Link                                                                       |
-|-------------+---------+-------+---+----------------------------------------------------------------------------|
-| ada-ref-man | pending | elpa  |   | https://git.savannah.gnu.org/cgit/emacs/elpa.git/tree/packages/ada-ref-man |
-
-** Unknown license
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "License")
-    (epkg-sql [:select [name class license] :from packages
-               :where (isnull license)
-               :and :not packages:class :in $v1
-               :order-by [(asc name)]]
-              [shelved])))
-#+END_SRC
-#+RESULTS:
-
-** Failure to extract license
-#+BEGIN_SRC emacs-lisp
-  (emir--insert-mirror-packages-using-licenses "failure" "failure(p)")
-#+END_SRC
-#+RESULTS:
-| Package (14)          | License    | Class    | M | Link                                                                           |
-|-----------------------+------------+----------+---+--------------------------------------------------------------------------------|
-| clang-format          | failure    | orphaned | t | https://github.com/emacsorphanage/clang-format                                 |
-| cython-mode           | failure(p) | minority | t |                                                                                |
-| edit-at-point         | failure(p) | github   | t | https://github.com/enoson/edit-at-point.el                                     |
-| emacs-setup           | failure(p) | github   | t | https://github.com/echosa/emacs-setup                                          |
-| eno                   | failure(p) | github   | t | https://github.com/enoson/eno.el                                               |
-| glsl-mode             | failure(p) | github   | t | https://github.com/jimhourihan/glsl-mode                                       |
-| golint                | failure(p) | subtree  | t |                                                                                |
-| manued                | failure(p) | github   |   | https://github.com/yamauchih/manued                                            |
-| nm                    | failure(p) | github   | t | https://github.com/tjim/nevermore                                              |
-| omtose-phellack-theme | failure(p) | github   | t | https://github.com/franksn/omtose-phellack-theme                               |
-| ruby-additional       | failure    | orphaned | t | https://github.com/emacsorphanage/ruby-additional                              |
-| trr                   | failure(p) | github   | t | https://github.com/kawabata/emacs-trr                                          |
-| tumblesocks           | failure(p) | github   | t | https://github.com/gcr/tumblesocks                                             |
-| uni-confusables       | failure(p) | elpa     |   | https://git.savannah.gnu.org/cgit/emacs/elpa.git/tree/packages/uni-confusables |
-
-[[mu4e:msgid:87ing5dw09.fsf@bernoul.li][Organizing the quest]]
-
-- clang-format: BSD-3-clause (huge effort)
-- glsl-mode [[https://github.com/jimhourihan/glsl-mode/issues/8][#8]] "No version means any version"
-- ruby-additional: ruby (huge effort)
-
-** Problematic licenses
-#+BEGIN_SRC emacs-lisp
-  (emir--insert-mirror-packages-using-licenses "GPL" "GPL-2")
+  (emir--insert-mirror-packages-using-licenses
+    "GPL" "GPL-2" "failure" "pending")
 #+END_SRC
 #+RESULTS:
 | Package (4)    | License | Class  | M | Link                                       |
@@ -416,7 +354,6 @@
 | smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin       |
 | syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode     |
 
-Pending:
 - coq [[https://github.com/ProofGeneral/PG/issues/198][#198]]
 - gnus-autocheck [[https://github.com/slaanesh/gnus-autocheck/issues/2][#2]]
 - smartwin [[https://github.com/jerryxgh/smartwin/issues/3][#3]]

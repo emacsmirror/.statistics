@@ -63,7 +63,7 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  455 |        |       |   457 |     6 |       |
-| elpa        |  110 |    110 |       |       |   163 |       |
+| elpa        |  109 |    109 |       |       |   163 |       |
 | elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 3973 |   3973 |       |       |       |  3596 |
@@ -81,7 +81,7 @@
 | orphaned    |   56 |     56 |       |       |       |       |
 | shelved     | 1104 |        |  1104 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6803 |   5244 |  1104 |   457 |   185 |  3710 |
+| total       | 6802 |   5243 |  1104 |   457 |   185 |  3710 |
 
 * Emacs
 ** Prefer elpa
@@ -121,7 +121,7 @@
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa")
-    (--filter (not (assoc 'name emir-pending-packages))
+    (--filter (not (assoc (car it) emir-pending-packages))
               (epkg-sql [:select [name class]
                          :from gelpa-recipes
                          :where (isnull epkg-package)
@@ -142,6 +142,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
+| Package (1) | Gelpa   | Reason                            |
+|-------------+---------+-----------------------------------|
+| ada-ref-man | subtree | no license, no elisp, no response |
 
 ** Unreleased
 #+NAME: gelpa-unreleased
