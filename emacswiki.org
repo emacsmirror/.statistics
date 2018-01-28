@@ -19,7 +19,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS:
-| Dependee (44)       | Author                        | Depender          | Type | Author                                            |
+| Dependee (43)       | Author                        | Depender          | Type | Author                                            |
 |---------------------+-------------------------------+-------------------+------+---------------------------------------------------|
 | anything-kyr-config | rubikitch                     | anything          | soft | Tamas Patrovics                                   |
 | background          |                               | anything          | soft | Tamas Patrovics                                   |
@@ -47,7 +47,6 @@
 | highline            | Vinicius Jose Latorre         | frb               | hard |                                                   |
 | htmlr               | Alex Schroeder                | newsticker        | hard | Ulf Jasper                                        |
 | icicles             | Drew Adams                    | rcodetools        | hard |                                                   |
-| igrep               | Kevin Rodgers                 | emhacks           | hard |                                                   |
 | imdb                |                               | movie             | hard | Lars Magne Ingebrigtsen                           |
 | imenu-tree          |                               | pde               | hard | Ye Wenbin                                         |
 | ipa                 |                               | anything          | soft | Tamas Patrovics                                   |
@@ -741,15 +740,10 @@
 | rubikitch                                       | emacs-init-check               |
 | rubikitch                                       | icicles-iswitchb               |
 | rubikitch                                       | install-elisp                  |
-| rubikitch                                       | lispxmp                        |
-| rubikitch                                       | minor-mode-hack                |
 | rubikitch                                       | mode-line-frame                |
-| rubikitch                                       | recentf-ext                    |
 | rubikitch                                       | screenshot                     |
 | rubikitch                                       | space-chord                    |
-| rubikitch                                       | sticky                         |
 | rubikitch                                       | unify-buffer                   |
-| rubikitch                                       | usage-memo                     |
 | tkld                                            | mail-signature                 |
 | wandad guscheh                                  | vhdl-process-wave              |
 | Ævar Arnfjörð Bjarmason                         | emms-seek-minor-mode           |

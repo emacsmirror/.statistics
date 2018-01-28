@@ -66,9 +66,9 @@
 | elpa        |  109 |    109 |       |       |   163 |       |
 | elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 3979 |   3979 |       |       |       |  3602 |
+| github      | 3979 |   3979 |       |       |       |  3603 |
 | gitlab      |   41 |     41 |       |       |       |    33 |
-| git         |   55 |     55 |       |       |       |    42 |
+| git         |   55 |     55 |       |       |       |    41 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    38 |
@@ -79,9 +79,9 @@
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1103 |        |  1103 |       |       |       |
+| shelved     | 1096 |        |  1096 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6802 |   5244 |  1103 |   457 |   185 |  3716 |
+| total       | 6795 |   5244 |  1096 |   457 |   185 |  3716 |
 
 * Emacs
 ** Prefer elpa
@@ -290,6 +290,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
+| Package (1) | Melpa  | Link              |
+|-------------+--------+-------------------|
+| prog-fill   | github | [[https://github.com/ahungry/prog-fill][ahungry/prog-fill]] |
 
 ** Pending
 #+NAME: melpa-pending
@@ -498,7 +501,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (20)        | Class    | Melpa     | Reason                     |
+| Package (19)        | Class    | Melpa     | Reason                     |
 |---------------------+----------+-----------+----------------------------|
 | autotest            | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | bibliothek          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
@@ -509,7 +512,6 @@
 | forecast            | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | google-c-style      | minority | github    | mostly non-elisp           |
 | less-css-mode       | builtin  | github    | Emacs 26.0.90 has newer    |
-| llvm-mode           | shelved  | git       | mostly non-elisp           |
 | nemerle             | minority | github    | mostly non-elisp           |
 | ninja-mode          | minority | github    | mostly non-elisp           |
 | outline-magic       | shelved  | github    | TODO remove from melpa     |
