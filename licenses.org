@@ -4,16 +4,14 @@
   (require 'epkg)
 
   (defun emir--format-license-table (table)
-    (--when-let (assq nil table)
-      (setcar it "((unknown))"))
-    (--when-let (assoc "pending" table)
-      (setcar it  "((pending))"))
     (--when-let (assoc "failure" table)
       (setcar it  "((failure))"))
-    (--when-let (assoc "failure(p)" table)
-      (setcar it  "((failure/p))"))
+    (--when-let (assoc "pending" table)
+      (setcar it  "((pending))"))
     (--when-let (assoc "none" table)
       (setcar it  "((none))"))
+    (--when-let (assoc "custom" table)
+      (setcar it  "((custom))"))
     (let ((total (apply '+ (mapcar 'cadr table)))
           (gnu   (apply '+ (mapcar (pcase-lambda (`(,license ,count))
                                      (if (string-match-p "GPL" license) count 0))
@@ -65,7 +63,7 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2515 |      68 |
+| GPL-3+        |  2516 |      68 |
 | GPL-2+        |   521 |      14 |
 | GPL-3         |   136 |       4 |
 | MIT (x11)     |   131 |       4 |
@@ -97,9 +95,9 @@
 | UIUC          |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3192 |      86 |
+| total GNU     |  3193 |      86 |
 |---------------+-------+---------|
-| total         |  3715 |     100 |
+| total         |  3716 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -301,8 +299,8 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  3151 |      60 |
-| GPL-2+          |  1336 |      25 |
+| GPL-3+          |  3152 |      60 |
+| GPL-2+          |  1335 |      25 |
 | GPL-3           |   144 |       3 |
 | MIT             |   133 |       3 |
 | MIT (x11)       |   130 |       2 |
