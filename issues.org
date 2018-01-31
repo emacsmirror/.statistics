@@ -94,7 +94,7 @@ available over https.
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: insecure
-| Package (201)             | Class | Year | M | Dep | Url                                                                                         |
+| Package (195)             | Class | Year | M | Dep | Url                                                                                         |
 |---------------------------+-------+------+---+-----+---------------------------------------------------------------------------------------------|
 | eide                      | git   | 2017 | t |     | git://git.tuxfamily.org/gitroot/eide/emacs-ide.git                                          |
 | notmuch                   | git   | 2018 | t |   6 | git://notmuchmail.org/git/notmuch                                                           |
@@ -128,12 +128,6 @@ available over https.
 | variant-abbc              | file  | 2010 |   |     | http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/variant-abbc.el                   |
 | messkeyw                  | file  | 2010 |   |     | http://karl.kleinpaste.org/gnus/messkeyw.el                                                 |
 | pack-windows              | file  | 2009 |   |     | http://lampwww.epfl.ch/~schinz/elisp/pack-windows.el                                        |
-| cocol                     | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/cocol.el                                                       |
-| himarks-mode              | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/himarks-mode.el                                                |
-| multr                     | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/multr.el                                                       |
-| prefixkey                 | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/prefixkey.el                                                   |
-| rdict                     | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/rdict.el                                                       |
-| tpum                      | file  | 2009 |   |     | http://lgarc.narod.ru/xemacs/tpum.el                                                        |
 | qemu                      | file  | 2010 |   |     | http://racin.free.fr/files/qemu.el                                                          |
 | task-mode                 | file  | 2010 |   |     | http://racin.free.fr/old/pub/task-mode/0.8rc1/task.el                                       |
 | gnus-checker              | file  | 2010 |   |     | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/gnus-checker.el                       |
@@ -300,7 +294,6 @@ available over https.
 
 - [[mu4e:msgid:87zi57jsaa.fsf@bernoul.li][gmarceau.gc.ca]] (mail undeliverable)
 - [[mu4e:msgid:871sijl6xs.fsf@bernoul.li][homepages.cs.ncl.ac.uk/phillip.lord]]
-- [[mu4e:msgid:87372zl762.fsf@bernoul.li][lgarc.narod.ru]]
 - [[mu4e:msgid:87h8rfl8do.fsf@bernoul.li][splode.com]]
 - [[mu4e:msgid:874lnfl77u.fsf@bernoul.li][sugarshark.com]]
 - [[mu4e:msgid:87607vl7as.fsf@bernoul.li][tess.oconnor.cx]]
