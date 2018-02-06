@@ -94,7 +94,7 @@ available over https.
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: insecure
-| Package (195)             | Class | Year | M | Dep | Url                                                                                         |
+| Package (183)             | Class | Year | M | Dep | Url                                                                                         |
 |---------------------------+-------+------+---+-----+---------------------------------------------------------------------------------------------|
 | eide                      | git   | 2017 | t |     | git://git.tuxfamily.org/gitroot/eide/emacs-ide.git                                          |
 | notmuch                   | git   | 2018 | t |   6 | git://notmuchmail.org/git/notmuch                                                           |
@@ -223,10 +223,6 @@ available over https.
 | tokipona                  | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/tokipona.el                                                    |
 | xml-event                 | file  | 2010 |   |   1 | http://tess.oconnor.cx/elisp/xml-event.el                                                   |
 | xml-stream                | file  | 2010 |   |     | http://tess.oconnor.cx/elisp/xml-stream.el                                                  |
-| lookout                   | file  | 2009 |   |     | http://ulf.epplejasper.de/downloads/lookout.el                                              |
-| u-appt                    | file  | 2009 |   |     | http://ulf.epplejasper.de/downloads/u-appt.el                                               |
-| u-color-cycle             | file  | 2009 |   |     | http://ulf.epplejasper.de/downloads/u-color-cycle.el                                        |
-| u-mandelbrot              | file  | 2010 |   |     | http://ulf.epplejasper.de/downloads/u-mandelbrot.el                                         |
 | randomsig                 | file  | 2010 |   |     | http://www.backmes.de/scripts+programs/randomsig.el                                         |
 | grep-edit                 | file  | 2010 |   |     | http://www.bookshelf.jp/elc/grep-edit.el                                                    |
 | gresreg                   | file  | 2010 |   |     | http://www.bookshelf.jp/elc/gresreg.el                                                      |
@@ -268,14 +264,6 @@ available over https.
 | profile-dotemacs          | file  | 2017 |   |     | http://www.randomsample.de/profile-dotemacs.el                                              |
 | gedcom                    | file  | 2009 |   |     | http://www.rempe-online.de/genealogie/lines/gedcom.el                                       |
 | find-files                | file  | 2009 |   |     | http://www.robf.de/Hacking/elisp/find-files.el                                              |
-| active-menu               | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/active-menu.el                               |
-| mouse-focus               | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/mouse-focus.el                               |
-| multiselect               | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/multiselect.el                               |
-| swiss-move                | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/swiss-move.el                                |
-| taskjuggler-mode          | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/taskjuggler-mode.el                          |
-| texletter                 | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/texletter.el                                 |
-| track-scroll              | file  | 2011 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/track-scroll.el                              |
-| watch-sexp                | file  | 2009 |   |     | http://www.skamphausen.de/cgi-bin/ska/download/watch-sexp.el                                |
 | c-comment-edit            | file  | 2010 |   |     | http://www.wonderworks.com/download/c-comment-edit.el                                       |
 | redo                      | file  | 2009 |   |   3 | http://www.wonderworks.com/download/redo.el                                                 |
 | dar                       | file  | 2009 |   |     | http://www.xsteve.at/prg/emacs/dar.el                                                       |
@@ -297,10 +285,8 @@ available over https.
 - [[mu4e:msgid:87h8rfl8do.fsf@bernoul.li][splode.com]]
 - [[mu4e:msgid:874lnfl77u.fsf@bernoul.li][sugarshark.com]]
 - [[mu4e:msgid:87607vl7as.fsf@bernoul.li][tess.oconnor.cx]]
-- [[mu4e:msgid:877esbl7no.fsf@bernoul.li][ulf.epplejasper.de]]
 - [[mu4e:msgid:878tcrl7q5.fsf@bernoul.li][www.bookshelf.jp]]
 - [[mu4e:msgid:87a7x7l7wk.fsf@bernoul.li][www.geekware.de]]
-- [[mu4e:msgid:87bmhnl7z3.fsf@bernoul.li][www.geocities.co.jp/SiliconValley-PaloAlto]] (mail undeliverable
+- [[mu4e:msgid:87bmhnl7z3.fsf@bernoul.li][www.geocities.co.jp/SiliconValley-PaloAlto]] (mail undeliverable)
 - [[mu4e:msgid:87d123l81y.fsf@bernoul.li][www.loveshack.ukfsn.org]]
-- [[mu4e:msgid:87efmjl855.fsf@bernoul.li][www.skamphausen.de]] (mail undeliverable)
 - [[mu4e:msgid:87fu6zl89k.fsf@bernoul.li][www.steve.at]]
