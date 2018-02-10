@@ -66,7 +66,7 @@
 | elpa        |  109 |    109 |       |       |   163 |       |
 | elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4003 |   4003 |       |       |       |  3624 |
+| github      | 4004 |   4004 |       |       |       |  3624 |
 | gitlab      |   45 |     45 |       |       |       |    33 |
 | git         |   55 |     55 |       |       |       |    41 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1099 |        |  1099 |       |       |       |
+| shelved     | 1098 |        |  1098 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6813 |   5259 |  1099 |   457 |   185 |  3737 |
+| total       | 6813 |   5260 |  1098 |   457 |   185 |  3737 |
 
 * Emacs
 ** Prefer elpa
@@ -458,18 +458,23 @@
 #+NAME: melpa-diverging-repositories
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Mirror" "Melpa")
-    (-keep (-lambda ((name))
-             (list name
-                   (epkg-org-link  name)
-                   (melpa-org-link name)))
-           (epkg-sql [:select :distinct [packages:name]
-                      :from [packages melpa-recipes]
-                      :where    (= melpa-recipes:epkg-package packages:name)
-                      :and      (= melpa-recipes:epkg-package melpa-recipes:name)
-                      :and      (= melpa-recipes:class       'github)
-                      :and      (= packages:class            'github)
-                      :and :not (= packages:url melpa-recipes:url)
-                      :order-by [(asc packages:name)]])))
+    (-keep
+     (-lambda ((name melpa-url))
+       (and (not (or (equal name "yatex")
+                     (string-prefix-p "git@github.com:emacsmirror/" melpa-url)
+                     (string-prefix-p "git@github.com:emacsattic/"  melpa-url)))
+            (list name
+                  (epkg-org-link  name)
+                  (melpa-org-link name))))
+     (epkg-sql [:select :distinct [packages:name melpa-recipes:url]
+                :from [packages melpa-recipes]
+                :where    (= melpa-recipes:epkg-package packages:name)
+                :and      (= melpa-recipes:epkg-package melpa-recipes:name)
+                :and :not (= packages:url melpa-recipes:url)
+                :and :not (= packages:class 'minority)
+                :and :not (= packages:class 'subtree)
+                :and :not (= packages:class 'builtin)
+                :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
 
@@ -498,7 +503,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (19)        | Class    | Melpa     | Reason                     |
+| Package (18)        | Class    | Melpa     | Reason                     |
 |---------------------+----------+-----------+----------------------------|
 | autotest            | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
 | bibliothek          | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
@@ -511,7 +516,6 @@
 | less-css-mode       | builtin  | github    | Emacs 26.0.90 has newer    |
 | nemerle             | minority | github    | mostly non-elisp           |
 | ninja-mode          | minority | github    | mostly non-elisp           |
-| outline-magic       | shelved  | github    | TODO remove from melpa     |
 | paper-theme         | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | po-mode             | minority | git       | mostly non-elisp           |
 | pylint              | minority | github    | mostly non-elisp           |
