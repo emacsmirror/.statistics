@@ -56,9 +56,6 @@ Melpa, and if you decide to submit recipes for some of them, then
 please first make sure they meet the minimal requirements.
 
 ** Github
-
-- Maybe follow [[https://github.com/melpa/melpa/issues/5010][melpa#5010]]'s lead.
-
 #+NAME: missing-github
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")

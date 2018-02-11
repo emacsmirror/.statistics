@@ -66,7 +66,7 @@
 | elpa        |  109 |    109 |       |       |   163 |       |
 | elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4005 |   4005 |       |       |       |  3621 |
+| github      | 4000 |   4000 |       |       |       |  3621 |
 | gitlab      |   45 |     45 |       |       |       |    33 |
 | git         |   55 |     55 |       |       |       |    41 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1098 |        |  1098 |       |       |       |
+| shelved     | 1019 |        |  1019 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6814 |   5261 |  1098 |   457 |   185 |  3734 |
+| total       | 6730 |   5256 |  1019 |   457 |   185 |  3734 |
 
 * Emacs
 ** Prefer elpa
@@ -290,6 +290,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
+| Package (1)         | Melpa  | Link                            |
+|---------------------+--------+---------------------------------|
+| ob-clojure-literate | github | [[https://github.com/stardiviner/ob-clojure-literate][stardiviner/ob-clojure-literate]] |
 
 ** Pending
 #+NAME: melpa-pending
