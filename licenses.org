@@ -64,11 +64,11 @@
 | License       | Count | Percent |
 |---------------+-------+---------|
 | GPL-3+        |  2528 |      68 |
-| GPL-2+        |   522 |      14 |
+| GPL-2+        |   524 |      14 |
+| MIT           |   135 |       4 |
 | GPL-3         |   134 |       4 |
-| MIT           |   134 |       4 |
 | MIT (x11)     |   132 |       4 |
-| BSD-2-clause  |    70 |       2 |
+| BSD-2-clause  |    71 |       2 |
 | BSD-3-clause  |    40 |       1 |
 | Apache-2.0    |    36 |       1 |
 | unlicense     |    32 |       1 |
@@ -95,9 +95,9 @@
 | UIUC          |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3204 |      86 |
+| total GNU     |  3206 |      86 |
 |---------------+-------+---------|
-| total         |  3732 |     100 |
+| total         |  3736 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -200,89 +200,44 @@
            )))
     (epkg-with-org-header ("Package" "R" "License" "Class" "Link")
       (--keep (-when-let (pkg (epkg it))
-                (list it
-                      (if (melpa-get it) "t" "")
-                      (oref pkg license)
-                      (substring (symbol-name (class-of pkg)) 5 -8)
-                      (oref pkg repopage)))
+                (let ((rcp (melpa-get it)))
+                  (and (not rcp)
+                       (list it
+                             (if rcp "t" "")
+                             (oref pkg license)
+                             (substring (symbol-name (class-of pkg)) 5 -8)
+                             (oref pkg repopage)))))
               removed)))
 #+END_SRC
 #+RESULTS:
-| Package (73)        | R | License         | Class     | Link                                                    |
-|---------------------+---+-----------------+-----------+---------------------------------------------------------|
-| achievements        | t | MIT             | bitbucket | https://bitbucket.org/gvol/emacs-achievements           |
-| avk-emacs-themes    | t | GPL-3+          | github    | https://github.com/avkoval/avk-emacs-themes             |
-| bpr                 | t | unlicense       | github    | https://github.com/ilya-babanov/emacs-bpr               |
-| coq-commenter       | t | GPL-3+          | github    | https://github.com/ailrun/coq-commenter                 |
-| crab                |   | pending         | shelved   | https://github.com/puffnfresh/crab-emacs                |
-| easy-after-load     | t | GPL-3+          | github    | https://github.com/pd/easy-after-load                   |
-| edit-at-point       | t | MIT             | github    | https://github.com/enoson/edit-at-point.el              |
-| el-pocket           | t | GPL-3+          | github    | https://github.com/pterygota/el-pocket                  |
-| eno                 | t | MIT             | github    | https://github.com/enoson/eno.el                        |
-| ess-R-object-popup  |   | pending         | shelved   | https://github.com/myuhe/ess-R-object-popup.el          |
-| euslisp-mode        | t | GPL-3+          | github    | https://github.com/iory/euslisp-mode                    |
-| flappymacs          | t | MIT (x11)       | github    | https://github.com/taksatou/flappymacs                  |
-| flycheck-scala-sbt  |   | public-domain   | shelved   | https://github.com/rjmac/flycheck-scala-sbt             |
-| gap-mode            | t | MIT             | bitbucket | https://bitbucket.org/gvol/gap-mode                     |
-| ghost-blog          | t | GPL-3+          | github    | https://github.com/javaguirre/ghost-blog-emacs          |
-| hlint-refactor      | t | MIT (x11)       | github    | https://github.com/mpickering/hlint-refactor-mode       |
-| ids-edit            | t | GPL-3+          | github    | https://github.com/kawabata/ids-edit                    |
-| imgix               |   | pending         | shelved   | https://github.com/imgix/imgix-emacs                    |
-| inf-php             |   | pending         | shelved   | https://github.com/taksatou/inf-php                     |
-| inform7-mode        |   | pending         | shelved   | https://github.com/fred-o/inform7-mode                  |
-| ivariants           | t | GPL-3+          | github    | https://github.com/kawabata/emacs-ivariants             |
-| ivs-edit            | t | GPL-3+          | github    | https://github.com/kawabata/ivs-edit                    |
-| jaunte              |   | pending         | shelved   | https://github.com/kawaguchi/jaunte.el                  |
-| mandoku-tls         | t | GPL-3+          | github    | https://github.com/mandoku/mandoku-tls                  |
-| memento             |   | pending         | shelved   | https://github.com/ehartc/memento                       |
-| monochrome-theme    | t | MIT             | github    | https://github.com/fxn/monochrome-theme.el              |
-| n3-mode             |   | pending         | shelved   | https://github.com/doriantaylor/n3-mode-for-emacs       |
-| nnir-est            | t | GPL-3+          | github    | https://github.com/kawabata/nnir-est                    |
-| nyan-prompt         |   | COPYLOVE        | github    | https://github.com/PuercoPop/nyan-prompt                |
-| org-jekyll          |   | pending         | shelved   | https://github.com/juanre/org-jekyll                    |
-| ox-pandoc           | t | GPL-3+          | github    | https://github.com/kawabata/ox-pandoc                   |
-| psc-ide             | t | GPL-3+          | github    | https://github.com/epost/psc-ide-emacs                  |
-| sicp                | t | GPL-3+          | github    | https://github.com/webframp/sicp-info                   |
-| yatex               | t | BSD-2-clause    | hg        |                                                         |
-| zerodark-theme      | t | GPL-3+          | github    | https://github.com/NicolasPetton/zerodark-theme         |
-| crontab-mode        |   | GPL-2           | shelved   | https://github.com/emacsorphanage/crontab-mode          |
-| harvest             | t | GPL-3+          | github    | https://github.com/kostajh/harvest.el                   |
-| helm-ctest          | t | GPL-3+          | github    | https://github.com/danlamanna/helm-ctest                |
-| inline-crypt        | t | GPL-2+          | github    | https://github.com/Sodel-the-Vociferous/inline-crypt-el |
-| plantuml-mode       | t | GPL-3+          | github    | https://github.com/skuro/plantuml-mode                  |
-| pushover            | t | GPL-3+          | git       |                                                         |
-| py-gnitset          | t | GPL-3+          | github    | https://github.com/quodlibetor/py-gnitset               |
-| pyim-greatdict      |   | pending         | shelved   | https://github.com/tumashu/pyim-greatdict               |
-| railgun             |   | pending         | shelved   | https://github.com/mbriggs/railgun.el                   |
-| rails-new           |   | pending         | shelved   | https://github.com/cheunghy/rails-new                   |
-| refheap             |   | none            | shelved   | https://github.com/Raynes/refheap.el                    |
-| ruby-dev            |   | pending         | shelved   | https://github.com/Mon-Ouie/ruby-dev.el                 |
-| ruby-guard          |   | pending         | shelved   | https://github.com/cheunghy/ruby-guard                  |
-| sly-repl-ansi-color |   | GPL-2+          | github    | https://github.com/PuercoPop/sly-repl-ansi-color        |
-| smartwin            |   | GPL-2           | github    | https://github.com/jerryxgh/smartwin                    |
-| sourcetalk          |   | pending         | shelved   | https://github.com/malroc/sourcetalk_emacs              |
-| stgit               |   | GPL-2+          | github    | https://github.com/ctmarinas/stgit                      |
-| subshell-proc       |   | pending         | shelved   | https://github.com/andrewmains12/subshell-proc          |
-| sudden-death        |   | pending         | shelved   | https://github.com/yewton/sudden-death.el               |
-| syslog-mode         |   | GPL-2           | github    | https://github.com/vapniks/syslog-mode                  |
-| tj-mode             |   | pending         | shelved   | https://github.com/katspaugh/tj-mode                    |
-| turkish             | t | MIT             | github    | https://github.com/emres/turkish-mode                   |
-| uzumaki             |   | pending         | shelved   | https://github.com/geyslan/uzumaki                      |
-| vimgolf             |   | CC BY-NC-SA 3.0 | github    | https://github.com/timvisher/vimgolf.el                 |
-| wordsmith-mode      | t | GPL-3+          | github    | https://github.com/istib/wordsmith-mode                 |
-| xah-css-mode        | t | GPL-3           | github    | https://github.com/xahlee/xah-css-mode                  |
-| xah-elisp-mode      | t | GPL-3           | github    | https://github.com/xahlee/xah-elisp-mode                |
-| xah-find            | t | GPL-3           | github    | https://github.com/xahlee/xah-find                      |
-| xah-fly-keys        | t | GPL-3           | github    | https://github.com/xahlee/xah-fly-keys                  |
-| xah-get-thing       | t | GPL-3           | github    | https://github.com/xahlee/xah-get-thing-or-selection    |
-| xah-lookup          | t | GPL-3           | github    | https://github.com/xahlee/lookup-word-on-internet       |
-| xah-math-input      | t | GPL-3           | github    | https://github.com/xahlee/xah-math-input                |
-| xah-reformat-code   | t | GPL-3           | github    | https://github.com/xahlee/xah-reformat-code             |
-| xah-replace-pairs   | t | GPL-3           | github    | https://github.com/xahlee/xah-replace-pairs             |
-| xahk-mode           | t | GPL-3           | github    | https://github.com/xahlee/xahk-mode.el                  |
-| zig-mode            | t | GPL-3+          | github    | https://github.com/AndreaOrru/zig-mode                  |
-| slime-ritz          |   | EPL             | shelved   |                                                         |
-| lively              | t | GPL-3+          | github    | https://github.com/purcell/lively                       |
+| Package (26)       | R | License         | Class   | Link                                              |
+|--------------------+---+-----------------+---------+---------------------------------------------------|
+| crab               |   | pending         | shelved | https://github.com/puffnfresh/crab-emacs          |
+| ess-R-object-popup |   | pending         | shelved | https://github.com/myuhe/ess-R-object-popup.el    |
+| flycheck-scala-sbt |   | public-domain   | shelved | https://github.com/rjmac/flycheck-scala-sbt       |
+| imgix              |   | pending         | shelved | https://github.com/imgix/imgix-emacs              |
+| inf-php            |   | pending         | shelved | https://github.com/taksatou/inf-php               |
+| inform7-mode       |   | pending         | shelved | https://github.com/fred-o/inform7-mode            |
+| jaunte             |   | pending         | shelved | https://github.com/kawaguchi/jaunte.el            |
+| memento            |   | pending         | shelved | https://github.com/ehartc/memento                 |
+| n3-mode            |   | pending         | shelved | https://github.com/doriantaylor/n3-mode-for-emacs |
+| nyan-prompt        |   | COPYLOVE        | github  | https://github.com/PuercoPop/nyan-prompt          |
+| org-jekyll         |   | pending         | shelved | https://github.com/juanre/org-jekyll              |
+| crontab-mode       |   | GPL-2           | shelved | https://github.com/emacsorphanage/crontab-mode    |
+| pyim-greatdict     |   | pending         | shelved | https://github.com/tumashu/pyim-greatdict         |
+| railgun            |   | pending         | shelved | https://github.com/mbriggs/railgun.el             |
+| rails-new          |   | pending         | shelved | https://github.com/cheunghy/rails-new             |
+| refheap            |   | none            | shelved | https://github.com/Raynes/refheap.el              |
+| ruby-dev           |   | pending         | shelved | https://github.com/Mon-Ouie/ruby-dev.el           |
+| ruby-guard         |   | pending         | shelved | https://github.com/cheunghy/ruby-guard            |
+| smartwin           |   | GPL-2           | github  | https://github.com/jerryxgh/smartwin              |
+| sourcetalk         |   | pending         | shelved | https://github.com/malroc/sourcetalk_emacs        |
+| subshell-proc      |   | pending         | shelved | https://github.com/andrewmains12/subshell-proc    |
+| syslog-mode        |   | GPL-2           | github  | https://github.com/vapniks/syslog-mode            |
+| tj-mode            |   | pending         | shelved | https://github.com/katspaugh/tj-mode              |
+| uzumaki            |   | pending         | shelved | https://github.com/geyslan/uzumaki                |
+| vimgolf            |   | CC BY-NC-SA 3.0 | github  | https://github.com/timvisher/vimgolf.el           |
+| slime-ritz         |   | EPL             | shelved |                                                   |
 
 * Licenses used by packages on the Emacsmirror
 ** Overview
@@ -303,7 +258,7 @@
 | GPL-3           |   142 |       3 |
 | MIT             |   138 |       3 |
 | MIT (x11)       |   131 |       2 |
-| BSD-2-clause    |    74 |       1 |
+| BSD-2-clause    |    75 |       1 |
 | public-domain   |    49 |       1 |
 | BSD-3-clause    |    44 |       1 |
 | Apache-2.0      |    34 |       1 |
@@ -336,7 +291,7 @@
 |-----------------+-------+---------|
 | total GNU       |  4662 |      89 |
 |-----------------+-------+---------|
-| total           |  5256 |     100 |
+| total           |  5257 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
