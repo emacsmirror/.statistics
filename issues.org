@@ -29,6 +29,12 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (1)     | Package            | Shelved |
+|-----------------+--------------------+---------|
+| undercover-init | adafruit-wisdom    |         |
+| undercover-init | flycheck-popup-tip |         |
+
+- https://github.com/gonewest818/adafruit-wisdom.el/pull/1
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -154,7 +160,7 @@ available over https.
 | fff                       | file  | 2009 |   |   2 | http://splode.com/~friedman/software/emacs-lisp/src/fff.el                                  |
 | file-fns                  | file  | 2017 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/file-fns.el                             |
 | flame                     | file  | 2015 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/flame.el                                |
-| flash-paren               | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/flash-paren.el                          |
+| flash-paren               | file  | 2018 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/flash-paren.el                          |
 | fmailutils                | file  | 2011 |   |   4 | http://splode.com/~friedman/software/emacs-lisp/src/fmailutils.el                           |
 | fshell                    | file  | 2012 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/fshell.el                               |
 | ftcp                      | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/ftcp.el                                 |
