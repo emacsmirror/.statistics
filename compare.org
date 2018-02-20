@@ -66,8 +66,8 @@
 | elpa        |  109 |    109 |       |       |   163 |       |
 | elpa-branch |    7 |      7 |       |       |    16 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4008 |   4008 |       |       |       |  3630 |
-| gitlab      |   45 |     45 |       |       |       |    33 |
+| github      | 4014 |   4014 |       |       |       |  3636 |
+| gitlab      |   44 |     44 |       |       |       |    32 |
 | git         |   55 |     55 |       |       |       |    41 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -79,9 +79,9 @@
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   56 |     56 |       |       |       |       |
-| shelved     | 1018 |        |  1018 |       |       |       |
+| shelved     | 1017 |        |  1017 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6737 |   5264 |  1018 |   457 |   185 |  3743 |
+| total       | 6741 |   5269 |  1017 |   457 |   185 |  3748 |
 
 * Emacs
 ** Prefer elpa
@@ -320,7 +320,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (79)    | Secondary package                 | Class    |
+| Primary package (80)    | Secondary package                 | Class    |
 |-------------------------+-----------------------------------+----------|
 | ac-php                  | ac-php-core                       | github   |
 | ac-php                  | company-php                       | github   |
@@ -374,6 +374,7 @@
 | flyspell-correct        | flyspell-correct-helm             | github   |
 | flyspell-correct        | flyspell-correct-ivy              | github   |
 | flyspell-correct        | flyspell-correct-popup            | github   |
+| ghub                    | glab                              | github   |
 | git-emacs               | git-blamed                        | github   |
 | git-modes               | gitattributes-mode                | github   |
 | git-modes               | gitconfig-mode                    | github   |

@@ -36,17 +36,17 @@ packages makes it more appealing to improve the remaining code.
 | Package (12)      | Vcs   | Last commit           | Commits last year |
 |-------------------+-------+-----------------------+-------------------|
 | cg                | svn   | 3 months ago          |                 2 |
-| clang-format      | svn   | 2 months ago          |                22 |
+| clang-format      | svn   | 3 months ago          |                22 |
 | color-theme       | bzr   | 9 years ago           |                 0 |
 | confluence        | svn   | 7 months ago          |                 1 |
 | darcsum           | darcs | 3 years, 9 months ago |                 0 |
 | dic-lookup-w3m    | svn   | 7 months ago          |                 4 |
 | dsvn              | svn   | 7 months ago          |                 1 |
 | helm-ls-svn       | svn   | 2 years, 7 months ago |                 0 |
-| ruby-additional   | svn   | 4 months ago          |                11 |
+| ruby-additional   | svn   | 5 months ago          |                11 |
 | swbuff            | cvs   | 10 years ago          |                 0 |
 | tex-smart-umlauts | darcs | 1 year, 10 months ago |                 0 |
-| w3m               | cvs   | 5 weeks ago           |               102 |
+| w3m               | cvs   | 5 weeks ago           |               101 |
 
 * Missing from Melpa
 
@@ -64,7 +64,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (600)                | Link                                    |
+| Package (601)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
@@ -518,6 +518,7 @@ please first make sure they meet the minimal requirements.
 | qooxdoo                      | [[https://github.com/jdodds/qooxdoo.el][jdodds/qooxdoo.el]]                       |
 | qtref                        | [[https://github.com/whitypig/qtref][whitypig/qtref]]                          |
 | quick-jump                   | [[https://github.com/jixiuf/quick-jump][jixiuf/quick-jump]]                       |
+| quickfix-mode                | [[https://github.com/ulises/quickfix-mode][ulises/quickfix-mode]]                    |
 | rb                           | [[https://github.com/nicferrier/emacs-rhythmbox][nicferrier/emacs-rhythmbox]]              |
 | rcfiles                      | [[https://github.com/didierverna/el-rcfiles][didierverna/el-rcfiles]]                  |
 | rcirc-robots                 | [[https://github.com/nicferrier/rcirc-robots][nicferrier/rcirc-robots]]                 |
