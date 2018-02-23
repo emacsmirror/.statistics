@@ -145,7 +145,7 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "semi-automatic import")
 #+END_SRC
 #+RESULTS:
-| Package (15)      | Mirror   | Melpa    |
+| Package (14)      | Mirror   | Melpa    |
 |-------------------+----------+----------|
 | cg                | orphaned | orphaned |
 | clang-format      | orphaned | orphaned |
@@ -157,7 +157,6 @@ repositories have not seen a commit in a decade.
 | helm-ls-svn       | orphaned | orphaned |
 | nxhtml            | orphaned |          |
 | ruby-additional   | orphaned | orphaned |
-| swbuff            | orphaned | orphaned |
 | tex-smart-umlauts | orphaned | orphaned |
 | text-translator   | orphaned |          |
 | vm                | orphaned |          |
