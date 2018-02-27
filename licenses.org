@@ -79,11 +79,11 @@
 | as-is         |    23 |       1 |
 | WTFPL         |    13 |       0 |
 | GPL-1+        |     6 |       0 |
+| BEER-WARE     |     4 |       0 |
 | LGPL-3+       |     4 |       0 |
 | WTFPL-2       |     4 |       0 |
 | AGPL-3+       |     3 |       0 |
 | Artistic-2.0  |     3 |       0 |
-| BEER-WARE     |     3 |       0 |
 | ISC (and)     |     3 |       0 |
 | CeCILL-B      |     2 |       0 |
 | ISC (and/or)  |     2 |       0 |
@@ -96,7 +96,6 @@
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | UIUC          |     1 |       0 |
-| ((pending))   |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
 | total GNU     |  3213 |      86 |
@@ -109,10 +108,9 @@
     "GPL" "GPL-2" "failure" "pending")
 #+END_SRC
 #+RESULTS:
-| Package (2) | License | Class   | Link                                     |
-|-------------+---------+---------+------------------------------------------|
-| redshank    | GPL     | shelved |                                          |
-| rubik       | pending | github  | https://github.com/Kurvivor19/rubik-mode |
+| Package (1) | License | Class   | Link |
+|-------------+---------+---------+------|
+| redshank    | GPL     | shelved |      |
 
 ** Removed packages
 #+BEGIN_SRC emacs-lisp
@@ -215,7 +213,7 @@
               removed)))
 #+END_SRC
 #+RESULTS:
-| Package (26)       | R | License         | Class   | Link                                              |
+| Package (25)       | R | License         | Class   | Link                                              |
 |--------------------+---+-----------------+---------+---------------------------------------------------|
 | crab               |   | pending         | shelved | https://github.com/puffnfresh/crab-emacs          |
 | ess-R-object-popup |   | pending         | shelved | https://github.com/myuhe/ess-R-object-popup.el    |
@@ -232,12 +230,11 @@
 | pyim-greatdict     |   | pending         | shelved | https://github.com/tumashu/pyim-greatdict         |
 | railgun            |   | pending         | shelved | https://github.com/mbriggs/railgun.el             |
 | rails-new          |   | pending         | shelved | https://github.com/cheunghy/rails-new             |
-| refheap            |   | none            | shelved | https://github.com/Raynes/refheap.el              |
+| refheap            |   | pending         | shelved | https://github.com/Raynes/refheap.el              |
 | ruby-dev           |   | pending         | shelved | https://github.com/Mon-Ouie/ruby-dev.el           |
 | ruby-guard         |   | pending         | shelved | https://github.com/cheunghy/ruby-guard            |
 | smartwin           |   | GPL-2           | github  | https://github.com/jerryxgh/smartwin              |
 | sourcetalk         |   | pending         | shelved | https://github.com/malroc/sourcetalk_emacs        |
-| subshell-proc      |   | pending         | shelved | https://github.com/andrewmains12/subshell-proc    |
 | syslog-mode        |   | GPL-2           | github  | https://github.com/vapniks/syslog-mode            |
 | tj-mode            |   | pending         | shelved | https://github.com/katspaugh/tj-mode              |
 | uzumaki            |   | pending         | shelved | https://github.com/geyslan/uzumaki                |
@@ -278,11 +275,11 @@
 | GPL-2           |     3 |       0 |
 | ISC (and)       |     3 |       0 |
 | MS-PL           |     3 |       0 |
+| BEER-WARE       |     2 |       0 |
 | COPYLOVE        |     2 |       0 |
 | CeCILL-B        |     2 |       0 |
 | ISC (and/or)    |     2 |       0 |
 | LGPL-2.1        |     2 |       0 |
-| BEER-WARE       |     1 |       0 |
 | CC BY-NC-SA 3.0 |     1 |       0 |
 | CC0 1.0         |     1 |       0 |
 | GPL             |     1 |       0 |
@@ -292,7 +289,6 @@
 | MPL-2           |     1 |       0 |
 | Ruby            |     1 |       0 |
 | UIUC            |     1 |       0 |
-| ((pending))     |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
 | total GNU       |  4668 |      89 |
@@ -305,11 +301,10 @@
     "GPL" "GPL-2" "failure" "pending" nil)
 #+END_SRC
 #+RESULTS:
-| Package (5)    | License | Class  | M | Link                                       |
+| Package (4)    | License | Class  | M | Link                                       |
 |----------------+---------+--------+---+--------------------------------------------|
 | coq            | GPL     | github |   | https://github.com/ProofGeneral/PG         |
 | gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck |
-| rubik          | pending | github | t | https://github.com/Kurvivor19/rubik-mode   |
 | smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin       |
 | syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode     |
 
