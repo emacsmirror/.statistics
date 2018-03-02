@@ -211,7 +211,7 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (22)          | Class    | Library                         | Reason                     |
+| Package (23)          | Class    | Library                         | Reason                     |
 |-----------------------+----------+---------------------------------+----------------------------|
 | auctex                | git      | tex.el                          | pkg/lib name mismatch      |
 | chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
@@ -221,6 +221,7 @@
 | emacs-speaks-nonmem   | github   | esn-start.el                    | no/mismatched main library |
 | emux                  | github   | emux-base.el                    | no/mismatched main library |
 | ert-runner            | github   | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
+| eval-sexp-in-comments | github   | eval-sexp-in-comments.el        |                            |
 | eziam-theme           | github   | eziam-dark-theme.el             | two-variant theme          |
 | farmhouse-theme       | github   | farmhouse-dark-theme.el         | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
 | git-undo              | github   | git-undo.el                     |                            |

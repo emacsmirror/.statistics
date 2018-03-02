@@ -36,7 +36,7 @@ packages makes it more appealing to improve the remaining code.
 | Package (11)      | Vcs   | Last commit           | Commits last year |
 |-------------------+-------+-----------------------+-------------------|
 | cg                | svn   | 3 months ago          |                 2 |
-| clang-format      | svn   | 4 weeks ago           |                21 |
+| clang-format      | svn   | 5 weeks ago           |                21 |
 | color-theme       | bzr   | 9 years ago           |                 0 |
 | confluence        | svn   | 7 months ago          |                 1 |
 | darcsum           | darcs | 3 years, 9 months ago |                 0 |
@@ -63,8 +63,9 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (601)                | Link                                    |
+| Package (603)                | Link                                    |
 |------------------------------+-----------------------------------------|
+| 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
 | ac-dscanner                  | [[https://github.com/jmaschme/ac-dscanner][jmaschme/ac-dscanner]]                    |
@@ -230,6 +231,7 @@ please first make sure they meet the minimal requirements.
 | etags-update                 | [[https://github.com/mattkeller/etags-update][mattkeller/etags-update]]                 |
 | etest                        | [[https://github.com/philjackson/etest][philjackson/etest]]                       |
 | etexshow                     | [[https://github.com/pgundlach/etexshow][pgundlach/etexshow]]                      |
+| eval-sexp-in-comments        | [[https://github.com/kensanata/eval-sexp-in-comments][kensanata/eval-sexp-in-comments]]         |
 | evelnote                     | [[https://github.com/hadashiA/evelnote-for-evernote][hadashiA/evelnote-for-evernote]]          |
 | eviews                       | [[https://github.com/vapniks/eviews-mode][vapniks/eviews-mode]]                     |
 | evil-elscreen                | [[https://github.com/coldnew/evil-elscreen][coldnew/evil-elscreen]]                   |
@@ -480,7 +482,6 @@ please first make sure they meet the minimal requirements.
 | page-mode                    | [[https://github.com/BartMassey/emacs-page][BartMassey/emacs-page]]                   |
 | paredit-c                    | [[https://github.com/dandavison/paredit-c][dandavison/paredit-c]]                    |
 | parfait-mode                 | [[https://github.com/sorellabs/parfait-mode][sorellabs/parfait-mode]]                  |
-| parseclj                     | [[https://github.com/lambdaisland/parseclj][lambdaisland/parseclj]]                   |
 | paste                        | [[https://github.com/nicferrier/pasteel][nicferrier/pasteel]]                      |
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    |
@@ -524,6 +525,7 @@ please first make sure they meet the minimal requirements.
 | rcirc-ucomplete              | [[https://github.com/technomancy/rcirc-ucomplete][technomancy/rcirc-ucomplete]]             |
 | rd-mode                      | [[https://github.com/uwabami/rdtool][uwabami/rdtool]]                          |
 | rdictcc                      | [[https://github.com/tsdh/rdictcc][tsdh/rdictcc]]                            |
+| really-simple-wiki           | [[https://github.com/kensanata/really-simple-wiki][kensanata/really-simple-wiki]]            |
 | recaptcha                    | [[https://github.com/fsmunoz/recaptcha][fsmunoz/recaptcha]]                       |
 | recent-addresses             | [[https://github.com/nschum/recent-addresses.el][nschum/recent-addresses.el]]              |
 | recipe-mode                  | [[https://github.com/sshelagh/recipe-mode][sshelagh/recipe-mode]]                    |

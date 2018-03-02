@@ -82,9 +82,8 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+END_SRC
 #+RESULTS:
-| Package (9)    | Mirror   | Melpa    |
+| Package (8)    | Mirror   | Melpa    |
 |----------------+----------+----------|
-| doom           | orphaned | orphaned |
 | edb            | orphaned |          |
 | elisp-depend   | orphaned | orphaned |
 | filladapt      | orphaned |          |
