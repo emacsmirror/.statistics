@@ -19,7 +19,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS:
-| Dependee (43)       | Author                        | Depender          | Type | Author                                            |
+| Dependee (41)       | Author                        | Depender          | Type | Author                                            |
 |---------------------+-------------------------------+-------------------+------+---------------------------------------------------|
 | anything-kyr-config | rubikitch                     | anything          | soft | Tamas Patrovics                                   |
 | background          |                               | anything          | soft | Tamas Patrovics                                   |
@@ -33,7 +33,6 @@
 | etags-select        | Scott Frazer                  | evil-collection   | soft | James Nguyen                                      |
 | extract-text        | Joe Bloggs                    | gnus-summary-ext  | soft | Joe Bloggs                                        |
 | filesets+           | Drew Adams                    | helm-filesets     | soft | Graham Clark                                      |
-| fit-frame           | Drew Adams                    | xmonad            | hard | Jonas Bernoulli                                   |
 | font-lock+          | Drew Adams                    | highlight         | soft | Drew Adams                                        |
 | font-lock+          | Drew Adams                    | jemdoc-mode       | soft | Dimitar Dimitrov                                  |
 | frame-cmds          | Drew Adams                    | frame-ctr         | hard | Takaaki ISHIKAWA                                  |
@@ -62,7 +61,6 @@
 | template-simple     | Ye Wenbin                     | pde               | hard | Ye Wenbin                                         |
 | tempo-x             | Wenbin                        | pde               | hard | Ye Wenbin                                         |
 | thing-opt           | MATSUYAMA Tomohiro            | generic-range-opt | hard |                                                   |
-| thingatpt+          | Drew Adams                    | exato             | hard | Filipe Silva                                      |
 | tooltip-help        |                               | org-pua           | hard | Henry G. Weller                                   |
 | tumme               | Mathias Dahl                  | imagetext         | hard | Kevin Ryde                                        |
 | unit-test           | Mark Triggs                   | sbt               | soft |                                                   |
@@ -299,7 +297,6 @@
 | Avi Rozen                                       | grep-o-matic                   |
 | Avi Rozen                                       | repository-root                |
 | Benjamin Drieu                                  | df-mode                        |
-| Benjamin Rutt                                   | backup-each-save               |
 | Benjamin Rutt                                   | top-mode                       |
 | Binu Jose Philip, Drew Adams                    | w32browser-dlgopen             |
 | Bryan O'Sullivan                                | x-migrant                      |

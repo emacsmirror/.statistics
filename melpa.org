@@ -33,19 +33,19 @@ packages makes it more appealing to improve the remaining code.
             emir--other-vcs))
 #+END_SRC
 #+RESULTS:
-| Package (11)      | Vcs   | Last commit           | Commits last year |
-|-------------------+-------+-----------------------+-------------------|
-| cg                | svn   | 3 months ago          |                 2 |
-| clang-format      | svn   | 5 weeks ago           |                21 |
-| color-theme       | bzr   | 9 years ago           |                 0 |
-| confluence        | svn   | 7 months ago          |                 1 |
-| darcsum           | darcs | 3 years, 9 months ago |                 0 |
-| dic-lookup-w3m    | svn   | 7 months ago          |                 4 |
-| dsvn              | svn   | 7 months ago          |                 1 |
-| helm-ls-svn       | svn   | 2 years, 8 months ago |                 0 |
-| ruby-additional   | svn   | 5 months ago          |                11 |
-| tex-smart-umlauts | darcs | 1 year, 10 months ago |                 0 |
-| w3m               | cvs   | 8 days ago            |               122 |
+| Package (11)      | Vcs   | Last commit            | Commits last year |
+|-------------------+-------+------------------------+-------------------|
+| cg                | svn   | 4 months ago           |                 2 |
+| clang-format      | svn   | 6 weeks ago            |                21 |
+| color-theme       | bzr   | 9 years ago            |                 0 |
+| confluence        | svn   | 7 months ago           |                 1 |
+| darcsum           | darcs | 3 years, 10 months ago |                 0 |
+| dic-lookup-w3m    | svn   | 7 months ago           |                 4 |
+| dsvn              | svn   | 7 months ago           |                 1 |
+| helm-ls-svn       | svn   | 2 years, 8 months ago  |                 0 |
+| ruby-additional   | svn   | 5 months ago           |                11 |
+| tex-smart-umlauts | darcs | 1 year, 10 months ago  |                 0 |
+| w3m               | cvs   | 3 weeks ago            |               122 |
 
 * Missing from Melpa
 
@@ -63,7 +63,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (603)                | Link                                    |
+| Package (602)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -649,7 +649,6 @@ please first make sure they meet the minimal requirements.
 | wipe                         | [[https://github.com/didierverna/wipe][didierverna/wipe]]                        |
 | wmctrl                       | [[https://github.com/tkf/emacs-wmctrl][tkf/emacs-wmctrl]]                        |
 | wmii                         | [[https://github.com/fsmunoz/wmii-el][fsmunoz/wmii-el]]                         |
-| wolfram-mode                 | [[https://github.com/kawabata/wolfram-mode][kawabata/wolfram-mode]]                   |
 | wordnik                      | [[https://github.com/hober/wordnik-el][hober/wordnik-el]]                        |
 | wordpress-mode               | [[https://github.com/danlamanna/wordpress-mode][danlamanna/wordpress-mode]]               |
 | worklog                      | [[https://github.com/credmp/worklog][credmp/worklog]]                          |
