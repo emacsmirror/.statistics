@@ -66,8 +66,8 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2555 |      68 |
-| GPL-2+        |   529 |      14 |
+| GPL-3+        |  2557 |      68 |
+| GPL-2+        |   531 |      14 |
 | MIT           |   138 |       4 |
 | GPL-3         |   135 |       4 |
 | MIT (x11)     |   134 |       4 |
@@ -92,16 +92,15 @@
 | CC0 1.0       |     1 |       0 |
 | COPYLOVE      |     1 |       0 |
 | GPL           |     1 |       0 |
-| GPL-2         |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | UIUC          |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3240 |      86 |
+| total GNU     |  3243 |      86 |
 |---------------+-------+---------|
-| total         |  3779 |     100 |
+| total         |  3782 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -109,10 +108,9 @@
     "GPL" "GPL-2" "failure" "pending")
 #+END_SRC
 #+RESULTS:
-| Package (2) | License | Class   | Link                                  |
-|-------------+---------+---------+---------------------------------------|
-| redshank    | GPL     | shelved |                                       |
-| unidecode   | GPL-2   | github  | https://github.com/sindikat/unidecode |
+| Package (1) | License | Class   | Link |
+|-------------+---------+---------+------|
+| redshank    | GPL     | shelved |      |
 
 ** Removed packages
 #+BEGIN_SRC emacs-lisp
@@ -215,7 +213,7 @@
               removed)))
 #+END_SRC
 #+RESULTS:
-| Package (25)       | R | License         | Class   | Link                                              |
+| Package (23)       | R | License         | Class   | Link                                              |
 |--------------------+---+-----------------+---------+---------------------------------------------------|
 | crab               |   | pending         | shelved | https://github.com/puffnfresh/crab-emacs          |
 | ess-R-object-popup |   | pending         | shelved | https://github.com/myuhe/ess-R-object-popup.el    |
@@ -235,9 +233,7 @@
 | refheap            |   | pending         | shelved | https://github.com/Raynes/refheap.el              |
 | ruby-dev           |   | pending         | shelved | https://github.com/Mon-Ouie/ruby-dev.el           |
 | ruby-guard         |   | pending         | shelved | https://github.com/cheunghy/ruby-guard            |
-| smartwin           |   | GPL-2           | github  | https://github.com/jerryxgh/smartwin              |
 | sourcetalk         |   | pending         | shelved | https://github.com/malroc/sourcetalk_emacs        |
-| syslog-mode        |   | GPL-2           | github  | https://github.com/vapniks/syslog-mode            |
 | tj-mode            |   | pending         | shelved | https://github.com/katspaugh/tj-mode              |
 | uzumaki            |   | pending         | shelved | https://github.com/geyslan/uzumaki                |
 | vimgolf            |   | CC BY-NC-SA 3.0 | github  | https://github.com/timvisher/vimgolf.el           |
@@ -257,8 +253,8 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  3192 |      60 |
-| GPL-2+          |  1333 |      25 |
+| GPL-3+          |  3194 |      60 |
+| GPL-2+          |  1334 |      25 |
 | GPL-3           |   143 |       3 |
 | MIT             |   141 |       3 |
 | MIT (x11)       |   133 |       3 |
@@ -272,7 +268,6 @@
 | GPL-1+          |     8 |       0 |
 | LGPL-3+         |     5 |       0 |
 | WTFPL-2         |     5 |       0 |
-| GPL-2           |     4 |       0 |
 | ISC (and)       |     4 |       0 |
 | AGPL-3+         |     3 |       0 |
 | Artistic-2.0    |     3 |       0 |
@@ -293,9 +288,9 @@
 | UIUC            |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4694 |      89 |
+| total GNU       |  4693 |      89 |
 |-----------------+-------+---------|
-| total           |  5298 |     100 |
+| total           |  5297 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -303,16 +298,8 @@
     "GPL" "GPL-2" "failure" "pending" nil)
 #+END_SRC
 #+RESULTS:
-| Package (5)    | License | Class  | M | Link                                       |
-|----------------+---------+--------+---+--------------------------------------------|
-| coq            | GPL     | github |   | https://github.com/ProofGeneral/PG         |
-| gnus-autocheck | GPL-2   | github |   | https://github.com/slaanesh/gnus-autocheck |
-| smartwin       | GPL-2   | github |   | https://github.com/jerryxgh/smartwin       |
-| syslog-mode    | GPL-2   | github |   | https://github.com/vapniks/syslog-mode     |
-| unidecode      | GPL-2   | github | t | https://github.com/sindikat/unidecode      |
+| Package (1) | License | Class  | M | Link                               |
+|-------------+---------+--------+---+------------------------------------|
+| coq         | GPL     | github |   | https://github.com/ProofGeneral/PG |
 
 - coq [[https://github.com/ProofGeneral/PG/issues/198][#198]]
-- gnus-autocheck [[https://github.com/slaanesh/gnus-autocheck/issues/2][#2]]
-- smartwin [[https://github.com/jerryxgh/smartwin/issues/3][#3]]
-- syslog-mode [[https://github.com/vapniks/syslog-mode/issues/15][#15]]
-

@@ -16,7 +16,7 @@ packages makes it more appealing to improve the remaining code.
 - ~shimbun~ isn't listed below because it is part of the ~w3m~ repository.
 
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Vcs" "Last commit" "Commits last year")
+  (epkg-with-org-header ("Package" "Vcs") ; "Last commit" "Commits last year")
     (-keep (pcase-lambda (`(,name ,vcs))
              (let ((default-directory
                      (if (member vcs '("darcs" "fossil"))
@@ -25,27 +25,28 @@ packages makes it more appealing to improve the remaining code.
                        (format "~/git/emacs/import/%s/%s/" vcs name))))
                (and (melpa-get name)
                     (list name vcs
-                          (magit-git-string
-                           "show" "-q" "--date=relative" "--format=%cd")
-                          (length
-                           (magit-git-lines
-                            "log" "--since=1 year ago" "--oneline"))))))
+                          ;; (magit-git-string
+                          ;;  "show" "-q" "--date=relative" "--format=%cd")
+                          ;; (length
+                          ;;  (magit-git-lines
+                          ;;   "log" "--since=1 year ago" "--oneline"))
+                          ))))
             emir--other-vcs))
 #+END_SRC
 #+RESULTS:
-| Package (11)      | Vcs   | Last commit            | Commits last year |
-|-------------------+-------+------------------------+-------------------|
-| cg                | svn   | 4 months ago           |                 2 |
-| clang-format      | svn   | 6 weeks ago            |                21 |
-| color-theme       | bzr   | 9 years ago            |                 0 |
-| confluence        | svn   | 7 months ago           |                 1 |
-| darcsum           | darcs | 3 years, 10 months ago |                 0 |
-| dic-lookup-w3m    | svn   | 7 months ago           |                 4 |
-| dsvn              | svn   | 7 months ago           |                 1 |
-| helm-ls-svn       | svn   | 2 years, 8 months ago  |                 0 |
-| ruby-additional   | svn   | 5 months ago           |                11 |
-| tex-smart-umlauts | darcs | 1 year, 10 months ago  |                 0 |
-| w3m               | cvs   | 3 weeks ago            |               122 |
+| Package (11)      | Vcs   |
+|-------------------+-------|
+| cg                | svn   |
+| clang-format      | svn   |
+| color-theme       | bzr   |
+| confluence        | svn   |
+| darcsum           | darcs |
+| dic-lookup-w3m    | svn   |
+| dsvn              | svn   |
+| helm-ls-svn       | svn   |
+| ruby-additional   | svn   |
+| tex-smart-umlauts | darcs |
+| w3m               | cvs   |
 
 * Missing from Melpa
 
@@ -63,7 +64,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (602)                | Link                                    |
+| Package (599)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -283,7 +284,6 @@ please first make sure they meet the minimal requirements.
 | gitsum                       | [[https://github.com/chneukirchen/gitsum][chneukirchen/gitsum]]                     |
 | gmail-notifier               | [[https://github.com/xwl/gmail-notifier][xwl/gmail-notifier]]                      |
 | gnorb                        | [[https://github.com/girzel/gnorb][girzel/gnorb]]                            |
-| gnus-autocheck               | [[https://github.com/slaanesh/gnus-autocheck][slaanesh/gnus-autocheck]]                 |
 | gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                       |
 | gnus-harvest                 | [[https://github.com/jwiegley/gnus-harvest][jwiegley/gnus-harvest]]                   |
 | gnus-identities              | [[https://github.com/renard/gnus-identities][renard/gnus-identities]]                  |
@@ -570,7 +570,6 @@ please first make sure they meet the minimal requirements.
 | smart-todo                   | [[https://github.com/gyordanov/smart-todo.el][gyordanov/smart-todo.el]]                 |
 | smartchr                     | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                  |
 | smartsig                     | [[https://github.com/davep/smartsig.el][davep/smartsig.el]]                       |
-| smartwin                     | [[https://github.com/jerryxgh/smartwin][jerryxgh/smartwin]]                       |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   |
 | sofa                         | [[https://github.com/cinsk/emacs-sofa][cinsk/emacs-sofa]]                        |
 | songbook                     | [[https://github.com/crep4ever/songbook-emacs-mode][crep4ever/songbook-emacs-mode]]           |
@@ -591,7 +590,6 @@ please first make sure they meet the minimal requirements.
 | switch-files                 | [[https://github.com/hardaker/elisp-switch-files][hardaker/elisp-switch-files]]             |
 | symbols-mode                 | [[https://github.com/orontee/symbols-mode][orontee/symbols-mode]]                    |
 | sync-scroll                  | [[https://github.com/mori-dev/sync-scroll][mori-dev/sync-scroll]]                    |
-| syslog-mode                  | [[https://github.com/vapniks/syslog-mode][vapniks/syslog-mode]]                     |
 | sysuplist-mode               | [[https://github.com/mrBliss/sysuplist-mode][mrBliss/sysuplist-mode]]                  |
 | tags-view                    | [[https://github.com/markhepburn/tags-view][markhepburn/tags-view]]                   |
 | tap-mode                     | [[https://github.com/renormalist/emacs-tap-mode][renormalist/emacs-tap-mode]]              |
