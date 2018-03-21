@@ -19,7 +19,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS:
-| Dependee (41)       | Author                        | Depender          | Type | Author                                            |
+| Dependee (40)       | Author                        | Depender          | Type | Author                                            |
 |---------------------+-------------------------------+-------------------+------+---------------------------------------------------|
 | anything-kyr-config | rubikitch                     | anything          | soft | Tamas Patrovics                                   |
 | background          |                               | anything          | soft | Tamas Patrovics                                   |
@@ -44,7 +44,6 @@
 | hexrgb              | Drew Adams                    | paper-theme       | hard | Göktuğ Kayaalp                                    |
 | highline            | Vinicius Jose Latorre         | emms              | hard | Jorgen Schäfer                                    |
 | highline            | Vinicius Jose Latorre         | frb               | hard |                                                   |
-| htmlr               | Alex Schroeder                | newsticker        | hard | Ulf Jasper                                        |
 | icicles             | Drew Adams                    | rcodetools        | hard |                                                   |
 | imdb                |                               | movie             | hard | Lars Magne Ingebrigtsen                           |
 | imenu-tree          |                               | pde               | hard | Ye Wenbin                                         |
@@ -91,7 +90,7 @@
 	     #'string< :key #'car))
 #+END_SRC
 #+RESULTS:
-| Author (210)                                    | Package                        |
+| Author (208)                                    | Package                        |
 |-------------------------------------------------+--------------------------------|
 |                                                 | ac-dabbrev                     |
 |                                                 | acd                            |
@@ -263,8 +262,6 @@
 | Alessandro Di Marco                             | topsongs                       |
 | Alessandro Di Marco                             | w3xt                           |
 | Alessandro Di Marco                             | xsocks                         |
-| Alex Schroeder                                  | erobot                         |
-| Alex Schroeder                                  | sql-transform                  |
 | Alex Shinn                                      | fetchmail-mode                 |
 | Amir Mohammad Saied                             | audel                          |
 | Anand B Pillai                                  | cricket                        |
@@ -647,7 +644,6 @@
 | Shawn Betts                                     | mailx                          |
 | Shelagh Manton                                  | ac-lilypond                    |
 | Stefan Kamphausen                               | ska-skel-matlab                |
-| Steve Yegge                                     | htmlr                          |
 | Suraj Acharya                                   | java-mode-indent-annotations   |
 | Sylvain Bougerel                                | profiles                       |
 | TN                                              | application                    |
