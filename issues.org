@@ -94,13 +94,12 @@ available over https.
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: insecure
-| Package (180)             | Class | Year | M | Dep | Url                                                                                         |
+| Package (178)             | Class | Year | M | Dep | Url                                                                                         |
 |---------------------------+-------+------+---+-----+---------------------------------------------------------------------------------------------|
 | os                        | git   | 2014 |   |     | git://orgmode.org/org-sync.git                                                              |
 | project-buffer-mode       | git   | 2010 |   |     | git://repo.or.cz/project-buffer-mode.git                                                    |
 | anything                  | git   | 2017 | t |  35 | http://repo.or.cz/r/anything-config.git                                                     |
-| org-fstree                | git   | 2009 | t |     | http://repo.or.cz/r/org-fstree.git                                                          |
-| undo-tree                 | git   | 2017 | t |   5 | http://www.dr-qubit.org/git/undo-tree.git                                                   |
+| undo-tree                 | git   | 2017 |   |   5 | http://www.dr-qubit.org/git/undo-tree.git                                                   |
 | show-functions            | file  | 2010 |   |     | http://aurelien.tisne.free.fr/emacs-pages/emacs/show-functions.el                           |
 | autolisp                  | file  | 2011 |   |     | http://autocad.xarch.at/lsp_tools/ntemacs/autolisp.el                                       |
 | cmucl-wire                | file  | 2009 |   |     | http://emarsden.chez.com/downloads/cmucl-wire.el                                            |
@@ -132,7 +131,6 @@ available over https.
 | gnus-checker              | file  | 2010 |   |     | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/gnus-checker.el                       |
 | prove                     | file  | 2010 |   |     | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/prove.el                              |
 | smallurl                  | file  | 2010 |   |     | http://repo.or.cz/w/ShellArchive.git/blob_plain/HEAD:/smallurl.el                           |
-| nntodo                    | file  | 2010 |   |     | http://sachachua.com/notebook/emacs/nntodo.el                                               |
 | agchat                    | file  | 2016 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/agchat.el                               |
 | bbdb-pilot-jwz            | file  | 2009 |   |     | http://splode.com/~friedman/software/emacs-lisp/src/bbdb-pilot-jwz.el                       |
 | buffer-fns                | file  | 2017 |   |   1 | http://splode.com/~friedman/software/emacs-lisp/src/buffer-fns.el                           |

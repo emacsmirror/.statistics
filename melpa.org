@@ -64,7 +64,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (599)                | Link                                    |
+| Package (602)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -224,6 +224,7 @@ please first make sure they meet the minimal requirements.
 | erc-yank                     | [[https://github.com/jwiegley/erc-yank][jwiegley/erc-yank]]                       |
 | ergore                       | [[https://github.com/jonnay/ergore][jonnay/ergore]]                           |
 | erlang-dired-mode            | [[https://github.com/jixiuf/erlang-dired-mode][jixiuf/erlang-dired-mode]]                |
+| erobot                       | [[https://github.com/kensanata/erobot][kensanata/erobot]]                        |
 | ert-buffer-report            | [[https://github.com/tj64/ert-buffer-report][tj64/ert-buffer-report]]                  |
 | ert-extras                   | [[https://github.com/mrc/ert-extras][mrc/ert-extras]]                          |
 | ertorrent                    | [[https://github.com/spacebat/ertorrent][spacebat/ertorrent]]                      |
@@ -325,6 +326,7 @@ please first make sure they meet the minimal requirements.
 | html-fold                    | [[https://github.com/ataka/html-fold][ataka/html-fold]]                         |
 | html-key-chord-mode          | [[https://github.com/tomoya/html-key-chord-mode][tomoya/html-key-chord-mode]]              |
 | html5                        | [[https://github.com/hober/html5-el][hober/html5-el]]                          |
+| htmlr                        | [[https://github.com/kensanata/htmlr][kensanata/htmlr]]                         |
 | huskie                       | [[https://github.com/nicferrier/emacs-huskie][nicferrier/emacs-huskie]]                 |
 | i3                           | [[https://github.com/vava/i3-emacs][vava/i3-emacs]]                           |
 | ibuffer-perspective          | [[https://github.com/wstucker/ibuffer-perspective][wstucker/ibuffer-perspective]]            |
@@ -407,6 +409,7 @@ please first make sure they meet the minimal requirements.
 | mk-project                   | [[https://github.com/mattkeller/mk-project][mattkeller/mk-project]]                   |
 | mk-project+                  | [[https://github.com/scjung/mk-project-plus][scjung/mk-project-plus]]                  |
 | mks                          | [[https://github.com/sensorflo/mks][sensorflo/mks]]                           |
+| mmm-mode                     | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                        |
 | modelica-mode                | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            |
 | moneylog                     | [[https://github.com/watter/moneylog-el][watter/moneylog-el]]                      |
 | movie                        | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      |
@@ -440,7 +443,6 @@ please first make sure they meet the minimal requirements.
 | nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                       |
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                       |
 | nyan-prompt                  | [[https://github.com/PuercoPop/nyan-prompt][PuercoPop/nyan-prompt]]                   |
-| ob-clojurescript             | [[https://github.com/bloat/babel-clojurescript][bloat/babel-clojurescript]]               |
 | ob-markdown                  | [[https://github.com/tnoda/ob-markdown][tnoda/ob-markdown]]                       |
 | octopress-tentacle           | [[https://github.com/brighid/octopress-tentacle][brighid/octopress-tentacle]]              |
 | ogi                          | [[https://github.com/ryuslash/ogi][ryuslash/ogi]]                            |
@@ -578,6 +580,7 @@ please first make sure they meet the minimal requirements.
 | spinasm-mode                 | [[https://github.com/segoh/spinasm-mode][segoh/spinasm-mode]]                      |
 | spinner                      | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                    |
 | spss                         | [[https://github.com/vapniks/spss-mode][vapniks/spss-mode]]                       |
+| sql-transform                | [[https://github.com/kensanata/sql-transform][kensanata/sql-transform]]                 |
 | ssh-config                   | [[https://github.com/renard/ssh-config-el][renard/ssh-config-el]]                    |
 | ssl-mode                     | [[https://github.com/npc3/ssl-mode][npc3/ssl-mode]]                           |
 | startproject                 | [[https://github.com/myfreeweb/startproject][myfreeweb/startproject]]                  |
@@ -699,7 +702,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (18)        | Link                                                                   |
+| Package (19)        | Link                                                                   |
 |---------------------+------------------------------------------------------------------------|
 | auctex              |                                                                        |
 | auto-mounter        |                                                                        |
@@ -719,6 +722,7 @@ please first make sure they meet the minimal requirements.
 | rcirc-ssh           |                                                                        |
 | riece               | [[http://www.nongnu.org/riece]]                                            |
 | slate-config-mode   |                                                                        |
+| undo-tree           | [[http://www.dr-qubit.org/emacs.php]]                                      |
 
 ** Bitbucket
 #+NAME: missing-bitbucket
