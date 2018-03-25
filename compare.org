@@ -66,22 +66,22 @@
 | elpa        |  109 |    109 |       |       |   164 |       |
 | elpa-branch |    7 |      7 |       |       |    17 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4050 |   4050 |       |       |       |  3670 |
+| github      | 4036 |   4036 |       |       |       |  3661 |
 | gitlab      |   48 |     48 |       |       |       |    36 |
-| git         |   54 |     54 |       |       |       |    39 |
+| git         |   53 |     53 |       |       |       |    38 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   45 |     45 |       |       |       |    38 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  642 |    642 |       |       |       |       |
+| wiki        |  637 |    637 |       |       |       |       |
 | file        |  241 |    241 |       |       |       |       |
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   54 |     54 |       |       |       |       |
-| shelved     | 1021 |        |  1021 |       |       |       |
+| shelved     | 1046 |        |  1046 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6774 |   5298 |  1021 |   457 |   187 |  3784 |
+| total       | 6779 |   5278 |  1046 |   457 |   187 |  3774 |
 
 * Emacs
 ** Prefer elpa
@@ -422,7 +422,6 @@
 | pig-mode                | pig-snippets                      | github   |
 | pollen-mode             | company-pollen                    | github   |
 | processing-mode         | processing-snippets               | github   |
-| prosjekt                | anything-prosjekt                 | github   |
 | prosjekt                | dirtree-prosjekt                  | github   |
 | prosjekt                | helm-prosjekt                     | github   |
 | request                 | request-deferred                  | github   |

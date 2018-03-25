@@ -33,7 +33,7 @@
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "Feature" "Shelved")
+  (epkg-with-org-header ("Package" "Class" "Feature" "Provider")
     (-mapcat
      (-lambda ((name class))
        (let (alist)
@@ -94,11 +94,10 @@ available over https.
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: insecure
-| Package (178)             | Class | Year | M | Dep | Url                                                                                         |
+| Package (177)             | Class | Year | M | Dep | Url                                                                                         |
 |---------------------------+-------+------+---+-----+---------------------------------------------------------------------------------------------|
 | os                        | git   | 2014 |   |     | git://orgmode.org/org-sync.git                                                              |
 | project-buffer-mode       | git   | 2010 |   |     | git://repo.or.cz/project-buffer-mode.git                                                    |
-| anything                  | git   | 2017 | t |  35 | http://repo.or.cz/r/anything-config.git                                                     |
 | undo-tree                 | git   | 2017 |   |   5 | http://www.dr-qubit.org/git/undo-tree.git                                                   |
 | show-functions            | file  | 2010 |   |     | http://aurelien.tisne.free.fr/emacs-pages/emacs/show-functions.el                           |
 | autolisp                  | file  | 2011 |   |     | http://autocad.xarch.at/lsp_tools/ntemacs/autolisp.el                                       |

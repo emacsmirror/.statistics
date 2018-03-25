@@ -64,7 +64,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (602)                | Link                                    |
+| Package (596)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -84,8 +84,6 @@ please first make sure they meet the minimal requirements.
 | ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                            |
 | ant-project-mode             | [[https://github.com/skeeto/ant-project-mode][skeeto/ant-project-mode]]                 |
 | antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                     |
-| anything-hatena-bookmark     | [[https://github.com/k1LoW/anything-hatena-bookmark][k1LoW/anything-hatena-bookmark]]          |
-| anything-project             | [[https://github.com/imakado/anything-project][imakado/anything-project]]                |
 | as3-simple-mode              | [[https://github.com/svdm/as3-simple-mode][svdm/as3-simple-mode]]                    |
 | asciidoc                     | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                    |
 | asp-mode                     | [[https://github.com/chrisdone/asp-mode][chrisdone/asp-mode]]                      |
@@ -160,7 +158,6 @@ please first make sure they meet the minimal requirements.
 | csr-mode                     | [[https://github.com/trailbound/csr-mode][trailbound/csr-mode]]                     |
 | css-format                   | [[https://github.com/chalmagean/css-format.el][chalmagean/css-format.el]]                |
 | cucumber-i18n                | [[https://github.com/senny/cucumber-i18n.el][senny/cucumber-i18n.el]]                  |
-| cui-about-me                 | [[https://github.com/gongo/cui-about-me.el][gongo/cui-about-me.el]]                   |
 | curl                         | [[https://github.com/cinsk/emacs-curl][cinsk/emacs-curl]]                        |
 | current-story                | [[https://github.com/charlietanksley/current-story][charlietanksley/current-story]]           |
 | cycle-buffer                 | [[https://github.com/VladimirAlexiev/emacs-cycle-buffer][VladimirAlexiev/emacs-cycle-buffer]]      |
@@ -488,7 +485,6 @@ please first make sure they meet the minimal requirements.
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    |
 | per-window-point             | [[https://github.com/alpaker/Per-Window-Point][alpaker/Per-Window-Point]]                |
-| perl-completion              | [[https://github.com/imakado/perl-completion][imakado/perl-completion]]                 |
 | perl-utils                   | [[https://github.com/syohex/emacs-perl-utils][syohex/emacs-perl-utils]]                 |
 | perlbrew-mini                | [[https://github.com/dams/perlbrew-mini.el][dams/perlbrew-mini.el]]                   |
 | perlmonks                    | [[https://github.com/metaperl/emacs-perlmonks][metaperl/emacs-perlmonks]]                |
@@ -496,7 +492,6 @@ please first make sure they meet the minimal requirements.
 | pgsql-linum-format           | [[https://github.com/dimitri/pgsql-linum-format][dimitri/pgsql-linum-format]]              |
 | pgsrc                        | [[https://github.com/dimitri/pgsrc-el][dimitri/pgsrc-el]]                        |
 | phantomjs                    | [[https://github.com/nicferrier/phantomjsel][nicferrier/phantomjsel]]                  |
-| php-completion               | [[https://github.com/imakado/php-completion][imakado/php-completion]]                  |
 | pickel                       | [[https://github.com/tlh/pickel.el][tlh/pickel.el]]                           |
 | picolisp-wiki-mode           | [[https://github.com/tj64/picolisp-wiki-mode][tj64/picolisp-wiki-mode]]                 |
 | pinentry                     | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                        |
@@ -533,7 +528,6 @@ please first make sure they meet the minimal requirements.
 | recipe-mode                  | [[https://github.com/sshelagh/recipe-mode][sshelagh/recipe-mode]]                    |
 | recs-mode                    | [[https://github.com/tlh/recs-mode.el][tlh/recs-mode.el]]                        |
 | reddit-mode                  | [[https://github.com/death/reddit-mode][death/reddit-mode]]                       |
-| redmine                      | [[https://github.com/fukamachi/redmine-el][fukamachi/redmine-el]]                    |
 | remind-conf-mode             | [[https://github.com/sshelagh/remind-conf-mode][sshelagh/remind-conf-mode]]               |
 | revealjs-mode                | [[https://github.com/cjohansen/revealjs-mode][cjohansen/revealjs-mode]]                 |
 | review                       | [[https://github.com/gigamonkey/review][gigamonkey/review]]                       |
