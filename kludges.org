@@ -68,15 +68,17 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (78)                    | Class       | Feature                  | Reason                                              |
+| Package (84)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
+| achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
 | aozora-view                     | github      | ivs-aj1                  | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
 | auto-complete                   | github      | semantic-ia              | backward compatibility                              |
 | auto-complete-nxml              | github      | anything-project         | anything                                            |
 | bbdb                            | git         | vm-autoloads             | generated external file                             |
 | centered-window                 | github      | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                          |
 | clj-refactor                    | github      | seq-25                   | backward compatibility                              |
+| color-moccur                    | github      | moccur-edit              | shelved soft                                        |
 | color-theme-sanityinc-solarized | github      | color-theme              | backward compatibility                              |
 | color-theme-sanityinc-tomorrow  | github      | color-theme              | backward compatibility                              |
 | color-theme-solarized           | github      | color-theme              | backward compatibility                              |
@@ -92,6 +94,7 @@
 | dired+                          | wiki        | subr-21                  | backward compatibility                              |
 | doremi-cmd                      | wiki        | color-theme              | backward compatibility                              |
 | e2wm-R                          | github      | imgur                    | anything                                            |
+| ecb                             | github      | escreen                  | shelved soft                                        |
 | ecb                             | github      | semantic-analyze         | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
 | ecb                             | github      | semantic-ctxt            | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
 | ecb                             | github      | thing                    | XEmacs compatibility                                |
@@ -136,11 +139,13 @@
 | mhc                             | github      | poe                      | Mule compatibility                                  |
 | molokai-theme                   | github      | color-theme              | backward compatibility                              |
 | navi2ch                         | github      | bitmap                   | XEmacs compatibility                                |
+| navi2ch                         | github      | spamfilter               | shelved soft                                        |
 | notes-mode                      | elpa        | npgp                     | backward compatibility                              |
 | notes-mode                      | elpa        | pam                      | backward compatibility                              |
 | nxhtml                          | orphaned    | anything                 | anything                                            |
 | nxhtml                          | orphaned    | emacsw32                 | examples only                                       |
 | nxhtml                          | orphaned    | flymake-js               | not a proper package [[https://github.com/Anks/elisp/blob/master/flymake-js.el][source]]                         |
+| nxhtml                          | orphaned    | fold-dwim                | shelved soft                                        |
 | nxhtml                          | orphaned    | typesetter               | not touched in ten years                            |
 | nxhtml                          | orphaned    | w32-regdat               | Windows compatibility                               |
 | nxhtml                          | orphaned    | w32shell                 | Windows compatibility                               |
@@ -163,8 +168,11 @@
 | rcodetools                      | subtree     | anything                 | anything                                            |
 | rcodetools                      | subtree     | anything-show-completion | anything                                            |
 | rpm-spec-mode                   | github      | shindent                 | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                         |
+| show-marks                      | github      | fm                       | shelved soft                                        |
+| simple-call-tree                | github      | fm                       | shelved soft                                        |
 | snapshot-timemachine-rsnapshot  | github      | seq-25                   | backward compatibility                              |
 | stickies                        | github      | anything                 | anything                                            |
+| string-utils                    | github      | obarray-fns              | shelved soft                                        |
 | tangotango-theme                | github      | color-theme              | backward compatibility                              |
 | tc                              | github      | bitmap                   | pending [[https://github.com/kozo2/tc/issues/5][#5]]                                          |
 | tss                             | github      | anything                 | anything                                            |
@@ -185,6 +193,7 @@
 | w3                              | elpa-branch | xbm-button               | XEmacs compatibility                                |
 | w3                              | elpa-branch | xpm-button               | XEmacs compatibility                                |
 | w3m                             | orphaned    | un-define                | XEmacs compatibility                                |
+| wanderlust                      | github      | spamfilter               | shelved soft                                        |
 | wisi                            | elpa        | wisi-compat-24.2         | backward compatibility                              |
 | yatex                           | hg          | hilit19                  | backward compatibility                              |
 
@@ -229,7 +238,7 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (23)          | Class    | Library                         | Reason                     |
+| Package (22)          | Class    | Library                         | Reason                     |
 |-----------------------+----------+---------------------------------+----------------------------|
 | auctex                | git      | tex.el                          | pkg/lib name mismatch      |
 | chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
@@ -248,7 +257,6 @@
 | majapahit-theme       | gitlab   | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 | ne2wm                 | github   | ne2wm-setup.el                  | no/mismatched main library |
 | omtose-phellack-theme | github   | variants/omtose-darker-theme.el | two-variant theme          |
-| profile-dotemacs      | file     | profile-dotemacs.el             | no feature                 |
 | punpun-theme          | github   | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | spacemacs-theme       | github   | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | tao-theme             | github   | tao-yang-theme.el               | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |

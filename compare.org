@@ -66,7 +66,7 @@
 | elpa        |  109 |    109 |       |       |   164 |       |
 | elpa-branch |    7 |      7 |       |       |    17 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4039 |   4039 |       |       |       |  3665 |
+| github      | 4038 |   4038 |       |       |       |  3665 |
 | gitlab      |   48 |     48 |       |       |       |    36 |
 | git         |   50 |     50 |       |       |       |    38 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -75,13 +75,13 @@
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  635 |    635 |       |       |       |       |
-| file        |   67 |     67 |       |       |       |       |
+| file        |   57 |     57 |       |       |       |       |
 | minority    |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   55 |     55 |       |       |       |       |
-| shelved     | 1225 |        |  1225 |       |       |       |
+| shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6783 |   5103 |  1225 |   457 |   187 |  3778 |
+| total       | 6783 |   5092 |  1236 |   457 |   187 |  3778 |
 
 * Emacs
 ** Prefer elpa
@@ -505,7 +505,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (31)        | Class    | Melpa     | Reason                     |
+| Package (33)        | Class    | Melpa     | Reason                     |
 |---------------------+----------+-----------+----------------------------|
 | auth-source-pass    | builtin  | github    |                            |
 | autotest            | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
@@ -516,6 +516,8 @@
 | diffscuss-mode      | minority | github    | mostly non-elisp           |
 | escreen             | shelved  | github    |                            |
 | fm                  | shelved  | github    |                            |
+| fold-dwim           | shelved  | github    |                            |
+| fold-dwim-org       | shelved  | github    |                            |
 | forecast            | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | google-c-style      | minority | github    | mostly non-elisp           |
 | hl-sexp             | shelved  | github    |                            |

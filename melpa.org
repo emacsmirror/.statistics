@@ -64,7 +64,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (596)                | Link                                    |
+| Package (595)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -415,7 +415,6 @@ please first make sure they meet the minimal requirements.
 | mu                           | [[https://github.com/kensanata/mu][kensanata/mu]]                            |
 | mu4e                         | [[https://github.com/djcb/mu][djcb/mu]]                                 |
 | multi-column-mode            | [[https://github.com/diiq/multi-column-mode][diiq/multi-column-mode]]                  |
-| multi-mode-util              | [[https://github.com/tarao/multi-mode-util][tarao/multi-mode-util]]                   |
 | multiple-line-edit           | [[https://github.com/k-talo/multiple-line-edit.el][k-talo/multiple-line-edit.el]]            |
 | muse-blog                    | [[https://github.com/jd/muse-blog.el][jd/muse-blog.el]]                         |
 | musicbrainz                  | [[https://github.com/larsmagne/musicbrainz.el][larsmagne/musicbrainz.el]]                |
@@ -696,27 +695,24 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (19)        | Link                                                                   |
-|---------------------+------------------------------------------------------------------------|
-| auctex              |                                                                        |
-| auto-mounter        |                                                                        |
-| delight             | [[https://savannah.nongnu.org/projects/delight]]                           |
-| ebuild-mode         |                                                                        |
-| ee                  |                                                                        |
-| gpicker             |                                                                        |
-| hyperbole           | [[http://www.gnu.org/software/hyperbole]]                                  |
-| im-notification     |                                                                        |
-| lilypond            |                                                                        |
-| org                 | [[https://orgmode.org]]                                                    |
-| os                  | [[http://orgmode.org/worg/org-contrib/gsoc2012/student-projects/org-sync]] |
-| pmd                 |                                                                        |
-| project-buffer-mode | [[http://repo.or.cz/w/project-buffer-mode.git]]                            |
-| python-pep8         |                                                                        |
-| python-pylint       |                                                                        |
-| rcirc-ssh           |                                                                        |
-| riece               | [[http://www.nongnu.org/riece]]                                            |
-| slate-config-mode   |                                                                        |
-| undo-tree           | [[http://www.dr-qubit.org/emacs.php]]                                      |
+| Package (16)      | Link                                         |
+|-------------------+----------------------------------------------|
+| auctex            |                                              |
+| auto-mounter      |                                              |
+| delight           | [[https://savannah.nongnu.org/projects/delight]] |
+| ebuild-mode       |                                              |
+| ee                |                                              |
+| gpicker           |                                              |
+| hyperbole         | [[http://www.gnu.org/software/hyperbole]]        |
+| im-notification   |                                              |
+| lilypond          |                                              |
+| org               | [[https://orgmode.org]]                          |
+| pmd               |                                              |
+| python-pep8       |                                              |
+| python-pylint     |                                              |
+| rcirc-ssh         |                                              |
+| riece             | [[http://www.nongnu.org/riece]]                  |
+| slate-config-mode |                                              |
 
 ** Bitbucket
 #+NAME: missing-bitbucket

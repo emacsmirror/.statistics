@@ -20,14 +20,13 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS:
-| Dependee (27)   | Author                        | Depender         | Type | Author                                            |
+| Dependee (26)   | Author                        | Depender         | Type | Author                                            |
 |-----------------+-------------------------------+------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key          | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm               | hard |                                                   |
 | dropdown-list   |                               | thesaurus        | soft | Dino Chiesa, Alex Henning                         |
 | el-expectations | rubikitch                     | bts              | hard | Hiroaki Otsu                                      |
 | el-expectations | rubikitch                     | caskxy           | soft | Hiroaki Otsu                                      |
-| erc-robot       | David Edmondson               | mallow           | hard | Edward O'Connor                                   |
 | etags-select    | Scott Frazer                  | evil-collection  | soft | James Nguyen                                      |
 | extract-text    | Joe Bloggs                    | gnus-summary-ext | soft | Joe Bloggs                                        |
 | filesets+       | Drew Adams                    | helm-filesets    | soft | Graham Clark                                      |
@@ -75,7 +74,7 @@
 	     #'string< :key #'car))
 #+END_SRC
 #+RESULTS:
-| Author (208)                                    | Package                        |
+| Author (206)                                    | Package                        |
 |-------------------------------------------------+--------------------------------|
 |                                                 | ac-dabbrev                     |
 |                                                 | acd                            |
@@ -460,7 +459,6 @@
 | Jason Spiro                                     | beginner                       |
 | Javier Oviedo                                   | joccur                         |
 | Jean-Baptiste Bourgoin                          | mpcel                          |
-| Jean-Philippe Theberge                          | hachette                       |
 | Jeremy Cowgar                                   | edi-mode                       |
 | Jeremy Cowgar                                   | random-idle-quote              |
 | Jeremy Cowgar                                   | task-timer                     |
@@ -607,7 +605,6 @@
 | Rolf Ebert                                      | ada-gpr                        |
 | Ron Lawrence                                    | member-functions               |
 | Rubens Fernandes                                | intel-hex-mode                 |
-| Ryan C. Thompson                                | protbuf-by-name                |
 | Ryan Davis and Phil Hagelberg                   | project-local-variables        |
 | S. Irie                                         | grab-and-drag                  |
 | S. Irie                                         | popup-pos-tip                  |

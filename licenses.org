@@ -66,10 +66,10 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  2556 |      68 |
+| GPL-3+        |  2557 |      68 |
 | GPL-2+        |   523 |      14 |
-| MIT           |   139 |       4 |
-| GPL-3         |   136 |       4 |
+| MIT           |   140 |       4 |
+| GPL-3         |   138 |       4 |
 | MIT (x11)     |   133 |       4 |
 | BSD-2-clause  |    71 |       2 |
 | BSD-3-clause  |    41 |       1 |
@@ -98,9 +98,9 @@
 | UIUC          |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  3235 |      86 |
+| total GNU     |  3238 |      86 |
 |---------------+-------+---------|
-| total         |  3774 |     100 |
+| total         |  3778 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -253,19 +253,19 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-3+          |  3190 |      60 |
-| GPL-2+          |  1318 |      25 |
-| GPL-3           |   144 |       3 |
-| MIT             |   141 |       3 |
+| GPL-3+          |  3178 |      62 |
+| GPL-2+          |  1163 |      23 |
+| GPL-3           |   146 |       3 |
+| MIT             |   142 |       3 |
 | MIT (x11)       |   133 |       3 |
 | BSD-2-clause    |    75 |       1 |
-| public-domain   |    48 |       1 |
 | BSD-3-clause    |    45 |       1 |
 | Apache-2.0      |    36 |       1 |
 | unlicense       |    34 |       1 |
 | WTFPL           |    32 |       1 |
-| as-is           |    31 |       1 |
-| GPL-1+          |     8 |       0 |
+| as-is           |    30 |       1 |
+| public-domain   |    29 |       1 |
+| GPL-1+          |     6 |       0 |
 | LGPL-3+         |     5 |       0 |
 | WTFPL-2         |     5 |       0 |
 | ISC (and)       |     4 |       0 |
@@ -288,9 +288,9 @@
 | UIUC            |     1 |       0 |
 | zlib License    |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  4674 |      89 |
+| total GNU       |  4507 |      89 |
 |-----------------+-------+---------|
-| total           |  5278 |     100 |
+| total           |  5092 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
