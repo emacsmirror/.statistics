@@ -29,6 +29,10 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (1)   | Package        | Shelved |
+|---------------+----------------+---------|
+| adaptive-wrap | adaptive-wrap  |         |
+| adaptive-wrap | taskpaper-mode |         |
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -55,9 +59,13 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature       | Provider |
-|-------------+--------+---------------+----------|
-| helm        | github | tramp-archive |          |
+| Package (2) | Class  | Feature           | Provider |
+|-------------+--------+-------------------+----------|
+| company-box | github | icons-in-terminal |          |
+| helm        | github | tramp-archive     |          |
+
+- company-box: https://github.com/melpa/melpa/pull/5372#issuecomment-379543774
+- helm: tramp-archive will be added in Emacs 27
 
 * Unmerged pull requests
 
