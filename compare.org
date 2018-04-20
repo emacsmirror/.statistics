@@ -66,7 +66,7 @@
 | elpa        |  109 |    109 |       |       |   164 |       |
 | elpa-branch |    7 |      7 |       |       |    17 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4048 |   4048 |       |       |       |  3675 |
+| github      | 4048 |   4048 |       |       |       |  3676 |
 | gitlab      |   48 |     48 |       |       |       |    36 |
 | git         |   50 |     50 |       |       |       |    38 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   55 |     55 |       |       |       |       |
 | shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6793 |   5102 |  1236 |   457 |   187 |  3788 |
+| total       | 6793 |   5102 |  1236 |   457 |   187 |  3789 |
 
 * Emacs
 ** Prefer elpa
@@ -306,6 +306,10 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
+| Package (2)      | Melpa  | Reason                                       |
+|------------------+--------+----------------------------------------------|
+| company-solidity | github | merged into solidity-mode; TODO update Melpa |
+| emms-player-mpv  | github | merged into emms, to be removed from melpa   |
 
 ** Shared repositories
 #+NAME: secondary-packages
@@ -322,7 +326,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (80)    | Secondary package                 | Class    |
+| Primary package (79)    | Secondary package                 | Class    |
 |-------------------------+-----------------------------------+----------|
 | ac-php                  | ac-php-core                       | github   |
 | ac-php                  | company-php                       | github   |
@@ -391,7 +395,6 @@
 | helm                    | helm-core                         | github   |
 | helm-bibtex             | ivy-bibtex                        | github   |
 | historian               | ivy-historian                     | github   |
-| ido-completing-read+    | ido-ubiquitous                    | github   |
 | ivy                     | counsel                           | github   |
 | ivy                     | ivy-hydra                         | github   |
 | ivy                     | swiper                            | github   |
