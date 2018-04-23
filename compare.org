@@ -66,7 +66,7 @@
 | elpa        |  109 |    109 |       |       |   164 |       |
 | elpa-branch |    7 |      7 |       |       |    17 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4064 |   4064 |       |       |       |  3692 |
+| github      | 4073 |   4073 |       |       |       |  3702 |
 | gitlab      |   48 |     48 |       |       |       |    36 |
 | git         |   50 |     50 |       |       |       |    38 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -76,12 +76,12 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  635 |    635 |       |       |       |       |
 | file        |   57 |     57 |       |       |       |       |
-| minority    |   24 |     24 |       |       |       |       |
+| minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   55 |     55 |       |       |       |       |
 | shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6809 |   5118 |  1236 |   457 |   187 |  3805 |
+| total       | 6819 |   5128 |  1236 |   457 |   187 |  3815 |
 
 * Emacs
 ** Prefer elpa
@@ -508,7 +508,7 @@
                       :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (33)        | Class    | Melpa     | Reason                     |
+| Package (34)        | Class    | Melpa     | Reason                     |
 |---------------------+----------+-----------+----------------------------|
 | auth-source-pass    | builtin  | github    |                            |
 | autotest            | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
@@ -529,6 +529,7 @@
 | list-register       | shelved  | github    |                            |
 | nemerle             | minority | github    | mostly non-elisp           |
 | ninja-mode          | minority | github    | mostly non-elisp           |
+| org-variable-pitch  | minority | github    |                            |
 | osx-plist           | shelved  | github    |                            |
 | paper-theme         | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | po-mode             | minority | git       | mostly non-elisp           |
