@@ -90,31 +90,28 @@
   (emir--save-variable 'emir--diverging-reason value)
 #+END_SRC
 #+NAME: val--emir--diverging-reason
-| Package             | Reason                     |
-|---------------------+----------------------------|
-| autotest            | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
-| bibliothek          | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
-| cfengine-code-style | mostly non-elisp           |
-| cmake-mode          | mostly non-elisp           |
-| cython-mode         | mostly non-elisp           |
-| diffscuss-mode      | mostly non-elisp           |
-| forecast            | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
-| google-c-style      | mostly non-elisp           |
-| less-css-mode       | Emacs 26.0.90 has newer    |
-| llvm-mode           | mostly non-elisp           |
-| nemerle             | mostly non-elisp           |
-| ninja-mode          | mostly non-elisp           |
-| outline-magic       | TODO remove from melpa     |
-| paper-theme         | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
-| po-mode             | mostly non-elisp           |
-| pylint              | mostly non-elisp           |
-| rfringe             | all-in-one repo            |
-| smart-compile       | all-in-one repo            |
-| tfs                 | all-in-one repo            |
-| thesaurus           | all-in-one repo            |
-| thrift              | mostly non-elisp           |
-| toggle              | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
-| wisp-mode           | mostly non-elisp           |
+| Package             | Reason               |
+|---------------------+----------------------|
+| auth-source-pass    | part of Emacs 26.1   |
+| autotest            | all-in-one repo      |
+| bibliothek          | all-in-one repo      |
+| cfengine-code-style | mostly non-elisp     |
+| cmake-mode          | mostly non-elisp     |
+| cython-mode         | mostly non-elisp     |
+| diffscuss-mode      | mostly non-elisp     |
+| forecast            | all-in-one repo      |
+| google-c-style      | mostly non-elisp     |
+| less-css-mode       | Emacs 26.1 has newer |
+| nemerle             | mostly non-elisp     |
+| ninja-mode          | mostly non-elisp     |
+| org-variable-pitch  | all-in-one repo      |
+| paper-theme         | all-in-one repo      |
+| po-mode             | mostly non-elisp     |
+| pylint              | mostly non-elisp     |
+| smart-compile       | all-in-one repo      |
+| thrift              | mostly non-elisp     |
+| toggle              | all-in-one repo      |
+| wisp-mode           | mostly non-elisp     |
 
 * Library reason
 #+NAME: set--emir--library-reason
