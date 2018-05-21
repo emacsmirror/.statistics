@@ -4,14 +4,10 @@
   (require 'epkg)
 
   (defun emir--format-license-table (table)
-    (--when-let (assoc "failure" table)
-      (setcar it  "((failure))"))
-    (--when-let (assoc "pending" table)
-      (setcar it  "((pending))"))
-    (--when-let (assoc "none" table)
-      (setcar it  "((none))"))
-    (--when-let (assoc "custom" table)
-      (setcar it  "((custom))"))
+    (--when-let (assoc "failure" table) (setcar it  "((failure))"))
+    (--when-let (assoc "pending" table) (setcar it  "((pending))"))
+    (--when-let (assoc "none" table)    (setcar it  "((none))"))
+    (--when-let (assoc "custom" table)  (setcar it  "((custom))"))
     (let ((total (apply '+ (mapcar 'cadr table)))
           (gnu   (apply '+ (mapcar (pcase-lambda (`(,license ,count))
                                      (if (and license
@@ -27,219 +23,36 @@
             hline ("total GNU" ,gnu ,(percent gnu))
             hline ("total" ,total 100)))))
 
-  (defun emir--insert-melpa-packages-using-licenses (&rest licenses)
-    (epkg-with-org-header ("Package" "License" "Class" "Link")
-      (epkg-sql [:select :distinct
-                 [packages:name packages:license packages:class packages:repopage]
-                 :from [packages melpa-recipes]
-                 :where (= packages:name melpa-recipes:epkg-package)
-                 :and license :in $v1
-                 :group-by packages:repopage
-                 :order-by [(asc packages:name)]]
-                (apply #'vector licenses))))
-
   (defun emir--insert-mirror-packages-using-licenses (&rest licenses)
     (epkg-with-org-header ("Package" "License" "Class" "M" "Link")
       (mapcar (pcase-lambda (`(,name ,license ,class ,repopage))
                 (list name license class
                       (if (melpa-get name) t "")
                       (and (not (eq class 'wiki)) repopage)))
-              (epkg-sql [:select [name license class repopage] :from packages
+              (epkg-sql [:select [name license class repopage]
+                         :from packages
                          :where license :in $v1
                          :and (not (= class 'shelved))
                          :order-by [(asc name)]]
-                        (apply #'vector licenses)
-                        [shelved]))))
+                        (apply #'vector licenses)))))
+
+  (defun emir--insert-attic-packages-using-licenses (&rest licenses)
+    (epkg-with-org-header ("Package" "License" "Link")
+      (mapcar (pcase-lambda (`(,name ,license ,repopage))
+                (list name license
+                      (and (not (equal
+                                 repopage
+                                 "https://github.com/emacsmirror/emacswiki.org"))
+                           repopage)))
+              (epkg-sql [:select [name license repopage] :from packages
+                         :where license :in $v1
+                         :and (= class 'shelved)
+                         :order-by [(asc name)]]
+                        (apply #'vector licenses)))))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 
-* Licenses used by packages on Melpa
-** Overview
-#+BEGIN_SRC emacs-lisp
-  (emir--format-license-table
-   (epkg-sql [:select :distinct [packages:license (funcall count *)] :as count
-              :from [packages melpa-recipes]
-              :where (= packages:name melpa-recipes:epkg-package)
-              :group-by packages:license
-              :order-by [(desc count) (asc license)]]))
-#+END_SRC
-#+RESULTS:
-| License       | Count | Percent |
-|---------------+-------+---------|
-| GPL-3+        |  2596 |      68 |
-| GPL-2+        |   518 |      14 |
-| MIT           |   143 |       4 |
-| GPL-3         |   140 |       4 |
-| MIT (x11)     |   135 |       4 |
-| BSD-2-clause  |    71 |       2 |
-| BSD-3-clause  |    42 |       1 |
-| Apache-2.0    |    38 |       1 |
-| unlicense     |    32 |       1 |
-| public-domain |    24 |       1 |
-| as-is         |    23 |       1 |
-| WTFPL         |    13 |       0 |
-| GPL-1+        |     6 |       0 |
-| BEER-WARE     |     4 |       0 |
-| ISC (and)     |     4 |       0 |
-| LGPL-3+       |     4 |       0 |
-| WTFPL-2       |     4 |       0 |
-| AGPL-3+       |     3 |       0 |
-| Artistic-2.0  |     3 |       0 |
-| CeCILL-B      |     2 |       0 |
-| ISC (and/or)  |     2 |       0 |
-| LGPL          |     2 |       0 |
-| LGPL-2.1      |     2 |       0 |
-| CC0 1.0       |     1 |       0 |
-| COPYLOVE      |     1 |       0 |
-| GPL           |     1 |       0 |
-| LGPL-3        |     1 |       0 |
-| LGPL-3.0      |     1 |       0 |
-| MPL-2         |     1 |       0 |
-| UIUC          |     1 |       0 |
-| zlib License  |     1 |       0 |
-|---------------+-------+---------|
-| total GNU     |  3274 |      86 |
-|---------------+-------+---------|
-| total         |  3819 |     100 |
-
-** Issues
-#+BEGIN_SRC emacs-lisp
-  (emir--insert-melpa-packages-using-licenses
-    "GPL" "GPL-2" "failure" "pending")
-#+END_SRC
-#+RESULTS:
-| Package (1) | License | Class   | Link |
-|-------------+---------+---------+------|
-| redshank    | GPL     | shelved |      |
-
-** Removed packages
-#+BEGIN_SRC emacs-lisp
-  (let ((removed
-         '(;; [[orgit-rev:~/git/emacs/melpa/::7aa634e8]]
-           "smali-mode"
-           ;; [[orgit-rev:~/git/emacs/melpa/::cf92ce1a]]
-           "achievements"
-           "avk-emacs-themes"
-           "bpr"
-           "coq-commenter"
-           "crab"
-           "darkane-theme"
-           "easy-after-load"
-           "edit-at-point"
-           "el-pocket"
-           "eno"
-           "ess-R-object-popup"
-           "euslisp-mode"
-           "firebelly-theme"
-           "flappymacs"
-           "flycheck-scala-sbt"
-           "gap-mode"
-           "ghost-blog"
-           "hlint-refactor"
-           "ids-edit"
-           "imgix"
-           "inf-php"
-           "inform7-mode"
-           "ivariants"
-           "ivs-edit"
-           "jaunte"
-           "mandoku-tls"
-           "memento"
-           "monochrome-theme"
-           "n3-mode"
-           "niflheim-theme"
-           "nnir-est"
-           "nyan-prompt"
-           "org-jekyll"
-           "ox-pandoc"
-           "psc-ide"
-           "sicp"
-           "yatex"
-           "zerodark-theme"
-           ;; [[orgit-rev:~/git/emacs/melpa/::c3366117]]
-           "crontab-mode"
-           "harvest"
-           "helm-ctest"
-           "inline-crypt"
-           "plantuml-mode"
-           "pushover"
-           "py-gnitset"
-           "pyim-greatdict"
-           "railgun"
-           "rails-new"
-           "refheap"
-           "ruby-dev"
-           "ruby-guard"
-           "sly-repl-ansi-color"
-           "smartwin"
-           "sourcetalk"
-           "stgit"
-           "subshell-proc"
-           "sudden-death"
-           "syslog-mode"
-           "tj-mode"
-           "tronesque-theme"
-           "turkish"
-           "uzumaki"
-           "vimgolf"
-           "wordsmith-mode"
-           "xah-css-mode"
-           "xah-elisp-mode"
-           "xah-find"
-           "xah-fly-keys"
-           "xah-get-thing"
-           "xah-lookup"
-           "xah-math-input"
-           "xah-reformat-code"
-           "xah-replace-pairs"
-           "xahk-mode"
-           "zig-mode"
-           ;; [[orgit-log:~/git/emacs/melpa/::master]]
-           "slime-ritz"
-           ;; [[orgit-rev:~/git/emacs/melpa/::b20f5126]]
-           "lively"
-           ;; [[orgit-rev:~/git/emacs/melpa/::e5476274]]
-           "slime-annot"
-           )))
-    (epkg-with-org-header ("Package" "R" "License" "Class" "Link")
-      (--keep (-when-let (pkg (epkg it))
-                (let ((rcp (melpa-get it)))
-                  (and (not rcp)
-                       (list it
-                             (if rcp "t" "")
-                             (oref pkg license)
-                             (substring (symbol-name (class-of pkg)) 5 -8)
-                             (oref pkg repopage)))))
-              removed)))
-#+END_SRC
-#+RESULTS:
-| Package (23)       | R | License         | Class   | Link                                              |
-|--------------------+---+-----------------+---------+---------------------------------------------------|
-| crab               |   | pending         | shelved | https://github.com/puffnfresh/crab-emacs          |
-| ess-R-object-popup |   | pending         | shelved | https://github.com/myuhe/ess-R-object-popup.el    |
-| flycheck-scala-sbt |   | public-domain   | shelved | https://github.com/rjmac/flycheck-scala-sbt       |
-| imgix              |   | pending         | shelved | https://github.com/imgix/imgix-emacs              |
-| inf-php            |   | pending         | shelved | https://github.com/taksatou/inf-php               |
-| inform7-mode       |   | pending         | shelved | https://github.com/fred-o/inform7-mode            |
-| jaunte             |   | pending         | shelved | https://github.com/kawaguchi/jaunte.el            |
-| memento            |   | pending         | shelved | https://github.com/ehartc/memento                 |
-| n3-mode            |   | pending         | shelved | https://github.com/doriantaylor/n3-mode-for-emacs |
-| nyan-prompt        |   | COPYLOVE        | github  | https://github.com/PuercoPop/nyan-prompt          |
-| org-jekyll         |   | pending         | shelved | https://github.com/juanre/org-jekyll              |
-| crontab-mode       |   | GPL-2           | shelved | https://github.com/emacsorphanage/crontab-mode    |
-| pyim-greatdict     |   | pending         | shelved | https://github.com/tumashu/pyim-greatdict         |
-| railgun            |   | pending         | shelved | https://github.com/mbriggs/railgun.el             |
-| rails-new          |   | pending         | shelved | https://github.com/cheunghy/rails-new             |
-| refheap            |   | pending         | shelved | https://github.com/Raynes/refheap.el              |
-| ruby-dev           |   | pending         | shelved | https://github.com/Mon-Ouie/ruby-dev.el           |
-| ruby-guard         |   | pending         | shelved | https://github.com/cheunghy/ruby-guard            |
-| sourcetalk         |   | pending         | shelved | https://github.com/malroc/sourcetalk_emacs        |
-| tj-mode            |   | pending         | shelved | https://github.com/katspaugh/tj-mode              |
-| uzumaki            |   | pending         | shelved | https://github.com/geyslan/uzumaki                |
-| vimgolf            |   | CC BY-NC-SA 3.0 | github  | https://github.com/timvisher/vimgolf.el           |
-| slime-ritz         |   | EPL             | shelved |                                                   |
-
-* Licenses used by packages on the Emacsmirror
+* Emacsmirror
 ** Overview
 #+BEGIN_SRC emacs-lisp
   (emir--format-license-table
@@ -251,46 +64,44 @@
               :order-by [(desc count) (asc license)]]))
 #+END_SRC
 #+RESULTS:
-| License         | Count | Percent |
-|-----------------+-------+---------|
-| GPL-3+          |  3221 |      63 |
-| GPL-2+          |  1166 |      23 |
-| GPL-3           |   148 |       3 |
-| MIT             |   145 |       3 |
-| MIT (x11)       |   135 |       3 |
-| BSD-2-clause    |    75 |       1 |
-| BSD-3-clause    |    46 |       1 |
-| Apache-2.0      |    36 |       1 |
-| unlicense       |    34 |       1 |
-| WTFPL           |    32 |       1 |
-| as-is           |    31 |       1 |
-| public-domain   |    29 |       1 |
-| GPL-1+          |     6 |       0 |
-| LGPL-3+         |     5 |       0 |
-| WTFPL-2         |     5 |       0 |
-| ISC (and)       |     4 |       0 |
-| AGPL-3+         |     3 |       0 |
-| Artistic-2.0    |     3 |       0 |
-| MS-PL           |     3 |       0 |
-| BEER-WARE       |     2 |       0 |
-| COPYLOVE        |     2 |       0 |
-| CeCILL-B        |     2 |       0 |
-| ISC (and/or)    |     2 |       0 |
-| LGPL-2.1        |     2 |       0 |
-| CC BY-NC-SA 3.0 |     1 |       0 |
-| CC0 1.0         |     1 |       0 |
-| GPL             |     1 |       0 |
-| LGPL            |     1 |       0 |
-| LGPL-3          |     1 |       0 |
-| LGPL-3.0        |     1 |       0 |
-| MPL-2           |     1 |       0 |
-| Ruby            |     1 |       0 |
-| UIUC            |     1 |       0 |
-| zlib License    |     1 |       0 |
-|-----------------+-------+---------|
-| total GNU       |  4555 |      88 |
-|-----------------+-------+---------|
-| total           |  5147 |     100 |
+| License       | Count | Percent |
+|---------------+-------+---------|
+| GPL-3+        |  3222 |      63 |
+| GPL-2+        |  1166 |      23 |
+| GPL-3         |   148 |       3 |
+| MIT           |   145 |       3 |
+| MIT (x11)     |   135 |       3 |
+| BSD-2-clause  |    75 |       1 |
+| BSD-3-clause  |    46 |       1 |
+| Apache-2.0    |    36 |       1 |
+| unlicense     |    34 |       1 |
+| WTFPL         |    32 |       1 |
+| as-is         |    31 |       1 |
+| public-domain |    29 |       1 |
+| GPL-1+        |     6 |       0 |
+| LGPL-3+       |     5 |       0 |
+| WTFPL-2       |     5 |       0 |
+| ISC (and)     |     4 |       0 |
+| AGPL-3+       |     3 |       0 |
+| Artistic-2.0  |     3 |       0 |
+| MS-PL         |     3 |       0 |
+| BEER-WARE     |     2 |       0 |
+| COPYLOVE      |     2 |       0 |
+| CeCILL-B      |     2 |       0 |
+| ISC (and/or)  |     2 |       0 |
+| LGPL-2.1      |     2 |       0 |
+| CC0 1.0       |     1 |       0 |
+| LGPL          |     1 |       0 |
+| LGPL-3        |     1 |       0 |
+| LGPL-3.0      |     1 |       0 |
+| MPL-2         |     1 |       0 |
+| Ruby          |     1 |       0 |
+| UIUC          |     1 |       0 |
+| zlib License  |     1 |       0 |
+|---------------+-------+---------|
+| total GNU     |  4555 |      89 |
+|---------------+-------+---------|
+| total         |  5146 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -298,8 +109,246 @@
     "GPL" "GPL-2" "failure" "pending" nil)
 #+END_SRC
 #+RESULTS:
-| Package (1) | License | Class  | M | Link                               |
-|-------------+---------+--------+---+------------------------------------|
-| coq         | GPL     | github |   | https://github.com/ProofGeneral/PG |
 
-- coq [[https://github.com/ProofGeneral/PG/issues/198][#198]]
+* Emacsattic
+** Overview
+#+BEGIN_SRC emacs-lisp
+  (emir--format-license-table
+   (epkg-sql [:select [license (funcall count *)] :as count
+              :from packages
+              :where (= class 'shelved)
+              :group-by license
+              :order-by count :desc]))
+#+END_SRC
+#+RESULTS:
+| License         | Count | Percent |
+|-----------------+-------+---------|
+| GPL-2+          |   785 |      63 |
+| GPL-3+          |   200 |      16 |
+| GPL-2           |    64 |       5 |
+| GPL             |    44 |       4 |
+| ((pending))     |    40 |       3 |
+| public-domain   |    35 |       3 |
+| GPL-1+          |    14 |       1 |
+| ((custom))      |     9 |       1 |
+| GPL-3           |     6 |       0 |
+| as-is           |     6 |       0 |
+| BSD-3-clause    |     4 |       0 |
+| MIT (x11)       |     4 |       0 |
+| Apache-2.0      |     3 |       0 |
+| BSD-2-clause    |     3 |       0 |
+| MIT             |     3 |       0 |
+| WTFPL           |     3 |       0 |
+| GPL-2.1+        |     2 |       0 |
+| LGPL-3          |     2 |       0 |
+| AGPL-3+         |     1 |       0 |
+| Artistic-1.0    |     1 |       0 |
+| BEER-WARE       |     1 |       0 |
+| BSD             |     1 |       0 |
+| CC BY-NC-SA 3.0 |     1 |       0 |
+| EPL             |     1 |       0 |
+| ISC (and)       |     1 |       0 |
+| LGPL-2.1        |     1 |       0 |
+| LGPL-2.1+       |     1 |       0 |
+| WTFPL-2         |     1 |       0 |
+|-----------------+-------+---------|
+| total GNU       |  1120 |      91 |
+|-----------------+-------+---------|
+| total           |  1237 |     100 |
+
+** Unknown licenses
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Class" "License")
+    (epkg-sql [:select [name class license] :from packages
+               :where (isnull license)
+               :and packages:class :in $v1
+               :order-by [(asc name)]]
+              [shelved])))
+#+END_SRC
+#+RESULTS:
+
+** Custom licenses
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-attic-packages-using-licenses "custom")
+#+END_SRC
+#+RESULTS:
+| Package (9) | License | Link                                       |
+|-------------+---------+--------------------------------------------|
+| epo         | custom  |                                            |
+| phutball    | custom  |                                            |
+| procmaillog | custom  |                                            |
+| psgml-jade  | custom  |                                            |
+| speedread   | custom  |                                            |
+| whine       | custom  |                                            |
+| xrefresh    | custom  | https://github.com/justmoon/xrefresh-emacs |
+| yaham       | custom  |                                            |
+| youwill     | custom  |                                            |
+
+** Upstream contacted
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-attic-packages-using-licenses "pending")
+#+END_SRC
+#+RESULTS:
+| Package (40)         | License | Link                                              |
+|----------------------+---------+---------------------------------------------------|
+| auto-scratch         | pending | https://github.com/lovekonakona/auto-scratch      |
+| bavard               | pending |                                                   |
+| crab                 | pending | https://github.com/puffnfresh/crab-emacs          |
+| drela-mode           | pending | https://github.com/cloudchamber/Drela-mode        |
+| ess-R-object-popup   | pending | https://github.com/myuhe/ess-R-object-popup.el    |
+| find-file-suggest    | pending | https://github.com/cjauvin/find-file-suggest      |
+| flymake-pylint       | pending | https://github.com/btoconnor/flymake-pylint       |
+| gershwin-mode        | pending | https://github.com/gershwin/emacs-gershwin-mode   |
+| gitch                | pending | https://github.com/rjprins/gitch                  |
+| globalizer           | pending |                                                   |
+| goto-pattern         | pending | https://github.com/cjauvin/goto-pattern           |
+| hippie-expand-distel | pending | https://github.com/rost/hippie-expand-distel      |
+| ietfdoc              | pending |                                                   |
+| imgix                | pending | https://github.com/imgix/imgix-emacs              |
+| inf-js               | pending | https://github.com/bkyle/inf-js                   |
+| inf-php              | pending | https://github.com/taksatou/inf-php               |
+| inform7-mode         | pending | https://github.com/fred-o/inform7-mode            |
+| jaunte               | pending | https://github.com/kawaguchi/jaunte.el            |
+| maven-mode           | pending | https://github.com/bkyle/maven-mode               |
+| memento              | pending | https://github.com/ehartc/memento                 |
+| mousymacro           | pending |                                                   |
+| n3-mode              | pending | https://github.com/doriantaylor/n3-mode-for-emacs |
+| namazu               | pending |                                                   |
+| objc-c-mode          | pending |                                                   |
+| org-jekyll           | pending | https://github.com/juanre/org-jekyll              |
+| partially            | pending | https://github.com/mbriggs/partially.el           |
+| pyim-greatdict       | pending | https://github.com/tumashu/pyim-greatdict         |
+| railgun              | pending | https://github.com/mbriggs/railgun.el             |
+| rails-new            | pending | https://github.com/cheunghy/rails-new             |
+| refheap              | pending | https://github.com/Raynes/refheap.el              |
+| reflected-buffers    | pending | https://github.com/tkf/reflected-buffers          |
+| rmoo                 | pending | https://github.com/toddsundsted/rmoo              |
+| ruby-dev             | pending | https://github.com/Mon-Ouie/ruby-dev.el           |
+| ruby-guard           | pending | https://github.com/cheunghy/ruby-guard            |
+| shbuf                | pending |                                                   |
+| sourcetalk           | pending | https://github.com/malroc/sourcetalk_emacs        |
+| testkick             | pending | https://github.com/hadashiA/testkick              |
+| tj-mode              | pending | https://github.com/katspaugh/tj-mode              |
+| uzumaki              | pending | https://github.com/geyslan/uzumaki                |
+| window-grid          | pending |                                                   |
+
+** Problematic licenses
+#+BEGIN_SRC emacs-lisp
+  (emir--insert-attic-packages-using-licenses "GPL" "GPL-2" "EPL")
+#+END_SRC
+#+RESULTS:
+| Package (109)       | License | Link                                           |
+|---------------------+---------+------------------------------------------------|
+| align-regexp        | GPL     |                                                |
+| amigo               | GPL-2   |                                                |
+| atom-blogger        | GPL     |                                                |
+| axcess              | GPL     |                                                |
+| bang                | GPL-2   |                                                |
+| bibtex-mode         | GPL     |                                                |
+| blip                | GPL-2   |                                                |
+| breadcrumb          | GPL-2   | https://github.com/pheaver/breadcrumb          |
+| buffer-thumbnail    | GPL     |                                                |
+| byrd-biff           | GPL     |                                                |
+| cdt                 | GPL     |                                                |
+| clhs                | GPL     |                                                |
+| commit-patch-buffer | GPL-2   |                                                |
+| conjecture-mode     | GPL     |                                                |
+| copyedit            | GPL-2   |                                                |
+| crontab-mode        | GPL-2   | https://github.com/emacsorphanage/crontab-mode |
+| cruisecontrol       | GPL-2   |                                                |
+| dbk                 | GPL     |                                                |
+| devkitemacs         | GPL-2   |                                                |
+| dired-a             | GPL     |                                                |
+| dms-sig             | GPL     |                                                |
+| e-blog              | GPL-2   |                                                |
+| ec                  | GPL-2   |                                                |
+| eform               | GPL     |                                                |
+| elder               | GPL     |                                                |
+| emdroid             | GPL-2   |                                                |
+| emuds               | GPL     |                                                |
+| env-print           | GPL     |                                                |
+| equinox             | GPL-2   |                                                |
+| esheet              | GPL-2   |                                                |
+| espect              | GPL-2   | https://github.com/rafl/espect                 |
+| faith               | GPL     |                                                |
+| filewatch           | GPL     |                                                |
+| flip-tables         | GPL-2   |                                                |
+| fluiddb             | GPL-2   | https://github.com/hdurer/fluiddb.el           |
+| foldingo            | GPL     |                                                |
+| garble              | GPL-2   | https://github.com/davep/garble.el             |
+| gb4e                | GPL     |                                                |
+| global-modes        | GPL     |                                                |
+| haddoc              | GPL-2   |                                                |
+| hier-imenu          | GPL-2   |                                                |
+| html-helper-imenu   | GPL-2   |                                                |
+| hugs-mode           | GPL     |                                                |
+| i-ching             | GPL-2   |                                                |
+| icaps               | GPL-2   |                                                |
+| ifile-gnus          | GPL     |                                                |
+| ilisp               | GPL     |                                                |
+| inkmacs             | GPL     |                                                |
+| iso-html            | GPL     |                                                |
+| javadoc-help        | GPL-2   |                                                |
+| jhg-cload           | GPL-2   |                                                |
+| lbdb                | GPL-2   | https://github.com/davep/lbdb.el               |
+| line-numbers-mode   | GPL     |                                                |
+| lines               | GPL     |                                                |
+| lmselect            | GPL-2   |                                                |
+| media-files         | GPL-2   |                                                |
+| mgp-mode-cd         | GPL     |                                                |
+| miranda-mode        | GPL     |                                                |
+| mojo                | GPL-2   | https://github.com/samsonjs/mojo.el            |
+| mutt-alias          | GPL-2   | https://github.com/davep/mutt-alias.el         |
+| notebook            | GPL-2   |                                                |
+| osx-itunes          | GPL-2   |                                                |
+| osx-osascript       | GPL-2   |                                                |
+| osx-typecreator     | GPL-2   |                                                |
+| otp                 | GPL-2   |                                                |
+| outline-m           | GPL     |                                                |
+| pastie              | GPL     |                                                |
+| perl-myvar          | GPL-2   |                                                |
+| physical-line       | GPL     |                                                |
+| play-mode           | GPL-2   | https://github.com/emacsorphanage/plywood      |
+| point-ring          | GPL     |                                                |
+| popup-menu          | GPL     |                                                |
+| post                | GPL     |                                                |
+| qa                  | GPL-2   |                                                |
+| qtdoc               | GPL-2   |                                                |
+| recent              | GPL-2   |                                                |
+| redshank            | GPL     |                                                |
+| rep-words           | GPL-2   |                                                |
+| repeat-insert       | GPL     |                                                |
+| repeatable          | GPL-2   |                                                |
+| reportmail          | GPL     |                                                |
+| rtf-mode            | GPL-2   |                                                |
+| save-and-dwim       | GPL-2   |                                                |
+| sawfish             | GPL-2   |                                                |
+| scrmable            | GPL-2   |                                                |
+| slashdot            | GPL-2   |                                                |
+| slime-ritz          | EPL     |                                                |
+| spamprobe           | GPL-2   |                                                |
+| spectre-mode        | GPL     |                                                |
+| studlycaps          | GPL-2   |                                                |
+| summarye            | GPL     |                                                |
+| symlink-fix         | GPL     |                                                |
+| tab-in-tabular      | GPL-2   |                                                |
+| texmed              | GPL-2   |                                                |
+| tie-mode            | GPL     |                                                |
+| tiger               | GPL-2   |                                                |
+| tld                 | GPL-2   | https://github.com/davep/tld.el                |
+| todochiku           | GPL-2   |                                                |
+| tumblr              | GPL-2   | https://github.com/travisjeffery/emacs-tumblr  |
+| twit                | GPL-2   | https://github.com/baudtack/twit.el            |
+| undo-group          | GPL-2   |                                                |
+| wc                  | GPL-2   |                                                |
+| webinfo             | GPL-2   | https://github.com/davep/webinfo.el            |
+| word-count          | GPL-2   |                                                |
+| word-counter        | GPL     |                                                |
+| work-timer          | GPL-2   |                                                |
+| wsh-repl            | GPL-2   | https://github.com/jonnay/wsh-repl             |
+| xbase               | GPL-2   |                                                |
+| zendmd-comint       | GPL-2   | https://github.com/jhanson/zendmd-comint.el    |
+
+Notes:
+- [[mu4e:msgid:87bmmrmt9x.fsf@ernst][(mail) GPL-2 maintainer feedback]]
+

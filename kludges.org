@@ -68,7 +68,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (84)                    | Class       | Feature                  | Reason                                              |
+| Package (83)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -83,8 +83,6 @@
 | color-theme-sanityinc-tomorrow  | github      | color-theme              | backward compatibility                              |
 | color-theme-solarized           | github      | color-theme              | backward compatibility                              |
 | company                         | github      | semantic-idle            | backward compatibility                              |
-| coq                             | github      | atomic-extents           | XEmacs compatibility                                |
-| coq                             | github      | proof-x-symbol           | only for obsolete library                           |
 | ddskk                           | github      | balloon-help             | XEmacs compatibility                                |
 | ddskk                           | github      | jisx0213                 | backward compatibility                              |
 | ddskk                           | github      | nicola-ddskk-autoloads   | generated internal file                             |
@@ -313,11 +311,12 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (12)        | Class   | Branch       |
+| Package (13)        | Class   | Branch       |
 |---------------------+---------+--------------|
 | apel                | github  | apel-wl      |
 | borg-queen          | github  | initial-dev  |
 | caml                | subtree | trunk        |
+| coq                 | github  | async        |
 | distinguished-theme | github  | develop      |
 | ensime              | github  | 3.0          |
 | flim                | github  | flim-1_14-wl |

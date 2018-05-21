@@ -61,9 +61,10 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (3) | Class  | Feature           | Provider |
+| Package (4) | Class  | Feature           | Provider |
 |-------------+--------+-------------------+----------|
 | company-box | github | icons-in-terminal |          |
+| company-coq | github | proof-shell       |          |
 | helm        | github | tramp-archive     |          |
 | omnibox     | github | icons-in-terminal |          |
 
