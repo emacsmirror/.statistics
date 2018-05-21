@@ -63,10 +63,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  455 |        |       |   457 |     6 |       |
-| elpa        |  109 |    109 |       |       |   164 |       |
-| elpa-branch |    8 |      8 |       |       |    18 |       |
+| elpa        |  110 |    110 |       |       |   165 |       |
+| elpa-branch |    8 |      8 |       |       |    19 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4087 |   4087 |       |       |       |  3705 |
+| github      | 4091 |   4091 |       |       |       |  3708 |
 | gitlab      |   48 |     48 |       |       |       |    36 |
 | git         |   50 |     50 |       |       |       |    38 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   55 |     55 |       |       |       |       |
 | shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6833 |   5142 |  1236 |   457 |   188 |  3818 |
+| total       | 6838 |   5147 |  1236 |   457 |   190 |  3821 |
 
 * Emacs
 ** Prefer elpa
@@ -208,7 +208,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (65)               | Class    | Gelpa    | Link                                         |
+| Package (66)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -231,6 +231,7 @@
 | diffview                   | github   | subtree  | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                         |
 | dts-mode                   | github   | subtree  | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
 | easy-kill                  | github   | subtree  | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
+| eglot                      | github   | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                             |
 | eldoc-eval                 | github   | subtree  | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
 | electric-spacing           | github   | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
 | ergoemacs-mode             | github   | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
