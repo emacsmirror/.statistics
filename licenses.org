@@ -66,13 +66,13 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3222 |      63 |
+| GPL-3+        |  3248 |      63 |
 | GPL-2+        |  1166 |      23 |
 | GPL-3         |   148 |       3 |
-| MIT           |   145 |       3 |
-| MIT (x11)     |   135 |       3 |
+| MIT           |   147 |       3 |
+| MIT (x11)     |   136 |       3 |
 | BSD-2-clause  |    75 |       1 |
-| BSD-3-clause  |    46 |       1 |
+| BSD-3-clause  |    47 |       1 |
 | Apache-2.0    |    36 |       1 |
 | unlicense     |    34 |       1 |
 | WTFPL         |    32 |       1 |
@@ -90,18 +90,20 @@
 | CeCILL-B      |     2 |       0 |
 | ISC (and/or)  |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
+| nil           |     1 |       0 |
 | CC0 1.0       |     1 |       0 |
 | LGPL          |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
+| Other         |     1 |       0 |
 | Ruby          |     1 |       0 |
 | UIUC          |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4555 |      89 |
+| total GNU     |  4581 |      88 |
 |---------------+-------+---------|
-| total         |  5146 |     100 |
+| total         |  5178 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
