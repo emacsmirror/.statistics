@@ -66,12 +66,12 @@
 | elpa        |  110 |    110 |       |       |   165 |       |
 | elpa-branch |    8 |      8 |       |       |    19 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4107 |   4107 |       |       |       |  3729 |
-| gitlab      |   55 |     55 |       |       |       |    43 |
-| git         |   58 |     58 |       |       |       |    47 |
+| github      | 4105 |   4105 |       |       |       |  3728 |
+| gitlab      |   64 |     64 |       |       |       |    52 |
+| git         |   59 |     59 |       |       |       |    48 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   45 |     45 |       |       |       |    38 |
+| bitbucket   |   46 |     46 |       |       |       |    39 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  634 |    634 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   55 |     55 |       |       |       |       |
-| shelved     | 1237 |        |  1237 |       |       |       |
+| shelved     | 1238 |        |  1238 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6870 |   5178 |  1237 |   457 |   190 |  3858 |
+| total       | 6880 |   5187 |  1238 |   457 |   190 |  3868 |
 
 * Emacs
 ** Prefer elpa
@@ -327,7 +327,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (81)      | Secondary package                 | Class    |
+| Primary package (82)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -411,6 +411,7 @@
 | lean-mode                 | helm-lean                         | github   |
 | load-theme-buffer-local   | color-theme-buffer-local          | github   |
 | lsp-javascript-typescript | lsp-javascript-flow               | github   |
+| lsp-javascript-typescript | lsp-typescript                    | github   |
 | mac-pseudo-daemon         | osx-pseudo-daemon                 | github   |
 | magit                     | git-commit                        | github   |
 | nameframe                 | nameframe-perspective             | github   |
@@ -427,6 +428,8 @@
 | phpstan                   | flycheck-phpstan                  | github   |
 | pig-mode                  | pig-snippets                      | github   |
 | pollen-mode               | company-pollen                    | github   |
+| prescient                 | company-prescient                 | github   |
+| prescient                 | ivy-prescient                     | github   |
 | processing-mode           | processing-snippets               | github   |
 | prosjekt                  | dirtree-prosjekt                  | github   |
 | prosjekt                  | helm-prosjekt                     | github   |

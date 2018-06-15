@@ -31,7 +31,7 @@
                       (and (not (eq class 'wiki)) repopage)))
               (epkg-sql [:select [name license class repopage]
                          :from packages
-                         :where license :in $v1
+                         :where (isnull license)
                          :and (not (= class 'shelved))
                          :order-by [(asc name)]]
                         (apply #'vector licenses)))))
@@ -66,49 +66,47 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3248 |      63 |
-| GPL-2+        |  1166 |      23 |
-| GPL-3         |   148 |       3 |
-| MIT           |   147 |       3 |
+| GPL-3+        |  3254 |      63 |
+| GPL-2+        |  1167 |      22 |
+| MIT           |   151 |       3 |
+| GPL-3         |   150 |       3 |
 | MIT (x11)     |   136 |       3 |
 | BSD-2-clause  |    75 |       1 |
-| BSD-3-clause  |    47 |       1 |
-| Apache-2.0    |    36 |       1 |
+| BSD-3-clause  |    46 |       1 |
+| Apache-2.0    |    37 |       1 |
 | unlicense     |    34 |       1 |
 | WTFPL         |    32 |       1 |
-| as-is         |    31 |       1 |
-| public-domain |    29 |       1 |
+| as-is         |    30 |       1 |
+| public-domain |    28 |       1 |
 | GPL-1+        |     6 |       0 |
+| WTFPL-2       |     6 |       0 |
 | LGPL-3+       |     5 |       0 |
-| WTFPL-2       |     5 |       0 |
-| ISC (and)     |     4 |       0 |
 | AGPL-3+       |     3 |       0 |
 | Artistic-2.0  |     3 |       0 |
+| ISC (and)     |     3 |       0 |
+| ISC           |     3 |       0 |
 | MS-PL         |     3 |       0 |
-| BEER-WARE     |     2 |       0 |
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
-| ISC (and/or)  |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
-| nil           |     1 |       0 |
+| BEER-WARE     |     1 |       0 |
 | CC0 1.0       |     1 |       0 |
 | LGPL          |     1 |       0 |
 | LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
-| Other         |     1 |       0 |
 | Ruby          |     1 |       0 |
 | UIUC          |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4581 |      88 |
+| total GNU     |  4590 |      88 |
 |---------------+-------+---------|
-| total         |  5178 |     100 |
+| total         |  5187 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
   (emir--insert-mirror-packages-using-licenses
-    "GPL" "GPL-2" "failure" "pending" nil)
+    "GPL" "GPL-2" "failure" "pending" "No-license" nil)
 #+END_SRC
 #+RESULTS:
 
@@ -126,15 +124,16 @@
 | License         | Count | Percent |
 |-----------------+-------+---------|
 | GPL-2+          |   785 |      63 |
-| GPL-3+          |   200 |      16 |
+| GPL-3+          |   201 |      16 |
 | GPL-2           |    64 |       5 |
 | GPL             |    44 |       4 |
-| ((pending))     |    40 |       3 |
+| ((pending))     |    38 |       3 |
 | public-domain   |    35 |       3 |
 | GPL-1+          |    14 |       1 |
-| ((custom))      |     9 |       1 |
+| ((custom))      |     7 |       1 |
 | GPL-3           |     6 |       0 |
 | as-is           |     6 |       0 |
+| nil             |     4 |       0 |
 | BSD-3-clause    |     4 |       0 |
 | MIT (x11)       |     4 |       0 |
 | Apache-2.0      |     3 |       0 |
@@ -154,9 +153,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1120 |      91 |
+| total GNU       |  1121 |      91 |
 |-----------------+-------+---------|
-| total           |  1237 |     100 |
+| total           |  1238 |     100 |
 
 ** Unknown licenses
 #+BEGIN_SRC emacs-lisp
@@ -168,22 +167,26 @@
               [shelved])))
 #+END_SRC
 #+RESULTS:
+| Package (4) | Class   | License |
+|-------------+---------+---------|
+| epo         | shelved |         |
+| rmoo        | shelved |         |
+| tj-mode     | shelved |         |
+| yaham       | shelved |         |
 
 ** Custom licenses
 #+BEGIN_SRC emacs-lisp
   (emir--insert-attic-packages-using-licenses "custom")
 #+END_SRC
 #+RESULTS:
-| Package (9) | License | Link                                       |
+| Package (7) | License | Link                                       |
 |-------------+---------+--------------------------------------------|
-| epo         | custom  |                                            |
 | phutball    | custom  |                                            |
 | procmaillog | custom  |                                            |
 | psgml-jade  | custom  |                                            |
 | speedread   | custom  |                                            |
 | whine       | custom  |                                            |
 | xrefresh    | custom  | https://github.com/justmoon/xrefresh-emacs |
-| yaham       | custom  |                                            |
 | youwill     | custom  |                                            |
 
 ** Upstream contacted
@@ -191,7 +194,7 @@
   (emir--insert-attic-packages-using-licenses "pending")
 #+END_SRC
 #+RESULTS:
-| Package (40)         | License | Link                                              |
+| Package (38)         | License | Link                                              |
 |----------------------+---------+---------------------------------------------------|
 | auto-scratch         | pending | https://github.com/lovekonakona/auto-scratch      |
 | bavard               | pending |                                                   |
@@ -224,13 +227,11 @@
 | rails-new            | pending | https://github.com/cheunghy/rails-new             |
 | refheap              | pending | https://github.com/Raynes/refheap.el              |
 | reflected-buffers    | pending | https://github.com/tkf/reflected-buffers          |
-| rmoo                 | pending | https://github.com/toddsundsted/rmoo              |
 | ruby-dev             | pending | https://github.com/Mon-Ouie/ruby-dev.el           |
 | ruby-guard           | pending | https://github.com/cheunghy/ruby-guard            |
 | shbuf                | pending |                                                   |
 | sourcetalk           | pending | https://github.com/malroc/sourcetalk_emacs        |
 | testkick             | pending | https://github.com/hadashiA/testkick              |
-| tj-mode              | pending | https://github.com/katspaugh/tj-mode              |
 | uzumaki              | pending | https://github.com/geyslan/uzumaki                |
 | window-grid          | pending |                                                   |
 
