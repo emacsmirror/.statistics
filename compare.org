@@ -66,8 +66,8 @@
 | elpa        |  110 |    110 |       |       |   165 |       |
 | elpa-branch |    8 |      8 |       |       |    19 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4106 |   4106 |       |       |       |  3728 |
-| gitlab      |   68 |     68 |       |       |       |    56 |
+| github      | 4100 |   4100 |       |       |       |  3722 |
+| gitlab      |   74 |     74 |       |       |       |    62 |
 | git         |   61 |     61 |       |       |       |    50 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -517,7 +517,7 @@
                         :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (23)          | Class    | Melpa     | Reason                     |
+| Package (22)          | Class    | Melpa     | Reason                     |
 |-----------------------+----------+-----------+----------------------------|
 | auth-source-pass      | builtin  | github    |                            |
 | autotest              | minority | github    | all-in-one repo [[https://github.com/zenspider/elisp/issues/5][#5]]         |
@@ -527,7 +527,6 @@
 | cython-mode           | minority | github    | mostly non-elisp           |
 | debian-changelog-mode | shelved  | git       |                            |
 | diffscuss-mode        | minority | github    | mostly non-elisp           |
-| fold-dwim             | shelved  | github    |                            |
 | fold-dwim-org         | shelved  | github    |                            |
 | forecast              | minority | github    | all-in-one repo [[https://github.com/melpa/melpa/pull/5018][melpa#5018]] |
 | google-c-style        | minority | github    | mostly non-elisp           |
