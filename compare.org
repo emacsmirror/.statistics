@@ -62,12 +62,12 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  455 |        |       |   457 |     6 |       |
-| elpa        |  110 |    110 |       |       |   165 |       |
+| builtin     |  455 |        |       |   457 |     7 |       |
+| elpa        |  112 |    112 |       |       |   167 |       |
 | elpa-branch |    8 |      8 |       |       |    19 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4100 |   4100 |       |       |       |  3722 |
-| gitlab      |   74 |     74 |       |       |       |    62 |
+| github      | 4113 |   4113 |       |       |       |  3736 |
+| gitlab      |   76 |     76 |       |       |       |    64 |
 | git         |   61 |     61 |       |       |       |    50 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -78,10 +78,10 @@
 | file        |   57 |     57 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   55 |     55 |       |       |       |       |
+| orphaned    |   54 |     54 |       |       |       |       |
 | shelved     | 1238 |        |  1238 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6887 |   5194 |  1238 |   457 |   190 |  3874 |
+| total       | 6903 |   5210 |  1238 |   457 |   193 |  3890 |
 
 * Emacs
 ** Prefer elpa
@@ -142,9 +142,10 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (1) | Gelpa   | Reason                            |
+| Package (2) | Gelpa   | Reason                            |
 |-------------+---------+-----------------------------------|
 | ada-ref-man | subtree | no license, no elisp, no response |
+| jsonrpc     | builtin | comes from Emacs 27               |
 
 ** Unreleased
 #+NAME: gelpa-unreleased
@@ -327,7 +328,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (82)      | Secondary package                 | Class    |
+| Primary package (83)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -396,6 +397,7 @@
 | helm                      | helm-core                         | github   |
 | helm-bibtex               | ivy-bibtex                        | github   |
 | historian                 | ivy-historian                     | github   |
+| hydra                     | lv                                | github   |
 | ivy                       | counsel                           | github   |
 | ivy                       | ivy-hydra                         | github   |
 | ivy                       | swiper                            | github   |
