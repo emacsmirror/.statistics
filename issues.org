@@ -29,12 +29,6 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (1) | Package | Shelved |
-|-------------+---------+---------|
-| sesman      | cider   |         |
-| sesman      | sesman  |         |
-
-- https://github.com/vspinu/sesman/issues/1#issuecomment-400466930
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -61,12 +55,21 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (4) | Class  | Feature           | Provider |
-|-------------+--------+-------------------+----------|
-| company-box | github | icons-in-terminal |          |
-| company-coq | github | proof-shell       |          |
-| helm        | github | tramp-archive     |          |
-| omnibox     | github | icons-in-terminal |          |
+| Package (13)              | Class  | Feature           | Provider |
+|---------------------------+--------+-------------------+----------|
+| ac-nrepl                  | github | cider-interaction |          |
+| aggressive-fill-paragraph | github | ess-mode          |          |
+| cider-hydra               | github | cider-interaction |          |
+| cider-spy                 | github | cider-interaction |          |
+| clojure-cheatsheet        | github | cider-interaction |          |
+| company-box               | github | icons-in-terminal |          |
+| company-coq               | github | proof-shell       |          |
+| eglot                     | github | jsonrpc           |          |
+| helm                      | github | tramp-archive     |          |
+| lispy                     | github | cider-interaction |          |
+| movie                     | github | touchgrid         |          |
+| omnibox                   | github | icons-in-terminal |          |
+| typed-clojure-mode        | github | cider-interaction |          |
 
 - company-box, omnibox:
   https://github.com/melpa/melpa/pull/5372#issuecomment-379543774
