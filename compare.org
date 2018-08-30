@@ -63,12 +63,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  455 |        |       |   457 |     7 |       |
-| elpa        |  112 |    112 |       |       |   167 |       |
+| elpa        |  113 |    113 |       |       |   168 |       |
 | elpa-branch |    8 |      8 |       |       |    19 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4115 |   4115 |       |       |       |  3738 |
+| github      | 4157 |   4157 |       |       |       |  3781 |
 | gitlab      |   78 |     78 |       |       |       |    66 |
-| git         |   63 |     63 |       |       |       |    52 |
+| git         |   64 |     64 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   54 |     54 |       |       |       |       |
-| shelved     | 1238 |        |  1238 |       |       |       |
+| shelved     | 1237 |        |  1237 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6909 |   5216 |  1238 |   457 |   193 |  3896 |
+| total       | 6952 |   5260 |  1237 |   457 |   194 |  3940 |
 
 * Emacs
 ** Prefer elpa
@@ -328,7 +328,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (83)      | Secondary package                 | Class    |
+| Primary package (84)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -348,6 +348,7 @@
 | clojure-mode              | clojure-mode-extra-font-locking   | github   |
 | codesearch                | projectile-codesearch             | github   |
 | copyit                    | copyit-pandoc                     | github   |
+| coq                       | proof-general                     | github   |
 | crystal-mode              | flycheck-crystal                  | github   |
 | ctl-mode                  | gs-mode                           | github   |
 | dash                      | dash-functional                   | github   |

@@ -29,6 +29,28 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (8)   | Package       | Shelved |
+|---------------+---------------+---------|
+| ox-jekyll     | org-octopress |         |
+| ox-jekyll     | ox-jekyll     |         |
+| poly-R        | poly-R        |         |
+| poly-R        | polymode      |         |
+| poly-erb      | poly-erb      |         |
+| poly-erb      | polymode      |         |
+| poly-markdown | poly-markdown |         |
+| poly-markdown | polymode      |         |
+| poly-noweb    | poly-noweb    |         |
+| poly-noweb    | polymode      |         |
+| poly-org      | poly-org      |         |
+| poly-org      | polymode      |         |
+| poly-slim     | poly-slim     |         |
+| poly-slim     | polymode      |         |
+| srv           | jabber        |         |
+| srv           | srv           |         |
+
+- ox-jekyll: [[https://github.com/melpa/melpa/pull/5688][melpa/5688]]
+- polymode: bundled packages will be removed [[https://github.com/melpa/melpa/pull/5698][melpa/5698]]
+- srv: [[https://github.com/melpa/melpa/pull/5623][melpa/5623]]
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied

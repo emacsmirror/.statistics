@@ -66,13 +66,13 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3278 |      63 |
-| GPL-2+        |  1169 |      22 |
-| GPL-3         |   152 |       3 |
+| GPL-3+        |  3314 |      63 |
+| GPL-2+        |  1171 |      22 |
+| GPL-3         |   154 |       3 |
 | MIT           |   152 |       3 |
-| MIT (x11)     |   136 |       3 |
+| MIT (x11)     |   138 |       3 |
 | BSD-2-clause  |    75 |       1 |
-| BSD-3-clause  |    46 |       1 |
+| BSD-3-clause  |    47 |       1 |
 | Apache-2.0    |    37 |       1 |
 | unlicense     |    34 |       1 |
 | WTFPL         |    32 |       1 |
@@ -89,19 +89,19 @@
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
+| LGPL-3        |     2 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC0 1.0       |     1 |       0 |
 | LGPL          |     1 |       0 |
-| LGPL-3        |     1 |       0 |
 | LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | Ruby          |     1 |       0 |
 | UIUC          |     1 |       0 |
 | zlib License  |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4618 |      89 |
+| total GNU     |  4659 |      89 |
 |---------------+-------+---------|
-| total         |  5216 |     100 |
+| total         |  5260 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -109,6 +109,8 @@
     "GPL" "GPL-2" "failure" "pending" "No-license" nil)
 #+END_SRC
 #+RESULTS:
+
+- https://github.com/zhanxw/wdl-mode/pull/2
 
 * Emacsattic
 ** Overview
@@ -123,19 +125,19 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-2+          |   785 |      63 |
+| GPL-2+          |   784 |      63 |
 | GPL-3+          |   201 |      16 |
 | GPL-2           |    64 |       5 |
 | GPL             |    44 |       4 |
 | ((pending))     |    38 |       3 |
 | public-domain   |    35 |       3 |
 | GPL-1+          |    14 |       1 |
+| as-is           |     7 |       1 |
 | ((custom))      |     7 |       1 |
 | GPL-3           |     6 |       0 |
-| as-is           |     6 |       0 |
-| nil             |     4 |       0 |
 | BSD-3-clause    |     4 |       0 |
 | MIT (x11)       |     4 |       0 |
+| nil             |     3 |       0 |
 | Apache-2.0      |     3 |       0 |
 | BSD-2-clause    |     3 |       0 |
 | MIT             |     3 |       0 |
@@ -153,9 +155,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1121 |      91 |
+| total GNU       |  1120 |      91 |
 |-----------------+-------+---------|
-| total           |  1238 |     100 |
+| total           |  1237 |     100 |
 
 ** Unknown licenses
 #+BEGIN_SRC emacs-lisp
@@ -167,12 +169,11 @@
               [shelved])))
 #+END_SRC
 #+RESULTS:
-| Package (4) | Class   | License |
+| Package (3) | Class   | License |
 |-------------+---------+---------|
 | epo         | shelved |         |
 | rmoo        | shelved |         |
 | tj-mode     | shelved |         |
-| yaham       | shelved |         |
 
 ** Custom licenses
 #+BEGIN_SRC emacs-lisp
