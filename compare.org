@@ -66,7 +66,7 @@
 | elpa        |  113 |    113 |       |       |   168 |       |
 | elpa-branch |    8 |      8 |       |       |    19 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4157 |   4157 |       |       |       |  3781 |
+| github      | 4167 |   4167 |       |       |       |  3793 |
 | gitlab      |   78 |     78 |       |       |       |    66 |
 | git         |   64 |     64 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -75,13 +75,13 @@
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  634 |    634 |       |       |       |       |
-| file        |   57 |     57 |       |       |       |       |
+| file        |   58 |     58 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   54 |     54 |       |       |       |       |
 | shelved     | 1237 |        |  1237 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6952 |   5260 |  1237 |   457 |   194 |  3940 |
+| total       | 6963 |   5271 |  1237 |   457 |   194 |  3952 |
 
 * Emacs
 ** Prefer elpa
@@ -142,10 +142,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (2) | Gelpa   | Reason                            |
+| Package (1) | Gelpa   | Reason                            |
 |-------------+---------+-----------------------------------|
 | ada-ref-man | subtree | no license, no elisp, no response |
-| jsonrpc     | builtin | comes from Emacs 27               |
 
 ** Unreleased
 #+NAME: gelpa-unreleased
@@ -209,7 +208,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (66)               | Class    | Gelpa    | Link                                         |
+| Package (67)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -246,6 +245,7 @@
 | ivy                        | github   | subtree  | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
 | js2-mode                   | github   | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
 | json-mode                  | github   | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
+| jsonrpc                    | file     | builtin  |                                              |
 | load-relative              | github   | subtree  | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
 | loc-changes                | github   | subtree  | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
 | loccur                     | github   | subtree  | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
