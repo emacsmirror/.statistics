@@ -64,13 +64,12 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (591)                | Link                                    |
+| Package (590)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
 | abel                         | [[https://github.com/abo-abo/abel][abo-abo/abel]]                            |
 | ac-dscanner                  | [[https://github.com/jmaschme/ac-dscanner][jmaschme/ac-dscanner]]                    |
-| ac-nrepl                     | [[https://github.com/clojure-emacs/ac-nrepl][clojure-emacs/ac-nrepl]]                  |
 | ac-r                         | [[https://github.com/mattfidler/ac-R][mattfidler/ac-R]]                         |
 | accelerate                   | [[https://github.com/yagunov/accelerate.el][yagunov/accelerate.el]]                   |
 | ack                          | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                           |
@@ -149,7 +148,6 @@ please first make sure they meet the minimal requirements.
 | compile-bookmarks            | [[https://github.com/nschum/compile-bookmarks.el][nschum/compile-bookmarks.el]]             |
 | conspire                     | [[https://github.com/technomancy/conspire][technomancy/conspire]]                    |
 | constellations               | [[https://github.com/davep/constellations.el][davep/constellations.el]]                 |
-| coq                          | [[https://github.com/ProofGeneral/PG][ProofGeneral/PG]]                         |
 | cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                    |
 | crisp-mode                   | [[https://github.com/krisajenkins/crisp-mode][krisajenkins/crisp-mode]]                 |
 | csmart-mode                  | [[https://github.com/kwitek/csmart][kwitek/csmart]]                           |
@@ -606,6 +604,7 @@ please first make sure they meet the minimal requirements.
 | todostack                    | [[https://github.com/EvansWinner/todostack.el][EvansWinner/todostack.el]]                |
 | toolbox                      | [[https://github.com/kensanata/toolbox][kensanata/toolbox]]                       |
 | tora-mode                    | [[https://github.com/syohex/emacs-tora-mode][syohex/emacs-tora-mode]]                  |
+| touchgrid                    | [[https://github.com/larsmagne/touchgrid.el][larsmagne/touchgrid.el]]                  |
 | trac-wiki                    | [[https://github.com/tiborsimko/trac-wiki-el][tiborsimko/trac-wiki-el]]                 |
 | transcript                   | [[https://github.com/nasfarley88/transcript-el][nasfarley88/transcript-el]]               |
 | trelloel                     | [[https://github.com/jdodds/trelloel][jdodds/trelloel]]                         |

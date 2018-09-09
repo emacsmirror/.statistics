@@ -66,7 +66,7 @@
 | elpa        |  113 |    113 |       |       |   168 |       |
 | elpa-branch |    8 |      8 |       |       |    19 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4162 |   4162 |       |       |       |  3793 |
+| github      | 4161 |   4161 |       |       |       |  3793 |
 | gitlab      |   78 |     78 |       |       |       |    66 |
 | git         |   64 |     64 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   54 |     54 |       |       |       |       |
-| shelved     | 1241 |        |  1241 |       |       |       |
+| shelved     | 1242 |        |  1242 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6962 |   5266 |  1241 |   457 |   194 |  3952 |
+| total       | 6962 |   5265 |  1242 |   457 |   194 |  3952 |
 
 * Emacs
 ** Prefer elpa
@@ -328,7 +328,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (85)      | Secondary package                 | Class    |
+| Primary package (84)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -348,7 +348,6 @@
 | clojure-mode              | clojure-mode-extra-font-locking   | github   |
 | codesearch                | projectile-codesearch             | github   |
 | copyit                    | copyit-pandoc                     | github   |
-| coq                       | proof-general                     | github   |
 | crystal-mode              | flycheck-crystal                  | github   |
 | ctl-mode                  | gs-mode                           | github   |
 | dash                      | dash-functional                   | github   |
@@ -500,34 +499,35 @@
 ** Diverging types
 #+NAME: melpa-diverging-types
 #+BEGIN_SRC emacs-lisp
-    (epkg-with-org-header ("Package" "Class" "Melpa" "Reason")
-      (-keep (-lambda ((name class fetcher repo))
-               (and (not (or (and (eq class 'subtree)  (eq fetcher 'github))
-                             (and (eq class 'subtree)  (eq fetcher 'git))
-                             (and (eq class 'orphaned) (eq fetcher 'github))
-                             (and (eq class 'file)     (eq fetcher 'github)
-                                  (string-prefix-p "emacsmirror/" repo))
-                             (and (eq class 'shelved)  (eq fetcher 'github)
-                                  (string-prefix-p "emacsattic/" repo))))
-                    (list name class fetcher
-                          (cadr (assoc name emir--diverging-reason)))))
-             (epkg-sql [:select :distinct [packages:name
-                                           packages:class
-                                           melpa-recipes:class
-                                           melpa-recipes:repo]
-                        :from [packages melpa-recipes]
-                        :where    (= melpa-recipes:epkg-package packages:name)
-                        :and      (= melpa-recipes:epkg-package melpa-recipes:name)
-                        :and :not (= melpa-recipes:class        packages:class)
-                        :order-by [(asc packages:name)]])))
+  (epkg-with-org-header ("Package" "Class" "Melpa" "Reason")
+    (-keep
+     (pcase-lambda (`(,name ,class ,fetcher ,repo))
+       (and (not (pcase (list class fetcher)
+                   (`(subtree  github) t)
+                   (`(subtree  git)    t)
+                   (`(orphaned github) t)
+                   (`(file     github) (string-prefix-p "emacsmirror/" repo))
+                   (`(shelved  github) (string-prefix-p "emacsattic/" repo))))
+            (list name class fetcher
+                  (cadr (assoc name emir--diverging-reason)))))
+     (epkg-sql [:select :distinct [packages:name
+                                   packages:class
+                                   melpa-recipes:class
+                                   melpa-recipes:repo]
+                :from [packages melpa-recipes]
+                :where    (= melpa-recipes:epkg-package packages:name)
+                :and      (= melpa-recipes:epkg-package melpa-recipes:name)
+                :and :not (= melpa-recipes:class        packages:class)
+                :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (23)          | Class    | Melpa     | Reason               |
+| Package (24)          | Class    | Melpa     | Reason               |
 |-----------------------+----------+-----------+----------------------|
 | auth-source-pass      | builtin  | github    | part of Emacs 26.1   |
 | autotest              | minority | github    | all-in-one repo      |
 | bibliothek            | minority | github    | all-in-one repo      |
 | cfengine-code-style   | minority | github    | mostly non-elisp     |
+| clojure-cheatsheet    | shelved  | github    |                      |
 | cmake-mode            | minority | github    | mostly non-elisp     |
 | cython-mode           | minority | github    | mostly non-elisp     |
 | debian-changelog-mode | shelved  | git       |                      |
@@ -548,3 +548,4 @@
 | toggle                | minority | github    | all-in-one repo      |
 | wisp-mode             | minority | bitbucket | mostly non-elisp     |
 
+- less-css-mode: https://github.com/purcell/less-css-mode/issues/26

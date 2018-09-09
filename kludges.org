@@ -41,9 +41,8 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (7)     | Class    | Feature          | Reason                 |
+| Package (6)     | Class    | Feature          | Reason                 |
 |-----------------+----------+------------------+------------------------|
-| coq             | github   | maths-menu       | pending [[https://github.com/ProofGeneral/PG/issues/197][#197]]           |
 | emacspeak       | github   | amixer           | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github   | analog           | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github   | auth-source-pass | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
@@ -122,6 +121,7 @@
 | lacarte                         | wiki        | subr-21                  | backward compatibility                              |
 | lilypond                        | git         | ilisp                    | only required by a single undocumented command      |
 | lispxmp                         | github      | newxmp                   | pending: newxmp has not been released yet (email)   |
+| lispy                           | github      | cider-interaction        | backward compatibility                              |
 | lispy                           | github      | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                           |
 | load-theme-buffer-local         | github      | color-theme              | backward compatibility                              |
 | matlab-mode                     | git         | semantic-dep             | backward compatibility                              |
@@ -239,7 +239,7 @@
                        'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (22)          | Class    | Library                         | Reason                     |
+| Package (23)          | Class    | Library                         | Reason                     |
 |-----------------------+----------+---------------------------------+----------------------------|
 | auctex                | git      | tex.el                          | pkg/lib name mismatch      |
 | chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
@@ -258,6 +258,7 @@
 | majapahit-theme       | gitlab   | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 | ne2wm                 | github   | ne2wm-setup.el                  | no/mismatched main library |
 | omtose-phellack-theme | github   | variants/omtose-darker-theme.el | two-variant theme          |
+| proof-general         | github   | pg-init.el                      | pending [[https://github.com/ProofGeneral/PG/issues/198][#198]]               |
 | punpun-theme          | github   | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | spacemacs-theme       | github   | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | tao-theme             | github   | tao-yang-theme.el               | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |
@@ -314,12 +315,11 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (13)        | Class   | Branch       |
+| Package (12)        | Class   | Branch       |
 |---------------------+---------+--------------|
 | apel                | github  | apel-wl      |
 | borg-queen          | github  | initial-dev  |
 | caml                | subtree | trunk        |
-| coq                 | github  | async        |
 | distinguished-theme | github  | develop      |
 | ensime              | github  | 3.0          |
 | flim                | github  | flim-1_14-wl |
