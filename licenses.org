@@ -31,7 +31,7 @@
                       (and (not (eq class 'wiki)) repopage)))
               (epkg-sql [:select [name license class repopage]
                          :from packages
-                         :where (isnull license)
+                         :where license :in $v1
                          :and (not (= class 'shelved))
                          :order-by [(asc name)]]
                         (apply #'vector licenses)))))
@@ -66,11 +66,11 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3323 |      63 |
-| GPL-2+        |  1172 |      22 |
-| GPL-3         |   154 |       3 |
-| MIT           |   152 |       3 |
-| MIT (x11)     |   139 |       3 |
+| GPL-3+        |  3322 |      63 |
+| GPL-2+        |  1170 |      22 |
+| MIT           |   154 |       3 |
+| GPL-3         |   153 |       3 |
+| MIT (x11)     |   136 |       3 |
 | BSD-2-clause  |    75 |       1 |
 | BSD-3-clause  |    47 |       1 |
 | Apache-2.0    |    37 |       1 |
@@ -85,23 +85,22 @@
 | Artistic-2.0  |     3 |       0 |
 | ISC (and)     |     3 |       0 |
 | ISC           |     3 |       0 |
+| LGPL-3        |     3 |       0 |
 | MS-PL         |     3 |       0 |
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
-| LGPL-3        |     2 |       0 |
 | BEER-WARE     |     1 |       0 |
-| CC0 1.0       |     1 |       0 |
+| CC0-1.0       |     1 |       0 |
 | LGPL          |     1 |       0 |
-| LGPL-3.0      |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | Ruby          |     1 |       0 |
 | UIUC          |     1 |       0 |
-| zlib License  |     1 |       0 |
+| Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4669 |      89 |
+| total GNU     |  4665 |      89 |
 |---------------+-------+---------|
-| total         |  5271 |     100 |
+| total         |  5266 |     100 |
 
 ** Issues
 #+BEGIN_SRC emacs-lisp
@@ -125,19 +124,19 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-2+          |   784 |      63 |
+| GPL-2+          |   786 |      63 |
 | GPL-3+          |   201 |      16 |
 | GPL-2           |    64 |       5 |
 | GPL             |    44 |       4 |
 | ((pending))     |    38 |       3 |
 | public-domain   |    35 |       3 |
 | GPL-1+          |    14 |       1 |
-| as-is           |     7 |       1 |
+| GPL-3           |     7 |       1 |
 | ((custom))      |     7 |       1 |
-| GPL-3           |     6 |       0 |
+| as-is           |     6 |       0 |
+| MIT (x11)       |     5 |       0 |
+| nil             |     4 |       0 |
 | BSD-3-clause    |     4 |       0 |
-| MIT (x11)       |     4 |       0 |
-| nil             |     3 |       0 |
 | Apache-2.0      |     3 |       0 |
 | BSD-2-clause    |     3 |       0 |
 | MIT             |     3 |       0 |
@@ -155,9 +154,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1120 |      91 |
+| total GNU       |  1123 |      90 |
 |-----------------+-------+---------|
-| total           |  1237 |     100 |
+| total           |  1241 |     100 |
 
 ** Unknown licenses
 #+BEGIN_SRC emacs-lisp
@@ -169,11 +168,12 @@
               [shelved])))
 #+END_SRC
 #+RESULTS:
-| Package (3) | Class   | License |
+| Package (4) | Class   | License |
 |-------------+---------+---------|
 | epo         | shelved |         |
 | rmoo        | shelved |         |
 | tj-mode     | shelved |         |
+| yaham       | shelved |         |
 
 ** Custom licenses
 #+BEGIN_SRC emacs-lisp
