@@ -20,14 +20,13 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS:
-| Dependee (26)   | Author                        | Depender         | Type | Author                                            |
+| Dependee (25)   | Author                        | Depender         | Type | Author                                            |
 |-----------------+-------------------------------+------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key          | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm               | hard |                                                   |
 | dropdown-list   |                               | thesaurus        | soft | Dino Chiesa, Alex Henning                         |
 | el-expectations | rubikitch                     | bts              | hard | Hiroaki Otsu                                      |
 | el-expectations | rubikitch                     | caskxy           | soft | Hiroaki Otsu                                      |
-| etags-select    | Scott Frazer                  | evil-collection  | soft | James Nguyen                                      |
 | extract-text    | Joe Bloggs                    | gnus-summary-ext | soft | Joe Bloggs                                        |
 | filesets+       | Drew Adams                    | helm-filesets    | soft | Graham Clark                                      |
 | font-lock+      | Drew Adams                    | highlight        | soft | Drew Adams                                        |
