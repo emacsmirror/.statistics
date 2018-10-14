@@ -125,16 +125,16 @@
 #+RESULTS:
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-2+          |   783 |      63 |
-| GPL-3+          |   203 |      16 |
+| GPL-2+          |   783 |      64 |
+| GPL-3+          |   203 |      17 |
 | GPL-2           |    64 |       5 |
 | GPL             |    44 |       4 |
-| ((pending))     |    38 |       3 |
 | public-domain   |    35 |       3 |
+| ((pending))     |    18 |       1 |
 | GPL-1+          |    14 |       1 |
 | GPL-3           |     7 |       1 |
-| ((custom))      |     7 |       1 |
 | as-is           |     6 |       0 |
+| ((custom))      |     6 |       0 |
 | MIT (x11)       |     5 |       0 |
 | nil             |     4 |       0 |
 | BSD-3-clause    |     4 |       0 |
@@ -155,9 +155,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1122 |      90 |
+| total GNU       |  1122 |      92 |
 |-----------------+-------+---------|
-| total           |  1240 |     100 |
+| total           |  1219 |     100 |
 
 ** Unknown licenses
 #+BEGIN_SRC emacs-lisp
@@ -181,61 +181,40 @@
   (emir--insert-attic-packages-using-licenses "custom")
 #+END_SRC
 #+RESULTS:
-| Package (7) | License | Link                                       |
-|-------------+---------+--------------------------------------------|
-| phutball    | custom  |                                            |
-| procmaillog | custom  |                                            |
-| psgml-jade  | custom  |                                            |
-| speedread   | custom  |                                            |
-| whine       | custom  |                                            |
-| xrefresh    | custom  | https://github.com/justmoon/xrefresh-emacs |
-| youwill     | custom  |                                            |
+| Package (6) | License | Link |
+|-------------+---------+------|
+| phutball    | custom  |      |
+| procmaillog | custom  |      |
+| psgml-jade  | custom  |      |
+| speedread   | custom  |      |
+| whine       | custom  |      |
+| youwill     | custom  |      |
 
 ** Upstream contacted
 #+BEGIN_SRC emacs-lisp
   (emir--insert-attic-packages-using-licenses "pending")
 #+END_SRC
 #+RESULTS:
-| Package (38)         | License | Link                                              |
-|----------------------+---------+---------------------------------------------------|
-| auto-scratch         | pending | https://github.com/lovekonakona/auto-scratch      |
-| bavard               | pending |                                                   |
-| crab                 | pending | https://github.com/puffnfresh/crab-emacs          |
-| drela-mode           | pending | https://github.com/cloudchamber/Drela-mode        |
-| ess-R-object-popup   | pending | https://github.com/myuhe/ess-R-object-popup.el    |
-| find-file-suggest    | pending | https://github.com/cjauvin/find-file-suggest      |
-| flymake-pylint       | pending | https://github.com/btoconnor/flymake-pylint       |
-| gershwin-mode        | pending | https://github.com/gershwin/emacs-gershwin-mode   |
-| gitch                | pending | https://github.com/rjprins/gitch                  |
-| globalizer           | pending |                                                   |
-| goto-pattern         | pending | https://github.com/cjauvin/goto-pattern           |
-| hippie-expand-distel | pending | https://github.com/rost/hippie-expand-distel      |
-| ietfdoc              | pending |                                                   |
-| imgix                | pending | https://github.com/imgix/imgix-emacs              |
-| inf-js               | pending | https://github.com/bkyle/inf-js                   |
-| inf-php              | pending | https://github.com/taksatou/inf-php               |
-| inform7-mode         | pending | https://github.com/fred-o/inform7-mode            |
-| jaunte               | pending | https://github.com/kawaguchi/jaunte.el            |
-| maven-mode           | pending | https://github.com/bkyle/maven-mode               |
-| memento              | pending | https://github.com/ehartc/memento                 |
-| mousymacro           | pending |                                                   |
-| n3-mode              | pending | https://github.com/doriantaylor/n3-mode-for-emacs |
-| namazu               | pending |                                                   |
-| objc-c-mode          | pending |                                                   |
-| org-jekyll           | pending | https://github.com/juanre/org-jekyll              |
-| partially            | pending | https://github.com/mbriggs/partially.el           |
-| pyim-greatdict       | pending | https://github.com/tumashu/pyim-greatdict         |
-| railgun              | pending | https://github.com/mbriggs/railgun.el             |
-| rails-new            | pending | https://github.com/cheunghy/rails-new             |
-| refheap              | pending | https://github.com/Raynes/refheap.el              |
-| reflected-buffers    | pending | https://github.com/tkf/reflected-buffers          |
-| ruby-dev             | pending | https://github.com/Mon-Ouie/ruby-dev.el           |
-| ruby-guard           | pending | https://github.com/cheunghy/ruby-guard            |
-| shbuf                | pending |                                                   |
-| sourcetalk           | pending | https://github.com/malroc/sourcetalk_emacs        |
-| testkick             | pending | https://github.com/hadashiA/testkick              |
-| uzumaki              | pending | https://github.com/geyslan/uzumaki                |
-| window-grid          | pending |                                                   |
+| Package (18)       | License | Link                                              |
+|--------------------+---------+---------------------------------------------------|
+| bavard             | pending |                                                   |
+| ess-R-object-popup | pending | https://github.com/myuhe/ess-R-object-popup.el    |
+| globalizer         | pending |                                                   |
+| ietfdoc            | pending |                                                   |
+| inf-php            | pending | https://github.com/taksatou/inf-php               |
+| jaunte             | pending | https://github.com/kawaguchi/jaunte.el            |
+| mousymacro         | pending |                                                   |
+| n3-mode            | pending | https://github.com/doriantaylor/n3-mode-for-emacs |
+| namazu             | pending |                                                   |
+| objc-c-mode        | pending |                                                   |
+| pyim-greatdict     | pending | https://github.com/tumashu/pyim-greatdict         |
+| railgun            | pending | https://github.com/mbriggs/railgun.el             |
+| refheap            | pending | https://github.com/Raynes/refheap.el              |
+| ruby-dev           | pending | https://github.com/Mon-Ouie/ruby-dev.el           |
+| ruby-guard         | pending | https://github.com/cheunghy/ruby-guard            |
+| shbuf              | pending |                                                   |
+| uzumaki            | pending | https://github.com/geyslan/uzumaki                |
+| window-grid        | pending |                                                   |
 
 ** Problematic licenses
 #+BEGIN_SRC emacs-lisp
