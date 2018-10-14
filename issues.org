@@ -57,10 +57,9 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (7)        | Class  | Feature           | Provider |
+| Package (6)        | Class  | Feature           | Provider |
 |--------------------+--------+-------------------+----------|
 | cider-hydra        | github | cider-interaction |          |
-| cider-spy          | github | cider-interaction |          |
 | company-box        | github | icons-in-terminal |          |
 | helm               | github | tramp-archive     |          |
 | omnibox            | github | icons-in-terminal |          |
