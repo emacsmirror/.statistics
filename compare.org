@@ -68,7 +68,7 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 4184 |   4184 |       |       |       |  3815 |
 | gitlab      |   83 |     83 |       |       |       |    71 |
-| git         |   63 |     63 |       |       |       |    52 |
+| git         |   65 |     65 |       |       |       |    52 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   54 |     54 |       |       |       |       |
-| shelved     | 1242 |        |  1242 |       |       |       |
+| shelved     | 1240 |        |  1240 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6990 |   5293 |  1242 |   457 |   197 |  3978 |
+| total       | 6990 |   5295 |  1240 |   457 |   197 |  3978 |
 
 * Emacs
 ** Prefer elpa
@@ -312,6 +312,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
+| Package (1)           | Melpa | Reason                    |
+|-----------------------+-------+---------------------------|
+| debian-changelog-mode | git   | part of dpkg-dev-el #5758 |
 
 ** Shared repositories
 #+NAME: secondary-packages
@@ -493,9 +496,6 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (1)           | Mirror | Melpa |
-|-----------------------+--------+-------|
-| debian-changelog-mode |        |       |
 
 ** Diverging types
 #+NAME: melpa-diverging-types
@@ -522,31 +522,30 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (24)          | Class    | Melpa     | Reason               |
-|-----------------------+----------+-----------+----------------------|
-| auth-source-pass      | builtin  | github    | part of Emacs 26.1   |
-| autotest              | minority | github    | all-in-one repo      |
-| bibliothek            | minority | github    | all-in-one repo      |
-| cfengine-code-style   | minority | github    | mostly non-elisp     |
-| clojure-cheatsheet    | shelved  | github    |                      |
-| cmake-mode            | minority | github    | mostly non-elisp     |
-| cython-mode           | minority | github    | mostly non-elisp     |
-| debian-changelog-mode | shelved  | git       |                      |
-| diffscuss-mode        | minority | github    | mostly non-elisp     |
-| fold-dwim-org         | shelved  | github    |                      |
-| forecast              | minority | github    | all-in-one repo      |
-| google-c-style        | minority | github    | mostly non-elisp     |
-| kfg                   | shelved  | github    |                      |
-| less-css-mode         | builtin  | github    | Emacs 26.1 has newer |
-| nemerle               | minority | github    | mostly non-elisp     |
-| ninja-mode            | minority | github    | mostly non-elisp     |
-| org-variable-pitch    | minority | github    | all-in-one repo      |
-| paper-theme           | minority | github    | all-in-one repo      |
-| po-mode               | minority | git       | mostly non-elisp     |
-| pylint                | minority | github    | mostly non-elisp     |
-| smart-compile         | minority | github    | all-in-one repo      |
-| thrift                | minority | github    | mostly non-elisp     |
-| toggle                | minority | github    | all-in-one repo      |
-| wisp-mode             | minority | bitbucket | mostly non-elisp     |
+| Package (23)        | Class    | Melpa     | Reason               |
+|---------------------+----------+-----------+----------------------|
+| auth-source-pass    | builtin  | github    | part of Emacs 26.1   |
+| autotest            | minority | github    | all-in-one repo      |
+| bibliothek          | minority | github    | all-in-one repo      |
+| cfengine-code-style | minority | github    | mostly non-elisp     |
+| clojure-cheatsheet  | shelved  | github    |                      |
+| cmake-mode          | minority | github    | mostly non-elisp     |
+| cython-mode         | minority | github    | mostly non-elisp     |
+| diffscuss-mode      | minority | github    | mostly non-elisp     |
+| fold-dwim-org       | shelved  | github    |                      |
+| forecast            | minority | github    | all-in-one repo      |
+| google-c-style      | minority | github    | mostly non-elisp     |
+| kfg                 | shelved  | github    |                      |
+| less-css-mode       | builtin  | github    | Emacs 26.1 has newer |
+| nemerle             | minority | github    | mostly non-elisp     |
+| ninja-mode          | minority | github    | mostly non-elisp     |
+| org-variable-pitch  | minority | github    | all-in-one repo      |
+| paper-theme         | minority | github    | all-in-one repo      |
+| po-mode             | minority | git       | mostly non-elisp     |
+| pylint              | minority | github    | mostly non-elisp     |
+| smart-compile       | minority | github    | all-in-one repo      |
+| thrift              | minority | github    | mostly non-elisp     |
+| toggle              | minority | github    | all-in-one repo      |
+| wisp-mode           | minority | bitbucket | mostly non-elisp     |
 
 - less-css-mode: https://github.com/purcell/less-css-mode/issues/26
