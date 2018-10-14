@@ -69,7 +69,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (83)                    | Class       | Feature                  | Reason                                              |
+| Package (82)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -114,7 +114,6 @@
 | hyperbole                       | git         | x-mouse                  | unreleased, author says will be released eventually |
 | icicles                         | wiki        | anything                 | anything                                            |
 | icicles                         | wiki        | color-theme              | backward compatibility                              |
-| jabber                          | git         | password                 | should be password-cache, I believe                 |
 | jabber                          | git         | un-define                | XEmacs compatibility                                |
 | jda                             | github      | anything                 | anything                                            |
 | jdee                            | github      | working                  | stand-alone cedet compatibility                     |
@@ -175,7 +174,6 @@
 | stickies                        | github      | anything                 | anything                                            |
 | string-utils                    | github      | obarray-fns              | shelved soft                                        |
 | tangotango-theme                | github      | color-theme              | backward compatibility                              |
-| tc                              | github      | bitmap                   | pending [[https://github.com/kozo2/tc/issues/5][#5]]                                          |
 | tss                             | github      | anything                 | anything                                            |
 | twittering-mode                 | github      | alpaca                   | only required if epa isn't available                |
 | twittering-mode                 | github      | revive                   | false-positive                                      |
