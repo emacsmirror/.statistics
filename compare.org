@@ -63,12 +63,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  455 |        |       |   457 |     7 |       |
-| elpa        |  113 |    113 |       |       |   169 |       |
-| elpa-branch |    8 |      8 |       |       |    19 |       |
+| elpa        |  114 |    114 |       |       |   170 |       |
+| elpa-branch |    8 |      8 |       |       |    20 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4177 |   4177 |       |       |       |  3809 |
-| gitlab      |   79 |     79 |       |       |       |    67 |
-| git         |   64 |     64 |       |       |       |    53 |
+| github      | 4184 |   4184 |       |       |       |  3815 |
+| gitlab      |   83 |     83 |       |       |       |    71 |
+| git         |   63 |     63 |       |       |       |    52 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
@@ -81,7 +81,7 @@
 | orphaned    |   54 |     54 |       |       |       |       |
 | shelved     | 1242 |        |  1242 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6979 |   5282 |  1242 |   457 |   195 |  3969 |
+| total       | 6990 |   5293 |  1242 |   457 |   197 |  3978 |
 
 * Emacs
 ** Prefer elpa
@@ -122,8 +122,7 @@
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa")
     (-filter (pcase-lambda (`(,name ,class))
-               (not (or (assoc name emir-pending-packages)
-                        (equal name "nadvice")))) ; forward compatibility
+               (not (assoc name emir-pending-packages)))
              (epkg-sql [:select [name class]
                         :from gelpa-recipes
                         :where (isnull epkg-package)
@@ -144,15 +143,17 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (1) | Gelpa   | Reason                            |
+| Package (2) | Gelpa   | Reason                            |
 |-------------+---------+-----------------------------------|
 | ada-ref-man | subtree | no license, no elisp, no response |
+| nadvice     | subtree | backport                          |
 
 ** Unreleased
 #+NAME: gelpa-unreleased
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa")
-    (epkg-sql [:select [name class] :from gelpa-recipes
+    (epkg-sql [:select [name class]
+               :from gelpa-recipes
                :where class :in $v1
                :and (isnull released)]
               [subtree external])))
@@ -210,7 +211,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (67)               | Class    | Gelpa    | Link                                         |
+| Package (68)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -238,6 +239,7 @@
 | electric-spacing           | github   | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
 | ergoemacs-mode             | github   | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
 | exwm                       | github   | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
+| fountain-mode              | github   | external | [[https://github.com/rnkn/fountain-mode][rnkn/fountain-mode]]                           |
 | ggtags                     | github   | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
 | gnorb                      | github   | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
 | highlight-escape-sequences | github   | subtree  | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
@@ -310,10 +312,6 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
-| Package (2)      | Melpa  | Reason                                       |
-|------------------+--------+----------------------------------------------|
-| company-solidity | github | merged into solidity-mode; TODO update Melpa |
-| emms-player-mpv  | github | merged into emms, to be removed from melpa   |
 
 ** Shared repositories
 #+NAME: secondary-packages
@@ -330,7 +328,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (84)      | Secondary package                 | Class    |
+| Primary package (85)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -448,6 +446,7 @@
 | rtags                     | ivy-rtags                         | github   |
 | sift                      | projectile-sift                   | github   |
 | smart-mode-line           | smart-mode-line-powerline-theme   | github   |
+| solidity-mode             | company-solidity                  | github   |
 | sourcekit                 | company-sourcekit                 | github   |
 | speechd                   | speechd-el                        | github   |
 | springboard               | ido-springboard                   | github   |
