@@ -69,7 +69,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (82)                    | Class       | Feature                  | Reason                                              |
+| Package (84)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -108,6 +108,7 @@
 | fstar-mode                      | github      | replace                  | replace.el doesn't provide feature in Emacs < 26    |
 | gnuplot                         | github      | toolbar                  | XEmacs compatibility                                |
 | guix                            | github      | guix-emacs               | distributed with GuixSD itself                      |
+| helm                            | github      | tramp-archive            | forward compatibility (Emacs 27.1)                  |
 | help+                           | wiki        | info+20                  | backward compatibility                              |
 | hyperbole                       | git         | efs                      | XEmacs compatibility                                |
 | hyperbole                       | git         | id-menubars              | unreleased, author says will be released eventually |
@@ -162,6 +163,7 @@
 | plsense                         | github      | perl-completion          | anything                                            |
 | po-mode                         | minority    | po-compat                | backward compatibility                              |
 | project-explorer                | github      | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
+| proof-general                   | github      | proof-x-symbol           | only required by a single deprecated library        |
 | prosjekt                        | github      | anything                 | anything                                            |
 | python-mode                     | gitlab      | pymacs                   | it's complicated (email)                            |
 | r-autoyas                       | github      | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |

@@ -66,7 +66,7 @@
 | elpa        |  115 |    115 |       |       |   171 |       |
 | elpa-branch |    8 |      8 |       |       |    21 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4189 |   4189 |       |       |       |  3820 |
+| github      | 4189 |   4189 |       |       |       |  3817 |
 | gitlab      |   83 |     83 |       |       |       |    71 |
 | git         |   65 |     65 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   54 |     54 |       |       |       |       |
-| shelved     | 1220 |        |  1220 |       |       |       |
+| shelved     | 1221 |        |  1221 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6976 |   5301 |  1220 |   457 |   199 |  3984 |
+| total       | 6977 |   5301 |  1221 |   457 |   199 |  3981 |
 
 * Emacs
 ** Prefer elpa
@@ -520,20 +520,18 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (23)        | Class    | Melpa     | Reason               |
+| Package (21)        | Class    | Melpa     | Reason               |
 |---------------------+----------+-----------+----------------------|
 | auth-source-pass    | builtin  | github    | part of Emacs 26.1   |
 | autotest            | minority | github    | all-in-one repo      |
 | bibliothek          | minority | github    | all-in-one repo      |
 | cfengine-code-style | minority | github    | mostly non-elisp     |
-| clojure-cheatsheet  | shelved  | github    |                      |
 | cmake-mode          | minority | github    | mostly non-elisp     |
 | cython-mode         | minority | github    | mostly non-elisp     |
 | diffscuss-mode      | minority | github    | mostly non-elisp     |
-| fold-dwim-org       | shelved  | github    |                      |
+| fold-dwim-org       | shelved  | github    | depends on shelved   |
 | forecast            | minority | github    | all-in-one repo      |
 | google-c-style      | minority | github    | mostly non-elisp     |
-| kfg                 | shelved  | github    |                      |
 | less-css-mode       | builtin  | github    | Emacs 26.1 has newer |
 | nemerle             | minority | github    | mostly non-elisp     |
 | ninja-mode          | minority | github    | mostly non-elisp     |
@@ -545,5 +543,3 @@
 | thrift              | minority | github    | mostly non-elisp     |
 | toggle              | minority | github    | all-in-one repo      |
 | wisp-mode           | minority | bitbucket | mostly non-elisp     |
-
-- less-css-mode: https://github.com/purcell/less-css-mode/issues/26
