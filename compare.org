@@ -63,12 +63,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  455 |        |       |   457 |     7 |       |
-| elpa        |  114 |    114 |       |       |   170 |       |
-| elpa-branch |    8 |      8 |       |       |    20 |       |
+| elpa        |  115 |    115 |       |       |   171 |       |
+| elpa-branch |    8 |      8 |       |       |    21 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4183 |   4183 |       |       |       |  3814 |
+| github      | 4189 |   4189 |       |       |       |  3820 |
 | gitlab      |   83 |     83 |       |       |       |    71 |
-| git         |   65 |     65 |       |       |       |    52 |
+| git         |   65 |     65 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
@@ -81,7 +81,7 @@
 | orphaned    |   54 |     54 |       |       |       |       |
 | shelved     | 1220 |        |  1220 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6969 |   5294 |  1220 |   457 |   197 |  3977 |
+| total       | 6976 |   5301 |  1220 |   457 |   199 |  3984 |
 
 * Emacs
 ** Prefer elpa
@@ -211,7 +211,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (68)               | Class    | Gelpa    | Link                                         |
+| Package (69)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -268,6 +268,7 @@
 | sotlisp                    | github   | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
 | spinner                    | github   | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
 | sql-indent                 | github   | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                          |
+| ssh-deploy                 | github   | external | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]                  |
 | systemd                    | github   | subtree  | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
 | test-simple                | github   | subtree  | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
 | tiny                       | github   | subtree  | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
@@ -312,9 +313,6 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
-| Package (1)           | Melpa | Reason                    |
-|-----------------------+-------+---------------------------|
-| debian-changelog-mode | git   | part of dpkg-dev-el #5758 |
 
 ** Shared repositories
 #+NAME: secondary-packages
