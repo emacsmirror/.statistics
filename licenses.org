@@ -66,7 +66,7 @@
 #+RESULTS:
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3341 |      63 |
+| GPL-3+        |  3342 |      63 |
 | GPL-2+        |  1173 |      22 |
 | MIT           |   160 |       3 |
 | GPL-3         |   154 |       3 |
@@ -90,7 +90,6 @@
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
-| nil           |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
 | LGPL          |     1 |       0 |
@@ -99,7 +98,7 @@
 | UIUC          |     1 |       0 |
 | Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4689 |      88 |
+| total GNU     |  4690 |      88 |
 |---------------+-------+---------|
 | total         |  5301 |     100 |
 
@@ -109,8 +108,6 @@
     "GPL" "GPL-2" "failure" "pending" "No-license" nil)
 #+END_SRC
 #+RESULTS:
-
-- https://github.com/zhanxw/wdl-mode/pull/2
 
 * Emacsattic
 ** Overview
