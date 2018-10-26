@@ -150,7 +150,7 @@ please first make sure they meet the minimal requirements.
 | constellations               | [[https://github.com/davep/constellations.el][davep/constellations.el]]                 |
 | cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                    |
 | crisp-mode                   | [[https://github.com/krisajenkins/crisp-mode][krisajenkins/crisp-mode]]                 |
-| csmart-mode                  | [[https://github.com/kwitek/csmart][kwitek/csmart]]                           |
+| csmart-mode                  | [[https://github.com/kwitek/csmart][krzsztf/csmart]]                          |
 | csp-mode                     | [[https://github.com/zonix/csp-mode][zonix/csp-mode]]                          |
 | csr-mode                     | [[https://github.com/trailbound/csr-mode][trailbound/csr-mode]]                     |
 | css-format                   | [[https://github.com/chalmagean/css-format.el][chalmagean/css-format.el]]                |
@@ -166,7 +166,7 @@ please first make sure they meet the minimal requirements.
 | dedent                       | [[https://github.com/deactivated/dedent-el][deactivated/dedent-el]]                   |
 | defhook                      | [[https://github.com/neil-smithline-elisp/defhook][neil-smithline-elisp/defhook]]            |
 | delim-pad                    | [[https://github.com/lewang/delim-pad][lewang/delim-pad]]                        |
-| di-macs                      | [[https://github.com/jackhmwilliams/di-macs][jackhmwilliams/di-macs]]                  |
+| di-macs                      | [[https://github.com/jackhmwilliams/di-macs][jhmw/di-macs]]                            |
 | diatheke                     | [[https://github.com/JasonFruit/diatheke.el][JasonFruit/diatheke.el]]                  |
 | dictem                       | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          |
 | diff-ediff                   | [[https://github.com/matthewlmcclure/diff-ediff][matthewlmcclure/diff-ediff]]              |
@@ -189,11 +189,11 @@ please first make sure they meet the minimal requirements.
 | easy-todo                    | [[https://github.com/xwl/easy-todo][xwl/easy-todo]]                           |
 | ebm                          | [[https://github.com/carrl/ebm][carrl/ebm]]                               |
 | ebnf-mode                    | [[https://github.com/jeramey/ebnf-mode][jeramey/ebnf-mode]]                       |
-| ecco                         | [[https://github.com/capitaomorte/ecco][capitaomorte/ecco]]                       |
+| ecco                         | [[https://github.com/capitaomorte/ecco][joaotavora/ecco]]                         |
 | ecd                          | [[https://github.com/akicho8/ecd][akicho8/ecd]]                             |
 | echo-pick                    | [[https://github.com/nschum/echo-pick.el][nschum/echo-pick.el]]                     |
 | edbc                         | [[https://github.com/redraiment/edbc][redraiment/edbc]]                         |
-| edice                        | [[https://github.com/capitaomorte/edice][capitaomorte/edice]]                      |
+| edice                        | [[https://github.com/capitaomorte/edice][joaotavora/edice]]                        |
 | edit-thing                   | [[https://github.com/deactivated/edit-thing-el][deactivated/edit-thing-el]]               |
 | eev                          | [[https://github.com/edrx/eev][edrx/eev]]                                |
 | egit                         | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                        |
@@ -234,7 +234,7 @@ please first make sure they meet the minimal requirements.
 | evil-rebellion               | [[https://github.com/tarleb/evil-rebellion][tarleb/evil-rebellion]]                   |
 | evimodeline                  | [[https://github.com/danderson/evimodeline][danderson/evimodeline]]                   |
 | exim                         | [[https://github.com/ch11ng/exim][ch11ng/exim]]                             |
-| expectations-mode            | [[https://github.com/gar3thjon3s/expectations-mode][gar3thjon3s/expectations-mode]]           |
+| expectations-mode            | [[https://github.com/gar3thjon3s/expectations-mode][clojure-expectations/expectations-mode]]  |
 | exwm                         | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                             |
 | ezbl                         | [[https://github.com/haxney/ezbl][haxney/ezbl]]                             |
 | fab                          | [[https://github.com/davidmiller/fabmacs][davidmiller/fabmacs]]                     |
@@ -284,7 +284,7 @@ please first make sure they meet the minimal requirements.
 | go-svg                       | [[https://github.com/yhvh/go-svg-mode][yhvh/go-svg-mode]]                        |
 | goby                         | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      |
 | google-calendar              | [[https://github.com/slaanesh/Google-Calendar-Elisp][slaanesh/Google-Calendar-Elisp]]          |
-| gopher                       | [[https://github.com/ardekantur/gopher.el][ardekantur/gopher.el]]                    |
+| gopher                       | [[https://github.com/ardekantur/gopher.el][msnyder-info/gopher.el]]                  |
 | gosh-mode                    | [[https://github.com/mhayashi1120/Emacs-gosh-mode][mhayashi1120/Emacs-gosh-mode]]            |
 | gplus-mode                   | [[https://github.com/ellencubed/gplus-mode][ellencubed/gplus-mode]]                   |
 | gradle                       | [[https://github.com/vhallac/gradle-el][vhallac/gradle-el]]                       |
@@ -306,7 +306,7 @@ please first make sure they meet the minimal requirements.
 | helm-ipython                 | [[https://github.com/thierryvolpiatto/helm-ipython][thierryvolpiatto/helm-ipython]]           |
 | helm-mu-contacts             | [[https://github.com/agpchil/helm-mu-contacts][agpchil/helm-mu-contacts]]                |
 | helm-project                 | [[https://github.com/shishi/helm-project][shishi/helm-project]]                     |
-| helm-projectile-all          | [[https://github.com/spatz/helm-projectile-all][spatz/helm-projectile-all]]               |
+| helm-projectile-all          | [[https://github.com/spatz/helm-projectile-all][drrlvn/helm-projectile-all]]              |
 | helm-shell-history           | [[https://github.com/yuutayamada/helm-shell-history][yuutayamada/helm-shell-history]]          |
 | helm-slime                   | [[https://github.com/emacs-helm/helm-slime][emacs-helm/helm-slime]]                   |
 | helm-words                   | [[https://github.com/pronobis/helm-words][pronobis/helm-words]]                     |
@@ -337,7 +337,7 @@ please first make sure they meet the minimal requirements.
 | indirect-region              | [[https://github.com/renard/indirect-region][renard/indirect-region]]                  |
 | inertial-scroll              | [[https://github.com/kiwanami/emacs-inertial-scroll][kiwanami/emacs-inertial-scroll]]          |
 | inf-ruby-bond                | [[https://github.com/pd/inf-ruby-bond][pd/inf-ruby-bond]]                        |
-| infix                        | [[https://github.com/rspeele/infix-dot-el][rspeele/infix-dot-el]]                    |
+| infix                        | [[https://github.com/rspeele/infix-dot-el][rspeele/infix.el]]                        |
 | inform-mode                  | [[https://github.com/rupertl/inform-mode][rupertl/inform-mode]]                     |
 | insert-time                  | [[https://github.com/rmm5t/insert-time.el][rmm5t/insert-time.el]]                    |
 | ios-config-mode              | [[https://github.com/nibrahim/IOS-config-mode][nibrahim/IOS-config-mode]]                |
@@ -385,7 +385,7 @@ please first make sure they meet the minimal requirements.
 | lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   |
 | magit-identities             | [[https://github.com/renard/magit-identities][renard/magit-identities]]                 |
 | magit-view-file              | [[https://github.com/renard/magit-view-file][renard/magit-view-file]]                  |
-| mail-bug                     | [[https://github.com/xaccrocheur/mail-bug][xaccrocheur/mail-bug]]                    |
+| mail-bug                     | [[https://github.com/xaccrocheur/mail-bug][yPhil-gh/mail-bug]]                       |
 | mailcrypt                    | [[https://github.com/barak/mailcrypt][barak/mailcrypt]]                         |
 | maildir                      | [[https://github.com/nicferrier/emacs-maildir][nicferrier/emacs-maildir]]                |
 | mailq                        | [[https://github.com/dimitri/mailq-el][dimitri/mailq-el]]                        |
@@ -530,7 +530,7 @@ please first make sure they meet the minimal requirements.
 | ruby-comint                  | [[https://github.com/jpablobr/ruby-comint.el][jpablobr/ruby-comint.el]]                 |
 | rubyinterpol                 | [[https://github.com/ober/rubyinterpol][ober/rubyinterpol]]                       |
 | rustfmt                      | [[https://github.com/fbergroth/emacs-rustfmt][fbergroth/emacs-rustfmt]]                 |
-| s3                           | [[https://github.com/thorstadt/s3.el][thorstadt/s3.el]]                         |
+| s3                           | [[https://github.com/thorstadt/s3.el][ryancrum/s3.el]]                          |
 | save-packages                | [[https://github.com/petere/emacs-save-packages][petere/emacs-save-packages]]              |
 | sbt                          | [[https://github.com/dchenbecker/sbt.el][dchenbecker/sbt.el]]                      |
 | scan                         | [[https://github.com/larsmagne/scan.el][larsmagne/scan.el]]                       |
@@ -608,7 +608,7 @@ please first make sure they meet the minimal requirements.
 | trac-wiki                    | [[https://github.com/tiborsimko/trac-wiki-el][tiborsimko/trac-wiki-el]]                 |
 | transcript                   | [[https://github.com/nasfarley88/transcript-el][nasfarley88/transcript-el]]               |
 | trelloel                     | [[https://github.com/jdodds/trelloel][jdodds/trelloel]]                         |
-| trindle                      | [[https://github.com/daic-h/trindle][daic-h/trindle]]                          |
+| trindle                      | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      |
 | try-code                     | [[https://github.com/lewang/try-code][lewang/try-code]]                         |
 | tumblr-mode                  | [[https://github.com/qxj/tumblr-mode][qxj/tumblr-mode]]                         |
 | twiki                        | [[https://github.com/christopherjwhite/emacs-twiki-mode][christopherjwhite/emacs-twiki-mode]]      |
