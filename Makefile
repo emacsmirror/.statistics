@@ -28,7 +28,7 @@ HTML  += kludges.html
 HTML  += licenses.html
 HTML  += melpa.html
 
-BABEL  = notes.org $(HTML:.html=.org)
+BABEL  = config.org $(HTML:.html=.org)
 
 DEPS   = borg
 DEPS  += closql
