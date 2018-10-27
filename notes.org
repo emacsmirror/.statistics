@@ -7,7 +7,54 @@
     (customize-save-variable variable (and (not (equal value "nil")) value))
     nil)
 #+END_SRC
-* Preferred upstreams
+[[https://emacsmirror.net/stats][up]]
+* Pending packages (~emir-pending-packages~)
+#+NAME: set--emir-pending-packages
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir-pending-packages
+  (emir--save-variable 'emir-pending-packages value)
+#+END_SRC
+#+NAME: val--emir-pending-packages
+| Package     | Reason                            |
+|-------------+-----------------------------------|
+| ada-ref-man | no license, no elisp, no response |
+| nadvice     | backport                          |
+
+* Secondary packages (~emir-secondary-packages~)
+#+NAME: set--emir-secondary-packages
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir-secondary-packages
+  (emir--save-variable 'emir-secondary-packages value)
+#+END_SRC
+#+NAME: val--emir-secondary-packages
+| Secondary | Primary |
+|-----------+---------|
+| shimbun   | w3m     |
+
+* Suspended packages (~emir-suspended-packages~)
+#+NAME: set--emir-suspended-packages
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir-suspended-packages
+  (emir--save-variable 'emir-suspended-packages value)
+#+END_SRC
+#+NAME: val--emir-suspended-packages
+| Package | Reason |
+|---------+--------|
+
+* Renamed files (~emir-renamed-files~)
+#+NAME: set--emir-renamed-files
+#+BEGIN_SRC emacs-lisp :results silent :var value=val--emir-renamed-files
+  (emir--save-variable 'emir-renamed-files value)
+#+END_SRC
+#+NAME: val--emir-renamed-files
+| Package               | Filename                                     |
+|-----------------------+----------------------------------------------|
+| chasen                | chasen.el.txt                                |
+| debian-bug            | debian-bug.el?root=pkg-goodies-el            |
+| debian-changelog-mode | debian-changelog-mode.el?root=pkg-goodies-el |
+| japanese-tokenizer    | japanese-tokenizer.el.txt                    |
+| llvm-mode             | llvm-mode.el?view=co                         |
+| spamfilter            | spamfilter.el.txt                            |
+| tablegen-mode         | tablegen-mode.el?view=co                     |
+
+* Preferred upstreams (~emir--preferred-updatream~)
 #+NAME: set--emir--preferred-upstreams
 #+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--preferred-upstreams
   (emir--save-variable 'emir--preferred-upstreams value)
@@ -73,7 +120,7 @@
 | yasnippet          | [[https://github.com/emacsmirror/p.old/issues/34#issuecomment-67199311][#34#67199311]]         |
 | ztree              | [[https://github.com/milkypostman/melpa/issues/3383#issuecomment-164285940][melpa#3383#164285940]] |
 
-* Preferred builtins
+* Preferred builtins (~emir--preferred-builtins~)
 #+NAME: set--emir--preferred-builtins
 #+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--preferred-builtins
   (emir--save-variable 'emir--preferred-builtins value)
@@ -86,7 +133,7 @@
 | seq        | Elpa has backport of builtin   |
 | svg        | Elpa imports outdated upstream |
 
-* Diverging reason
+* Diverging reason (~emir--diverging-reason~)
 #+NAME: set--emir--diverging-reason
 #+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--diverging-reason
   (emir--save-variable 'emir--diverging-reason value)
@@ -116,7 +163,7 @@
 | toggle              | all-in-one repo      |
 | wisp-mode           | mostly non-elisp     |
 
-* Library reason
+* Library reason (~emir--library-reason~)
 #+NAME: set--emir--library-reason
 #+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--library-reason
   (emir--save-variable 'emir--library-reason value)
@@ -147,7 +194,7 @@
 | ultratex              | no/mismatched main library |
 | uni-confusables       | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
 
-* Orphanage reason
+* Orphanage reason (~emir--orphanage-reason~)
 #+NAME: set--emir--orphanage-reason
 #+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--orphanage-reason
   (emir--save-variable 'emir--orphanage-reason value)
@@ -214,7 +261,7 @@
 | w3m               | semi-automatic import   |
 | windata           | wiki needed by non-wiki |
 
-* Other vcs
+* Other vcs (~emir--other-vcs~)
 #+NAME: set--emir--other-vcs
 #+BEGIN_SRC emacs-lisp :results silent :var value=val--emir--other-vcs
   (emir--save-variable 'emir--other-vcs value)
