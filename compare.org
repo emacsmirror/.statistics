@@ -66,7 +66,7 @@
 | elpa        |  115 |    115 |       |       |   171 |       |
 | elpa-branch |    8 |      8 |       |       |    21 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4189 |   4189 |       |       |       |  3817 |
+| github      | 4192 |   4192 |       |       |       |  3817 |
 | gitlab      |   83 |     83 |       |       |       |    71 |
 | git         |   65 |     65 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -78,10 +78,10 @@
 | file        |   58 |     58 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   54 |     54 |       |       |       |       |
-| shelved     | 1221 |        |  1221 |       |       |       |
+| orphaned    |   51 |     51 |       |       |       |       |
+| shelved     | 1223 |        |  1223 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6978 |   5302 |  1221 |   457 |   199 |  3981 |
+| total       | 6980 |   5302 |  1223 |   457 |   199 |  3981 |
 
 * Emacs
 ** Prefer elpa
@@ -520,13 +520,14 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (21)        | Class    | Melpa     | Reason               |
+| Package (22)        | Class    | Melpa     | Reason               |
 |---------------------+----------+-----------+----------------------|
 | auth-source-pass    | builtin  | github    | part of Emacs 26.1   |
 | autotest            | minority | github    | all-in-one repo      |
 | bibliothek          | minority | github    | all-in-one repo      |
 | cfengine-code-style | minority | github    | mostly non-elisp     |
 | cmake-mode          | minority | github    | mostly non-elisp     |
+| color-theme         | shelved  | github    |                      |
 | cython-mode         | minority | github    | mostly non-elisp     |
 | diffscuss-mode      | minority | github    | mostly non-elisp     |
 | fold-dwim-org       | shelved  | github    | depends on shelved   |

@@ -64,7 +64,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (591)                | Link                                    |
+| Package (593)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -102,6 +102,7 @@ please first make sure they meet the minimal requirements.
 | autocompletion-php-functions | [[https://github.com/ashizawa/autocompletion-php-functions][ashizawa/autocompletion-php-functions]]   |
 | avmmf                        | [[https://github.com/davep/avmmf.el][davep/avmmf.el]]                          |
 | aws                          | [[https://github.com/ieure/aws-el][ieure/aws-el]]                            |
+| backline                     | [[https://github.com/tarsius/backline][tarsius/backline]]                        |
 | backups-mode                 | [[https://github.com/chadbraunduin/backups-mode][chadbraunduin/backups-mode]]              |
 | bbcode                       | [[https://github.com/sensorflo/bbcode][sensorflo/bbcode]]                        |
 | bd-set-mark                  | [[https://github.com/lewang/bd-set-mark][lewang/bd-set-mark]]                      |
@@ -469,6 +470,7 @@ please first make sure they meet the minimal requirements.
 | orgrade                      | [[https://github.com/gucong/emacs-orgrade][gucong/emacs-orgrade]]                    |
 | osm-mode                     | [[https://github.com/ruediger/osm-mode][ruediger/osm-mode]]                       |
 | osxpkg                       | [[https://github.com/renard/osxpkg][renard/osxpkg]]                           |
+| outline-minor-faces          | [[https://github.com/tarsius/outline-minor-faces][tarsius/outline-minor-faces]]             |
 | owl-functional-mode          | [[https://github.com/vakkermans/owl-functional-mode][vakkermans/owl-functional-mode]]          |
 | package-demo                 | [[https://github.com/vermiculus/package-demo][vermiculus/package-demo]]                 |
 | package-store                | [[https://github.com/nicferrier/emacs-package-store][nicferrier/emacs-package-store]]          |

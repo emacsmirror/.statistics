@@ -68,7 +68,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (84)                    | Class       | Feature                  | Reason                                              |
+| Package (85)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -87,6 +87,7 @@
 | ddskk                           | github      | jisx0213                 | backward compatibility                              |
 | ddskk                           | github      | nicola-ddskk-autoloads   | generated internal file                             |
 | ddskk                           | github      | skk-autoloads            | generated internal file                             |
+| dic-lookup-w3m                  | orphaned    | text-translator          | broken and optional                                 |
 | dictionary                      | github      | balloon-help             | XEmacs compatibility                                |
 | dired+                          | wiki        | help+20                  | backward compatibility                              |
 | dired+                          | wiki        | subr-21                  | backward compatibility                              |
@@ -218,7 +219,7 @@
 | nxhtml          | orphaned |
 | oauth           | github   |
 | projmake-mode   | github   |
-| ruby-additional | orphaned |
+| ruby-additional | github   |
 | semi            | github   |
 | vm              | orphaned |
 | wanderlust      | github   |
