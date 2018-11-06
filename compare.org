@@ -66,7 +66,7 @@
 | elpa        |  115 |    115 |       |       |   171 |       |
 | elpa-branch |    8 |      8 |       |       |    21 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4192 |   4192 |       |       |       |  3817 |
+| github      | 4192 |   4192 |       |       |       |  3818 |
 | gitlab      |   83 |     83 |       |       |       |    71 |
 | git         |   65 |     65 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -75,13 +75,13 @@
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  635 |    635 |       |       |       |       |
-| file        |   58 |     58 |       |       |       |       |
+| file        |   59 |     59 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   51 |     51 |       |       |       |       |
-| shelved     | 1223 |        |  1223 |       |       |       |
+| shelved     | 1222 |        |  1222 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 6980 |   5302 |  1223 |   457 |   199 |  3981 |
+| total       | 6980 |   5303 |  1222 |   457 |   199 |  3982 |
 
 * Emacs
 ** Prefer elpa
@@ -499,48 +499,101 @@
 #+NAME: melpa-diverging-types
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Melpa" "Reason")
-    (-keep
-     (pcase-lambda (`(,name ,class ,fetcher ,repo))
-       (and (not (pcase (list class fetcher)
-                   (`(subtree  github) t)
-                   (`(subtree  git)    t)
-                   (`(orphaned github) t)
-                   (`(file     github) (string-prefix-p "emacsmirror/" repo))
-                   (`(shelved  github) (string-prefix-p "emacsattic/" repo))))
-            (list name class fetcher
-                  (cadr (assoc name emir--diverging-reason)))))
-     (epkg-sql [:select :distinct [packages:name
-                                   packages:class
-                                   melpa-recipes:class
-                                   melpa-recipes:repo]
-                :from [packages melpa-recipes]
-                :where    (= melpa-recipes:epkg-package packages:name)
-                :and      (= melpa-recipes:epkg-package melpa-recipes:name)
-                :and :not (= melpa-recipes:class        packages:class)
-                :order-by [(asc packages:name)]])))
+    (cl-sort
+     (-keep
+      (pcase-lambda (`(,name ,class ,fetcher ,repo))
+        (and (not (pcase (list class fetcher)
+                    (`(subtree  github) t)
+                    (`(subtree  git)    t)))
+             (pcase (list class fetcher)
+               (`(orphaned github)
+                (list name class "~orphan~" "non-git/hg"))
+               ((and `(file github)
+                     (guard (string-prefix-p "emacsmirror/" repo)))
+                (list name class "~mirror~" "non-git/hg"))
+               ((and `(shelved github)
+                     (guard (string-prefix-p "emacsattic/" repo)))
+                (list name class "~attic~" "obsolete"))
+               (_
+                (list name class fetcher
+                      (cadr (assoc name emir--diverging-reason)))))))
+      (epkg-sql [:select :distinct [packages:name
+                                    packages:class
+                                    melpa-recipes:class
+                                    melpa-recipes:repo]
+                 :from [packages melpa-recipes]
+                 :where    (= melpa-recipes:epkg-package packages:name)
+                 :and      (= melpa-recipes:epkg-package melpa-recipes:name)
+                 :and :not (= melpa-recipes:class        packages:class)
+                 :order-by [(asc packages:name)]]))
+     #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (22)        | Class    | Melpa     | Reason               |
-|---------------------+----------+-----------+----------------------|
-| auth-source-pass    | builtin  | github    | part of Emacs 26.1   |
-| autotest            | minority | github    | all-in-one repo      |
-| bibliothek          | minority | github    | all-in-one repo      |
-| cfengine-code-style | minority | github    | mostly non-elisp     |
-| cmake-mode          | minority | github    | mostly non-elisp     |
-| color-theme         | shelved  | github    |                      |
-| cython-mode         | minority | github    | mostly non-elisp     |
-| diffscuss-mode      | minority | github    | mostly non-elisp     |
-| fold-dwim-org       | shelved  | github    | depends on shelved   |
-| forecast            | minority | github    | all-in-one repo      |
-| google-c-style      | minority | github    | mostly non-elisp     |
-| less-css-mode       | builtin  | github    | Emacs 26.1 has newer |
-| nemerle             | minority | github    | mostly non-elisp     |
-| ninja-mode          | minority | github    | mostly non-elisp     |
-| org-variable-pitch  | minority | github    | all-in-one repo      |
-| paper-theme         | minority | github    | all-in-one repo      |
-| po-mode             | minority | git       | mostly non-elisp     |
-| pylint              | minority | github    | mostly non-elisp     |
-| smart-compile       | minority | github    | all-in-one repo      |
-| thrift              | minority | github    | mostly non-elisp     |
-| toggle              | minority | github    | all-in-one repo      |
-| wisp-mode           | minority | bitbucket | mostly non-elisp     |
+| Package (66)        | Class    | Melpa     | Reason              |
+|---------------------+----------+-----------+---------------------|
+| autotest            | minority | github    | all-in-one repo     |
+| bibliothek          | minority | github    | all-in-one repo     |
+| forecast            | minority | github    | all-in-one repo     |
+| org-variable-pitch  | minority | github    | all-in-one repo     |
+| paper-theme         | minority | github    | all-in-one repo     |
+| smart-compile       | minority | github    | all-in-one repo     |
+| toggle              | minority | github    | all-in-one repo     |
+| cfengine-code-style | minority | github    | mostly non-elisp    |
+| cmake-mode          | minority | github    | mostly non-elisp    |
+| cython-mode         | minority | github    | mostly non-elisp    |
+| diffscuss-mode      | minority | github    | mostly non-elisp    |
+| google-c-style      | minority | github    | mostly non-elisp    |
+| nemerle             | minority | github    | mostly non-elisp    |
+| ninja-mode          | minority | github    | mostly non-elisp    |
+| po-mode             | minority | git       | mostly non-elisp    |
+| pylint              | minority | github    | mostly non-elisp    |
+| thrift              | minority | github    | mostly non-elisp    |
+| wisp-mode           | minority | bitbucket | mostly non-elisp    |
+| cg                  | orphaned | ~orphan~    | non-git/hg          |
+| clang-format        | orphaned | ~orphan~    | non-git/hg          |
+| confluence          | orphaned | ~orphan~    | non-git/hg          |
+| darcsum             | orphaned | ~orphan~    | non-git/hg          |
+| dedicated           | orphaned | ~orphan~    | non-git/hg          |
+| dic-lookup-w3m      | orphaned | ~orphan~    | non-git/hg          |
+| dirtree             | orphaned | ~orphan~    | non-git/hg          |
+| dsvn                | orphaned | ~orphan~    | non-git/hg          |
+| edit-list           | file     | ~mirror~    | non-git/hg          |
+| elisp-depend        | orphaned | ~orphan~    | non-git/hg          |
+| ert-expectations    | orphaned | ~orphan~    | non-git/hg          |
+| findr               | orphaned | ~orphan~    | non-git/hg          |
+| helm-ls-svn         | orphaned | ~orphan~    | non-git/hg          |
+| hide-lines          | orphaned | ~orphan~    | non-git/hg          |
+| http-post-simple    | orphaned | ~orphan~    | non-git/hg          |
+| key-chord           | orphaned | ~orphan~    | non-git/hg          |
+| keydef              | orphaned | ~orphan~    | non-git/hg          |
+| levenshtein         | orphaned | ~orphan~    | non-git/hg          |
+| look-mode           | orphaned | ~orphan~    | non-git/hg          |
+| miniedit            | orphaned | ~orphan~    | non-git/hg          |
+| multi-term          | orphaned | ~orphan~    | non-git/hg          |
+| oberon              | orphaned | ~orphan~    | non-git/hg          |
+| org-bullets         | orphaned | ~orphan~    | non-git/hg          |
+| org-grep            | orphaned | ~orphan~    | non-git/hg          |
+| pager               | orphaned | ~orphan~    | non-git/hg          |
+| pointback           | orphaned | ~orphan~    | non-git/hg          |
+| quack               | file     | ~mirror~    | non-git/hg          |
+| session             | orphaned | ~orphan~    | non-git/hg          |
+| shell-command       | orphaned | ~orphan~    | non-git/hg          |
+| shell-history       | orphaned | ~orphan~    | non-git/hg          |
+| showtip             | orphaned | ~orphan~    | non-git/hg          |
+| smarty-mode         | orphaned | ~orphan~    | non-git/hg          |
+| sml-modeline        | orphaned | ~orphan~    | non-git/hg          |
+| sr-speedbar         | orphaned | ~orphan~    | non-git/hg          |
+| tex-smart-umlauts   | orphaned | ~orphan~    | non-git/hg          |
+| transpose-frame     | orphaned | ~orphan~    | non-git/hg          |
+| tree-mode           | orphaned | ~orphan~    | non-git/hg          |
+| vala-mode           | orphaned | ~orphan~    | non-git/hg          |
+| w32-browser         | orphaned | ~orphan~    | non-git/hg          |
+| w3m                 | orphaned | ~orphan~    | non-git/hg          |
+| windata             | orphaned | ~orphan~    | non-git/hg          |
+| color-theme         | shelved  | ~attic~     | obsolete            |
+| fold-dwim           | shelved  | ~attic~     | obsolete            |
+| mic-paren           | shelved  | ~attic~     | obsolete            |
+| redshank            | shelved  | ~attic~     | obsolete            |
+| fold-dwim-org       | shelved  | github    | obsolete dependency |
+| auth-source-pass    | builtin  | github    | part of Emacs 26.1  |
+| less-css-mode       | builtin  | github    | part of Emacs 26.1  |
