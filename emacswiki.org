@@ -20,7 +20,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS:
-| Dependee (25)   | Author                        | Depender          | Type | Author                                            |
+| Dependee (24)   | Author                        | Depender          | Type | Author                                            |
 |-----------------+-------------------------------+-------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key           | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm                | hard |                                                   |
@@ -54,7 +54,6 @@
 | yaoddmuse       |                               | company           | soft | Nikolaj Schumacher                                |
 | yaoddmuse       |                               | one-key           | soft | Andy Stewart                                      |
 | yaoddmuse       |                               | org-readme        | soft | Matthew L. Fidler                                 |
-| zones           | Drew Adams                    | highlight         | soft | Drew Adams                                        |
 | zoom-frm        | Drew Adams                    | hyperbole         | soft | Bob Weiner                                        |
 
 * Wiki packages
@@ -427,7 +426,6 @@
 | Drew Adams                                      | vc-                            |
 | Drew Adams                                      | vc-hooks+                      |
 | Drew Adams                                      | window+                        |
-| Drew Adams                                      | zones                          |
 | Drew Adams                                      | zoom-frm                       |
 | Drew Adams, Lennart Borgman                     | wid-edit+                      |
 | Drew Adams, Thierry Volpiatto                   | bookmark+                      |
