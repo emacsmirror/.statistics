@@ -15,6 +15,7 @@ packages makes it more appealing to improve the remaining code.
 
 - ~shimbun~ isn't listed below because it is part of the ~w3m~ repository.
 
+#+NAME: from-orphanage
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Vcs") ; "Last commit" "Commits last year")
     (-keep (pcase-lambda (`(,name ,vcs))
@@ -33,7 +34,7 @@ packages makes it more appealing to improve the remaining code.
                           ))))
             emir--other-vcs))
 #+END_SRC
-#+RESULTS:
+#+RESULTS: from-orphanage
 | Package (11)      | Vcs   |
 |-------------------+-------|
 | cg                | svn   |

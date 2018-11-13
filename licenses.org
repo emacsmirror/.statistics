@@ -54,6 +54,7 @@
 
 * Emacsmirror
 ** Overview
+#+NAME: mirror-overview
 #+BEGIN_SRC emacs-lisp
   (emir--format-license-table
    (epkg-sql [:select [license (funcall count *)] :as count
@@ -63,7 +64,7 @@
               :group-by license
               :order-by [(desc count) (asc license)]]))
 #+END_SRC
-#+RESULTS:
+#+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
 | GPL-3+        |  3361 |      63 |
@@ -104,14 +105,16 @@
 | total         |  5324 |     100 |
 
 ** Issues
+#+NAME: mirror-issues
 #+BEGIN_SRC emacs-lisp
   (emir--insert-mirror-packages-using-licenses
     "GPL" "GPL-2" "failure" "pending" "No-license" nil)
 #+END_SRC
-#+RESULTS:
+#+RESULTS: mirror-issues
 
 * Emacsattic
 ** Overview
+#+NAME: attic-overview
 #+BEGIN_SRC emacs-lisp
   (emir--format-license-table
    (epkg-sql [:select [license (funcall count *)] :as count
@@ -120,7 +123,7 @@
               :group-by license
               :order-by count :desc]))
 #+END_SRC
-#+RESULTS:
+#+RESULTS: attic-overview
 | License         | Count | Percent |
 |-----------------+-------+---------|
 | GPL-2+          |   784 |      64 |
@@ -158,6 +161,7 @@
 | total           |  1222 |     100 |
 
 ** Unknown licenses
+#+NAME: attic-unknown
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "License")
     (epkg-sql [:select [name class license] :from packages
@@ -166,7 +170,7 @@
                :order-by [(asc name)]]
               [shelved])))
 #+END_SRC
-#+RESULTS:
+#+RESULTS: attic-unknown
 | Package (4) | Class   | License |
 |-------------+---------+---------|
 | epo         | shelved |         |
@@ -175,10 +179,11 @@
 | yaham       | shelved |         |
 
 ** Custom licenses
+#+NAME: attic-custom
 #+BEGIN_SRC emacs-lisp
   (emir--insert-attic-packages-using-licenses "custom")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: attic-custom
 | Package (6) | License | Link |
 |-------------+---------+------|
 | phutball    | custom  |      |
@@ -189,10 +194,11 @@
 | youwill     | custom  |      |
 
 ** Upstream contacted
+#+NAME: attic-contacted
 #+BEGIN_SRC emacs-lisp
   (emir--insert-attic-packages-using-licenses "pending")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: attic-contacted
 | Package (18)       | License | Link                                              |
 |--------------------+---------+---------------------------------------------------|
 | bavard             | pending |                                                   |
@@ -215,10 +221,11 @@
 | window-grid        | pending |                                                   |
 
 ** Problematic licenses
+#+NAME: attic-problematic
 #+BEGIN_SRC emacs-lisp
   (emir--insert-attic-packages-using-licenses "GPL" "GPL-2" "EPL")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: attic-problematic
 | Package (109)       | License | Link                                           |
 |---------------------+---------+------------------------------------------------|
 | align-regexp        | GPL     |                                                |
@@ -333,4 +340,3 @@
 
 Notes:
 - [[mu4e:msgid:87bmmrmt9x.fsf@ernst][(mail) GPL-2 maintainer feedback]]
-

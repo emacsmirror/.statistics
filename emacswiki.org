@@ -6,7 +6,7 @@
 [[https://emacsmirror.net/stats][up]]
 
 * Wiki packages required by non-wiki packages
-
+#+NAME: required-by-nonwiki
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Dependee" "Author" "Depender" "Type" "Author")
     (-mapcat
@@ -23,7 +23,7 @@
                 (epkg-reverse-dependencies dependee)))
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
-#+RESULTS:
+#+RESULTS: required-by-nonwiki
 | Dependee (24)   | Author                        | Depender          | Type | Author                                            |
 |-----------------+-------------------------------+-------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key           | hard | Andy Stewart                                      |
@@ -66,6 +66,7 @@
 - [[https://github.com/melpa/melpa/pull/5008#issuecomment-360103510][melpa#5008^1]]
 - [[https://github.com/melpa/melpa/pull/5008#issuecomment-360501258][melpa#5008^2]]
 
+#+NAME: all-wiki
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Author" "Package")
     (cl-sort (mapcar (lambda (pkg)
@@ -76,7 +77,7 @@
 		     (epkgs nil 'epkg-wiki-package-p))
 	     #'string< :key #'car))
 #+END_SRC
-#+RESULTS:
+#+RESULTS: all-wiki
 | Author (205)                                    | Package                        |
 |-------------------------------------------------+--------------------------------|
 |                                                 | ac-dabbrev                     |

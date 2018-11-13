@@ -49,10 +49,11 @@ just the attic, did so because other mirrored packages depend on them,
 and/or because they are available from Melpa (I mirror all packages
 that are available from there).
 
+#+NAME: disappeared
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "upstream disappeared")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: disappeared
 | Package (10) | Mirror   | Melpa    |
 |--------------+----------+----------|
 | dedicated    | orphaned | orphaned |
@@ -78,10 +79,11 @@ the orphanage to fix these issues.
   authoritive upstream.  Attempts to get the various non-upstreams
   talking have failed so far.
 
+#+NAME: unresponsive
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: unresponsive
 | Package (7)    | Mirror   | Melpa    |
 |----------------+----------+----------|
 | edb            | orphaned |          |
@@ -103,10 +105,11 @@ that direction.
 
 Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 
+#+NAME: required-by-nonwiki
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "wiki needed by non-wiki" "wiki multiple files")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: required-by-nonwiki
 | Package (18)     | Mirror   | Melpa    |
 |------------------+----------+----------|
 | dirtree          | orphaned | orphaned |
@@ -139,10 +142,11 @@ I do not regularly update these repositories.  If you find that they
 are outdated, then please let me know.  However many of these package
 repositories have not seen a commit in a decade.
 
+#+NAME: non-git-hg
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "semi-automatic import")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: non-git-hg
 | Package (11)      | Mirror   | Melpa    |
 |-------------------+----------+----------|
 | cg                | orphaned | orphaned |
@@ -158,9 +162,10 @@ repositories have not seen a commit in a decade.
 | w3m               | orphaned | orphaned |
 
 * Imported from tarball
+#+NAME: tarball
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "manual tarball import")
-#+END_SRC
+#+END_SRC tarball
 #+RESULTS:
 | Package (3)  | Mirror   | Melpa    |
 |--------------+----------+----------|
@@ -174,17 +179,19 @@ Sadly there is one package where "orphan" has a more literal meaning
 than what I had in mind when I created the Emacs Orphanage.  RIP
 François.
 
+#+NAME: rip
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "maintainer is dead")
 #+END_SRC
-#+RESULTS:
+#+RESULTS: rip
 | Package (1) | Mirror   | Melpa    |
 |-------------+----------+----------|
 | org-grep    | orphaned | orphaned |
 
 * New
+#+NAME: new
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans nil)
 #+END_SRC
-#+RESULTS:
+#+RESULTS: new
 
