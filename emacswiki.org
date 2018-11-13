@@ -1,4 +1,8 @@
 #+SETUPFILE: .orgconfig
+#+NAME: setup
+#+BEGIN_SRC emacs-lisp :results silent
+  (require 'emir)
+#+END_SRC
 [[https://emacsmirror.net/stats][up]]
 
 * Wiki packages required by non-wiki packages

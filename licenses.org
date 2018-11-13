@@ -1,7 +1,7 @@
 #+SETUPFILE: .orgconfig
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
-  (require 'epkg)
+  (require 'emir)
 
   (defun emir--format-license-table (table)
     (--when-let (assoc "failure" table) (setcar it  "((failure))"))

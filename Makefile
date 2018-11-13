@@ -11,7 +11,7 @@ PREVIEW_S3_URL ?= http://preview.$(DOMAIN).$(S3_ZONE).amazonaws.com
 
 EMACS           ?= emacs
 SITE_LISP       ?= ~/.emacs.d/lib/
-EPKG_REPOSITORY ?= ~/Repos/emacsmirror/
+EPKG_REPOSITORY ?= ~/git/emacs/epkgs/
 CUSTOM_FILE     ?= ~/.emacs.d/custom.el
 
 SRC   = .
@@ -39,11 +39,15 @@ DEPS  += epkg
 DEPS  += emacsql
 DEPS  += finalize
 DEPS  += ghub
+DEPS  += graphql
 DEPS  += magit/lisp
+DEPS  += magit-popup
 DEPS  += melpa-db
 DEPS  += org/lisp
 DEPS  += packed
 DEPS  += request
+DEPS  += transient
+DEPS  += treepy
 DEPS  += with-editor
 
 LOAD_PATH = $(addprefix -L $(SITE_LISP),$(DEPS))
@@ -70,7 +74,7 @@ babel: $(BABEL)
 html:  $(HTML)
 force:
 
-%.org:
+%.org: force
 	@echo "Updating $@..."
 	@$(BATCH) $@ --eval "(progn\
 	(load \"$(CUSTOM_FILE)\")\
@@ -81,8 +85,9 @@ force:
 	(save-buffer))" 2>&1 | grep -v \
 	-e "((" \
 	-e "Code block evaluation complete." \
-	-e "Code block returned no value."
-
+	-e "Code block returned no value." \
+	-e "custom.el (source)..."
+	@echo
 
 %.html: %.org
 	@echo "Generating $@..."
