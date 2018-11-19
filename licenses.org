@@ -67,9 +67,9 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3362 |      63 |
+| GPL-3+        |  3363 |      63 |
 | GPL-2+        |  1174 |      22 |
-| MIT           |   160 |       3 |
+| MIT           |   161 |       3 |
 | GPL-3         |   157 |       3 |
 | MIT (x11)     |   137 |       3 |
 | BSD-2-clause  |    76 |       1 |
@@ -91,6 +91,7 @@
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
+| nil           |     1 |       0 |
 | AGPL-3.0      |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
@@ -100,17 +101,25 @@
 | UIUC          |     1 |       0 |
 | Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4715 |      89 |
+| total GNU     |  4716 |      88 |
 |---------------+-------+---------|
-| total         |  5327 |     100 |
+| total         |  5330 |     100 |
 
-** Issues
-#+NAME: mirror-issues
+** Unknown licenses
+#+NAME: mirror-unknown
 #+BEGIN_SRC emacs-lisp
-  (emir--insert-mirror-packages-using-licenses
-    "GPL" "GPL-2" "failure" "pending" "No-license" nil)
+  (epkg-with-org-header ("Package" "Class" "License")
+    (epkg-sql [:select [name class license] :from packages
+               :where (isnull license)
+               :and (not (= class 'shelved))
+               :order-by [(asc name)]]))
 #+END_SRC
-#+RESULTS: mirror-issues
+#+RESULTS: mirror-unknown
+| Package (1)   | Class  | License |
+|---------------+--------+---------|
+| counsel-etags | github |         |
+
+https://github.com/redguardtoo/counsel-etags/pull/31
 
 * Emacsattic
 ** Overview
@@ -126,12 +135,11 @@
 #+RESULTS: attic-overview
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-2+          |   784 |      64 |
+| GPL-2+          |   784 |      65 |
 | GPL-3+          |   205 |      17 |
 | GPL-2           |    64 |       5 |
 | GPL             |    44 |       4 |
 | public-domain   |    35 |       3 |
-| ((pending))     |    18 |       1 |
 | GPL-1+          |    14 |       1 |
 | GPL-3           |     7 |       1 |
 | as-is           |     6 |       0 |
@@ -156,9 +164,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1125 |      92 |
+| total GNU       |  1125 |      93 |
 |-----------------+-------+---------|
-| total           |  1222 |     100 |
+| total           |  1204 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown
@@ -192,33 +200,6 @@
 | speedread   | custom  |      |
 | whine       | custom  |      |
 | youwill     | custom  |      |
-
-** Upstream contacted
-#+NAME: attic-contacted
-#+BEGIN_SRC emacs-lisp
-  (emir--insert-attic-packages-using-licenses "pending")
-#+END_SRC
-#+RESULTS: attic-contacted
-| Package (18)       | License | Link                                              |
-|--------------------+---------+---------------------------------------------------|
-| bavard             | pending |                                                   |
-| ess-R-object-popup | pending | https://github.com/myuhe/ess-R-object-popup.el    |
-| globalizer         | pending |                                                   |
-| ietfdoc            | pending |                                                   |
-| inf-php            | pending | https://github.com/taksatou/inf-php               |
-| jaunte             | pending | https://github.com/kawaguchi/jaunte.el            |
-| mousymacro         | pending |                                                   |
-| n3-mode            | pending | https://github.com/doriantaylor/n3-mode-for-emacs |
-| namazu             | pending |                                                   |
-| objc-c-mode        | pending |                                                   |
-| pyim-greatdict     | pending | https://github.com/tumashu/pyim-greatdict         |
-| railgun            | pending | https://github.com/mbriggs/railgun.el             |
-| refheap            | pending | https://github.com/Raynes/refheap.el              |
-| ruby-dev           | pending | https://github.com/Mon-Ouie/ruby-dev.el           |
-| ruby-guard         | pending | https://github.com/cheunghy/ruby-guard            |
-| shbuf              | pending |                                                   |
-| uzumaki            | pending | https://github.com/geyslan/uzumaki                |
-| window-grid        | pending |                                                   |
 
 ** Problematic licenses
 #+NAME: attic-problematic

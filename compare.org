@@ -66,7 +66,7 @@
 | elpa        |  115 |    115 |       |       |   171 |       |
 | elpa-branch |    9 |      9 |       |       |    22 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4215 |   4215 |       |       |       |  3845 |
+| github      | 4218 |   4218 |       |       |       |  3846 |
 | gitlab      |   84 |     84 |       |       |       |    72 |
 | git         |   65 |     65 |       |       |       |    53 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   51 |     51 |       |       |       |       |
-| shelved     | 1222 |        |  1222 |       |       |       |
+| shelved     | 1204 |        |  1204 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7004 |   5327 |  1222 |   457 |   200 |  4010 |
+| total       | 6989 |   5330 |  1204 |   457 |   200 |  4011 |
 
 * Emacs
 ** Prefer elpa
@@ -329,7 +329,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (86)      | Secondary package                 | Class    |
+| Primary package (87)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -428,6 +428,7 @@
 | org-projectile            | org-category-capture              | github   |
 | org-projectile            | org-projectile-helm               | github   |
 | ox-twiki                  | ox-tiddly                         | github   |
+| package-lint              | package-lint-flymake              | github   |
 | phpactor                  | company-phpactor                  | github   |
 | phpstan                   | flycheck-phpstan                  | github   |
 | pig-mode                  | pig-snippets                      | github   |

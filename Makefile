@@ -40,6 +40,7 @@ DEPS  += emacsql
 DEPS  += finalize
 DEPS  += ghub
 DEPS  += graphql
+DEPS  += hydra
 DEPS  += magit/lisp
 DEPS  += magit-popup
 DEPS  += melpa-db
