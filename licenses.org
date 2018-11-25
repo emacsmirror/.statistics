@@ -67,10 +67,10 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3363 |      63 |
+| GPL-3+        |  3369 |      63 |
 | GPL-2+        |  1174 |      22 |
-| MIT           |   161 |       3 |
-| GPL-3         |   157 |       3 |
+| MIT           |   162 |       3 |
+| GPL-3         |   158 |       3 |
 | MIT (x11)     |   137 |       3 |
 | BSD-2-clause  |    76 |       1 |
 | BSD-3-clause  |    47 |       1 |
@@ -101,9 +101,9 @@
 | UIUC          |     1 |       0 |
 | Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4716 |      88 |
+| total GNU     |  4723 |      88 |
 |---------------+-------+---------|
-| total         |  5330 |     100 |
+| total         |  5338 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -115,11 +115,11 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (1)   | Class  | License |
-|---------------+--------+---------|
-| counsel-etags | github |         |
+| Package (1) | Class  | License |
+|-------------+--------+---------|
+| emidje      | github |         |
 
-https://github.com/redguardtoo/counsel-etags/pull/31
+https://github.com/nubank/emidje/commit/cf30b95a03dbc5450f82401eca07943cff18a9aa#commitcomment-31439895
 
 * Emacsattic
 ** Overview
