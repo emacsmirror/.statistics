@@ -47,7 +47,7 @@ DEPS  += melpa-db
 DEPS  += org/lisp
 DEPS  += packed
 DEPS  += request
-DEPS  += transient
+DEPS  += transient/lisp
 DEPS  += treepy
 DEPS  += with-editor
 
