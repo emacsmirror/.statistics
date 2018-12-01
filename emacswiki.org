@@ -24,7 +24,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (24)   | Author                        | Depender          | Type | Author                                            |
+| Dependee (25)   | Author                        | Depender          | Type | Author                                            |
 |-----------------+-------------------------------+-------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key           | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm                | hard |                                                   |
@@ -45,6 +45,7 @@
 | highline        | Vinicius Jose Latorre         | emms              | hard | Jorgen Schäfer                                    |
 | icicles         | Drew Adams                    | rcodetools        | hard |                                                   |
 | imdb            |                               | movie             | hard | Lars Magne Ingebrigtsen                           |
+| isearch-prop    | Drew Adams                    | zones             | soft | Drew Adams                                        |
 | menu-bar+       | Drew Adams                    | highlight         | soft | Drew Adams                                        |
 | oddmuse         |                               | company           | soft | Nikolaj Schumacher                                |
 | org-json        | Changyuan Yu                  | es-mode           | hard | Lee Hinman                                        |
