@@ -69,7 +69,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (86)                    | Class       | Feature                  | Reason                                              |
+| Package (85)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -184,7 +184,6 @@
 | twittering-mode                 | github      | unicode                  | backward compatibility                              |
 | ucs-utils                       | github      | ucs-utils-6.0-delta      | backward compatibility                              |
 | vbasense                        | github      | anything-project         | anything                                            |
-| vcl-mode                        | github      | generic-mode             | XEmacs compatibility                                |
 | veri-kompass                    | gitlab      | loaddefs                 | generated external file                             |
 | vm                              | orphaned    | atomic-extents           | XEmacs compatibility                                |
 | vm                              | orphaned    | highlight-headers        | XEmacs compatibility                                |
