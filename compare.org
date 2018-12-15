@@ -62,11 +62,11 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  455 |        |       |   457 |     7 |       |
+| builtin     |  455 |        |       |   457 |     8 |       |
 | elpa        |  116 |    116 |       |       |   172 |       |
-| elpa-branch |    9 |      9 |       |       |    22 |       |
+| elpa-branch |    9 |      9 |       |       |    23 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4237 |   4237 |       |       |       |  3866 |
+| github      | 4248 |   4248 |       |       |       |  3877 |
 | gitlab      |   85 |     85 |       |       |       |    73 |
 | git         |   66 |     66 |       |       |       |    54 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   51 |     51 |       |       |       |       |
 | shelved     | 1204 |        |  1204 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7010 |   5351 |  1204 |   457 |   201 |  4033 |
+| total       | 7021 |   5362 |  1204 |   457 |   203 |  4044 |
 
 * Emacs
 ** Prefer elpa
@@ -183,17 +183,18 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (9) | Gelpa   | Reason                         |
-|-------------+---------+--------------------------------|
-| cl-generic  | subtree | Elpa has backport of builtin   |
-| cl-lib      | subtree | Elpa has backport of builtin   |
-| cl-print    | builtin | Elpa has copy of builtin       |
-| let-alist   | builtin | Elpa has copy of builtin       |
-| ntlm        | builtin | Elpa has copy of builtin       |
-| python      | builtin | Elpa has copy of builtin       |
-| seq         | subtree | Elpa has backport of builtin   |
-| soap-client | builtin | Elpa has copy of builtin       |
-| svg         | subtree | Elpa imports outdated upstream |
+| Package (10) | Gelpa   | Reason                         |
+|--------------+---------+--------------------------------|
+| cl-generic   | subtree | Elpa has backport of builtin   |
+| cl-lib       | subtree | Elpa has backport of builtin   |
+| cl-print     | builtin | Elpa has copy of builtin       |
+| flymake      | builtin | Elpa has copy of builtin       |
+| let-alist    | builtin | Elpa has copy of builtin       |
+| ntlm         | builtin | Elpa has copy of builtin       |
+| python       | builtin | Elpa has copy of builtin       |
+| seq          | subtree | Elpa has backport of builtin   |
+| soap-client  | builtin | Elpa has copy of builtin       |
+| svg          | subtree | Elpa imports outdated upstream |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
@@ -211,7 +212,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (69)               | Class    | Gelpa    | Link                                         |
+| Package (70)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -269,6 +270,7 @@
 | spinner                    | github   | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
 | sql-indent                 | github   | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                          |
 | ssh-deploy                 | github   | external | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]                  |
+| system-packages            | gitlab   | external | [[https://gitlab.com/jabranham/system-packages][jabranham/system-packages]]                    |
 | systemd                    | github   | subtree  | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                       |
 | test-simple                | github   | subtree  | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
 | tiny                       | github   | subtree  | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
