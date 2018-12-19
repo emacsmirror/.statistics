@@ -29,14 +29,11 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (2) | Package            | Shelved |
-|-------------+--------------------+---------|
-| ert         | ert                |         |
-| ert         | help-find-org-mode |         |
-| test-helper | cerbere            |         |
-| test-helper | mocha              |         |
+| Feature (1) | Package | Shelved |
+|-------------+---------+---------|
+| test-helper | cerbere |         |
+| test-helper | mocha   |         |
 
-https://github.com/EricCrosson/help-find-org-mode/pull/2
 https://github.com/nlamirault/cerbere/issues/5
 https://github.com/scottaj/mocha.el/issues/62
 

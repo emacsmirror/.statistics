@@ -63,10 +63,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  455 |        |       |   457 |     8 |       |
-| elpa        |  116 |    116 |       |       |   172 |       |
-| elpa-branch |    9 |      9 |       |       |    23 |       |
+| elpa        |  116 |    116 |       |       |   171 |       |
+| elpa-branch |    9 |      9 |       |       |    25 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4248 |   4248 |       |       |       |  3877 |
+| github      | 4251 |   4251 |       |       |       |  3881 |
 | gitlab      |   85 |     85 |       |       |       |    73 |
 | git         |   66 |     66 |       |       |       |    54 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -81,7 +81,7 @@
 | orphaned    |   51 |     51 |       |       |       |       |
 | shelved     | 1204 |        |  1204 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7021 |   5362 |  1204 |   457 |   203 |  4044 |
+| total       | 7024 |   5365 |  1204 |   457 |   204 |  4048 |
 
 * Emacs
 ** Prefer elpa
@@ -212,7 +212,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (70)               | Class    | Gelpa    | Link                                         |
+| Package (71)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -243,6 +243,7 @@
 | fountain-mode              | github   | external | [[https://github.com/rnkn/fountain-mode][rnkn/fountain-mode]]                           |
 | ggtags                     | github   | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
 | gnorb                      | github   | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
+| gpastel                    | github   | external | [[https://github.com/DamienCassou/gpastel][DamienCassou/gpastel]]                         |
 | highlight-escape-sequences | github   | subtree  | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
 | hydra                      | github   | subtree  | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
 | hyperbole                  | git      | external | [[http://www.gnu.org/software/hyperbole]]        |
@@ -263,7 +264,7 @@
 | pabbrev                    | github   | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
 | parsec                     | github   | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
 | pinentry                   | github   | subtree  | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                             |
-| posframe                   | github   | subtree  | [[https://github.com/tumashu/posframe][tumashu/posframe]]                             |
+| posframe                   | github   | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                             |
 | realgud                    | github   | subtree  | [[https://github.com/realgud/realgud][realgud/realgud]]                              |
 | rich-minority              | github   | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | sotlisp                    | github   | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
@@ -331,7 +332,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (87)      | Secondary package                 | Class    |
+| Primary package (88)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -440,6 +441,7 @@
 | processing-mode           | processing-snippets               | github   |
 | prosjekt                  | dirtree-prosjekt                  | github   |
 | prosjekt                  | helm-prosjekt                     | github   |
+| region-convert            | right-click-context               | github   |
 | request                   | request-deferred                  | github   |
 | restclient                | restclient-helm                   | github   |
 | rinari                    | ruby-compilation                  | github   |
