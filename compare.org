@@ -66,7 +66,7 @@
 | elpa        |  116 |    116 |       |       |   171 |       |
 | elpa-branch |    9 |      9 |       |       |    25 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4251 |   4251 |       |       |       |  3881 |
+| github      | 4262 |   4262 |       |       |       |  3894 |
 | gitlab      |   85 |     85 |       |       |       |    73 |
 | git         |   66 |     66 |       |       |       |    54 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   51 |     51 |       |       |       |       |
-| shelved     | 1204 |        |  1204 |       |       |       |
+| shelved     | 1206 |        |  1206 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7024 |   5365 |  1204 |   457 |   204 |  4048 |
+| total       | 7037 |   5376 |  1206 |   457 |   204 |  4061 |
 
 * Emacs
 ** Prefer elpa
@@ -462,6 +462,7 @@
 | term-manager              | term-projectile                   | github   |
 | tern                      | tern-auto-complete                | github   |
 | treemacs                  | treemacs-evil                     | github   |
+| treemacs                  | treemacs-icons-dired              | github   |
 | treemacs                  | treemacs-projectile               | github   |
 | use-package               | bind-chord                        | github   |
 | use-package               | bind-key                          | github   |
@@ -537,7 +538,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (66)        | Class    | Melpa     | Reason              |
+| Package (68)        | Class    | Melpa     | Reason              |
 |---------------------+----------+-----------+---------------------|
 | autotest            | minority | github    | all-in-one repo     |
 | bibliothek          | minority | github    | all-in-one repo     |
@@ -557,6 +558,8 @@
 | pylint              | minority | github    | mostly non-elisp    |
 | thrift              | minority | github    | mostly non-elisp    |
 | wisp-mode           | minority | bitbucket | mostly non-elisp    |
+| lsp-clangd          | shelved  | github    |                     |
+| lsp-python          | shelved  | github    |                     |
 | cg                  | orphaned | ORPHAN    | non-git/hg          |
 | clang-format        | orphaned | ORPHAN    | non-git/hg          |
 | confluence          | orphaned | ORPHAN    | non-git/hg          |
@@ -605,3 +608,5 @@
 | fold-dwim-org       | shelved  | github    | obsolete dependency |
 | auth-source-pass    | builtin  | github    | part of Emacs 26.1  |
 | less-css-mode       | builtin  | github    | part of Emacs 26.1  |
+
+- lsp-clang, lsp-python: https://github.com/melpa/melpa/pull/5894
