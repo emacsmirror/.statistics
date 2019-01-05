@@ -29,7 +29,7 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (3)    | Package             | Shelved |
+| Feature (4)    | Package             | Shelved |
 |----------------+---------------------+---------|
 | maude-mode     | abs-mode            |         |
 | maude-mode     | maude-mode          |         |
@@ -37,6 +37,8 @@
 | region-convert | right-click-context |         |
 | test-helper    | cerbere             |         |
 | test-helper    | mocha               |         |
+| test-support   | buttercup-junit     |         |
+| test-support   | ert-junit           |         |
 
 - https://github.com/abstools/abs-mode/issues/2
 - https://github.com/zonuexe/right-click-context/issues/3

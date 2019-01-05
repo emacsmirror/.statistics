@@ -68,7 +68,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (85)                    | Class       | Feature                  | Reason                                              |
+| Package (84)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -195,7 +195,6 @@
 | w3                              | elpa-branch | xpm-button               | XEmacs compatibility                                |
 | w3m                             | orphaned    | un-define                | XEmacs compatibility                                |
 | wanderlust                      | github      | spamfilter               | shelved soft                                        |
-| wisi                            | elpa        | wisi-compat-24.2         | backward compatibility                              |
 | yatex                           | hg          | hilit19                  | backward compatibility                              |
 
 * Patched packages
