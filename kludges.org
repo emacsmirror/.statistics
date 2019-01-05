@@ -41,23 +41,22 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (6)       | Class    | Feature          | Reason                 |
-|-------------------+----------+------------------+------------------------|
-| emacspeak         | github   | amixer           | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak         | github   | analog           | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak         | github   | auth-source-pass | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak         | github   | gf               | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak         | github   | nm               | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak         | github   | sudoku           | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak         | github   | tapestry         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak         | github   | tetris           | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| evil-textobj-line | github   | evil-tests       | badly named tests [[https://github.com/syohex/evil-textobj-line/issues/1][#1]]   |
-| riece             | git      | ptexinfmt        | fixme                  |
-| slime             | github   | cl-indent        | fixme                  |
-| twittering-mode   | github   | ssl              | backward compatibility |
-| twittering-mode   | github   | test             | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
-| w3m               | orphaned | ptexinfmt        | fixme                  |
-| w3m               | orphaned | rfc2368          | fixme                  |
+| Package (6)       | Class    | Feature    | Reason                 |
+|-------------------+----------+------------+------------------------|
+| emacspeak         | github   | amixer     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak         | github   | analog     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak         | github   | gf         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak         | github   | nm         | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak         | github   | sudoku     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak         | github   | tapestry   | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak         | github   | tetris     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| evil-textobj-line | github   | evil-tests | badly named tests [[https://github.com/syohex/evil-textobj-line/issues/1][#1]]   |
+| riece             | git      | ptexinfmt  | fixme                  |
+| slime             | github   | cl-indent  | fixme                  |
+| twittering-mode   | github   | ssl        | backward compatibility |
+| twittering-mode   | github   | test       | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
+| w3m               | orphaned | ptexinfmt  | fixme                  |
+| w3m               | orphaned | rfc2368    | fixme                  |
 
 * Drop required features
 #+NAME: required-drop

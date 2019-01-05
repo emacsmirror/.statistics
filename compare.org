@@ -66,8 +66,8 @@
 | elpa        |  116 |    116 |       |       |   171 |       |
 | elpa-branch |    9 |      9 |       |       |    25 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4262 |   4262 |       |       |       |  3894 |
-| gitlab      |   85 |     85 |       |       |       |    73 |
+| github      | 4268 |   4268 |       |       |       |  3900 |
+| gitlab      |   86 |     86 |       |       |       |    74 |
 | git         |   66 |     66 |       |       |       |    54 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   51 |     51 |       |       |       |       |
-| shelved     | 1206 |        |  1206 |       |       |       |
+| shelved     | 1207 |        |  1207 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7037 |   5376 |  1206 |   457 |   204 |  4061 |
+| total       | 7045 |   5383 |  1207 |   457 |   204 |  4068 |
 
 * Emacs
 ** Prefer elpa
@@ -332,7 +332,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (88)      | Secondary package                 | Class    |
+| Primary package (87)      | Secondary package                 | Class    |
 |---------------------------+-----------------------------------+----------|
 | ac-php                    | ac-php-core                       | github   |
 | ac-php                    | company-php                       | github   |
@@ -441,7 +441,6 @@
 | processing-mode           | processing-snippets               | github   |
 | prosjekt                  | dirtree-prosjekt                  | github   |
 | prosjekt                  | helm-prosjekt                     | github   |
-| region-convert            | right-click-context               | github   |
 | request                   | request-deferred                  | github   |
 | restclient                | restclient-helm                   | github   |
 | rinari                    | ruby-compilation                  | github   |
@@ -538,7 +537,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (68)        | Class    | Melpa     | Reason              |
+| Package (69)        | Class    | Melpa     | Reason              |
 |---------------------+----------+-----------+---------------------|
 | autotest            | minority | github    | all-in-one repo     |
 | bibliothek          | minority | github    | all-in-one repo     |
@@ -559,6 +558,7 @@
 | thrift              | minority | github    | mostly non-elisp    |
 | wisp-mode           | minority | bitbucket | mostly non-elisp    |
 | lsp-clangd          | shelved  | github    |                     |
+| lsp-fortran         | shelved  | github    |                     |
 | lsp-python          | shelved  | github    |                     |
 | cg                  | orphaned | ORPHAN    | non-git/hg          |
 | clang-format        | orphaned | ORPHAN    | non-git/hg          |
@@ -609,4 +609,4 @@
 | auth-source-pass    | builtin  | github    | part of Emacs 26.1  |
 | less-css-mode       | builtin  | github    | part of Emacs 26.1  |
 
-- lsp-clang, lsp-python: https://github.com/melpa/melpa/pull/5894
+- lsp-*: https://github.com/melpa/melpa/pull/5894
