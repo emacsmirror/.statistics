@@ -62,11 +62,11 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  455 |        |       |   457 |     8 |       |
-| elpa        |  116 |    116 |       |       |   171 |       |
-| elpa-branch |    9 |      9 |       |       |    25 |       |
+| builtin     |  455 |        |       |   457 |     9 |       |
+| elpa        |  116 |    116 |       |       |   170 |       |
+| elpa-branch |   10 |     10 |       |       |    28 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4268 |   4268 |       |       |       |  3900 |
+| github      | 4269 |   4269 |       |       |       |  3901 |
 | gitlab      |   86 |     86 |       |       |       |    74 |
 | git         |   66 |     66 |       |       |       |    54 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -79,9 +79,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   51 |     51 |       |       |       |       |
-| shelved     | 1207 |        |  1207 |       |       |       |
+| shelved     | 1209 |        |  1209 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7045 |   5383 |  1207 |   457 |   204 |  4068 |
+| total       | 7049 |   5385 |  1209 |   457 |   207 |  4069 |
 
 * Emacs
 ** Prefer elpa
@@ -183,13 +183,14 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (10) | Gelpa   | Reason                         |
+| Package (11) | Gelpa   | Reason                         |
 |--------------+---------+--------------------------------|
 | cl-generic   | subtree | Elpa has backport of builtin   |
 | cl-lib       | subtree | Elpa has backport of builtin   |
 | cl-print     | builtin | Elpa has copy of builtin       |
 | flymake      | builtin | Elpa has copy of builtin       |
 | let-alist    | builtin | Elpa has copy of builtin       |
+| map          | builtin | Elpa has copy of builtin       |
 | ntlm         | builtin | Elpa has copy of builtin       |
 | python       | builtin | Elpa has copy of builtin       |
 | seq          | subtree | Elpa has backport of builtin   |
@@ -212,7 +213,7 @@
                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (71)               | Class    | Gelpa    | Link                                         |
+| Package (73)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -249,6 +250,7 @@
 | hyperbole                  | git      | external | [[http://www.gnu.org/software/hyperbole]]        |
 | ioccur                     | github   | subtree  | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
 | ivy                        | github   | subtree  | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
+| ivy-explorer               | github   | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                         |
 | js2-mode                   | github   | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
 | json-mode                  | github   | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
 | jsonrpc                    | file     | builtin  |                                              |
@@ -259,6 +261,7 @@
 | mmm-mode                   | github   | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                             |
 | nameless                   | github   | subtree  | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
 | names                      | github   | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
+| objed                      | github   | external | [[https://github.com/clemera/objed][clemera/objed]]                                |
 | on-screen                  | github   | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
 | org                        | git      | builtin  | [[https://orgmode.org]]                          |
 | pabbrev                    | github   | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
