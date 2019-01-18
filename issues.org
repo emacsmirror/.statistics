@@ -65,8 +65,9 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature    | Provider |
-|-------------+--------+------------+----------|
-| lsp-p4      | github | lsp-common |          |
+| Package (2) | Class  | Feature         | Provider |
+|-------------+--------+-----------------+----------|
+| ada-mode    | elpa   | project-patches |          |
+| lsp-p4      | github | lsp-common      |          |
 
 - lsp-*: https://github.com/melpa/melpa/pull/5894

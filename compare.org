@@ -12,7 +12,7 @@
          (builtin-emir (length (epkgs 'name 'epkg-builtin-package-p)))
          (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1]
-                                         [builtin])))
+                                         [core])))
          (elpa         (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1
                                           :and (notnull released)]
@@ -24,7 +24,7 @@
          (shelved      (length (epkgs 'name 'epkg-shelved-package-p)))
          (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
                   hline
-                  (builtin     ,builtin-emir "" "" ,builtin ,builtin-elpa "")
+                  (builtin     ,builtin-emir 0 "" ,builtin ,builtin-elpa "")
                   (elpa        0  0  "" "" ,elpa "")
                   (elpa-branch 0  0  "" "" ,elpa-branch "")
                   hline
@@ -44,10 +44,19 @@
                   (shelved     ,shelved "" ,shelved "" "" "")
                   hline)))
     (dolist (class (epkgs 'class 'epkg-mirrored-package--eieio-childp))
+      (when (eq class 'elpa-core)
+        (setq class 'builtin))
       (cl-incf (nth 1 (assq class table)))
       (cl-incf (nth 2 (assq class table))))
     (dolist (fetcher (epkg-sql [:select class :from melpa-recipes]))
       (cl-incf (nth 6 (assq (car fetcher) table))))
+    ;; KLUDGE for org.  Avoid saying that this builtin package is
+    ;; missing just because we mirror it from the upstream repo.
+    ;; Also don't count it twice.
+    (cl-incf (nth 1 (assq 'builtin table)))
+    (cl-incf (nth 2 (assq 'builtin table)))
+    (cl-decf (nth 1 (assq 'git table)))
+    (cl-decf (nth 2 (assq 'git table)))
     `(,@table
       ("total"
        ,@(--reduce (cl-mapcar (lambda (a b)
@@ -62,26 +71,26 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  455 |        |       |   457 |     9 |       |
+| builtin     |  457 |      8 |       |   457 |     9 |       |
 | elpa        |  118 |    118 |       |       |   169 |       |
 | elpa-branch |   10 |     10 |       |       |    28 |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 4270 |   4270 |       |       |       |  3902 |
 | gitlab      |   86 |     86 |       |       |       |    74 |
-| git         |   66 |     66 |       |       |       |    54 |
+| git         |   65 |     65 |       |       |       |    54 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  634 |    634 |       |       |       |       |
-| file        |   59 |     59 |       |       |       |       |
+| file        |   58 |     58 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   51 |     51 |       |       |       |       |
 | shelved     | 1209 |        |  1209 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7052 |   5388 |  1209 |   457 |   206 |  4070 |
+| total       | 7052 |   5394 |  1209 |   457 |   206 |  4070 |
 
 * Emacs
 ** Prefer elpa
@@ -93,12 +102,18 @@
                :where (= packages:name builtin-libraries:package)
                :and packages:class :in $v1
                :order-by [(asc packages:name)]]
-              [elpa elpa-branch]))
+              [elpa elpa-branch elpa-core]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
-| Package (1) | Class |
-|-------------+-------|
-| ada-mode    | elpa  |
+| Package (7) | Class     |
+|-------------+-----------|
+| ada-mode    | elpa      |
+| cl-print    | elpa-core |
+| flymake     | elpa-core |
+| let-alist   | elpa-core |
+| map         | elpa-core |
+| ntlm        | elpa-core |
+| python      | elpa-core |
 
 ** Prefer upstream
 #+NAME: builtin-prefer-upstream
@@ -109,7 +124,7 @@
                :where (= packages:name builtin-libraries:package)
                :and packages:class :not :in $v1
                :order-by [(asc packages:name)]]
-              [builtin elpa elpa-branch]))
+              [builtin elpa elpa-branch elpa-core]))
 #+END_SRC
 #+RESULTS: builtin-prefer-upstream
 | Package (1) | Class |
@@ -120,12 +135,16 @@
 ** New
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Gelpa")
+  (epkg-with-org-header ("Package" "Class")
     (-filter (pcase-lambda (`(,name ,class))
-               (not (assoc name emir-pending-packages)))
-             (epkg-sql [:select [name class]
+               (and (not (assoc name emir-pending-packages))
+                    (not (assoc name emir--preferred-builtins))
+                    (or (not (eq class 'core))
+                        (epkg-builtin-package-p (epkg name)))))
+             (epkg-sql [:select [name class epkg-package]
                         :from gelpa-recipes
-                        :where (isnull epkg-package)
+                        :where (or (isnull epkg-package)
+                                   (= class 'core))
                         :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-new
@@ -185,37 +204,33 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (11) | Gelpa   | Reason                         |
-|--------------+---------+--------------------------------|
-| cl-generic   | subtree | Elpa has backport of builtin   |
-| cl-lib       | subtree | Elpa has backport of builtin   |
-| cl-print     | builtin | Elpa has copy of builtin       |
-| flymake      | builtin | Elpa has copy of builtin       |
-| let-alist    | builtin | Elpa has copy of builtin       |
-| map          | builtin | Elpa has copy of builtin       |
-| ntlm         | builtin | Elpa has copy of builtin       |
-| python       | builtin | Elpa has copy of builtin       |
-| seq          | subtree | Elpa has backport of builtin   |
-| soap-client  | builtin | Elpa has copy of builtin       |
-| svg          | subtree | Elpa imports outdated upstream |
+| Package (5) | Gelpa   | Reason                        |
+|-------------+---------+-------------------------------|
+| cl-generic  | subtree | backport of builtin           |
+| cl-lib      | subtree | backport of builtin           |
+| seq         | subtree | backport of builtin           |
+| soap-client | core    | mulit-file core not supported |
+| svg         | subtree | import of outdated upstream   |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Gelpa" "Link")
-    (mapcar (-lambda ((name class gelpa))
-              (list name class gelpa (epkg-org-link name)))
-            (epkg-sql [:select :distinct [packages:name
-                                          packages:class
-                                          gelpa-recipes:class]
-                       :from [packages gelpa-recipes]
-                       :where (= packages:name gelpa-recipes:epkg-package)
-                       :and packages:class :not :in $v1
-                       :order-by [(asc packages:name)]]
-                      [builtin elpa elpa-branch])))
+    (-keep (pcase-lambda (`(,name ,class ,gelpa))
+               (and (not (and (eq class 'elpa-core)
+                              (eq gelpa 'core)))
+                    (list name class gelpa (epkg-org-link name))))
+             (epkg-sql [:select :distinct [packages:name
+                                           packages:class
+                                           gelpa-recipes:class]
+                        :from [packages gelpa-recipes]
+                        :where (= packages:name gelpa-recipes:epkg-package)
+                        :and packages:class :not :in $v1
+                        :order-by [(asc packages:name)]]
+                       [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (73)               | Class    | Gelpa    | Link                                         |
+| Package (72)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -255,7 +270,6 @@
 | ivy-explorer               | github   | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                         |
 | js2-mode                   | github   | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
 | json-mode                  | github   | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
-| jsonrpc                    | file     | builtin  |                                              |
 | load-relative              | github   | subtree  | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
 | loc-changes                | github   | subtree  | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
 | loccur                     | github   | subtree  | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
@@ -265,7 +279,7 @@
 | names                      | github   | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
 | objed                      | github   | external | [[https://github.com/clemera/objed][clemera/objed]]                                |
 | on-screen                  | github   | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
-| org                        | git      | builtin  | [[https://orgmode.org]]                          |
+| org                        | git      | core     | [[https://orgmode.org]]                          |
 | pabbrev                    | github   | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
 | parsec                     | github   | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
 | pinentry                   | github   | subtree  | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                             |
