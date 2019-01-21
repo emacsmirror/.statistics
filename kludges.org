@@ -314,18 +314,17 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (12)        | Class   | Branch       |
-|---------------------+---------+--------------|
-| apel                | github  | apel-wl      |
-| borg-queen          | github  | initial-dev  |
-| caml                | subtree | trunk        |
-| distinguished-theme | github  | develop      |
-| ensime              | github  | 2.0          |
-| flim                | github  | flim-1_14-wl |
-| neato-graph-bar     | gitlab  | release      |
-| nord-theme          | github  | develop      |
-| plaster             | github  | rewrite      |
-| propfont-mixed      | github  | github       |
-| semi                | github  | semi-1_14-wl |
-| vc-fossil           | github  | trunk        |
+| Package (11)        | Class  | Branch       |
+|---------------------+--------+--------------|
+| apel                | github | apel-wl      |
+| borg-queen          | github | initial-dev  |
+| distinguished-theme | github | develop      |
+| ensime              | github | 2.0          |
+| flim                | github | flim-1_14-wl |
+| neato-graph-bar     | gitlab | release      |
+| nord-theme          | github | develop      |
+| plaster             | github | rewrite      |
+| propfont-mixed      | github | github       |
+| semi                | github | semi-1_14-wl |
+| vc-fossil           | github | trunk        |
 
