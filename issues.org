@@ -65,9 +65,8 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2) | Class  | Feature         | Provider |
-|-------------+--------+-----------------+----------|
-| ada-mode    | elpa   | project-patches |          |
-| lsp-p4      | github | lsp-common      |          |
+| Package (1) | Class | Feature         | Provider |
+|-------------+-------+-----------------+----------|
+| ada-mode    | elpa  | project-patches |          |
 
-- lsp-p4: https://github.com/dmakarov/p4ls/issues/2
+- ada-mode: send email to Stephen Leake
