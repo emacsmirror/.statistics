@@ -24,7 +24,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (25)   | Author                        | Depender          | Type | Author                                            |
+| Dependee (26)   | Author                        | Depender          | Type | Author                                            |
 |-----------------+-------------------------------+-------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key           | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm                | hard |                                                   |
@@ -52,6 +52,7 @@
 | policy-switch   | Christoffer S. Hansen         | one-key           | soft | Andy Stewart                                      |
 | run-assoc       |                               | look-dired        | hard | Joe Bloggs                                        |
 | run-assoc       |                               | one-key           | soft | Andy Stewart                                      |
+| screenshot      | rubikitch                     | easy-escape       | hard | Clément Pit--Claudel                              |
 | strings         | Drew Adams                    | ergoemacs-mode    | soft | David Capello                                     |
 | tooltip-help    |                               | org-pua           | hard | Henry G. Weller                                   |
 | unit-test       | Mark Triggs                   | sbt               | soft |                                                   |
