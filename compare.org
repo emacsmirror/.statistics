@@ -73,11 +73,11 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  457 |      8 |       |   457 |     9 |       |
 | elpa        |  118 |    118 |       |       |   169 |       |
-| elpa-branch |   10 |     10 |       |       |    28 |       |
+| elpa-branch |   10 |     10 |       |       |    30 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4289 |   4289 |       |       |       |  3918 |
-| gitlab      |   89 |     89 |       |       |       |    77 |
-| git         |   66 |     66 |       |       |       |    55 |
+| github      | 4291 |   4291 |       |       |       |  3919 |
+| gitlab      |   90 |     90 |       |       |       |    77 |
+| git         |   67 |     67 |       |       |       |    56 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
@@ -90,7 +90,7 @@
 | orphaned    |   51 |     51 |       |       |       |       |
 | shelved     | 1219 |        |  1219 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7085 |   5417 |  1219 |   457 |   206 |  4090 |
+| total       | 7089 |   5421 |  1219 |   457 |   208 |  4092 |
 
 * Emacs
 ** Prefer elpa
@@ -230,7 +230,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (72)               | Class    | Gelpa    | Link                                         |
+| Package (74)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -262,6 +262,7 @@
 | ggtags                     | github   | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
 | gnorb                      | github   | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
 | gpastel                    | github   | external | [[https://github.com/DamienCassou/gpastel][DamienCassou/gpastel]]                         |
+| greader                    | gitlab   | external | [[https://gitlab.com/michelangelo-rodriguez/greader][michelangelo-rodriguez/greader]]               |
 | highlight-escape-sequences | github   | subtree  | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]            |
 | hydra                      | github   | subtree  | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                |
 | hyperbole                  | git      | external | [[http://www.gnu.org/software/hyperbole]]        |
@@ -302,6 +303,7 @@
 | websocket                  | github   | subtree  | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
 | which-key                  | github   | subtree  | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]                      |
 | xelb                       | github   | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
+| xr                         | github   | external | [[https://github.com/mattiase/xr][mattiase/xr]]                                  |
 | yasnippet                  | github   | subtree  | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                         |
 | ztree                      | github   | subtree  | [[https://github.com/fourier/ztree][fourier/ztree]]                                |
 

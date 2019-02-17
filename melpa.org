@@ -65,7 +65,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (595)                | Link                                    |
+| Package (596)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -650,6 +650,7 @@ please first make sure they meet the minimal requirements.
 | xargs-grep                   | [[https://github.com/lewang/le_emacs_xargs_grep][lewang/le_emacs_xargs_grep]]              |
 | xdg-paths                    | [[https://github.com/tomprince/xdg-paths-el][tomprince/xdg-paths-el]]                  |
 | xelb                         | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                             |
+| xr                           | [[https://github.com/mattiase/xr][mattiase/xr]]                             |
 | xrc                          | [[https://github.com/spacebat/xrc][spacebat/xrc]]                            |
 | xyzzy                        | [[https://github.com/tomoya/xyzzy.el][tomoya/xyzzy.el]]                         |
 | ya-cppref                    | [[https://github.com/whitypig/ya-cppref][whitypig/ya-cppref]]                      |
@@ -672,20 +673,21 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
-| Package (12)     | Link                  |
-|------------------+-----------------------|
-| dired-sequence   | [[https://gitlab.com/jave/dired-sequence][jave/dired-sequence]]   |
-| dna-debug        | [[https://gitlab.com/jave/dna-debug][jave/dna-debug]]        |
-| dragbox          | [[https://gitlab.com/jave/dragbox][jave/dragbox]]          |
-| emmental         | [[https://gitlab.com/jave/emmental][jave/emmental]]         |
-| emsane           | [[https://gitlab.com/jave/emsane][jave/emsane]]           |
-| lookout          | [[https://gitlab.com/u11/lookout][u11/lookout]]           |
-| pocketcompletion | [[https://gitlab.com/jave/pocketcompletion][jave/pocketcompletion]] |
-| sh-proxy         | [[https://gitlab.com/jave/sh-proxy][jave/sh-proxy]]         |
-| u-appt           | [[https://gitlab.com/u11/u-appt][u11/u-appt]]            |
-| u-color-cycle    | [[https://gitlab.com/u11/u-color-cycle][u11/u-color-cycle]]     |
-| u-mandelbrot     | [[https://gitlab.com/u11/u-mandelbrot][u11/u-mandelbrot]]      |
-| zen-mode         | [[https://gitlab.com/jave/zen-mode][jave/zen-mode]]         |
+| Package (13)     | Link                           |
+|------------------+--------------------------------|
+| dired-sequence   | [[https://gitlab.com/jave/dired-sequence][jave/dired-sequence]]            |
+| dna-debug        | [[https://gitlab.com/jave/dna-debug][jave/dna-debug]]                 |
+| dragbox          | [[https://gitlab.com/jave/dragbox][jave/dragbox]]                   |
+| emmental         | [[https://gitlab.com/jave/emmental][jave/emmental]]                  |
+| emsane           | [[https://gitlab.com/jave/emsane][jave/emsane]]                    |
+| greader          | [[https://gitlab.com/michelangelo-rodriguez/greader][michelangelo-rodriguez/greader]] |
+| lookout          | [[https://gitlab.com/u11/lookout][u11/lookout]]                    |
+| pocketcompletion | [[https://gitlab.com/jave/pocketcompletion][jave/pocketcompletion]]          |
+| sh-proxy         | [[https://gitlab.com/jave/sh-proxy][jave/sh-proxy]]                  |
+| u-appt           | [[https://gitlab.com/u11/u-appt][u11/u-appt]]                     |
+| u-color-cycle    | [[https://gitlab.com/u11/u-color-cycle][u11/u-color-cycle]]              |
+| u-mandelbrot     | [[https://gitlab.com/u11/u-mandelbrot][u11/u-mandelbrot]]               |
+| zen-mode         | [[https://gitlab.com/jave/zen-mode][jave/zen-mode]]                  |
 
 ** Git
 #+NAME: missing-git
