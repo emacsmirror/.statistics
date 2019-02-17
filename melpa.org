@@ -61,11 +61,12 @@ please first make sure they meet the minimal requirements.
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
+                 (not (gelpa-get it))
                  (list it (epkg-org-link it)))
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (596)                | Link                                    |
+| Package (584)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -73,7 +74,6 @@ please first make sure they meet the minimal requirements.
 | ac-dscanner                  | [[https://github.com/jmaschme/ac-dscanner][jmaschme/ac-dscanner]]                    |
 | ac-r                         | [[https://github.com/mattfidler/ac-R][mattfidler/ac-R]]                         |
 | accelerate                   | [[https://github.com/yagunov/accelerate.el][yagunov/accelerate.el]]                   |
-| ack                          | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                           |
 | acme-mouse                   | [[https://github.com/akrito/acme-mouse][akrito/acme-mouse]]                       |
 | activator                    | [[https://github.com/apg/activator-el][apg/activator-el]]                        |
 | ajc-java-complete            | [[https://github.com/emacs-java/auto-java-complete][emacs-java/auto-java-complete]]           |
@@ -118,7 +118,6 @@ please first make sure they meet the minimal requirements.
 | buffer-action                | [[https://github.com/xwl/buffer-action][xwl/buffer-action]]                       |
 | buffer-timer                 | [[https://github.com/hardaker/elisp-buffer-timer][hardaker/elisp-buffer-timer]]             |
 | buftoggle                    | [[https://github.com/michaelw/buftoggle][michaelw/buftoggle]]                      |
-| bug-hunter                   | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]              |
 | bundle                       | [[https://github.com/tarao/bundle-el][tarao/bundle-el]]                         |
 | ca2+                         | [[https://github.com/hjanetzek/ca2][hjanetzek/ca2]]                           |
 | campfire                     | [[https://github.com/timcharper/campfire-el][timcharper/campfire-el]]                  |
@@ -163,7 +162,6 @@ please first make sure they meet the minimal requirements.
 | dae                          | [[https://github.com/larsmagne/dae.el][larsmagne/dae.el]]                        |
 | darken-text                  | [[https://github.com/renard/darken-text][renard/darken-text]]                      |
 | db-sql                       | [[https://github.com/renard/db-sql-el][renard/db-sql-el]]                        |
-| dbus-codegen                 | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                    |
 | dedent                       | [[https://github.com/deactivated/dedent-el][deactivated/dedent-el]]                   |
 | defhook                      | [[https://github.com/neil-smithline-elisp/defhook][neil-smithline-elisp/defhook]]            |
 | delim-pad                    | [[https://github.com/lewang/delim-pad][lewang/delim-pad]]                        |
@@ -236,7 +234,6 @@ please first make sure they meet the minimal requirements.
 | evimodeline                  | [[https://github.com/danderson/evimodeline][danderson/evimodeline]]                   |
 | exim                         | [[https://github.com/ch11ng/exim][ch11ng/exim]]                             |
 | expectations-mode            | [[https://github.com/gar3thjon3s/expectations-mode][clojure-expectations/expectations-mode]]  |
-| exwm                         | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                             |
 | ezbl                         | [[https://github.com/haxney/ezbl][haxney/ezbl]]                             |
 | fab                          | [[https://github.com/davidmiller/fabmacs][davidmiller/fabmacs]]                     |
 | festival                     | [[https://github.com/davep/festival.el][davep/festival.el]]                       |
@@ -251,7 +248,6 @@ please first make sure they meet the minimal requirements.
 | font-lock-ext                | [[https://github.com/sensorflo/font-lock-ext][sensorflo/font-lock-ext]]                 |
 | font-lock-regression-suite   | [[https://github.com/Lindydancer/font-lock-regression-suite][Lindydancer/font-lock-regression-suite]]  |
 | forml-mode                   | [[https://github.com/jvshahid/forml-mode][jvshahid/forml-mode]]                     |
-| fountain-mode                | [[https://github.com/rnkn/fountain-mode][rnkn/fountain-mode]]                      |
 | foursquare                   | [[https://github.com/hober/foursquare-el][hober/foursquare-el]]                     |
 | frame-bufs                   | [[https://github.com/alpaker/Frame-Bufs][alpaker/Frame-Bufs]]                      |
 | frame-ctr                    | [[https://github.com/takaxp/frame-ctr][takaxp/frame-ctr]]                        |
@@ -279,7 +275,6 @@ please first make sure they meet the minimal requirements.
 | github-api-v3                | [[https://github.com/rsanders/github-api-v3.el][rsanders/github-api-v3.el]]               |
 | gitsum                       | [[https://github.com/chneukirchen/gitsum][chneukirchen/gitsum]]                     |
 | gmail-notifier               | [[https://github.com/xwl/gmail-notifier][xwl/gmail-notifier]]                      |
-| gnorb                        | [[https://github.com/girzel/gnorb][girzel/gnorb]]                            |
 | gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                       |
 | gnus-harvest                 | [[https://github.com/jwiegley/gnus-harvest][jwiegley/gnus-harvest]]                   |
 | gnus-identities              | [[https://github.com/renard/gnus-identities][renard/gnus-identities]]                  |
@@ -405,7 +400,6 @@ please first make sure they meet the minimal requirements.
 | mk-project                   | [[https://github.com/mattkeller/mk-project][mattkeller/mk-project]]                   |
 | mk-project+                  | [[https://github.com/scjung/mk-project-plus][scjung/mk-project-plus]]                  |
 | mks                          | [[https://github.com/sensorflo/mks][sensorflo/mks]]                           |
-| mmm-mode                     | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                        |
 | modelica-mode                | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            |
 | moneylog                     | [[https://github.com/watter/moneylog-el][watter/moneylog-el]]                      |
 | movie                        | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      |
@@ -491,7 +485,6 @@ please first make sure they meet the minimal requirements.
 | phantomjs                    | [[https://github.com/nicferrier/phantomjsel][nicferrier/phantomjsel]]                  |
 | pickel                       | [[https://github.com/tlh/pickel.el][tlh/pickel.el]]                           |
 | picolisp-wiki-mode           | [[https://github.com/tj64/picolisp-wiki-mode][tj64/picolisp-wiki-mode]]                 |
-| pinentry                     | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                        |
 | plain-org-wiki               | [[https://github.com/abo-abo/plain-org-wiki][abo-abo/plain-org-wiki]]                  |
 | plone-mode                   | [[https://github.com/jone/plone-mode.el][jone/plone-mode.el]]                      |
 | popup+                       | [[https://github.com/scjung/popup-plus][scjung/popup-plus]]                       |
@@ -570,9 +563,7 @@ please first make sure they meet the minimal requirements.
 | sourcepawn-mode              | [[https://github.com/agrif/sourcepawn-mode][agrif/sourcepawn-mode]]                   |
 | speechd                      | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     |
 | spinasm-mode                 | [[https://github.com/segoh/spinasm-mode][segoh/spinasm-mode]]                      |
-| spinner                      | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                    |
 | spss                         | [[https://github.com/vapniks/spss-mode][vapniks/spss-mode]]                       |
-| sql-indent                   | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                     |
 | sql-transform                | [[https://github.com/kensanata/sql-transform][kensanata/sql-transform]]                 |
 | ssh-config                   | [[https://github.com/renard/ssh-config-el][renard/ssh-config-el]]                    |
 | ssl-mode                     | [[https://github.com/npc3/ssl-mode][npc3/ssl-mode]]                           |
@@ -649,8 +640,6 @@ please first make sure they meet the minimal requirements.
 | wubi                         | [[https://github.com/xwl/wubi][xwl/wubi]]                                |
 | xargs-grep                   | [[https://github.com/lewang/le_emacs_xargs_grep][lewang/le_emacs_xargs_grep]]              |
 | xdg-paths                    | [[https://github.com/tomprince/xdg-paths-el][tomprince/xdg-paths-el]]                  |
-| xelb                         | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                             |
-| xr                           | [[https://github.com/mattiase/xr][mattiase/xr]]                             |
 | xrc                          | [[https://github.com/spacebat/xrc][spacebat/xrc]]                            |
 | xyzzy                        | [[https://github.com/tomoya/xyzzy.el][tomoya/xyzzy.el]]                         |
 | ya-cppref                    | [[https://github.com/whitypig/ya-cppref][whitypig/ya-cppref]]                      |
@@ -669,59 +658,57 @@ please first make sure they meet the minimal requirements.
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
+                 (not (gelpa-get it))
                  (list it (epkg-org-link it)))
 	    (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
-| Package (13)     | Link                           |
-|------------------+--------------------------------|
-| dired-sequence   | [[https://gitlab.com/jave/dired-sequence][jave/dired-sequence]]            |
-| dna-debug        | [[https://gitlab.com/jave/dna-debug][jave/dna-debug]]                 |
-| dragbox          | [[https://gitlab.com/jave/dragbox][jave/dragbox]]                   |
-| emmental         | [[https://gitlab.com/jave/emmental][jave/emmental]]                  |
-| emsane           | [[https://gitlab.com/jave/emsane][jave/emsane]]                    |
-| greader          | [[https://gitlab.com/michelangelo-rodriguez/greader][michelangelo-rodriguez/greader]] |
-| lookout          | [[https://gitlab.com/u11/lookout][u11/lookout]]                    |
-| pocketcompletion | [[https://gitlab.com/jave/pocketcompletion][jave/pocketcompletion]]          |
-| sh-proxy         | [[https://gitlab.com/jave/sh-proxy][jave/sh-proxy]]                  |
-| u-appt           | [[https://gitlab.com/u11/u-appt][u11/u-appt]]                     |
-| u-color-cycle    | [[https://gitlab.com/u11/u-color-cycle][u11/u-color-cycle]]              |
-| u-mandelbrot     | [[https://gitlab.com/u11/u-mandelbrot][u11/u-mandelbrot]]               |
-| zen-mode         | [[https://gitlab.com/jave/zen-mode][jave/zen-mode]]                  |
+| Package (12)     | Link                  |
+|------------------+-----------------------|
+| dired-sequence   | [[https://gitlab.com/jave/dired-sequence][jave/dired-sequence]]   |
+| dna-debug        | [[https://gitlab.com/jave/dna-debug][jave/dna-debug]]        |
+| dragbox          | [[https://gitlab.com/jave/dragbox][jave/dragbox]]          |
+| emmental         | [[https://gitlab.com/jave/emmental][jave/emmental]]         |
+| emsane           | [[https://gitlab.com/jave/emsane][jave/emsane]]           |
+| lookout          | [[https://gitlab.com/u11/lookout][u11/lookout]]           |
+| pocketcompletion | [[https://gitlab.com/jave/pocketcompletion][jave/pocketcompletion]] |
+| sh-proxy         | [[https://gitlab.com/jave/sh-proxy][jave/sh-proxy]]         |
+| u-appt           | [[https://gitlab.com/u11/u-appt][u11/u-appt]]            |
+| u-color-cycle    | [[https://gitlab.com/u11/u-color-cycle][u11/u-color-cycle]]     |
+| u-mandelbrot     | [[https://gitlab.com/u11/u-mandelbrot][u11/u-mandelbrot]]      |
+| zen-mode         | [[https://gitlab.com/jave/zen-mode][jave/zen-mode]]         |
 
 ** Git
 #+NAME: missing-git
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
+                 (not (gelpa-get it))
                  (list it (epkg-org-link it)))
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (16)      | Link                                         |
-|-------------------+----------------------------------------------|
-| auctex            |                                              |
-| auto-mounter      |                                              |
-| delight           | [[https://savannah.nongnu.org/projects/delight]] |
-| ebuild-mode       |                                              |
-| ee                |                                              |
-| gpicker           |                                              |
-| hyperbole         | [[http://www.gnu.org/software/hyperbole]]        |
-| im-notification   |                                              |
-| lilypond          |                                              |
-| org               | [[https://orgmode.org]]                          |
-| pmd               |                                              |
-| python-pep8       |                                              |
-| python-pylint     |                                              |
-| rcirc-ssh         |                                              |
-| riece             | [[http://www.nongnu.org/riece]]                  |
-| slate-config-mode |                                              |
+| Package (12)      | Link                        |
+|-------------------+-----------------------------|
+| auto-mounter      |                             |
+| ebuild-mode       |                             |
+| ee                |                             |
+| gpicker           |                             |
+| im-notification   |                             |
+| lilypond          |                             |
+| pmd               |                             |
+| python-pep8       |                             |
+| python-pylint     |                             |
+| rcirc-ssh         |                             |
+| riece             | [[http://www.nongnu.org/riece]] |
+| slate-config-mode |                             |
 
 ** Bitbucket
 #+NAME: missing-bitbucket
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
+                 (not (gelpa-get it))
                  (list it (epkg-org-link it)))
 	    (epkgs 'name 'epkg-bitbucket-package)))
 #+END_SRC
