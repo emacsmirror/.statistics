@@ -75,7 +75,7 @@
 | elpa        |  118 |    118 |       |       |   169 |       |
 | elpa-branch |   10 |     10 |       |       |    34 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4295 |   4295 |       |       |       |  3919 |
+| github      | 4311 |   4311 |       |       |       |  3934 |
 | gitlab      |   91 |     91 |       |       |       |    77 |
 | git         |   67 |     67 |       |       |       |    56 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -88,9 +88,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   50 |     50 |       |       |       |       |
-| shelved     | 1219 |        |  1219 |       |       |       |
+| shelved     | 1218 |        |  1218 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7093 |   5425 |  1219 |   457 |   212 |  4092 |
+| total       | 7108 |   5441 |  1218 |   457 |   212 |  4107 |
 
 * Emacs
 ** Prefer elpa
@@ -357,7 +357,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (87)    | Secondary package                 | Class  |
+| Primary package (86)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -411,7 +411,6 @@
 | flyspell-correct        | flyspell-correct-helm             | github |
 | flyspell-correct        | flyspell-correct-ivy              | github |
 | flyspell-correct        | flyspell-correct-popup            | github |
-| ghub                    | glab                              | github |
 | git-emacs               | git-blamed                        | github |
 | git-modes               | gitattributes-mode                | github |
 | git-modes               | gitconfig-mode                    | github |
