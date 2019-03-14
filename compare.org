@@ -72,8 +72,8 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  457 |      8 |       |   457 |     9 |       |
-| elpa        |  118 |    118 |       |       |   169 |       |
-| elpa-branch |   10 |     10 |       |       |    34 |       |
+| elpa        |  119 |    119 |       |       |   170 |       |
+| elpa-branch |   10 |     10 |       |       |    35 |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 4315 |   4315 |       |       |       |  3938 |
 | gitlab      |   92 |     92 |       |       |       |    78 |
@@ -90,7 +90,7 @@
 | orphaned    |   50 |     50 |       |       |       |       |
 | shelved     | 1218 |        |  1218 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7113 |   5446 |  1218 |   457 |   212 |  4112 |
+| total       | 7114 |   5447 |  1218 |   457 |   214 |  4112 |
 
 * Emacs
 ** Prefer elpa
@@ -230,7 +230,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (78)               | Class    | Gelpa    | Link                                         |
+| Package (79)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -287,6 +287,7 @@
 | org                        | git      | core     | [[https://orgmode.org]]                          |
 | pabbrev                    | github   | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
 | parsec                     | github   | subtree  | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                        |
+| peg                        | github   | external | [[https://github.com/ellerh/peg.el][ellerh/peg.el]]                                |
 | pinentry                   | github   | subtree  | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                             |
 | posframe                   | github   | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                             |
 | realgud                    | github   | subtree  | [[https://github.com/realgud/realgud][realgud/realgud]]                              |

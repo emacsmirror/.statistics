@@ -65,8 +65,17 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class | Feature         | Provider |
-|-------------+-------+-----------------+----------|
-| ada-mode    | elpa  | project-patches |          |
+| Package (9)         | Class  | Feature         | Provider |
+|---------------------+--------+-----------------+----------|
+| ada-mode            | elpa   | project-patches |          |
+| bibeltex            | github | org-bibtex      |          |
+| citeproc            | github | org-bibtex      |          |
+| gnus-recent         | github | org-gnus        |          |
+| org                 | git    | org-bbdb        |          |
+| org                 | git    | org-bibtex      |          |
+| org-link-minor-mode | github | org-man         |          |
+| org-linkany         | github | org-bbdb        |          |
+| org-mac-protocol    | github | org-bibtex      |          |
+| org-ref             | github | org-bibtex      |          |
 
 - ada-mode: send email to Stephen Leake
