@@ -75,19 +75,19 @@
 | elpa        |  119 |    119 |       |       |   170 |       |
 | elpa-branch |   10 |     10 |       |       |    35 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4315 |   4315 |       |       |       |  3938 |
-| gitlab      |   92 |     92 |       |       |       |    78 |
+| github      | 4316 |   4316 |       |       |       |  3939 |
+| gitlab      |   91 |     91 |       |       |       |    77 |
 | git         |   67 |     67 |       |       |       |    56 |
-| subtree     |   22 |     22 |       |       |       |       |
+| subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  634 |    634 |       |       |       |       |
-| file        |   58 |     58 |       |       |       |       |
+| file        |   63 |     63 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   50 |     50 |       |       |       |       |
+| orphaned    |   44 |     44 |       |       |       |       |
 | shelved     | 1218 |        |  1218 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | total       | 7114 |   5447 |  1218 |   457 |   214 |  4112 |
@@ -558,11 +558,12 @@
                  :where    (= melpa-recipes:epkg-package packages:name)
                  :and      (= melpa-recipes:epkg-package melpa-recipes:name)
                  :and :not (= melpa-recipes:class        packages:class)
-                 :order-by [(asc packages:name)]]))
+                 :order-by [(asc packages:class)
+                            (asc packages:name)]]))
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (65)        | Class    | Melpa     | Reason              |
+| Package (64)        | Class    | Melpa     | Reason              |
 |---------------------+----------+-----------+---------------------|
 | autotest            | minority | github    | all-in-one repo     |
 | bibliothek          | minority | github    | all-in-one repo     |
@@ -582,19 +583,20 @@
 | pylint              | minority | github    | mostly non-elisp    |
 | thrift              | minority | github    | mostly non-elisp    |
 | wisp-mode           | minority | bitbucket | mostly non-elisp    |
-| cg                  | orphaned | ORPHAN    | non-git/hg          |
-| clang-format        | orphaned | ORPHAN    | non-git/hg          |
+| cg                  | file     | MIRROR    | non-git/hg          |
+| darcsum             | file     | MIRROR    | non-git/hg          |
+| dsvn                | file     | MIRROR    | non-git/hg          |
+| edit-list           | file     | MIRROR    | non-git/hg          |
+| helm-ls-svn         | file     | MIRROR    | non-git/hg          |
+| quack               | file     | MIRROR    | non-git/hg          |
+| tex-smart-umlauts   | file     | MIRROR    | non-git/hg          |
 | confluence          | orphaned | ORPHAN    | non-git/hg          |
-| darcsum             | orphaned | ORPHAN    | non-git/hg          |
 | dedicated           | orphaned | ORPHAN    | non-git/hg          |
 | dic-lookup-w3m      | orphaned | ORPHAN    | non-git/hg          |
 | dirtree             | orphaned | ORPHAN    | non-git/hg          |
-| dsvn                | orphaned | ORPHAN    | non-git/hg          |
-| edit-list           | file     | MIRROR    | non-git/hg          |
 | elisp-depend        | orphaned | ORPHAN    | non-git/hg          |
 | ert-expectations    | orphaned | ORPHAN    | non-git/hg          |
 | findr               | orphaned | ORPHAN    | non-git/hg          |
-| helm-ls-svn         | orphaned | ORPHAN    | non-git/hg          |
 | hide-lines          | orphaned | ORPHAN    | non-git/hg          |
 | http-post-simple    | orphaned | ORPHAN    | non-git/hg          |
 | key-chord           | orphaned | ORPHAN    | non-git/hg          |
@@ -608,7 +610,6 @@
 | org-grep            | orphaned | ORPHAN    | non-git/hg          |
 | pager               | orphaned | ORPHAN    | non-git/hg          |
 | pointback           | orphaned | ORPHAN    | non-git/hg          |
-| quack               | file     | MIRROR    | non-git/hg          |
 | session             | orphaned | ORPHAN    | non-git/hg          |
 | shell-command       | orphaned | ORPHAN    | non-git/hg          |
 | shell-history       | orphaned | ORPHAN    | non-git/hg          |
@@ -616,7 +617,6 @@
 | smarty-mode         | orphaned | ORPHAN    | non-git/hg          |
 | sml-modeline        | orphaned | ORPHAN    | non-git/hg          |
 | sr-speedbar         | orphaned | ORPHAN    | non-git/hg          |
-| tex-smart-umlauts   | orphaned | ORPHAN    | non-git/hg          |
 | transpose-frame     | orphaned | ORPHAN    | non-git/hg          |
 | tree-mode           | orphaned | ORPHAN    | non-git/hg          |
 | vala-mode           | orphaned | ORPHAN    | non-git/hg          |

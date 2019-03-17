@@ -147,18 +147,12 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "semi-automatic import")
 #+END_SRC
 #+RESULTS: non-git-hg
-| Package (10)      | Mirror   | Melpa    |
-|-------------------+----------+----------|
-| cg                | orphaned | orphaned |
-| clang-format      | orphaned | orphaned |
-| confluence        | orphaned | orphaned |
-| darcsum           | orphaned | orphaned |
-| dic-lookup-w3m    | orphaned | orphaned |
-| dsvn              | orphaned | orphaned |
-| helm-ls-svn       | orphaned | orphaned |
-| nxhtml            | orphaned |          |
-| tex-smart-umlauts | orphaned | orphaned |
-| vm                | orphaned |          |
+| Package (4)    | Mirror   | Melpa    |
+|----------------+----------+----------|
+| confluence     | orphaned | orphaned |
+| dic-lookup-w3m | orphaned | orphaned |
+| nxhtml         | orphaned |          |
+| vm             | orphaned |          |
 
 * Imported from tarball
 #+NAME: tarball

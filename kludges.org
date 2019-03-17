@@ -226,15 +226,16 @@
 #+NAME: no-mainlib
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Library" "Reason")
-    (mapcar (-lambda ((name type library))
-              (list name type library
-                    (cadr (assoc name emir--library-reason))))
-            (epkg-sql [:select [name class library] :from packages
-                       :where (notnull library)
-                       :and class :in $v1
-                       :order-by [(asc name)]]
-                      (closql-where-class-in
-                       'epkg-mirrored-package--eieio-childp))))
+    (-keep (-lambda ((name type library))
+               (and (not (eq type 'elpa-core))
+                    (list name type library
+                          (cadr (assoc name emir--library-reason)))))
+           (epkg-sql [:select [name class library] :from packages
+                      :where (notnull library)
+                      :and class :in $v1
+                      :order-by [(asc name)]]
+                     (closql-where-class-in
+                      'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
 | Package (22)          | Class    | Library                         | Reason                     |
