@@ -25,9 +25,7 @@
                         (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
                             "orphaned"
                           (closql--abbrev-class (eieio-object-class rcp)))
-                      "")
-                    ;; (or reason "")
-                    )))
+                      ""))))
        emir--orphans-cache)))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
@@ -165,6 +163,17 @@ repositories have not seen a commit in a decade.
 | picolisp     | orphaned |          |
 | session      | orphaned | orphaned |
 | sml-modeline | orphaned | orphaned |
+
+* Dropped of by maintainer
+#+NAME: dropped
+#+BEGIN_SRC emacs-lisp
+  (emir--list-orphans "dropped by maintainer")
+#+END_SRC
+#+RESULTS: dropped
+| Package (2) | Mirror | Melpa    |
+|-------------+--------+----------|
+| magit-stgit | github | orphaned |
+| magit-svn   | github | orphaned |
 
 * The maintainer is dead
 
