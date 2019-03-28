@@ -73,11 +73,11 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  457 |      8 |       |   457 |     9 |       |
 | elpa        |  119 |    119 |       |       |   170 |       |
-| elpa-branch |   10 |     10 |       |       |    35 |       |
+| elpa-branch |   10 |     10 |       |       |    38 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4325 |   4325 |       |       |       |  3948 |
-| gitlab      |   95 |     95 |       |       |       |    81 |
-| git         |   67 |     67 |       |       |       |    56 |
+| github      | 4328 |   4328 |       |       |       |  3949 |
+| gitlab      |   96 |     96 |       |       |       |    81 |
+| git         |   66 |     66 |       |       |       |    55 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   46 |     46 |       |       |       |    39 |
@@ -90,7 +90,7 @@
 | orphaned    |   44 |     44 |       |       |       |       |
 | shelved     | 1217 |        |  1217 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7126 |   5460 |  1217 |   457 |   214 |  4125 |
+| total       | 7129 |   5463 |  1217 |   457 |   217 |  4125 |
 
 * Emacs
 ** Prefer elpa
@@ -230,7 +230,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (79)               | Class    | Gelpa    | Link                                         |
+| Package (82)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -262,6 +262,7 @@
 | ergoemacs-mode             | github   | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
 | exwm                       | github   | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
 | fountain-mode              | github   | external | [[https://github.com/rnkn/fountain-mode][rnkn/fountain-mode]]                           |
+| frog-menu                  | github   | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                            |
 | ggtags                     | github   | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
 | gnorb                      | github   | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
 | gpastel                    | github   | external | [[https://github.com/DamienCassou/gpastel][DamienCassou/gpastel]]                         |
@@ -291,6 +292,7 @@
 | pinentry                   | github   | subtree  | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                             |
 | posframe                   | github   | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                             |
 | realgud                    | github   | subtree  | [[https://github.com/realgud/realgud][realgud/realgud]]                              |
+| relint                     | github   | external | [[https://github.com/mattiase/relint][mattiase/relint]]                              |
 | rich-minority              | github   | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | sotlisp                    | github   | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
 | spinner                    | github   | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
@@ -305,6 +307,7 @@
 | vlf                        | github   | subtree  | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
 | wcheck-mode                | github   | subtree  | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
 | web-server                 | github   | subtree  | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
+| webfeeder                  | gitlab   | external | [[https://gitlab.com/ambrevar/emacs-webfeeder][ambrevar/emacs-webfeeder]]                     |
 | websocket                  | github   | subtree  | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
 | which-key                  | github   | subtree  | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]                      |
 | xelb                       | github   | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                  |
