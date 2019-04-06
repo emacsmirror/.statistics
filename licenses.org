@@ -67,8 +67,8 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3460 |      63 |
-| GPL-2+        |  1182 |      22 |
+| GPL-3+        |  3457 |      64 |
+| GPL-2+        |  1180 |      22 |
 | GPL-3         |   162 |       3 |
 | MIT           |   161 |       3 |
 | MIT (x11)     |   141 |       3 |
@@ -76,8 +76,8 @@
 | BSD-3-clause  |    47 |       1 |
 | Apache-2.0    |    41 |       1 |
 | unlicense     |    35 |       1 |
-| WTFPL         |    32 |       1 |
-| as-is         |    31 |       1 |
+| WTFPL         |    31 |       1 |
+| as-is         |    29 |       1 |
 | public-domain |    28 |       1 |
 | WTFPL-2       |     8 |       0 |
 | GPL-1+        |     6 |       0 |
@@ -101,9 +101,9 @@
 | UIUC          |     1 |       0 |
 | Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4827 |      89 |
+| total GNU     |  4822 |      89 |
 |---------------+-------+---------|
-| total         |  5450 |     100 |
+| total         |  5442 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -130,22 +130,22 @@
 #+RESULTS: attic-overview
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-2+          |   787 |      64 |
-| GPL-3+          |   222 |      18 |
+| GPL-2+          |   789 |      64 |
+| GPL-3+          |   225 |      18 |
 | GPL-2           |    63 |       5 |
 | GPL             |    44 |       4 |
 | public-domain   |    35 |       3 |
 | GPL-1+          |    14 |       1 |
 | GPL-3           |     9 |       1 |
 | MIT             |     9 |       1 |
-| as-is           |     6 |       0 |
+| as-is           |     8 |       1 |
 | ((custom))      |     6 |       0 |
 | MIT (x11)       |     5 |       0 |
 | nil             |     4 |       0 |
 | BSD-3-clause    |     4 |       0 |
+| WTFPL           |     4 |       0 |
 | Apache-2.0      |     3 |       0 |
 | BSD-2-clause    |     3 |       0 |
-| WTFPL           |     3 |       0 |
 | GPL-2.1+        |     2 |       0 |
 | LGPL-3          |     2 |       0 |
 | AGPL-3+         |     1 |       0 |
@@ -159,9 +159,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1146 |      93 |
+| total GNU       |  1151 |      93 |
 |-----------------+-------+---------|
-| total           |  1231 |     100 |
+| total           |  1239 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown
