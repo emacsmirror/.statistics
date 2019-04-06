@@ -66,7 +66,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (585)                | Link                                    |
+| Package (587)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -488,6 +488,7 @@ please first make sure they meet the minimal requirements.
 | picolisp-wiki-mode           | [[https://github.com/tj64/picolisp-wiki-mode][tj64/picolisp-wiki-mode]]                 |
 | plain-org-wiki               | [[https://github.com/abo-abo/plain-org-wiki][abo-abo/plain-org-wiki]]                  |
 | plone-mode                   | [[https://github.com/jone/plone-mode.el][jone/plone-mode.el]]                      |
+| pmd                          | [[https://github.com/pmd/pmd-emacs][pmd/pmd-emacs]]                           |
 | popup+                       | [[https://github.com/scjung/popup-plus][scjung/popup-plus]]                       |
 | popup-frame                  | [[https://github.com/Sarcasm/popup-frame][Sarcasm/popup-frame]]                     |
 | popup-global-mark-ring       | [[https://github.com/whitypig/popup-global-mark-ring][whitypig/popup-global-mark-ring]]         |
@@ -510,6 +511,7 @@ please first make sure they meet the minimal requirements.
 | rb                           | [[https://github.com/nicferrier/emacs-rhythmbox][nicferrier/emacs-rhythmbox]]              |
 | rcfiles                      | [[https://github.com/didierverna/el-rcfiles][didierverna/el-rcfiles]]                  |
 | rcirc-robots                 | [[https://github.com/nicferrier/rcirc-robots][nicferrier/rcirc-robots]]                 |
+| rcirc-ssh                    | [[https://github.com/nicferrier/rcirc-ssh-sessions][nicferrier/rcirc-ssh-sessions]]           |
 | rcirc-ucomplete              | [[https://github.com/technomancy/rcirc-ucomplete][technomancy/rcirc-ucomplete]]             |
 | rd-mode                      | [[https://github.com/uwabami/rdtool][uwabami/rdtool]]                          |
 | rdictcc                      | [[https://github.com/tsdh/rdictcc][tsdh/rdictcc]]                            |
@@ -675,7 +677,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (12)      | Link                        |
+| Package (10)      | Link                        |
 |-------------------+-----------------------------|
 | auto-mounter      |                             |
 | ebuild-mode       |                             |
@@ -683,10 +685,8 @@ please first make sure they meet the minimal requirements.
 | gpicker           |                             |
 | im-notification   |                             |
 | lilypond          |                             |
-| pmd               |                             |
 | python-pep8       |                             |
 | python-pylint     |                             |
-| rcirc-ssh         |                             |
 | riece             | [[http://www.nongnu.org/riece]] |
 | slate-config-mode |                             |
 
