@@ -75,7 +75,7 @@
 | elpa        |  119 |    119 |       |       |   170 |       |
 | elpa-branch |   10 |     10 |       |       |    38 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4329 |   4329 |       |       |       |  3948 |
+| github      | 4321 |   4321 |       |       |       |  3948 |
 | gitlab      |   84 |     84 |       |       |       |    81 |
 | git         |   64 |     64 |       |       |       |    55 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -90,7 +90,7 @@
 | orphaned    |   44 |     44 |       |       |       |       |
 | shelved     | 1239 |        |  1239 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7130 |   5442 |  1239 |   457 |   217 |  4124 |
+| total       | 7122 |   5434 |  1239 |   457 |   217 |  4124 |
 
 * Emacs
 ** Prefer elpa
@@ -331,6 +331,16 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
+| Package (8)           | Melpa  | Link                            |
+|-----------------------+--------+---------------------------------|
+| auto-rename-tag       | github | [[https://github.com/elpa-host/auto-rename-tag][elpa-host/auto-rename-tag]]       |
+| com-css-sort          | github | [[https://github.com/elpa-host/com-css-sort][elpa-host/com-css-sort]]          |
+| goto-line-preview     | github | [[https://github.com/elpa-host/goto-line-preview][elpa-host/goto-line-preview]]     |
+| htmltagwrap           | github | [[https://github.com/elpa-host/htmltagwrap][elpa-host/htmltagwrap]]           |
+| line-reminder         | github | [[https://github.com/elpa-host/line-reminder][elpa-host/line-reminder]]         |
+| organize-imports-java | github | [[https://github.com/elpa-host/organize-imports-java][elpa-host/organize-imports-java]] |
+| project-abbrev        | github | [[https://github.com/elpa-host/project-abbrev][elpa-host/project-abbrev]]        |
+| use-ttf               | github | [[https://github.com/elpa-host/use-ttf][elpa-host/use-ttf]]               |
 
 ** Pending
 #+NAME: melpa-pending
