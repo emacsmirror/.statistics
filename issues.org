@@ -29,16 +29,11 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (2)  | Package         | Shelved |
+| Feature (1)  | Package         | Shelved |
 |--------------+-----------------+---------|
-| test-helper  | cerbere         |         |
-| test-helper  | mocha           |         |
 | test-support | buttercup-junit |         |
 | test-support | ert-junit       |         |
 
-- https://github.com/pyluyten/emacs-nu/commit/a1742e62a561
-- https://github.com/nlamirault/cerbere/issues/5
-- https://github.com/scottaj/mocha.el/issues/62
 - https://bitbucket.org/olanilsson/ert-junit/issues/6
 
 * Packages with unsatisfied dependencies
@@ -77,3 +72,13 @@
 | org-linkany         | github | org-bbdb   |          |
 | org-mac-protocol    | github | org-bibtex |          |
 | org-ref             | github | org-bibtex |          |
+
+- https://github.com/ruediger/bibeltex/issues/2
+- https://github.com/andras-simonyi/citeproc-el/issues/7
+- https://github.com/unhammer/gnus-recent/issues/13
+- org: contacted mailing-listw
+- https://github.com/seanohalpin/org-link-minor-mode/issues/7
+- https://github.com/aki2o/org-linkany/issues/4
+- https://github.com/claviclaws/org-mac-protocol/issues/8
+- https://github.com/jkitchin/org-ref/issues/649
+- https://github.com/jojojames/smart-jump/commit/f2d719db9c5dda6fe

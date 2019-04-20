@@ -72,12 +72,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  457 |      8 |       |   457 |     9 |       |
-| elpa        |  119 |    119 |       |       |   170 |       |
-| elpa-branch |   10 |     10 |       |       |    38 |       |
+| elpa        |  120 |    120 |       |       |   171 |       |
+| elpa-branch |   10 |     10 |       |       |    40 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4321 |   4321 |       |       |       |  3948 |
+| github      | 4329 |   4329 |       |       |       |  3949 |
 | gitlab      |   84 |     84 |       |       |       |    81 |
-| git         |   64 |     64 |       |       |       |    55 |
+| git         |   65 |     65 |       |       |       |    55 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   38 |     38 |       |       |       |    39 |
@@ -88,9 +88,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   44 |     44 |       |       |       |       |
-| shelved     | 1239 |        |  1239 |       |       |       |
+| shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7122 |   5434 |  1239 |   457 |   217 |  4124 |
+| total       | 7129 |   5444 |  1236 |   457 |   220 |  4125 |
 
 * Emacs
 ** Prefer elpa
@@ -230,7 +230,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (82)               | Class    | Gelpa    | Link                                         |
+| Package (84)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -256,6 +256,7 @@
 | disk-usage                 | gitlab   | external | [[https://gitlab.com/ambrevar/emacs-disk-usage][ambrevar/emacs-disk-usage]]                    |
 | dts-mode                   | github   | subtree  | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                             |
 | easy-kill                  | github   | subtree  | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                             |
+| eev                        | github   | external | [[https://github.com/edrx/eev][edrx/eev]]                                     |
 | eglot                      | github   | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                             |
 | eldoc-eval                 | github   | subtree  | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
 | electric-spacing           | github   | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
@@ -294,6 +295,7 @@
 | realgud                    | github   | subtree  | [[https://github.com/realgud/realgud][realgud/realgud]]                              |
 | relint                     | github   | external | [[https://github.com/mattiase/relint][mattiase/relint]]                              |
 | rich-minority              | github   | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
+| smalltalk-mode             | git      | external |                                              |
 | sotlisp                    | github   | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
 | spinner                    | github   | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
 | sql-indent                 | github   | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                          |
@@ -331,16 +333,6 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
-| Package (8)           | Melpa  | Link                            |
-|-----------------------+--------+---------------------------------|
-| auto-rename-tag       | github | [[https://github.com/elpa-host/auto-rename-tag][elpa-host/auto-rename-tag]]       |
-| com-css-sort          | github | [[https://github.com/elpa-host/com-css-sort][elpa-host/com-css-sort]]          |
-| goto-line-preview     | github | [[https://github.com/elpa-host/goto-line-preview][elpa-host/goto-line-preview]]     |
-| htmltagwrap           | github | [[https://github.com/elpa-host/htmltagwrap][elpa-host/htmltagwrap]]           |
-| line-reminder         | github | [[https://github.com/elpa-host/line-reminder][elpa-host/line-reminder]]         |
-| organize-imports-java | github | [[https://github.com/elpa-host/organize-imports-java][elpa-host/organize-imports-java]] |
-| project-abbrev        | github | [[https://github.com/elpa-host/project-abbrev][elpa-host/project-abbrev]]        |
-| use-ttf               | github | [[https://github.com/elpa-host/use-ttf][elpa-host/use-ttf]]               |
 
 ** Pending
 #+NAME: melpa-pending
@@ -456,6 +448,7 @@
 | load-theme-buffer-local | color-theme-buffer-local          | github |
 | mac-pseudo-daemon       | osx-pseudo-daemon                 | github |
 | magit                   | git-commit                        | github |
+| magit                   | magit-libgit                      | github |
 | major-mode-hydra        | pretty-hydra                      | github |
 | nameframe               | nameframe-perspective             | github |
 | nameframe               | nameframe-projectile              | github |
