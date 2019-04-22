@@ -75,9 +75,9 @@
 | elpa        |  120 |    120 |       |       |   171 |       |
 | elpa-branch |   10 |     10 |       |       |    40 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4329 |   4329 |       |       |       |  3949 |
-| gitlab      |   84 |     84 |       |       |       |    81 |
-| git         |   65 |     65 |       |       |       |    55 |
+| github      | 4357 |   4357 |       |       |       |  3978 |
+| gitlab      |   86 |     86 |       |       |       |    83 |
+| git         |   65 |     65 |       |       |       |    54 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   38 |     38 |       |       |       |    39 |
@@ -90,7 +90,7 @@
 | orphaned    |   44 |     44 |       |       |       |       |
 | shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7129 |   5444 |  1236 |   457 |   220 |  4125 |
+| total       | 7159 |   5474 |  1236 |   457 |   220 |  4155 |
 
 * Emacs
 ** Prefer elpa
@@ -585,7 +585,7 @@
 | google-c-style      | minority | github    | mostly non-elisp    |
 | nemerle             | minority | github    | mostly non-elisp    |
 | ninja-mode          | minority | github    | mostly non-elisp    |
-| po-mode             | minority | git       | mostly non-elisp    |
+| po-mode             | minority | github    | mostly non-elisp    |
 | pylint              | minority | github    | mostly non-elisp    |
 | thrift              | minority | github    | mostly non-elisp    |
 | wisp-mode           | minority | bitbucket | mostly non-elisp    |
