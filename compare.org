@@ -72,11 +72,11 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  457 |      8 |       |   457 |     9 |       |
-| elpa        |  120 |    120 |       |       |   171 |       |
-| elpa-branch |   10 |     10 |       |       |    40 |       |
+| elpa        |  121 |    121 |       |       |   172 |       |
+| elpa-branch |   10 |     10 |       |       |    41 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4357 |   4357 |       |       |       |  3978 |
-| gitlab      |   86 |     86 |       |       |       |    83 |
+| github      | 4359 |   4359 |       |       |       |  3980 |
+| gitlab      |   87 |     87 |       |       |       |    84 |
 | git         |   65 |     65 |       |       |       |    54 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -90,7 +90,7 @@
 | orphaned    |   44 |     44 |       |       |       |       |
 | shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7159 |   5474 |  1236 |   457 |   220 |  4155 |
+| total       | 7163 |   5478 |  1236 |   457 |   222 |  4158 |
 
 * Emacs
 ** Prefer elpa
@@ -230,7 +230,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (84)               | Class    | Gelpa    | Link                                         |
+| Package (85)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -285,6 +285,7 @@
 | nameless                   | github   | subtree  | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
 | names                      | github   | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
 | objed                      | github   | external | [[https://github.com/clemera/objed][clemera/objed]]                                |
+| olivetti                   | github   | external | [[https://github.com/rnkn/olivetti][rnkn/olivetti]]                                |
 | on-screen                  | github   | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
 | org                        | git      | core     | [[https://orgmode.org]]                          |
 | pabbrev                    | github   | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
