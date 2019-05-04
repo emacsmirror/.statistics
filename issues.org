@@ -61,11 +61,10 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (8)         | Class  | Feature    | Provider |
+| Package (7)         | Class  | Feature    | Provider |
 |---------------------+--------+------------+----------|
 | bibeltex            | github | org-bibtex |          |
 | citeproc            | github | org-bibtex |          |
-| gnus-recent         | github | org-gnus   |          |
 | org                 | git    | org-bbdb   |          |
 | org                 | git    | org-bibtex |          |
 | org-link-minor-mode | github | org-man    |          |
@@ -75,7 +74,6 @@
 
 - https://github.com/ruediger/bibeltex/issues/2
 - https://github.com/andras-simonyi/citeproc-el/issues/7
-- https://github.com/unhammer/gnus-recent/issues/13
 - org: contacted mailing-listw
 - https://github.com/seanohalpin/org-link-minor-mode/issues/7
 - https://github.com/aki2o/org-linkany/issues/4
