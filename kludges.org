@@ -14,7 +14,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (7) | Class    | Feature        | Reason                                    |
+| Package (8) | Class    | Feature        | Reason                                    |
 |-------------+----------+----------------+-------------------------------------------|
 | edb         | orphaned | edbcore        | generated                                 |
 | emacs       | builtin  | cus-load       | generated                                 |
@@ -30,6 +30,7 @@
 | sly         | github   | sly-messages   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly         | github   | sly-parse      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly         | github   | sly-tests      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| vterm       | github   | vterm-module   | generated                                 |
 
 * Drop provided features
 #+NAME: provided-drop

@@ -67,13 +67,13 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3481 |      64 |
-| GPL-2+        |  1184 |      22 |
+| GPL-3+        |  3492 |      64 |
+| GPL-2+        |  1185 |      22 |
 | MIT           |   166 |       3 |
-| GPL-3         |   162 |       3 |
+| GPL-3         |   163 |       3 |
 | MIT (x11)     |   142 |       3 |
 | BSD-2-clause  |    76 |       1 |
-| BSD-3-clause  |    48 |       1 |
+| BSD-3-clause  |    49 |       1 |
 | Apache-2.0    |    41 |       1 |
 | unlicense     |    36 |       1 |
 | WTFPL         |    31 |       1 |
@@ -84,10 +84,11 @@
 | LGPL-3+       |     5 |       0 |
 | AGPL-3+       |     4 |       0 |
 | Artistic-2.0  |     4 |       0 |
+| ISC           |     4 |       0 |
 | ISC (and)     |     3 |       0 |
-| ISC           |     3 |       0 |
 | LGPL-3        |     3 |       0 |
 | MS-PL         |     3 |       0 |
+| nil           |     2 |       0 |
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
@@ -101,9 +102,9 @@
 | UIUC          |     1 |       0 |
 | Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4850 |      88 |
+| total GNU     |  4863 |      88 |
 |---------------+-------+---------|
-| total         |  5481 |     100 |
+| total         |  5498 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -115,6 +116,12 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
+| Package (2) | Class  | License |
+|-------------+--------+---------|
+| gsettings   | github |         |
+| gvariant    | github |         |
+
+- https://github.com/wbolster/emacs-gsettings/issues/3
 
 * Emacsattic
 ** Overview
@@ -136,9 +143,9 @@
 | GPL             |    44 |       4 |
 | public-domain   |    35 |       3 |
 | GPL-1+          |    14 |       1 |
-| GPL-3           |     8 |       1 |
 | MIT             |     8 |       1 |
 | as-is           |     8 |       1 |
+| GPL-3           |     7 |       1 |
 | ((custom))      |     6 |       0 |
 | MIT (x11)       |     5 |       0 |
 | nil             |     4 |       0 |
@@ -159,9 +166,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1149 |      93 |
+| total GNU       |  1148 |      93 |
 |-----------------+-------+---------|
-| total           |  1236 |     100 |
+| total           |  1235 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown

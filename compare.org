@@ -72,11 +72,11 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  457 |      8 |       |   457 |     9 |       |
-| elpa        |  121 |    121 |       |       |   172 |       |
-| elpa-branch |   10 |     10 |       |       |    41 |       |
+| elpa        |  122 |    122 |       |       |   173 |       |
+| elpa-branch |   10 |     10 |       |       |    42 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4361 |   4361 |       |       |       |  3982 |
-| gitlab      |   88 |     88 |       |       |       |    85 |
+| github      | 4376 |   4376 |       |       |       |  3995 |
+| gitlab      |   89 |     89 |       |       |       |    88 |
 | git         |   65 |     65 |       |       |       |    54 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -88,9 +88,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   44 |     44 |       |       |       |       |
-| shelved     | 1236 |        |  1236 |       |       |       |
+| shelved     | 1235 |        |  1235 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7166 |   5481 |  1236 |   457 |   222 |  4161 |
+| total       | 7182 |   5498 |  1235 |   457 |   224 |  4177 |
 
 * Emacs
 ** Prefer elpa
@@ -230,7 +230,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (85)               | Class    | Gelpa    | Link                                         |
+| Package (86)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -241,6 +241,7 @@
 | avy                        | github   | subtree  | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
 | bbdb                       | git      | external | [[http://bbdb.sourceforge.net]]                  |
 | beacon                     | github   | subtree  | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                             |
+| bnf-mode                   | github   | external | [[https://github.com/sergeyklay/bnf-mode][sergeyklay/bnf-mode]]                          |
 | buffer-expose              | github   | external | [[https://github.com/clemera/buffer-expose][clemera/buffer-expose]]                        |
 | bug-hunter                 | github   | subtree  | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                   |
 | coffee-mode                | github   | subtree  | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                          |
