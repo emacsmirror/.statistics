@@ -75,7 +75,7 @@
 | elpa        |  122 |    122 |       |       |   173 |       |
 | elpa-branch |   10 |     10 |       |       |    42 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4376 |   4376 |       |       |       |  3995 |
+| github      | 4379 |   4379 |       |       |       |  3999 |
 | gitlab      |   89 |     89 |       |       |       |    88 |
 | git         |   65 |     65 |       |       |       |    54 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -90,7 +90,7 @@
 | orphaned    |   44 |     44 |       |       |       |       |
 | shelved     | 1235 |        |  1235 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7182 |   5498 |  1235 |   457 |   224 |  4177 |
+| total       | 7185 |   5501 |  1235 |   457 |   224 |  4181 |
 
 * Emacs
 ** Prefer elpa
@@ -365,7 +365,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (86)    | Secondary package                 | Class  |
+| Primary package (87)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -415,6 +415,8 @@
 | emacsql                 | emacsql-sqlite                    | github |
 | esqlite                 | esqlite-helm                      | github |
 | evil                    | evil-test-helpers                 | github |
+| ewal                    | ewal-evil-cursors                 | gitlab |
+| ewal                    | ewal-spacemacs-themes             | gitlab |
 | flx                     | flx-ido                           | github |
 | flyspell-correct        | flyspell-correct-helm             | github |
 | flyspell-correct        | flyspell-correct-ivy              | github |
