@@ -67,9 +67,9 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3495 |      64 |
-| GPL-2+        |  1185 |      22 |
-| MIT           |   166 |       3 |
+| GPL-3+        |  3501 |      64 |
+| GPL-2+        |  1186 |      22 |
+| MIT           |   165 |       3 |
 | GPL-3         |   163 |       3 |
 | MIT (x11)     |   142 |       3 |
 | BSD-2-clause  |    76 |       1 |
@@ -96,15 +96,16 @@
 | BEER-WARE     |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
 | GPL-2         |     1 |       0 |
+| ISC (and/or)  |     1 |       0 |
 | LGPL          |     1 |       0 |
 | MPL-2         |     1 |       0 |
 | Ruby          |     1 |       0 |
 | UIUC          |     1 |       0 |
 | Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4866 |      88 |
+| total GNU     |  4873 |      88 |
 |---------------+-------+---------|
-| total         |  5501 |     100 |
+| total         |  5508 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -143,7 +144,7 @@
 | GPL             |    44 |       4 |
 | public-domain   |    35 |       3 |
 | GPL-1+          |    14 |       1 |
-| MIT             |     8 |       1 |
+| MIT             |     9 |       1 |
 | as-is           |     8 |       1 |
 | GPL-3           |     7 |       1 |
 | ((custom))      |     6 |       0 |
@@ -168,7 +169,7 @@
 |-----------------+-------+---------|
 | total GNU       |  1148 |      93 |
 |-----------------+-------+---------|
-| total           |  1235 |     100 |
+| total           |  1236 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown

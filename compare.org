@@ -75,9 +75,9 @@
 | elpa        |  122 |    122 |       |       |   173 |       |
 | elpa-branch |   10 |     10 |       |       |    42 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4379 |   4379 |       |       |       |  3999 |
+| github      | 4385 |   4385 |       |       |       |  4005 |
 | gitlab      |   89 |     89 |       |       |       |    88 |
-| git         |   65 |     65 |       |       |       |    54 |
+| git         |   66 |     66 |       |       |       |    55 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   38 |     38 |       |       |       |    39 |
@@ -88,9 +88,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   44 |     44 |       |       |       |       |
-| shelved     | 1235 |        |  1235 |       |       |       |
+| shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7185 |   5501 |  1235 |   457 |   224 |  4181 |
+| total       | 7193 |   5508 |  1236 |   457 |   224 |  4188 |
 
 * Emacs
 ** Prefer elpa
@@ -365,10 +365,11 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (87)    | Secondary package                 | Class  |
+| Primary package (88)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
+| ameba                   | flycheck-ameba                    | github |
 | axiom-environment       | company-axiom                     | git    |
 | axiom-environment       | ob-axiom                          | git    |
 | biblio                  | biblio-core                       | github |
