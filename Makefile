@@ -99,11 +99,11 @@ force:
 	grep -v "Evaluation of this emacs-lisp code block" | true
 	@rm -f $@~
 
-preview: html
+preview:
 	@echo "Uploading to $(PREVIEW_BUCKET)..."
 	@aws s3 sync $(SRC) $(PREVIEW_BUCKET)$(DST) --delete $(SYNC)
 
-publish: html
+publish:
 	@echo "Uploading to $(PUBLISH_BUCKET)..."
 	@aws s3 sync $(SRC) $(PUBLISH_BUCKET)$(DST) --delete $(SYNC)
 	@aws cloudfront create-invalidation \
