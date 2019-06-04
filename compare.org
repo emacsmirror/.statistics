@@ -72,10 +72,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  457 |      8 |       |   457 |     9 |       |
-| elpa        |  122 |    122 |       |       |   173 |       |
-| elpa-branch |   10 |     10 |       |       |    42 |       |
+| elpa        |  122 |    122 |       |       |   172 |       |
+| elpa-branch |   10 |     10 |       |       |    50 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4385 |   4385 |       |       |       |  4005 |
+| github      | 4401 |   4401 |       |       |       |  4021 |
 | gitlab      |   89 |     89 |       |       |       |    88 |
 | git         |   66 |     66 |       |       |       |    55 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -90,7 +90,7 @@
 | orphaned    |   44 |     44 |       |       |       |       |
 | shelved     | 1236 |        |  1236 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7193 |   5508 |  1236 |   457 |   224 |  4188 |
+| total       | 7209 |   5524 |  1236 |   457 |   231 |  4204 |
 
 * Emacs
 ** Prefer elpa
@@ -204,13 +204,14 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (5) | Gelpa   | Reason                        |
-|-------------+---------+-------------------------------|
-| cl-generic  | subtree | backport of builtin           |
-| cl-lib      | subtree | backport of builtin           |
-| seq         | subtree | backport of builtin           |
-| soap-client | core    | multi-file core not supported |
-| svg         | subtree | import of outdated upstream   |
+| Package (6) | Gelpa    | Reason                        |
+|-------------+----------+-------------------------------|
+| cl-generic  | subtree  | backport of builtin           |
+| cl-lib      | subtree  | backport of builtin           |
+| seq         | subtree  | backport of builtin           |
+| soap-client | core     | multi-file core not supported |
+| svg         | subtree  | import of outdated upstream   |
+| tramp       | external |                               |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
@@ -230,7 +231,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (86)               | Class    | Gelpa    | Link                                         |
+| Package (92)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -294,7 +295,13 @@
 | peg                        | github   | external | [[https://github.com/ellerh/peg.el][ellerh/peg.el]]                                |
 | pinentry                   | github   | subtree  | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                             |
 | posframe                   | github   | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                             |
-| realgud                    | github   | subtree  | [[https://github.com/realgud/realgud][realgud/realgud]]                              |
+| realgud                    | github   | external | [[https://github.com/realgud/realgud][realgud/realgud]]                              |
+| realgud-ipdb               | github   | external | [[https://github.com/realgud/realgud-ipdb][realgud/realgud-ipdb]]                         |
+| realgud-jdb                | github   | external | [[https://github.com/realgud/realgud-jdb][realgud/realgud-jdb]]                          |
+| realgud-lldb               | github   | external | [[https://github.com/realgud/realgud-lldb][realgud/realgud-lldb]]                         |
+| realgud-node-debug         | github   | external | [[https://github.com/realgud/realgud-node-debug][realgud/realgud-node-debug]]                   |
+| realgud-node-inspect       | github   | external | [[https://github.com/realgud/realgud-node-inspect][realgud/realgud-node-inspect]]                 |
+| realgud-trepan-ni          | github   | external | [[https://github.com/realgud/realgud-trepan-ni][realgud/realgud-trepan-ni]]                    |
 | relint                     | github   | external | [[https://github.com/mattiase/relint][mattiase/relint]]                              |
 | rich-minority              | github   | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | smalltalk-mode             | git      | external |                                              |
