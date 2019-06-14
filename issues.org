@@ -61,14 +61,19 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (6)         | Class  | Feature    | Provider |
-|---------------------+--------+------------+----------|
-| bibeltex            | github | org-bibtex |          |
-| citeproc            | github | org-bibtex |          |
-| org-link-minor-mode | github | org-man    |          |
-| org-linkany         | github | org-bbdb   |          |
-| org-mac-protocol    | github | org-bibtex |          |
-| org-ref             | github | org-bibtex |          |
+| Package (7)         | Class  | Feature       | Provider |
+|---------------------+--------+---------------+----------|
+| bibeltex            | github | org-bibtex    |          |
+| citeproc            | github | org-bibtex    |          |
+| leaf                | github | alloc         |          |
+| leaf                | github | leaf-browser  |          |
+| leaf                | github | leaf-polyfill |          |
+| leaf                | github | leaf-sub      |          |
+| leaf                | github | leaf-subsub   |          |
+| org-link-minor-mode | github | org-man       |          |
+| org-linkany         | github | org-bbdb      |          |
+| org-mac-protocol    | github | org-bibtex    |          |
+| org-ref             | github | org-bibtex    |          |
 
 - https://github.com/ruediger/bibeltex/issues/2
 - https://github.com/andras-simonyi/citeproc-el/issues/7
