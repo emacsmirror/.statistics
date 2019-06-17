@@ -206,21 +206,20 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: patched
-| Package (13)    | Class    |
-|-----------------+----------|
-| apel            | github   |
-| flim            | github   |
-| go              | github   |
-| karma           | github   |
-| lookup          | github   |
-| nav             | github   |
-| nxhtml          | orphaned |
-| oauth           | github   |
-| projmake-mode   | github   |
-| ruby-additional | github   |
-| semi            | github   |
-| vm              | orphaned |
-| wanderlust      | github   |
+| Package (12)  | Class    |
+|---------------+----------|
+| apel          | github   |
+| flim          | github   |
+| go            | github   |
+| karma         | github   |
+| lookup        | github   |
+| nav           | github   |
+| nxhtml        | orphaned |
+| oauth         | github   |
+| projmake-mode | github   |
+| semi          | github   |
+| vm            | orphaned |
+| wanderlust    | github   |
 
 * Set main library
 #+NAME: no-mainlib
