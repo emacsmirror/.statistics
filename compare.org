@@ -78,7 +78,7 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   10 |     10 |       |       |    50 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4403 |   4403 |       |       |       |  4029 |
+| github      | 4404 |   4404 |       |       |       |  4029 |
 | gitlab      |   91 |     91 |       |       |       |    90 |
 | git         |   66 |     66 |       |       |       |    55 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -86,14 +86,14 @@
 | bitbucket   |   38 |     38 |       |       |       |    39 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  634 |    634 |       |       |       |       |
+| wiki        |  610 |    610 |       |       |       |       |
 | file        |   63 |     63 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   44 |     44 |       |       |       |       |
+| orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1245 |        |  1245 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7222 |   5528 |  1245 |   457 |   231 |  4214 |
+| total       | 7198 |   5504 |  1245 |   457 |   231 |  4214 |
 
 * Emacs
 ** Prefer elpa
@@ -583,7 +583,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (70)              | Class    | Melpa     | Reason              |
+| Package (69)              | Class    | Melpa     | Reason              |
 |---------------------------+----------+-----------+---------------------|
 | autotest                  | minority | github    | all-in-one repo     |
 | bibliothek                | minority | github    | all-in-one repo     |
@@ -630,7 +630,6 @@
 | levenshtein               | orphaned | ORPHAN    | non-git/hg          |
 | look-mode                 | orphaned | ORPHAN    | non-git/hg          |
 | miniedit                  | orphaned | ORPHAN    | non-git/hg          |
-| multi-term                | orphaned | ORPHAN    | non-git/hg          |
 | oberon                    | orphaned | ORPHAN    | non-git/hg          |
 | org-bullets               | orphaned | ORPHAN    | non-git/hg          |
 | org-grep                  | orphaned | ORPHAN    | non-git/hg          |

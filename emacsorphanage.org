@@ -110,7 +110,7 @@ Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
   (emir--list-orphans "wiki needed by non-wiki" "wiki multiple files")
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Package (18)     | Mirror   | Melpa    |
+| Package (17)     | Mirror   | Melpa    |
 |------------------+----------+----------|
 | dirtree          | orphaned | orphaned |
 | ert-expectations | orphaned | orphaned |
@@ -121,7 +121,6 @@ Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 | levenshtein      | orphaned | orphaned |
 | linkd            | orphaned |          |
 | look-mode        | orphaned | orphaned |
-| multi-term       | orphaned | orphaned |
 | shell-command    | orphaned | orphaned |
 | shell-history    | orphaned | orphaned |
 | showtip          | orphaned | orphaned |
