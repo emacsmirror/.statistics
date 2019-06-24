@@ -1,3 +1,5 @@
+:PREAMBLE:
+#+TITLE: Epkgs: Licenses
 #+SETUPFILE: .orgconfig
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
@@ -51,7 +53,7 @@
                         (apply #'vector licenses)))))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
-
+:END:
 * Emacsmirror
 ** Overview
 #+NAME: mirror-overview

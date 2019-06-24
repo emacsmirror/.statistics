@@ -1,9 +1,12 @@
+:PREAMBLE:
+#+TITLE: Epkgs: Issues
 #+SETUPFILE: .orgconfig
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
   (require 'emir)
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
+:END:
 * Features provided by multiple packages
 #+NAME: conflict
 #+BEGIN_SRC emacs-lisp

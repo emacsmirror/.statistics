@@ -1,9 +1,12 @@
+:PREAMBLE:
+#+TITLE: Epkgs: Overview
 #+SETUPFILE: .orgconfig
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
   (require 'emir)
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
+:END:
 * Summary
 #+NAME: summary
 #+BEGIN_SRC emacs-lisp

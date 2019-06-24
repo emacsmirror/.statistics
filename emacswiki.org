@@ -1,10 +1,12 @@
+:PREAMBLE:
+#+TITLE: Epkgs: Wiki
 #+SETUPFILE: .orgconfig
 #+NAME: setup
 #+BEGIN_SRC emacs-lisp :results silent
   (require 'emir)
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
-
+:END:
 * Wiki packages required by non-wiki packages
 #+NAME: required-by-nonwiki
 #+BEGIN_SRC emacs-lisp
