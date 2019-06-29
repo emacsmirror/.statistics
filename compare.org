@@ -74,13 +74,13 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  457 |      8 |       |   457 |     9 |       |
-| elpa        |  122 |    122 |       |       |   172 |       |
-| elpa-branch |   10 |     10 |       |       |    50 |       |
+| builtin     |  457 |      8 |       |   457 |    10 |       |
+| elpa        |  122 |    122 |       |       |   171 |       |
+| elpa-branch |   11 |     11 |       |       |    51 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4404 |   4404 |       |       |       |  4029 |
-| gitlab      |   91 |     91 |       |       |       |    90 |
-| git         |   66 |     66 |       |       |       |    55 |
+| github      | 4410 |   4410 |       |       |       |  4036 |
+| gitlab      |   92 |     92 |       |       |       |    91 |
+| git         |   70 |     70 |       |       |       |    59 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   38 |     38 |       |       |       |    39 |
@@ -91,9 +91,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   43 |     43 |       |       |       |       |
-| shelved     | 1245 |        |  1245 |       |       |       |
+| shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7198 |   5504 |  1245 |   457 |   231 |  4214 |
+| total       | 7209 |   5516 |  1244 |   457 |   232 |  4226 |
 
 * Emacs
 ** Prefer elpa
@@ -213,7 +213,7 @@
 | cl-lib      | subtree  | backport of builtin           |
 | seq         | subtree  | backport of builtin           |
 | soap-client | core     | multi-file core not supported |
-| svg         | subtree  | import of outdated upstream   |
+| svg         | core     | import of outdated upstream   |
 | tramp       | external |                               |
 
 ** Prefer upstream
