@@ -32,11 +32,17 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (1)  | Package         | Shelved |
+| Feature (3)  | Package         | Shelved |
 |--------------+-----------------+---------|
+| org-drill    | org             |         |
+| org-drill    | org-drill       |         |
+| test         | nnreddit        |         |
+| test         | test            | t       |
 | test-support | buttercup-junit |         |
 | test-support | ert-junit       |         |
 
+- https://gitlab.com/phillord/org-drill/issues/12
+- https://github.com/dickmao/nnreddit/issues/25
 - https://bitbucket.org/olanilsson/ert-junit/issues/6
 
 * Packages with unsatisfied dependencies

@@ -69,8 +69,8 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3498 |      64 |
-| GPL-2+        |  1184 |      22 |
+| GPL-3+        |  3508 |      64 |
+| GPL-2+        |  1184 |      21 |
 | MIT           |   166 |       3 |
 | GPL-3         |   163 |       3 |
 | MIT (x11)     |   142 |       3 |
@@ -78,9 +78,9 @@
 | BSD-3-clause  |    48 |       1 |
 | Apache-2.0    |    42 |       1 |
 | unlicense     |    36 |       1 |
+| public-domain |    33 |       1 |
 | WTFPL         |    31 |       1 |
 | as-is         |    31 |       1 |
-| public-domain |    29 |       1 |
 | WTFPL-2       |     8 |       0 |
 | GPL-1+        |     6 |       0 |
 | LGPL-3+       |     5 |       0 |
@@ -105,9 +105,9 @@
 | UIUC          |     1 |       0 |
 | Zlib          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4868 |      88 |
+| total GNU     |  4878 |      88 |
 |---------------+-------+---------|
-| total         |  5504 |     100 |
+| total         |  5518 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -140,9 +140,9 @@
 #+RESULTS: attic-overview
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-2+          |   790 |      63 |
+| GPL-2+          |   790 |      64 |
 | GPL-3+          |   229 |      18 |
-| GPL-2           |    63 |       5 |
+| GPL-2           |    62 |       5 |
 | GPL             |    44 |       4 |
 | public-domain   |    35 |       3 |
 | GPL-1+          |    14 |       1 |
@@ -169,9 +169,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1156 |      93 |
+| total GNU       |  1155 |      93 |
 |-----------------+-------+---------|
-| total           |  1245 |     100 |
+| total           |  1244 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown
@@ -212,13 +212,12 @@
   (emir--insert-attic-packages-using-licenses "GPL" "GPL-2" "EPL")
 #+END_SRC
 #+RESULTS: attic-problematic
-| Package (108)       | License | Link                                          |
+| Package (107)       | License | Link                                          |
 |---------------------+---------+-----------------------------------------------|
 | align-regexp        | GPL     |                                               |
 | amigo               | GPL-2   |                                               |
 | atom-blogger        | GPL     |                                               |
 | axcess              | GPL     |                                               |
-| bang                | GPL-2   |                                               |
 | bibtex-mode         | GPL     |                                               |
 | blip                | GPL-2   |                                               |
 | breadcrumb          | GPL-2   | https://github.com/pheaver/breadcrumb         |

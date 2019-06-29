@@ -72,7 +72,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (83)                    | Class       | Feature                  | Reason                                              |
+| Package (84)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -178,6 +178,7 @@
 | stickies                        | github      | anything                 | anything                                            |
 | string-utils                    | github      | obarray-fns              | shelved soft                                        |
 | tangotango-theme                | github      | color-theme              | backward compatibility                              |
+| tramp                           | git         | tramp-loaddefs           | generated internal file                             |
 | tss                             | github      | anything                 | anything                                            |
 | twittering-mode                 | github      | alpaca                   | only required if epa isn't available                |
 | twittering-mode                 | github      | revive                   | false-positive                                      |
