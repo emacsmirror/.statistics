@@ -74,16 +74,16 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  456 |      9 |       |   457 |    10 |       |
+| builtin     |  456 |      9 |       |   462 |    10 |       |
 | elpa        |  122 |    122 |       |       |   171 |       |
 | elpa-branch |   11 |     11 |       |       |    51 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4410 |   4410 |       |       |       |  4036 |
+| github      | 4416 |   4416 |       |       |       |  4042 |
 | gitlab      |   92 |     92 |       |       |       |    91 |
 | git         |   71 |     71 |       |       |       |    59 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   38 |     38 |       |       |       |    39 |
+| bitbucket   |   37 |     37 |       |       |       |    38 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  610 |    610 |       |       |       |       |
@@ -93,7 +93,7 @@
 | orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7209 |   5518 |  1244 |   457 |   232 |  4226 |
+| total       | 7214 |   5523 |  1244 |   462 |   232 |  4231 |
 
 * Emacs
 ** Prefer elpa
@@ -374,7 +374,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (87)    | Secondary package                 | Class  |
+| Primary package (88)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -493,6 +493,7 @@
 | rtags                   | flycheck-rtags                    | github |
 | rtags                   | helm-rtags                        | github |
 | rtags                   | ivy-rtags                         | github |
+| semaphore               | semaphore-promise                 | github |
 | sift                    | projectile-sift                   | github |
 | smart-mode-line         | smart-mode-line-powerline-theme   | github |
 | solidity-mode           | company-solidity                  | github |
