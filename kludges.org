@@ -45,7 +45,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (6)       | Class  | Feature    | Reason                 |
+| Package (5)       | Class  | Feature    | Reason                 |
 |-------------------+--------+------------+------------------------|
 | emacspeak         | github | amixer     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak         | github | analog     | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
@@ -59,8 +59,6 @@
 | slime             | github | cl-indent  | part of Emacs          |
 | twittering-mode   | github | ssl        | backward compatibility |
 | twittering-mode   | github | test       | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
-| w3m               | github | ptexinfmt  | fixme                  |
-| w3m               | github | rfc2368    | fixme                  |
 
 * Drop required features
 #+NAME: required-drop
@@ -72,7 +70,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (84)                    | Class       | Feature                  | Reason                                              |
+| Package (83)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -196,7 +194,6 @@
 | w3                              | elpa-branch | x-font-menu              | XEmacs compatibility                                |
 | w3                              | elpa-branch | xbm-button               | XEmacs compatibility                                |
 | w3                              | elpa-branch | xpm-button               | XEmacs compatibility                                |
-| w3m                             | github      | un-define                | XEmacs compatibility                                |
 | wanderlust                      | github      | spamfilter               | shelved soft                                        |
 | yatex                           | hg          | hilit19                  | backward compatibility                              |
 
