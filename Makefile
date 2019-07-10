@@ -98,6 +98,7 @@ force:
 publish: html
 	@echo "Uploading to $(PUBLISH_BUCKET)..."
 	@aws s3 sync $(SRC) $(PUBLISH_BUCKET)$(DST) --delete $(SYNC)
+	@echo "Performing CDN invalidation"
 	@aws cloudfront create-invalidation \
 	--distribution-id $(CFRONT_DIST) --paths "/stats/*" > /dev/null
 
