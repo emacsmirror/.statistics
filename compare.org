@@ -74,13 +74,13 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  456 |      9 |       |   457 |    10 |       |
+| builtin     |  456 |     11 |       |   457 |    11 |       |
 | elpa        |  122 |    122 |       |       |   171 |       |
 | elpa-branch |   11 |     11 |       |       |    51 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4417 |   4417 |       |       |       |  4043 |
-| gitlab      |   92 |     92 |       |       |       |    91 |
-| git         |   71 |     71 |       |       |       |    59 |
+| github      | 4425 |   4425 |       |       |       |  4050 |
+| gitlab      |   93 |     93 |       |       |       |    92 |
+| git         |   71 |     71 |       |       |       |    60 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   37 |     37 |       |       |       |    38 |
@@ -93,7 +93,7 @@
 | orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7215 |   5524 |  1244 |   457 |   232 |  4232 |
+| total       | 7224 |   5535 |  1244 |   457 |   233 |  4241 |
 
 * Emacs
 ** Prefer elpa
@@ -108,16 +108,17 @@
               [elpa elpa-branch elpa-core]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
-| Package (8) | Class     |
-|-------------+-----------|
-| ada-mode    | elpa      |
-| cl-print    | elpa-core |
-| flymake     | elpa-core |
-| let-alist   | elpa-core |
-| map         | elpa-core |
-| ntlm        | elpa-core |
-| python      | elpa-core |
-| svg         | elpa-core |
+| Package (9)  | Class     |
+|--------------+-----------|
+| ada-mode     | elpa      |
+| cl-print     | elpa-core |
+| flymake      | elpa-core |
+| let-alist    | elpa-core |
+| map          | elpa-core |
+| ntlm         | elpa-core |
+| python       | elpa-core |
+| svg          | elpa-core |
+| verilog-mode | elpa-core |
 
 ** Prefer upstream
 #+NAME: builtin-prefer-upstream
@@ -207,12 +208,11 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (4) | Gelpa   | Reason                        |
-|-------------+---------+-------------------------------|
-| cl-generic  | subtree | backport of builtin           |
-| cl-lib      | subtree | backport of builtin           |
-| seq         | subtree | backport of builtin           |
-| soap-client | core    | multi-file core not supported |
+| Package (3) | Gelpa   | Reason              |
+|-------------+---------+---------------------|
+| cl-generic  | subtree | backport of builtin |
+| cl-lib      | subtree | backport of builtin |
+| seq         | subtree | backport of builtin |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
@@ -593,7 +593,7 @@
 | smart-compile             | minority | github    | all-in-one repo     |
 | toggle                    | minority | github    | all-in-one repo     |
 | cfengine-code-style       | minority | github    | mostly non-elisp    |
-| cmake-mode                | minority | github    | mostly non-elisp    |
+| cmake-mode                | minority | git       | mostly non-elisp    |
 | cython-mode               | minority | github    | mostly non-elisp    |
 | diffscuss-mode            | minority | github    | mostly non-elisp    |
 | google-c-style            | minority | github    | mostly non-elisp    |
