@@ -4,10 +4,8 @@ DOMAIN         ?= emacsmirror.net
 PUBLIC         ?= https://$(DOMAIN)
 CFRONT_DIST    ?= E1IXJGPIOM4EUW
 PUBLISH_BUCKET ?= s3://$(DOMAIN)
-PREVIEW_BUCKET ?= s3://preview.$(DOMAIN)
 S3_ZONE        ?= s3-website.eu-central-1
 PUBLISH_S3_URL ?= http://$(DOMAIN).$(S3_ZONE).amazonaws.com
-PREVIEW_S3_URL ?= http://preview.$(DOMAIN).$(S3_ZONE).amazonaws.com
 
 EMACS           ?= emacs
 SITE_LISP       ?= ~/.emacs.d/lib/
@@ -60,12 +58,10 @@ help:
 	$(info )
 	$(info make babel        - evaluate code-blocks)
 	$(info make html         - generate html)
-	$(info make preview      - preview html)
 	$(info make publish      - publish html)
 	$(info make clean        - remove html)
 	$(info )
 	$(info Public:  $(PUBLIC))
-	$(info Preview: $(PREVIEW_S3_URL))
 	$(info Publish: $(PUBLISH_S3_URL))
 	@echo
 
@@ -98,10 +94,6 @@ force:
 	  (org-html-export-to-html)))" 2>&1 |\
 	grep -v "Evaluation of this emacs-lisp code block" | true
 	@rm -f $@~
-
-preview:
-	@echo "Uploading to $(PREVIEW_BUCKET)..."
-	@aws s3 sync $(SRC) $(PREVIEW_BUCKET)$(DST) --delete $(SYNC)
 
 publish:
 	@echo "Uploading to $(PUBLISH_BUCKET)..."
