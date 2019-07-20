@@ -75,12 +75,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |     11 |       |   457 |    11 |       |
-| elpa        |  122 |    122 |       |       |   171 |       |
-| elpa-branch |   11 |     11 |       |       |    51 |       |
+| elpa        |  122 |    122 |       |       |   173 |       |
+| elpa-branch |   12 |     12 |       |       |    52 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4425 |   4425 |       |       |       |  4050 |
-| gitlab      |   93 |     93 |       |       |       |    92 |
-| git         |   71 |     71 |       |       |       |    60 |
+| github      | 4433 |   4433 |       |       |       |  4058 |
+| gitlab      |   96 |     96 |       |       |       |    95 |
+| git         |   70 |     70 |       |       |       |    59 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   37 |     37 |       |       |       |    38 |
@@ -93,7 +93,7 @@
 | orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7224 |   5535 |  1244 |   457 |   233 |  4241 |
+| total       | 7235 |   5546 |  1244 |   457 |   236 |  4251 |
 
 * Emacs
 ** Prefer elpa
@@ -184,14 +184,12 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (6)      | Gelpa   |
+| Package (4)      | Gelpa   |
 |------------------+---------|
 | package-fixes    | subtree |
 | shell-quasiquote | subtree |
 | sm-c-mode        | subtree |
 | systemd          | subtree |
-| path-iterator    | subtree |
-| uniquify-files   | subtree |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin

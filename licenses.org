@@ -69,10 +69,10 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3522 |      64 |
-| GPL-2+        |  1185 |      21 |
+| GPL-3+        |  3529 |      64 |
+| GPL-2+        |  1186 |      21 |
+| GPL-3         |   166 |       3 |
 | MIT           |   166 |       3 |
-| GPL-3         |   164 |       3 |
 | MIT (x11)     |   142 |       3 |
 | BSD-2-clause  |    76 |       1 |
 | BSD-3-clause  |    50 |       1 |
@@ -94,6 +94,7 @@
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
+| nil           |     1 |       0 |
 | AGPL-3.0      |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
@@ -104,9 +105,9 @@
 | Ruby          |     1 |       0 |
 | UIUC          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4894 |      88 |
+| total GNU     |  4904 |      88 |
 |---------------+-------+---------|
-| total         |  5535 |     100 |
+| total         |  5546 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -118,6 +119,9 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
+| Package (1) | Class  | License |
+|-------------+--------+---------|
+| symex       | github |         |
 
 * Emacsattic
 ** Overview
