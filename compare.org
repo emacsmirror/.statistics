@@ -78,9 +78,9 @@
 | elpa        |  122 |    122 |       |       |   173 |       |
 | elpa-branch |   12 |     12 |       |       |    52 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4440 |   4440 |       |       |       |  4065 |
-| gitlab      |   97 |     97 |       |       |       |    96 |
-| git         |   71 |     71 |       |       |       |    60 |
+| github      | 4445 |   4445 |       |       |       |  4071 |
+| gitlab      |   98 |     98 |       |       |       |    97 |
+| git         |   72 |     72 |       |       |       |    61 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   37 |     37 |       |       |       |    38 |
@@ -93,7 +93,7 @@
 | orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7244 |   5555 |  1244 |   457 |   236 |  4260 |
+| total       | 7251 |   5562 |  1244 |   457 |   236 |  4268 |
 
 * Emacs
 ** Prefer elpa
@@ -372,7 +372,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (88)    | Secondary package                 | Class  |
+| Primary package (89)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -471,6 +471,7 @@
 | opener                  | evil-opener                       | github |
 | org-projectile          | org-category-capture              | github |
 | org-projectile          | org-projectile-helm               | github |
+| org-starter             | org-starter-swiper                | github |
 | ox-twiki                | ox-tiddly                         | github |
 | package-lint            | package-lint-flymake              | github |
 | phpactor                | company-phpactor                  | github |

@@ -70,7 +70,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (83)                    | Class       | Feature                  | Reason                                              |
+| Package (84)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | bitbucket   | command-frequency        | shelved soft                                        |
@@ -159,6 +159,7 @@
 | org-readme                      | github      | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
 | org-redmine                     | github      | anything                 | anything                                            |
 | org-toodledo                    | github      | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                            |
+| ox-latex-subfigure              | github      | org-loaddefs             | generated external file                             |
 | pinot                           | github      | anything-config          | anything                                            |
 | plsense                         | github      | perl-completion          | anything                                            |
 | po-mode                         | minority    | po-compat                | backward compatibility                              |
