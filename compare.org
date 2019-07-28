@@ -78,7 +78,7 @@
 | elpa        |  122 |    122 |       |       |   173 |       |
 | elpa-branch |   12 |     12 |       |       |    52 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4445 |   4445 |       |       |       |  4071 |
+| github      | 4447 |   4447 |       |       |       |  4072 |
 | gitlab      |   98 |     98 |       |       |       |    97 |
 | git         |   72 |     72 |       |       |       |    61 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -90,10 +90,10 @@
 | file        |   63 |     63 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   43 |     43 |       |       |       |       |
+| orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7251 |   5562 |  1244 |   457 |   236 |  4268 |
+| total       | 7252 |   5563 |  1244 |   457 |   236 |  4269 |
 
 * Emacs
 ** Prefer elpa
@@ -582,7 +582,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (69)              | Class    | Melpa     | Reason              |
+| Package (68)              | Class    | Melpa     | Reason              |
 |---------------------------+----------+-----------+---------------------|
 | autotest                  | minority | github    | all-in-one repo     |
 | bibliothek                | minority | github    | all-in-one repo     |
@@ -627,7 +627,6 @@
 | key-chord                 | orphaned | ORPHAN    | non-git/hg          |
 | keydef                    | orphaned | ORPHAN    | non-git/hg          |
 | levenshtein               | orphaned | ORPHAN    | non-git/hg          |
-| look-mode                 | orphaned | ORPHAN    | non-git/hg          |
 | miniedit                  | orphaned | ORPHAN    | non-git/hg          |
 | oberon                    | orphaned | ORPHAN    | non-git/hg          |
 | org-bullets               | orphaned | ORPHAN    | non-git/hg          |
