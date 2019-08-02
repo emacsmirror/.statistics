@@ -11,7 +11,10 @@
 #+NAME: summary
 #+BEGIN_SRC emacs-lisp
   (require 'finder-inf)
-  (let* ((builtin      (length package--builtins))
+  (let* ((builtin (read (car (process-lines
+                              emir-emacs-reference "-Q" "--batch" "--eval"
+                              "(progn (require 'finder-inf)
+                                      (princ (length package--builtins)))"))))
          (builtin-emir (length (epkgs 'name 'epkg-builtin-package-p)))
          (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1]
