@@ -80,7 +80,7 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 4447 |   4447 |       |       |       |  4072 |
 | gitlab      |   98 |     98 |       |       |       |    97 |
-| git         |   72 |     72 |       |       |       |    61 |
+| git         |   72 |     72 |       |       |       |    62 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   37 |     37 |       |       |       |    38 |
@@ -93,7 +93,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7252 |   5563 |  1244 |   457 |   236 |  4269 |
+| total       | 7252 |   5563 |  1244 |   457 |   236 |  4270 |
 
 * Emacs
 ** Prefer elpa
@@ -372,7 +372,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (89)    | Secondary package                 | Class  |
+| Primary package (90)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -391,6 +391,7 @@
 | circe                   | tracking                          | github |
 | clojure-mode            | clojure-mode-extra-font-locking   | github |
 | codesearch              | projectile-codesearch             | github |
+| colorless-themes        | nordless-theme                    | git    |
 | copyit                  | copyit-pandoc                     | github |
 | crystal-mode            | flycheck-crystal                  | github |
 | ctl-mode                | gs-mode                           | github |
