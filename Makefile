@@ -76,9 +76,9 @@ force:
 	@$(BATCH) $@ --eval "(progn\
 	(load \"$(CUSTOM_FILE)\")\
 	(require 'org)\
-	(let ((epkg-repository \"$(EPKG_REPOSITORY)\")\
-	      (org-confirm-babel-evaluate nil))\
-	  (org-babel-execute-buffer))\
+	(setq epkg-repository \"$(EPKG_REPOSITORY)\")\
+	(setq org-confirm-babel-evaluate nil)\
+	(org-babel-execute-buffer)\
 	(save-buffer))" 2>&1 | grep -v \
 	-e "((" \
 	-e "Code block evaluation complete." \
@@ -90,8 +90,8 @@ force:
 	@echo "Generating $@..."
 	@$(BATCH) $(subst html,org,$@) --eval "(progn\
 	(require 'org)\
-	(let ((org-babel-confirm-evaluate-answer-no 'noeval))\
-	  (org-html-export-to-html)))" 2>&1 |\
+	(setq (org-babel-confirm-evaluate-answer-no 'noeval)\
+	(org-html-export-to-html)))" 2>&1 |\
 	grep -v "Evaluation of this emacs-lisp code block" | true
 	@rm -f $@~
 
