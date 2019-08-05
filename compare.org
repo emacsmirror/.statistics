@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   173 |       |
 | elpa-branch |   12 |     12 |       |       |    52 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4447 |   4447 |       |       |       |  4072 |
+| github      | 4447 |   4447 |       |       |       |  4066 |
 | gitlab      |   98 |     98 |       |       |       |    97 |
 | git         |   72 |     72 |       |       |       |    62 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7252 |   5563 |  1244 |   457 |   236 |  4270 |
+| total       | 7252 |   5563 |  1244 |   457 |   236 |  4264 |
 
 * Emacs
 ** Prefer elpa
@@ -586,73 +586,67 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (68)              | Class    | Melpa     | Reason              |
-|---------------------------+----------+-----------+---------------------|
-| autotest                  | minority | github    | all-in-one repo     |
-| bibliothek                | minority | github    | all-in-one repo     |
-| forecast                  | minority | github    | all-in-one repo     |
-| org-variable-pitch        | minority | github    | all-in-one repo     |
-| paper-theme               | minority | github    | all-in-one repo     |
-| smart-compile             | minority | github    | all-in-one repo     |
-| toggle                    | minority | github    | all-in-one repo     |
-| cfengine-code-style       | minority | github    | mostly non-elisp    |
-| cmake-mode                | minority | git       | mostly non-elisp    |
-| cython-mode               | minority | github    | mostly non-elisp    |
-| diffscuss-mode            | minority | github    | mostly non-elisp    |
-| google-c-style            | minority | github    | mostly non-elisp    |
-| nemerle                   | minority | github    | mostly non-elisp    |
-| ninja-mode                | minority | github    | mostly non-elisp    |
-| po-mode                   | minority | github    | mostly non-elisp    |
-| pylint                    | minority | github    | mostly non-elisp    |
-| thrift                    | minority | github    | mostly non-elisp    |
-| wisp-mode                 | minority | bitbucket | mostly non-elisp    |
-| flycheck-soar             | shelved  | github    |                     |
-| himp                      | shelved  | github    |                     |
-| how-many-lines-in-project | shelved  | github    |                     |
-| inferior-spim             | shelved  | github    |                     |
-| scheme-here               | shelved  | github    |                     |
-| scp                       | shelved  | github    |                     |
-| cg                        | file     | MIRROR    | non-git/hg          |
-| darcsum                   | file     | MIRROR    | non-git/hg          |
-| dsvn                      | file     | MIRROR    | non-git/hg          |
-| edit-list                 | file     | MIRROR    | non-git/hg          |
-| helm-ls-svn               | file     | MIRROR    | non-git/hg          |
-| quack                     | file     | MIRROR    | non-git/hg          |
-| tex-smart-umlauts         | file     | MIRROR    | non-git/hg          |
-| confluence                | orphaned | ORPHAN    | non-git/hg          |
-| dedicated                 | orphaned | ORPHAN    | non-git/hg          |
-| dic-lookup-w3m            | orphaned | ORPHAN    | non-git/hg          |
-| dirtree                   | orphaned | ORPHAN    | non-git/hg          |
-| elisp-depend              | orphaned | ORPHAN    | non-git/hg          |
-| ert-expectations          | orphaned | ORPHAN    | non-git/hg          |
-| findr                     | orphaned | ORPHAN    | non-git/hg          |
-| hide-lines                | orphaned | ORPHAN    | non-git/hg          |
-| http-post-simple          | orphaned | ORPHAN    | non-git/hg          |
-| key-chord                 | orphaned | ORPHAN    | non-git/hg          |
-| keydef                    | orphaned | ORPHAN    | non-git/hg          |
-| levenshtein               | orphaned | ORPHAN    | non-git/hg          |
-| miniedit                  | orphaned | ORPHAN    | non-git/hg          |
-| oberon                    | orphaned | ORPHAN    | non-git/hg          |
-| org-bullets               | orphaned | ORPHAN    | non-git/hg          |
-| org-grep                  | orphaned | ORPHAN    | non-git/hg          |
-| pager                     | orphaned | ORPHAN    | non-git/hg          |
-| pointback                 | orphaned | ORPHAN    | non-git/hg          |
-| session                   | orphaned | ORPHAN    | non-git/hg          |
-| shell-command             | orphaned | ORPHAN    | non-git/hg          |
-| shell-history             | orphaned | ORPHAN    | non-git/hg          |
-| showtip                   | orphaned | ORPHAN    | non-git/hg          |
-| smarty-mode               | orphaned | ORPHAN    | non-git/hg          |
-| sml-modeline              | orphaned | ORPHAN    | non-git/hg          |
-| sr-speedbar               | orphaned | ORPHAN    | non-git/hg          |
-| transpose-frame           | orphaned | ORPHAN    | non-git/hg          |
-| tree-mode                 | orphaned | ORPHAN    | non-git/hg          |
-| vala-mode                 | orphaned | ORPHAN    | non-git/hg          |
-| w32-browser               | orphaned | ORPHAN    | non-git/hg          |
-| windata                   | orphaned | ORPHAN    | non-git/hg          |
-| color-theme               | shelved  | ATTIC     | obsolete            |
-| fold-dwim                 | shelved  | ATTIC     | obsolete            |
-| mic-paren                 | shelved  | ATTIC     | obsolete            |
-| redshank                  | shelved  | ATTIC     | obsolete            |
-| fold-dwim-org             | shelved  | github    | obsolete dependency |
-| auth-source-pass          | builtin  | github    | part of Emacs 26.1  |
-| less-css-mode             | builtin  | github    | part of Emacs 26.1  |
+| Package (62)        | Class    | Melpa     | Reason              |
+|---------------------+----------+-----------+---------------------|
+| autotest            | minority | github    | all-in-one repo     |
+| bibliothek          | minority | github    | all-in-one repo     |
+| forecast            | minority | github    | all-in-one repo     |
+| org-variable-pitch  | minority | github    | all-in-one repo     |
+| paper-theme         | minority | github    | all-in-one repo     |
+| smart-compile       | minority | github    | all-in-one repo     |
+| toggle              | minority | github    | all-in-one repo     |
+| cfengine-code-style | minority | github    | mostly non-elisp    |
+| cmake-mode          | minority | git       | mostly non-elisp    |
+| cython-mode         | minority | github    | mostly non-elisp    |
+| diffscuss-mode      | minority | github    | mostly non-elisp    |
+| google-c-style      | minority | github    | mostly non-elisp    |
+| nemerle             | minority | github    | mostly non-elisp    |
+| ninja-mode          | minority | github    | mostly non-elisp    |
+| po-mode             | minority | github    | mostly non-elisp    |
+| pylint              | minority | github    | mostly non-elisp    |
+| thrift              | minority | github    | mostly non-elisp    |
+| wisp-mode           | minority | bitbucket | mostly non-elisp    |
+| cg                  | file     | MIRROR    | non-git/hg          |
+| darcsum             | file     | MIRROR    | non-git/hg          |
+| dsvn                | file     | MIRROR    | non-git/hg          |
+| edit-list           | file     | MIRROR    | non-git/hg          |
+| helm-ls-svn         | file     | MIRROR    | non-git/hg          |
+| quack               | file     | MIRROR    | non-git/hg          |
+| tex-smart-umlauts   | file     | MIRROR    | non-git/hg          |
+| confluence          | orphaned | ORPHAN    | non-git/hg          |
+| dedicated           | orphaned | ORPHAN    | non-git/hg          |
+| dic-lookup-w3m      | orphaned | ORPHAN    | non-git/hg          |
+| dirtree             | orphaned | ORPHAN    | non-git/hg          |
+| elisp-depend        | orphaned | ORPHAN    | non-git/hg          |
+| ert-expectations    | orphaned | ORPHAN    | non-git/hg          |
+| findr               | orphaned | ORPHAN    | non-git/hg          |
+| hide-lines          | orphaned | ORPHAN    | non-git/hg          |
+| http-post-simple    | orphaned | ORPHAN    | non-git/hg          |
+| key-chord           | orphaned | ORPHAN    | non-git/hg          |
+| keydef              | orphaned | ORPHAN    | non-git/hg          |
+| levenshtein         | orphaned | ORPHAN    | non-git/hg          |
+| miniedit            | orphaned | ORPHAN    | non-git/hg          |
+| oberon              | orphaned | ORPHAN    | non-git/hg          |
+| org-bullets         | orphaned | ORPHAN    | non-git/hg          |
+| org-grep            | orphaned | ORPHAN    | non-git/hg          |
+| pager               | orphaned | ORPHAN    | non-git/hg          |
+| pointback           | orphaned | ORPHAN    | non-git/hg          |
+| session             | orphaned | ORPHAN    | non-git/hg          |
+| shell-command       | orphaned | ORPHAN    | non-git/hg          |
+| shell-history       | orphaned | ORPHAN    | non-git/hg          |
+| showtip             | orphaned | ORPHAN    | non-git/hg          |
+| smarty-mode         | orphaned | ORPHAN    | non-git/hg          |
+| sml-modeline        | orphaned | ORPHAN    | non-git/hg          |
+| sr-speedbar         | orphaned | ORPHAN    | non-git/hg          |
+| transpose-frame     | orphaned | ORPHAN    | non-git/hg          |
+| tree-mode           | orphaned | ORPHAN    | non-git/hg          |
+| vala-mode           | orphaned | ORPHAN    | non-git/hg          |
+| w32-browser         | orphaned | ORPHAN    | non-git/hg          |
+| windata             | orphaned | ORPHAN    | non-git/hg          |
+| color-theme         | shelved  | ATTIC     | obsolete            |
+| fold-dwim           | shelved  | ATTIC     | obsolete            |
+| mic-paren           | shelved  | ATTIC     | obsolete            |
+| redshank            | shelved  | ATTIC     | obsolete            |
+| fold-dwim-org       | shelved  | github    | obsolete dependency |
+| auth-source-pass    | builtin  | github    | part of Emacs 26.1  |
+| less-css-mode       | builtin  | github    | part of Emacs 26.1  |
