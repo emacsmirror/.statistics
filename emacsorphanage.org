@@ -170,10 +170,16 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (2) | Mirror | Melpa    |
-|-------------+--------+----------|
-| magit-stgit | github | orphaned |
-| magit-svn   | github | orphaned |
+| Package (8)       | Mirror | Melpa    |
+|-------------------+--------+----------|
+| helm-css-scss     | github | orphaned |
+| helm-swoop        | github | orphaned |
+| magit-stgit       | github | orphaned |
+| magit-svn         | github | orphaned |
+| manage-minor-mode | github | orphaned |
+| ov                | github | orphaned |
+| readability       | github | orphaned |
+| swoop             | github | orphaned |
 
 * The maintainer is dead
 

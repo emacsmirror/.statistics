@@ -32,13 +32,16 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (2)  | Package          | Shelved |
-|--------------+------------------+---------|
-| test-helper  | cpp-auto-include |         |
-| test-helper  | mocha            |         |
-| test-support | buttercup-junit  |         |
-| test-support | ert-junit        |         |
+| Feature (3)       | Package          | Shelved |
+|-------------------+------------------+---------|
+| inferior-picolisp | picolisp         |         |
+| inferior-picolisp | picolisp-mode    |         |
+| test-helper       | cpp-auto-include |         |
+| test-helper       | mocha            |         |
+| test-support      | buttercup-junit  |         |
+| test-support      | ert-junit        |         |
 
+- https://github.com/flexibeast/picolisp-mode/commit/d6083244
 - buttercup-junit and [[https://bitbucket.org/olanilsson/ert-junit/issues/6][ert-junit#6]]
 
 Reoccuring issues:
@@ -71,23 +74,25 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (7)         | Class  | Feature       | Provider |
-|---------------------+--------+---------------+----------|
-| bibeltex            | github | org-bibtex    |          |
-| citeproc            | github | org-bibtex    |          |
-| leaf                | github | alloc         |          |
-| leaf                | github | indent        |          |
-| leaf                | github | leaf-browser  |          |
-| leaf                | github | leaf-polyfill |          |
-| leaf                | github | leaf-sub      |          |
-| leaf                | github | leaf-subsub   |          |
-| org-link-minor-mode | github | org-man       |          |
-| org-linkany         | github | org-bbdb      |          |
-| org-mac-protocol    | github | org-bibtex    |          |
-| org-ref             | github | org-bibtex    |          |
+| Package (8)            | Class       | Feature                     | Provider |
+|------------------------+-------------+-----------------------------+----------|
+| bibeltex               | github      | org-bibtex                  |          |
+| citeproc               | github      | org-bibtex                  |          |
+| leaf                   | github      | alloc                       |          |
+| leaf                   | github      | indent                      |          |
+| leaf                   | github      | leaf-browser                |          |
+| leaf                   | github      | leaf-polyfill               |          |
+| leaf                   | github      | leaf-sub                    |          |
+| leaf                   | github      | leaf-subsub                 |          |
+| org-link-minor-mode    | github      | org-man                     |          |
+| org-linkany            | github      | org-bbdb                    |          |
+| org-mac-protocol       | github      | org-bibtex                  |          |
+| org-ref                | github      | org-bibtex                  |          |
+| wisitoken-grammar-mode | elpa-branch | wisitoken_grammar_1-process |          |
 
 - https://github.com/ruediger/bibeltex/issues/2
 - https://github.com/andras-simonyi/citeproc-el/issues/7
+- https://github.com/conao3/leaf.el/issues/301
 - https://github.com/seanohalpin/org-link-minor-mode/issues/7
 - https://github.com/aki2o/org-linkany/issues/4
 - https://github.com/claviclaws/org-mac-protocol/issues/8
