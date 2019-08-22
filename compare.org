@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   173 |       |
 | elpa-branch |   13 |     13 |       |       |    53 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4476 |   4476 |       |       |       |  4097 |
+| github      | 4477 |   4477 |       |       |       |  4098 |
 | gitlab      |  100 |    100 |       |       |       |    99 |
 | git         |   76 |     76 |       |       |       |    66 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7288 |   5599 |  1244 |   457 |   237 |  4301 |
+| total       | 7289 |   5600 |  1244 |   457 |   237 |  4302 |
 
 * Emacs
 ** Prefer elpa
@@ -375,7 +375,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (91)    | Secondary package                 | Class  |
+| Primary package (92)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -433,6 +433,7 @@
 | flyspell-correct        | flyspell-correct-helm             | github |
 | flyspell-correct        | flyspell-correct-ivy              | github |
 | flyspell-correct        | flyspell-correct-popup            | github |
+| fuz                     | helm-fuz                          | github |
 | git-emacs               | git-blamed                        | github |
 | git-modes               | gitattributes-mode                | github |
 | git-modes               | gitconfig-mode                    | github |
