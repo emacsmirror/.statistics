@@ -81,8 +81,8 @@
 | elpa        |  122 |    122 |       |       |   173 |       |
 | elpa-branch |   13 |     13 |       |       |    53 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4478 |   4478 |       |       |       |  4100 |
-| gitlab      |  101 |    101 |       |       |       |   100 |
+| github      | 4486 |   4486 |       |       |       |  4108 |
+| gitlab      |  100 |    100 |       |       |       |    99 |
 | git         |   76 |     76 |       |       |       |    66 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -96,7 +96,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1244 |        |  1244 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7291 |   5602 |  1244 |   457 |   237 |  4305 |
+| total       | 7298 |   5609 |  1244 |   457 |   237 |  4312 |
 
 * Emacs
 ** Prefer elpa
@@ -111,7 +111,7 @@
               [elpa elpa-branch elpa-core]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
-| Package (9)  | Class     |
+| Package (10) | Class     |
 |--------------+-----------|
 | ada-mode     | elpa      |
 | cl-print     | elpa-core |
@@ -120,6 +120,7 @@
 | map          | elpa-core |
 | ntlm         | elpa-core |
 | python       | elpa-core |
+| soap-client  | elpa-core |
 | svg          | elpa-core |
 | verilog-mode | elpa-core |
 
@@ -375,7 +376,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (92)    | Secondary package                 | Class  |
+| Primary package (93)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -483,6 +484,7 @@
 | phpactor                | company-phpactor                  | github |
 | phpstan                 | flycheck-phpstan                  | github |
 | pig-mode                | pig-snippets                      | github |
+| plisp-mode              | picolisp-mode                     | github |
 | pollen-mode             | company-pollen                    | github |
 | prescient               | company-prescient                 | github |
 | prescient               | ivy-prescient                     | github |
