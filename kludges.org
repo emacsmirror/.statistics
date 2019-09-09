@@ -315,7 +315,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (12)        | Class  | Branch       |
+| Package (13)        | Class  | Branch       |
 |---------------------+--------+--------------|
 | apel                | github | apel-wl      |
 | borg-queen          | github | initial-dev  |
@@ -323,6 +323,7 @@
 | elnode              | github | master       |
 | ensime              | github | 2.0          |
 | flim                | github | flim-1_14-wl |
+| howdoyou            | github | master       |
 | neato-graph-bar     | gitlab | release      |
 | nord-theme          | github | develop      |
 | plaster             | github | rewrite      |
@@ -330,3 +331,4 @@
 | semi                | github | semi-1_14-wl |
 | vc-fossil           | github | trunk        |
 
+- howdoyou: https://github.com/melpa/melpa/pull/6394#issuecomment-529667615

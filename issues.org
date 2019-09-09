@@ -38,6 +38,7 @@
 | inferior-picolisp | plisp-mode       |         |
 | test-helper       | cpp-auto-include |         |
 | test-helper       | mocha            |         |
+| test-helper       | rbtagger         |         |
 
 - "picolisp"
   https://github.com/flexibeast/plisp-mode/commit/d6083244
@@ -47,6 +48,7 @@ Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
   - https://github.com/syohex/emacs-cpp-auto-include/issues/6
   - https://github.com/scottaj/mocha.el/issues/62
+  - https://github.com/thiagoa/rbtagger/issues/15
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
