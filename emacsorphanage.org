@@ -21,6 +21,7 @@
                (reason (cadr (assoc name emir--orphanage-reason))))
          (and (or (not only)
                   (member reason only))
+              (not (equal name ".github"))
               (list name
                     (if pkg (closql--abbrev-class (eieio-object-class pkg)) "")
                     (if rcp
