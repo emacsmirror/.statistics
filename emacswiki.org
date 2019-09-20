@@ -26,43 +26,48 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (26)   | Author                        | Depender          | Type | Author                                            |
-|-----------------+-------------------------------+-------------------+------+---------------------------------------------------|
-| bookmark+       | Drew Adams, Thierry Volpiatto | one-key           | hard | Andy Stewart                                      |
-| cygwin-mount    | Michael Cook                  | vm                | hard |                                                   |
-| dropdown-list   |                               | thesaurus         | soft | Dino Chiesa, Alex Henning                         |
-| el-expectations | rubikitch                     | bts               | hard | Hiroaki Otsu                                      |
-| el-expectations | rubikitch                     | caskxy            | soft | Hiroaki Otsu                                      |
-| extract-text    | Joe Bloggs                    | gnus-summary-ext  | soft | Joe Bloggs                                        |
-| filesets+       | Drew Adams                    | helm-filesets     | soft | Graham Clark                                      |
-| font-lock+      | Drew Adams                    | highlight         | soft | Drew Adams                                        |
-| font-lock+      | Drew Adams                    | icons-in-terminal | hard |                                                   |
-| font-lock+      | Drew Adams                    | jemdoc-mode       | soft | Dimitar Dimitrov                                  |
-| frame-cmds      | Drew Adams                    | frame-ctr         | hard | Takaaki ISHIKAWA                                  |
-| frame-fns       | Drew Adams                    | highlight         | soft | Drew Adams                                        |
-| hexrgb          | Drew Adams                    | jabber            | hard |                                                   |
-| hexrgb          | Drew Adams                    | on-screen         | soft | Michael Heerdegen                                 |
-| hexrgb          | Drew Adams                    | one-key           | hard | Andy Stewart                                      |
-| hexrgb          | Drew Adams                    | paper-theme       | hard | Göktuğ Kayaalp                                    |
-| highline        | Vinicius Jose Latorre         | emms              | hard | Jorgen Schäfer                                    |
-| icicles         | Drew Adams                    | rcodetools        | hard |                                                   |
-| imdb            |                               | movie             | hard | Lars Magne Ingebrigtsen                           |
-| isearch-prop    | Drew Adams                    | zones             | soft | Drew Adams                                        |
-| menu-bar+       | Drew Adams                    | highlight         | soft | Drew Adams                                        |
-| oddmuse         |                               | company           | soft | Nikolaj Schumacher                                |
-| org-json        | Changyuan Yu                  | es-mode           | hard | Lee Hinman                                        |
-| policy-switch   | Christoffer S. Hansen         | one-key           | soft | Andy Stewart                                      |
-| run-assoc       |                               | look-dired        | hard | Joe Bloggs                                        |
-| run-assoc       |                               | one-key           | soft | Andy Stewart                                      |
-| screenshot      | rubikitch                     | easy-escape       | hard | Clément Pit--Claudel                              |
-| strings         | Drew Adams                    | ergoemacs-mode    | soft | David Capello                                     |
-| tooltip-help    |                               | org-pua           | hard | Henry G. Weller                                   |
-| unit-test       | Mark Triggs                   | sbt               | soft |                                                   |
-| vline           | Taiki SUGAWARA                | nxhtml            | soft | Lennart Borgman (lennart O borgman A gmail O com) |
-| yaoddmuse       |                               | company           | soft | Nikolaj Schumacher                                |
-| yaoddmuse       |                               | one-key           | soft | Andy Stewart                                      |
-| yaoddmuse       |                               | org-readme        | soft | Matthew L. Fidler                                 |
-| zoom-frm        | Drew Adams                    | hyperbole         | soft | Bob Weiner                                        |
+| Dependee (25)   | Author                        | Depender                      | Type | Author                                            |
+|-----------------+-------------------------------+-------------------------------+------+---------------------------------------------------|
+| bookmark+       | Drew Adams, Thierry Volpiatto | one-key                       | hard | Andy Stewart                                      |
+| cygwin-mount    | Michael Cook                  | vm                            | hard |                                                   |
+| dropdown-list   |                               | thesaurus                     | soft | Dino Chiesa, Alex Henning                         |
+| el-expectations | rubikitch                     | bts                           | hard | Hiroaki Otsu                                      |
+| el-expectations | rubikitch                     | caskxy                        | soft | Hiroaki Otsu                                      |
+| extract-text    | Joe Bloggs                    | gnus-summary-ext              | soft | Joe Bloggs                                        |
+| filesets+       | Drew Adams                    | helm-filesets                 | soft | Graham Clark                                      |
+| font-lock+      | Drew Adams                    | icons-in-terminal             | hard |                                                   |
+| font-lock+      | Drew Adams                    | jemdoc-mode                   | soft | Dimitar Dimitrov                                  |
+| frame-cmds      | Drew Adams                    | frame-ctr                     | hard | Takaaki ISHIKAWA                                  |
+| hexrgb          | Drew Adams                    | jabber                        | hard |                                                   |
+| hexrgb          | Drew Adams                    | on-screen                     | soft | Michael Heerdegen                                 |
+| hexrgb          | Drew Adams                    | one-key                       | hard | Andy Stewart                                      |
+| hexrgb          | Drew Adams                    | paper-theme                   | hard | Göktuğ Kayaalp                                    |
+| highlight       | Drew Adams                    | evil-extra-operator           | hard | Dewdrops                                          |
+| highlight       | Drew Adams                    | evil-search-highlight-persist | hard | Juanjo Alvarez                                    |
+| highlight       | Drew Adams                    | floobits                      | hard | Geoff Greer                                       |
+| highlight       | Drew Adams                    | nrepl-eval-sexp-fu            | hard | Takeshi Banse                                     |
+| highlight       | Drew Adams                    | php-boris-minor-mode          | hard | steckerhalter                                     |
+| highlight       | Drew Adams                    | sonic-pi                      | hard | Joseph Wilk                                       |
+| highlight       | Drew Adams                    | spiral                        | hard | Daniel Barreto                                    |
+| highlight       | Drew Adams                    | zones                         | hard | Drew Adams                                        |
+| highline        | Vinicius Jose Latorre         | emms                          | hard | Jorgen Schäfer                                    |
+| icicles         | Drew Adams                    | rcodetools                    | hard |                                                   |
+| imdb            |                               | movie                         | hard | Lars Magne Ingebrigtsen                           |
+| isearch-prop    | Drew Adams                    | zones                         | soft | Drew Adams                                        |
+| oddmuse         |                               | company                       | soft | Nikolaj Schumacher                                |
+| org-json        | Changyuan Yu                  | es-mode                       | hard | Lee Hinman                                        |
+| policy-switch   | Christoffer S. Hansen         | one-key                       | soft | Andy Stewart                                      |
+| run-assoc       |                               | look-dired                    | hard | Joe Bloggs                                        |
+| run-assoc       |                               | one-key                       | soft | Andy Stewart                                      |
+| screenshot      | rubikitch                     | easy-escape                   | hard | Clément Pit--Claudel                              |
+| strings         | Drew Adams                    | ergoemacs-mode                | soft | David Capello                                     |
+| tooltip-help    |                               | org-pua                       | hard | Henry G. Weller                                   |
+| unit-test       | Mark Triggs                   | sbt                           | soft |                                                   |
+| vline           | Taiki SUGAWARA                | nxhtml                        | soft | Lennart Borgman (lennart O borgman A gmail O com) |
+| yaoddmuse       |                               | company                       | soft | Nikolaj Schumacher                                |
+| yaoddmuse       |                               | one-key                       | soft | Andy Stewart                                      |
+| yaoddmuse       |                               | org-readme                    | soft | Matthew L. Fidler                                 |
+| zoom-frm        | Drew Adams                    | hyperbole                     | soft | Bob Weiner                                        |
 
 * Wiki packages
 
@@ -358,6 +363,7 @@
 | Drew Adams                                      | help-mode+                     |
 | Drew Adams                                      | hexrgb                         |
 | Drew Adams                                      | hide-comnt                     |
+| Drew Adams                                      | highlight                      |
 | Drew Adams                                      | highlight-chars                |
 | Drew Adams                                      | hl-defined                     |
 | Drew Adams                                      | hl-line+                       |
