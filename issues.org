@@ -73,14 +73,17 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (6)         | Class  | Feature    | Provider |
+| Package (8)         | Class  | Feature    | Provider |
 |---------------------+--------+------------+----------|
 | bibeltex            | github | org-bibtex |          |
 | citeproc            | github | org-bibtex |          |
+| eval-in-repl        | github | ensime     | ensime   |
 | org-link-minor-mode | github | org-man    |          |
 | org-linkany         | github | org-bbdb   |          |
 | org-mac-protocol    | github | org-bibtex |          |
 | org-ref             | github | org-bibtex |          |
+| scala-mode          | github | ensime     | ensime   |
+| scala-mode          | github | ensime-inf | ensime   |
 
 - https://github.com/ruediger/bibeltex/issues/2
 - https://github.com/andras-simonyi/citeproc-el/issues/7
