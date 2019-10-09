@@ -69,11 +69,11 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3600 |      64 |
+| GPL-3+        |  3601 |      64 |
 | GPL-2+        |  1189 |      21 |
 | GPL-3         |   171 |       3 |
 | MIT           |   168 |       3 |
-| MIT (x11)     |   143 |       3 |
+| MIT (x11)     |   144 |       3 |
 | BSD-2-clause  |    76 |       1 |
 | BSD-3-clause  |    53 |       1 |
 | Apache-2.0    |    42 |       1 |
@@ -105,9 +105,9 @@
 | Ruby          |     1 |       0 |
 | UIUC          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4984 |      88 |
+| total GNU     |  4985 |      88 |
 |---------------+-------+---------|
-| total         |  5636 |     100 |
+| total         |  5638 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -122,6 +122,8 @@
 | Package (1) | Class  | License |
 |-------------+--------+---------|
 | symex       | github |         |
+
+- symex https://github.com/melpa/melpa/pull/6246#issuecomment-540142497
 
 * Emacsattic
 ** Overview

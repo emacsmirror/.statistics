@@ -78,10 +78,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |     11 |       |   457 |    11 |       |
-| elpa        |  122 |    122 |       |       |   173 |       |
-| elpa-branch |   13 |     13 |       |       |    53 |       |
+| elpa        |  122 |    122 |       |       |   172 |       |
+| elpa-branch |   13 |     13 |       |       |    54 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4512 |   4512 |       |       |       |  4136 |
+| github      | 4514 |   4514 |       |       |       |  4138 |
 | gitlab      |  101 |    101 |       |       |       |   100 |
 | git         |   76 |     76 |       |       |       |    66 |
 | subtree     |   23 |     23 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1245 |        |  1245 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7326 |   5636 |  1245 |   457 |   237 |  4340 |
+| total       | 7328 |   5638 |  1245 |   457 |   237 |  4342 |
 
 * Emacs
 ** Prefer elpa
@@ -240,7 +240,7 @@
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
 | aggressive-indent          | github   | subtree  | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]             |
 | ahungry-theme              | github   | subtree  | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                  |
-| async                      | github   | subtree  | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
+| async                      | github   | external | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                         |
 | auctex                     | git      | external |                                              |
 | avy                        | github   | subtree  | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                  |
 | bbdb                       | git      | external | [[http://bbdb.sourceforge.net]]                  |
