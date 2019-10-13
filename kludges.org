@@ -240,7 +240,7 @@
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (22)          | Class    | Library                         | Reason                     |
+| Package (20)          | Class    | Library                         | Reason                     |
 |-----------------------+----------+---------------------------------+----------------------------|
 | auctex                | git      | tex.el                          | pkg/lib name mismatch      |
 | chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
@@ -250,10 +250,9 @@
 | emacs-speaks-nonmem   | github   | esn-start.el                    | no/mismatched main library |
 | emux                  | github   | emux-base.el                    | no/mismatched main library |
 | ert-runner            | github   | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| eval-sexp-in-comments | github   | eval-sexp-in-comments.el        |                            |
 | eziam-theme           | github   | eziam-dark-theme.el             | two-variant theme          |
 | farmhouse-theme       | github   | farmhouse-dark-theme.el         | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
-| git-undo              | github   | git-undo.el                     |                            |
+| git-undo              | github   | git-undo.el                     | defect, pending [[https://github.com/jwiegley/git-undo-el/pull/2][#2]]         |
 | html5                 | github   | html5-ncr.el                    | no/mismatched main library |
 | literate-starter-kit  | github   | init.el                         | not a package              |
 | majapahit-theme       | gitlab   | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
@@ -261,9 +260,8 @@
 | omtose-phellack-theme | github   | variants/omtose-darker-theme.el | two-variant theme          |
 | punpun-theme          | github   | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | spacemacs-theme       | github   | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
-| tao-theme             | github   | tao-yang-theme.el               | two-variant theme [[https://github.com/11111000000/tao-theme-emacs/pull/17][#17]]      |
 | ultratex              | github   | lisp/ultex.el                   | no/mismatched main library |
-| uni-confusables       | elpa     | uni-confusables.el              | no feature [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug=24517][debbugs#24517]]   |
+| uni-confusables       | elpa     | gen-confusables.el              | generated                  |
 
 * Set libraries
 #+NAME: slot--libraries
