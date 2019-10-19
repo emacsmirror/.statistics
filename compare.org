@@ -81,22 +81,22 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   13 |     13 |       |       |    54 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4514 |   4514 |       |       |       |  4139 |
-| gitlab      |  101 |    101 |       |       |       |   100 |
+| github      | 4513 |   4513 |       |       |       |  4139 |
+| gitlab      |  102 |    102 |       |       |       |   101 |
 | git         |   77 |     77 |       |       |       |    67 |
-| subtree     |   23 |     23 |       |       |       |       |
+| subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   32 |     32 |       |       |       |    33 |
 | hg          |    1 |      1 |       |       |       |     1 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  611 |    611 |       |       |       |       |
 | file        |   63 |     63 |       |       |       |       |
-| minority    |   25 |     25 |       |       |       |       |
+| minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1248 |        |  1248 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7328 |   5635 |  1248 |   457 |   237 |  4340 |
+| total       | 7328 |   5635 |  1248 |   457 |   237 |  4341 |
 
 * Emacs
 ** Prefer elpa
@@ -376,7 +376,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (93)    | Secondary package                 | Class  |
+| Primary package (94)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -479,6 +479,7 @@
 | org-projectile          | org-category-capture              | github |
 | org-projectile          | org-projectile-helm               | github |
 | org-starter             | org-starter-swiper                | github |
+| org2blog                | metaweblog                        | github |
 | ox-twiki                | ox-tiddly                         | github |
 | package-lint            | package-lint-flymake              | github |
 | phpactor                | company-phpactor                  | github |
@@ -591,7 +592,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (63)        | Class    | Melpa     | Reason              |
+| Package (64)        | Class    | Melpa     | Reason              |
 |---------------------+----------+-----------+---------------------|
 | autotest            | minority | github    | all-in-one repo     |
 | bibliothek          | minority | github    | all-in-one repo     |
@@ -601,6 +602,7 @@
 | smart-compile       | minority | github    | all-in-one repo     |
 | toggle              | minority | github    | all-in-one repo     |
 | cfengine-code-style | minority | github    | mostly non-elisp    |
+| clang-format        | minority | github    | mostly non-elisp    |
 | cmake-mode          | minority | git       | mostly non-elisp    |
 | cython-mode         | minority | github    | mostly non-elisp    |
 | diffscuss-mode      | minority | github    | mostly non-elisp    |
