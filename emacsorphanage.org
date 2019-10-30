@@ -171,10 +171,11 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (13)      | Mirror | Melpa    |
+| Package (14)      | Mirror | Melpa    |
 |-------------------+--------+----------|
 | ansible-doc       | github | orphaned |
 | fancy-battery     | github | orphaned |
+| gnuplot           | github | orphaned |
 | helm-css-scss     | github | orphaned |
 | helm-swoop        | github | orphaned |
 | magit-stgit       | github | orphaned |
