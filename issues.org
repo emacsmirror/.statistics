@@ -74,7 +74,7 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (8)         | Class  | Feature    | Provider |
+| Package (9)         | Class  | Feature    | Provider |
 |---------------------+--------+------------+----------|
 | bibeltex            | github | org-bibtex |          |
 | citeproc            | github | org-bibtex |          |
@@ -85,6 +85,7 @@ Reoccuring issues:
 | org-ref             | github | org-bibtex |          |
 | scala-mode          | github | ensime     | ensime   |
 | scala-mode          | github | ensime-inf | ensime   |
+| w3m                 | github | tab-line   |          |
 
 - https://github.com/ruediger/bibeltex/issues/2
 - https://github.com/andras-simonyi/citeproc-el/issues/7
@@ -103,7 +104,7 @@ Reoccuring issues:
      #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: bitbucket
-| Package (32)         | Bitbucket User | Repository                                               | Emacsmirror                                         |
+| Package (29)         | Bitbucket User | Repository                                               | Emacsmirror                                         |
 |----------------------+----------------+----------------------------------------------------------+-----------------------------------------------------|
 | kanban               | ArneBab        | https://bitbucket.org/ArneBab/kanban.el                  | https://github.com/emacsmirror/kanban               |
 | digit-groups         | adamsmd        | https://bitbucket.org/adamsmd/digit-groups               | https://github.com/emacsmirror/digit-groups         |
@@ -116,9 +117,6 @@ Reoccuring issues:
 | gap-mode             | gvol           | https://bitbucket.org/gvol/gap-mode                      | https://github.com/emacsmirror/gap-mode             |
 | nanowrimo            | gvol           | https://bitbucket.org/gvol/nanowrimo.el                  | https://github.com/emacsmirror/nanowrimo            |
 | dyalog-mode          | harsman        | https://bitbucket.org/harsman/dyalog-mode                | https://github.com/emacsmirror/dyalog-mode          |
-| lms                  | inigoserna     | https://bitbucket.org/inigoserna/lms.el                  | https://github.com/emacsmirror/lms                  |
-| per-buffer-theme     | inigoserna     | https://bitbucket.org/inigoserna/per-buffer-theme.el     | https://github.com/emacsmirror/per-buffer-theme     |
-| pmdm                 | inigoserna     | https://bitbucket.org/inigoserna/pmdm.el                 | https://github.com/emacsmirror/pmdm                 |
 | pydoc-info           | jonwaltman     | https://bitbucket.org/jonwaltman/pydoc-info              | https://github.com/emacsmirror/pydoc-info           |
 | figlet               | jpkotta        | https://bitbucket.org/jpkotta/figlet                     | https://github.com/emacsmirror/figlet               |
 | flex-isearch         | jpkotta        | https://bitbucket.org/jpkotta/flex-isearch               | https://github.com/emacsmirror/flex-isearch         |

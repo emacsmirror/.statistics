@@ -81,13 +81,13 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   13 |     13 |       |       |    54 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4518 |   4518 |       |       |       |  4144 |
-| gitlab      |  103 |    103 |       |       |       |   102 |
-| git         |   76 |     76 |       |       |       |    66 |
+| github      | 4520 |   4520 |       |       |       |  4146 |
+| gitlab      |  105 |    105 |       |       |       |   104 |
+| git         |   77 |     77 |       |       |       |    67 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   32 |     32 |       |       |       |    33 |
-| hg          |    1 |      1 |       |       |       |     1 |
+| bitbucket   |   29 |     29 |       |       |       |    30 |
+| hg          |    4 |      4 |       |       |       |     4 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  611 |    611 |       |       |       |       |
 | file        |   63 |     63 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1248 |        |  1248 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7333 |   5640 |  1248 |   457 |   237 |  4346 |
+| total       | 7338 |   5645 |  1248 |   457 |   237 |  4351 |
 
 * Emacs
 ** Prefer elpa
@@ -537,14 +537,15 @@
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Mirror" "Melpa")
     (-keep
-     (-lambda ((name melpa-url))
-       (and (not (or (equal name "yatex")
+     (-lambda ((name url melpa-url))
+       (and (not (or (and (string-prefix-p "hg::" url)
+                          (equal melpa-url (substring url 4)))
                      (string-prefix-p "git@github.com:emacsmirror/" melpa-url)
                      (string-prefix-p "git@github.com:emacsattic/"  melpa-url)))
             (list name
                   (epkg-org-link  name)
                   (melpa-org-link name))))
-     (epkg-sql [:select :distinct [packages:name melpa-recipes:url]
+     (epkg-sql [:select :distinct [packages:name packages:url melpa-recipes:url]
                 :from [packages melpa-recipes]
                 :where    (= melpa-recipes:epkg-package packages:name)
                 :and      (= melpa-recipes:epkg-package melpa-recipes:name)
