@@ -313,7 +313,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (12)        | Class  | Branch       |
+| Package (13)        | Class  | Branch       |
 |---------------------+--------+--------------|
 | apel                | github | apel-wl      |
 | borg-queen          | github | initial-dev  |
@@ -327,5 +327,7 @@
 | propfont-mixed      | github | github       |
 | semi                | github | semi-1_14-wl |
 | vc-fossil           | github | trunk        |
+| zero-input          | git    | pkg          |
 
 - howdoyou: https://github.com/melpa/melpa/pull/6394#issuecomment-529667615
+- zero-input: https://github.com/melpa/melpa/pull/6479

@@ -104,36 +104,33 @@ Reoccuring issues:
      #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: bitbucket
-| Package (29)         | Bitbucket User | Repository                                               | Emacsmirror                                         |
-|----------------------+----------------+----------------------------------------------------------+-----------------------------------------------------|
-| kanban               | ArneBab        | https://bitbucket.org/ArneBab/kanban.el                  | https://github.com/emacsmirror/kanban               |
-| digit-groups         | adamsmd        | https://bitbucket.org/adamsmd/digit-groups               | https://github.com/emacsmirror/digit-groups         |
-| ahg                  | agriggio       | https://bitbucket.org/agriggio/ahg                       | https://github.com/emacsmirror/ahg                  |
-| grin                 | dariusp686     | https://bitbucket.org/dariusp686/emacs-grin              | https://github.com/emacsmirror/grin                 |
-| nose                 | durin42        | https://bitbucket.org/durin42/nosemacs                   | https://github.com/emacsmirror/nose                 |
-| lognav-mode          | ellisvelo      | https://bitbucket.org/ellisvelo/lognav-mode              | https://github.com/emacsmirror/lognav-mode          |
-| multi-project        | ellisvelo      | https://bitbucket.org/ellisvelo/multi-project            | https://github.com/emacsmirror/multi-project        |
-| achievements         | gvol           | https://bitbucket.org/gvol/emacs-achievements            | https://github.com/emacsmirror/achievements         |
-| gap-mode             | gvol           | https://bitbucket.org/gvol/gap-mode                      | https://github.com/emacsmirror/gap-mode             |
-| nanowrimo            | gvol           | https://bitbucket.org/gvol/nanowrimo.el                  | https://github.com/emacsmirror/nanowrimo            |
-| dyalog-mode          | harsman        | https://bitbucket.org/harsman/dyalog-mode                | https://github.com/emacsmirror/dyalog-mode          |
-| pydoc-info           | jonwaltman     | https://bitbucket.org/jonwaltman/pydoc-info              | https://github.com/emacsmirror/pydoc-info           |
-| figlet               | jpkotta        | https://bitbucket.org/jpkotta/figlet                     | https://github.com/emacsmirror/figlet               |
-| flex-isearch         | jpkotta        | https://bitbucket.org/jpkotta/flex-isearch               | https://github.com/emacsmirror/flex-isearch         |
-| highlight-operators  | jpkotta        | https://bitbucket.org/jpkotta/highlight-operators        | https://github.com/emacsmirror/highlight-operators  |
-| immortal-scratch     | jpkotta        | https://bitbucket.org/jpkotta/immortal-scratch           | https://github.com/emacsmirror/immortal-scratch     |
-| openwith             | jpkotta        | https://bitbucket.org/jpkotta/openwith                   | https://github.com/emacsmirror/openwith             |
-| syntax-subword       | jpkotta        | https://bitbucket.org/jpkotta/syntax-subword             | https://github.com/emacsmirror/syntax-subword       |
-| unicode-input        | m00nlight      | https://bitbucket.org/m00nlight/unicode-input            | https://github.com/emacsmirror/unicode-input        |
-| smart-dash           | malsyned       | https://bitbucket.org/malsyned/smart-dash                | https://github.com/emacsmirror/smart-dash           |
-| latex-pretty-symbols | mortiferus     | https://bitbucket.org/mortiferus/latex-pretty-symbols.el | https://github.com/emacsmirror/latex-pretty-symbols |
-| ttl-mode             | nxg            | https://bitbucket.org/nxg/ttl-mode                       | https://github.com/emacsmirror/ttl-mode             |
-| mmm-mako             | pjenvey        | https://bitbucket.org/pjenvey/mmm-mako                   | https://github.com/emacsmirror/mmm-mako             |
-| erc-hipchatify       | seanfarley     | https://bitbucket.org/seanfarley/erc-hipchatify          | https://github.com/emacsmirror/erc-hipchatify       |
-| 2048-game            | zck            | https://bitbucket.org/zck/2048.el                        | https://github.com/emacsmirror/2048-game            |
-| minesweeper          | zck            | https://bitbucket.org/zck/minesweeper.el                 | https://github.com/emacsmirror/minesweeper          |
-| org-parser           | zck            | https://bitbucket.org/zck/org-parser.el                  | https://github.com/emacsmirror/org-parser           |
-| zpresent             | zck            | https://bitbucket.org/zck/zpresent.el                    | https://github.com/emacsmirror/zpresent             |
-| ditz-mode            | zondo          | https://bitbucket.org/zondo/ditz-mode                    | https://github.com/emacsmirror/ditz-mode            |
+| Package (26)        | Bitbucket User | Repository                                        | Emacsmirror                                        |
+|---------------------+----------------+---------------------------------------------------+----------------------------------------------------|
+| kanban              | ArneBab        | https://bitbucket.org/ArneBab/kanban.el           | https://github.com/emacsmirror/kanban              |
+| digit-groups        | adamsmd        | https://bitbucket.org/adamsmd/digit-groups        | https://github.com/emacsmirror/digit-groups        |
+| ahg                 | agriggio       | https://bitbucket.org/agriggio/ahg                | https://github.com/emacsmirror/ahg                 |
+| grin                | dariusp686     | https://bitbucket.org/dariusp686/emacs-grin       | https://github.com/emacsmirror/grin                |
+| nose                | durin42        | https://bitbucket.org/durin42/nosemacs            | https://github.com/emacsmirror/nose                |
+| achievements        | gvol           | https://bitbucket.org/gvol/emacs-achievements     | https://github.com/emacsmirror/achievements        |
+| gap-mode            | gvol           | https://bitbucket.org/gvol/gap-mode               | https://github.com/emacsmirror/gap-mode            |
+| nanowrimo           | gvol           | https://bitbucket.org/gvol/nanowrimo.el           | https://github.com/emacsmirror/nanowrimo           |
+| dyalog-mode         | harsman        | https://bitbucket.org/harsman/dyalog-mode         | https://github.com/emacsmirror/dyalog-mode         |
+| pydoc-info          | jonwaltman     | https://bitbucket.org/jonwaltman/pydoc-info       | https://github.com/emacsmirror/pydoc-info          |
+| figlet              | jpkotta        | https://bitbucket.org/jpkotta/figlet              | https://github.com/emacsmirror/figlet              |
+| flex-isearch        | jpkotta        | https://bitbucket.org/jpkotta/flex-isearch        | https://github.com/emacsmirror/flex-isearch        |
+| highlight-operators | jpkotta        | https://bitbucket.org/jpkotta/highlight-operators | https://github.com/emacsmirror/highlight-operators |
+| immortal-scratch    | jpkotta        | https://bitbucket.org/jpkotta/immortal-scratch    | https://github.com/emacsmirror/immortal-scratch    |
+| openwith            | jpkotta        | https://bitbucket.org/jpkotta/openwith            | https://github.com/emacsmirror/openwith            |
+| syntax-subword      | jpkotta        | https://bitbucket.org/jpkotta/syntax-subword      | https://github.com/emacsmirror/syntax-subword      |
+| unicode-input       | m00nlight      | https://bitbucket.org/m00nlight/unicode-input     | https://github.com/emacsmirror/unicode-input       |
+| smart-dash          | malsyned       | https://bitbucket.org/malsyned/smart-dash         | https://github.com/emacsmirror/smart-dash          |
+| ttl-mode            | nxg            | https://bitbucket.org/nxg/ttl-mode                | https://github.com/emacsmirror/ttl-mode            |
+| mmm-mako            | pjenvey        | https://bitbucket.org/pjenvey/mmm-mako            | https://github.com/emacsmirror/mmm-mako            |
+| erc-hipchatify      | seanfarley     | https://bitbucket.org/seanfarley/erc-hipchatify   | https://github.com/emacsmirror/erc-hipchatify      |
+| 2048-game           | zck            | https://bitbucket.org/zck/2048.el                 | https://github.com/emacsmirror/2048-game           |
+| minesweeper         | zck            | https://bitbucket.org/zck/minesweeper.el          | https://github.com/emacsmirror/minesweeper         |
+| org-parser          | zck            | https://bitbucket.org/zck/org-parser.el           | https://github.com/emacsmirror/org-parser          |
+| zpresent            | zck            | https://bitbucket.org/zck/zpresent.el             | https://github.com/emacsmirror/zpresent            |
+| ditz-mode           | zondo          | https://bitbucket.org/zondo/ditz-mode             | https://github.com/emacsmirror/ditz-mode           |
 
 - https://github.com/melpa/melpa/issues/6484
