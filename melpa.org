@@ -67,7 +67,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (586)                | Link                                    |
+| Package (585)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -446,7 +446,6 @@ please first make sure they meet the minimal requirements.
 | org-defprop                  | [[https://github.com/Neil-Smithline/org-defprop][Neil-Smithline/org-defprop]]              |
 | org-email                    | [[https://github.com/nicferrier/org-email][nicferrier/org-email]]                    |
 | org-global-insert-link       | [[https://github.com/Neil-Smithline/org-global-insert-link][Neil-Smithline/org-global-insert-link]]   |
-| org-gnome-calendar           | [[https://github.com/llvilanova/org-gnome-calendar][llvilanova/org-gnome-calendar]]           |
 | org-helpers                  | [[https://github.com/leoc/org-helpers.el][leoc/org-helpers.el]]                     |
 | org-hlc                      | [[https://github.com/tj64/org-hlc][tj64/org-hlc]]                            |
 | org-hyde                     | [[https://github.com/punchagan/org-hyde][punchagan/org-hyde]]                      |
@@ -459,6 +458,7 @@ please first make sure they meet the minimal requirements.
 | org-reading                  | [[https://github.com/abhiyerra/org-reading][abhiyerra/org-reading]]                   |
 | org-readme                   | [[https://github.com/mattfidler/org-readme][mattfidler/org-readme]]                   |
 | org-s5                       | [[https://github.com/sigma/org-s5][sigma/org-s5]]                            |
+| org-scrum                    | [[https://github.com/ianxm/emacs-scrum][ianxm/emacs-scrum]]                       |
 | org-seenthis                 | [[https://github.com/juba/org-seenthis][juba/org-seenthis]]                       |
 | org-status                   | [[https://github.com/neil-smithline-elisp/org-status][neil-smithline-elisp/org-status]]         |
 | org-watchdoc                 | [[https://github.com/tj64/org-watchdoc][tj64/org-watchdoc]]                       |
@@ -536,7 +536,6 @@ please first make sure they meet the minimal requirements.
 | screensend                   | [[https://github.com/benwbooth/screensend.el][benwbooth/screensend.el]]                 |
 | scriptify                    | [[https://github.com/vderyagin/scriptify][vderyagin/scriptify]]                     |
 | scrobble                     | [[https://github.com/larsmagne/scrobble.el][larsmagne/scrobble.el]]                   |
-| scrum                        | [[https://github.com/ianxm/emacs-scrum][ianxm/emacs-scrum]]                       |
 | sentence-highlight           | [[https://github.com/sbelak/sentence-highlight][sbelak/sentence-highlight]]               |
 | seognil                      | [[https://github.com/md11235/seognil][md11235/seognil]]                         |
 | sequence                     | [[https://github.com/nicferrier/emacs-sequence][nicferrier/emacs-sequence]]               |
@@ -604,7 +603,7 @@ please first make sure they meet the minimal requirements.
 | tora-mode                    | [[https://github.com/syohex/emacs-tora-mode][syohex/emacs-tora-mode]]                  |
 | touchgrid                    | [[https://github.com/larsmagne/touchgrid.el][larsmagne/touchgrid.el]]                  |
 | trac-wiki                    | [[https://github.com/tiborsimko/trac-wiki-el][tiborsimko/trac-wiki-el]]                 |
-| transcript                   | [[https://github.com/nasfarley88/transcript-el][nasfarley88/transcript-el]]               |
+| transcript                   | [[https://github.com/natfarleydev/transcript-el][natfarleydev/transcript-el]]              |
 | trelloel                     | [[https://github.com/jdodds/trelloel][jdodds/trelloel]]                         |
 | trindle                      | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      |
 | try-code                     | [[https://github.com/lewang/try-code][lewang/try-code]]                         |

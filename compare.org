@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   14 |     14 |       |       |    55 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4525 |   4525 |       |       |       |  4151 |
+| github      | 4523 |   4523 |       |       |       |  4151 |
 | gitlab      |  105 |    105 |       |       |       |   104 |
 | git         |   78 |     78 |       |       |       |    68 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   42 |     42 |       |       |       |       |
-| shelved     | 1248 |        |  1248 |       |       |       |
+| shelved     | 1250 |        |  1250 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7344 |   5651 |  1248 |   457 |   238 |  4356 |
+| total       | 7344 |   5649 |  1250 |   457 |   238 |  4356 |
 
 * Emacs
 ** Prefer elpa
@@ -593,7 +593,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (64)        | Class    | Melpa     | Reason              |
+| Package (65)        | Class    | Melpa     | Reason              |
 |---------------------+----------+-----------+---------------------|
 | autotest            | minority | github    | all-in-one repo     |
 | bibliothek          | minority | github    | all-in-one repo     |
@@ -653,6 +653,7 @@
 | windata             | orphaned | ORPHAN    | non-git/hg          |
 | highlight           | wiki     | MIRROR    | non-git/hg          |
 | color-theme         | shelved  | ATTIC     | obsolete            |
+| drawille            | shelved  | ATTIC     | obsolete            |
 | fold-dwim           | shelved  | ATTIC     | obsolete            |
 | mic-paren           | shelved  | ATTIC     | obsolete            |
 | redshank            | shelved  | ATTIC     | obsolete            |
