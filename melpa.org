@@ -689,15 +689,3 @@ please first make sure they meet the minimal requirements.
 | riece             | [[http://www.nongnu.org/riece]] |
 | slate-config-mode |                             |
 
-** Bitbucket
-#+NAME: missing-bitbucket
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Link")
-    (--keep (and (not (melpa-get it))
-                 (not (gelpa-get it))
-                 (list it (epkg-org-link it)))
-	    (epkgs 'name 'epkg-bitbucket-package)))
-#+END_SRC
-#+RESULTS: missing-bitbucket
-
-
