@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   14 |     14 |       |       |    55 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4520 |   4520 |       |       |       |  4148 |
+| github      | 4521 |   4521 |       |       |       |  4151 |
 | gitlab      |  111 |    111 |       |       |       |   110 |
 | git         |   78 |     78 |       |       |       |    68 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1251 |        |  1251 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7344 |   5648 |  1251 |   457 |   238 |  4355 |
+| total       | 7345 |   5649 |  1251 |   457 |   238 |  4358 |
 
 * Emacs
 ** Prefer elpa
@@ -509,6 +509,9 @@
 | sourcekit               | company-sourcekit                 | github |
 | speechd                 | speechd-el                        | github |
 | springboard             | ido-springboard                   | github |
+| stan-mode               | company-stan                      | github |
+| stan-mode               | eldoc-stan                        | github |
+| stan-mode               | flycheck-stan                     | github |
 | stan-mode               | stan-snippets                     | github |
 | term-manager            | term-projectile                   | github |
 | tern                    | tern-auto-complete                | github |
