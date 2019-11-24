@@ -69,11 +69,11 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3608 |      64 |
-| GPL-2+        |  1190 |      21 |
+| GPL-3+        |  3612 |      64 |
+| GPL-2+        |  1191 |      21 |
 | GPL-3         |   171 |       3 |
 | MIT           |   170 |       3 |
-| MIT (x11)     |   145 |       3 |
+| MIT (x11)     |   144 |       3 |
 | BSD-2-clause  |    76 |       1 |
 | BSD-3-clause  |    54 |       1 |
 | Apache-2.0    |    44 |       1 |
@@ -82,7 +82,7 @@
 | WTFPL         |    31 |       1 |
 | as-is         |    29 |       1 |
 | WTFPL-2       |     8 |       0 |
-| LGPL-3+       |     6 |       0 |
+| LGPL-3+       |     7 |       0 |
 | ISC           |     5 |       0 |
 | AGPL-3+       |     4 |       0 |
 | GPL-1+        |     4 |       0 |
@@ -105,9 +105,9 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  4992 |      88 |
+| total GNU     |  4998 |      88 |
 |---------------+-------+---------|
-| total         |  5649 |     100 |
+| total         |  5654 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -143,8 +143,8 @@
 | GPL-3           |    10 |       1 |
 | MIT             |     9 |       1 |
 | as-is           |     8 |       1 |
+| MIT (x11)       |     6 |       0 |
 | ((custom))      |     6 |       0 |
-| MIT (x11)       |     5 |       0 |
 | nil             |     4 |       0 |
 | BSD-2-clause    |     4 |       0 |
 | BSD-3-clause    |     4 |       0 |
@@ -165,7 +165,7 @@
 |-----------------+-------+---------|
 | total GNU       |  1162 |      93 |
 |-----------------+-------+---------|
-| total           |  1251 |     100 |
+| total           |  1252 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown

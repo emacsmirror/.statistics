@@ -81,9 +81,9 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   14 |     14 |       |       |    55 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4521 |   4521 |       |       |       |  4151 |
+| github      | 4525 |   4525 |       |       |       |  4154 |
 | gitlab      |  111 |    111 |       |       |       |   110 |
-| git         |   78 |     78 |       |       |       |    68 |
+| git         |   79 |     79 |       |       |       |    69 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   22 |     22 |       |       |       |    23 |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   42 |     42 |       |       |       |       |
-| shelved     | 1251 |        |  1251 |       |       |       |
+| shelved     | 1252 |        |  1252 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7345 |   5649 |  1251 |   457 |   238 |  4358 |
+| total       | 7351 |   5654 |  1252 |   457 |   238 |  4362 |
 
 * Emacs
 ** Prefer elpa
@@ -376,7 +376,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (94)    | Secondary package                 | Class  |
+| Primary package (93)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -485,7 +485,6 @@
 | phpactor                | company-phpactor                  | github |
 | phpstan                 | flycheck-phpstan                  | github |
 | pig-mode                | pig-snippets                      | github |
-| plisp-mode              | picolisp-mode                     | github |
 | pollen-mode             | company-pollen                    | github |
 | prescient               | company-prescient                 | github |
 | prescient               | ivy-prescient                     | github |
