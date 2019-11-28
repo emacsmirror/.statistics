@@ -42,7 +42,6 @@
 - "picolisp"
   https://github.com/flexibeast/plisp-mode/commit/d6083244
   https://github.com/flexibeast/plisp-mode/commit/3984816a
-- metaweblog: https://github.com/org2blog/org2blog/issues/281
 
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
@@ -74,26 +73,21 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (9)         | Class  | Feature    | Provider |
+| Package (7)         | Class  | Feature    | Provider |
 |---------------------+--------+------------+----------|
 | bibeltex            | github | org-bibtex |          |
-| citeproc            | github | org-bibtex |          |
 | eval-in-repl        | github | ensime     | ensime   |
 | org-link-minor-mode | github | org-man    |          |
 | org-linkany         | github | org-bbdb   |          |
 | org-mac-protocol    | github | org-bibtex |          |
-| org-ref             | github | org-bibtex |          |
 | scala-mode          | github | ensime     | ensime   |
 | scala-mode          | github | ensime-inf | ensime   |
 | w3m                 | github | tab-line   |          |
 
 - https://github.com/ruediger/bibeltex/issues/2
-- https://github.com/andras-simonyi/citeproc-el/issues/7
-- https://github.com/melpa/melpa/pull/6346#issuecomment-522305236
 - https://github.com/seanohalpin/org-link-minor-mode/issues/7
 - https://github.com/aki2o/org-linkany/issues/4
 - https://github.com/claviclaws/org-mac-protocol/issues/8
-- https://github.com/jkitchin/org-ref/issues/649
 
 * Packages maintained in Mercurial repositories on Bitbucket
 #+NAME: bitbucket
