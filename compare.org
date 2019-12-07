@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   14 |     14 |       |       |    55 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4525 |   4525 |       |       |       |  4154 |
+| github      | 4526 |   4526 |       |       |       |  4156 |
 | gitlab      |  112 |    112 |       |       |       |   112 |
 | git         |   79 |     79 |       |       |       |    69 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   42 |     42 |       |       |       |       |
 | shelved     | 1253 |        |  1253 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7353 |   5655 |  1253 |   457 |   238 |  4364 |
+| total       | 7354 |   5656 |  1253 |   457 |   238 |  4366 |
 
 * Emacs
 ** Prefer elpa
@@ -376,7 +376,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (93)    | Secondary package                 | Class  |
+| Primary package (94)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -468,6 +468,8 @@
 | magit                   | git-commit                        | github |
 | magit                   | magit-libgit                      | github |
 | major-mode-hydra        | pretty-hydra                      | github |
+| modus-themes            | modus-operandi-theme              | gitlab |
+| modus-themes            | modus-vivendi-theme               | gitlab |
 | nameframe               | nameframe-perspective             | github |
 | nameframe               | nameframe-projectile              | github |
 | nand2tetris             | company-nand2tetris               | github |
