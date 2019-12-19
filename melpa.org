@@ -67,7 +67,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (586)                | Link                                    |
+| Package (587)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -381,6 +381,7 @@ please first make sure they meet the minimal requirements.
 | ltsv                         | [[https://github.com/syohex/emacs-ltsv][syohex/emacs-ltsv]]                       |
 | lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   |
 | magit-identities             | [[https://github.com/renard/magit-identities][renard/magit-identities]]                 |
+| magit-patch-changelog        | [[https://github.com/dickmao/magit-patch-changelog][dickmao/magit-patch-changelog]]           |
 | magit-view-file              | [[https://github.com/renard/magit-view-file][renard/magit-view-file]]                  |
 | mail-bug                     | [[https://github.com/xaccrocheur/mail-bug][yPhil-gh/mail-bug]]                       |
 | mailcrypt                    | [[https://github.com/barak/mailcrypt][barak/mailcrypt]]                         |
