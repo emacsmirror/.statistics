@@ -69,7 +69,7 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3620 |      64 |
+| GPL-3+        |  3624 |      64 |
 | GPL-2+        |  1191 |      21 |
 | GPL-3         |   172 |       3 |
 | MIT           |   171 |       3 |
@@ -89,13 +89,14 @@
 | ISC (and)     |     3 |       0 |
 | MS-PL         |     3 |       0 |
 | Zlib          |     3 |       0 |
+| AGPL-3.0      |     2 |       0 |
 | Artistic-2.0  |     2 |       0 |
 | COPYLOVE      |     2 |       0 |
 | CeCILL-B      |     2 |       0 |
 | GPL-2         |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
-| AGPL-3.0      |     1 |       0 |
+| nil           |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
 | GPL           |     1 |       0 |
@@ -105,9 +106,9 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5007 |      88 |
+| total GNU     |  5012 |      88 |
 |---------------+-------+---------|
-| total         |  5664 |     100 |
+| total         |  5670 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -119,6 +120,9 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
+| Package (1)  | Class  | License |
+|--------------+--------+---------|
+| cl-font-lock | github |         |
 
 * Emacsattic
 ** Overview

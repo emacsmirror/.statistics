@@ -81,9 +81,9 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    57 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4532 |   4532 |       |       |       |  4160 |
-| gitlab      |  113 |    113 |       |       |       |   112 |
-| git         |   79 |     79 |       |       |       |    69 |
+| github      | 4538 |   4538 |       |       |       |  4167 |
+| gitlab      |  114 |    114 |       |       |       |   113 |
+| git         |   77 |     77 |       |       |       |    67 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   22 |     22 |       |       |       |    23 |
@@ -93,10 +93,10 @@
 | file        |   63 |     63 |       |       |       |       |
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   42 |     42 |       |       |       |       |
+| orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1253 |        |  1253 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7362 |   5664 |  1253 |   457 |   240 |  4370 |
+| total       | 7368 |   5670 |  1253 |   457 |   240 |  4376 |
 
 * Emacs
 ** Prefer elpa
@@ -573,8 +573,9 @@
                     (`(subtree  github) t)
                     (`(subtree  git)    t)))
              (pcase (list class fetcher)
-               (`(orphaned github)
-                (list name class "ORPHAN" "non-git/hg"))
+               ((and `(orphaned github)
+                     (guard (string-prefix-p "emacsorphanage/" repo)))
+                )
                ((and (or `(file github)
                          `(wiki github)) ; for "highlight"
                      (guard (string-prefix-p "emacsmirror/" repo)))
@@ -598,7 +599,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (65)        | Class    | Melpa     | Reason              |
+| Package (35)        | Class    | Melpa     | Reason              |
 |---------------------+----------+-----------+---------------------|
 | autotest            | minority | github    | all-in-one repo     |
 | bibliothek          | minority | github    | all-in-one repo     |
@@ -626,36 +627,6 @@
 | helm-ls-svn         | file     | MIRROR    | non-git/hg          |
 | quack               | file     | MIRROR    | non-git/hg          |
 | tex-smart-umlauts   | file     | MIRROR    | non-git/hg          |
-| confluence          | orphaned | ORPHAN    | non-git/hg          |
-| dedicated           | orphaned | ORPHAN    | non-git/hg          |
-| dic-lookup-w3m      | orphaned | ORPHAN    | non-git/hg          |
-| dirtree             | orphaned | ORPHAN    | non-git/hg          |
-| elisp-depend        | orphaned | ORPHAN    | non-git/hg          |
-| ert-expectations    | orphaned | ORPHAN    | non-git/hg          |
-| findr               | orphaned | ORPHAN    | non-git/hg          |
-| hide-lines          | orphaned | ORPHAN    | non-git/hg          |
-| http-post-simple    | orphaned | ORPHAN    | non-git/hg          |
-| key-chord           | orphaned | ORPHAN    | non-git/hg          |
-| keydef              | orphaned | ORPHAN    | non-git/hg          |
-| levenshtein         | orphaned | ORPHAN    | non-git/hg          |
-| miniedit            | orphaned | ORPHAN    | non-git/hg          |
-| oberon              | orphaned | ORPHAN    | non-git/hg          |
-| org-bullets         | orphaned | ORPHAN    | non-git/hg          |
-| org-grep            | orphaned | ORPHAN    | non-git/hg          |
-| pager               | orphaned | ORPHAN    | non-git/hg          |
-| pointback           | orphaned | ORPHAN    | non-git/hg          |
-| session             | orphaned | ORPHAN    | non-git/hg          |
-| shell-command       | orphaned | ORPHAN    | non-git/hg          |
-| shell-history       | orphaned | ORPHAN    | non-git/hg          |
-| showtip             | orphaned | ORPHAN    | non-git/hg          |
-| smarty-mode         | orphaned | ORPHAN    | non-git/hg          |
-| sml-modeline        | orphaned | ORPHAN    | non-git/hg          |
-| sr-speedbar         | orphaned | ORPHAN    | non-git/hg          |
-| transpose-frame     | orphaned | ORPHAN    | non-git/hg          |
-| tree-mode           | orphaned | ORPHAN    | non-git/hg          |
-| vala-mode           | orphaned | ORPHAN    | non-git/hg          |
-| w32-browser         | orphaned | ORPHAN    | non-git/hg          |
-| windata             | orphaned | ORPHAN    | non-git/hg          |
 | highlight           | wiki     | MIRROR    | non-git/hg          |
 | color-theme         | shelved  | ATTIC     | obsolete            |
 | drawille            | shelved  | ATTIC     | obsolete            |
