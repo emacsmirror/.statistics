@@ -81,8 +81,8 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    57 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4538 |   4538 |       |       |       |  4167 |
-| gitlab      |  114 |    114 |       |       |       |   113 |
+| github      | 4552 |   4552 |       |       |       |  4182 |
+| gitlab      |  115 |    115 |       |       |       |   114 |
 | git         |   77 |     77 |       |       |       |    67 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -96,7 +96,7 @@
 | orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1253 |        |  1253 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7368 |   5670 |  1253 |   457 |   240 |  4376 |
+| total       | 7383 |   5685 |  1253 |   457 |   240 |  4392 |
 
 * Emacs
 ** Prefer elpa
@@ -432,6 +432,7 @@
 | ewal                    | ewal-spacemacs-themes             | gitlab |
 | flutter                 | flutter-l10n-flycheck             | github |
 | flx                     | flx-ido                           | github |
+| flyspell-correct        | flyspell-correct-avy-menu         | github |
 | flyspell-correct        | flyspell-correct-helm             | github |
 | flyspell-correct        | flyspell-correct-ivy              | github |
 | flyspell-correct        | flyspell-correct-popup            | github |

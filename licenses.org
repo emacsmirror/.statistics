@@ -69,11 +69,11 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3624 |      64 |
+| GPL-3+        |  3635 |      64 |
 | GPL-2+        |  1191 |      21 |
 | GPL-3         |   172 |       3 |
-| MIT           |   171 |       3 |
-| MIT (x11)     |   144 |       3 |
+| MIT           |   172 |       3 |
+| MIT (x11)     |   145 |       3 |
 | BSD-2-clause  |    76 |       1 |
 | BSD-3-clause  |    54 |       1 |
 | Apache-2.0    |    44 |       1 |
@@ -83,12 +83,13 @@
 | as-is         |    29 |       1 |
 | WTFPL-2       |     8 |       0 |
 | LGPL-3+       |     7 |       0 |
+| AGPL-3+       |     5 |       0 |
 | ISC           |     5 |       0 |
-| AGPL-3+       |     4 |       0 |
 | GPL-1+        |     4 |       0 |
 | ISC (and)     |     3 |       0 |
 | MS-PL         |     3 |       0 |
 | Zlib          |     3 |       0 |
+| nil           |     2 |       0 |
 | AGPL-3.0      |     2 |       0 |
 | Artistic-2.0  |     2 |       0 |
 | COPYLOVE      |     2 |       0 |
@@ -96,7 +97,6 @@
 | GPL-2         |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
-| nil           |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
 | GPL           |     1 |       0 |
@@ -106,9 +106,9 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5012 |      88 |
+| total GNU     |  5024 |      88 |
 |---------------+-------+---------|
-| total         |  5670 |     100 |
+| total         |  5685 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -120,9 +120,13 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (1)  | Class  | License |
+| Package (2)  | Class  | License |
 |--------------+--------+---------|
 | cl-font-lock | github |         |
+| eglot-jl     | github |         |
+
+- https://github.com/equwal/cl-font-lock/issues/2
+- eglot-jl: https://github.com/melpa/melpa/pull/6531
 
 * Emacsattic
 ** Overview

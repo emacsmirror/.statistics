@@ -70,10 +70,9 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (7)         | Class  | Feature     | Provider |
+| Package (6)         | Class  | Feature     | Provider |
 |---------------------+--------+-------------+----------|
 | bibeltex            | github | org-bibtex  |          |
-| eval-in-repl        | github | ensime      | ensime   |
 | magik-mode          | github | magik-cb-ac |          |
 | org-link-minor-mode | github | org-man     |          |
 | org-linkany         | github | org-bbdb    |          |
@@ -86,9 +85,7 @@ Reoccuring issues:
   - https://github.com/seanohalpin/org-link-minor-mode/issues/7
   - https://github.com/aki2o/org-linkany/issues/4
   - https://github.com/claviclaws/org-mac-protocol/issues/8
-- ~ensime~ was abandoned
-  - https://github.com/kaz-yos/eval-in-repl/pull/43
-  - https://github.com/hvesalai/emacs-scala-mode/issues/155
+- https://github.com/hvesalai/emacs-scala-mode/issues/155
 - https://github.com/roadrunner1776/magik/commit/51dea7918b0c0ffe8cb077f6fa851bd9a03361d0
 
 * Packages maintained in Mercurial repositories on Bitbucket
