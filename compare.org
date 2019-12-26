@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    57 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4552 |   4552 |       |       |       |  4182 |
+| github      | 4544 |   4544 |       |       |       |  4182 |
 | gitlab      |  115 |    115 |       |       |       |   114 |
 | git         |   77 |     77 |       |       |       |    67 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   43 |     43 |       |       |       |       |
-| shelved     | 1253 |        |  1253 |       |       |       |
+| shelved     | 1261 |        |  1261 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7383 |   5685 |  1253 |   457 |   240 |  4392 |
+| total       | 7383 |   5677 |  1261 |   457 |   240 |  4392 |
 
 * Emacs
 ** Prefer elpa
@@ -600,7 +600,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (35)        | Class    | Melpa     | Reason              |
+| Package (43)        | Class    | Melpa     | Reason              |
 |---------------------+----------+-----------+---------------------|
 | autotest            | minority | github    | all-in-one repo     |
 | bibliothek          | minority | github    | all-in-one repo     |
@@ -631,8 +631,16 @@
 | highlight           | wiki     | MIRROR    | non-git/hg          |
 | color-theme         | shelved  | ATTIC     | obsolete            |
 | drawille            | shelved  | ATTIC     | obsolete            |
+| e2wm-R              | shelved  | ATTIC     | obsolete            |
+| edit-at-point       | shelved  | ATTIC     | obsolete            |
+| eno                 | shelved  | ATTIC     | obsolete            |
 | fold-dwim           | shelved  | ATTIC     | obsolete            |
+| ido-migemo          | shelved  | ATTIC     | obsolete            |
+| inlineR             | shelved  | ATTIC     | obsolete            |
 | mic-paren           | shelved  | ATTIC     | obsolete            |
+| org-multiple-keymap | shelved  | ATTIC     | obsolete            |
+| org-wunderlist      | shelved  | ATTIC     | obsolete            |
+| quick-preview       | shelved  | ATTIC     | obsolete            |
 | redshank            | shelved  | ATTIC     | obsolete            |
 | fold-dwim-org       | shelved  | github    | obsolete dependency |
 | auth-source-pass    | builtin  | github    | part of Emacs 26.1  |
