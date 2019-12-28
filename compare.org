@@ -81,8 +81,8 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    57 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4544 |   4544 |       |       |       |  4182 |
-| gitlab      |  115 |    115 |       |       |       |   114 |
+| github      | 4545 |   4545 |       |       |       |  4184 |
+| gitlab      |  116 |    116 |       |       |       |   115 |
 | git         |   77 |     77 |       |       |       |    67 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -96,7 +96,7 @@
 | orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1261 |        |  1261 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7383 |   5677 |  1261 |   457 |   240 |  4392 |
+| total       | 7385 |   5679 |  1261 |   457 |   240 |  4395 |
 
 * Emacs
 ** Prefer elpa
@@ -504,6 +504,7 @@
 | rtags                   | flycheck-rtags                    | github |
 | rtags                   | helm-rtags                        | github |
 | rtags                   | ivy-rtags                         | github |
+| rtags                   | rtags-xref                        | github |
 | semaphore               | semaphore-promise                 | github |
 | sift                    | projectile-sift                   | github |
 | smart-mode-line         | smart-mode-line-powerline-theme   | github |
