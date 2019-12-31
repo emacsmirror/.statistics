@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    57 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4545 |   4545 |       |       |       |  4184 |
+| github      | 4551 |   4551 |       |       |       |  4191 |
 | gitlab      |  116 |    116 |       |       |       |   115 |
 | git         |   77 |     77 |       |       |       |    67 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   43 |     43 |       |       |       |       |
-| shelved     | 1261 |        |  1261 |       |       |       |
+| shelved     | 1260 |        |  1260 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7385 |   5679 |  1261 |   457 |   240 |  4395 |
+| total       | 7390 |   5685 |  1260 |   457 |   240 |  4402 |
 
 * Emacs
 ** Prefer elpa
@@ -522,6 +522,7 @@
 | treemacs                | treemacs-evil                     | github |
 | treemacs                | treemacs-icons-dired              | github |
 | treemacs                | treemacs-magit                    | github |
+| treemacs                | treemacs-persp                    | github |
 | treemacs                | treemacs-projectile               | github |
 | use-package             | bind-chord                        | github |
 | use-package             | bind-key                          | github |
