@@ -81,7 +81,7 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    57 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4551 |   4551 |       |       |       |  4191 |
+| github      | 4559 |   4559 |       |       |       |  4201 |
 | gitlab      |  116 |    116 |       |       |       |   115 |
 | git         |   77 |     77 |       |       |       |    67 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   43 |     43 |       |       |       |       |
 | shelved     | 1260 |        |  1260 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7390 |   5685 |  1260 |   457 |   240 |  4402 |
+| total       | 7398 |   5693 |  1260 |   457 |   240 |  4412 |
 
 * Emacs
 ** Prefer elpa
@@ -377,7 +377,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (94)    | Secondary package                 | Class  |
+| Primary package (96)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -452,6 +452,7 @@
 | helm-bibtex             | ivy-bibtex                        | github |
 | historian               | ivy-historian                     | github |
 | hydra                   | lv                                | github |
+| indent-lint             | flycheck-indent                   | github |
 | ivy                     | counsel                           | github |
 | ivy                     | ivy-hydra                         | github |
 | ivy                     | swiper                            | github |
@@ -462,6 +463,7 @@
 | kaesar                  | kaesar-file                       | github |
 | kaesar                  | kaesar-mode                       | github |
 | kaleidoscope            | kaleidoscope-evil-state-flash     | github |
+| kubel                   | kubel-evil                        | github |
 | kubernetes              | kubernetes-evil                   | github |
 | lean-mode               | company-lean                      | github |
 | lean-mode               | helm-lean                         | github |
