@@ -69,7 +69,7 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3646 |      64 |
+| GPL-3+        |  3643 |      64 |
 | GPL-2+        |  1194 |      21 |
 | MIT           |   171 |       3 |
 | GPL-3         |   170 |       3 |
@@ -83,8 +83,8 @@
 | as-is         |    28 |       0 |
 | WTFPL-2       |     8 |       0 |
 | LGPL-3+       |     7 |       0 |
-| AGPL-3+       |     5 |       0 |
 | ISC           |     5 |       0 |
+| AGPL-3+       |     4 |       0 |
 | GPL-1+        |     4 |       0 |
 | ISC (and)     |     3 |       0 |
 | MS-PL         |     3 |       0 |
@@ -106,9 +106,9 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5036 |      88 |
+| total GNU     |  5032 |      88 |
 |---------------+-------+---------|
-| total         |  5697 |     100 |
+| total         |  5693 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -135,8 +135,8 @@
 #+RESULTS: attic-overview
 | License         | Count | Percent |
 |-----------------+-------+---------|
-| GPL-2+          |   789 |      63 |
-| GPL-3+          |   241 |      19 |
+| GPL-2+          |   789 |      62 |
+| GPL-3+          |   245 |      19 |
 | GPL-2           |    62 |       5 |
 | GPL             |    44 |       3 |
 | public-domain   |    35 |       3 |
@@ -164,9 +164,9 @@
 | LGPL-2.1+       |     1 |       0 |
 | WTFPL-2         |     1 |       0 |
 |-----------------+-------+---------|
-| total GNU       |  1168 |      93 |
+| total GNU       |  1172 |      93 |
 |-----------------+-------+---------|
-| total           |  1260 |     100 |
+| total           |  1264 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown

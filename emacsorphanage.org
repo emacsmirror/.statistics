@@ -13,7 +13,7 @@
                            #'string< :key (lambda (it) (cdr (assq 'name it))))))
 
   (defun emir--list-orphans (&rest only)
-    (epkg-with-org-header ("Package" "Mirror" "Melpa")
+    (epkg-with-org-header ("Package" "E" "M")
       (--keep
        (-let* ((name (cdr (assq 'name it)))
                (pkg  (epkg name))
@@ -23,10 +23,10 @@
                   (member reason only))
               (not (equal name ".github"))
               (list name
-                    (if pkg (closql--abbrev-class (eieio-object-class pkg)) "")
+                    (if pkg "✔" "")
                     (if rcp
                         (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
-                            "orphaned"
+                            "✔"
                           (closql--abbrev-class (eieio-object-class rcp)))
                       ""))))
        emir--orphans-cache)))
@@ -55,18 +55,18 @@ that are available from there).
   (emir--list-orphans "upstream disappeared")
 #+END_SRC
 #+RESULTS: disappeared
-| Package (10) | Mirror   | Melpa    |
-|--------------+----------+----------|
-| dedicated    | orphaned | orphaned |
-| ecasound     | orphaned |          |
-| keydef       | orphaned | orphaned |
-| miniedit     | orphaned | orphaned |
-| osd          | orphaned |          |
-| pager        | orphaned | orphaned |
-| pointback    | orphaned | orphaned |
-| smarty-mode  | orphaned | orphaned |
-| tail         | orphaned |          |
-| vala-mode    | orphaned | orphaned |
+| Package (10) | E | M |
+|--------------+---+---|
+| dedicated    | ✔ | ✔ |
+| ecasound     | ✔ |   |
+| keydef       | ✔ | ✔ |
+| miniedit     | ✔ | ✔ |
+| osd          | ✔ |   |
+| pager        | ✔ | ✔ |
+| pointback    | ✔ | ✔ |
+| smarty-mode  | ✔ | ✔ |
+| tail         | ✔ |   |
+| vala-mode    | ✔ | ✔ |
 
 * Upstream is unresponsive but there are issues
 
@@ -85,16 +85,17 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+END_SRC
 #+RESULTS: unresponsive
-| Package (8)      | Mirror   | Melpa    |
-|------------------+----------+----------|
-| cpp-auto-include | orphaned | orphaned |
-| edb              | orphaned |          |
-| elisp-depend     | orphaned | orphaned |
-| hyperspec        | orphaned |          |
-| oberon           | orphaned | orphaned |
-| org-bullets      | orphaned | orphaned |
-| read-char-spec   | orphaned |          |
-| setnu            | orphaned |          |
+| Package (9)      | E | M |
+|------------------+---+---|
+| cpp-auto-include | ✔ | ✔ |
+| edb              | ✔ |   |
+| elisp-depend     | ✔ | ✔ |
+| hyperspec        | ✔ |   |
+| oberon           | ✔ | ✔ |
+| org-bullets      | ✔ | ✔ |
+| read-char-spec   | ✔ |   |
+| setnu            | ✔ |   |
+| yafolding        | ✔ | ✔ |
 
 * Wiki packages needed by non-wiki packages on Melpa
 
@@ -112,24 +113,24 @@ Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
   (emir--list-orphans "wiki needed by non-wiki" "wiki multiple files")
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Package (16)     | Mirror   | Melpa    |
-|------------------+----------+----------|
-| dirtree          | orphaned | orphaned |
-| ert-expectations | orphaned | orphaned |
-| findr            | orphaned | orphaned |
-| hide-lines       | orphaned | orphaned |
-| http-post-simple | orphaned | orphaned |
-| key-chord        | orphaned | orphaned |
-| levenshtein      | orphaned | orphaned |
-| linkd            | orphaned |          |
-| shell-command    | orphaned | orphaned |
-| shell-history    | orphaned | orphaned |
-| showtip          | orphaned | orphaned |
-| sr-speedbar      | orphaned | orphaned |
-| transpose-frame  | orphaned | orphaned |
-| tree-mode        | orphaned | orphaned |
-| w32-browser      | orphaned | orphaned |
-| windata          | orphaned | orphaned |
+| Package (16)     | E | M |
+|------------------+---+---|
+| dirtree          | ✔ | ✔ |
+| ert-expectations | ✔ | ✔ |
+| findr            | ✔ | ✔ |
+| hide-lines       | ✔ | ✔ |
+| http-post-simple | ✔ | ✔ |
+| key-chord        | ✔ | ✔ |
+| levenshtein      | ✔ | ✔ |
+| linkd            | ✔ |   |
+| shell-command    | ✔ | ✔ |
+| shell-history    | ✔ | ✔ |
+| showtip          | ✔ | ✔ |
+| sr-speedbar      | ✔ | ✔ |
+| transpose-frame  | ✔ | ✔ |
+| tree-mode        | ✔ | ✔ |
+| w32-browser      | ✔ | ✔ |
+| windata          | ✔ | ✔ |
 
 * Imported from non-git/hg repository
 
@@ -147,12 +148,12 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "semi-automatic import")
 #+END_SRC
 #+RESULTS: non-git-hg
-| Package (4)    | Mirror   | Melpa    |
-|----------------+----------+----------|
-| confluence     | orphaned | orphaned |
-| dic-lookup-w3m | orphaned | orphaned |
-| nxhtml         | orphaned |          |
-| vm             | orphaned |          |
+| Package (4)    | E | M |
+|----------------+---+---|
+| confluence     | ✔ | ✔ |
+| dic-lookup-w3m | ✔ | ✔ |
+| nxhtml         | ✔ |   |
+| vm             | ✔ |   |
 
 * Imported from tarball
 #+NAME: tarball
@@ -172,22 +173,28 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (14)      | Mirror | Melpa    |
-|-------------------+--------+----------|
-| ansible-doc       | github | orphaned |
-| fancy-battery     | github | orphaned |
-| gnuplot           | github | orphaned |
-| helm-css-scss     | github | orphaned |
-| helm-swoop        | github | orphaned |
-| magit-stgit       | github | orphaned |
-| magit-svn         | github | orphaned |
-| manage-minor-mode | github | orphaned |
-| opam              | github | orphaned |
-| osx-trash         | github | orphaned |
-| ov                | github | orphaned |
-| pkg-info          | github | orphaned |
-| readability       | github | orphaned |
-| swoop             | github | orphaned |
+| Package (20)      | E | M |
+|-------------------+---+---|
+| ansible-doc       | ✔ | ✔ |
+| direx             | ✔ | ✔ |
+| fancy-battery     | ✔ | ✔ |
+| gnuplot           | ✔ | ✔ |
+| helm-css-scss     | ✔ | ✔ |
+| helm-swoop        | ✔ | ✔ |
+| magit-stgit       | ✔ | ✔ |
+| magit-svn         | ✔ | ✔ |
+| manage-minor-mode | ✔ | ✔ |
+| mongo             | ✔ | ✔ |
+| opam              | ✔ | ✔ |
+| osx-trash         | ✔ | ✔ |
+| ov                | ✔ | ✔ |
+| pkg-info          | ✔ | ✔ |
+| popwin            | ✔ | ✔ |
+| readability       | ✔ | ✔ |
+| swoop             | ✔ | ✔ |
+| thingopt          | ✔ | ✔ |
+| undohist          | ✔ | ✔ |
+| yascroll          | ✔ | ✔ |
 
 * The maintainer is dead
 
@@ -200,9 +207,9 @@ François.
   (emir--list-orphans "maintainer is dead")
 #+END_SRC
 #+RESULTS: rip
-| Package (1) | Mirror   | Melpa    |
-|-------------+----------+----------|
-| org-grep    | orphaned | orphaned |
+| Package (1) | E | M |
+|-------------+---+---|
+| org-grep    | ✔ | ✔ |
 
 * New
 #+NAME: new
