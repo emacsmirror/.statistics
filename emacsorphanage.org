@@ -173,9 +173,11 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (20)      | E | M |
+| Package (22)      | E | M |
 |-------------------+---+---|
+| 4clojure          | ✔ | ✔ |
 | ansible-doc       | ✔ | ✔ |
+| applescript-mode  | ✔ | ✔ |
 | direx             | ✔ | ✔ |
 | fancy-battery     | ✔ | ✔ |
 | gnuplot           | ✔ | ✔ |
