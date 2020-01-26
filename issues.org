@@ -70,11 +70,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature     | Provider |
-|-------------+--------+-------------+----------|
-| magik-mode  | github | magik-cb-ac |          |
+| Package (1) | Class  | Feature  | Provider |
+|-------------+--------+----------+----------|
+| ein         | github | c++-mode |          |
 
-- https://github.com/roadrunner1776/magik/commit/51dea7918b0c0ffe8cb077f6fa851bd9a03361d0
+- https://github.com/melpa/melpa/pull/5670#issuecomment-576025418
 
 * Packages maintained in Mercurial repositories on Bitbucket
 #+NAME: bitbucket
@@ -85,7 +85,7 @@ Reoccuring issues:
      #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: bitbucket
-| Package (21)        | Bitbucket User | Repository                                        | Emacsmirror                                        |
+| Package (20)        | Bitbucket User | Repository                                        | Emacsmirror                                        |
 |---------------------+----------------+---------------------------------------------------+----------------------------------------------------|
 | digit-groups        | adamsmd        | https://bitbucket.org/adamsmd/digit-groups        | https://github.com/emacsmirror/digit-groups        |
 | ahg                 | agriggio       | https://bitbucket.org/agriggio/ahg                | https://github.com/emacsmirror/ahg                 |
@@ -101,7 +101,6 @@ Reoccuring issues:
 | syntax-subword      | jpkotta        | https://bitbucket.org/jpkotta/syntax-subword      | https://github.com/emacsmirror/syntax-subword      |
 | unicode-input       | m00nlight      | https://bitbucket.org/m00nlight/unicode-input     | https://github.com/emacsmirror/unicode-input       |
 | smart-dash          | malsyned       | https://bitbucket.org/malsyned/smart-dash         | https://github.com/emacsmirror/smart-dash          |
-| ttl-mode            | nxg            | https://bitbucket.org/nxg/ttl-mode                | https://github.com/emacsmirror/ttl-mode            |
 | mmm-mako            | pjenvey        | https://bitbucket.org/pjenvey/mmm-mako            | https://github.com/emacsmirror/mmm-mako            |
 | 2048-game           | zck            | https://bitbucket.org/zck/2048.el                 | https://github.com/emacsmirror/2048-game           |
 | minesweeper         | zck            | https://bitbucket.org/zck/minesweeper.el          | https://github.com/emacsmirror/minesweeper         |

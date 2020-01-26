@@ -81,12 +81,12 @@
 | elpa        |  122 |    122 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    56 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4537 |   4537 |       |       |       |  4202 |
+| github      | 4538 |   4538 |       |       |       |  4204 |
 | gitlab      |  116 |    116 |       |       |       |   115 |
 | git         |   78 |     78 |       |       |       |    68 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   21 |     21 |       |       |       |    22 |
+| bitbucket   |   20 |     20 |       |       |       |    21 |
 | hg          |    7 |      7 |       |       |       |     7 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  611 |    611 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   64 |     64 |       |       |       |       |
 | shelved     | 1264 |        |  1264 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7402 |   5693 |  1264 |   457 |   239 |  4414 |
+| total       | 7402 |   5693 |  1264 |   457 |   239 |  4415 |
 
 * Emacs
 ** Prefer elpa
@@ -471,6 +471,7 @@
 | mac-pseudo-daemon       | osx-pseudo-daemon                 | github |
 | magit                   | git-commit                        | github |
 | magit                   | magit-libgit                      | github |
+| magit                   | magit-section                     | github |
 | major-mode-hydra        | pretty-hydra                      | github |
 | modus-themes            | modus-operandi-theme              | gitlab |
 | modus-themes            | modus-vivendi-theme               | gitlab |
