@@ -173,7 +173,7 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (22)      | E | M |
+| Package (23)      | E | M |
 |-------------------+---+---|
 | 4clojure          | ✔ | ✔ |
 | ansible-doc       | ✔ | ✔ |
@@ -181,6 +181,7 @@ repositories have not seen a commit in a decade.
 | direx             | ✔ | ✔ |
 | fancy-battery     | ✔ | ✔ |
 | gnuplot           | ✔ | ✔ |
+| haxe-mode         | ✔ | ✔ |
 | helm-css-scss     | ✔ | ✔ |
 | helm-swoop        | ✔ | ✔ |
 | magit-stgit       | ✔ | ✔ |
