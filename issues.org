@@ -70,11 +70,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature  | Provider |
-|-------------+--------+----------+----------|
-| ein         | github | c++-mode |          |
+| Package (1) | Class  | Feature    | Provider |
+|-------------+--------+------------+----------|
+| eldev       | github | dummy-lint |          |
 
-- https://github.com/melpa/melpa/pull/5670#issuecomment-576025418
+- https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899d04f7ae78
 
 * Packages maintained in Mercurial repositories on Bitbucket
 #+NAME: bitbucket
