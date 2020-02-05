@@ -69,7 +69,7 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3648 |      64 |
+| GPL-3+        |  3649 |      64 |
 | GPL-2+        |  1192 |      21 |
 | MIT           |   172 |       3 |
 | GPL-3         |   169 |       3 |
@@ -97,7 +97,6 @@
 | ISC (and/or)  |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
-| nil           |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC-0          |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
@@ -107,7 +106,7 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5034 |      88 |
+| total GNU     |  5035 |      88 |
 |---------------+-------+---------|
 | total         |  5699 |     100 |
 
@@ -121,9 +120,6 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (1) | Class  | License |
-|-------------+--------+---------|
-| vimgolf     | github |         |
 
 - https://github.com/melpa/melpa/pull/6599
 
