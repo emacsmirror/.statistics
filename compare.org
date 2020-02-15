@@ -78,12 +78,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |     11 |       |   457 |    11 |       |
-| elpa        |  122 |    122 |       |       |   172 |       |
+| elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   15 |     15 |       |       |    56 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4543 |   4543 |       |       |       |  4208 |
+| github      | 4549 |   4549 |       |       |       |  4214 |
 | gitlab      |  117 |    117 |       |       |       |   116 |
-| git         |   78 |     78 |       |       |       |    68 |
+| git         |   78 |     78 |       |       |       |    69 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   20 |     20 |       |       |       |    21 |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   63 |     63 |       |       |       |       |
-| shelved     | 1266 |        |  1266 |       |       |       |
+| shelved     | 1265 |        |  1265 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7409 |   5698 |  1266 |   457 |   239 |  4420 |
+| total       | 7415 |   5705 |  1265 |   457 |   239 |  4427 |
 
 * Emacs
 ** Prefer elpa
@@ -188,12 +188,13 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (4)      | Gelpa   |
+| Package (5)      | Gelpa   |
 |------------------+---------|
 | package-fixes    | subtree |
 | shell-quasiquote | subtree |
 | sm-c-mode        | subtree |
 | systemd          | subtree |
+| vcard            | subtree |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
@@ -396,6 +397,7 @@
 | circe                   | tracking                          | github |
 | clojure-mode            | clojure-mode-extra-font-locking   | github |
 | codesearch              | projectile-codesearch             | github |
+| colorless-themes        | lavenderless-theme                | git    |
 | colorless-themes        | nordless-theme                    | git    |
 | copyit                  | copyit-pandoc                     | github |
 | crystal-mode            | flycheck-crystal                  | github |

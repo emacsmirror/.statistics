@@ -32,14 +32,18 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (1)       | Package    | Shelved |
+| Feature (2)       | Package    | Shelved |
 |-------------------+------------+---------|
 | inferior-picolisp | picolisp   |         |
 | inferior-picolisp | plisp-mode |         |
+| vcard             | bbdb-vcard |         |
+| vcard             | vcard      |         |
 
-- "picolisp"
-  https://github.com/flexibeast/plisp-mode/commit/d6083244
-  https://github.com/flexibeast/plisp-mode/commit/3984816a
+- inferior-picolisp
+  - https://github.com/flexibeast/plisp-mode/commit/d6083244
+  - https://github.com/flexibeast/plisp-mode/commit/3984816a
+- vcard
+  - https://lists.gnu.org/archive/html/emacs-devel/2020-01/msg00980.html
 
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
