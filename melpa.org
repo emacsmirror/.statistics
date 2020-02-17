@@ -67,7 +67,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (585)                | Link                                    |
+| Package (584)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -81,10 +81,10 @@ please first make sure they meet the minimal requirements.
 | alore-mode                   | [[https://github.com/JukkaL/alore-emacs][JukkaL/alore-emacs]]                      |
 | alternative-files            | [[https://github.com/doitian/alternative-files-el][doitian/alternative-files-el]]            |
 | aml-mode                     | [[https://github.com/david-christiansen/aml-mode][david-christiansen/aml-mode]]             |
-| ansys-mode                   | [[https://github.com/dieter-wilhelm/ansys-mode][dieter-wilhelm/ansys-mode]]               |
 | ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                            |
 | ant-project-mode             | [[https://github.com/skeeto/ant-project-mode][skeeto/ant-project-mode]]                 |
 | antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                     |
+| apdl-mode                    | [[https://github.com/dieter-wilhelm/apdl-mode][dieter-wilhelm/apdl-mode]]                |
 | as3-simple-mode              | [[https://github.com/svdm/as3-simple-mode][svdm/as3-simple-mode]]                    |
 | asciidoc                     | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                    |
 | asp-mode                     | [[https://github.com/chrisdone/asp-mode][chrisdone/asp-mode]]                      |
@@ -380,7 +380,6 @@ please first make sure they meet the minimal requirements.
 | ltsv                         | [[https://github.com/syohex/emacs-ltsv][syohex/emacs-ltsv]]                       |
 | lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   |
 | magit-identities             | [[https://github.com/renard/magit-identities][renard/magit-identities]]                 |
-| magit-patch-changelog        | [[https://github.com/dickmao/magit-patch-changelog][dickmao/magit-patch-changelog]]           |
 | magit-view-file              | [[https://github.com/renard/magit-view-file][renard/magit-view-file]]                  |
 | mail-bug                     | [[https://github.com/xaccrocheur/mail-bug][yPhil-gh/mail-bug]]                       |
 | mailcrypt                    | [[https://github.com/barak/mailcrypt][barak/mailcrypt]]                         |
