@@ -78,15 +78,15 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |     11 |       |   457 |    11 |       |
-| elpa        |  123 |    123 |       |       |   172 |       |
-| elpa-branch |   15 |     15 |       |       |    56 |       |
+| elpa        |  123 |    123 |       |       |   171 |       |
+| elpa-branch |   15 |     15 |       |       |    58 |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 4569 |   4569 |       |       |       |  4236 |
 | gitlab      |  117 |    117 |       |       |       |   116 |
-| git         |   78 |     78 |       |       |       |    69 |
+| git         |   79 |     79 |       |       |       |    70 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   19 |     19 |       |       |       |    20 |
+| bitbucket   |   18 |     18 |       |       |       |    19 |
 | hg          |    7 |      7 |       |       |       |     7 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  611 |    611 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |   63 |     63 |       |       |       |       |
 | shelved     | 1265 |        |  1265 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7434 |   5724 |  1265 |   457 |   239 |  4448 |
+| total       | 7434 |   5724 |  1265 |   457 |   240 |  4448 |
 
 * Emacs
 ** Prefer elpa
@@ -235,7 +235,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (94)               | Class    | Gelpa    | Link                                         |
+| Package (95)               | Class    | Gelpa    | Link                                         |
 |----------------------------+----------+----------+----------------------------------------------|
 | ace-window                 | github   | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github   | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -267,6 +267,7 @@
 | eldoc-eval                 | github   | subtree  | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
 | electric-spacing           | github   | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
 | ergoemacs-mode             | github   | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
+| expand-region              | github   | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                     |
 | exwm                       | github   | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
 | fountain-mode              | github   | external | [[https://github.com/rnkn/fountain-mode][rnkn/fountain-mode]]                           |
 | frog-menu                  | github   | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                            |
