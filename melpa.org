@@ -659,13 +659,12 @@ please first make sure they meet the minimal requirements.
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
                  (not (gelpa-get it))
+                 ;; In Melpa as  modus-{vivendi and operandi}-theme
+                 (not (equal it "modus-themes"))
                  (list it (epkg-org-link it)))
-	    (epkgs 'name 'epkg-gitlab-package)))
+            (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
-| Package (1)  | Link                     |
-|--------------+--------------------------|
-| modus-themes | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]] |
 
 ** Git
 #+NAME: missing-git

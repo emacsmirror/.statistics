@@ -74,10 +74,12 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature    | Provider |
-|-------------+--------+------------+----------|
-| eldev       | github | dummy-lint |          |
+| Package (2) | Class  | Feature      | Provider |
+|-------------+--------+--------------+----------|
+| apdl-mode   | github | apdl-keyword |          |
+| eldev       | github | dummy-lint   |          |
 
+- https://github.com/dieter-wilhelm/apdl-mode/commit/50356142f4a6d297ab328f6484e1daf6228d9a89
 - https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899d04f7ae78
 
 * Packages maintained in Mercurial repositories on Bitbucket
@@ -89,10 +91,9 @@ Reoccuring issues:
      #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: bitbucket
-| Package (18)        | Bitbucket User | Repository                                        | Emacsmirror                                        |
+| Package (17)        | Bitbucket User | Repository                                        | Emacsmirror                                        |
 |---------------------+----------------+---------------------------------------------------+----------------------------------------------------|
 | digit-groups        | adamsmd        | https://bitbucket.org/adamsmd/digit-groups        | https://github.com/emacsmirror/digit-groups        |
-| grin                | dariusp686     | https://bitbucket.org/dariusp686/emacs-grin       | https://github.com/emacsmirror/grin                |
 | nose                | durin42        | https://bitbucket.org/durin42/nosemacs            | https://github.com/emacsmirror/nose                |
 | pydoc-info          | jonwaltman     | https://bitbucket.org/jonwaltman/pydoc-info       | https://github.com/emacsmirror/pydoc-info          |
 | figlet              | jpkotta        | https://bitbucket.org/jpkotta/figlet              | https://github.com/emacsmirror/figlet              |

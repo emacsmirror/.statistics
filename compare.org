@@ -81,12 +81,12 @@
 | elpa        |  123 |    123 |       |       |   171 |       |
 | elpa-branch |   15 |     15 |       |       |    58 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4569 |   4569 |       |       |       |  4236 |
-| gitlab      |  117 |    117 |       |       |       |   116 |
+| github      | 4570 |   4570 |       |       |       |  4237 |
+| gitlab      |  114 |    114 |       |       |       |   114 |
 | git         |   79 |     79 |       |       |       |    70 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   18 |     18 |       |       |       |    19 |
+| bitbucket   |   17 |     17 |       |       |       |    18 |
 | hg          |    7 |      7 |       |       |       |     7 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  611 |    611 |       |       |       |       |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |   63 |     63 |       |       |       |       |
-| shelved     | 1265 |        |  1265 |       |       |       |
+| shelved     | 1270 |        |  1270 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7434 |   5724 |  1265 |   457 |   240 |  4448 |
+| total       | 7436 |   5721 |  1270 |   457 |   240 |  4446 |
 
 * Emacs
 ** Prefer elpa
@@ -431,6 +431,7 @@
 | emacsql                 | emacsql-sqlite                    | github |
 | esqlite                 | esqlite-helm                      | github |
 | evil                    | evil-test-helpers                 | github |
+| ewal                    | ewal-doom-themes                  | gitlab |
 | ewal                    | ewal-evil-cursors                 | gitlab |
 | ewal                    | ewal-spacemacs-themes             | gitlab |
 | flutter                 | flutter-l10n-flycheck             | github |
