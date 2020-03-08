@@ -74,13 +74,15 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2) | Class  | Feature      | Provider |
-|-------------+--------+--------------+----------|
-| apdl-mode   | github | apdl-keyword |          |
-| eldev       | github | dummy-lint   |          |
+| Package (3) | Class  | Feature            | Provider |
+|-------------+--------+--------------------+----------|
+| apdl-mode   | github | apdl-keyword       |          |
+| eldev       | github | dummy-lint         |          |
+| julia-snail | github | julia-snail-parser |          |
 
 - https://github.com/dieter-wilhelm/apdl-mode/commit/50356142f4a6d297ab328f6484e1daf6228d9a89
 - https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899d04f7ae78
+- https://github.com/melpa/melpa/pull/6653
 
 * Packages maintained in Mercurial repositories on Bitbucket
 #+NAME: bitbucket
