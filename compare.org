@@ -79,10 +79,10 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |     11 |       |   457 |    11 |       |
 | elpa        |  123 |    123 |       |       |   171 |       |
-| elpa-branch |   15 |     15 |       |       |    58 |       |
+| elpa-branch |   17 |     17 |       |       |    60 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4574 |   4574 |       |       |       |  4241 |
-| gitlab      |  114 |    114 |       |       |       |   114 |
+| github      | 4577 |   4577 |       |       |       |  4244 |
+| gitlab      |  113 |    113 |       |       |       |   114 |
 | git         |   79 |     79 |       |       |       |    70 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -96,7 +96,7 @@
 | orphaned    |   63 |     63 |       |       |       |       |
 | shelved     | 1270 |        |  1270 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7440 |   5725 |  1270 |   457 |   240 |  4450 |
+| total       | 7444 |   5729 |  1270 |   457 |   242 |  4453 |
 
 * Emacs
 ** Prefer elpa
@@ -379,7 +379,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (96)    | Secondary package                 | Class  |
+| Primary package (95)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -477,8 +477,6 @@
 | magit                   | magit-libgit                      | github |
 | magit                   | magit-section                     | github |
 | major-mode-hydra        | pretty-hydra                      | github |
-| modus-themes            | modus-operandi-theme              | gitlab |
-| modus-themes            | modus-vivendi-theme               | gitlab |
 | nameframe               | nameframe-perspective             | github |
 | nameframe               | nameframe-projectile              | github |
 | nand2tetris             | company-nand2tetris               | github |
@@ -552,15 +550,17 @@
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Mirror" "Melpa")
     (-keep
-     (-lambda ((name url melpa-url))
+     (-lambda ((name type url melpa-url))
        (and (not (or (and (string-prefix-p "hg::" url)
                           (equal melpa-url (substring url 4)))
+                     (eq type 'elpa-branch)
                      (string-prefix-p "git@github.com:emacsmirror/" melpa-url)
                      (string-prefix-p "git@github.com:emacsattic/"  melpa-url)))
             (list name
                   (epkg-org-link  name)
                   (melpa-org-link name))))
-     (epkg-sql [:select :distinct [packages:name packages:url melpa-recipes:url]
+     (epkg-sql [:select :distinct [packages:name packages:class
+                                   packages:url melpa-recipes:url]
                 :from [packages melpa-recipes]
                 :where    (= melpa-recipes:epkg-package packages:name)
                 :and      (= melpa-recipes:epkg-package melpa-recipes:name)
@@ -609,48 +609,50 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (43)        | Class    | Melpa     | Reason              |
-|---------------------+----------+-----------+---------------------|
-| autotest            | minority | github    | all-in-one repo     |
-| bibliothek          | minority | github    | all-in-one repo     |
-| forecast            | minority | github    | all-in-one repo     |
-| org-variable-pitch  | minority | github    | all-in-one repo     |
-| paper-theme         | minority | github    | all-in-one repo     |
-| smart-compile       | minority | github    | all-in-one repo     |
-| toggle              | minority | github    | all-in-one repo     |
-| cfengine-code-style | minority | github    | mostly non-elisp    |
-| clang-format        | minority | github    | mostly non-elisp    |
-| cmake-mode          | minority | git       | mostly non-elisp    |
-| cython-mode         | minority | github    | mostly non-elisp    |
-| diffscuss-mode      | minority | github    | mostly non-elisp    |
-| google-c-style      | minority | github    | mostly non-elisp    |
-| nemerle             | minority | github    | mostly non-elisp    |
-| ninja-mode          | minority | github    | mostly non-elisp    |
-| po-mode             | minority | github    | mostly non-elisp    |
-| pylint              | minority | github    | mostly non-elisp    |
-| thrift              | minority | github    | mostly non-elisp    |
-| wisp-mode           | minority | bitbucket | mostly non-elisp    |
-| cg                  | file     | MIRROR    | non-git/hg          |
-| darcsum             | file     | MIRROR    | non-git/hg          |
-| dsvn                | file     | MIRROR    | non-git/hg          |
-| edit-list           | file     | MIRROR    | non-git/hg          |
-| helm-ls-svn         | file     | MIRROR    | non-git/hg          |
-| quack               | file     | MIRROR    | non-git/hg          |
-| tex-smart-umlauts   | file     | MIRROR    | non-git/hg          |
-| highlight           | wiki     | MIRROR    | non-git/hg          |
-| color-theme         | shelved  | ATTIC     | obsolete            |
-| drawille            | shelved  | ATTIC     | obsolete            |
-| e2wm-R              | shelved  | ATTIC     | obsolete            |
-| edit-at-point       | shelved  | ATTIC     | obsolete            |
-| eno                 | shelved  | ATTIC     | obsolete            |
-| fold-dwim           | shelved  | ATTIC     | obsolete            |
-| ido-migemo          | shelved  | ATTIC     | obsolete            |
-| inlineR             | shelved  | ATTIC     | obsolete            |
-| mic-paren           | shelved  | ATTIC     | obsolete            |
-| org-multiple-keymap | shelved  | ATTIC     | obsolete            |
-| org-wunderlist      | shelved  | ATTIC     | obsolete            |
-| quick-preview       | shelved  | ATTIC     | obsolete            |
-| redshank            | shelved  | ATTIC     | obsolete            |
-| fold-dwim-org       | shelved  | github    | obsolete dependency |
-| auth-source-pass    | builtin  | github    | part of Emacs 26.1  |
-| less-css-mode       | builtin  | github    | part of Emacs 26.1  |
+| Package (45)         | Class       | Melpa     | Reason              |
+|----------------------+-------------+-----------+---------------------|
+| autotest             | minority    | github    | all-in-one repo     |
+| bibliothek           | minority    | github    | all-in-one repo     |
+| forecast             | minority    | github    | all-in-one repo     |
+| org-variable-pitch   | minority    | github    | all-in-one repo     |
+| paper-theme          | minority    | github    | all-in-one repo     |
+| smart-compile        | minority    | github    | all-in-one repo     |
+| toggle               | minority    | github    | all-in-one repo     |
+| modus-operandi-theme | elpa-branch | gitlab    | dedicated branches  |
+| modus-vivendi-theme  | elpa-branch | gitlab    | dedicated branches  |
+| cfengine-code-style  | minority    | github    | mostly non-elisp    |
+| clang-format         | minority    | github    | mostly non-elisp    |
+| cmake-mode           | minority    | git       | mostly non-elisp    |
+| cython-mode          | minority    | github    | mostly non-elisp    |
+| diffscuss-mode       | minority    | github    | mostly non-elisp    |
+| google-c-style       | minority    | github    | mostly non-elisp    |
+| nemerle              | minority    | github    | mostly non-elisp    |
+| ninja-mode           | minority    | github    | mostly non-elisp    |
+| po-mode              | minority    | github    | mostly non-elisp    |
+| pylint               | minority    | github    | mostly non-elisp    |
+| thrift               | minority    | github    | mostly non-elisp    |
+| wisp-mode            | minority    | bitbucket | mostly non-elisp    |
+| cg                   | file        | MIRROR    | non-git/hg          |
+| darcsum              | file        | MIRROR    | non-git/hg          |
+| dsvn                 | file        | MIRROR    | non-git/hg          |
+| edit-list            | file        | MIRROR    | non-git/hg          |
+| helm-ls-svn          | file        | MIRROR    | non-git/hg          |
+| quack                | file        | MIRROR    | non-git/hg          |
+| tex-smart-umlauts    | file        | MIRROR    | non-git/hg          |
+| highlight            | wiki        | MIRROR    | non-git/hg          |
+| color-theme          | shelved     | ATTIC     | obsolete            |
+| drawille             | shelved     | ATTIC     | obsolete            |
+| e2wm-R               | shelved     | ATTIC     | obsolete            |
+| edit-at-point        | shelved     | ATTIC     | obsolete            |
+| eno                  | shelved     | ATTIC     | obsolete            |
+| fold-dwim            | shelved     | ATTIC     | obsolete            |
+| ido-migemo           | shelved     | ATTIC     | obsolete            |
+| inlineR              | shelved     | ATTIC     | obsolete            |
+| mic-paren            | shelved     | ATTIC     | obsolete            |
+| org-multiple-keymap  | shelved     | ATTIC     | obsolete            |
+| org-wunderlist       | shelved     | ATTIC     | obsolete            |
+| quick-preview        | shelved     | ATTIC     | obsolete            |
+| redshank             | shelved     | ATTIC     | obsolete            |
+| fold-dwim-org        | shelved     | github    | obsolete dependency |
+| auth-source-pass     | builtin     | github    | part of Emacs 26.1  |
+| less-css-mode        | builtin     | github    | part of Emacs 26.1  |

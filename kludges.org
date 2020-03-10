@@ -234,7 +234,7 @@
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (21)          | Class    | Library                         | Reason                     |
+| Package (20)          | Class    | Library                         | Reason                     |
 |-----------------------+----------+---------------------------------+----------------------------|
 | auctex                | git      | tex.el                          | pkg/lib name mismatch      |
 | chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
@@ -250,7 +250,6 @@
 | html5                 | github   | html5-ncr.el                    | no/mismatched main library |
 | literate-starter-kit  | github   | init.el                         | not a package              |
 | majapahit-theme       | gitlab   | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
-| modus-themes          | gitlab   | modus-vivendi-theme.el          | two-variant theme          |
 | ne2wm                 | github   | ne2wm-setup.el                  | no/mismatched main library |
 | omtose-phellack-theme | github   | variants/omtose-darker-theme.el | two-variant theme          |
 | punpun-theme          | github   | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |

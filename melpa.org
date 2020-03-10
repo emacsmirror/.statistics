@@ -659,8 +659,6 @@ please first make sure they meet the minimal requirements.
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
                  (not (gelpa-get it))
-                 ;; In Melpa as  modus-{vivendi and operandi}-theme
-                 (not (equal it "modus-themes"))
                  (list it (epkg-org-link it)))
             (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
