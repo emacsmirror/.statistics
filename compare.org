@@ -78,12 +78,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  456 |     11 |       |   457 |    11 |       |
-| elpa        |  123 |    123 |       |       |   171 |       |
-| elpa-branch |   17 |     17 |       |       |    60 |       |
+| elpa        |  123 |    123 |       |       |   172 |       |
+| elpa-branch |   18 |     18 |       |       |    61 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4577 |   4577 |       |       |       |  4244 |
-| gitlab      |  113 |    113 |       |       |       |   114 |
-| git         |   79 |     79 |       |       |       |    70 |
+| github      | 4544 |   4544 |       |       |       |  4260 |
+| gitlab      |  114 |    114 |       |       |       |   115 |
+| git         |   80 |     80 |       |       |       |    71 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   17 |     17 |       |       |       |    18 |
@@ -93,10 +93,10 @@
 | file        |   63 |     63 |       |       |       |       |
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |   63 |     63 |       |       |       |       |
-| shelved     | 1270 |        |  1270 |       |       |       |
+| orphaned    |  113 |    113 |       |       |       |       |
+| shelved     | 1269 |        |  1269 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7444 |   5729 |  1270 |   457 |   242 |  4453 |
+| total       | 7463 |   5749 |  1269 |   457 |   244 |  4471 |
 
 * Emacs
 ** Prefer elpa
@@ -188,13 +188,12 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (5)      | Gelpa   |
+| Package (4)      | Gelpa   |
 |------------------+---------|
 | package-fixes    | subtree |
 | shell-quasiquote | subtree |
 | sm-c-mode        | subtree |
 | systemd          | subtree |
-| vcard            | subtree |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
