@@ -77,9 +77,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature    | Provider |
-|-------------+--------+------------+----------|
-| eldev       | github | dummy-lint |          |
+| Package (3) | Class  | Feature      | Provider |
+|-------------+--------+--------------+----------|
+| brf         | git    | generic-menu |          |
+| bufler      | github | tab-bar      |          |
+| eldev       | github | dummy-lint   |          |
 
 - https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899d04f7ae78
 
