@@ -17,24 +17,25 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (9) | Class    | Feature        | Reason                                    |
-|-------------+----------+----------------+-------------------------------------------|
-| edb         | orphaned | edbcore        | generated                                 |
-| emacs       | builtin  | cus-load       | generated                                 |
-| emacs       | builtin  | leim-list      | generated                                 |
-| emacspeak   | github   | dtk-css-speech | inside directory containing .nosearch     |
-| eshell      | builtin  | esh-groups     | generated                                 |
-| finder      | builtin  | finder-inf     | generated                                 |
-| fuz         | github   | fuz-core       | provided by module                        |
-| realgud     | github   | bashdb         | inside directory containing .nosearch     |
-| sly         | github   | sly-buttons    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly         | github   | sly-cl-indent  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly         | github   | sly-common     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly         | github   | sly-completion | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly         | github   | sly-messages   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly         | github   | sly-parse      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly         | github   | sly-tests      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| vterm       | github   | vterm-module   | generated                                 |
+| Package (10) | Class    | Feature         | Reason                                    |
+|--------------+----------+-----------------+-------------------------------------------|
+| edb          | orphaned | edbcore         | generated                                 |
+| emacs        | builtin  | cus-load        | generated                                 |
+| emacs        | builtin  | leim-list       | generated                                 |
+| emacspeak    | github   | dtk-css-speech  | inside directory containing .nosearch     |
+| eshell       | builtin  | esh-groups      | generated                                 |
+| finder       | builtin  | finder-inf      | generated                                 |
+| fuz          | github   | fuz-core        | provided by module                        |
+| realgud      | github   | bashdb          | inside directory containing .nosearch     |
+| sly          | github   | sly-buttons     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-cl-indent   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-common      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-completion  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-messages    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-parse       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-tests       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| tree-sitter  | github   | tree-sitter-dyn | provided by module                        |
+| vterm        | github   | vterm-module    | generated                                 |
 
 * Drop provided features
 #+NAME: provided-drop
