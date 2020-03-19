@@ -32,16 +32,13 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (3)       | Package    | Shelved |
+| Feature (2)       | Package    | Shelved |
 |-------------------+------------+---------|
-| cask-bootstrap    | cask       |         |
-| cask-bootstrap    | separedit  |         |
 | inferior-picolisp | picolisp   |         |
 | inferior-picolisp | plisp-mode |         |
 | vcard             | bbdb-vcard |         |
 | vcard             | vcard      |         |
 
-- cask-bootstrap https://github.com/melpa/melpa/pull/6723#issuecomment-599263555
 - inferior-picolisp
   - https://github.com/flexibeast/plisp-mode/commit/d6083244
   - https://github.com/flexibeast/plisp-mode/commit/3984816a
@@ -81,9 +78,12 @@ Reoccuring issues:
 |-------------+--------+--------------+----------|
 | brf         | git    | generic-menu |          |
 | bufler      | github | tab-bar      |          |
+| bufler      | github | tab-line     |          |
 | eldev       | github | dummy-lint   |          |
 
-- https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899d04f7ae78
+- brf: https://github.com/melpa/melpa/pull/6736#issuecomment-601427853
+- bufler: tab-bar and tab-line coming in Emacs 27
+- eldev: https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899d04f7ae78
 
 * Packages maintained in Mercurial repositories on Bitbucket
 #+NAME: bitbucket
