@@ -81,22 +81,22 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   18 |     18 |       |       |    61 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4554 |   4554 |       |       |       |  4270 |
-| gitlab      |  114 |    114 |       |       |       |   115 |
+| github      | 4567 |   4567 |       |       |       |  4286 |
+| gitlab      |  115 |    115 |       |       |       |   116 |
 | git         |   82 |     82 |       |       |       |    72 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   17 |     17 |       |       |       |    18 |
 | hg          |    7 |      7 |       |       |       |     7 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  610 |    610 |       |       |       |       |
+| wiki        |  609 |    609 |       |       |       |       |
 | file        |   63 |     63 |       |       |       |       |
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1269 |        |  1269 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7473 |   5759 |  1269 |   457 |   244 |  4482 |
+| total       | 7486 |   5772 |  1269 |   457 |   244 |  4499 |
 
 * Emacs
 ** Prefer elpa
@@ -378,7 +378,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (95)    | Secondary package                 | Class  |
+| Primary package (96)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -490,6 +490,8 @@
 | org2blog                | metaweblog                        | github |
 | ox-twiki                | ox-tiddly                         | github |
 | package-lint            | package-lint-flymake              | github |
+| pest-mode               | flycheck-pest                     | github |
+| pest-mode               | flymake-pest                      | github |
 | phpactor                | company-phpactor                  | github |
 | phpstan                 | flycheck-phpstan                  | github |
 | pig-mode                | pig-snippets                      | github |
