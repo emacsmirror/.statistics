@@ -69,20 +69,15 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (6) | Class  | Feature        | Provider |
+| Package (4) | Class  | Feature        | Provider |
 |-------------+--------+----------------+----------|
 | brf         | git    | generic-menu   |          |
 | bts         | github | pophint-config |          |
-| bufler      | github | tab-bar        |          |
-| bufler      | github | tab-line       |          |
 | eldev       | github | dummy-lint     |          |
 | pophint     | github | e2wm-perspb    |          |
-| vcard       | elpa   | iso8601        |          |
 
 - brf: https://github.com/melpa/melpa/pull/6736#issuecomment-601427853
-- bufler: tab-bar and tab-line coming in Emacs 27
 - eldev: https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899d04f7ae78
-- vcard: iso8601 coming in Emacs 27
 
 * Packages maintained in Mercurial repositories on Bitbucket
 #+NAME: bitbucket

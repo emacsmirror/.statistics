@@ -77,11 +77,11 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  456 |     11 |       |   457 |    11 |       |
+| builtin     |  466 |     11 |       |   467 |    11 |       |
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   18 |     18 |       |       |    61 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4585 |   4585 |       |       |       |  4305 |
+| github      | 4584 |   4584 |       |       |       |  4305 |
 | gitlab      |  118 |    118 |       |       |       |   119 |
 | git         |   84 |     84 |       |       |       |    74 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1269 |        |  1269 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7509 |   5795 |  1269 |   457 |   244 |  4523 |
+| total       | 7518 |   5794 |  1269 |   467 |   244 |  4523 |
 
 * Emacs
 ** Prefer elpa
@@ -113,9 +113,9 @@
 #+RESULTS: builtin-prefer-elpa
 | Package (10) | Class     |
 |--------------+-----------|
-| ada-mode     | elpa      |
 | cl-print     | elpa-core |
 | flymake      | elpa-core |
+| jsonrpc      | elpa-core |
 | let-alist    | elpa-core |
 | map          | elpa-core |
 | ntlm         | elpa-core |
@@ -210,10 +210,11 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (3) | Gelpa   | Reason              |
+| Package (4) | Gelpa   | Reason              |
 |-------------+---------+---------------------|
 | cl-generic  | subtree | backport of builtin |
 | cl-lib      | subtree | backport of builtin |
+| nadvice     | subtree | backport of builtin |
 | seq         | subtree | backport of builtin |
 
 ** Prefer upstream
@@ -611,7 +612,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (46)         | Class       | Melpa     | Reason              |
+| Package (47)         | Class       | Melpa     | Reason              |
 |----------------------+-------------+-----------+---------------------|
 | autotest             | minority    | github    | all-in-one repo     |
 | bibliothek           | minority    | github    | all-in-one repo     |
@@ -634,6 +635,7 @@
 | pylint               | minority    | github    | mostly non-elisp    |
 | thrift               | minority    | github    | mostly non-elisp    |
 | wisp-mode            | minority    | bitbucket | mostly non-elisp    |
+| faceup               | builtin     | github    |                     |
 | ascii-table          | shelved     | github    |                     |
 | cg                   | file        | MIRROR    | non-git/hg          |
 | darcsum              | file        | MIRROR    | non-git/hg          |
