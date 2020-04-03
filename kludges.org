@@ -47,8 +47,9 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (4)     | Class  | Feature   | Reason                 |
+| Package (5)     | Class  | Feature   | Reason                 |
 |-----------------+--------+-----------+------------------------|
+| bbdb-vcard      | github | vcard     | fixme                  |
 | emacspeak       | github | amixer    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | analog    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | gf        | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
