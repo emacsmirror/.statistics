@@ -81,9 +81,9 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   18 |     18 |       |       |    61 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4567 |   4567 |       |       |       |  4286 |
-| gitlab      |  115 |    115 |       |       |       |   116 |
-| git         |   82 |     82 |       |       |       |    72 |
+| github      | 4585 |   4585 |       |       |       |  4305 |
+| gitlab      |  118 |    118 |       |       |       |   119 |
+| git         |   84 |     84 |       |       |       |    74 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |   17 |     17 |       |       |       |    18 |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1269 |        |  1269 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7486 |   5772 |  1269 |   457 |   244 |  4499 |
+| total       | 7509 |   5795 |  1269 |   457 |   244 |  4523 |
 
 * Emacs
 ** Prefer elpa
@@ -378,7 +378,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (96)    | Secondary package                 | Class  |
+| Primary package (97)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -480,6 +480,7 @@
 | nameframe               | nameframe-projectile              | github |
 | nand2tetris             | company-nand2tetris               | github |
 | nand2tetris             | nand2tetris-assembler             | github |
+| native-complete         | company-native-complete           | github |
 | nixos-options           | company-nixos-options             | github |
 | nixos-options           | helm-nixos-options                | github |
 | nixos-options           | nix-sandbox                       | github |
@@ -610,7 +611,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (45)         | Class       | Melpa     | Reason              |
+| Package (46)         | Class       | Melpa     | Reason              |
 |----------------------+-------------+-----------+---------------------|
 | autotest             | minority    | github    | all-in-one repo     |
 | bibliothek           | minority    | github    | all-in-one repo     |
@@ -633,6 +634,7 @@
 | pylint               | minority    | github    | mostly non-elisp    |
 | thrift               | minority    | github    | mostly non-elisp    |
 | wisp-mode            | minority    | bitbucket | mostly non-elisp    |
+| ascii-table          | shelved     | github    |                     |
 | cg                   | file        | MIRROR    | non-git/hg          |
 | darcsum              | file        | MIRROR    | non-git/hg          |
 | dsvn                 | file        | MIRROR    | non-git/hg          |

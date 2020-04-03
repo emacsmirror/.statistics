@@ -171,7 +171,7 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (77)         | E | M |
+| Package (78)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -203,6 +203,7 @@ repositories have not seen a commit in a decade.
 | go-direx             | ✔ | ✔ |
 | go-eldoc             | ✔ | ✔ |
 | go-impl              | ✔ | ✔ |
+| god-mode             | ✔ | ✔ |
 | gom-mode             | ✔ | ✔ |
 | haxe-mode            | ✔ | ✔ |
 | helm-ack             | ✔ | ✔ |

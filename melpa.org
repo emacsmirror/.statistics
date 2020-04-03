@@ -19,22 +19,11 @@ packages makes it more appealing to improve the remaining code.
 
 #+NAME: from-orphanage
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Vcs") ; "Last commit" "Commits last year")
+  (epkg-with-org-header ("Package" "Vcs")
     (-keep (pcase-lambda (`(,name ,vcs))
-             (let ((default-directory
-                     (if (member vcs '("darcs" "fossil"))
-                         (format "~/git/emacs/import/%s/%s/%s_git/"
-                                 vcs name name)
-                       (format "~/git/emacs/import/%s/%s/" vcs name))))
-               (and (melpa-get name)
-                    (list name vcs
-                          ;; (magit-git-string
-                          ;;  "show" "-q" "--date=relative" "--format=%cd")
-                          ;; (length
-                          ;;  (magit-git-lines
-                          ;;   "log" "--since=1 year ago" "--oneline"))
-                          ))))
-            emir--other-vcs))
+             (and (melpa-get name)
+                  (list name vcs)))
+           emir--other-vcs))
 #+END_SRC
 #+RESULTS: from-orphanage
 | Package (10)      | Vcs   |
@@ -67,7 +56,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (583)                | Link                                    |
+| Package (574)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -84,7 +73,6 @@ please first make sure they meet the minimal requirements.
 | ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                            |
 | ant-project-mode             | [[https://github.com/skeeto/ant-project-mode][skeeto/ant-project-mode]]                 |
 | antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                     |
-| apdl-mode                    | [[https://github.com/dieter-wilhelm/apdl-mode][dieter-wilhelm/apdl-mode]]                |
 | as3-simple-mode              | [[https://github.com/svdm/as3-simple-mode][svdm/as3-simple-mode]]                    |
 | asciidoc                     | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                    |
 | asp-mode                     | [[https://github.com/chrisdone/asp-mode][chrisdone/asp-mode]]                      |
@@ -182,7 +170,6 @@ please first make sure they meet the minimal requirements.
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            |
 | durendal                     | [[https://github.com/technomancy/durendal][technomancy/durendal]]                    |
 | dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                    |
-| easy-highlight               | [[https://github.com/syohex/emacs-easy-highlight][syohex/emacs-easy-highlight]]             |
 | easy-imenu-index-generator   | [[https://github.com/tm8st/emacs-easy-imenu-index-generator][tm8st/emacs-easy-imenu-index-generator]]  |
 | easy-todo                    | [[https://github.com/xwl/easy-todo][xwl/easy-todo]]                           |
 | ebm                          | [[https://github.com/carrl/ebm][carrl/ebm]]                               |
@@ -295,9 +282,7 @@ please first make sure they meet the minimal requirements.
 | helm-build-command           | [[https://github.com/tkf/helm-build-command][tkf/helm-build-command]]                  |
 | helm-delicious               | [[https://github.com/emacs-helm/helm-delicious][emacs-helm/helm-delicious]]               |
 | helm-find-files-in-project   | [[https://github.com/tototoshi/helm-find-files-in-project][tototoshi/helm-find-files-in-project]]    |
-| helm-github-issues           | [[https://github.com/syohex/emacs-helm-github-issues][syohex/emacs-helm-github-issues]]         |
 | helm-google-contacts         | [[https://github.com/yuutayamada/helm-google-contacts][yuutayamada/helm-google-contacts]]        |
-| helm-haskell-import          | [[https://github.com/syohex/emacs-helm-haskell-import][syohex/emacs-helm-haskell-import]]        |
 | helm-ipython                 | [[https://github.com/thierryvolpiatto/helm-ipython][thierryvolpiatto/helm-ipython]]           |
 | helm-mu-contacts             | [[https://github.com/agpchil/helm-mu-contacts][agpchil/helm-mu-contacts]]                |
 | helm-project                 | [[https://github.com/shishi/helm-project][shishi/helm-project]]                     |
@@ -344,7 +329,6 @@ please first make sure they meet the minimal requirements.
 | java-mode-plus               | [[https://github.com/skeeto/emacs-java][skeeto/emacs-java]]                       |
 | jb-misc-functions            | [[https://github.com/vapniks/jb-misc-functions][vapniks/jb-misc-functions]]               |
 | jda                          | [[https://github.com/jglee1027/jda-minor-mode][jglee1027/jda-minor-mode]]                |
-| jedi-eldoc                   | [[https://github.com/syohex/emacs-jedi-eldoc][syohex/emacs-jedi-eldoc]]                 |
 | joseph-autopair              | [[https://github.com/jixiuf/joseph-autopair][jixiuf/joseph-autopair]]                  |
 | joseph-file-util             | [[https://github.com/jixiuf/joseph-file-util][jixiuf/joseph-file-util]]                 |
 | joseph-single-dired          | [[https://github.com/jixiuf/joseph-single-dired][jixiuf/joseph-single-dired]]              |
@@ -360,7 +344,6 @@ please first make sure they meet the minimal requirements.
 | kibit-mode                   | [[https://github.com/aredington/kibit-mode][aredington/kibit-mode]]                   |
 | kindle-mode                  | [[https://github.com/kototama/kindle-mode][kototama/kindle-mode]]                    |
 | kindly-mode                  | [[https://github.com/fukamachi/kindly-mode][fukamachi/kindly-mode]]                   |
-| konoha-mode                  | [[https://github.com/syohex/emacs-konoha-mode][syohex/emacs-konoha-mode]]                |
 | lagn                         | [[https://github.com/vanicat/lagn][vanicat/lagn]]                            |
 | latch                        | [[https://github.com/skeeto/elisp-latch][skeeto/elisp-latch]]                      |
 | latex-wrap                   | [[https://github.com/abo-abo/latex-wrap][abo-abo/latex-wrap]]                      |
@@ -377,7 +360,6 @@ please first make sure they meet the minimal requirements.
 | lookup                       | [[https://github.com/lookup2/lookup2][lookup2/lookup2]]                         |
 | loops                        | [[https://github.com/kensanata/loops][kensanata/loops]]                         |
 | lsdb                         | [[https://github.com/ikazuhiro/lsdb][ikazuhiro/lsdb]]                          |
-| ltsv                         | [[https://github.com/syohex/emacs-ltsv][syohex/emacs-ltsv]]                       |
 | lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   |
 | magit-identities             | [[https://github.com/renard/magit-identities][renard/magit-identities]]                 |
 | magit-view-file              | [[https://github.com/renard/magit-view-file][renard/magit-view-file]]                  |
@@ -473,7 +455,6 @@ please first make sure they meet the minimal requirements.
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    |
 | per-window-point             | [[https://github.com/alpaker/Per-Window-Point][alpaker/Per-Window-Point]]                |
-| perl-utils                   | [[https://github.com/syohex/emacs-perl-utils][syohex/emacs-perl-utils]]                 |
 | perlbrew-mini                | [[https://github.com/dams/perlbrew-mini.el][dams/perlbrew-mini.el]]                   |
 | perlmonks                    | [[https://github.com/metaperl/emacs-perlmonks][metaperl/emacs-perlmonks]]                |
 | pgrok                        | [[https://github.com/juri/pgrok][juri/pgrok]]                              |
@@ -588,7 +569,6 @@ please first make sure they meet the minimal requirements.
 | terminal-notifier            | [[https://github.com/krismolendyke/terminal-notifier.el][krismolendyke/terminal-notifier.el]]      |
 | terrible-template            | [[https://github.com/yonkeltron/terrible-template][yonkeltron/terrible-template]]            |
 | test-framework               | [[https://github.com/epsil/test-framework.el][epsil/test-framework.el]]                 |
-| test-more                    | [[https://github.com/syohex/emacs-test-more][syohex/emacs-test-more]]                  |
 | text-align                   | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      |
 | textlint                     | [[https://github.com/DamienCassou/textlint][DamienCassou/textlint]]                   |
 | textsnip                     | [[https://github.com/functionreturnfunction/textsnip.el][functionreturnfunction/textsnip.el]]      |
@@ -599,10 +579,10 @@ please first make sure they meet the minimal requirements.
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                        |
 | todostack                    | [[https://github.com/EvansWinner/todostack.el][EvansWinner/todostack.el]]                |
 | toolbox                      | [[https://github.com/kensanata/toolbox][kensanata/toolbox]]                       |
-| tora-mode                    | [[https://github.com/syohex/emacs-tora-mode][syohex/emacs-tora-mode]]                  |
 | touchgrid                    | [[https://github.com/larsmagne/touchgrid.el][larsmagne/touchgrid.el]]                  |
 | trac-wiki                    | [[https://github.com/tiborsimko/trac-wiki-el][tiborsimko/trac-wiki-el]]                 |
 | transcript                   | [[https://github.com/natfarleydev/transcript-el][natfarleydev/transcript-el]]              |
+| tree-sitter                  | [[https://github.com/ubolonton/emacs-tree-sitter][ubolonton/emacs-tree-sitter]]             |
 | trelloel                     | [[https://github.com/jdodds/trelloel][jdodds/trelloel]]                         |
 | trindle                      | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      |
 | try-code                     | [[https://github.com/lewang/try-code][lewang/try-code]]                         |
