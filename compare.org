@@ -172,10 +172,9 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (2) | Gelpa   | Reason                            |
+| Package (1) | Gelpa   | Reason                            |
 |-------------+---------+-----------------------------------|
 | ada-ref-man | subtree | no license, no elisp, no response |
-| nadvice     | subtree | backport                          |
 
 ** Unreleased
 #+NAME: gelpa-unreleased
