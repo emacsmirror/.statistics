@@ -81,12 +81,12 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   18 |     18 |       |       |    61 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4584 |   4584 |       |       |       |  4305 |
+| github      | 4591 |   4591 |       |       |       |  4313 |
 | gitlab      |  118 |    118 |       |       |       |   119 |
 | git         |   84 |     84 |       |       |       |    74 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   17 |     17 |       |       |       |    18 |
+| bitbucket   |   11 |     11 |       |       |       |    12 |
 | hg          |    7 |      7 |       |       |       |     7 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  609 |    609 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1269 |        |  1269 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7518 |   5794 |  1269 |   467 |   244 |  4523 |
+| total       | 7519 |   5795 |  1269 |   467 |   244 |  4525 |
 
 * Emacs
 ** Prefer elpa
@@ -378,7 +378,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (97)    | Secondary package                 | Class  |
+| Primary package (98)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -386,6 +386,7 @@
 | axiom-environment       | company-axiom                     | git    |
 | axiom-environment       | ob-axiom                          | git    |
 | biblio                  | biblio-core                       | github |
+| bufler                  | helm-bufler                       | github |
 | button-lock             | wiki-nav                          | github |
 | calfw                   | calfw-cal                         | github |
 | calfw                   | calfw-howm                        | github |
