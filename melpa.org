@@ -56,7 +56,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (574)                | Link                                    |
+| Package (554)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -68,19 +68,16 @@ please first make sure they meet the minimal requirements.
 | activator                    | [[https://github.com/apg/activator-el][apg/activator-el]]                        |
 | ajc-java-complete            | [[https://github.com/emacs-java/auto-java-complete][emacs-java/auto-java-complete]]           |
 | alore-mode                   | [[https://github.com/JukkaL/alore-emacs][JukkaL/alore-emacs]]                      |
-| alternative-files            | [[https://github.com/doitian/alternative-files-el][doitian/alternative-files-el]]            |
 | aml-mode                     | [[https://github.com/david-christiansen/aml-mode][david-christiansen/aml-mode]]             |
 | ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                            |
 | ant-project-mode             | [[https://github.com/skeeto/ant-project-mode][skeeto/ant-project-mode]]                 |
 | antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                     |
 | as3-simple-mode              | [[https://github.com/svdm/as3-simple-mode][svdm/as3-simple-mode]]                    |
 | asciidoc                     | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                    |
-| asp-mode                     | [[https://github.com/chrisdone/asp-mode][chrisdone/asp-mode]]                      |
 | assert-rtn                   | [[https://github.com/neil-smithline-elisp/assert-rtn][neil-smithline-elisp/assert-rtn]]         |
 | async-eval                   | [[https://github.com/nschum/async-eval.el][nschum/async-eval.el]]                    |
 | atoctx                       | [[https://github.com/quantumkid/atoctx][quantumkid/atoctx]]                       |
 | atom                         | [[https://github.com/fperrin/atom][fperrin/atom]]                            |
-| atom-syndication             | [[https://github.com/dmj/atom-syndication][dmj/atom-syndication]]                    |
 | aurquery                     | [[https://github.com/CMB/aurquery-el][CMB/aurquery-el]]                         |
 | auto-complete-clang-objc     | [[https://github.com/tharpa/auto-complete-clang-objc][tharpa/auto-complete-clang-objc]]         |
 | auto-complete-golang         | [[https://github.com/koko1000ban/auto-complete-golang][koko1000ban/auto-complete-golang]]        |
@@ -117,7 +114,6 @@ please first make sure they meet the minimal requirements.
 | cheat-fu                     | [[https://github.com/jpablobr/cheat-fu-mode][jpablobr/cheat-fu-mode]]                  |
 | chicken-scheme-extras        | [[https://github.com/xwl/chicken-scheme-extras][xwl/chicken-scheme-extras]]               |
 | chumpy-windows               | [[https://github.com/chumpage/chumpy-windows][chumpage/chumpy-windows]]                 |
-| circle                       | [[https://github.com/tkf/emacs-circle][tkf/emacs-circle]]                        |
 | cl-merge                     | [[https://github.com/haxney/cl-merge][haxney/cl-merge]]                         |
 | clang-lookup                 | [[https://github.com/sheijk/clang-lookup][sheijk/clang-lookup]]                     |
 | clasker                      | [[https://github.com/clasker/clasker][clasker/clasker]]                         |
@@ -133,7 +129,6 @@ please first make sure they meet the minimal requirements.
 | comicscript                  | [[https://github.com/jkersey/comicscript][jkersey/comicscript]]                     |
 | company-ess                  | [[https://github.com/Lompik/company-ess][Lompik/company-ess]]                      |
 | compile-bookmarks            | [[https://github.com/nschum/compile-bookmarks.el][nschum/compile-bookmarks.el]]             |
-| conspire                     | [[https://github.com/technomancy/conspire][technomancy/conspire]]                    |
 | constellations               | [[https://github.com/davep/constellations.el][davep/constellations.el]]                 |
 | cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                    |
 | crisp-mode                   | [[https://github.com/krisajenkins/crisp-mode][krisajenkins/crisp-mode]]                 |
@@ -168,7 +163,6 @@ please first make sure they meet the minimal requirements.
 | door-gnus                    | [[https://github.com/yyr/door-gnus][yyr/door-gnus]]                           |
 | doxygen                      | [[https://github.com/TreeRex/doxygen-el][TreeRex/doxygen-el]]                      |
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            |
-| durendal                     | [[https://github.com/technomancy/durendal][technomancy/durendal]]                    |
 | dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                    |
 | easy-imenu-index-generator   | [[https://github.com/tm8st/emacs-easy-imenu-index-generator][tm8st/emacs-easy-imenu-index-generator]]  |
 | easy-todo                    | [[https://github.com/xwl/easy-todo][xwl/easy-todo]]                           |
@@ -183,7 +177,6 @@ please first make sure they meet the minimal requirements.
 | egit                         | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                        |
 | eimap                        | [[https://github.com/corecode/eimap][corecode/eimap]]                          |
 | el-index                     | [[https://github.com/medikoo/el-index][medikoo/el-index]]                        |
-| elang                        | [[https://github.com/vkazanov/elang][vkazanov/elang]]                          |
 | elisp-slime-expand           | [[https://github.com/russell/elisp-slime-expand][russell/elisp-slime-expand]]              |
 | elk-test                     | [[https://github.com/nschum/elk-test][nschum/elk-test]]                         |
 | elpad-client                 | [[https://github.com/nicferrier/elpad-client][nicferrier/elpad-client]]                 |
@@ -216,7 +209,6 @@ please first make sure they meet the minimal requirements.
 | evelnote                     | [[https://github.com/hadashiA/evelnote-for-evernote][hadashiA/evelnote-for-evernote]]          |
 | eviews                       | [[https://github.com/vapniks/eviews-mode][vapniks/eviews-mode]]                     |
 | evil-elscreen                | [[https://github.com/coldnew/evil-elscreen][coldnew/evil-elscreen]]                   |
-| evil-rebellion               | [[https://github.com/tarleb/evil-rebellion][tarleb/evil-rebellion]]                   |
 | evimodeline                  | [[https://github.com/danderson/evimodeline][danderson/evimodeline]]                   |
 | exim                         | [[https://github.com/ch11ng/exim][ch11ng/exim]]                             |
 | expectations-mode            | [[https://github.com/gar3thjon3s/expectations-mode][clojure-expectations/expectations-mode]]  |
@@ -253,12 +245,8 @@ please first make sure they meet the minimal requirements.
 | git-emacs                    | [[https://github.com/tsgates/git-emacs][tsgates/git-emacs]]                       |
 | git-find-file                | [[https://github.com/marktriggs/git-find-file.el][marktriggs/git-find-file.el]]             |
 | git-modes                    | [[https://github.com/magit/git-modes][magit/git-modes]]                         |
-| git-show                     | [[https://github.com/jpablobr/git-show][jpablobr/git-show]]                       |
-| git-time-machine             | [[https://github.com/psanford/git-time-machine-el][psanford/git-time-machine-el]]            |
 | git-undo                     | [[https://github.com/jwiegley/git-undo-el][jwiegley/git-undo-el]]                    |
 | githorg                      | [[https://github.com/ieure/githorg][ieure/githorg]]                           |
-| github                       | [[https://github.com/abhiyerra/github.el][abhiyerra/github.el]]                     |
-| github-api-v3                | [[https://github.com/rsanders/github-api-v3.el][rsanders/github-api-v3.el]]               |
 | gitsum                       | [[https://github.com/chneukirchen/gitsum][chneukirchen/gitsum]]                     |
 | gmail-notifier               | [[https://github.com/xwl/gmail-notifier][xwl/gmail-notifier]]                      |
 | gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                       |
@@ -286,7 +274,6 @@ please first make sure they meet the minimal requirements.
 | helm-ipython                 | [[https://github.com/thierryvolpiatto/helm-ipython][thierryvolpiatto/helm-ipython]]           |
 | helm-mu-contacts             | [[https://github.com/agpchil/helm-mu-contacts][agpchil/helm-mu-contacts]]                |
 | helm-project                 | [[https://github.com/shishi/helm-project][shishi/helm-project]]                     |
-| helm-projectile-all          | [[https://github.com/spatz/helm-projectile-all][drrlvn/helm-projectile-all]]              |
 | helm-shell-history           | [[https://github.com/yuutayamada/helm-shell-history][yuutayamada/helm-shell-history]]          |
 | helm-words                   | [[https://github.com/pronobis/helm-words][pronobis/helm-words]]                     |
 | hide-url                     | [[https://github.com/tkf/hide-url.el][tkf/hide-url.el]]                         |
@@ -361,8 +348,6 @@ please first make sure they meet the minimal requirements.
 | loops                        | [[https://github.com/kensanata/loops][kensanata/loops]]                         |
 | lsdb                         | [[https://github.com/ikazuhiro/lsdb][ikazuhiro/lsdb]]                          |
 | lyricwiki                    | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   |
-| magit-identities             | [[https://github.com/renard/magit-identities][renard/magit-identities]]                 |
-| magit-view-file              | [[https://github.com/renard/magit-view-file][renard/magit-view-file]]                  |
 | mail-bug                     | [[https://github.com/xaccrocheur/mail-bug][yPhil-gh/mail-bug]]                       |
 | mailcrypt                    | [[https://github.com/barak/mailcrypt][barak/mailcrypt]]                         |
 | maildir                      | [[https://github.com/nicferrier/emacs-maildir][nicferrier/emacs-maildir]]                |
@@ -405,7 +390,6 @@ please first make sure they meet the minimal requirements.
 | nnir-spotlight               | [[https://github.com/renard/nnir-spotlight][renard/nnir-spotlight]]                   |
 | node-console                 | [[https://github.com/yuutayamada/node-console][yuutayamada/node-console]]                |
 | noob-arrows-mode             | [[https://github.com/n3mo/noob-arrows-mode.el][n3mo/noob-arrows-mode.el]]                |
-| nopaste                      | [[https://github.com/avar/nopaste][avar/nopaste]]                            |
 | noprefix                     | [[https://github.com/abo-abo/noprefix][abo-abo/noprefix]]                        |
 | notify                       | [[https://github.com/haxney/notify][haxney/notify]]                           |
 | nreplxmp                     | [[https://github.com/wakala/nreplxmp][wakala/nreplxmp]]                         |
@@ -430,7 +414,6 @@ please first make sure they meet the minimal requirements.
 | org-helpers                  | [[https://github.com/leoc/org-helpers.el][leoc/org-helpers.el]]                     |
 | org-hlc                      | [[https://github.com/tj64/org-hlc][tj64/org-hlc]]                            |
 | org-hyde                     | [[https://github.com/punchagan/org-hyde][punchagan/org-hyde]]                      |
-| org-magit                    | [[https://github.com/sigma/org-magit][sigma/org-magit]]                         |
 | org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     |
 | org-nan                      | [[https://github.com/gkappler/org-nan][gkappler/org-nan]]                        |
 | org-presie                   | [[https://github.com/nicferrier/org-presie][nicferrier/org-presie]]                   |
@@ -469,7 +452,6 @@ please first make sure they meet the minimal requirements.
 | popup-frame                  | [[https://github.com/Sarcasm/popup-frame][Sarcasm/popup-frame]]                     |
 | popup-global-mark-ring       | [[https://github.com/whitypig/popup-global-mark-ring][whitypig/popup-global-mark-ring]]         |
 | posn-on-screen               | [[https://github.com/Sarcasm/posn-on-screen][Sarcasm/posn-on-screen]]                  |
-| posterous                    | [[https://github.com/snim2/posterous.el][snim2/posterous.el]]                      |
 | powershell-mode              | [[https://github.com/fperrin/powershell-mode][fperrin/powershell-mode]]                 |
 | projectur                    | [[https://github.com/vderyagin/projectur][vderyagin/projectur]]                     |
 | projutils                    | [[https://github.com/fgallina/projutils.el][fgallina/projutils.el]]                   |
@@ -501,7 +483,6 @@ please first make sure they meet the minimal requirements.
 | remind-conf-mode             | [[https://github.com/sshelagh/remind-conf-mode][sshelagh/remind-conf-mode]]               |
 | revealjs-mode                | [[https://github.com/cjohansen/revealjs-mode][cjohansen/revealjs-mode]]                 |
 | review                       | [[https://github.com/gigamonkey/review][gigamonkey/review]]                       |
-| ri                           | [[https://github.com/technomancy/ri.el][technomancy/ri.el]]                       |
 | rotate-text                  | [[https://github.com/nschum/rotate-text.el][nschum/rotate-text.el]]                   |
 | ruby-comint                  | [[https://github.com/jpablobr/ruby-comint.el][jpablobr/ruby-comint.el]]                 |
 | rubyinterpol                 | [[https://github.com/ober/rubyinterpol][ober/rubyinterpol]]                       |
@@ -514,7 +495,6 @@ please first make sure they meet the minimal requirements.
 | screensend                   | [[https://github.com/benwbooth/screensend.el][benwbooth/screensend.el]]                 |
 | scriptify                    | [[https://github.com/vderyagin/scriptify][vderyagin/scriptify]]                     |
 | scrobble                     | [[https://github.com/larsmagne/scrobble.el][larsmagne/scrobble.el]]                   |
-| selectrum                    | [[https://github.com/raxod502/selectrum][raxod502/selectrum]]                      |
 | sentence-highlight           | [[https://github.com/sbelak/sentence-highlight][sbelak/sentence-highlight]]               |
 | seognil                      | [[https://github.com/md11235/seognil][md11235/seognil]]                         |
 | sequence                     | [[https://github.com/nicferrier/emacs-sequence][nicferrier/emacs-sequence]]               |

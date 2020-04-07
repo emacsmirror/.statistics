@@ -81,7 +81,7 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   18 |     18 |       |       |    61 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4591 |   4591 |       |       |       |  4313 |
+| github      | 4576 |   4576 |       |       |       |  4319 |
 | gitlab      |  118 |    118 |       |       |       |   119 |
 | git         |   84 |     84 |       |       |       |    74 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  112 |    112 |       |       |       |       |
-| shelved     | 1269 |        |  1269 |       |       |       |
+| shelved     | 1288 |        |  1288 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7519 |   5795 |  1269 |   467 |   244 |  4525 |
+| total       | 7523 |   5780 |  1288 |   467 |   244 |  4531 |
 
 * Emacs
 ** Prefer elpa
@@ -500,6 +500,7 @@
 | pollen-mode             | company-pollen                    | github |
 | prescient               | company-prescient                 | github |
 | prescient               | ivy-prescient                     | github |
+| prescient               | selectrum-prescient               | github |
 | processing-mode         | processing-snippets               | github |
 | prosjekt                | dirtree-prosjekt                  | github |
 | prosjekt                | helm-prosjekt                     | github |
