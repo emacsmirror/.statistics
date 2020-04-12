@@ -79,10 +79,10 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     11 |       |   467 |    11 |       |
 | elpa        |  123 |    123 |       |       |   172 |       |
-| elpa-branch |   18 |     18 |       |       |    61 |       |
+| elpa-branch |   18 |     18 |       |       |    62 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4576 |   4576 |       |       |       |  4319 |
-| gitlab      |  118 |    118 |       |       |       |   119 |
+| github      | 4584 |   4584 |       |       |       |  4329 |
+| gitlab      |  120 |    120 |       |       |       |   120 |
 | git         |   84 |     84 |       |       |       |    74 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1288 |        |  1288 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7523 |   5780 |  1288 |   467 |   244 |  4531 |
+| total       | 7533 |   5790 |  1288 |   467 |   245 |  4542 |
 
 * Emacs
 ** Prefer elpa
@@ -234,7 +234,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (95)               | Class  | Gelpa    | Link                                         |
+| Package (96)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -308,6 +308,7 @@
 | realgud-trepan-ni          | github | external | [[https://github.com/realgud/realgud-trepan-ni][realgud/realgud-trepan-ni]]                    |
 | relint                     | github | external | [[https://github.com/mattiase/relint][mattiase/relint]]                              |
 | rich-minority              | github | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
+| scanner                    | gitlab | external | [[https://gitlab.com/rstocker/scanner][rstocker/scanner]]                             |
 | smalltalk-mode             | git    | external |                                              |
 | sotlisp                    | github | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
 | spinner                    | github | subtree  | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                         |
