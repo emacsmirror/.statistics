@@ -81,7 +81,7 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   18 |     18 |       |       |    62 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4584 |   4584 |       |       |       |  4329 |
+| github      | 4593 |   4593 |       |       |       |  4338 |
 | gitlab      |  120 |    120 |       |       |       |   120 |
 | git         |   84 |     84 |       |       |       |    74 |
 | subtree     |   22 |     22 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1288 |        |  1288 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7533 |   5790 |  1288 |   467 |   245 |  4542 |
+| total       | 7542 |   5799 |  1288 |   467 |   245 |  4551 |
 
 * Emacs
 ** Prefer elpa
@@ -379,7 +379,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (98)    | Secondary package                 | Class  |
+| Primary package (99)    | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -546,6 +546,8 @@
 | wgrep                   | wgrep-ag                          | github |
 | wgrep                   | wgrep-helm                        | github |
 | wgrep                   | wgrep-pt                          | github |
+| xwwp                    | xwwp-follow-link-helm             | github |
+| xwwp                    | xwwp-follow-link-ivy              | github |
 | ycm                     | company-ycm                       | github |
 | ycmd                    | company-ycmd                      | github |
 | ycmd                    | flycheck-ycmd                     | github |
