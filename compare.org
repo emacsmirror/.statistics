@@ -81,13 +81,13 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   18 |     18 |       |       |    62 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4593 |   4593 |       |       |       |  4338 |
+| github      | 4593 |   4593 |       |       |       |  4339 |
 | gitlab      |  120 |    120 |       |       |       |   120 |
 | git         |   84 |     84 |       |       |       |    74 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |   11 |     11 |       |       |       |    12 |
-| hg          |    7 |      7 |       |       |       |     7 |
+| bitbucket   |    7 |      7 |       |       |       |     8 |
+| hg          |   11 |     11 |       |       |       |    11 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  609 |    609 |       |       |       |       |
 | file        |   63 |     63 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1288 |        |  1288 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7542 |   5799 |  1288 |   467 |   245 |  4551 |
+| total       | 7542 |   5799 |  1288 |   467 |   245 |  4552 |
 
 * Emacs
 ** Prefer elpa
@@ -379,7 +379,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (99)    | Secondary package                 | Class  |
+| Primary package (100)   | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -487,6 +487,7 @@
 | nixos-options           | helm-nixos-options                | github |
 | nixos-options           | nix-sandbox                       | github |
 | opener                  | evil-opener                       | github |
+| org-pdftools            | org-noter-pdftools                | github |
 | org-projectile          | org-category-capture              | github |
 | org-projectile          | org-projectile-helm               | github |
 | org-starter             | org-starter-swiper                | github |
