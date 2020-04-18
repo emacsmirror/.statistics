@@ -78,12 +78,12 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     11 |       |   467 |    11 |       |
-| elpa        |  123 |    123 |       |       |   172 |       |
+| elpa        |  123 |    123 |       |       |   173 |       |
 | elpa-branch |   18 |     18 |       |       |    62 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4593 |   4593 |       |       |       |  4339 |
-| gitlab      |  120 |    120 |       |       |       |   120 |
-| git         |   84 |     84 |       |       |       |    74 |
+| github      | 4595 |   4595 |       |       |       |  4343 |
+| gitlab      |  121 |    121 |       |       |       |   121 |
+| git         |   85 |     85 |       |       |       |    75 |
 | subtree     |   22 |     22 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |    7 |      7 |       |       |       |     8 |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1288 |        |  1288 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7542 |   5799 |  1288 |   467 |   245 |  4552 |
+| total       | 7546 |   5803 |  1288 |   467 |   246 |  4558 |
 
 * Emacs
 ** Prefer elpa
@@ -187,11 +187,10 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (4)      | Gelpa   |
+| Package (3)      | Gelpa   |
 |------------------+---------|
 | package-fixes    | subtree |
 | shell-quasiquote | subtree |
-| sm-c-mode        | subtree |
 | systemd          | subtree |
 
 ** Prefer builtin
@@ -387,6 +386,8 @@
 | axiom-environment       | company-axiom                     | git    |
 | axiom-environment       | ob-axiom                          | git    |
 | biblio                  | biblio-core                       | github |
+| bibtex-completion       | helm-bibtex                       | github |
+| bibtex-completion       | ivy-bibtex                        | github |
 | bufler                  | helm-bufler                       | github |
 | button-lock             | wiki-nav                          | github |
 | calfw                   | calfw-cal                         | github |
@@ -454,7 +455,6 @@
 | haskell-emacs           | haskell-emacs-base                | github |
 | haskell-emacs           | haskell-emacs-text                | github |
 | helm                    | helm-core                         | github |
-| helm-bibtex             | ivy-bibtex                        | github |
 | historian               | ivy-historian                     | github |
 | hydra                   | lv                                | github |
 | indent-lint             | flycheck-indent                   | github |
@@ -498,6 +498,7 @@
 | pest-mode               | flymake-pest                      | github |
 | phpactor                | company-phpactor                  | github |
 | phpstan                 | flycheck-phpstan                  | github |
+| phpstan                 | flymake-phpstan                   | github |
 | pig-mode                | pig-snippets                      | github |
 | pollen-mode             | company-pollen                    | github |
 | prescient               | company-prescient                 | github |
