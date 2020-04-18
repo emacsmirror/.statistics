@@ -56,7 +56,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-github-package)))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (554)                | Link                                    |
+| Package (540)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -194,7 +194,6 @@ please first make sure they meet the minimal requirements.
 | erc-highlight-nicknames      | [[https://github.com/amalloy/erc-highlight-nick][amalloy/erc-highlight-nick]]              |
 | erc-yank                     | [[https://github.com/jwiegley/erc-yank][jwiegley/erc-yank]]                       |
 | ergore                       | [[https://github.com/jonnay/ergore][jonnay/ergore]]                           |
-| erlang-dired-mode            | [[https://github.com/jixiuf/erlang-dired-mode][jixiuf/erlang-dired-mode]]                |
 | erobot                       | [[https://github.com/kensanata/erobot][kensanata/erobot]]                        |
 | ert-buffer-report            | [[https://github.com/tj64/ert-buffer-report][tj64/ert-buffer-report]]                  |
 | ert-extras                   | [[https://github.com/mrc/ert-extras][mrc/ert-extras]]                          |
@@ -216,7 +215,6 @@ please first make sure they meet the minimal requirements.
 | fab                          | [[https://github.com/davidmiller/fabmacs][davidmiller/fabmacs]]                     |
 | festival                     | [[https://github.com/davep/festival.el][davep/festival.el]]                       |
 | find-git                     | [[https://github.com/lieutar/find-git.el][lieutar/find-git.el]]                     |
-| find-in-repo                 | [[https://github.com/Wilfred/find-in-repo.el][Wilfred/find-in-repo.el]]                 |
 | findwalker                   | [[https://github.com/mhayashi1120/Emacs-findwalker][mhayashi1120/Emacs-findwalker]]           |
 | finkinfo-mode                | [[https://github.com/xwl/finkinfo-mode][xwl/finkinfo-mode]]                       |
 | firefox-remote               | [[https://github.com/ruediger/emacs-firefox-remote][ruediger/emacs-firefox-remote]]           |
@@ -268,7 +266,6 @@ please first make sure they meet the minimal requirements.
 | h2o                          | [[https://github.com/punchagan/h2o][punchagan/h2o]]                           |
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   |
 | helm-build-command           | [[https://github.com/tkf/helm-build-command][tkf/helm-build-command]]                  |
-| helm-delicious               | [[https://github.com/emacs-helm/helm-delicious][emacs-helm/helm-delicious]]               |
 | helm-find-files-in-project   | [[https://github.com/tototoshi/helm-find-files-in-project][tototoshi/helm-find-files-in-project]]    |
 | helm-google-contacts         | [[https://github.com/yuutayamada/helm-google-contacts][yuutayamada/helm-google-contacts]]        |
 | helm-ipython                 | [[https://github.com/thierryvolpiatto/helm-ipython][thierryvolpiatto/helm-ipython]]           |
@@ -313,12 +310,8 @@ please first make sure they meet the minimal requirements.
 | itimer                       | [[https://github.com/pheaver/itimer-el][pheaver/itimer-el]]                       |
 | jamar                        | [[https://github.com/kliph/jamar-el][kliph/jamar-el]]                          |
 | jaunte                       | [[https://github.com/kawaguchi/jaunte][kawaguchi/jaunte]]                        |
-| java-mode-plus               | [[https://github.com/skeeto/emacs-java][skeeto/emacs-java]]                       |
 | jb-misc-functions            | [[https://github.com/vapniks/jb-misc-functions][vapniks/jb-misc-functions]]               |
 | jda                          | [[https://github.com/jglee1027/jda-minor-mode][jglee1027/jda-minor-mode]]                |
-| joseph-autopair              | [[https://github.com/jixiuf/joseph-autopair][jixiuf/joseph-autopair]]                  |
-| joseph-file-util             | [[https://github.com/jixiuf/joseph-file-util][jixiuf/joseph-file-util]]                 |
-| joseph-single-dired          | [[https://github.com/jixiuf/joseph-single-dired][jixiuf/joseph-single-dired]]              |
 | js-lookup                    | [[https://github.com/skeeto/js-lookup][skeeto/js-lookup]]                        |
 | json-sexp-mode               | [[https://github.com/TaylanUB/json-sexp-mode][TaylanUB/json-sexp-mode]]                 |
 | juick                        | [[https://github.com/mad/emacs-juick-el][mad/emacs-juick-el]]                      |
@@ -391,7 +384,6 @@ please first make sure they meet the minimal requirements.
 | node-console                 | [[https://github.com/yuutayamada/node-console][yuutayamada/node-console]]                |
 | noob-arrows-mode             | [[https://github.com/n3mo/noob-arrows-mode.el][n3mo/noob-arrows-mode.el]]                |
 | noprefix                     | [[https://github.com/abo-abo/noprefix][abo-abo/noprefix]]                        |
-| notify                       | [[https://github.com/haxney/notify][haxney/notify]]                           |
 | nreplxmp                     | [[https://github.com/wakala/nreplxmp][wakala/nreplxmp]]                         |
 | nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                       |
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                       |
@@ -424,20 +416,17 @@ please first make sure they meet the minimal requirements.
 | org-seenthis                 | [[https://github.com/juba/org-seenthis][juba/org-seenthis]]                       |
 | org-status                   | [[https://github.com/neil-smithline-elisp/org-status][neil-smithline-elisp/org-status]]         |
 | org-watchdoc                 | [[https://github.com/tj64/org-watchdoc][tj64/org-watchdoc]]                       |
-| org-yaml                     | [[https://github.com/Neil-Smithline/org-yaml][Neil-Smithline/org-yaml]]                 |
 | orgrade                      | [[https://github.com/gucong/emacs-orgrade][gucong/emacs-orgrade]]                    |
 | osm-mode                     | [[https://github.com/ruediger/osm-mode][ruediger/osm-mode]]                       |
 | osxpkg                       | [[https://github.com/renard/osxpkg][renard/osxpkg]]                           |
 | owl-functional-mode          | [[https://github.com/vakkermans/owl-functional-mode][vakkermans/owl-functional-mode]]          |
 | package-demo                 | [[https://github.com/vermiculus/package-demo][vermiculus/package-demo]]                 |
 | package-store                | [[https://github.com/nicferrier/emacs-package-store][nicferrier/emacs-package-store]]          |
-| page-mode                    | [[https://github.com/BartMassey/emacs-page][BartMassey/emacs-page]]                   |
 | paredit-c                    | [[https://github.com/dandavison/paredit-c][dandavison/paredit-c]]                    |
 | parfait-mode                 | [[https://github.com/sorellabs/parfait-mode][sorellabs/parfait-mode]]                  |
 | paste                        | [[https://github.com/nicferrier/pasteel][nicferrier/pasteel]]                      |
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    |
-| per-window-point             | [[https://github.com/alpaker/Per-Window-Point][alpaker/Per-Window-Point]]                |
 | perlbrew-mini                | [[https://github.com/dams/perlbrew-mini.el][dams/perlbrew-mini.el]]                   |
 | perlmonks                    | [[https://github.com/metaperl/emacs-perlmonks][metaperl/emacs-perlmonks]]                |
 | pgrok                        | [[https://github.com/juri/pgrok][juri/pgrok]]                              |
@@ -499,7 +488,6 @@ please first make sure they meet the minimal requirements.
 | seognil                      | [[https://github.com/md11235/seognil][md11235/seognil]]                         |
 | sequence                     | [[https://github.com/nicferrier/emacs-sequence][nicferrier/emacs-sequence]]               |
 | shoes-off                    | [[https://github.com/nicferrier/shoes-off][nicferrier/shoes-off]]                    |
-| short-lambda                 | [[https://github.com/abo-abo/short-lambda][abo-abo/short-lambda]]                    |
 | show-arglist                 | [[https://github.com/peccu/show-arglist.el][peccu/show-arglist.el]]                   |
 | show-marks                   | [[https://github.com/vapniks/show-marks][vapniks/show-marks]]                      |
 | showoff-mode                 | [[https://github.com/developernotes/showoff-mode][developernotes/showoff-mode]]             |
@@ -550,12 +538,10 @@ please first make sure they meet the minimal requirements.
 | terrible-template            | [[https://github.com/yonkeltron/terrible-template][yonkeltron/terrible-template]]            |
 | test-framework               | [[https://github.com/epsil/test-framework.el][epsil/test-framework.el]]                 |
 | text-align                   | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      |
-| textlint                     | [[https://github.com/DamienCassou/textlint][DamienCassou/textlint]]                   |
 | textsnip                     | [[https://github.com/functionreturnfunction/textsnip.el][functionreturnfunction/textsnip.el]]      |
 | theme-helper                 | [[https://github.com/lewang/theme-helper][lewang/theme-helper]]                     |
 | theme-park-mode              | [[https://github.com/darrik/theme-park-mode][darrik/theme-park-mode]]                  |
 | thrift-mode                  | [[https://github.com/davidmiller/thrift-mode][davidmiller/thrift-mode]]                 |
-| tipshare                     | [[https://github.com/k1LoW/emacs-tipshare][k1LoW/emacs-tipshare]]                    |
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                        |
 | todostack                    | [[https://github.com/EvansWinner/todostack.el][EvansWinner/todostack.el]]                |
 | toolbox                      | [[https://github.com/kensanata/toolbox][kensanata/toolbox]]                       |
