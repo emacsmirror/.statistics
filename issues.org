@@ -32,6 +32,10 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (1) | Package       | Shelved |
+|-------------+---------------+---------|
+| init-tests  | learn-ocaml   |         |
+| init-tests  | proof-general |         |
 
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
@@ -61,14 +65,13 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (4)         | Class  | Feature        | Provider       |
-|---------------------+--------+----------------+----------------|
-| bookmark-extensions | github | helm-delicious | helm-delicious |
-| bts                 | github | pophint-config |                |
-| eldev               | github | dummy-lint     |                |
-| pophint             | github | e2wm-perspb    |                |
+| Package (3) | Class  | Feature        | Provider |
+|-------------+--------+----------------+----------|
+| bts         | github | pophint-config |          |
+| eldev       | github | dummy-lint     |          |
+| pophint     | github | e2wm-perspb    |          |
+| pophint     | github | yaol           |          |
 
-- bookmark-extensions: https://github.com/thierryvolpiatto/emacs-bmk-ext/pull/2
 - bts: https://github.com/aki2o/emacs-pophint/commit/c7234fe367643d8d4d614c91c7a
 - eldev: https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899
 - pophint: https://github.com/aki2o/emacs-pophint/commit/c477527fc80e2c36e86037b

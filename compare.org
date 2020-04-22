@@ -81,10 +81,10 @@
 | elpa        |  123 |    123 |       |       |   173 |       |
 | elpa-branch |   18 |     18 |       |       |    62 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4581 |   4581 |       |       |       |  4343 |
-| gitlab      |  121 |    121 |       |       |       |   121 |
+| github      | 4588 |   4588 |       |       |       |  4352 |
+| gitlab      |  122 |    122 |       |       |       |   122 |
 | git         |   85 |     85 |       |       |       |    75 |
-| subtree     |   22 |     22 |       |       |       |       |
+| subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |    7 |      7 |       |       |       |     8 |
 | hg          |   11 |     11 |       |       |       |    11 |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1302 |        |  1302 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7546 |   5789 |  1302 |   467 |   246 |  4558 |
+| total       | 7555 |   5798 |  1302 |   467 |   246 |  4568 |
 
 * Emacs
 ** Prefer elpa
@@ -378,7 +378,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (100)   | Secondary package                 | Class  |
+| Primary package (101)   | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -487,6 +487,7 @@
 | nixos-options           | helm-nixos-options                | github |
 | nixos-options           | nix-sandbox                       | github |
 | opener                  | evil-opener                       | github |
+| org-multi-wiki          | helm-org-multi-wiki               | github |
 | org-pdftools            | org-noter-pdftools                | github |
 | org-projectile          | org-category-capture              | github |
 | org-projectile          | org-projectile-helm               | github |
