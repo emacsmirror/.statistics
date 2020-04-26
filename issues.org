@@ -65,16 +65,18 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (3) | Class  | Feature        | Provider |
-|-------------+--------+----------------+----------|
-| bts         | github | pophint-config |          |
-| eldev       | github | dummy-lint     |          |
-| pophint     | github | e2wm-perspb    |          |
-| pophint     | github | yaol           |          |
+| Package (4) | Class  | Feature        | Provider     |
+|-------------+--------+----------------+--------------|
+| bts         | github | pophint-config |              |
+| eldev       | github | dummy-lint     |              |
+| pophint     | github | e2wm-perspb    |              |
+| pophint     | github | yaol           |              |
+| widgetjs    | github | company-tern   | company-tern |
 
 - bts: https://github.com/aki2o/emacs-pophint/commit/c7234fe367643d8d4d614c91c7a
 - eldev: https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899
 - pophint: https://github.com/aki2o/emacs-pophint/commit/c477527fc80e2c36e86037b
+- widgetjs: https://github.com/melpa/melpa/pull/6854
 
 * Packages maintained in Mercurial repositories on Bitbucket
 #+NAME: bitbucket
