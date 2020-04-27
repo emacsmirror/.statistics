@@ -79,10 +79,10 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     11 |       |   467 |    11 |       |
 | elpa        |  123 |    123 |       |       |   173 |       |
-| elpa-branch |   18 |     18 |       |       |    62 |       |
+| elpa-branch |   18 |     18 |       |       |    63 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4586 |   4586 |       |       |       |  4350 |
-| gitlab      |  122 |    122 |       |       |       |   122 |
+| github      | 4588 |   4588 |       |       |       |  4352 |
+| gitlab      |  123 |    123 |       |       |       |   123 |
 | git         |   85 |     85 |       |       |       |    75 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1311 |        |  1311 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7562 |   5796 |  1311 |   467 |   246 |  4566 |
+| total       | 7565 |   5799 |  1311 |   467 |   247 |  4569 |
 
 * Emacs
 ** Prefer elpa
@@ -172,9 +172,10 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (1) | Gelpa   | Reason                            |
-|-------------+---------+-----------------------------------|
-| ada-ref-man | subtree | no license, no elisp, no response |
+| Package (2) | Gelpa    | Reason                            |
+|-------------+----------+-----------------------------------|
+| ada-ref-man | subtree  | no license, no elisp, no response |
+| gnu-elpa    | external | provides wrong feature            |
 
 ** Unreleased
 #+NAME: gelpa-unreleased
