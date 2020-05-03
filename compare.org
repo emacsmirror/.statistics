@@ -81,13 +81,13 @@
 | elpa        |  123 |    123 |       |       |   173 |       |
 | elpa-branch |   18 |     18 |       |       |    63 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4588 |   4588 |       |       |       |  4352 |
-| gitlab      |  123 |    123 |       |       |       |   123 |
+| github      | 4597 |   4597 |       |       |       |  4363 |
+| gitlab      |  124 |    124 |       |       |       |   124 |
 | git         |   85 |     85 |       |       |       |    75 |
 | subtree     |   23 |     23 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| bitbucket   |    7 |      7 |       |       |       |     8 |
-| hg          |   11 |     11 |       |       |       |    11 |
+| bitbucket   |    6 |      6 |       |       |       |     7 |
+| hg          |   12 |     12 |       |       |       |    12 |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  609 |    609 |       |       |       |       |
 | file        |   63 |     63 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1311 |        |  1311 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7565 |   5799 |  1311 |   467 |   247 |  4569 |
+| total       | 7575 |   5809 |  1311 |   467 |   247 |  4581 |
 
 * Emacs
 ** Prefer elpa
@@ -379,7 +379,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (101)   | Secondary package                 | Class  |
+| Primary package (102)   | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -443,6 +443,8 @@
 | flyspell-correct        | flyspell-correct-helm             | github |
 | flyspell-correct        | flyspell-correct-ivy              | github |
 | flyspell-correct        | flyspell-correct-popup            | github |
+| friendly-shell          | friendly-remote-shell             | github |
+| friendly-shell          | friendly-shell-command            | github |
 | fuz                     | helm-fuz                          | github |
 | git-emacs               | git-blamed                        | github |
 | git-modes               | gitattributes-mode                | github |
