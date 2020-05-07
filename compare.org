@@ -78,13 +78,13 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     11 |       |   467 |    11 |       |
-| elpa        |  123 |    123 |       |       |   173 |       |
-| elpa-branch |   18 |     18 |       |       |    63 |       |
+| elpa        |  123 |    123 |       |       |   172 |       |
+| elpa-branch |   18 |     18 |       |       |    65 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4597 |   4597 |       |       |       |  4363 |
-| gitlab      |  124 |    124 |       |       |       |   124 |
-| git         |   85 |     85 |       |       |       |    75 |
-| subtree     |   23 |     23 |       |       |       |       |
+| github      | 4588 |   4588 |       |       |       |  4355 |
+| gitlab      |  125 |    125 |       |       |       |   125 |
+| git         |   95 |     95 |       |       |       |    85 |
+| subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |    6 |      6 |       |       |       |     7 |
 | hg          |   12 |     12 |       |       |       |    12 |
@@ -94,9 +94,9 @@
 | minority    |   26 |     26 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  112 |    112 |       |       |       |       |
-| shelved     | 1311 |        |  1311 |       |       |       |
+| shelved     | 1312 |        |  1312 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7575 |   5809 |  1311 |   467 |   247 |  4581 |
+| total       | 7579 |   5812 |  1312 |   467 |   248 |  4584 |
 
 * Emacs
 ** Prefer elpa
@@ -234,7 +234,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (96)               | Class  | Gelpa    | Link                                         |
+| Package (97)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -319,6 +319,7 @@
 | test-simple                | github | subtree  | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                      |
 | tiny                       | github | subtree  | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                 |
 | tramp                      | git    | external | [[https://savannah.gnu.org/projects/tramp]]      |
+| transient                  | github | external | [[https://github.com/magit/transient][magit/transient]]                              |
 | undo-tree                  | git    | subtree  | [[http://www.dr-qubit.org/emacs.php]]            |
 | vdiff                      | github | subtree  | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                          |
 | vlf                        | github | subtree  | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
