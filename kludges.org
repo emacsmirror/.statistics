@@ -72,7 +72,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (85)                    | Class       | Feature                  | Reason                                              |
+| Package (86)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -109,6 +109,7 @@
 | folding                         | github      | mode-motion              | XEmacs compatibility                                |
 | fstar-mode                      | github      | replace                  | replace.el doesn't provide feature in Emacs < 26    |
 | gnuplot                         | orphaned    | toolbar                  | XEmacs compatibility                                |
+| gnus-notes                      | github      | org-gnus                 | backward compatibility                              |
 | helm                            | github      | tramp-archive            | forward compatibility (Emacs 27.1)                  |
 | help+                           | wiki        | info+20                  | backward compatibility                              |
 | hyperbole                       | git         | efs                      | XEmacs compatibility                                |
