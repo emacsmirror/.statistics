@@ -67,10 +67,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (3) | Class  | Feature        | Provider |
+| Package (4) | Class  | Feature        | Provider |
 |-------------+--------+----------------+----------|
 | bts         | github | pophint-config |          |
 | eldev       | github | dummy-lint     |          |
+| liberime    | github | liberime-core  |          |
 | pophint     | github | e2wm-perspb    |          |
 | pophint     | github | yaol           |          |
 
