@@ -77,11 +77,11 @@
 #+RESULTS: summary
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  466 |     11 |       |   467 |    11 |       |
+| builtin     |  466 |     14 |       |   467 |    14 |       |
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   19 |     19 |       |       |    66 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4595 |   4595 |       |       |       |  4362 |
+| github      | 4598 |   4598 |       |       |       |  4365 |
 | gitlab      |  125 |    125 |       |       |       |   125 |
 | git         |   95 |     95 |       |       |       |    85 |
 | subtree     |   24 |     24 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1312 |        |  1312 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7586 |   5819 |  1312 |   467 |   249 |  4590 |
+| total       | 7589 |   5825 |  1312 |   467 |   252 |  4593 |
 
 * Emacs
 ** Prefer elpa
@@ -111,18 +111,21 @@
               [elpa elpa-branch elpa-core]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
-| Package (10) | Class     |
+| Package (13) | Class     |
 |--------------+-----------|
 | cl-print     | elpa-core |
+| eldoc        | elpa-core |
 | flymake      | elpa-core |
 | jsonrpc      | elpa-core |
 | let-alist    | elpa-core |
 | map          | elpa-core |
 | ntlm         | elpa-core |
+| project      | elpa-core |
 | python       | elpa-core |
 | soap-client  | elpa-core |
 | svg          | elpa-core |
 | verilog-mode | elpa-core |
+| xref         | elpa-core |
 
 ** Prefer upstream
 #+NAME: builtin-prefer-upstream

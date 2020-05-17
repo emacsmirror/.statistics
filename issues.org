@@ -67,16 +67,18 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (4) | Class  | Feature        | Provider |
+| Package (5) | Class  | Feature        | Provider |
 |-------------+--------+----------------+----------|
 | bts         | github | pophint-config |          |
 | eldev       | github | dummy-lint     |          |
 | liberime    | github | liberime-core  |          |
+| osa         | github | mac            |          |
 | pophint     | github | e2wm-perspb    |          |
 | pophint     | github | yaol           |          |
 
 - bts: https://github.com/aki2o/emacs-pophint/commit/c7234fe367643d8d4d614c91c7a
 - eldev: https://github.com/doublep/eldev/commit/dcbfbe65622ed7a0f6ab69f11633899
+- osa: https://github.com/melpa/melpa/pull/6894
 - pophint: https://github.com/aki2o/emacs-pophint/commit/c477527fc80e2c36e86037b
 
 * Packages maintained in Mercurial repositories on Bitbucket
