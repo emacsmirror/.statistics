@@ -620,11 +620,12 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (10)      | Link                        |
+| Package (11)      | Link                        |
 |-------------------+-----------------------------|
 | auto-mounter      |                             |
 | ebuild-mode       |                             |
 | ee                |                             |
+| geo               |                             |
 | gpicker           |                             |
 | im-notification   |                             |
 | lilypond          |                             |
