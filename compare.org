@@ -81,8 +81,8 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   19 |     19 |       |       |    66 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4611 |   4611 |       |       |       |  4379 |
-| gitlab      |  125 |    125 |       |       |       |   125 |
+| github      | 4613 |   4613 |       |       |       |  4380 |
+| gitlab      |  126 |    126 |       |       |       |   126 |
 | git         |   96 |     96 |       |       |       |    85 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1313 |        |  1313 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7604 |   5839 |  1313 |   467 |   252 |  4607 |
+| total       | 7607 |   5842 |  1313 |   467 |   252 |  4609 |
 
 * Emacs
 ** Prefer elpa
@@ -384,7 +384,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (102)   | Secondary package                 | Class  |
+| Primary package (103)   | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -516,6 +516,7 @@
 | processing-mode         | processing-snippets               | github |
 | prosjekt                | dirtree-prosjekt                  | github |
 | prosjekt                | helm-prosjekt                     | github |
+| psalm                   | flycheck-psalm                    | github |
 | request                 | request-deferred                  | github |
 | restclient              | restclient-helm                   | github |
 | rinari                  | ruby-compilation                  | github |

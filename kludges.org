@@ -17,7 +17,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (10) | Class    | Feature         | Reason                                    |
+| Package (11) | Class    | Feature         | Reason                                    |
 |--------------+----------+-----------------+-------------------------------------------|
 | edb          | orphaned | edbcore         | generated                                 |
 | emacs        | builtin  | cus-load        | generated                                 |
@@ -26,6 +26,7 @@
 | eshell       | builtin  | esh-groups      | generated                                 |
 | finder       | builtin  | finder-inf      | generated                                 |
 | fuz          | github   | fuz-core        | provided by module                        |
+| liberime     | github   | liberime-core   | provided by module                        |
 | realgud      | github   | bashdb          | inside directory containing .nosearch     |
 | sly          | github   | sly-buttons     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly          | github   | sly-cl-indent   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
@@ -72,7 +73,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (86)                    | Class       | Feature                  | Reason                                              |
+| Package (87)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -156,6 +157,7 @@
 | org-redmine                     | github      | anything                 | anything                                            |
 | org-ref                         | github      | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                         |
 | org-toodledo                    | github      | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                            |
+| osa                             | github      | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]]   |
 | ox-latex-subfigure              | github      | org-loaddefs             | generated external file                             |
 | pinot                           | github      | anything-config          | anything                                            |
 | plsense                         | github      | perl-completion          | anything                                            |
