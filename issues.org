@@ -67,25 +67,6 @@ Reoccuring issues:
 
 - bts: https://github.com/aki2o/emacs-bts/pull/17
 
-* Packages maintained in Mercurial repositories on Bitbucket
-#+NAME: bitbucket
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Bitbucket User" "Repository" "Emacsmirror")
-    (cl-sort
-     (epkgs [name upstream-user repopage mirrorpage] 'epkg-bitbucket-package--eieio-childp)
-     #'string< :key #'cadr))
-#+END_SRC
-#+RESULTS: bitbucket
-| Package (5)   | Bitbucket User | Repository                                    | Emacsmirror                                  |
-|---------------+----------------+-----------------------------------------------+----------------------------------------------|
-| nose          | durin42        | https://bitbucket.org/durin42/nosemacs        | https://github.com/emacsmirror/nose          |
-| pydoc-info    | jonwaltman     | https://bitbucket.org/jonwaltman/pydoc-info   | https://github.com/emacsmirror/pydoc-info    |
-| unicode-input | m00nlight      | https://bitbucket.org/m00nlight/unicode-input | https://github.com/emacsmirror/unicode-input |
-| smart-dash    | malsyned       | https://bitbucket.org/malsyned/smart-dash     | https://github.com/emacsmirror/smart-dash    |
-| mmm-mako      | pjenvey        | https://bitbucket.org/pjenvey/mmm-mako        | https://github.com/emacsmirror/mmm-mako      |
-
-- https://github.com/melpa/melpa/issues/6484
-
 * Packages whose repositories have been archived
 #+NAME: archived
 #+BEGIN_SRC emacs-lisp
