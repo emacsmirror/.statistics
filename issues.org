@@ -70,58 +70,39 @@ Reoccuring issues:
 * Packages whose repositories have been archived
 #+NAME: archived
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Repository" "Melpa")
+  (epkg-with-org-header ("Package" "Repository" "Melpa" "Reverse Dependencies")
     (cl-sort
      (-keep (lambda (name)
               (and (member name emir--archived-packages)
                    (list name
                          (epkg-org-link name)
-                         (and (melpa-get name) "✓"))))
+                         (and (melpa-get name)
+                              ;; (oref (epkg name) downloads)
+                              "✓"
+                              )
+                         (mapconcat (pcase-lambda (`(,name . ,_features)) name)
+                                    (epkg-reverse-dependencies name) " "))))
             (epkgs 'name 'epkg-mirrored-package--eieio-childp))
      #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: archived
-| Package (40)                 | Repository                           | Melpa |
-|------------------------------+--------------------------------------+-------|
-| ido-clever-match             | [[https://github.com/Bogdanp/ido-clever-match][Bogdanp/ido-clever-match]]             | ✓     |
-| ghc                          | [[https://github.com/DanielG/ghc-mod][DanielG/ghc-mod]]                      | ✓     |
-| pyfmt                        | [[https://github.com/aheaume/pyfmt.el][aheaume/pyfmt.el]]                     | ✓     |
-| tdd-status-mode-line         | [[https://github.com/algernon/tdd-status-mode-line][algernon/tdd-status-mode-line]]        | ✓     |
-| projectile-hanami            | [[https://github.com/avdgaag/projectile-hanami][avdgaag/projectile-hanami]]            | ✓     |
-| bdo                          | [[https://github.com/chrisdone/bdo][chrisdone/bdo]]                        | ✓     |
-| flycheck-stack               | [[https://github.com/chrisdone/flycheck-stack][chrisdone/flycheck-stack]]             | ✓     |
-| ido-describe-bindings        | [[https://github.com/danil/ido-describe-bindings][danil/ido-describe-bindings]]          | ✓     |
-| ido-occur                    | [[https://github.com/danil/ido-occur][danil/ido-occur]]                      | ✓     |
-| chicken-scheme               | [[https://github.com/dleslie/chicken-scheme.el][dleslie/chicken-scheme.el]]            | ✓     |
-| seclusion-mode               | [[https://github.com/dleslie/seclusion-mode][dleslie/seclusion-mode]]               | ✓     |
-| ido-complete-space-or-hyphen | [[https://github.com/doitian/ido-complete-space-or-hyphen][doitian/ido-complete-space-or-hyphen]] | ✓     |
-| iy-go-to-char                | [[https://github.com/doitian/iy-go-to-char][doitian/iy-go-to-char]]                | ✓     |
-| love-minor-mode              | [[https://github.com/ejmr/love-minor-mode][ejmr/love-minor-mode]]                 | ✓     |
-| tup-mode                     | [[https://github.com/ejmr/tup-mode][ejmr/tup-mode]]                        | ✓     |
-| php-auto-yasnippets          | [[https://github.com/emacs-php/php-auto-yasnippets][emacs-php/php-auto-yasnippets]]        | ✓     |
-| font-lock-cl                 | [[https://github.com/font-lock-cl/font-lock-cl][font-lock-cl/font-lock-cl]]            | ✓     |
-| qiita                        | [[https://github.com/gongo/qiita-el][gongo/qiita-el]]                       | ✓     |
-| ivy-pages                    | [[https://github.com/igorepst/ivy-pages][igorepst/ivy-pages]]                   | ✓     |
-| github-issues                | [[https://github.com/inkel/github-issues.el][inkel/github-issues.el]]               | ✓     |
-| forml-mode                   | [[https://github.com/jvshahid/forml-mode][jvshahid/forml-mode]]                  |       |
-| rsense                       | [[https://github.com/m2ym/rsense][m2ym/rsense]]                          | ✓     |
-| image+                       | [[https://github.com/mhayashi1120/Emacs-imagex][mhayashi1120/Emacs-imagex]]            | ✓     |
-| japanlaw                     | [[https://github.com/mhayashi1120/japanlaw.el][mhayashi1120/japanlaw.el]]             | ✓     |
-| grep-context                 | [[https://github.com/mkcms/grep-context][mkcms/grep-context]]                   | ✓     |
-| ivy-yasnippet                | [[https://github.com/mkcms/ivy-yasnippet][mkcms/ivy-yasnippet]]                  | ✓     |
-| ebal                         | [[https://github.com/mrkkrp/ebal][mrkkrp/ebal]]                          | ✓     |
-| phpcbf                       | [[https://github.com/nishimaki10/emacs-phpcbf][nishimaki10/emacs-phpcbf]]             | ✓     |
-| el-pocket                    | [[https://github.com/pterygota/el-pocket][pterygota/el-pocket]]                  | ✓     |
-| o-blog                       | [[https://github.com/renard/o-blog][renard/o-blog]]                        | ✓     |
-| flymake-cppcheck             | [[https://github.com/senda-akiha/flymake-cppcheck][senda-akiha/flymake-cppcheck]]         | ✓     |
-| flymake-google-cpplint       | [[https://github.com/senda-akiha/flymake-google-cpplint][senda-akiha/flymake-google-cpplint]]   | ✓     |
-| flymake-phpcs                | [[https://github.com/senda-akiha/flymake-phpcs][senda-akiha/flymake-phpcs]]            | ✓     |
-| auto-scroll-mode             | [[https://github.com/stardiviner/auto-scroll-mode][stardiviner/auto-scroll-mode]]         | ✓     |
-| heroku                       | [[https://github.com/technomancy/heroku.el][technomancy/heroku.el]]                | ✓     |
-| relax                        | [[https://github.com/technomancy/relax.el][technomancy/relax.el]]                 | ✓     |
-| zossima                      | [[https://github.com/technomancy/zossima][technomancy/zossima]]                  | ✓     |
-| nodenv                       | [[https://github.com/twlz0ne/nodenv.el][twlz0ne/nodenv.el]]                    | ✓     |
-| flycheck-demjsonlint         | [[https://github.com/zenkiezhu/flycheck-demjsonlint][uqix/flycheck-demjsonlint]]            | ✓     |
-| automargin                   | [[https://github.com/zk-phi/automargin][zk-phi/automargin]]                    | ✓     |
+| Package (16)                 | Repository                           | Melpa | Reverse Dependencies    |
+|------------------------------+--------------------------------------+-------+-------------------------|
+| ghc                          | [[https://github.com/DanielG/ghc-mod][DanielG/ghc-mod]]                      | ✓     | company-ghc helm-ghc    |
+| chicken-scheme               | [[https://github.com/dleslie/chicken-scheme.el][dleslie/chicken-scheme.el]]            | ✓     |                         |
+| ido-complete-space-or-hyphen | [[https://github.com/doitian/ido-complete-space-or-hyphen][doitian/ido-complete-space-or-hyphen]] | ✓     |                         |
+| iy-go-to-char                | [[https://github.com/doitian/iy-go-to-char][doitian/iy-go-to-char]]                | ✓     |                         |
+| love-minor-mode              | [[https://github.com/ejmr/love-minor-mode][ejmr/love-minor-mode]]                 | ✓     |                         |
+| php-auto-yasnippets          | [[https://github.com/emacs-php/php-auto-yasnippets][emacs-php/php-auto-yasnippets]]        | ✓     |                         |
+| github-issues                | [[https://github.com/inkel/github-issues.el][inkel/github-issues.el]]               | ✓     | git-commit-insert-issue |
+| rsense                       | [[https://github.com/m2ym/rsense][m2ym/rsense]]                          | ✓     |                         |
+| image+                       | [[https://github.com/mhayashi1120/Emacs-imagex][mhayashi1120/Emacs-imagex]]            | ✓     | evil-collection         |
+| ivy-yasnippet                | [[https://github.com/mkcms/ivy-yasnippet][mkcms/ivy-yasnippet]]                  | ✓     |                         |
+| phpcbf                       | [[https://github.com/nishimaki10/emacs-phpcbf][nishimaki10/emacs-phpcbf]]             | ✓     |                         |
+| pipenv                       | [[https://github.com/pwalsh/pipenv.el][pwalsh/pipenv.el]]                     | ✓     |                         |
+| o-blog                       | [[https://github.com/renard/o-blog][renard/o-blog]]                        | ✓     |                         |
+| flymake-cppcheck             | [[https://github.com/senda-akiha/flymake-cppcheck][senda-akiha/flymake-cppcheck]]         | ✓     |                         |
+| flymake-google-cpplint       | [[https://github.com/senda-akiha/flymake-google-cpplint][senda-akiha/flymake-google-cpplint]]   | ✓     |                         |
+| flymake-phpcs                | [[https://github.com/senda-akiha/flymake-phpcs][senda-akiha/flymake-phpcs]]            | ✓     | drupal-mode             |
 
 Don't forget to update ~emir--archived-packages~ occasionally.

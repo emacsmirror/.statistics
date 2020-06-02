@@ -69,16 +69,16 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3769 |      65 |
-| GPL-2+        |  1182 |      20 |
-| MIT           |   181 |       3 |
-| GPL-3         |   171 |       3 |
-| MIT (x11)     |   153 |       3 |
+| GPL-3+        |  3752 |      65 |
+| GPL-2+        |  1179 |      20 |
+| MIT           |   180 |       3 |
+| GPL-3         |   170 |       3 |
+| MIT (x11)     |   151 |       3 |
 | BSD-2-clause  |    80 |       1 |
-| BSD-3-clause  |    58 |       1 |
+| BSD-3-clause  |    57 |       1 |
 | Apache-2.0    |    47 |       1 |
 | public-domain |    41 |       1 |
-| unlicense     |    38 |       1 |
+| unlicense     |    37 |       1 |
 | WTFPL         |    30 |       1 |
 | as-is         |    25 |       0 |
 | ISC           |     8 |       0 |
@@ -107,9 +107,9 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5149 |      88 |
+| total GNU     |  5128 |      88 |
 |---------------+-------+---------|
-| total         |  5842 |     100 |
+| total         |  5816 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -138,24 +138,25 @@
 #+RESULTS: attic-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-2+        |   801 |      61 |
-| GPL-3+        |   284 |      22 |
+| GPL-2+        |   804 |      60 |
+| GPL-3+        |   301 |      22 |
 | GPL-2         |    62 |       5 |
 | GPL           |    44 |       3 |
 | public-domain |    35 |       3 |
 | GPL-1+        |    14 |       1 |
-| GPL-3         |    12 |       1 |
-| MIT           |    12 |       1 |
+| GPL-3         |    13 |       1 |
+| MIT           |    13 |       1 |
+| MIT (x11)     |     8 |       1 |
 | as-is         |     8 |       1 |
-| MIT (x11)     |     6 |       0 |
 | WTFPL         |     6 |       0 |
 | ((custom))    |     6 |       0 |
+| BSD-3-clause  |     5 |       0 |
 | nil           |     4 |       0 |
 | BSD-2-clause  |     4 |       0 |
-| BSD-3-clause  |     4 |       0 |
 | Apache-2.0    |     3 |       0 |
 | GPL-2.1+      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
+| unlicense     |     2 |       0 |
 | AGPL-3+       |     1 |       0 |
 | Artistic-1.0  |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
@@ -165,11 +166,10 @@
 | LGPL-2.1      |     1 |       0 |
 | LGPL-2.1+     |     1 |       0 |
 | WTFPL-2       |     1 |       0 |
-| unlicense     |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  1224 |      93 |
+| total GNU     |  1245 |      93 |
 |---------------+-------+---------|
-| total         |  1319 |     100 |
+| total         |  1345 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown
