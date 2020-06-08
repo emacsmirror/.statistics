@@ -6,7 +6,9 @@
   (require 'emir)
 
   (defconst emir--orphans-cache
-    (cl-delete-if (lambda (it) (equal (cdr (assq 'name it)) "p"))
+    (cl-delete-if (lambda (it)
+                    (member (cdr (assq 'name it))
+                            '(".github" "p")))
                   (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil
                                      :unpaginate t
                                      :auth 'emir)
@@ -21,7 +23,6 @@
                (reason (cadr (assoc name emir--orphanage-reason))))
          (and (or (not only)
                   (member reason only))
-              (not (equal name ".github"))
               (list name
                     (if pkg "✔" "")
                     (if rcp
