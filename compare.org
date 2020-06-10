@@ -79,9 +79,9 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     14 |       |   467 |    14 |       |
 | elpa        |  123 |    123 |       |       |   172 |       |
-| elpa-branch |   19 |     19 |       |       |    66 |       |
+| elpa-branch |   19 |     19 |       |       |    67 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4601 |   4601 |       |       |       |  4371 |
+| github      | 4600 |   4600 |       |       |       |  4371 |
 | gitlab      |  129 |    129 |       |       |       |   129 |
 | git         |   96 |     96 |       |       |       |    85 |
 | subtree     |   24 |     24 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1345 |        |  1345 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7624 |   5827 |  1345 |   467 |   252 |  4597 |
+| total       | 7623 |   5826 |  1345 |   467 |   253 |  4597 |
 
 * Emacs
 ** Prefer elpa
@@ -237,7 +237,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (97)               | Class  | Gelpa    | Link                                         |
+| Package (98)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -268,6 +268,7 @@
 | eglot                      | github | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                             |
 | eldoc-eval                 | github | subtree  | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                  |
 | electric-spacing           | github | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                         |
+| emms                       | git    | external | [[http://www.gnu.org/software/emms]]             |
 | ergoemacs-mode             | github | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
 | expand-region              | github | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                     |
 | exwm                       | github | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
@@ -384,7 +385,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (103)   | Secondary package                 | Class  |
+| Primary package (104)   | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -476,6 +477,7 @@
 | kaesar                  | kaesar-file                       | github |
 | kaesar                  | kaesar-mode                       | github |
 | kaleidoscope            | kaleidoscope-evil-state-flash     | github |
+| keg                     | keg-mode                          | github |
 | kubel                   | kubel-evil                        | github |
 | kubernetes              | kubernetes-evil                   | github |
 | lean-mode               | company-lean                      | github |

@@ -61,9 +61,10 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature        | Provider |
-|-------------+--------+----------------+----------|
-| bts         | github | pophint-config |          |
+| Package (2)      | Class       | Feature        | Provider |
+|------------------+-------------+----------------+----------|
+| bts              | github      | pophint-config |          |
+| elisp-benchmarks | elpa-branch | comp           |          |
 
 - bts: https://github.com/aki2o/emacs-bts/pull/17
 

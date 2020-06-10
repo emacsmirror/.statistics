@@ -17,7 +17,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (11) | Class    | Feature         | Reason                                    |
+| Package (12) | Class    | Feature         | Reason                                    |
 |--------------+----------+-----------------+-------------------------------------------|
 | edb          | orphaned | edbcore         | generated                                 |
 | emacs        | builtin  | cus-load        | generated                                 |
@@ -26,6 +26,7 @@
 | eshell       | builtin  | esh-groups      | generated                                 |
 | finder       | builtin  | finder-inf      | generated                                 |
 | fuz          | github   | fuz-core        | provided by module                        |
+| geo          | git      | geocode-emacs   | provided by module                        |
 | liberime     | github   | liberime-core   | provided by module                        |
 | realgud      | github   | bashdb          | inside directory containing .nosearch     |
 | sly          | github   | sly-buttons     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
