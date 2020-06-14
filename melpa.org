@@ -53,7 +53,22 @@ please first make sure they meet the minimal requirements.
     (--keep (and (not (melpa-get it))
                  (not (gelpa-get it))
                  (list it (epkg-org-link it)))
-	    (epkgs 'name 'epkg-github-package)))
+            (epkgs 'name 'epkg-github-package)))
+  ;; This more expensive variant is useful when trying to
+  ;; determine which packages should be added to Melpa.
+  ;; (epkg-with-org-header ("Package" "Link" "Modified" "A")
+  ;;   (cl-sort
+  ;;    (-keep (lambda (pkg)
+  ;;             (with-slots (name) pkg
+  ;;               (and (not (melpa-get name))
+  ;;                    (not (gelpa-get name))
+  ;;                    (list name (epkg-org-link name)
+  ;;                          (with-emir-repository pkg
+  ;;                            (magit-git-string
+  ;;                             "log" "-1" "--format=%cd" "--date=short"))
+  ;;                          (and (member name emir--archived-packages) t)))))
+  ;;           (epkgs nil 'epkg-github-package))
+  ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
 | Package (539)                | Link                                    |
