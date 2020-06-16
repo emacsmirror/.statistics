@@ -61,13 +61,15 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (3)      | Class       | Feature        | Provider |
+| Package (4)      | Class       | Feature        | Provider |
 |------------------+-------------+----------------+----------|
 | bts              | github      | pophint-config |          |
 | elisp-benchmarks | elpa-branch | comp           |          |
+| emir             | github      | llama          |          |
 | ess              | github      | ess-stata-mode |          |
 
 - bts: https://github.com/aki2o/emacs-bts/pull/17
+- emir: I haven't released llama yet.
 
 * Packages whose repositories have been archived
 #+NAME: archived

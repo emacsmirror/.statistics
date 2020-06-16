@@ -79,9 +79,9 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     14 |       |   467 |    14 |       |
 | elpa        |  123 |    123 |       |       |   172 |       |
-| elpa-branch |   19 |     19 |       |       |    67 |       |
+| elpa-branch |   19 |     19 |       |       |    68 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4602 |   4602 |       |       |       |  4373 |
+| github      | 4605 |   4605 |       |       |       |  4376 |
 | gitlab      |  131 |    131 |       |       |       |   131 |
 | git         |   97 |     97 |       |       |       |    86 |
 | subtree     |   24 |     24 |       |       |       |       |
@@ -96,7 +96,7 @@
 | orphaned    |  112 |    112 |       |       |       |       |
 | shelved     | 1345 |        |  1345 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7628 |   5831 |  1345 |   467 |   253 |  4602 |
+| total       | 7631 |   5834 |  1345 |   467 |   254 |  4605 |
 
 * Emacs
 ** Prefer elpa
@@ -237,7 +237,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (98)               | Class  | Gelpa    | Link                                         |
+| Package (99)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -287,6 +287,7 @@
 | ivy-explorer               | github | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                         |
 | js2-mode                   | github | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
 | json-mode                  | github | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
+| leaf                       | github | external | [[https://github.com/conao3/leaf.el][conao3/leaf.el]]                               |
 | load-relative              | github | subtree  | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                    |
 | loc-changes                | github | subtree  | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                      |
 | loccur                     | github | subtree  | [[https://github.com/fourier/loccur][fourier/loccur]]                               |
