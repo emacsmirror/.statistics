@@ -81,7 +81,7 @@
 | elpa        |  123 |    123 |       |       |   172 |       |
 | elpa-branch |   19 |     19 |       |       |    68 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4605 |   4605 |       |       |       |  4376 |
+| github      | 4602 |   4602 |       |       |       |  4377 |
 | gitlab      |  131 |    131 |       |       |       |   131 |
 | git         |   97 |     97 |       |       |       |    86 |
 | subtree     |   24 |     24 |       |       |       |       |
@@ -93,10 +93,10 @@
 | file        |   63 |     63 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |  112 |    112 |       |       |       |       |
+| orphaned    |  115 |    115 |       |       |       |       |
 | shelved     | 1345 |        |  1345 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7631 |   5834 |  1345 |   467 |   254 |  4605 |
+| total       | 7631 |   5834 |  1345 |   467 |   254 |  4606 |
 
 * Emacs
 ** Prefer elpa
@@ -469,6 +469,7 @@
 | hydra                   | lv                                | github |
 | indent-lint             | flycheck-indent                   | github |
 | ivy                     | counsel                           | github |
+| ivy                     | ivy-avy                           | github |
 | ivy                     | ivy-hydra                         | github |
 | ivy                     | swiper                            | github |
 | jade-mode               | stylus-mode                       | github |
@@ -631,7 +632,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (46)         | Class       | Melpa  | Reason              |
+| Package (47)         | Class       | Melpa  | Reason              |
 |----------------------+-------------+--------+---------------------|
 | autotest             | minority    | github | all-in-one repo     |
 | bibliothek           | minority    | github | all-in-one repo     |
@@ -664,6 +665,7 @@
 | tex-smart-umlauts    | file        | MIRROR | non-git/hg          |
 | highlight            | wiki        | MIRROR | non-git/hg          |
 | color-theme          | shelved     | ATTIC  | obsolete            |
+| company-racer        | shelved     | ATTIC  | obsolete            |
 | drawille             | shelved     | ATTIC  | obsolete            |
 | e2wm-R               | shelved     | ATTIC  | obsolete            |
 | edit-at-point        | shelved     | ATTIC  | obsolete            |

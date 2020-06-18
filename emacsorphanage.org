@@ -172,7 +172,7 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (78)         | E | M |
+| Package (81)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -189,6 +189,7 @@ repositories have not seen a commit in a decade.
 | cpp-auto-include     | ✔ | ✔ |
 | dired-k              | ✔ | ✔ |
 | direx                | ✔ | ✔ |
+| docean               | ✔ | ✔ |
 | easy-highlight       | ✔ |   |
 | emamux               | ✔ | ✔ |
 | emamux-ruby-test     | ✔ | ✔ |
@@ -196,6 +197,7 @@ repositories have not seen a commit in a decade.
 | evil-textobj-line    | ✔ | ✔ |
 | fancy-battery        | ✔ | ✔ |
 | fontawesome          | ✔ | ✔ |
+| gh-md                | ✔ | ✔ |
 | git-gutter           | ✔ | ✔ |
 | git-gutter-fringe    | ✔ | ✔ |
 | git-messenger        | ✔ | ✔ |
@@ -238,6 +240,7 @@ repositories have not seen a commit in a decade.
 | pkg-info             | ✔ | ✔ |
 | popup-complete       | ✔ | ✔ |
 | popwin               | ✔ | ✔ |
+| pyimpsort            | ✔ | ✔ |
 | quickrun             | ✔ | ✔ |
 | reverse-theme        | ✔ | ✔ |
 | smeargle             | ✔ | ✔ |
