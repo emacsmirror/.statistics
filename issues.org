@@ -72,6 +72,7 @@ Reoccuring issues:
 - emir: I haven't released llama yet.
 
 * Packages whose repositories have been archived
+Don't forget to update ~emir--archived-packages~ occasionally.
 #+NAME: archived
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Repository" "Melpa" "Reverse Dependencies")
@@ -109,4 +110,16 @@ Reoccuring issues:
 | flymake-google-cpplint       | [[https://github.com/senda-akiha/flymake-google-cpplint][senda-akiha/flymake-google-cpplint]]   | ✓     |                         |
 | flymake-phpcs                | [[https://github.com/senda-akiha/flymake-phpcs][senda-akiha/flymake-phpcs]]            | ✓     | drupal-mode             |
 
-Don't forget to update ~emir--archived-packages~ occasionally.
+* Github repositories that were moved or removed
+Don't forget to update ~emir--moved-github-repos~ occasionally.
+#+NAME: github-moved
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Old" "New")
+    (cl-sort emir-moved-github-repos #'string< :key #'cadr))
+#+END_SRC
+#+RESULTS: github-moved
+| Package (3)  | Old                       | New |
+|--------------+---------------------------+-----|
+| angular-mode | rudolfolah/angularjs-mode |     |
+| sos          | rudolfolah/emacs-sos      |     |
+| org-doing    | rudolfolah/org-doing      |     |
