@@ -78,10 +78,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     14 |       |   467 |    14 |       |
-| elpa        |  123 |    123 |       |       |   172 |       |
-| elpa-branch |   19 |     19 |       |       |    68 |       |
+| elpa        |  123 |    123 |       |       |   174 |       |
+| elpa-branch |   19 |     19 |       |       |    66 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4602 |   4602 |       |       |       |  4377 |
+| github      | 4607 |   4607 |       |       |       |  4384 |
 | gitlab      |  131 |    131 |       |       |       |   131 |
 | git         |   97 |     97 |       |       |       |    86 |
 | subtree     |   24 |     24 |       |       |       |       |
@@ -94,9 +94,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  115 |    115 |       |       |       |       |
-| shelved     | 1345 |        |  1345 |       |       |       |
+| shelved     | 1346 |        |  1346 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7631 |   5834 |  1345 |   467 |   254 |  4606 |
+| total       | 7637 |   5839 |  1346 |   467 |   254 |  4613 |
 
 * Emacs
 ** Prefer elpa
@@ -152,6 +152,7 @@
     (-filter (pcase-lambda (`(,name ,class))
                (and (not (assoc name emir-pending-packages))
                     (not (assoc name emir--preferred-builtins))
+                    (not (member name '("counsel" "swiper"))) ; part of ivy
                     (or (not (eq class 'core))
                         (epkg-builtin-package-p (epkg name)))))
              (epkg-sql [:select [name class epkg-package]
@@ -237,7 +238,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (99)               | Class  | Gelpa    | Link                                         |
+| Package (97)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -272,7 +273,6 @@
 | ergoemacs-mode             | github | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                     |
 | expand-region              | github | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                     |
 | exwm                       | github | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                  |
-| fountain-mode              | github | external | [[https://github.com/rnkn/fountain-mode][rnkn/fountain-mode]]                           |
 | frog-menu                  | github | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                            |
 | ggtags                     | github | subtree  | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                |
 | gnorb                      | github | subtree  | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                 |
@@ -296,7 +296,6 @@
 | nameless                   | github | subtree  | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                           |
 | names                      | github | subtree  | [[https://github.com/Malabarba/names][Malabarba/names]]                              |
 | objed                      | github | external | [[https://github.com/clemera/objed][clemera/objed]]                                |
-| olivetti                   | github | external | [[https://github.com/rnkn/olivetti][rnkn/olivetti]]                                |
 | on-screen                  | github | subtree  | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]               |
 | org                        | git    | core     | [[https://orgmode.org]]                          |
 | pabbrev                    | github | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                             |
@@ -479,6 +478,7 @@
 | kaesar                  | kaesar-file                       | github |
 | kaesar                  | kaesar-mode                       | github |
 | kaleidoscope            | kaleidoscope-evil-state-flash     | github |
+| keg                     | flycheck-keg                      | github |
 | keg                     | keg-mode                          | github |
 | kubel                   | kubel-evil                        | github |
 | kubernetes              | kubernetes-evil                   | github |

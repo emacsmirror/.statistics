@@ -91,7 +91,7 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: archived
-| Package (16)                 | Repository                           | Melpa | Reverse Dependencies    |
+| Package (17)                 | Repository                           | Melpa | Reverse Dependencies    |
 |------------------------------+--------------------------------------+-------+-------------------------|
 | ghc                          | [[https://github.com/DanielG/ghc-mod][DanielG/ghc-mod]]                      | ✓     | company-ghc helm-ghc    |
 | chicken-scheme               | [[https://github.com/dleslie/chicken-scheme.el][dleslie/chicken-scheme.el]]            | ✓     |                         |
@@ -106,20 +106,31 @@ Don't forget to update ~emir--archived-packages~ occasionally.
 | phpcbf                       | [[https://github.com/nishimaki10/emacs-phpcbf][nishimaki10/emacs-phpcbf]]             | ✓     |                         |
 | pipenv                       | [[https://github.com/pwalsh/pipenv.el][pwalsh/pipenv.el]]                     | ✓     |                         |
 | o-blog                       | [[https://github.com/renard/o-blog][renard/o-blog]]                        | ✓     |                         |
+| lsp-scala                    | [[https://github.com/rossabaker/lsp-scala][rossabaker/lsp-scala]]                 | ✓     |                         |
 | flymake-cppcheck             | [[https://github.com/senda-akiha/flymake-cppcheck][senda-akiha/flymake-cppcheck]]         | ✓     |                         |
 | flymake-google-cpplint       | [[https://github.com/senda-akiha/flymake-google-cpplint][senda-akiha/flymake-google-cpplint]]   | ✓     |                         |
 | flymake-phpcs                | [[https://github.com/senda-akiha/flymake-phpcs][senda-akiha/flymake-phpcs]]            | ✓     | drupal-mode             |
 
 * Github repositories that were moved or removed
-Don't forget to update ~emir--moved-github-repos~ occasionally.
+Don't forget to update ~emir--moved-packages~ occasionally.
 #+NAME: github-moved
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Old" "New")
-    (cl-sort emir-moved-github-repos #'string< :key #'cadr))
+    (cl-sort emir--moved-packages #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: github-moved
-| Package (3)  | Old                       | New |
-|--------------+---------------------------+-----|
-| angular-mode | rudolfolah/angularjs-mode |     |
-| sos          | rudolfolah/emacs-sos      |     |
-| org-doing    | rudolfolah/org-doing      |     |
+| Package (13)        | Old                                | New                             |
+|---------------------+------------------------------------+---------------------------------|
+| blog-admin          | CodeFalling/blog-admin             | xcodebuild/blog-admin           |
+| nlinum-relative     | CodeFalling/nlinum-relative        | xcodebuild/nlinum-relative      |
+| helm-jira           | DeX3/helm-jira                     | romandecker/helm-jira           |
+| dired-recent        | Vifon/dired-recent.el              | vifon/dired-recent.el           |
+| dired-rifle         | Vifon/dired-rifle.el               | vifon/dired-rifle.el            |
+| focus-autosave-mode | Vifon/focus-autosave-mode.el       | vifon/focus-autosave-mode.el    |
+| hyperlist-mode      | Vifon/hyperlist-mode               | vifon/hyperlist-mode            |
+| what-the-commit     | danielbarbarito/what-the-commit.el | danbarbarito/what-the-commit.el |
+| di-macs             | jhmw/di-macs                       |                                 |
+| relative-buffers    | proofit404/relative-buffers        |                                 |
+| angular-mode        | rudolfolah/angularjs-mode          |                                 |
+| sos                 | rudolfolah/emacs-sos               |                                 |
+| org-doing           | rudolfolah/org-doing               |                                 |
