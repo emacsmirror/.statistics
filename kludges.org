@@ -312,20 +312,31 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (14)        | Class  | Branch       |
+| Package (25)        | Class  | Branch       |
 |---------------------+--------+--------------|
 | apel                | github | apel-wl      |
+| aqi                 | github | endless      |
 | borg-queen          | github | initial-dev  |
+| company-emoji       | github | trunk        |
 | distinguished-theme | github | develop      |
 | elnode              | github | master       |
+| engine-mode         | github | main         |
 | flim                | github | flim-1_14-wl |
+| homebrew-mode       | github | trunk        |
 | howdoyou            | github | master       |
+| litanize            | github | endless      |
 | neato-graph-bar     | gitlab | release      |
 | nord-theme          | github | develop      |
+| ob-applescript      | github | trunk        |
+| ox-jira             | github | trunk        |
 | plaster             | github | rewrite      |
 | propfont-mixed      | github | github       |
+| quiet               | github | endless      |
 | register-quicknav   | git    | main         |
 | semi                | github | semi-1_14-wl |
+| smart-tab           | git    | main         |
+| smog                | github | endless      |
+| tidal               | github | main         |
 | vc-fossil           | github | trunk        |
 | zero-input          | git    | pkg          |
 

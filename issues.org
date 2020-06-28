@@ -134,3 +134,9 @@ Don't forget to update ~emir--moved-packages~ occasionally.
 | angular-mode        | rudolfolah/angularjs-mode          |                                 |
 | sos                 | rudolfolah/emacs-sos               |                                 |
 | org-doing           | rudolfolah/org-doing               |                                 |
+
+* Miscellaneous
+
+- buffer-sets, pushover and i3wm cannot be pulled
+  from https://git.flintfam.org/swf-projects/NAME
+  see https://github.com/melpa/melpa/pull/4471

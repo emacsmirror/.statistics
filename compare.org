@@ -81,9 +81,9 @@
 | elpa        |  123 |    123 |       |       |   174 |       |
 | elpa-branch |   19 |     19 |       |       |    66 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4608 |   4608 |       |       |       |  4384 |
+| github      | 4609 |   4609 |       |       |       |  4389 |
 | gitlab      |  131 |    131 |       |       |       |   131 |
-| git         |   97 |     97 |       |       |       |    86 |
+| git         |   96 |     96 |       |       |       |    85 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |    0 |      0 |       |       |       |     0 |
@@ -94,9 +94,9 @@
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  115 |    115 |       |       |       |       |
-| shelved     | 1346 |        |  1346 |       |       |       |
+| shelved     | 1351 |        |  1351 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7638 |   5840 |  1346 |   467 |   254 |  4613 |
+| total       | 7643 |   5840 |  1351 |   467 |   254 |  4617 |
 
 * Emacs
 ** Prefer elpa
@@ -632,7 +632,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (47)         | Class       | Melpa  | Reason              |
+| Package (50)         | Class       | Melpa  | Reason              |
 |----------------------+-------------+--------+---------------------|
 | autotest             | minority    | github | all-in-one repo     |
 | bibliothek           | minority    | github | all-in-one repo     |
@@ -664,6 +664,7 @@
 | quack                | file        | MIRROR | non-git/hg          |
 | tex-smart-umlauts    | file        | MIRROR | non-git/hg          |
 | highlight            | wiki        | MIRROR | non-git/hg          |
+| angular-mode         | shelved     | ATTIC  | obsolete            |
 | color-theme          | shelved     | ATTIC  | obsolete            |
 | company-racer        | shelved     | ATTIC  | obsolete            |
 | drawille             | shelved     | ATTIC  | obsolete            |
@@ -674,10 +675,12 @@
 | ido-migemo           | shelved     | ATTIC  | obsolete            |
 | inlineR              | shelved     | ATTIC  | obsolete            |
 | mic-paren            | shelved     | ATTIC  | obsolete            |
+| org-doing            | shelved     | ATTIC  | obsolete            |
 | org-multiple-keymap  | shelved     | ATTIC  | obsolete            |
 | org-wunderlist       | shelved     | ATTIC  | obsolete            |
 | quick-preview        | shelved     | ATTIC  | obsolete            |
 | redshank             | shelved     | ATTIC  | obsolete            |
+| sos                  | shelved     | ATTIC  | obsolete            |
 | fold-dwim-org        | shelved     | github | obsolete dependency |
 | auth-source-pass     | builtin     | github | part of Emacs 26.1  |
 | less-css-mode        | builtin     | github | part of Emacs 26.1  |
