@@ -32,7 +32,12 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (1)       | Package          | Shelved |
+|-------------------+------------------+---------|
+| org-insert-dblock | orgtbl-aggregate |         |
+| org-insert-dblock | orgtbl-join      |         |
 
+- https://github.com/tbanel/orgtbljoin/issues/1
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
 
