@@ -1,0 +1,51 @@
+:PREAMBLE:
+#+TITLE: Epkgs: Misc
+#+SETUPFILE: .orgconfig
+#+NAME: setup
+#+BEGIN_SRC emacs-lisp :results silent
+  (require 'emir)
+#+END_SRC
+[[https://emacsmirror.net/stats][up]]
+:END:
+* Highest version
+#+NAME: highest-version
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("" "#" "%")
+    (let ((zero 0)
+          (one  0)
+          (more 0)
+          (odd  0)
+          (none 0)
+          (all  0))
+      (dolist (pkg (epkgs nil 'epkg-mirrored-package--eieio-childp))
+        (cl-incf all)
+        (with-epkg-repository pkg
+          (if-let ((tag (magit-git-string "tag" "--sort=-v:refname")))
+              (if-let ((major (ignore-errors
+                                (car (version-to-list
+                                      (if (string-match "\\`[^0-9]*" tag)
+                                          (substring tag (match-end 0))
+                                        tag))))))
+                  (pcase major
+                    (0 (cl-incf zero))
+                    (1 (cl-incf one))
+                    (_ (cl-incf more)))
+                (message "%-20s %s" (oref pkg name) tag)
+                (cl-incf odd))
+            (cl-incf none))))
+      (list (list 'zero  zero (/ (* 100 zero) all))
+            (list 'one   one  (/ (* 100 one)  all))
+            (list 'more  more (/ (* 100 more) all))
+            (list 'odd   odd  (/ (* 100 odd)  all))
+            (list 'none  none (/ (* 100 none) all))
+            (list 'total all  (/ (* 100 all)  all)))))
+#+END_SRC
+#+RESULTS: highest-version
+| (6)   |    # |   % |
+|-------+------+-----|
+| zero  | 1441 |  24 |
+| one   |  776 |  13 |
+| more  |  448 |   7 |
+| odd   |   30 |   0 |
+| none  | 3152 |  53 |
+| total | 5847 | 100 |
