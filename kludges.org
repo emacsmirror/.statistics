@@ -17,7 +17,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (12) | Class    | Feature         | Reason                                    |
+| Package (13) | Class    | Feature         | Reason                                    |
 |--------------+----------+-----------------+-------------------------------------------|
 | edb          | orphaned | edbcore         | generated                                 |
 | emacs        | builtin  | cus-load        | generated                                 |
@@ -36,6 +36,7 @@
 | sly          | github   | sly-messages    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly          | github   | sly-parse       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly          | github   | sly-tests       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sqlite3      | github   | sqlite3-api     | provided by module                        |
 | tree-sitter  | github   | tree-sitter-dyn | provided by module                        |
 | vterm        | github   | vterm-module    | generated                                 |
 
