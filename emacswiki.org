@@ -26,7 +26,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (25)   | Author                        | Depender                      | Type | Author                                            |
+| Dependee (27)   | Author                        | Depender                      | Type | Author                                            |
 |-----------------+-------------------------------+-------------------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key                       | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm                            | hard |                                                   |
@@ -37,7 +37,9 @@
 | filesets+       | Drew Adams                    | helm-filesets                 | soft | Graham Clark                                      |
 | font-lock+      | Drew Adams                    | icons-in-terminal             | hard |                                                   |
 | font-lock+      | Drew Adams                    | jemdoc-mode                   | soft | Dimitar Dimitrov                                  |
+| font-lock+      | Drew Adams                    | lambdapi-mode                 | soft | Rodolphe Lepigre, Gabriel Hondet                  |
 | frame-cmds      | Drew Adams                    | frame-ctr                     | hard | Takaaki ISHIKAWA                                  |
+| frame-fns       | Drew Adams                    | lambdapi-mode                 | soft | Rodolphe Lepigre, Gabriel Hondet                  |
 | hexrgb          | Drew Adams                    | jabber                        | hard |                                                   |
 | hexrgb          | Drew Adams                    | on-screen                     | soft | Michael Heerdegen                                 |
 | hexrgb          | Drew Adams                    | one-key                       | hard | Andy Stewart                                      |
@@ -55,6 +57,7 @@
 | icicles         | Drew Adams                    | rcodetools                    | hard |                                                   |
 | imdb            |                               | movie                         | hard | Lars Magne Ingebrigtsen                           |
 | isearch-prop    | Drew Adams                    | zones                         | soft | Drew Adams                                        |
+| menu-bar+       | Drew Adams                    | lambdapi-mode                 | soft | Rodolphe Lepigre, Gabriel Hondet                  |
 | oddmuse         |                               | company                       | soft | Nikolaj Schumacher                                |
 | org-json        | Changyuan Yu                  | es-mode                       | hard | Lee Hinman                                        |
 | policy-switch   | Christoffer S. Hansen         | one-key                       | soft | Andy Stewart                                      |
@@ -229,7 +232,6 @@
 |                                                 | tag                            |
 |                                                 | tagger                         |
 |                                                 | tags-tree                      |
-|                                                 | teco                           |
 |                                                 | tooltip-help                   |
 |                                                 | ts-mode                        |
 |                                                 | tsv-mode                       |

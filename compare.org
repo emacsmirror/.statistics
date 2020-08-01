@@ -81,7 +81,7 @@
 | elpa        |  123 |    123 |       |       |   174 |       |
 | elpa-branch |   20 |     20 |       |       |    67 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4625 |   4625 |       |       |       |  4405 |
+| github      | 4636 |   4636 |       |       |       |  4417 |
 | gitlab      |  131 |    131 |       |       |       |   131 |
 | git         |   97 |     97 |       |       |       |    86 |
 | subtree     |   24 |     24 |       |       |       |       |
@@ -89,14 +89,14 @@
 | bitbucket   |    0 |      0 |       |       |       |     0 |
 | hg          |   12 |     12 |       |       |       |    12 |
 |-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  609 |    609 |       |       |       |       |
-| file        |   63 |     63 |       |       |       |       |
+| wiki        |  608 |    608 |       |       |       |       |
+| file        |   55 |     55 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  115 |    115 |       |       |       |       |
-| shelved     | 1351 |        |  1351 |       |       |       |
+| shelved     | 1359 |        |  1359 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7661 |   5858 |  1351 |   467 |   255 |  4634 |
+| total       | 7671 |   5860 |  1359 |   467 |   255 |  4646 |
 
 * Emacs
 ** Prefer elpa
@@ -385,7 +385,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (104)   | Secondary package                 | Class  |
+| Primary package (105)   | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -405,6 +405,7 @@
 | chumpy-windows          | splitter                          | github |
 | chumpy-windows          | window-jump                       | github |
 | circe                   | tracking                          | github |
+| clojure-essential-ref   | clojure-essential-ref-nov         | github |
 | clojure-mode            | clojure-mode-extra-font-locking   | github |
 | codesearch              | projectile-codesearch             | github |
 | colorless-themes        | lavenderless-theme                | git    |
@@ -576,7 +577,6 @@
      (-lambda ((name type url melpa-url))
        (and (not (or (and (string-prefix-p "hg::" url)
                           (equal melpa-url (substring url 4)))
-                     (eq type 'elpa-branch)
                      (string-prefix-p "git@github.com:emacsmirror/" melpa-url)
                      (string-prefix-p "git@github.com:emacsattic/"  melpa-url)))
             (list name
@@ -591,6 +591,8 @@
                 :and :not (= packages:class 'minority)
                 :and :not (= packages:class 'subtree)
                 :and :not (= packages:class 'builtin)
+                :and :not (= packages:class 'elpa-branch)
+                :and :not (= packages:class 'wiki)
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
