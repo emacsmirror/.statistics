@@ -81,9 +81,9 @@
 | elpa        |  123 |    123 |       |       |   174 |       |
 | elpa-branch |   20 |     20 |       |       |    67 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4636 |   4636 |       |       |       |  4417 |
-| gitlab      |  131 |    131 |       |       |       |   131 |
-| git         |   97 |     97 |       |       |       |    86 |
+| github      | 4644 |   4644 |       |       |       |  4426 |
+| gitlab      |  132 |    132 |       |       |       |   132 |
+| git         |   98 |     98 |       |       |       |    87 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |    0 |      0 |       |       |       |     0 |
@@ -96,7 +96,7 @@
 | orphaned    |  115 |    115 |       |       |       |       |
 | shelved     | 1359 |        |  1359 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7671 |   5860 |  1359 |   467 |   255 |  4646 |
+| total       | 7681 |   5870 |  1359 |   467 |   255 |  4657 |
 
 * Emacs
 ** Prefer elpa
@@ -546,6 +546,7 @@
 | stan-mode               | stan-snippets                     | github |
 | term-manager            | term-projectile                   | github |
 | tern                    | tern-auto-complete                | github |
+| treemacs                | treemacs-all-the-icons            | github |
 | treemacs                | treemacs-evil                     | github |
 | treemacs                | treemacs-icons-dired              | github |
 | treemacs                | treemacs-magit                    | github |
