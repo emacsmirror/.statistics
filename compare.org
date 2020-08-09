@@ -79,11 +79,11 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     14 |       |   467 |    14 |       |
 | elpa        |  123 |    123 |       |       |   174 |       |
-| elpa-branch |   20 |     20 |       |       |    67 |       |
+| elpa-branch |   20 |     20 |       |       |    69 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4644 |   4644 |       |       |       |  4426 |
+| github      | 4653 |   4653 |       |       |       |  4434 |
 | gitlab      |  132 |    132 |       |       |       |   132 |
-| git         |   98 |     98 |       |       |       |    87 |
+| git         |   99 |     99 |       |       |       |    87 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | bitbucket   |    0 |      0 |       |       |       |     0 |
@@ -96,7 +96,7 @@
 | orphaned    |  115 |    115 |       |       |       |       |
 | shelved     | 1359 |        |  1359 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7681 |   5870 |  1359 |   467 |   255 |  4657 |
+| total       | 7691 |   5880 |  1359 |   467 |   257 |  4665 |
 
 * Emacs
 ** Prefer elpa
@@ -238,7 +238,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (97)               | Class  | Gelpa    | Link                                         |
+| Package (99)               | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -256,6 +256,7 @@
 | company                    | github | subtree  | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                    |
 | company-math               | github | subtree  | [[https://github.com/vspinu/company-math][vspinu/company-math]]                          |
 | company-statistics         | github | subtree  | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]              |
+| cpio-mode                  | github | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                             |
 | dash                       | github | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                              |
 | dbus-codegen               | github | subtree  | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                         |
 | delight                    | git    | subtree  | [[https://savannah.nongnu.org/projects/delight]] |
@@ -312,6 +313,7 @@
 | realgud-trepan-ni          | github | external | [[https://github.com/realgud/realgud-trepan-ni][realgud/realgud-trepan-ni]]                    |
 | relint                     | github | external | [[https://github.com/mattiase/relint][mattiase/relint]]                              |
 | rich-minority              | github | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
+| rt-liberation              | git    | external | [[http://www.nongnu.org/rtliber]]                |
 | scanner                    | gitlab | external | [[https://gitlab.com/rstocker/scanner][rstocker/scanner]]                             |
 | smalltalk-mode             | git    | external |                                              |
 | sotlisp                    | github | subtree  | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]              |
