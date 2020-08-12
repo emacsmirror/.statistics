@@ -77,7 +77,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (86)                    | Class       | Feature                  | Reason                                              |
+| Package (87)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -105,6 +105,7 @@
 | ecb                             | github      | thing                    | XEmacs compatibility                                |
 | ee                              | git         | bbdb-autoloads           | generated external file                             |
 | el-autoyas                      | github      | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
+| elisp-benchmarks                | elpa-branch | comp                     | only when using Emacs' native-comp branch           |
 | emacspeak                       | github      | org-exp                  | required by obsolete library                        |
 | emms-player-mpv-jp-radios       | github      | anything                 | anything                                            |
 | erlang                          | github      | tags                     | backward compatibility                              |

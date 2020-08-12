@@ -69,16 +69,19 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (5)      | Class       | Feature                  | Provider |
-|------------------+-------------+--------------------------+----------|
-| bts              | github      | pophint-config           |          |
-| cpio-mode        | github      | cpio-entry-contents-mode |          |
-| elisp-benchmarks | elpa-branch | comp                     |          |
-| emir             | github      | llama                    |          |
-| ess              | github      | ess-stata-mode           |          |
+| Package (5) | Class  | Feature                  | Provider |
+|-------------+--------+--------------------------+----------|
+| bts         | github | pophint-config           |          |
+| cpio-mode   | github | cpio-entry-contents-mode |          |
+| emir        | github | llama                    |          |
+| ess         | github | ess-stata-mode           |          |
+| templatel   | github | blorg                    | blorg    |
 
 - bts: https://github.com/aki2o/emacs-bts/pull/17
+- cpio-mode: https://github.com/dlewan/cpio-mode/issues/2
 - emir: I haven't released llama yet.
+- ess: https://github.com/emacs-ess/ESS/issues/1033
+- templatel https://github.com/clarete/templatel/issues/2
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
