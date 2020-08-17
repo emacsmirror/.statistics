@@ -80,7 +80,7 @@
 | elpa        |  123 |    123 |       |       |   174 |       |
 | elpa-branch |   20 |     20 |       |       |    69 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4654 |   4654 |       |       |       |  4435 |
+| github      | 4655 |   4655 |       |       |       |  4435 |
 | gitlab      |  132 |    132 |       |       |       |   132 |
 | git         |   99 |     99 |       |       |       |    87 |
 | subtree     |   24 |     24 |       |       |       |       |
@@ -92,9 +92,9 @@
 | file        |   55 |     55 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  115 |    115 |       |       |       |       |
-| shelved     | 1359 |        |  1359 |       |       |       |
+| shelved     | 1358 |        |  1358 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7692 |   5881 |  1359 |   467 |   257 |  4666 |
+| total       | 7692 |   5882 |  1358 |   467 |   257 |  4666 |
 
 * Emacs
 ** Prefer elpa
@@ -607,7 +607,9 @@
       (pcase-lambda (`(,name ,class ,fetcher ,repo))
         (and (not (pcase (list class fetcher)
                     (`(subtree  github) t)
-                    (`(subtree  git)    t)))
+                    (`(subtree  git)    t)
+                    (`(minority github) t)
+                    (`(minority git)    t)))
              (pcase (list class fetcher)
                ((and `(orphaned github)
                      (guard (string-prefix-p "emacsorphanage/" repo)))
@@ -635,30 +637,10 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (50)         | Class       | Melpa  | Reason              |
+| Package (31)         | Class       | Melpa  | Reason              |
 |----------------------+-------------+--------+---------------------|
-| autotest             | minority    | github | all-in-one repo     |
-| bibliothek           | minority    | github | all-in-one repo     |
-| forecast             | minority    | github | all-in-one repo     |
-| org-variable-pitch   | minority    | github | all-in-one repo     |
-| paper-theme          | minority    | github | all-in-one repo     |
-| smart-compile        | minority    | github | all-in-one repo     |
-| toggle               | minority    | github | all-in-one repo     |
 | modus-operandi-theme | elpa-branch | gitlab | dedicated branches  |
 | modus-vivendi-theme  | elpa-branch | gitlab | dedicated branches  |
-| cfengine-code-style  | minority    | github | mostly non-elisp    |
-| clang-format         | minority    | github | mostly non-elisp    |
-| cmake-mode           | minority    | git    | mostly non-elisp    |
-| cython-mode          | minority    | github | mostly non-elisp    |
-| diffscuss-mode       | minority    | github | mostly non-elisp    |
-| google-c-style       | minority    | github | mostly non-elisp    |
-| nemerle              | minority    | github | mostly non-elisp    |
-| ninja-mode           | minority    | github | mostly non-elisp    |
-| po-mode              | minority    | github | mostly non-elisp    |
-| pylint               | minority    | github | mostly non-elisp    |
-| thrift               | minority    | github | mostly non-elisp    |
-| faceup               | builtin     | github |                     |
-| ascii-table          | shelved     | github |                     |
 | cg                   | file        | MIRROR | non-git/hg          |
 | darcsum              | file        | MIRROR | non-git/hg          |
 | dsvn                 | file        | MIRROR | non-git/hg          |
@@ -687,3 +669,4 @@
 | fold-dwim-org        | shelved     | github | obsolete dependency |
 | auth-source-pass     | builtin     | github | part of Emacs 26.1  |
 | less-css-mode        | builtin     | github | part of Emacs 26.1  |
+| faceup               | builtin     | github | part of Emacs 27.1  |

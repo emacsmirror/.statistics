@@ -7,6 +7,75 @@
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 :END:
+* Minority packages
+#+NAME: minority
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Library")
+    (epkgs [name url] 'epkg-minority-package-p)))
+#+END_SRC
+#+RESULTS: minority
+| Package (25)        | Library                                      |
+|---------------------+----------------------------------------------|
+| autotest            | git@github.com:zenspider/elisp.git           |
+| bibliothek          | git@github.com:cadadr/elisp.git              |
+| cfengine-code-style | git@github.com:cfengine/core.git             |
+| clang-format        | git@github.com:llvm/llvm-project.git         |
+| cmake-mode          | https://gitlab.kitware.com/cmake/cmake.git   |
+| cython-mode         | git@github.com:cython/cython.git             |
+| diffscuss-mode      | git@github.com:tomheon/diffscuss.git         |
+| forecast            | git@github.com:cadadr/elisp.git              |
+| google-c-style      | git@github.com:google/styleguide.git         |
+| nemerle             | git@github.com:rsdn/nemerle.git              |
+| ninja-mode          | git@github.com:ninja-build/ninja.git         |
+| org-pua             | git@github.com:Henry/dot-emacs.git           |
+| org-variable-pitch  | git@github.com:cadadr/elisp.git              |
+| paper-theme         | git@github.com:cadadr/elisp.git              |
+| po-mode             | https://git.savannah.gnu.org/git/gettext.git |
+| pylint              | git@github.com:PyCQA/pylint.git              |
+| rfringe             | git@github.com:DinoChiesa/dpchiesa-elisp.git |
+| smart-compile       | git@github.com:zenitani/elisp.git            |
+| tenv                | git@github.com:aki2o/elisp-test.git          |
+| tfs                 | git@github.com:DinoChiesa/dpchiesa-elisp.git |
+| thesaurus           | git@github.com:DinoChiesa/dpchiesa-elisp.git |
+| thingatpt-ext       | git@github.com:Henry/dot-emacs.git           |
+| thrift              | git@github.com:apache/thrift.git             |
+| toggle              | git@github.com:zenspider/elisp.git           |
+| wn-org              | git@github.com:Henry/dot-emacs.git           |
+
+* Subtree packages
+#+NAME: subtree
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Library")
+    (epkgs [name url] 'epkg-subtree-package-p)))
+#+END_SRC
+#+RESULTS: subtree
+| Package (24)    | Library                                                             |
+|-----------------+---------------------------------------------------------------------|
+| company-go      | git@github.com:nsf/gocode.git                                       |
+| cubicle-mode    | git@github.com:cubicle-model-checker/cubicle.git                    |
+| dune            | git@github.com:ocaml/dune.git                                       |
+| egison-mode     | git@github.com:egison/egison.git                                    |
+| fuel            | git@github.com:factor/factor.git                                    |
+| go-autocomplete | git@github.com:nsf/gocode.git                                       |
+| golint          | git@github.com:golang/lint.git                                      |
+| govc            | git@github.com:vmware/govmomi.git                                   |
+| gvpr-mode       | git@github.com:rodw/gvpr-lib.git                                    |
+| kivy-mode       | git@github.com:kivy/kivy.git                                        |
+| lambdapi-mode   | git@github.com:Deducteam/lambdapi.git                               |
+| lfe-mode        | git@github.com:rvirding/lfe.git                                     |
+| mandoku         | git@github.com:mandoku/mandoku.git                                  |
+| merlin          | git@github.com:the-lambda-church/merlin.git                         |
+| mozart          | git@github.com:mozart/mozart2.git                                   |
+| mozc            | git@github.com:google/mozc.git                                      |
+| password-store  | https://git.zx2c4.com/password-store                                |
+| protobuf-mode   | git@github.com:google/protobuf.git                                  |
+| rcodetools      | git@github.com:rcodetools/rcodetools.git                            |
+| scad-mode       | git@github.com:openscad/openscad.git                                |
+| stumpwm-mode    | git@github.com:stumpwm/stumpwm-contrib.git                          |
+| utop            | git@github.com:diml/utop.git                                        |
+| widgetjs        | git@github.com:foretagsplatsen/emacs-js.git                         |
+| zeitgeist       | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
+
 * Features provided by multiple packages
 #+NAME: conflict
 #+BEGIN_SRC emacs-lisp

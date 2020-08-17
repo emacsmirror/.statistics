@@ -77,7 +77,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (87)                    | Class       | Feature                  | Reason                                              |
+| Package (86)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -165,7 +165,6 @@
 | ox-latex-subfigure              | github      | org-loaddefs             | generated external file                             |
 | pinot                           | github      | anything-config          | anything                                            |
 | plsense                         | github      | perl-completion          | anything                                            |
-| po-mode                         | minority    | po-compat                | backward compatibility                              |
 | project-explorer                | github      | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
 | proof-general                   | github      | proof-x-symbol           | only required by a single deprecated library        |
 | prosjekt                        | github      | anything                 | anything                                            |
@@ -225,6 +224,46 @@
 | semi          | github   |
 | vm            | orphaned |
 | wanderlust    | github   |
+
+* Filtered packages
+#+NAME: filtered
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Reason")
+    (mapcar (pcase-lambda (`(,name ,args))
+              (list name
+                    (cadr (assoc name emir--diverging-reason))
+                    ;; (mapconcat #'identity args " ")
+                    ))
+            (epkgs [name upstream-tree] 'epkg-minority-package-p)))
+#+END_SRC
+#+RESULTS: filtered
+| Package (25)        | Reason           |
+|---------------------+------------------|
+| autotest            | all-in-one repo  |
+| bibliothek          | all-in-one repo  |
+| cfengine-code-style | mostly non-elisp |
+| clang-format        | mostly non-elisp |
+| cmake-mode          | mostly non-elisp |
+| cython-mode         | mostly non-elisp |
+| diffscuss-mode      | mostly non-elisp |
+| forecast            | all-in-one repo  |
+| google-c-style      | mostly non-elisp |
+| nemerle             | mostly non-elisp |
+| ninja-mode          | mostly non-elisp |
+| org-pua             | all-in-one repo  |
+| org-variable-pitch  | all-in-one repo  |
+| paper-theme         | all-in-one repo  |
+| po-mode             | mostly non-elisp |
+| pylint              | mostly non-elisp |
+| rfringe             | all-in-one repo  |
+| smart-compile       | all-in-one repo  |
+| tenv                | unclean repo     |
+| tfs                 | all-in-one repo  |
+| thesaurus           | all-in-one repo  |
+| thingatpt-ext       | all-in-one repo  |
+| thrift              | mostly non-elisp |
+| toggle              | all-in-one repo  |
+| wn-org              | all-in-one repo  |
 
 * Set main library
 #+NAME: no-mainlib
@@ -315,33 +354,34 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (25)        | Class  | Branch       |
-|---------------------+--------+--------------|
-| apel                | github | apel-wl      |
-| aqi                 | github | endless      |
-| borg-queen          | github | initial-dev  |
-| company-emoji       | github | trunk        |
-| distinguished-theme | github | develop      |
-| elnode              | github | master       |
-| engine-mode         | github | main         |
-| flim                | github | flim-1_14-wl |
-| homebrew-mode       | github | trunk        |
-| howdoyou            | github | master       |
-| litanize            | github | endless      |
-| neato-graph-bar     | gitlab | release      |
-| nord-theme          | github | develop      |
-| ob-applescript      | github | trunk        |
-| ox-jira             | github | trunk        |
-| plaster             | github | rewrite      |
-| propfont-mixed      | github | github       |
-| quiet               | github | endless      |
-| register-quicknav   | git    | main         |
-| semi                | github | semi-1_14-wl |
-| smart-tab           | git    | main         |
-| smog                | github | endless      |
-| tidal               | github | main         |
-| vc-fossil           | github | trunk        |
-| zero-input          | git    | pkg          |
+| Package (26)        | Class    | Branch       |
+|---------------------+----------+--------------|
+| apel                | github   | apel-wl      |
+| aqi                 | github   | endless      |
+| borg-queen          | github   | initial-dev  |
+| company-emoji       | github   | trunk        |
+| distinguished-theme | github   | develop      |
+| elnode              | github   | master       |
+| engine-mode         | github   | main         |
+| flim                | github   | flim-1_14-wl |
+| google-c-style      | minority | gh-pages     |
+| homebrew-mode       | github   | trunk        |
+| howdoyou            | github   | master       |
+| litanize            | github   | endless      |
+| neato-graph-bar     | gitlab   | release      |
+| nord-theme          | github   | develop      |
+| ob-applescript      | github   | trunk        |
+| ox-jira             | github   | trunk        |
+| plaster             | github   | rewrite      |
+| propfont-mixed      | github   | github       |
+| quiet               | github   | endless      |
+| register-quicknav   | git      | main         |
+| semi                | github   | semi-1_14-wl |
+| smart-tab           | git      | main         |
+| smog                | github   | endless      |
+| tidal               | github   | main         |
+| vc-fossil           | github   | trunk        |
+| zero-input          | git      | pkg          |
 
 - howdoyou: https://github.com/melpa/melpa/pull/6394#issuecomment-529667615
 - zero-input: https://github.com/melpa/melpa/pull/6479
