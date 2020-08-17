@@ -101,15 +101,18 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (2)       | Package          | Shelved |
+| Feature (3)       | Package          | Shelved |
 |-------------------+------------------+---------|
+| etest             | ess              |         |
+| etest             | etest            |         |
 | highlight         | highlight        |         |
 | highlight         | lambdapi-mode    |         |
 | org-insert-dblock | orgtbl-aggregate |         |
 | org-insert-dblock | orgtbl-join      |         |
 
-- https://github.com/Deducteam/lambdapi/issues/435
-- https://github.com/tbanel/orgtbljoin/issues/1
+- etest: https://github.com/emacs-ess/ESS/issues/1037
+- highlight: https://github.com/Deducteam/lambdapi/issues/435
+- org-insert-dblock: https://github.com/tbanel/orgtbljoin/issues/1
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
 
