@@ -354,34 +354,47 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (26)        | Class    | Branch       |
+| Package (42)        | Class    | Branch       |
 |---------------------+----------+--------------|
+| ansible-vault       | github   | master       |
 | apel                | github   | apel-wl      |
 | aqi                 | github   | endless      |
+| bidi                | github   | main         |
 | borg-queen          | github   | initial-dev  |
+| boxquote            | github   | main         |
+| cil-mode            | github   | develop      |
 | company-emoji       | github   | trunk        |
 | distinguished-theme | github   | develop      |
-| elnode              | github   | master       |
+| drupal-mode         | github   | develop      |
+| eev                 | github   | UTF-8        |
 | engine-mode         | github   | main         |
 | flim                | github   | flim-1_14-wl |
 | google-c-style      | minority | gh-pages     |
 | homebrew-mode       | github   | trunk        |
-| howdoyou            | github   | master       |
+| lakota-input        | git      | main         |
 | litanize            | github   | endless      |
 | neato-graph-bar     | gitlab   | release      |
+| neotree             | github   | dev          |
+| nodejs-repl         | github   | develop      |
 | nord-theme          | github   | develop      |
 | ob-applescript      | github   | trunk        |
+| org-themis          | github   | develop      |
+| org-time-budgets    | github   | develop      |
+| orgbox              | github   | develop      |
 | ox-jira             | github   | trunk        |
+| plantuml-mode       | github   | develop      |
 | plaster             | github   | rewrite      |
+| poet-client         | github   | development  |
+| projectile-direnv   | github   | develop      |
 | propfont-mixed      | github   | github       |
 | quiet               | github   | endless      |
+| rcirc-styles        | github   | develop      |
 | register-quicknav   | git      | main         |
 | semi                | github   | semi-1_14-wl |
 | smart-tab           | git      | main         |
 | smog                | github   | endless      |
+| sql-impala          | github   | main         |
 | tidal               | github   | main         |
 | vc-fossil           | github   | trunk        |
+| websocket           | github   | main         |
 | zero-input          | git      | pkg          |
-
-- howdoyou: https://github.com/melpa/melpa/pull/6394#issuecomment-529667615
-- zero-input: https://github.com/melpa/melpa/pull/6479

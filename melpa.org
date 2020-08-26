@@ -633,7 +633,7 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (11)      | Link                        |
+| Package (12)      | Link                        |
 |-------------------+-----------------------------|
 | auto-mounter      |                             |
 | ebuild-mode       |                             |
@@ -642,6 +642,7 @@ please first make sure they meet the minimal requirements.
 | gpicker           |                             |
 | im-notification   |                             |
 | lilypond          |                             |
+| mailscripts       |                             |
 | python-pep8       |                             |
 | python-pylint     |                             |
 | riece             | [[http://www.nongnu.org/riece]] |

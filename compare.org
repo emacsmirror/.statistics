@@ -80,9 +80,9 @@
 | elpa        |  123 |    123 |       |       |   174 |       |
 | elpa-branch |   20 |     20 |       |       |    69 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4664 |   4664 |       |       |       |  4445 |
+| github      | 4673 |   4673 |       |       |       |  4454 |
 | gitlab      |  132 |    132 |       |       |       |   132 |
-| git         |   99 |     99 |       |       |       |    87 |
+| git         |  102 |    102 |       |       |       |    89 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  608 |    608 |       |       |       |       |
@@ -92,9 +92,9 @@
 | file        |   55 |     55 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  115 |    115 |       |       |       |       |
-| shelved     | 1354 |        |  1354 |       |       |       |
+| shelved     | 1353 |        |  1353 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7697 |   5892 |  1354 |   467 |   258 |  4676 |
+| total       | 7708 |   5904 |  1353 |   467 |   258 |  4687 |
 
 * Emacs
 ** Prefer elpa
@@ -356,11 +356,6 @@
                                  (asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-new
-| Package (1) | Melpa  | Link                     |
-|-------------+--------+--------------------------|
-| lsp-elixir  | github | [[https://github.com/elixir-lsp/lsp-elixir.el][elixir-lsp/lsp-elixir.el]] |
-
-- https://github.com/emacs-lsp/lsp-mode/pull/2070
 
 ** Pending
 #+NAME: melpa-pending
@@ -375,6 +370,11 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
+| Package (1) | Melpa  | Reason        |
+|-------------+--------+---------------|
+| lsp-elixir  | github | pending [[https://github.com/emacs-lsp/lsp-mode/pull/2070][#2070]] |
+
+- https://github.com/emacs-lsp/lsp-mode/pull/2070
 
 ** Shared repositories
 #+NAME: secondary-packages
