@@ -80,9 +80,9 @@
 | elpa        |  123 |    123 |       |       |   174 |       |
 | elpa-branch |   20 |     20 |       |       |    69 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4673 |   4673 |       |       |       |  4454 |
+| github      | 4678 |   4678 |       |       |       |  4458 |
 | gitlab      |  132 |    132 |       |       |       |   132 |
-| git         |  102 |    102 |       |       |       |    89 |
+| git         |  104 |    104 |       |       |       |    91 |
 | subtree     |   24 |     24 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  608 |    608 |       |       |       |       |
@@ -94,7 +94,7 @@
 | orphaned    |  115 |    115 |       |       |       |       |
 | shelved     | 1353 |        |  1353 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7708 |   5904 |  1353 |   467 |   258 |  4687 |
+| total       | 7715 |   5911 |  1353 |   467 |   258 |  4693 |
 
 * Emacs
 ** Prefer elpa
@@ -370,11 +370,6 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: melpa-pending
-| Package (1) | Melpa  | Reason        |
-|-------------+--------+---------------|
-| lsp-elixir  | github | pending [[https://github.com/emacs-lsp/lsp-mode/pull/2070][#2070]] |
-
-- https://github.com/emacs-lsp/lsp-mode/pull/2070
 
 ** Shared repositories
 #+NAME: secondary-packages

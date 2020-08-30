@@ -101,15 +101,18 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (2)       | Package          | Shelved |
+| Feature (3)       | Package          | Shelved |
 |-------------------+------------------+---------|
 | highlight         | highlight        |         |
 | highlight         | lambdapi-mode    |         |
 | org-insert-dblock | orgtbl-aggregate |         |
 | org-insert-dblock | orgtbl-join      |         |
+| undercover        | d-mode           |         |
+| undercover        | undercover       |         |
 
 - highlight: https://github.com/Deducteam/lambdapi/issues/435
 - org-insert-dblock: https://github.com/tbanel/orgtbljoin/issues/1
+- undercover: https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode/issues/99
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
 
