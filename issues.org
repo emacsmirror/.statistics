@@ -101,18 +101,22 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (3)       | Package          | Shelved |
+| Feature (4)       | Package          | Shelved |
 |-------------------+------------------+---------|
+| bootstrap         | mini-modeline    |         |
+| bootstrap         | orgstrap         |         |
 | highlight         | highlight        |         |
 | highlight         | lambdapi-mode    |         |
+| init              | orgstrap         |         |
+| init              | relative-buffers | t       |
 | org-insert-dblock | orgtbl-aggregate |         |
 | org-insert-dblock | orgtbl-join      |         |
-| undercover        | d-mode           |         |
-| undercover        | undercover       |         |
 
+- bootstrap, init:
+  https://github.com/kiennq/emacs-mini-modeline/issues/41
+  https://github.com/tgbugs/orgstrap/issues/1
 - highlight: https://github.com/Deducteam/lambdapi/issues/435
 - org-insert-dblock: https://github.com/tbanel/orgtbljoin/issues/1
-- undercover: https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode/issues/99
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
 
