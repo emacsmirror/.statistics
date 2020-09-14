@@ -49,8 +49,9 @@
     (epkgs [name url] 'epkg-subtree-package-p)))
 #+END_SRC
 #+RESULTS: subtree
-| Package (24)    | Library                                                             |
+| Package (25)    | Library                                                             |
 |-----------------+---------------------------------------------------------------------|
+| agda2-mode      | git@github.com:agda/agda.git                                        |
 | company-go      | git@github.com:nsf/gocode.git                                       |
 | cubicle-mode    | git@github.com:cubicle-model-checker/cubicle.git                    |
 | dune            | git@github.com:ocaml/dune.git                                       |
@@ -101,10 +102,8 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (4)       | Package          | Shelved |
+| Feature (3)       | Package          | Shelved |
 |-------------------+------------------+---------|
-| bootstrap         | mini-modeline    |         |
-| bootstrap         | orgstrap         |         |
 | highlight         | highlight        |         |
 | highlight         | lambdapi-mode    |         |
 | init              | orgstrap         |         |
@@ -112,9 +111,7 @@
 | org-insert-dblock | orgtbl-aggregate |         |
 | org-insert-dblock | orgtbl-join      |         |
 
-- bootstrap, init:
-  https://github.com/kiennq/emacs-mini-modeline/issues/41
-  https://github.com/tgbugs/orgstrap/issues/1
+- init: https://github.com/tgbugs/orgstrap/issues/1
 - highlight: https://github.com/Deducteam/lambdapi/issues/435
 - org-insert-dblock: https://github.com/tbanel/orgtbljoin/issues/1
 Reoccuring issues:

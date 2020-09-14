@@ -80,10 +80,10 @@
 | elpa        |  124 |    124 |       |       |   174 |       |
 | elpa-branch |   20 |     20 |       |       |    70 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4692 |   4692 |       |       |       |  4473 |
-| gitlab      |  132 |    132 |       |       |       |   132 |
+| github      | 4691 |   4691 |       |       |       |  4475 |
+| gitlab      |  131 |    131 |       |       |       |   131 |
 | git         |  104 |    104 |       |       |       |    91 |
-| subtree     |   24 |     24 |       |       |       |       |
+| subtree     |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  608 |    608 |       |       |       |       |
 | minority    |   25 |     25 |       |       |       |       |
@@ -92,9 +92,9 @@
 | file        |   55 |     55 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  115 |    115 |       |       |       |       |
-| shelved     | 1353 |        |  1353 |       |       |       |
+| shelved     | 1355 |        |  1355 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7730 |   5926 |  1353 |   467 |   259 |  4708 |
+| total       | 7731 |   5925 |  1355 |   467 |   259 |  4709 |
 
 * Emacs
 ** Prefer elpa
@@ -386,7 +386,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (105)   | Secondary package                 | Class  |
+| Primary package (106)   | Secondary package                 | Class  |
 |-------------------------+-----------------------------------+--------|
 | ac-php                  | ac-php-core                       | github |
 | ac-php                  | company-php                       | github |
@@ -447,6 +447,7 @@
 | ewal                    | ewal-spacemacs-themes             | gitlab |
 | flutter                 | flutter-l10n-flycheck             | github |
 | flx                     | flx-ido                           | github |
+| flycheck-aspell         | flymake-aspell                    | github |
 | flyspell-correct        | flyspell-correct-avy-menu         | github |
 | flyspell-correct        | flyspell-correct-helm             | github |
 | flyspell-correct        | flyspell-correct-ivy              | github |
