@@ -354,7 +354,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (42)        | Class    | Branch       |
+| Package (43)        | Class    | Branch       |
 |---------------------+----------+--------------|
 | ansible-vault       | github   | master       |
 | apel                | github   | apel-wl      |
@@ -369,6 +369,7 @@
 | eev                 | github   | UTF-8        |
 | engine-mode         | github   | main         |
 | flim                | github   | flim-1_14-wl |
+| git-grep            | github   | main         |
 | google-c-style      | minority | gh-pages     |
 | homebrew-mode       | github   | trunk        |
 | lakota-input        | git      | main         |
