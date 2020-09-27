@@ -77,11 +77,11 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     15 |       |   467 |    15 |       |
-| elpa        |  125 |    125 |       |       |   174 |       |
-| elpa-branch |   20 |     20 |       |       |    70 |       |
+| elpa        |  125 |    125 |       |       |   175 |       |
+| elpa-branch |   20 |     20 |       |       |    71 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4699 |   4699 |       |       |       |  4483 |
-| gitlab      |  132 |    132 |       |       |       |   132 |
+| github      | 4712 |   4712 |       |       |       |  4499 |
+| gitlab      |  128 |    128 |       |       |       |   125 |
 | git         |  104 |    104 |       |       |       |    91 |
 | subtree     |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
@@ -94,7 +94,7 @@
 | orphaned    |  115 |    115 |       |       |       |       |
 | shelved     | 1356 |        |  1356 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7741 |   5934 |  1356 |   467 |   259 |  4718 |
+| total       | 7750 |   5943 |  1356 |   467 |   261 |  4727 |
 
 * Emacs
 ** Prefer elpa
@@ -175,10 +175,11 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (2) | Gelpa    | Reason                            |
-|-------------+----------+-----------------------------------|
-| ada-ref-man | subtree  | no license, no elisp, no response |
-| gnu-elpa    | external | provides wrong feature            |
+| Package (3)    | Gelpa    | Reason                            |
+|----------------+----------+-----------------------------------|
+| ada-ref-man    | subtree  | no license, no elisp, no response |
+| gnu-elpa       | external | provides wrong feature            |
+| shell-command+ | external | relationship to bang is unclear   |
 
 ** Unreleased
 #+NAME: gelpa-unreleased
@@ -191,12 +192,11 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (4)      | Gelpa   |
+| Package (3)      | Gelpa   |
 |------------------+---------|
 | package-fixes    | subtree |
 | shell-quasiquote | subtree |
 | systemd          | subtree |
-| org-translate    | subtree |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
@@ -445,9 +445,9 @@
 | emacsql                 | emacsql-sqlite                    | github  |
 | esqlite                 | esqlite-helm                      | github  |
 | evil                    | evil-test-helpers                 | github  |
-| ewal                    | ewal-doom-themes                  | gitlab  |
-| ewal                    | ewal-evil-cursors                 | gitlab  |
-| ewal                    | ewal-spacemacs-themes             | gitlab  |
+| ewal                    | ewal-doom-themes                  | github  |
+| ewal                    | ewal-evil-cursors                 | github  |
+| ewal                    | ewal-spacemacs-themes             | github  |
 | flutter                 | flutter-l10n-flycheck             | github  |
 | flx                     | flx-ido                           | github  |
 | flycheck-aspell         | flymake-aspell                    | github  |
