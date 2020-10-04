@@ -77,10 +77,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     15 |       |   467 |    15 |       |
-| elpa        |  125 |    125 |       |       |   175 |       |
-| elpa-branch |   20 |     20 |       |       |    71 |       |
+| elpa        |  125 |    125 |       |       |   174 |       |
+| elpa-branch |   20 |     20 |       |       |    73 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4712 |   4712 |       |       |       |  4499 |
+| github      | 4717 |   4717 |       |       |       |  4504 |
 | gitlab      |  128 |    128 |       |       |       |   125 |
 | git         |  104 |    104 |       |       |       |    91 |
 | subtree     |   25 |     25 |       |       |       |       |
@@ -94,7 +94,7 @@
 | orphaned    |  115 |    115 |       |       |       |       |
 | shelved     | 1356 |        |  1356 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7750 |   5943 |  1356 |   467 |   261 |  4727 |
+| total       | 7755 |   5948 |  1356 |   467 |   262 |  4732 |
 
 * Emacs
 ** Prefer elpa
@@ -238,7 +238,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (99)               | Class  | Gelpa    | Link                                         |
+| Package (100)              | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -286,6 +286,7 @@
 | ioccur                     | github | subtree  | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                      |
 | ivy                        | github | subtree  | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                               |
 | ivy-explorer               | github | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                         |
+| ivy-posframe               | github | external | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                         |
 | js2-mode                   | github | subtree  | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                |
 | json-mode                  | github | subtree  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                            |
 | leaf                       | github | external | [[https://github.com/conao3/leaf.el][conao3/leaf.el]]                               |
@@ -329,7 +330,7 @@
 | undo-tree                  | git    | subtree  | [[http://www.dr-qubit.org/emacs.php]]            |
 | vdiff                      | github | subtree  | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                          |
 | vlf                        | github | subtree  | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                |
-| wcheck-mode                | github | subtree  | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
+| wcheck-mode                | github | external | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                         |
 | web-server                 | github | subtree  | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                    |
 | webfeeder                  | gitlab | external | [[https://gitlab.com/ambrevar/emacs-webfeeder][ambrevar/emacs-webfeeder]]                     |
 | websocket                  | github | subtree  | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                       |
