@@ -56,18 +56,17 @@ that are available from there).
   (emir--list-orphans "upstream disappeared")
 #+END_SRC
 #+RESULTS: disappeared
-| Package (10) | E | M |
-|--------------+---+---|
-| dedicated    | ✔ | ✔ |
-| ecasound     | ✔ |   |
-| keydef       | ✔ | ✔ |
-| miniedit     | ✔ | ✔ |
-| osd          | ✔ |   |
-| pager        | ✔ | ✔ |
-| pointback    | ✔ | ✔ |
-| smarty-mode  | ✔ | ✔ |
-| tail         | ✔ |   |
-| vala-mode    | ✔ | ✔ |
+| Package (9) | E | M |
+|-------------+---+---|
+| dedicated   | ✔ | ✔ |
+| ecasound    | ✔ |   |
+| keydef      | ✔ | ✔ |
+| miniedit    | ✔ | ✔ |
+| osd         | ✔ |   |
+| pager       | ✔ | ✔ |
+| pointback   | ✔ | ✔ |
+| smarty-mode | ✔ | ✔ |
+| tail        | ✔ |   |
 
 * Upstream is unresponsive but there are issues
 
