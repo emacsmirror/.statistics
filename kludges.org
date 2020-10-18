@@ -17,30 +17,30 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (14) | Class    | Feature         | Reason                                    |
-|--------------+----------+-----------------+-------------------------------------------|
-| ddskk        | github   | skk-kanagaki    | inside directory containing .nosearch     |
-| ddskk        | github   | skk-tutcode     | inside directory containing .nosearch     |
-| edb          | orphaned | edbcore         | generated                                 |
-| emacs        | builtin  | cus-load        | generated                                 |
-| emacs        | builtin  | leim-list       | generated                                 |
-| emacspeak    | github   | dtk-css-speech  | inside directory containing .nosearch     |
-| eshell       | builtin  | esh-groups      | generated                                 |
-| finder       | builtin  | finder-inf      | generated                                 |
-| fuz          | github   | fuz-core        | provided by module                        |
-| geo          | git      | geocode-emacs   | provided by module                        |
-| liberime     | github   | liberime-core   | provided by module                        |
-| realgud      | github   | bashdb          | inside directory containing .nosearch     |
-| sly          | github   | sly-buttons     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-cl-indent   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-common      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-completion  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-messages    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-parse       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-tests       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sqlite3      | github   | sqlite3-api     | provided by module                        |
-| tree-sitter  | github   | tree-sitter-dyn | provided by module                        |
-| vterm        | github   | vterm-module    | provided by module                        |
+| Package (14) | Class    | Feature        | Reason                                    |
+|--------------+----------+----------------+-------------------------------------------|
+| ddskk        | github   | skk-kanagaki   | inside directory containing .nosearch     |
+| ddskk        | github   | skk-tutcode    | inside directory containing .nosearch     |
+| edb          | orphaned | edbcore        | generated                                 |
+| emacs        | builtin  | cus-load       | generated                                 |
+| emacs        | builtin  | leim-list      | generated                                 |
+| emacspeak    | github   | dtk-css-speech | inside directory containing .nosearch     |
+| eshell       | builtin  | esh-groups     | generated                                 |
+| finder       | builtin  | finder-inf     | generated                                 |
+| fuz          | github   | fuz-core       | provided by module                        |
+| geo          | git      | geocode-emacs  | provided by module                        |
+| liberime     | github   | liberime-core  | provided by module                        |
+| realgud      | github   | bashdb         | inside directory containing .nosearch     |
+| sly          | github   | sly-buttons    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-cl-indent  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-common     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-completion | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-messages   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-parse      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github   | sly-tests      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sqlite3      | github   | sqlite3-api    | provided by module                        |
+| tree-sitter  | github   | tsc-dyn        | provided by module                        |
+| vterm        | github   | vterm-module   | provided by module                        |
 
 * Drop provided features
 #+NAME: provided-drop
@@ -52,9 +52,8 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (5)     | Class  | Feature   | Reason                 |
+| Package (4)     | Class  | Feature   | Reason                 |
 |-----------------+--------+-----------+------------------------|
-| bbdb-vcard      | github | vcard     | fixme                  |
 | emacspeak       | github | amixer    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | analog    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | nm        | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
@@ -351,7 +350,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (45)        | Class    | Branch       |
+| Package (47)        | Class    | Branch       |
 |---------------------+----------+--------------|
 | 2bit                | github   | main         |
 | ansible-vault       | github   | master       |
@@ -366,6 +365,7 @@
 | drupal-mode         | github   | develop      |
 | eev                 | github   | UTF-8        |
 | engine-mode         | github   | main         |
+| etherpad            | github   | endless      |
 | flim                | github   | flim-1_14-wl |
 | git-grep            | github   | main         |
 | gkroam              | github   | develop      |
@@ -378,6 +378,7 @@
 | nodejs-repl         | github   | develop      |
 | nord-theme          | github   | develop      |
 | ob-applescript      | github   | trunk        |
+| ob-deno             | github   | main         |
 | org-themis          | github   | develop      |
 | org-time-budgets    | github   | develop      |
 | orgbox              | github   | develop      |
