@@ -75,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (84)                    | Class       | Feature                  | Reason                                              |
+| Package (82)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -111,7 +111,6 @@
 | folding                         | github      | mode-motion              | XEmacs compatibility                                |
 | fstar-mode                      | github      | replace                  | replace.el doesn't provide feature in Emacs < 26    |
 | gnuplot                         | orphaned    | toolbar                  | XEmacs compatibility                                |
-| helm                            | github      | tramp-archive            | forward compatibility (Emacs 27.1)                  |
 | help+                           | wiki        | info+20                  | backward compatibility                              |
 | hyperbole                       | git         | efs                      | XEmacs compatibility                                |
 | hyperbole                       | git         | id-menubars              | unreleased, author says will be released eventually |
@@ -151,6 +150,7 @@
 | nxhtml                          | orphaned    | typesetter               | not touched in ten years                            |
 | nxhtml                          | orphaned    | w32-regdat               | Windows compatibility                               |
 | nxhtml                          | orphaned    | w32shell                 | Windows compatibility                               |
+| org                             | git         | nnselect                 | forward compatibility (Emacs 28)                    |
 | org                             | git         | org-remember             | backward compatibility                              |
 | org-caldav                      | github      | org-icalendar            | backward compatibility                              |
 | org-readme                      | github      | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
@@ -192,7 +192,6 @@
 | w3                              | elpa-branch | x-font-menu              | XEmacs compatibility                                |
 | w3                              | elpa-branch | xbm-button               | XEmacs compatibility                                |
 | w3                              | elpa-branch | xpm-button               | XEmacs compatibility                                |
-| w3m                             | github      | tab-line                 | forward compatibility                               |
 | wanderlust                      | github      | spamfilter               | shelved soft                                        |
 | yatex                           | hg          | hilit19                  | backward compatibility                              |
 

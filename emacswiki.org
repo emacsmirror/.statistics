@@ -26,7 +26,7 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (27)   | Author                        | Depender                      | Type | Author                                            |
+| Dependee (26)   | Author                        | Depender                      | Type | Author                                            |
 |-----------------+-------------------------------+-------------------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key                       | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm                            | hard |                                                   |
@@ -37,9 +37,7 @@
 | filesets+       | Drew Adams                    | helm-filesets                 | soft | Graham Clark                                      |
 | font-lock+      | Drew Adams                    | icons-in-terminal             | hard |                                                   |
 | font-lock+      | Drew Adams                    | jemdoc-mode                   | soft | Dimitar Dimitrov                                  |
-| font-lock+      | Drew Adams                    | lambdapi-mode                 | soft | Rodolphe Lepigre, Gabriel Hondet                  |
 | frame-cmds      | Drew Adams                    | frame-ctr                     | hard | Takaaki ISHIKAWA                                  |
-| frame-fns       | Drew Adams                    | lambdapi-mode                 | soft | Rodolphe Lepigre, Gabriel Hondet                  |
 | hexrgb          | Drew Adams                    | jabber                        | hard |                                                   |
 | hexrgb          | Drew Adams                    | on-screen                     | soft | Michael Heerdegen                                 |
 | hexrgb          | Drew Adams                    | one-key                       | hard | Andy Stewart                                      |
@@ -48,6 +46,7 @@
 | highlight       | Drew Adams                    | evil-extra-operator           | hard | Dewdrops                                          |
 | highlight       | Drew Adams                    | evil-search-highlight-persist | hard | Juanjo Alvarez                                    |
 | highlight       | Drew Adams                    | floobits                      | hard | Geoff Greer                                       |
+| highlight       | Drew Adams                    | lambdapi-mode                 | hard | Rodolphe Lepigre, Gabriel Hondet                  |
 | highlight       | Drew Adams                    | nrepl-eval-sexp-fu            | hard | Takeshi Banse                                     |
 | highlight       | Drew Adams                    | php-boris-minor-mode          | hard | steckerhalter                                     |
 | highlight       | Drew Adams                    | sonic-pi                      | hard | Joseph Wilk                                       |
@@ -57,7 +56,8 @@
 | icicles         | Drew Adams                    | rcodetools                    | hard |                                                   |
 | imdb            |                               | movie                         | hard | Lars Magne Ingebrigtsen                           |
 | isearch-prop    | Drew Adams                    | zones                         | soft | Drew Adams                                        |
-| menu-bar+       | Drew Adams                    | lambdapi-mode                 | soft | Rodolphe Lepigre, Gabriel Hondet                  |
+| later-do        |                               | emms-player-mpv-jp-radios     | hard |                                                   |
+| later-do        |                               | emms-player-simple-mpv        | hard |                                                   |
 | oddmuse         |                               | company                       | soft | Nikolaj Schumacher                                |
 | org-json        | Changyuan Yu                  | es-mode                       | hard | Lee Hinman                                        |
 | policy-switch   | Christoffer S. Hansen         | one-key                       | soft | Andy Stewart                                      |
@@ -183,6 +183,7 @@
 |                                                 | jpl-reformat                   |
 |                                                 | keep-end                       |
 |                                                 | keyboard-macro-timer           |
+|                                                 | later-do                       |
 |                                                 | line-comment-banner            |
 |                                                 | line-num                       |
 |                                                 | linkify                        |
@@ -569,7 +570,6 @@
 | Patrick Anderson                                | w32-shell-execute              |
 | Patrick Anderson                                | w32-shell-verb                 |
 | Peter Breton                                    | lnk                            |
-| Phil Hagelberg                                  | pcmpl-ssh                      |
 | Phil Hagelberg                                  | steersman                      |
 | Pierre Gaston                                   | no-word                        |
 | Poppyer Huang                                   | pinbar                         |
