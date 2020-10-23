@@ -69,7 +69,7 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3883 |      65 |
+| GPL-3+        |  3886 |      65 |
 | GPL-2+        |  1173 |      20 |
 | MIT           |   188 |       3 |
 | GPL-3         |   175 |       3 |
@@ -81,7 +81,7 @@
 | unlicense     |    38 |       1 |
 | WTFPL         |    30 |       1 |
 | as-is         |    25 |       0 |
-| ISC           |    10 |       0 |
+| ISC           |    12 |       0 |
 | WTFPL-2       |     8 |       0 |
 | LGPL-3+       |     7 |       0 |
 | AGPL-3+       |     5 |       0 |
@@ -97,7 +97,6 @@
 | CeCILL-B      |     2 |       0 |
 | ISC (and/or)  |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
-| nil           |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC-0          |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
@@ -109,9 +108,9 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5260 |      88 |
+| total GNU     |  5263 |      88 |
 |---------------+-------+---------|
-| total         |  5964 |     100 |
+| total         |  5968 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -123,11 +122,6 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (1) | Class | License |
-|-------------+-------+---------|
-| zmusic      | hg    |         |
-
-- https://todo.sr.ht/~zck/zmusic/1
 
 * Emacsattic
 ** Overview

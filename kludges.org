@@ -75,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (82)                    | Class       | Feature                  | Reason                                              |
+| Package (83)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -173,6 +173,7 @@
 | simple-call-tree                | github      | fm                       | shelved soft                                        |
 | snapshot-timemachine-rsnapshot  | github      | seq-25                   | backward compatibility                              |
 | stickies                        | github      | anything                 | anything                                            |
+| straight                        | github      | comp                     | forward compatibility (Emacs 28)                    |
 | string-utils                    | github      | obarray-fns              | shelved soft                                        |
 | tangotango-theme                | github      | color-theme              | backward compatibility                              |
 | tramp                           | git         | tramp-loaddefs           | generated internal file                             |
@@ -349,7 +350,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (47)        | Class    | Branch       |
+| Package (48)        | Class    | Branch       |
 |---------------------+----------+--------------|
 | 2bit                | github   | main         |
 | ansible-vault       | github   | master       |
@@ -374,6 +375,7 @@
 | litanize            | github   | endless      |
 | neato-graph-bar     | gitlab   | release      |
 | neotree             | github   | dev          |
+| nntwitter           | github   | main         |
 | nodejs-repl         | github   | develop      |
 | nord-theme          | github   | develop      |
 | ob-applescript      | github   | trunk        |

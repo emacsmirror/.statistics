@@ -102,11 +102,14 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (1)       | Package          | Shelved |
+| Feature (2)       | Package          | Shelved |
 |-------------------+------------------+---------|
+| helm-fd           | helm             |         |
+| helm-fd           | helm-fd          |         |
 | org-insert-dblock | orgtbl-aggregate |         |
 | org-insert-dblock | orgtbl-join      |         |
 
+- helm-fd: https://github.com/lerouxrgd/helm-fd/issues/1
 - org-insert-dblock: https://github.com/tbanel/orgtbljoin/issues/1
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
