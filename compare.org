@@ -80,7 +80,7 @@
 | elpa        |  126 |    126 |       |       |   175 |       |
 | elpa-branch |   20 |     20 |       |       |    73 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4735 |   4735 |       |       |       |  4520 |
+| github      | 4738 |   4738 |       |       |       |  4526 |
 | gitlab      |  130 |    130 |       |       |       |   127 |
 | git         |  104 |    104 |       |       |       |    91 |
 | subtree     |   25 |     25 |       |       |       |       |
@@ -94,7 +94,7 @@
 | orphaned    |  114 |    114 |       |       |       |       |
 | shelved     | 1356 |        |  1356 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7775 |   5968 |  1356 |   467 |   263 |  4750 |
+| total       | 7778 |   5971 |  1356 |   467 |   263 |  4756 |
 
 * Emacs
 ** Prefer elpa
@@ -388,7 +388,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (107)   | Secondary package                 | Class   |
+| Primary package (108)   | Secondary package                 | Class   |
 |-------------------------+-----------------------------------+---------|
 | ac-php                  | ac-php-core                       | github  |
 | ac-php                  | company-php                       | github  |
@@ -552,6 +552,8 @@
 | stan-mode               | stan-snippets                     | github  |
 | term-manager            | term-projectile                   | github  |
 | tern                    | tern-auto-complete                | github  |
+| tree-sitter             | tree-sitter-langs                 | github  |
+| tree-sitter             | tsc                               | github  |
 | treemacs                | treemacs-all-the-icons            | github  |
 | treemacs                | treemacs-evil                     | github  |
 | treemacs                | treemacs-icons-dired              | github  |
