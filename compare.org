@@ -78,11 +78,11 @@
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     15 |       |   467 |    15 |       |
 | elpa        |  126 |    126 |       |       |   175 |       |
-| elpa-branch |   20 |     20 |       |       |    73 |       |
+| elpa-branch |   20 |     20 |       |       |    74 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4738 |   4738 |       |       |       |  4526 |
+| github      | 4740 |   4740 |       |       |       |  4529 |
 | gitlab      |  132 |    132 |       |       |       |   129 |
-| git         |  102 |    102 |       |       |       |    89 |
+| git         |  103 |    103 |       |       |       |    89 |
 | subtree     |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  606 |    606 |       |       |       |       |
@@ -94,7 +94,7 @@
 | orphaned    |  114 |    114 |       |       |       |       |
 | shelved     | 1356 |        |  1356 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7778 |   5971 |  1356 |   467 |   263 |  4756 |
+| total       | 7781 |   5974 |  1356 |   467 |   264 |  4759 |
 
 * Emacs
 ** Prefer elpa
@@ -238,7 +238,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (100)              | Class  | Gelpa    | Link                                         |
+| Package (101)              | Class  | Gelpa    | Link                                         |
 |----------------------------+--------+----------+----------------------------------------------|
 | ace-window                 | github | subtree  | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                           |
 | ack                        | github | subtree  | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                |
@@ -312,6 +312,7 @@
 | realgud-node-debug         | github | external | [[https://github.com/realgud/realgud-node-debug][realgud/realgud-node-debug]]                   |
 | realgud-node-inspect       | github | external | [[https://github.com/realgud/realgud-node-inspect][realgud/realgud-node-inspect]]                 |
 | realgud-trepan-ni          | github | external | [[https://github.com/realgud/realgud-trepan-ni][realgud/realgud-trepan-ni]]                    |
+| rec-mode                   | git    | external |                                              |
 | relint                     | github | external | [[https://github.com/mattiase/relint][mattiase/relint]]                              |
 | rich-minority              | github | subtree  | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                      |
 | rt-liberation              | git    | external | [[http://www.nongnu.org/rtliber]]                |
@@ -559,6 +560,7 @@
 | treemacs                | treemacs-icons-dired              | github  |
 | treemacs                | treemacs-magit                    | github  |
 | treemacs                | treemacs-persp                    | github  |
+| treemacs                | treemacs-perspective              | github  |
 | treemacs                | treemacs-projectile               | github  |
 | use-package             | bind-chord                        | github  |
 | use-package             | bind-key                          | github  |
