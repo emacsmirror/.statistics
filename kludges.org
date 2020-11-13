@@ -350,7 +350,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (49)        | Class    | Branch       |
+| Package (48)        | Class    | Branch       |
 |---------------------+----------+--------------|
 | 2bit                | github   | main         |
 | ansible-vault       | github   | master       |
@@ -388,7 +388,6 @@
 | plantuml-mode       | github   | develop      |
 | plaster             | github   | rewrite      |
 | poet-client         | github   | development  |
-| projectile-direnv   | github   | develop      |
 | propfont-mixed      | github   | github       |
 | quiet               | github   | endless      |
 | rcirc-styles        | github   | develop      |
