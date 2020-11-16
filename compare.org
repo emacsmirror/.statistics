@@ -80,7 +80,7 @@
 | elpa        |  127 |    127 |       |       |   175 |       |
 | elpa-branch |   20 |     20 |       |       |    74 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4709 |   4709 |       |       |       |  4522 |
+| github      | 4711 |   4711 |       |       |       |  4525 |
 | gitlab      |  138 |    138 |       |       |       |   135 |
 | git         |  103 |    103 |       |       |       |    89 |
 | subtree     |   25 |     25 |       |       |       |       |
@@ -92,9 +92,9 @@
 | file        |   55 |     55 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | orphaned    |  114 |    114 |       |       |       |       |
-| shelved     | 1380 |        |  1380 |       |       |       |
+| shelved     | 1382 |        |  1382 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7781 |   5950 |  1380 |   467 |   264 |  4758 |
+| total       | 7785 |   5952 |  1382 |   467 |   264 |  4761 |
 
 * Emacs
 ** Prefer elpa
@@ -646,10 +646,12 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (50)                 | Class       | Melpa  | Reason              |
+| Package (51)                 | Class       | Melpa  | Reason              |
 |------------------------------+-------------+--------+---------------------|
 | modus-operandi-theme         | elpa-branch | gitlab | dedicated branches  |
 | modus-vivendi-theme          | elpa-branch | gitlab | dedicated branches  |
+| image+                       | shelved     | github |                     |
+| intero                       | shelved     | github |                     |
 | cg                           | file        | MIRROR | non-git/hg          |
 | darcsum                      | file        | MIRROR | non-git/hg          |
 | dsvn                         | file        | MIRROR | non-git/hg          |
@@ -691,7 +693,6 @@
 | isolate                      | shelved     | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | iy-go-to-char                | shelved     | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | love-minor-mode              | shelved     | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| lsp-scala                    | shelved     | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | o-blog                       | shelved     | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | php-auto-yasnippets          | shelved     | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | phpcbf                       | shelved     | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
