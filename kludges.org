@@ -279,7 +279,7 @@
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (20)          | Class    | Library                         | Reason                     |
+| Package (19)          | Class    | Library                         | Reason                     |
 |-----------------------+----------+---------------------------------+----------------------------|
 | auctex                | git      | tex.el                          | pkg/lib name mismatch      |
 | chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
@@ -300,7 +300,6 @@
 | punpun-theme          | git      | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | spacemacs-theme       | github   | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | ultratex              | github   | lisp/ultex.el                   | no/mismatched main library |
-| uni-confusables       | elpa     | gen-confusables.el              | generated                  |
 
 * Set libraries
 #+NAME: slot--libraries

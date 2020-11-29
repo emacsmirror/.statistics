@@ -69,7 +69,7 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3882 |      65 |
+| GPL-3+        |  3881 |      65 |
 | GPL-2+        |  1171 |      20 |
 | MIT           |   188 |       3 |
 | GPL-3         |   173 |       3 |
@@ -90,6 +90,7 @@
 | ISC (and)     |     3 |       0 |
 | MS-PL         |     3 |       0 |
 | Zlib          |     3 |       0 |
+| nil           |     2 |       0 |
 | AGPL-3.0      |     2 |       0 |
 | Artistic-2.0  |     2 |       0 |
 | COPYLOVE      |     2 |       0 |
@@ -98,7 +99,6 @@
 | ISC (and/or)  |     2 |       0 |
 | LGPL-2.1      |     2 |       0 |
 | LGPL-3        |     2 |       0 |
-| nil           |     1 |       0 |
 | BEER-WARE     |     1 |       0 |
 | CC-0          |     1 |       0 |
 | CC0-1.0       |     1 |       0 |
@@ -109,7 +109,7 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5254 |      88 |
+| total GNU     |  5253 |      88 |
 |---------------+-------+---------|
 | total         |  5959 |     100 |
 
@@ -123,9 +123,10 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (1) | Class  | License |
-|-------------+--------+---------|
-| logpad      | github |         |
+| Package (2)     | Class       | License |
+|-----------------+-------------+---------|
+| logpad          | github      |         |
+| uni-confusables | elpa-branch |         |
 
 * Emacsattic
 ** Overview
