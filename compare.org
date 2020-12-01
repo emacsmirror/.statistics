@@ -80,7 +80,7 @@
 | elpa        |   57 |     57 |       |       |    60 |       |
 | elpa-branch |   75 |     75 |       |       |   191 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4728 |   4728 |       |       |       |  4530 |
+| github      | 4731 |   4731 |       |       |       |  4534 |
 | gitlab      |  139 |    139 |       |       |       |   136 |
 | git         |  106 |    106 |       |       |       |    89 |
 | subtree     |   25 |     25 |       |       |       |       |
@@ -94,7 +94,7 @@
 | orphaned    |  114 |    114 |       |       |       |       |
 | shelved     | 1382 |        |  1382 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7792 |   5959 |  1382 |   467 |   266 |  4767 |
+| total       | 7795 |   5962 |  1382 |   467 |   266 |  4771 |
 
 * Emacs
 ** Prefer elpa
@@ -420,7 +420,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (109)   | Secondary package                 | Class   |
+| Primary package (110)   | Secondary package                 | Class   |
 |-------------------------+-----------------------------------+---------|
 | ac-php                  | ac-php-core                       | github  |
 | ac-php                  | company-php                       | github  |
@@ -542,6 +542,7 @@
 | org-pdftools            | org-noter-pdftools                | github  |
 | org-projectile          | org-category-capture              | github  |
 | org-projectile          | org-projectile-helm               | github  |
+| org-ql                  | helm-org-ql                       | github  |
 | org-recent-headings     | helm-org-recent-headings          | github  |
 | org-starter             | org-starter-swiper                | github  |
 | org2blog                | metaweblog                        | github  |

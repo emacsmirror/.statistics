@@ -75,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (84)                    | Class       | Feature                  | Reason                                              |
+| Package (83)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -143,8 +143,6 @@
 | molokai-theme                   | github      | color-theme              | backward compatibility                              |
 | navi2ch                         | github      | bitmap                   | XEmacs compatibility                                |
 | navi2ch                         | github      | spamfilter               | shelved soft                                        |
-| notes-mode                      | elpa        | npgp                     | backward compatibility                              |
-| notes-mode                      | elpa        | pam                      | backward compatibility                              |
 | nxhtml                          | orphaned    | anything                 | anything                                            |
 | nxhtml                          | orphaned    | emacsw32                 | examples only                                       |
 | nxhtml                          | orphaned    | flymake-js               | not a proper package                                |
@@ -351,7 +349,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (50)        | Class    | Branch       |
+| Package (52)        | Class    | Branch       |
 |---------------------+----------+--------------|
 | 2bit                | github   | main         |
 | ansible-vault       | github   | master       |
@@ -376,6 +374,7 @@
 | lakota-input        | git      | main         |
 | leo                 | github   | main         |
 | litanize            | github   | endless      |
+| monkeytype          | github   | main         |
 | neato-graph-bar     | gitlab   | release      |
 | neotree             | github   | dev          |
 | nntwitter           | github   | main         |
@@ -398,6 +397,7 @@
 | smart-tab           | git      | main         |
 | smog                | github   | endless      |
 | sql-impala          | github   | main         |
+| svg-tag-mode        | github   | main         |
 | tidal               | github   | main         |
 | vc-fossil           | github   | trunk        |
 | websocket           | github   | main         |
