@@ -77,10 +77,10 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     15 |       |   467 |    15 |       |
-| elpa        |   57 |     57 |       |       |    60 |       |
-| elpa-branch |   75 |     75 |       |       |   191 |       |
+| elpa        |    6 |      6 |       |       |     6 |       |
+| elpa-branch |  123 |    123 |       |       |   243 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4731 |   4731 |       |       |       |  4534 |
+| github      | 4733 |   4733 |       |       |       |  4534 |
 | gitlab      |  139 |    139 |       |       |       |   136 |
 | git         |  106 |    106 |       |       |       |    89 |
 | subtree     |   25 |     25 |       |       |       |       |
@@ -94,7 +94,7 @@
 | orphaned    |  114 |    114 |       |       |       |       |
 | shelved     | 1382 |        |  1382 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7795 |   5962 |  1382 |   467 |   266 |  4771 |
+| total       | 7794 |   5961 |  1382 |   467 |   264 |  4771 |
 
 * Emacs
 ** Prefer elpa
@@ -159,6 +159,24 @@
 #+END_SRC
 #+RESULTS: gelpa-ex-subtree
 
+** Remaining subtree
+#+NAME: gelpa-subtree
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package")
+    (epkg-sql [:select [name]
+               :from gelpa-recipes
+               :where (= class 'subtree)]))
+#+END_SRC
+#+RESULTS: gelpa-subtree
+| Package (6)   |
+|---------------|
+| auto-overlays |
+| dict-tree     |
+| heap          |
+| queue         |
+| tNFA          |
+| trie          |
+
 ** New
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
@@ -207,11 +225,14 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (3)      | Gelpa   |
-|------------------+---------|
-| package-fixes    | subtree |
-| shell-quasiquote | subtree |
-| systemd          | subtree |
+| Package (6)      | Gelpa    |
+|------------------+----------|
+| sql-smie         | external |
+| transient        | external |
+| prefixed-core    | external |
+| package-fixes    | external |
+| shell-quasiquote | external |
+| systemd          | external |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
@@ -228,12 +249,12 @@
                        :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-builtin
-| Package (4) | Gelpa   | Reason              |
-|-------------+---------+---------------------|
-| cl-generic  | subtree | backport of builtin |
-| cl-lib      | subtree | backport of builtin |
-| nadvice     | subtree | backport of builtin |
-| seq         | subtree | backport of builtin |
+| Package (4) | Gelpa    | Reason              |
+|-------------+----------+---------------------|
+| cl-generic  | external | backport of builtin |
+| cl-lib      | external | backport of builtin |
+| nadvice     | external | backport of builtin |
+| seq         | external | backport of builtin |
 
 ** Prefer upstream
 #+NAME: gelpa-prefer-upstream
@@ -253,7 +274,7 @@
                        [builtin elpa elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (117)              | Class  | Gelpa    | Link                                                 |
+| Package (119)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -288,7 +309,7 @@
 | eev                        | github | external | [[https://github.com/edrx/eev][edrx/eev]]                                             |
 | eglot                      | github | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                                     |
 | eldoc-eval                 | github | external | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                          |
-| electric-spacing           | github | subtree  | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                                 |
+| electric-spacing           | github | external | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                                 |
 | emms                       | git    | external | [[http://www.gnu.org/software/emms]]                     |
 | enwc                       | hg     | external | [[https://savannah.nongnu.org/p/enwc]]                   |
 | ergoemacs-mode             | github | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                             |
@@ -308,7 +329,7 @@
 | hydra                      | github | external | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                        |
 | hyperbole                  | git    | external | [[http://www.gnu.org/software/hyperbole]]                |
 | ioccur                     | github | external | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                              |
-| ivy                        | github | subtree  | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                       |
+| ivy                        | github | external | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                       |
 | ivy-explorer               | github | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                                 |
 | ivy-posframe               | github | external | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                                 |
 | js2-mode                   | github | external | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                        |
@@ -351,13 +372,15 @@
 | sql-indent                 | github | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                                  |
 | ssh-deploy                 | github | external | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]                          |
 | system-packages            | gitlab | external | [[https://gitlab.com/jabranham/system-packages][jabranham/system-packages]]                            |
-| systemd                    | github | subtree  | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                               |
+| systemd                    | github | external | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                               |
 | temp-buffer-browse         | github | external | [[https://github.com/leoliu/temp-buffer-browse][leoliu/temp-buffer-browse]]                            |
 | test-simple                | github | external | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                              |
 | tiny                       | github | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                         |
 | tramp                      | git    | external | [[https://savannah.gnu.org/projects/tramp]]              |
 | transient                  | github | external | [[https://github.com/magit/transient][magit/transient]]                                      |
 | undo-tree                  | git    | external | [[http://www.dr-qubit.org/emacs.php]]                    |
+| validate                   | github | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                                |
+| valign                     | github | external | [[https://github.com/casouri/valign][casouri/valign]]                                       |
 | vcl-mode                   | git    | external |                                                      |
 | vdiff                      | github | external | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                                  |
 | vlf                        | github | external | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                        |
