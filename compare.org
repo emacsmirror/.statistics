@@ -77,8 +77,8 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     15 |       |   467 |    15 |       |
-| elpa        |    6 |      6 |       |       |     6 |       |
-| elpa-branch |  123 |    123 |       |       |   243 |       |
+| elpa        |    0 |      0 |       |       |     0 |       |
+| elpa-branch |  129 |    129 |       |       |   249 |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 4733 |   4733 |       |       |       |  4534 |
 | gitlab      |  139 |    139 |       |       |       |   136 |
@@ -168,14 +168,6 @@
                :where (= class 'subtree)]))
 #+END_SRC
 #+RESULTS: gelpa-subtree
-| Package (6)   |
-|---------------|
-| auto-overlays |
-| dict-tree     |
-| heap          |
-| queue         |
-| tNFA          |
-| trie          |
 
 ** New
 #+NAME: gelpa-new
