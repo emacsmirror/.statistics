@@ -136,11 +136,12 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (3) | Class  | Feature        | Provider |
-|-------------+--------+----------------+----------|
-| bts         | github | pophint-config |          |
-| emir        | github | llama          |          |
-| ess         | github | ess-stata-mode |          |
+| Package (4) | Class  | Feature               | Provider |
+|-------------+--------+-----------------------+----------|
+| bts         | github | pophint-config        |          |
+| emir        | github | llama                 |          |
+| ess         | github | ess-stata-mode        |          |
+| python-mode | gitlab | py-bug-numbered-tests |          |
 
 - bts: https://github.com/aki2o/emacs-bts/pull/17
 - emir: I haven't released llama yet.
