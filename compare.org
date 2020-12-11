@@ -19,10 +19,6 @@
          (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1]
                                          [core])))
-         (elpa         (length (epkg-sql [:select * :from gelpa-recipes
-                                          :where class :in $v1
-                                          :and (notnull released)]
-                                         [subtree])))
          (elpa-branch  (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1
                                           :and (notnull released)]
@@ -31,7 +27,6 @@
          (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
                   hline
                   (builtin     ,builtin-emir 0 "" ,builtin ,builtin-elpa "")
-                  (elpa        0  0  "" "" ,elpa "")
                   (elpa-branch 0  0  "" "" ,elpa-branch "")
                   hline
                   (github      0  0  "" "" "" 0)
@@ -51,8 +46,11 @@
     (dolist (class (epkgs 'class 'epkg-mirrored-package--eieio-childp))
       (when (eq class 'elpa-core)
         (setq class 'builtin))
-      (cl-incf (nth 1 (assq class table)))
-      (cl-incf (nth 2 (assq class table))))
+      (if-let ((elt (assq class table)))
+          (progn
+            (cl-incf (nth 1 elt))
+            (cl-incf (nth 2 elt)))
+        (error "No entry for %s" class)))
     (dolist (fetcher (epkg-sql [:select class :from melpa-recipes]))
       (cl-incf (nth 6 (assq (car fetcher) table))))
     ;; KLUDGE for org.  Avoid saying that this builtin package is
@@ -77,7 +75,6 @@
 |             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-------------+------+--------+-------+-------+-------+-------|
 | builtin     |  466 |     15 |       |   467 |    15 |       |
-| elpa        |    0 |      0 |       |       |     0 |       |
 | elpa-branch |  129 |    129 |       |       |   249 |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | github      | 4733 |   4733 |       |       |       |  4534 |
@@ -106,7 +103,7 @@
                :where (= packages:name builtin-libraries:package)
                :and packages:class :in $v1
                :order-by [(asc packages:name)]]
-              [elpa elpa-branch elpa-core]))
+              [elpa-branch elpa-core]))
 #+END_SRC
 #+RESULTS: builtin-prefer-elpa
 | Package (14) | Class     |
@@ -135,7 +132,7 @@
                :where (= packages:name builtin-libraries:package)
                :and packages:class :not :in $v1
                :order-by [(asc packages:name)]]
-              [builtin elpa elpa-branch elpa-core]))
+              [builtin elpa-branch elpa-core]))
 #+END_SRC
 #+RESULTS: builtin-prefer-upstream
 | Package (2) | Class |
@@ -144,31 +141,6 @@
 | tramp       | git   |
 
 * Gelpa
-** Ex-subtree
-#+NAME: gelpa-ex-subtree
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package")
-    (epkg-sql [:select :distinct
-               [packages:name gelpa-recipes:url]
-               ;; [packages:name packages:class gelpa-recipes:class]
-               :from [packages gelpa-recipes]
-               :where (= packages:name gelpa-recipes:name)
-               :and (= packages:class 'elpa)
-               :and (not (= gelpa-recipes:class 'subtree))
-               :order-by [(asc packages:name)]]))
-#+END_SRC
-#+RESULTS: gelpa-ex-subtree
-
-** Remaining subtree
-#+NAME: gelpa-subtree
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package")
-    (epkg-sql [:select [name]
-               :from gelpa-recipes
-               :where (= class 'subtree)]))
-#+END_SRC
-#+RESULTS: gelpa-subtree
-
 ** New
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
@@ -263,7 +235,7 @@
                         :where (= packages:name gelpa-recipes:epkg-package)
                         :and packages:class :not :in $v1
                         :order-by [(asc packages:name)]]
-                       [builtin elpa elpa-branch])))
+                       [builtin elpa-branch])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
 | Package (119)              | Class  | Gelpa    | Link                                                 |
