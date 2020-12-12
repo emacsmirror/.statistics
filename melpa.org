@@ -71,7 +71,7 @@ please first make sure they meet the minimal requirements.
   ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (532)                | Link                                    |
+| Package (535)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -98,6 +98,7 @@ please first make sure they meet the minimal requirements.
 | auto-complete-latex-light    | [[https://github.com/tequilasunset/auto-complete-latex-light][tequilasunset/auto-complete-latex-light]] |
 | auto-complete-ya-gtags       | [[https://github.com/whitypig/auto-complete-ya-gtags][whitypig/auto-complete-ya-gtags]]         |
 | auto-document                | [[https://github.com/rubikitch/auto-document][rubikitch/auto-document]]                 |
+| auto-mounter                 | [[https://github.com/renard/auto-mount-el][renard/auto-mount-el]]                    |
 | auto-pep8                    | [[https://github.com/deactivated/auto-pep8.el][deactivated/auto-pep8.el]]                |
 | autocompletion-php-functions | [[https://github.com/ashizawa/autocompletion-php-functions][ashizawa/autocompletion-php-functions]]   |
 | avmmf                        | [[https://github.com/davep/avmmf.el][davep/avmmf.el]]                          |
@@ -304,6 +305,7 @@ please first make sure they meet the minimal requirements.
 | ido-other-window             | [[https://github.com/timcharper/ido-other-window][timcharper/ido-other-window]]             |
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                         |
 | ii-mode                      | [[https://github.com/krl/ii-mode][krl/ii-mode]]                             |
+| im-notification              | [[https://github.com/bvtrach/emacs-im-notification][bvtrach/emacs-im-notification]]           |
 | includeme                    | [[https://github.com/jart/includeme][jart/includeme]]                          |
 | indent-hints-mode            | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                |
 | indicate-changes             | [[https://github.com/renard/indicate-change][renard/indicate-change]]                  |
@@ -506,6 +508,7 @@ please first make sure they meet the minimal requirements.
 | skeleton-complete            | [[https://github.com/baohaojun/skeleton-complete][baohaojun/skeleton-complete]]             |
 | skinny                       | [[https://github.com/nicferrier/skinny][nicferrier/skinny]]                       |
 | skip-sexp                    | [[https://github.com/sigma/skip-sexp.el][sigma/skip-sexp.el]]                      |
+| slate-config-mode            | [[https://github.com/ddjfreedom/slate-config-mode][ddjfreedom/slate-config-mode]]            |
 | slime-complete-locals        | [[https://github.com/joodie/slime-complete-locals][joodie/slime-complete-locals]]            |
 | slime-js                     | [[https://github.com/Gozala/slime-js][Gozala/slime-js]]                         |
 | slurm                        | [[https://github.com/ffevotte/slurm.el][ffevotte/slurm.el]]                       |
@@ -627,18 +630,15 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (12)      | Link                        |
-|-------------------+-----------------------------|
-| auto-mounter      |                             |
-| ebuild-mode       |                             |
-| ee                |                             |
-| geo               |                             |
-| gpicker           |                             |
-| im-notification   |                             |
-| lilypond          |                             |
-| mailscripts       |                             |
-| python-pep8       |                             |
-| python-pylint     |                             |
-| riece             | [[http://www.nongnu.org/riece]] |
-| slate-config-mode |                             |
+| Package (9)   | Link                        |
+|---------------+-----------------------------|
+| ebuild-mode   |                             |
+| ee            |                             |
+| geo           |                             |
+| gpicker       |                             |
+| lilypond      |                             |
+| mailscripts   |                             |
+| python-pep8   |                             |
+| python-pylint |                             |
+| riece         | [[http://www.nongnu.org/riece]] |
 
