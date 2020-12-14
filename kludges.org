@@ -75,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (83)                    | Class       | Feature                  | Reason                                              |
+| Package (82)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -112,7 +112,6 @@
 | extend-dnd                      | github      | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
 | folding                         | github      | mode-motion              | XEmacs compatibility                                |
 | fstar-mode                      | github      | replace                  | replace.el doesn't provide feature in Emacs < 26    |
-| gnuplot                         | orphaned    | toolbar                  | XEmacs compatibility                                |
 | help+                           | wiki        | info+20                  | backward compatibility                              |
 | hyperbole                       | git         | efs                      | XEmacs compatibility                                |
 | hyperbole                       | git         | id-menubars              | unreleased, author says will be released eventually |
@@ -349,7 +348,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (54)        | Class    | Branch       |
+| Package (58)        | Class    | Branch       |
 |---------------------+----------+--------------|
 | 2bit                | github   | main         |
 | ansible-vault       | github   | master       |
@@ -364,6 +363,8 @@
 | distinguished-theme | github   | develop      |
 | drupal-mode         | github   | develop      |
 | eev                 | github   | UTF-8        |
+| elegant-agenda-mode | github   | main         |
+| elfeed-dashboard    | github   | main         |
 | engine-mode         | github   | main         |
 | etherpad            | github   | endless      |
 | flim                | github   | flim-1_14-wl |
@@ -387,7 +388,9 @@
 | org-themis          | github   | develop      |
 | org-time-budgets    | github   | develop      |
 | orgbox              | github   | develop      |
+| ox-gemini           | git      | main         |
 | ox-jira             | github   | trunk        |
+| pikchr-mode         | github   | main         |
 | plantuml-mode       | github   | develop      |
 | plaster             | github   | rewrite      |
 | poet-client         | github   | development  |

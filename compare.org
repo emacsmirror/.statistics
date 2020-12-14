@@ -77,9 +77,9 @@
 | builtin     |  466 |     15 |       |   467 |    15 |       |
 | elpa-branch |  127 |    127 |       |       |   249 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4744 |   4744 |       |       |       |  4542 |
-| gitlab      |  140 |    140 |       |       |       |   135 |
-| git         |  101 |    101 |       |       |       |    87 |
+| github      | 4754 |   4754 |       |       |       |  4554 |
+| gitlab      |  142 |    142 |       |       |       |   137 |
+| git         |  102 |    102 |       |       |       |    88 |
 | subtree     |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  606 |    606 |       |       |       |       |
@@ -91,7 +91,7 @@
 | orphaned    |  114 |    114 |       |       |       |       |
 | shelved     | 1383 |        |  1383 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7800 |   5966 |  1383 |   467 |   264 |  4776 |
+| total       | 7813 |   5979 |  1383 |   467 |   264 |  4791 |
 
 * Emacs
 ** Prefer elpa
@@ -409,7 +409,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (110)   | Secondary package                 | Class   |
+| Primary package (111)   | Secondary package                 | Class   |
 |-------------------------+-----------------------------------+---------|
 | ac-php                  | ac-php-core                       | github  |
 | ac-php                  | company-php                       | github  |
@@ -436,6 +436,8 @@
 | codesearch              | projectile-codesearch             | github  |
 | colorless-themes        | lavenderless-theme                | git     |
 | colorless-themes        | nordless-theme                    | git     |
+| consult                 | consult-flycheck                  | github  |
+| consult                 | consult-selectrum                 | github  |
 | copyit                  | copyit-pandoc                     | github  |
 | crystal-mode            | flycheck-crystal                  | github  |
 | ctl-mode                | gs-mode                           | github  |
