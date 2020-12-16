@@ -75,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (82)                    | Class       | Feature                  | Reason                                              |
+| Package (83)                    | Class       | Feature                  | Reason                                              |
 |---------------------------------+-------------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github      | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab      | command-frequency        | shelved soft                                        |
@@ -96,6 +96,7 @@
 | dired+                          | wiki        | subr-21                  | backward compatibility                              |
 | doremi-cmd                      | wiki        | color-theme              | backward compatibility                              |
 | e2wm-R                          | shelved     | imgur                    | anything                                            |
+| eaf                             | github      | org-docview              | backward compatibility                              |
 | ebdb                            | elpa-branch | vm-autoloads             | generated external file                             |
 | ecb                             | github      | escreen                  | shelved soft                                        |
 | ecb                             | github      | semantic-analyze         | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
@@ -348,63 +349,64 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (58)        | Class    | Branch       |
-|---------------------+----------+--------------|
-| 2bit                | github   | main         |
-| ansible-vault       | github   | master       |
-| apel                | github   | apel-wl      |
-| aqi                 | github   | endless      |
-| bidi                | github   | main         |
-| borg-queen          | github   | initial-dev  |
-| boxquote            | github   | main         |
-| burnt-toast         | github   | main         |
-| cil-mode            | github   | develop      |
-| company-emoji       | github   | trunk        |
-| distinguished-theme | github   | develop      |
-| drupal-mode         | github   | develop      |
-| eev                 | github   | UTF-8        |
-| elegant-agenda-mode | github   | main         |
-| elfeed-dashboard    | github   | main         |
-| engine-mode         | github   | main         |
-| etherpad            | github   | endless      |
-| flim                | github   | flim-1_14-wl |
-| git-grep            | github   | main         |
-| gkroam              | github   | develop      |
-| google-c-style      | minority | gh-pages     |
-| homebrew-mode       | github   | trunk        |
-| lakota-input        | git      | main         |
-| leo                 | github   | main         |
-| litanize            | github   | endless      |
-| marginalia          | github   | main         |
-| modus-themes        | gitlab   | main         |
-| monkeytype          | github   | main         |
-| neato-graph-bar     | gitlab   | release      |
-| neotree             | github   | dev          |
-| nntwitter           | github   | main         |
-| nodejs-repl         | github   | develop      |
-| nord-theme          | github   | develop      |
-| ob-applescript      | github   | trunk        |
-| ob-deno             | github   | main         |
-| org-themis          | github   | develop      |
-| org-time-budgets    | github   | develop      |
-| orgbox              | github   | develop      |
-| ox-gemini           | git      | main         |
-| ox-jira             | github   | trunk        |
-| pikchr-mode         | github   | main         |
-| plantuml-mode       | github   | develop      |
-| plaster             | github   | rewrite      |
-| poet-client         | github   | development  |
-| propfont-mixed      | github   | github       |
-| quiet               | github   | endless      |
-| rcirc-styles        | github   | develop      |
-| register-quicknav   | git      | main         |
-| semi                | github   | semi-1_14-wl |
-| smart-tab           | git      | main         |
-| smog                | github   | endless      |
-| sql-impala          | github   | main         |
-| svg-tag-mode        | github   | main         |
-| tidal               | github   | main         |
-| vc-fossil           | github   | trunk        |
-| websocket           | github   | main         |
-| zenscript-mode      | github   | main         |
-| zero-input          | git      | pkg          |
+| Package (59)          | Class    | Branch       |
+|-----------------------+----------+--------------|
+| 2bit                  | github   | main         |
+| ansible-vault         | github   | master       |
+| apel                  | github   | apel-wl      |
+| aqi                   | github   | endless      |
+| bidi                  | github   | main         |
+| borg-queen            | github   | initial-dev  |
+| boxquote              | github   | main         |
+| burnt-toast           | github   | main         |
+| cil-mode              | github   | develop      |
+| company-emoji         | github   | trunk        |
+| distinguished-theme   | github   | develop      |
+| drupal-mode           | github   | develop      |
+| eev                   | github   | UTF-8        |
+| elegant-agenda-mode   | github   | main         |
+| elfeed-dashboard      | github   | main         |
+| engine-mode           | github   | main         |
+| etherpad              | github   | endless      |
+| flim                  | github   | flim-1_14-wl |
+| git-grep              | github   | main         |
+| gkroam                | github   | develop      |
+| google-c-style        | minority | gh-pages     |
+| homebrew-mode         | github   | trunk        |
+| lakota-input          | git      | main         |
+| leo                   | github   | main         |
+| litanize              | github   | endless      |
+| marginalia            | github   | main         |
+| modus-themes          | gitlab   | main         |
+| monkeytype            | github   | main         |
+| neato-graph-bar       | gitlab   | release      |
+| neotree               | github   | dev          |
+| nntwitter             | github   | main         |
+| nodejs-repl           | github   | develop      |
+| nord-theme            | github   | develop      |
+| ob-applescript        | github   | trunk        |
+| ob-deno               | github   | main         |
+| org-themis            | github   | develop      |
+| org-time-budgets      | github   | develop      |
+| org-tree-slide-pauses | github   | main         |
+| orgbox                | github   | develop      |
+| ox-gemini             | git      | main         |
+| ox-jira               | github   | trunk        |
+| pikchr-mode           | github   | main         |
+| plantuml-mode         | github   | develop      |
+| plaster               | github   | rewrite      |
+| poet-client           | github   | development  |
+| propfont-mixed        | github   | github       |
+| quiet                 | github   | endless      |
+| rcirc-styles          | github   | develop      |
+| register-quicknav     | git      | main         |
+| semi                  | github   | semi-1_14-wl |
+| smart-tab             | git      | main         |
+| smog                  | github   | endless      |
+| sql-impala            | github   | main         |
+| svg-tag-mode          | github   | main         |
+| tidal                 | github   | main         |
+| vc-fossil             | github   | trunk        |
+| websocket             | github   | main         |
+| zenscript-mode        | github   | main         |
+| zero-input            | git      | pkg          |
