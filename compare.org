@@ -77,9 +77,9 @@
 | builtin     |  466 |     15 |       |   467 |    15 |       |
 | elpa-branch |  127 |    127 |       |       |   249 |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| github      | 4761 |   4761 |       |       |       |  4556 |
+| github      | 4763 |   4763 |       |       |       |  4560 |
 | gitlab      |  143 |    143 |       |       |       |   139 |
-| git         |  103 |    103 |       |       |       |    89 |
+| git         |  104 |    104 |       |       |       |    90 |
 | subtree     |   25 |     25 |       |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
 | wiki        |  606 |    606 |       |       |       |       |
@@ -91,7 +91,7 @@
 | orphaned    |  114 |    114 |       |       |       |       |
 | shelved     | 1383 |        |  1383 |       |       |       |
 |-------------+------+--------+-------+-------+-------+-------|
-| total       | 7822 |   5988 |  1383 |   467 |   264 |  4796 |
+| total       | 7825 |   5991 |  1383 |   467 |   264 |  4801 |
 
 * Emacs
 ** Prefer elpa
@@ -409,7 +409,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (112)   | Secondary package                 | Class   |
+| Primary package (113)   | Secondary package                 | Class   |
 |-------------------------+-----------------------------------+---------|
 | ac-php                  | ac-php-core                       | github  |
 | ac-php                  | company-php                       | github  |
@@ -521,6 +521,7 @@
 | magit                   | magit-section                     | github  |
 | major-mode-hydra        | pretty-hydra                      | github  |
 | maxima                  | company-maxima                    | gitlab  |
+| metal-archives          | metal-archives-shopping-list      | github  |
 | nameframe               | nameframe-perspective             | github  |
 | nameframe               | nameframe-projectile              | github  |
 | nand2tetris             | company-nand2tetris               | github  |
