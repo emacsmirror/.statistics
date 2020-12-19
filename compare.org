@@ -19,7 +19,7 @@
          (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1]
                                          [core])))
-         (elpa-branch  (length (epkg-sql [:select * :from gelpa-recipes
+         (gelpa        (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1
                                           :and (notnull released)]
                                          [external])))
@@ -27,10 +27,14 @@
          (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
                   hline
                   (builtin     ,builtin-emir 0 "" ,builtin ,builtin-elpa "")
-                  (elpa-branch 0  0  "" "" ,elpa-branch "")
+                  (gnu-elpa    0  0  "" "" ,gelpa "")
                   hline
                   (github      0  0  "" "" "" 0)
                   (gitlab      0  0  "" "" "" 0)
+                  (sourcehut   0  0  "" "" "" "")
+                  (gnu         0  0  "" "" "" "")
+                  (nongnu      0  0  "" "" "" "")
+                  hline
                   (git         0  0  "" "" "" 0)
                   (subtree     0  0  "" "" "" "")
                   hline
@@ -44,7 +48,7 @@
                   (shelved     ,shelved "" ,shelved "" "" "")
                   hline)))
     (dolist (class (epkgs 'class 'epkg-mirrored-package--eieio-childp))
-      (when (eq class 'elpa-core)
+      (when (eq class 'core)
         (setq class 'builtin))
       (if-let ((elt (assq class table)))
           (progn
@@ -72,26 +76,30 @@
                            table)))))
 #+END_SRC
 #+RESULTS: summary
-|             | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
-|-------------+------+--------+-------+-------+-------+-------|
-| builtin     |  466 |     15 |       |   467 |    15 |       |
-| elpa-branch |  127 |    127 |       |       |   249 |       |
-|-------------+------+--------+-------+-------+-------+-------|
-| github      | 4763 |   4763 |       |       |       |  4560 |
-| gitlab      |  143 |    143 |       |       |       |   139 |
-| git         |  104 |    104 |       |       |       |    90 |
-| subtree     |   25 |     25 |       |       |       |       |
-|-------------+------+--------+-------+-------+-------+-------|
-| wiki        |  606 |    606 |       |       |       |       |
-| minority    |   25 |     25 |       |       |       |       |
-|-------------+------+--------+-------+-------+-------+-------|
-| hg          |   14 |     14 |       |       |       |    12 |
-| file        |   55 |     55 |       |       |       |       |
-|-------------+------+--------+-------+-------+-------+-------|
-| orphaned    |  114 |    114 |       |       |       |       |
-| shelved     | 1383 |        |  1383 |       |       |       |
-|-------------+------+--------+-------+-------+-------+-------|
-| total       | 7825 |   5991 |  1383 |   467 |   264 |  4801 |
+|           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
+|-----------+------+--------+-------+-------+-------+-------|
+| builtin   |  466 |     15 |       |   467 |    14 |       |
+| gnu-elpa  |  127 |    127 |       |       |   251 |       |
+|-----------+------+--------+-------+-------+-------+-------|
+| github    | 4763 |   4763 |       |       |       |  4560 |
+| gitlab    |  143 |    143 |       |       |       |   139 |
+| sourcehut |   17 |     17 |       |       |       |       |
+| gnu       |    7 |      7 |       |       |       |       |
+| nongnu    |    8 |      8 |       |       |       |       |
+|-----------+------+--------+-------+-------+-------+-------|
+| git       |   72 |     72 |       |       |       |    90 |
+| subtree   |   25 |     25 |       |       |       |       |
+|-----------+------+--------+-------+-------+-------+-------|
+| wiki      |  606 |    606 |       |       |       |       |
+| minority  |   25 |     25 |       |       |       |       |
+|-----------+------+--------+-------+-------+-------+-------|
+| hg        |   14 |     14 |       |       |       |    12 |
+| file      |   55 |     55 |       |       |       |       |
+|-----------+------+--------+-------+-------+-------+-------|
+| orphaned  |  114 |    114 |       |       |       |       |
+| shelved   | 1383 |        |  1383 |       |       |       |
+|-----------+------+--------+-------+-------+-------+-------|
+| total     | 7825 |   5991 |  1383 |   467 |   265 |  4801 |
 
 * Emacs
 ** Prefer elpa
