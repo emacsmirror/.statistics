@@ -17,30 +17,30 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (14) | Class    | Feature        | Reason                                    |
-|--------------+----------+----------------+-------------------------------------------|
-| ddskk        | github   | skk-kanagaki   | inside directory containing .nosearch     |
-| ddskk        | github   | skk-tutcode    | inside directory containing .nosearch     |
-| edb          | orphaned | edbcore        | generated                                 |
-| emacs        | builtin  | cus-load       | generated                                 |
-| emacs        | builtin  | leim-list      | generated                                 |
-| emacspeak    | github   | dtk-css-speech | inside directory containing .nosearch     |
-| eshell       | builtin  | esh-groups     | generated                                 |
-| finder       | builtin  | finder-inf     | generated                                 |
-| fuz          | github   | fuz-core       | provided by module                        |
-| geo          | git      | geocode-emacs  | provided by module                        |
-| liberime     | github   | liberime-core  | provided by module                        |
-| realgud      | github   | bashdb         | inside directory containing .nosearch     |
-| sly          | github   | sly-buttons    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-cl-indent  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-common     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-completion | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-messages   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-parse      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github   | sly-tests      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sqlite3      | github   | sqlite3-api    | provided by module                        |
-| tree-sitter  | github   | tsc-dyn        | provided by module                        |
-| vterm        | github   | vterm-module   | provided by module                        |
+| Package (14) | Class     | Feature        | Reason                                    |
+|--------------+-----------+----------------+-------------------------------------------|
+| ddskk        | github    | skk-kanagaki   | inside directory containing .nosearch     |
+| ddskk        | github    | skk-tutcode    | inside directory containing .nosearch     |
+| edb          | orphaned  | edbcore        | generated                                 |
+| emacs        | builtin   | cus-load       | generated                                 |
+| emacs        | builtin   | leim-list      | generated                                 |
+| emacspeak    | github    | dtk-css-speech | inside directory containing .nosearch     |
+| eshell       | builtin   | esh-groups     | generated                                 |
+| finder       | builtin   | finder-inf     | generated                                 |
+| fuz          | github    | fuz-core       | provided by module                        |
+| geo          | sourcehut | geocode-emacs  | provided by module                        |
+| liberime     | github    | liberime-core  | provided by module                        |
+| realgud      | github    | bashdb         | inside directory containing .nosearch     |
+| sly          | github    | sly-buttons    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-cl-indent  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-common     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-completion | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-messages   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-parse      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-tests      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sqlite3      | github    | sqlite3-api    | provided by module                        |
+| tree-sitter  | github    | tsc-dyn        | provided by module                        |
+| vterm        | github    | vterm-module   | provided by module                        |
 
 * Drop provided features
 #+NAME: provided-drop
@@ -60,7 +60,7 @@
 | emacspeak       | github | sudoku    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | tapestry  | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | tetris    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| riece           | git    | ptexinfmt | fixme                  |
+| riece           | nongnu | ptexinfmt | fixme                  |
 | slime           | github | cl-indent | part of Emacs          |
 | twittering-mode | github | ssl       | backward compatibility |
 | twittering-mode | github | test      | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
@@ -75,126 +75,126 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (83)                    | Class       | Feature                  | Reason                                              |
-|---------------------------------+-------------+--------------------------+-----------------------------------------------------|
-| ac-octave                       | github      | octave-inf               | backward compatibility                              |
-| achievements                    | gitlab      | command-frequency        | shelved soft                                        |
-| aozora-view                     | github      | ivs-aj1                  | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
-| auto-complete                   | github      | semantic-ia              | backward compatibility                              |
-| auto-complete-nxml              | github      | anything-project         | anything                                            |
-| bbdb                            | git         | vm-autoloads             | generated external file                             |
-| centered-window                 | github      | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                          |
-| citeproc                        | github      | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                           |
-| clj-refactor                    | github      | seq-25                   | backward compatibility                              |
-| color-moccur                    | github      | moccur-edit              | shelved soft                                        |
-| color-theme-sanityinc-solarized | github      | color-theme              | backward compatibility                              |
-| color-theme-sanityinc-tomorrow  | github      | color-theme              | backward compatibility                              |
-| company                         | github      | semantic-idle            | backward compatibility                              |
-| dic-lookup-w3m                  | orphaned    | text-translator          | broken and optional                                 |
-| dictionary                      | github      | balloon-help             | XEmacs compatibility                                |
-| dired+                          | wiki        | help+20                  | backward compatibility                              |
-| dired+                          | wiki        | subr-21                  | backward compatibility                              |
-| doremi-cmd                      | wiki        | color-theme              | backward compatibility                              |
-| e2wm-R                          | shelved     | imgur                    | anything                                            |
-| eaf                             | github      | org-docview              | backward compatibility                              |
-| ebdb                            | elpa-branch | vm-autoloads             | generated external file                             |
-| ecb                             | github      | escreen                  | shelved soft                                        |
-| ecb                             | github      | semantic-analyze         | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
-| ecb                             | github      | semantic-ctxt            | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
-| ecb                             | github      | thing                    | XEmacs compatibility                                |
-| ee                              | git         | bbdb-autoloads           | generated external file                             |
-| el-autoyas                      | github      | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
-| elisp-benchmarks                | elpa-branch | comp                     | only when using Emacs' native-comp branch           |
-| emms-player-mpv-jp-radios       | github      | anything                 | anything                                            |
-| erlang                          | github      | tags                     | backward compatibility                              |
-| es-lib                          | github      | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]               |
-| evil-collection                 | github      | image+                   | shelved soft [[https://github.com/emacs-evil/evil-collection/issues/399][#399]]                                   |
-| evil-collection                 | github      | shortdoc                 | forward compatibility (Emacs 28)                    |
-| extend-dnd                      | github      | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
-| folding                         | github      | mode-motion              | XEmacs compatibility                                |
-| fstar-mode                      | github      | replace                  | replace.el doesn't provide feature in Emacs < 26    |
-| help+                           | wiki        | info+20                  | backward compatibility                              |
-| hyperbole                       | git         | efs                      | XEmacs compatibility                                |
-| hyperbole                       | git         | id-menubars              | unreleased, author says will be released eventually |
-| icicles                         | wiki        | anything                 | anything                                            |
-| icicles                         | wiki        | color-theme              | backward compatibility                              |
-| jabber                          | github      | un-define                | XEmacs compatibility                                |
-| jda                             | github      | anything                 | anything                                            |
-| jdee                            | github      | working                  | stand-alone cedet compatibility                     |
-| lacarte                         | wiki        | subr-21                  | backward compatibility                              |
-| lilypond                        | git         | ilisp                    | only required by a single undocumented command      |
-| lispxmp                         | github      | newxmp                   | pending: newxmp has not been released yet (email)   |
-| lispy                           | github      | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                           |
-| load-theme-buffer-local         | github      | color-theme              | backward compatibility                              |
-| matlab-mode                     | git         | matlab-load              | generated internal file                             |
-| matlab-mode                     | git         | semantic-dep             | backward compatibility                              |
-| matlab-mode                     | git         | semantic-format          | backward compatibility                              |
-| matlab-mode                     | git         | semanticdb               | backward compatibility                              |
-| menu-bar+                       | wiki        | help+20                  | backward compatibility                              |
-| menu-bar+                       | wiki        | info+20                  | backward compatibility                              |
-| mew                             | github      | mw32script               | Meadow Emacs compatibility                          |
-| mew                             | github      | un-define                | XEmacs compatibility                                |
-| mh-e                            | builtin     | toolbar                  | XEmacs compatibility                                |
-| mhc                             | github      | bitmap                   | XEmacs compatibility                                |
-| mhc                             | github      | mhc-bm                   | Mule compatibility                                  |
-| mhc                             | github      | mhc-xmas                 | XEmacs compatibility                                |
-| mhc                             | github      | pcustom                  | Mule compatibility                                  |
-| mhc                             | github      | poe                      | Mule compatibility                                  |
-| molokai-theme                   | github      | color-theme              | backward compatibility                              |
-| navi2ch                         | github      | bitmap                   | XEmacs compatibility                                |
-| navi2ch                         | github      | spamfilter               | shelved soft                                        |
-| nxhtml                          | orphaned    | anything                 | anything                                            |
-| nxhtml                          | orphaned    | emacsw32                 | examples only                                       |
-| nxhtml                          | orphaned    | flymake-js               | not a proper package                                |
-| nxhtml                          | orphaned    | fold-dwim                | shelved soft                                        |
-| nxhtml                          | orphaned    | typesetter               | not touched in ten years                            |
-| nxhtml                          | orphaned    | w32-regdat               | Windows compatibility                               |
-| nxhtml                          | orphaned    | w32shell                 | Windows compatibility                               |
-| org                             | git         | nnselect                 | forward compatibility (Emacs 28)                    |
-| org                             | git         | org-remember             | backward compatibility                              |
-| org-caldav                      | github      | org-icalendar            | backward compatibility                              |
-| org-readme                      | github      | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
-| org-redmine                     | github      | anything                 | anything                                            |
-| org-ref                         | github      | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                         |
-| org-toodledo                    | github      | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                            |
-| osa                             | github      | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]]   |
-| ox-latex-subfigure              | github      | org-loaddefs             | generated external file                             |
-| pinot                           | github      | anything-config          | anything                                            |
-| plsense                         | github      | perl-completion          | anything                                            |
-| project-explorer                | github      | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
-| proof-general                   | github      | proof-x-symbol           | only required by a single deprecated library        |
-| prosjekt                        | github      | anything                 | anything                                            |
-| python-mode                     | gitlab      | pymacs                   | it's complicated (email)                            |
-| r-autoyas                       | github      | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
-| rcodetools                      | subtree     | anything                 | anything                                            |
-| rcodetools                      | subtree     | anything-show-completion | anything                                            |
-| rpm-spec-mode                   | github      | shindent                 | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                         |
-| show-marks                      | github      | fm                       | shelved soft                                        |
-| simple-call-tree                | github      | fm                       | shelved soft                                        |
-| snapshot-timemachine-rsnapshot  | github      | seq-25                   | backward compatibility                              |
-| stickies                        | github      | anything                 | anything                                            |
-| straight                        | github      | comp                     | forward compatibility (Emacs 28)                    |
-| string-utils                    | github      | obarray-fns              | shelved soft                                        |
-| tangotango-theme                | github      | color-theme              | backward compatibility                              |
-| tramp                           | git         | tramp-loaddefs           | generated internal file                             |
-| tss                             | github      | anything                 | anything                                            |
-| twittering-mode                 | github      | alpaca                   | only required if epa isn't available                |
-| twittering-mode                 | github      | revive                   | false-positive                                      |
-| twittering-mode                 | github      | un-define                | XEmacs compatibility                                |
-| twittering-mode                 | github      | unicode                  | backward compatibility                              |
-| ucs-utils                       | github      | ucs-utils-6.0-delta      | backward compatibility                              |
-| vbasense                        | github      | anything-project         | anything                                            |
-| vm                              | orphaned    | atomic-extents           | XEmacs compatibility                                |
-| vm                              | orphaned    | highlight-headers        | XEmacs compatibility                                |
-| vm                              | orphaned    | timer-funcs              | XEmacs compatibility                                |
-| vm                              | orphaned    | vm-autoloads             | generated internal file                             |
-| w3                              | elpa-branch | dtk-voices               | used to be part of emacspeak, not needed            |
-| w3                              | elpa-branch | w3-site-init             | leftover noise                                      |
-| w3                              | elpa-branch | x-font-menu              | XEmacs compatibility                                |
-| w3                              | elpa-branch | xbm-button               | XEmacs compatibility                                |
-| w3                              | elpa-branch | xpm-button               | XEmacs compatibility                                |
-| wanderlust                      | github      | spamfilter               | shelved soft                                        |
-| yatex                           | hg          | hilit19                  | backward compatibility                              |
+| Package (83)                    | Class    | Feature                  | Reason                                              |
+|---------------------------------+----------+--------------------------+-----------------------------------------------------|
+| ac-octave                       | github   | octave-inf               | backward compatibility                              |
+| achievements                    | gitlab   | command-frequency        | shelved soft                                        |
+| aozora-view                     | github   | ivs-aj1                  | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                          |
+| auto-complete                   | github   | semantic-ia              | backward compatibility                              |
+| auto-complete-nxml              | github   | anything-project         | anything                                            |
+| bbdb                            | nongnu   | vm-autoloads             | generated external file                             |
+| centered-window                 | github   | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                          |
+| citeproc                        | github   | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                           |
+| clj-refactor                    | github   | seq-25                   | backward compatibility                              |
+| color-moccur                    | github   | moccur-edit              | shelved soft                                        |
+| color-theme-sanityinc-solarized | github   | color-theme              | backward compatibility                              |
+| color-theme-sanityinc-tomorrow  | github   | color-theme              | backward compatibility                              |
+| company                         | github   | semantic-idle            | backward compatibility                              |
+| dic-lookup-w3m                  | orphaned | text-translator          | broken and optional                                 |
+| dictionary                      | github   | balloon-help             | XEmacs compatibility                                |
+| dired+                          | wiki     | help+20                  | backward compatibility                              |
+| dired+                          | wiki     | subr-21                  | backward compatibility                              |
+| doremi-cmd                      | wiki     | color-theme              | backward compatibility                              |
+| e2wm-R                          | shelved  | imgur                    | anything                                            |
+| eaf                             | github   | org-docview              | backward compatibility                              |
+| ebdb                            | gnu-elpa | vm-autoloads             | generated external file                             |
+| ecb                             | github   | escreen                  | shelved soft                                        |
+| ecb                             | github   | semantic-analyze         | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
+| ecb                             | github   | semantic-ctxt            | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
+| ecb                             | github   | thing                    | XEmacs compatibility                                |
+| ee                              | gnu      | bbdb-autoloads           | generated external file                             |
+| el-autoyas                      | github   | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
+| elisp-benchmarks                | gnu-elpa | comp                     | only when using Emacs' native-comp branch           |
+| emms-player-mpv-jp-radios       | github   | anything                 | anything                                            |
+| erlang                          | github   | tags                     | backward compatibility                              |
+| es-lib                          | github   | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]               |
+| evil-collection                 | github   | image+                   | shelved soft [[https://github.com/emacs-evil/evil-collection/issues/399][#399]]                                   |
+| evil-collection                 | github   | shortdoc                 | forward compatibility (Emacs 28)                    |
+| extend-dnd                      | github   | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
+| folding                         | github   | mode-motion              | XEmacs compatibility                                |
+| fstar-mode                      | github   | replace                  | replace.el doesn't provide feature in Emacs < 26    |
+| help+                           | wiki     | info+20                  | backward compatibility                              |
+| hyperbole                       | gnu      | efs                      | XEmacs compatibility                                |
+| hyperbole                       | gnu      | id-menubars              | unreleased, author says will be released eventually |
+| icicles                         | wiki     | anything                 | anything                                            |
+| icicles                         | wiki     | color-theme              | backward compatibility                              |
+| jabber                          | github   | un-define                | XEmacs compatibility                                |
+| jda                             | github   | anything                 | anything                                            |
+| jdee                            | github   | working                  | stand-alone cedet compatibility                     |
+| lacarte                         | wiki     | subr-21                  | backward compatibility                              |
+| lilypond                        | gnu      | ilisp                    | only required by a single undocumented command      |
+| lispxmp                         | github   | newxmp                   | pending: newxmp has not been released yet (email)   |
+| lispy                           | github   | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                           |
+| load-theme-buffer-local         | github   | color-theme              | backward compatibility                              |
+| matlab-mode                     | git      | matlab-load              | generated internal file                             |
+| matlab-mode                     | git      | semantic-dep             | backward compatibility                              |
+| matlab-mode                     | git      | semantic-format          | backward compatibility                              |
+| matlab-mode                     | git      | semanticdb               | backward compatibility                              |
+| menu-bar+                       | wiki     | help+20                  | backward compatibility                              |
+| menu-bar+                       | wiki     | info+20                  | backward compatibility                              |
+| mew                             | github   | mw32script               | Meadow Emacs compatibility                          |
+| mew                             | github   | un-define                | XEmacs compatibility                                |
+| mh-e                            | builtin  | toolbar                  | XEmacs compatibility                                |
+| mhc                             | github   | bitmap                   | XEmacs compatibility                                |
+| mhc                             | github   | mhc-bm                   | Mule compatibility                                  |
+| mhc                             | github   | mhc-xmas                 | XEmacs compatibility                                |
+| mhc                             | github   | pcustom                  | Mule compatibility                                  |
+| mhc                             | github   | poe                      | Mule compatibility                                  |
+| molokai-theme                   | github   | color-theme              | backward compatibility                              |
+| navi2ch                         | github   | bitmap                   | XEmacs compatibility                                |
+| navi2ch                         | github   | spamfilter               | shelved soft                                        |
+| nxhtml                          | orphaned | anything                 | anything                                            |
+| nxhtml                          | orphaned | emacsw32                 | examples only                                       |
+| nxhtml                          | orphaned | flymake-js               | not a proper package                                |
+| nxhtml                          | orphaned | fold-dwim                | shelved soft                                        |
+| nxhtml                          | orphaned | typesetter               | not touched in ten years                            |
+| nxhtml                          | orphaned | w32-regdat               | Windows compatibility                               |
+| nxhtml                          | orphaned | w32shell                 | Windows compatibility                               |
+| org                             | git      | nnselect                 | forward compatibility (Emacs 28)                    |
+| org                             | git      | org-remember             | backward compatibility                              |
+| org-caldav                      | github   | org-icalendar            | backward compatibility                              |
+| org-readme                      | github   | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
+| org-redmine                     | github   | anything                 | anything                                            |
+| org-ref                         | github   | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                         |
+| org-toodledo                    | github   | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                            |
+| osa                             | github   | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]]   |
+| ox-latex-subfigure              | github   | org-loaddefs             | generated external file                             |
+| pinot                           | github   | anything-config          | anything                                            |
+| plsense                         | github   | perl-completion          | anything                                            |
+| project-explorer                | github   | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
+| proof-general                   | github   | proof-x-symbol           | only required by a single deprecated library        |
+| prosjekt                        | github   | anything                 | anything                                            |
+| python-mode                     | gitlab   | pymacs                   | it's complicated (email)                            |
+| r-autoyas                       | github   | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
+| rcodetools                      | subtree  | anything                 | anything                                            |
+| rcodetools                      | subtree  | anything-show-completion | anything                                            |
+| rpm-spec-mode                   | github   | shindent                 | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                         |
+| show-marks                      | github   | fm                       | shelved soft                                        |
+| simple-call-tree                | github   | fm                       | shelved soft                                        |
+| snapshot-timemachine-rsnapshot  | github   | seq-25                   | backward compatibility                              |
+| stickies                        | github   | anything                 | anything                                            |
+| straight                        | github   | comp                     | forward compatibility (Emacs 28)                    |
+| string-utils                    | github   | obarray-fns              | shelved soft                                        |
+| tangotango-theme                | github   | color-theme              | backward compatibility                              |
+| tramp                           | gnu      | tramp-loaddefs           | generated internal file                             |
+| tss                             | github   | anything                 | anything                                            |
+| twittering-mode                 | github   | alpaca                   | only required if epa isn't available                |
+| twittering-mode                 | github   | revive                   | false-positive                                      |
+| twittering-mode                 | github   | un-define                | XEmacs compatibility                                |
+| twittering-mode                 | github   | unicode                  | backward compatibility                              |
+| ucs-utils                       | github   | ucs-utils-6.0-delta      | backward compatibility                              |
+| vbasense                        | github   | anything-project         | anything                                            |
+| vm                              | orphaned | atomic-extents           | XEmacs compatibility                                |
+| vm                              | orphaned | highlight-headers        | XEmacs compatibility                                |
+| vm                              | orphaned | timer-funcs              | XEmacs compatibility                                |
+| vm                              | orphaned | vm-autoloads             | generated internal file                             |
+| w3                              | gnu-elpa | dtk-voices               | used to be part of emacspeak, not needed            |
+| w3                              | gnu-elpa | w3-site-init             | leftover noise                                      |
+| w3                              | gnu-elpa | x-font-menu              | XEmacs compatibility                                |
+| w3                              | gnu-elpa | xbm-button               | XEmacs compatibility                                |
+| w3                              | gnu-elpa | xpm-button               | XEmacs compatibility                                |
+| wanderlust                      | github   | spamfilter               | shelved soft                                        |
+| yatex                           | hg       | hilit19                  | backward compatibility                              |
 
 * Patched packages
 #+NAME: patched
@@ -266,7 +266,7 @@
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Library" "Reason")
     (-keep (-lambda ((name type library))
-               (and (not (eq type 'elpa-core))
+               (and (not (eq type 'core))
                     (list name type library
                           (cadr (assoc name emir--library-reason)))))
            (epkg-sql [:select [name class library] :from packages
@@ -279,7 +279,7 @@
 #+RESULTS: no-mainlib
 | Package (19)          | Class    | Library                         | Reason                     |
 |-----------------------+----------+---------------------------------+----------------------------|
-| auctex                | git      | tex.el                          | pkg/lib name mismatch      |
+| auctex                | gnu      | tex.el                          | pkg/lib name mismatch      |
 | chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
 | ddskk                 | github   | skk.el                          | pkg/lib name mismatch      |
 | dired-hacks           | github   | dired-hacks-utils.el            | no primary entry point     |
@@ -349,65 +349,65 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (60)          | Class    | Branch       |
-|-----------------------+----------+--------------|
-| 2bit                  | github   | main         |
-| ansible-vault         | github   | master       |
-| apel                  | github   | apel-wl      |
-| aqi                   | github   | endless      |
-| bidi                  | github   | main         |
-| borg-queen            | github   | initial-dev  |
-| boxquote              | github   | main         |
-| burnt-toast           | github   | main         |
-| cil-mode              | github   | develop      |
-| company-emoji         | github   | trunk        |
-| distinguished-theme   | github   | develop      |
-| drupal-mode           | github   | develop      |
-| eev                   | github   | UTF-8        |
-| elegant-agenda-mode   | github   | main         |
-| elfeed-dashboard      | github   | main         |
-| engine-mode           | github   | main         |
-| etherpad              | github   | endless      |
-| flim                  | github   | flim-1_14-wl |
-| git-grep              | github   | main         |
-| gkroam                | github   | develop      |
-| google-c-style        | minority | gh-pages     |
-| homebrew-mode         | github   | trunk        |
-| ispc-mode             | github   | main         |
-| lakota-input          | git      | main         |
-| leo                   | github   | main         |
-| litanize              | github   | endless      |
-| marginalia            | github   | main         |
-| modus-themes          | gitlab   | main         |
-| monkeytype            | github   | main         |
-| neato-graph-bar       | gitlab   | release      |
-| neotree               | github   | dev          |
-| nntwitter             | github   | main         |
-| nodejs-repl           | github   | develop      |
-| nord-theme            | github   | develop      |
-| ob-applescript        | github   | trunk        |
-| ob-deno               | github   | main         |
-| org-themis            | github   | develop      |
-| org-time-budgets      | github   | develop      |
-| org-tree-slide-pauses | github   | main         |
-| orgbox                | github   | develop      |
-| ox-gemini             | git      | main         |
-| ox-jira               | github   | trunk        |
-| pikchr-mode           | github   | main         |
-| plantuml-mode         | github   | develop      |
-| plaster               | github   | rewrite      |
-| poet-client           | github   | development  |
-| propfont-mixed        | github   | github       |
-| quiet                 | github   | endless      |
-| rcirc-styles          | github   | develop      |
-| register-quicknav     | git      | main         |
-| semi                  | github   | semi-1_14-wl |
-| smart-tab             | git      | main         |
-| smog                  | github   | endless      |
-| sql-impala            | github   | main         |
-| svg-tag-mode          | github   | main         |
-| tidal                 | github   | main         |
-| vc-fossil             | github   | trunk        |
-| websocket             | github   | main         |
-| zenscript-mode        | github   | main         |
-| zero-input            | git      | pkg          |
+| Package (60)          | Class     | Branch       |
+|-----------------------+-----------+--------------|
+| 2bit                  | github    | main         |
+| ansible-vault         | github    | master       |
+| apel                  | github    | apel-wl      |
+| aqi                   | github    | endless      |
+| bidi                  | github    | main         |
+| borg-queen            | github    | initial-dev  |
+| boxquote              | github    | main         |
+| burnt-toast           | github    | main         |
+| cil-mode              | github    | develop      |
+| company-emoji         | github    | trunk        |
+| distinguished-theme   | github    | develop      |
+| drupal-mode           | github    | develop      |
+| eev                   | github    | UTF-8        |
+| elegant-agenda-mode   | github    | main         |
+| elfeed-dashboard      | github    | main         |
+| engine-mode           | github    | main         |
+| etherpad              | github    | endless      |
+| flim                  | github    | flim-1_14-wl |
+| git-grep              | github    | main         |
+| gkroam                | github    | develop      |
+| google-c-style        | minority  | gh-pages     |
+| homebrew-mode         | github    | trunk        |
+| ispc-mode             | github    | main         |
+| lakota-input          | sourcehut | main         |
+| leo                   | github    | main         |
+| litanize              | github    | endless      |
+| marginalia            | github    | main         |
+| modus-themes          | gitlab    | main         |
+| monkeytype            | github    | main         |
+| neato-graph-bar       | gitlab    | release      |
+| neotree               | github    | dev          |
+| nntwitter             | github    | main         |
+| nodejs-repl           | github    | develop      |
+| nord-theme            | github    | develop      |
+| ob-applescript        | github    | trunk        |
+| ob-deno               | github    | main         |
+| org-themis            | github    | develop      |
+| org-time-budgets      | github    | develop      |
+| org-tree-slide-pauses | github    | main         |
+| orgbox                | github    | develop      |
+| ox-gemini             | sourcehut | main         |
+| ox-jira               | github    | trunk        |
+| pikchr-mode           | github    | main         |
+| plantuml-mode         | github    | develop      |
+| plaster               | github    | rewrite      |
+| poet-client           | github    | development  |
+| propfont-mixed        | github    | github       |
+| quiet                 | github    | endless      |
+| rcirc-styles          | github    | develop      |
+| register-quicknav     | git       | main         |
+| semi                  | github    | semi-1_14-wl |
+| smart-tab             | git       | main         |
+| smog                  | github    | endless      |
+| sql-impala            | github    | main         |
+| svg-tag-mode          | github    | main         |
+| tidal                 | github    | main         |
+| vc-fossil             | github    | trunk        |
+| websocket             | github    | main         |
+| zenscript-mode        | github    | main         |
+| zero-input            | git       | pkg          |

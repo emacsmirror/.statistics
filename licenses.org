@@ -69,10 +69,10 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3911 |      65 |
+| GPL-3+        |  3912 |      65 |
 | GPL-2+        |  1172 |      20 |
 | MIT           |   188 |       3 |
-| GPL-3         |   174 |       3 |
+| GPL-3         |   173 |       3 |
 | MIT (x11)     |   151 |       3 |
 | BSD-2-clause  |    81 |       1 |
 | BSD-3-clause  |    58 |       1 |
@@ -123,10 +123,10 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (2)     | Class       | License |
-|-----------------+-------------+---------|
-| logpad          | github      |         |
-| uni-confusables | elpa-branch |         |
+| Package (2)     | Class    | License |
+|-----------------+----------+---------|
+| logpad          | github   |         |
+| uni-confusables | gnu-elpa |         |
 
 * Emacsattic
 ** Overview

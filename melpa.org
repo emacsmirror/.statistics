@@ -634,15 +634,10 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (9)   | Link                        |
-|---------------+-----------------------------|
-| ebuild-mode   |                             |
-| ee            |                             |
-| geo           |                             |
-| gpicker       |                             |
-| lilypond      |                             |
-| mailscripts   |                             |
-| python-pep8   |                             |
-| python-pylint |                             |
-| riece         | [[http://www.nongnu.org/riece]] |
+| Package (4)   | Link |
+|---------------+------|
+| ebuild-mode   |      |
+| mailscripts   |      |
+| python-pep8   |      |
+| python-pylint |      |
 
