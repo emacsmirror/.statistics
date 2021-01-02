@@ -81,13 +81,13 @@
 | builtin   |  466 |     15 |       |   467 |    14 |       |
 | gnu-elpa  |  127 |    127 |       |       |   251 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4766 |   4766 |       |       |       |  4563 |
-| gitlab    |  143 |    143 |       |       |       |   139 |
-| sourcehut |   17 |     17 |       |       |       |       |
+| github    | 4768 |   4768 |       |       |       |  4565 |
+| gitlab    |  142 |    142 |       |       |       |   138 |
+| sourcehut |   19 |     19 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   72 |     72 |       |       |       |    90 |
+| git       |   73 |     73 |       |       |       |    93 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  606 |    606 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  114 |    114 |       |       |       |       |
 | shelved   | 1383 |        |  1383 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7828 |   5994 |  1383 |   467 |   265 |  4804 |
+| total     | 7832 |   5998 |  1383 |   467 |   265 |  4808 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
 | aggressive-indent          | github | external | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]                     |
 | ahungry-theme              | github | external | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                          |
 | async                      | github | external | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                                 |
-| auctex                     | gnu    | external |                                                      |
+| auctex                     | gnu    | external | [[https://savannah.gnu.org/projects/auctex]]             |
 | avy                        | github | external | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                          |
 | bbdb                       | nongnu | external | [[http://bbdb.sourceforge.net]]                          |
 | beacon                     | github | external | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                                     |
@@ -339,7 +339,7 @@
 | rt-liberation              | nongnu | external | [[http://www.nongnu.org/rtliber]]                        |
 | scanner                    | gitlab | external | [[https://gitlab.com/rstocker/scanner][rstocker/scanner]]                                     |
 | slime-volleyball           | github | external | [[https://github.com/fitzsim/slime-volleyball][fitzsim/slime-volleyball]]                             |
-| smalltalk-mode             | nongnu | external |                                                      |
+| smalltalk-mode             | nongnu | external | [[https://savannah.nongnu.org/projects/smalltalk-mode]]  |
 | sotlisp                    | github | external | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]                      |
 | spinner                    | github | external | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                                 |
 | sql-indent                 | github | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                                  |

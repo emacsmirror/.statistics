@@ -349,7 +349,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (61)          | Class     | Branch       |
+| Package (62)          | Class     | Branch       |
 |-----------------------+-----------+--------------|
 | 2bit                  | github    | main         |
 | ansible-vault         | github    | master       |
@@ -408,6 +408,7 @@
 | sql-impala            | github    | main         |
 | svg-tag-mode          | github    | main         |
 | tidal                 | github    | main         |
+| tree-sitter-indent    | git       | main         |
 | vc-fossil             | github    | trunk        |
 | websocket             | github    | main         |
 | zenscript-mode        | github    | main         |
