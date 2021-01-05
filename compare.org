@@ -79,10 +79,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    14 |       |
-| gnu-elpa  |  127 |    127 |       |       |   251 |       |
+| gnu-elpa  |  127 |    127 |       |       |   252 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4768 |   4768 |       |       |       |  4565 |
-| gitlab    |  142 |    142 |       |       |       |   138 |
+| github    | 4775 |   4775 |       |       |       |  4572 |
+| gitlab    |  143 |    143 |       |       |       |   139 |
 | sourcehut |   19 |     19 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  114 |    114 |       |       |       |       |
 | shelved   | 1383 |        |  1383 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7832 |   5998 |  1383 |   467 |   265 |  4808 |
+| total     | 7840 |   6006 |  1383 |   467 |   266 |  4816 |
 
 * Emacs
 ** Prefer elpa
@@ -247,7 +247,7 @@
                        [builtin gnu-elpa])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (119)              | Class  | Gelpa    | Link                                                 |
+| Package (120)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -269,7 +269,7 @@
 | company-statistics         | github | external | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]                      |
 | context-coloring           | github | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]                  |
 | cpio-mode                  | github | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                     |
-| darkroom                   | github | external | [[https://github.com/capitaomorte/darkroom][capitaomorte/darkroom]]                                |
+| darkroom                   | github | external | [[https://github.com/joaotavora/darkroom][joaotavora/darkroom]]                                  |
 | dash                       | github | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                                      |
 | dbus-codegen               | github | external | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                                 |
 | delight                    | nongnu | external | [[https://savannah.nongnu.org/projects/delight]]         |
@@ -307,6 +307,7 @@
 | ivy-posframe               | github | external | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                                 |
 | js2-mode                   | github | external | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                        |
 | json-mode                  | github | external | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                                    |
+| kiwix                      | github | external | [[https://github.com/stardiviner/kiwix.el][stardiviner/kiwix.el]]                                 |
 | leaf                       | github | external | [[https://github.com/conao3/leaf.el][conao3/leaf.el]]                                       |
 | load-relative              | github | external | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                            |
 | loc-changes                | github | external | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                              |
