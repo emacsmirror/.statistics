@@ -52,18 +52,19 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (4)     | Class  | Feature   | Reason                 |
-|-----------------+--------+-----------+------------------------|
-| emacspeak       | github | amixer    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | analog    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | nm        | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | sudoku    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | tapestry  | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | tetris    | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| riece           | nongnu | ptexinfmt | fixme                  |
-| slime           | github | cl-indent | part of Emacs          |
-| twittering-mode | github | ssl       | backward compatibility |
-| twittering-mode | github | test      | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
+| Package (5)     | Class  | Feature           | Reason                 |
+|-----------------+--------+-------------------+------------------------|
+| emacspeak       | github | amixer            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | analog            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | nm                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | sudoku            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | tapestry          | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak       | github | tetris            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| orgtbl-join     | github | org-insert-dblock | pending [[https://github.com/tbanel/orgtbljoin/issues/1][#1]]             |
+| riece           | nongnu | ptexinfmt         | fixme                  |
+| slime           | github | cl-indent         | part of Emacs          |
+| twittering-mode | github | ssl               | backward compatibility |
+| twittering-mode | github | test              | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
 
 * Drop required features
 #+NAME: required-drop
@@ -164,6 +165,7 @@
 | project-explorer                | github   | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
 | proof-general                   | github   | proof-x-symbol           | only required by a single deprecated library        |
 | prosjekt                        | github   | anything                 | anything                                            |
+| python-mode                     | gitlab   | py-bug-numbered-tests    | testing only                                        |
 | python-mode                     | gitlab   | pymacs                   | it's complicated (email)                            |
 | r-autoyas                       | github   | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
 | rcodetools                      | subtree  | anything                 | anything                                            |
@@ -349,7 +351,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (65)          | Class     | Branch       |
+| Package (66)          | Class     | Branch       |
 |-----------------------+-----------+--------------|
 | 2bit                  | github    | main         |
 | ansible-vault         | github    | master       |
@@ -368,6 +370,7 @@
 | elegant-agenda-mode   | github    | main         |
 | elfeed-dashboard      | github    | main         |
 | engine-mode           | github    | main         |
+| ess-stata-mode        | github    | main         |
 | etherpad              | github    | endless      |
 | flim                  | github    | flim-1_14-wl |
 | git-grep              | github    | main         |
