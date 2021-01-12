@@ -81,13 +81,13 @@
 | builtin   |  466 |     15 |       |   467 |    14 |       |
 | gnu-elpa  |  127 |    127 |       |       |   252 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4776 |   4776 |       |       |       |  4572 |
-| gitlab    |  143 |    143 |       |       |       |   139 |
+| github    | 4780 |   4780 |       |       |       |  4578 |
+| gitlab    |  144 |    144 |       |       |       |   140 |
 | sourcehut |   19 |     19 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   73 |     73 |       |       |       |    93 |
+| git       |   74 |     74 |       |       |       |    93 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  606 |    606 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  114 |    114 |       |       |       |       |
 | shelved   | 1383 |        |  1383 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7841 |   6007 |  1383 |   467 |   266 |  4816 |
+| total     | 7847 |   6013 |  1383 |   467 |   266 |  4823 |
 
 * Emacs
 ** Prefer elpa
@@ -417,7 +417,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (113)   | Secondary package                 | Class     |
+| Primary package (114)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -475,6 +475,8 @@
 | emacsql                 | emacsql-mysql                     | github    |
 | emacsql                 | emacsql-psql                      | github    |
 | emacsql                 | emacsql-sqlite                    | github    |
+| embark                  | avy-embark-collect                | github    |
+| embark                  | embark-consult                    | github    |
 | esqlite                 | esqlite-helm                      | github    |
 | evil                    | evil-test-helpers                 | github    |
 | ewal                    | ewal-doom-themes                  | github    |
