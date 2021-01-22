@@ -79,9 +79,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    14 |       |
-| gnu-elpa  |  127 |    127 |       |       |   252 |       |
+| gnu-elpa  |  128 |    128 |       |       |   252 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4780 |   4780 |       |       |       |  4578 |
+| github    | 4793 |   4793 |       |       |       |  4588 |
 | gitlab    |  144 |    144 |       |       |       |   140 |
 | sourcehut |   19 |     19 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  114 |    114 |       |       |       |       |
 | shelved   | 1383 |        |  1383 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7847 |   6013 |  1383 |   467 |   266 |  4823 |
+| total     | 7861 |   6027 |  1383 |   467 |   266 |  4833 |
 
 * Emacs
 ** Prefer elpa
@@ -199,13 +199,15 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (5)      | Gelpa    |
+| Package (7)      | Gelpa    |
 |------------------+----------|
 | sql-smie         | external |
 | prefixed-core    | external |
 | package-fixes    | external |
 | shell-quasiquote | external |
 | systemd          | external |
+| ob-haxe          | external |
+| repology         | external |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
@@ -247,7 +249,7 @@
                        [builtin gnu-elpa])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (120)              | Class  | Gelpa    | Link                                                 |
+| Package (121)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -319,6 +321,7 @@
 | muse                       | github | external | [[https://github.com/alexott/muse][alexott/muse]]                                         |
 | nameless                   | github | external | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                                   |
 | names                      | github | external | [[https://github.com/Malabarba/names][Malabarba/names]]                                      |
+| ob-haxe                    | github | external | [[https://github.com/ianxm/ob-haxe.el][ianxm/ob-haxe.el]]                                     |
 | objed                      | github | external | [[https://github.com/clemera/objed][clemera/objed]]                                        |
 | on-screen                  | github | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]                       |
 | org                        | git    | external | [[https://orgmode.org]]                                  |
@@ -445,7 +448,6 @@
 | colorless-themes        | lavenderless-theme                | sourcehut |
 | colorless-themes        | nordless-theme                    | sourcehut |
 | consult                 | consult-flycheck                  | github    |
-| consult                 | consult-selectrum                 | github    |
 | copyit                  | copyit-pandoc                     | github    |
 | crystal-mode            | flycheck-crystal                  | github    |
 | ctl-mode                | gs-mode                           | github    |
@@ -686,7 +688,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (47)                 | Class   | Melpa  | Reason              |
+| Package (46)                 | Class   | Melpa  | Reason              |
 |------------------------------+---------+--------+---------------------|
 | image+                       | shelved | github |                     |
 | intero                       | shelved | github |                     |
@@ -722,7 +724,6 @@
 | better-defaults              | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | chicken-scheme               | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | company-ghc                  | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| company-org-roam             | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | flymake-cppcheck             | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | flymake-google-cpplint       | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | ghc                          | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |

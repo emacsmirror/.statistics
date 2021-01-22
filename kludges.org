@@ -351,7 +351,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (68)          | Class     | Branch       |
+| Package (73)          | Class     | Branch       |
 |-----------------------+-----------+--------------|
 | 2bit                  | github    | main         |
 | ansible-vault         | github    | master       |
@@ -364,6 +364,7 @@
 | cil-mode              | github    | develop      |
 | company-emoji         | github    | trunk        |
 | counsel-ag-popup      | github    | main         |
+| crossword             | github    | main         |
 | diredc                | github    | main         |
 | distinguished-theme   | github    | develop      |
 | drupal-mode           | github    | develop      |
@@ -378,6 +379,7 @@
 | git-grep              | github    | main         |
 | gkroam                | github    | develop      |
 | google-c-style        | minority  | gh-pages     |
+| holy-books            | github    | main         |
 | homebrew-mode         | github    | trunk        |
 | ispc-mode             | github    | main         |
 | lakota-input          | sourcehut | main         |
@@ -386,6 +388,7 @@
 | marginalia            | github    | main         |
 | modus-themes          | gitlab    | main         |
 | monkeytype            | github    | main         |
+| mu4e-marker-icons     | github    | main         |
 | neato-graph-bar       | gitlab    | release      |
 | neotree               | github    | dev          |
 | nntwitter             | github    | main         |
@@ -393,12 +396,14 @@
 | nord-theme            | github    | develop      |
 | ob-applescript        | github    | trunk        |
 | ob-deno               | github    | main         |
+| ob-haxe               | github    | main         |
 | org-themis            | github    | develop      |
 | org-time-budgets      | github    | develop      |
 | org-tree-slide-pauses | github    | main         |
 | orgbox                | github    | develop      |
 | ox-gemini             | sourcehut | main         |
 | ox-jira               | github    | trunk        |
+| ox-timeline           | github    | main         |
 | pikchr-mode           | github    | main         |
 | plantuml-mode         | github    | develop      |
 | plaster               | github    | rewrite      |
