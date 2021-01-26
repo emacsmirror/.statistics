@@ -216,10 +216,10 @@
 | karma         | github   |
 | lookup        | github   |
 | nav           | github   |
-| nxhtml        | orphaned |
 | oauth         | github   |
 | projmake-mode | github   |
 | semi          | github   |
+| tenv          | github   |
 | vm            | orphaned |
 | wanderlust    | github   |
 
@@ -236,16 +236,9 @@
             (epkgs [name upstream-tree url] 'epkg-minority-package-p)))
 #+END_SRC
 #+RESULTS: filtered
-| Package (25)        | Reason           | M | Url                                          |
+| Package (18)        | Reason           | M | Url                                          |
 |---------------------+------------------+---+----------------------------------------------|
-| rfringe             | all-in-one repo  |   | git@github.com:DinoChiesa/dpchiesa-elisp.git |
-| tfs                 | all-in-one repo  |   | git@github.com:DinoChiesa/dpchiesa-elisp.git |
-| thesaurus           | all-in-one repo  |   | git@github.com:DinoChiesa/dpchiesa-elisp.git |
-| org-pua             | all-in-one repo  |   | git@github.com:Henry/dot-emacs.git           |
-| thingatpt-ext       | all-in-one repo  |   | git@github.com:Henry/dot-emacs.git           |
-| wn-org              | all-in-one repo  |   | git@github.com:Henry/dot-emacs.git           |
 | pylint              | mostly non-elisp | ✓ | git@github.com:PyCQA/pylint.git              |
-| tenv                | unclean repo     |   | git@github.com:aki2o/elisp-test.git          |
 | thrift              | mostly non-elisp | ✓ | git@github.com:apache/thrift.git             |
 | bibliothek          | all-in-one repo  | ✓ | git@github.com:cadadr/elisp.git              |
 | forecast            | all-in-one repo  | ✓ | git@github.com:cadadr/elisp.git              |
@@ -267,10 +260,12 @@
 * Set main library
 #+NAME: no-mainlib
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "Library" "Reason")
+  (epkg-with-org-header (4 "Package" "Class" "M" "Library" "Reason")
     (-keep (-lambda ((name type library))
                (and (not (eq type 'core))
-                    (list name type library
+                    (list name type
+                          (and (melpa-get name) "✓")
+                          library
                           (cadr (assoc name emir--library-reason)))))
            (epkg-sql [:select [name class library] :from packages
                       :where (notnull library)
@@ -280,24 +275,22 @@
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (19)          | Class    | Library                         | Reason                     |
-|-----------------------+----------+---------------------------------+----------------------------|
-| auctex                | gnu      | tex.el                          | pkg/lib name mismatch      |
-| chumpy-windows        | github   | window-jump.el                  | no primary entry point     |
-| ddskk                 | github   | skk.el                          | pkg/lib name mismatch      |
-| dired-hacks           | github   | dired-hacks-utils.el            | no primary entry point     |
-| edb                   | orphaned | lisp/database.el                | no/mismatched main library |
-| emacs-speaks-nonmem   | github   | esn-start.el                    | no/mismatched main library |
-| emux                  | github   | emux-base.el                    | no/mismatched main library |
-| ert-runner            | github   | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| eziam-theme           | github   | eziam-dark-theme.el             | two-variant theme          |
-| farmhouse-theme       | github   | farmhouse-dark-theme.el         | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
-| git-undo              | github   | git-undo.el                     | defect, pending [[https://github.com/jwiegley/git-undo-el/pull/2][#2]]         |
-| html5                 | github   | html5-ncr.el                    | no/mismatched main library |
-| literate-starter-kit  | github   | init.el                         | not a package              |
-| majapahit-theme       | gitlab   | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
-| ne2wm                 | github   | ne2wm-setup.el                  | no/mismatched main library |
-| omtose-phellack-theme | github   | variants/omtose-darker-theme.el | two-variant theme          |
-| punpun-theme          | git      | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
-| spacemacs-theme       | github   | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
-| ultratex              | github   | lisp/ultex.el                   | no/mismatched main library |
+| Package (17)          | Class  | M | Library                         | Reason                     |
+|-----------------------+--------+---+---------------------------------+----------------------------|
+| chumpy-windows        | github |   | window-jump.el                  | no primary entry point     |
+| dired-hacks           | github |   | dired-hacks-utils.el            | no primary entry point     |
+| emacs-speaks-nonmem   | github |   | esn-start.el                    | no/mismatched main library |
+| emux                  | github |   | emux-base.el                    | no/mismatched main library |
+| html5                 | github |   | html5-ncr.el                    | no/mismatched main library |
+| ne2wm                 | github |   | ne2wm-setup.el                  | no/mismatched main library |
+| ultratex              | github |   | lisp/ultex.el                   | no/mismatched main library |
+| ert-runner            | github | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
+| literate-starter-kit  | github | ✓ | init.el                         | not a package              |
+| auctex                | gnu    |   | tex.el                          | pkg/lib name mismatch      |
+| ddskk                 | github | ✓ | skk.el                          | pkg/lib name mismatch      |
+| eziam-theme           | github | ✓ | eziam-dark-theme.el             | two-variant theme          |
+| omtose-phellack-theme | github | ✓ | variants/omtose-darker-theme.el | two-variant theme          |
+| farmhouse-theme       | github | ✓ | farmhouse-dark-theme.el         | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
+| spacemacs-theme       | github | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
+| punpun-theme          | git    | ✓ | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
+| majapahit-theme       | gitlab | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
