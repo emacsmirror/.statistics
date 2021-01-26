@@ -226,42 +226,43 @@
 * Filtered packages
 #+NAME: filtered
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Reason")
-    (mapcar (pcase-lambda (`(,name ,args))
+  (epkg-with-org-header (3 "Package" "Reason" "M" "Url")
+    (mapcar (pcase-lambda (`(,name ,args ,url))
               (list name
                     (cadr (assoc name emir--diverging-reason))
                     ;; (mapconcat #'identity args " ")
-                    ))
-            (epkgs [name upstream-tree] 'epkg-minority-package-p)))
+                    (and (melpa-get name) "✓")
+                    url))
+            (epkgs [name upstream-tree url] 'epkg-minority-package-p)))
 #+END_SRC
 #+RESULTS: filtered
-| Package (25)        | Reason           |
-|---------------------+------------------|
-| autotest            | all-in-one repo  |
-| bibliothek          | all-in-one repo  |
-| cfengine-code-style | mostly non-elisp |
-| clang-format        | mostly non-elisp |
-| cmake-mode          | mostly non-elisp |
-| cython-mode         | mostly non-elisp |
-| diffscuss-mode      | mostly non-elisp |
-| forecast            | all-in-one repo  |
-| google-c-style      | mostly non-elisp |
-| nemerle             | mostly non-elisp |
-| ninja-mode          | mostly non-elisp |
-| org-pua             | all-in-one repo  |
-| org-variable-pitch  | all-in-one repo  |
-| paper-theme         | all-in-one repo  |
-| po-mode             | mostly non-elisp |
-| pylint              | mostly non-elisp |
-| rfringe             | all-in-one repo  |
-| smart-compile       | all-in-one repo  |
-| tenv                | unclean repo     |
-| tfs                 | all-in-one repo  |
-| thesaurus           | all-in-one repo  |
-| thingatpt-ext       | all-in-one repo  |
-| thrift              | mostly non-elisp |
-| toggle              | all-in-one repo  |
-| wn-org              | all-in-one repo  |
+| Package (25)        | Reason           | M | Url                                          |
+|---------------------+------------------+---+----------------------------------------------|
+| rfringe             | all-in-one repo  |   | git@github.com:DinoChiesa/dpchiesa-elisp.git |
+| tfs                 | all-in-one repo  |   | git@github.com:DinoChiesa/dpchiesa-elisp.git |
+| thesaurus           | all-in-one repo  |   | git@github.com:DinoChiesa/dpchiesa-elisp.git |
+| org-pua             | all-in-one repo  |   | git@github.com:Henry/dot-emacs.git           |
+| thingatpt-ext       | all-in-one repo  |   | git@github.com:Henry/dot-emacs.git           |
+| wn-org              | all-in-one repo  |   | git@github.com:Henry/dot-emacs.git           |
+| pylint              | mostly non-elisp | ✓ | git@github.com:PyCQA/pylint.git              |
+| tenv                | unclean repo     |   | git@github.com:aki2o/elisp-test.git          |
+| thrift              | mostly non-elisp | ✓ | git@github.com:apache/thrift.git             |
+| bibliothek          | all-in-one repo  | ✓ | git@github.com:cadadr/elisp.git              |
+| forecast            | all-in-one repo  | ✓ | git@github.com:cadadr/elisp.git              |
+| org-variable-pitch  | all-in-one repo  | ✓ | git@github.com:cadadr/elisp.git              |
+| paper-theme         | all-in-one repo  | ✓ | git@github.com:cadadr/elisp.git              |
+| cfengine-code-style | mostly non-elisp | ✓ | git@github.com:cfengine/core.git             |
+| cython-mode         | mostly non-elisp | ✓ | git@github.com:cython/cython.git             |
+| google-c-style      | mostly non-elisp | ✓ | git@github.com:google/styleguide.git         |
+| clang-format        | mostly non-elisp | ✓ | git@github.com:llvm/llvm-project.git         |
+| ninja-mode          | mostly non-elisp | ✓ | git@github.com:ninja-build/ninja.git         |
+| nemerle             | mostly non-elisp | ✓ | git@github.com:rsdn/nemerle.git              |
+| diffscuss-mode      | mostly non-elisp | ✓ | git@github.com:tomheon/diffscuss.git         |
+| smart-compile       | all-in-one repo  | ✓ | git@github.com:zenitani/elisp.git            |
+| autotest            | all-in-one repo  | ✓ | git@github.com:zenspider/elisp.git           |
+| toggle              | all-in-one repo  | ✓ | git@github.com:zenspider/elisp.git           |
+| po-mode             | mostly non-elisp | ✓ | https://git.savannah.gnu.org/git/gettext.git |
+| cmake-mode          | mostly non-elisp | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
 
 * Set main library
 #+NAME: no-mainlib
