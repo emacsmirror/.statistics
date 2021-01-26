@@ -351,7 +351,7 @@
                'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: slot--upstream-branch
-| Package (73)          | Class     | Branch       |
+| Package (75)          | Class     | Branch       |
 |-----------------------+-----------+--------------|
 | 2bit                  | github    | main         |
 | ansible-vault         | github    | master       |
@@ -381,6 +381,7 @@
 | google-c-style        | minority  | gh-pages     |
 | holy-books            | github    | main         |
 | homebrew-mode         | github    | trunk        |
+| i-ching               | github    | endless      |
 | ispc-mode             | github    | main         |
 | lakota-input          | sourcehut | main         |
 | leo                   | github    | main         |
@@ -397,6 +398,7 @@
 | ob-applescript        | github    | trunk        |
 | ob-deno               | github    | main         |
 | ob-haxe               | github    | main         |
+| org-tag-beautify      | github    | main         |
 | org-themis            | github    | develop      |
 | org-time-budgets      | github    | develop      |
 | org-tree-slide-pauses | github    | main         |

@@ -81,13 +81,13 @@
 | builtin   |  466 |     15 |       |   467 |    14 |       |
 | gnu-elpa  |  128 |    128 |       |       |   252 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4793 |   4793 |       |       |       |  4588 |
+| github    | 4798 |   4798 |       |       |       |  4592 |
 | gitlab    |  144 |    144 |       |       |       |   140 |
-| sourcehut |   19 |     19 |       |       |       |       |
+| sourcehut |   21 |     21 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   74 |     74 |       |       |       |    93 |
+| git       |   74 |     74 |       |       |       |    95 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  606 |    606 |       |       |       |       |
@@ -97,9 +97,9 @@
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  114 |    114 |       |       |       |       |
-| shelved   | 1383 |        |  1383 |       |       |       |
+| shelved   | 1381 |        |  1381 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7861 |   6027 |  1383 |   467 |   266 |  4833 |
+| total     | 7866 |   6034 |  1381 |   467 |   266 |  4839 |
 
 * Emacs
 ** Prefer elpa
@@ -420,7 +420,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (114)   | Secondary package                 | Class     |
+| Primary package (115)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -493,6 +493,7 @@
 | flyspell-correct        | flyspell-correct-popup            | github    |
 | friendly-shell          | friendly-remote-shell             | github    |
 | friendly-shell          | friendly-shell-command            | github    |
+| fsharp-mode             | eglot-fsharp                      | github    |
 | fuz                     | helm-fuz                          | github    |
 | git-emacs               | git-blamed                        | github    |
 | git-modes               | gitattributes-mode                | github    |
@@ -688,7 +689,7 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (46)                 | Class   | Melpa  | Reason              |
+| Package (44)                 | Class   | Melpa  | Reason              |
 |------------------------------+---------+--------+---------------------|
 | image+                       | shelved | github |                     |
 | intero                       | shelved | github |                     |
@@ -721,7 +722,6 @@
 | auth-source-pass             | builtin | github | part of Emacs 26.1  |
 | less-css-mode                | builtin | github | part of Emacs 26.1  |
 | faceup                       | builtin | github | part of Emacs 27.1  |
-| better-defaults              | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | chicken-scheme               | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | company-ghc                  | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | flymake-cppcheck             | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
@@ -735,4 +735,3 @@
 | phpcbf                       | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | projectile-direnv            | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | rsense                       | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| scpaste                      | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
