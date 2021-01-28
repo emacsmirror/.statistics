@@ -14,16 +14,9 @@
     (epkgs [name url] 'epkg-minority-package-p)))
 #+END_SRC
 #+RESULTS: minority
-| Package (25)        | Library                                      |
+| Package (18)        | Library                                      |
 |---------------------+----------------------------------------------|
-| rfringe             | git@github.com:DinoChiesa/dpchiesa-elisp.git |
-| tfs                 | git@github.com:DinoChiesa/dpchiesa-elisp.git |
-| thesaurus           | git@github.com:DinoChiesa/dpchiesa-elisp.git |
-| org-pua             | git@github.com:Henry/dot-emacs.git           |
-| thingatpt-ext       | git@github.com:Henry/dot-emacs.git           |
-| wn-org              | git@github.com:Henry/dot-emacs.git           |
 | pylint              | git@github.com:PyCQA/pylint.git              |
-| tenv                | git@github.com:aki2o/elisp-test.git          |
 | thrift              | git@github.com:apache/thrift.git             |
 | bibliothek          | git@github.com:cadadr/elisp.git              |
 | forecast            | git@github.com:cadadr/elisp.git              |

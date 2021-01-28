@@ -79,27 +79,27 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    14 |       |
-| gnu-elpa  |  128 |    128 |       |       |   252 |       |
+| gnu-elpa  |  128 |    128 |       |       |   253 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4798 |   4798 |       |       |       |  4592 |
-| gitlab    |  144 |    144 |       |       |       |   140 |
+| github    | 4799 |   4799 |       |       |       |  4592 |
+| gitlab    |  145 |    145 |       |       |       |   140 |
 | sourcehut |   21 |     21 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   74 |     74 |       |       |       |    95 |
+| git       |   73 |     73 |       |       |       |    95 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  606 |    606 |       |       |       |       |
-| minority  |   25 |     25 |       |       |       |       |
+| minority  |   18 |     18 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | hg        |   14 |     14 |       |       |       |    12 |
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  114 |    114 |       |       |       |       |
-| shelved   | 1381 |        |  1381 |       |       |       |
+| shelved   | 1387 |        |  1387 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7866 |   6034 |  1381 |   467 |   266 |  4839 |
+| total     | 7866 |   6028 |  1387 |   467 |   267 |  4839 |
 
 * Emacs
 ** Prefer elpa
@@ -199,7 +199,7 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (7)      | Gelpa    |
+| Package (6)      | Gelpa    |
 |------------------+----------|
 | sql-smie         | external |
 | prefixed-core    | external |
@@ -207,7 +207,6 @@
 | shell-quasiquote | external |
 | systemd          | external |
 | ob-haxe          | external |
-| repology         | external |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
@@ -355,7 +354,7 @@
 | tiny                       | github | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                         |
 | tramp                      | gnu    | external | [[https://savannah.gnu.org/projects/tramp]]              |
 | transient                  | github | external | [[https://github.com/magit/transient][magit/transient]]                                      |
-| undo-tree                  | git    | external | [[http://www.dr-qubit.org/emacs.php]]                    |
+| undo-tree                  | gitlab | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                                      |
 | validate                   | github | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                                |
 | valign                     | github | external | [[https://github.com/casouri/valign][casouri/valign]]                                       |
 | vcl-mode                   | git    | external |                                                      |

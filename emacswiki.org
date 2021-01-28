@@ -26,11 +26,10 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (26)   | Author                        | Depender                      | Type | Author                                            |
+| Dependee (24)   | Author                        | Depender                      | Type | Author                                            |
 |-----------------+-------------------------------+-------------------------------+------+---------------------------------------------------|
 | bookmark+       | Drew Adams, Thierry Volpiatto | one-key                       | hard | Andy Stewart                                      |
 | cygwin-mount    | Michael Cook                  | vm                            | hard |                                                   |
-| dropdown-list   |                               | thesaurus                     | soft | Dino Chiesa, Alex Henning                         |
 | el-expectations | rubikitch                     | bts                           | hard | Hiroaki Otsu                                      |
 | el-expectations | rubikitch                     | caskxy                        | soft | Hiroaki Otsu                                      |
 | extract-text    | Joe Bloggs                    | gnus-summary-ext              | soft | Joe Bloggs                                        |
@@ -65,7 +64,6 @@
 | run-assoc       |                               | one-key                       | soft | Andy Stewart                                      |
 | screenshot      | rubikitch                     | easy-escape                   | hard | Clément Pit--Claudel                              |
 | strings         | Drew Adams                    | ergoemacs-mode                | soft | David Capello                                     |
-| tooltip-help    |                               | org-pua                       | hard | Henry G. Weller                                   |
 | unit-test       | Mark Triggs                   | sbt                           | soft |                                                   |
 | vline           | Taiki SUGAWARA                | nxhtml                        | soft | Lennart Borgman (lennart O borgman A gmail O com) |
 | yaoddmuse       |                               | company                       | soft | Nikolaj Schumacher                                |
