@@ -79,15 +79,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    14 |       |
-| gnu-elpa  |  128 |    128 |       |       |   253 |       |
+| gnu-elpa  |  129 |    129 |       |       |   253 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4799 |   4799 |       |       |       |  4592 |
+| github    | 4803 |   4803 |       |       |       |  4584 |
 | gitlab    |  145 |    145 |       |       |       |   140 |
-| sourcehut |   21 |     21 |       |       |       |       |
+| sourcehut |   22 |     22 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   73 |     73 |       |       |       |    95 |
+| git       |   74 |     74 |       |       |       |    96 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  606 |    606 |       |       |       |       |
@@ -96,10 +96,10 @@
 | hg        |   14 |     14 |       |       |       |    12 |
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  114 |    114 |       |       |       |       |
-| shelved   | 1387 |        |  1387 |       |       |       |
+| orphaned  |  115 |    115 |       |       |       |       |
+| shelved   | 1389 |        |  1389 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7866 |   6028 |  1387 |   467 |   267 |  4839 |
+| total     | 7876 |   6036 |  1389 |   467 |   267 |  4832 |
 
 * Emacs
 ** Prefer elpa
@@ -248,7 +248,7 @@
                        [builtin gnu-elpa])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (121)              | Class  | Gelpa    | Link                                                 |
+| Package (120)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -302,7 +302,6 @@
 | hook-helpers               | nongnu | external | [[https://savannah.nongnu.org/projects/hook-helpers-el]] |
 | hydra                      | github | external | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                        |
 | hyperbole                  | gnu    | external | [[http://www.gnu.org/software/hyperbole]]                |
-| ioccur                     | github | external | [[https://github.com/thierryvolpiatto/ioccur][thierryvolpiatto/ioccur]]                              |
 | ivy                        | github | external | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                       |
 | ivy-explorer               | github | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                                 |
 | ivy-posframe               | github | external | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                                 |
@@ -376,12 +375,15 @@
 ** New
 #+NAME: melpa-new
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Melpa" "Link")
-    (-keep (-lambda ((name class url))
+  (epkg-with-org-header ("Package" "Class" "Melpa" "Link")
+    (-keep (-lambda ((name fetcher url))
              (and (not (assoc name emir-pending-packages))
                   (not (or (emir--lookup-url url)
                            (cadr (assoc name emir-secondary-packages))))
-                  (list name class (melpa-org-link name))))
+                  (list name
+                        (emir--url-to-class url)
+                        fetcher
+                        (melpa-org-link name))))
            (epkg-sql [:select [name class url]
                       :from melpa-recipes
                       :where (isnull epkg-package)
@@ -688,49 +690,34 @@
      #'string< :key #'cl-cadddr))
 #+END_SRC
 #+RESULTS: melpa-diverging-types
-| Package (44)                 | Class   | Melpa  | Reason              |
-|------------------------------+---------+--------+---------------------|
-| image+                       | shelved | github |                     |
-| intero                       | shelved | github |                     |
-| cg                           | file    | MIRROR | non-git/hg          |
-| darcsum                      | file    | MIRROR | non-git/hg          |
-| dsvn                         | file    | MIRROR | non-git/hg          |
-| edit-list                    | file    | MIRROR | non-git/hg          |
-| helm-ls-svn                  | file    | MIRROR | non-git/hg          |
-| quack                        | file    | MIRROR | non-git/hg          |
-| tex-smart-umlauts            | file    | MIRROR | non-git/hg          |
-| highlight                    | wiki    | MIRROR | non-git/hg          |
-| angular-mode                 | shelved | ATTIC  | obsolete            |
-| color-theme                  | shelved | ATTIC  | obsolete            |
-| company-racer                | shelved | ATTIC  | obsolete            |
-| drawille                     | shelved | ATTIC  | obsolete            |
-| e2wm-R                       | shelved | ATTIC  | obsolete            |
-| edit-at-point                | shelved | ATTIC  | obsolete            |
-| eno                          | shelved | ATTIC  | obsolete            |
-| fold-dwim                    | shelved | ATTIC  | obsolete            |
-| ido-migemo                   | shelved | ATTIC  | obsolete            |
-| inlineR                      | shelved | ATTIC  | obsolete            |
-| mic-paren                    | shelved | ATTIC  | obsolete            |
-| org-doing                    | shelved | ATTIC  | obsolete            |
-| org-multiple-keymap          | shelved | ATTIC  | obsolete            |
-| org-wunderlist               | shelved | ATTIC  | obsolete            |
-| quick-preview                | shelved | ATTIC  | obsolete            |
-| redshank                     | shelved | ATTIC  | obsolete            |
-| sos                          | shelved | ATTIC  | obsolete            |
-| fold-dwim-org                | shelved | github | obsolete dependency |
-| auth-source-pass             | builtin | github | part of Emacs 26.1  |
-| less-css-mode                | builtin | github | part of Emacs 26.1  |
-| faceup                       | builtin | github | part of Emacs 27.1  |
-| chicken-scheme               | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| company-ghc                  | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| flymake-cppcheck             | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| flymake-google-cpplint       | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| ghc                          | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| helm-ghc                     | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| ido-complete-space-or-hyphen | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| isolate                      | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| love-minor-mode              | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| php-auto-yasnippets          | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| phpcbf                       | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| projectile-direnv            | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
-| rsense                       | shelved | github | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
+| Package (29)        | Class   | Melpa  | Reason              |
+|---------------------+---------+--------+---------------------|
+| cg                  | file    | MIRROR | non-git/hg          |
+| darcsum             | file    | MIRROR | non-git/hg          |
+| dsvn                | file    | MIRROR | non-git/hg          |
+| edit-list           | file    | MIRROR | non-git/hg          |
+| helm-ls-svn         | file    | MIRROR | non-git/hg          |
+| quack               | file    | MIRROR | non-git/hg          |
+| tex-smart-umlauts   | file    | MIRROR | non-git/hg          |
+| highlight           | wiki    | MIRROR | non-git/hg          |
+| angular-mode        | shelved | ATTIC  | obsolete            |
+| color-theme         | shelved | ATTIC  | obsolete            |
+| company-racer       | shelved | ATTIC  | obsolete            |
+| drawille            | shelved | ATTIC  | obsolete            |
+| e2wm-R              | shelved | ATTIC  | obsolete            |
+| edit-at-point       | shelved | ATTIC  | obsolete            |
+| eno                 | shelved | ATTIC  | obsolete            |
+| fold-dwim           | shelved | ATTIC  | obsolete            |
+| ido-migemo          | shelved | ATTIC  | obsolete            |
+| inlineR             | shelved | ATTIC  | obsolete            |
+| mic-paren           | shelved | ATTIC  | obsolete            |
+| org-doing           | shelved | ATTIC  | obsolete            |
+| org-multiple-keymap | shelved | ATTIC  | obsolete            |
+| org-wunderlist      | shelved | ATTIC  | obsolete            |
+| quick-preview       | shelved | ATTIC  | obsolete            |
+| redshank            | shelved | ATTIC  | obsolete            |
+| sos                 | shelved | ATTIC  | obsolete            |
+| fold-dwim-org       | shelved | github | obsolete dependency |
+| auth-source-pass    | builtin | github | part of Emacs 26.1  |
+| less-css-mode       | builtin | github | part of Emacs 26.1  |
+| faceup              | builtin | github | part of Emacs 27.1  |

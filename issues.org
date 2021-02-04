@@ -124,13 +124,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2) | Class  | Feature        | Provider |
+| Package (1) | Class  | Feature        | Provider |
 |-------------+--------+----------------+----------|
 | bts         | github | pophint-config |          |
-| emir        | github | llama          |          |
 
 - bts: https://github.com/aki2o/emacs-bts/pull/17
-- emir: I haven't released llama yet.
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
@@ -152,18 +150,13 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+END_SRC
 #+RESULTS: archived
-| Package (10)     | Repository                  | Melpa | Reverse Dependencies |
-|------------------+-----------------------------+-------+----------------------|
-| flymake-phpcs    | [[https://github.com/senda-akiha/flymake-phpcs][senda-akiha/flymake-phpcs]]   | ✓     | drupal-mode          |
-| github-issues    | [[https://github.com/inkel/github-issues.el][inkel/github-issues.el]]      | ✓     |                      |
-| helm-addressbook | [[https://github.com/emacs-helm/helm-addressbook][emacs-helm/helm-addressbook]] | ✓     |                      |
-| helm-apt         | [[https://github.com/emacs-helm/helm-apt][emacs-helm/helm-apt]]         | ✓     |                      |
-| helm-elscreen    | [[https://github.com/emacs-helm/helm-elscreen][emacs-helm/helm-elscreen]]    | ✓     |                      |
-| helm-emms        | [[https://github.com/emacs-helm/helm-emms][emacs-helm/helm-emms]]        | ✓     |                      |
-| helm-firefox     | [[https://github.com/emacs-helm/helm-firefox][emacs-helm/helm-firefox]]     | ✓     | org-linkany          |
-| helm-ls-git      | [[https://github.com/emacs-helm/helm-ls-git][emacs-helm/helm-ls-git]]      | ✓     | helm                 |
-| helm-ls-hg       | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]]       | ✓     | helm                 |
-| helm-w3m         | [[https://github.com/emacs-helm/helm-w3m][emacs-helm/helm-w3m]]         | ✓     | org-linkany          |
+| Package (5)   | Repository                 | Melpa | Reverse Dependencies |
+|---------------+----------------------------+-------+----------------------|
+| flymake-phpcs | [[https://github.com/senda-akiha/flymake-phpcs][senda-akiha/flymake-phpcs]]  | ✓     | drupal-mode          |
+| helm-ls-hg    | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]]      | ✓     | helm                 |
+| helm-w3m      | [[https://github.com/emacs-helm/helm-w3m][emacs-helm/helm-w3m]]        | ✓     | org-linkany          |
+| parinfer      | [[https://github.com/DogLooksGood/parinfer-mode][DogLooksGood/parinfer-mode]] | ✓     |                      |
+| snippet       | [[https://github.com/pkazmier/snippet.el][pkazmier/snippet.el]]        | ✓     | rails                |
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.
