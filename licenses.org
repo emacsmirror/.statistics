@@ -69,7 +69,7 @@
 #+RESULTS: mirror-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-3+        |  3955 |      65 |
+| GPL-3+        |  3962 |      65 |
 | GPL-2+        |  1177 |      19 |
 | MIT           |   190 |       3 |
 | GPL-3         |   175 |       3 |
@@ -87,9 +87,9 @@
 | WTFPL-2       |     7 |       0 |
 | GPL-2         |     5 |       0 |
 | GPL-1+        |     4 |       0 |
+| nil           |     3 |       0 |
 | ISC (and)     |     3 |       0 |
 | Zlib          |     3 |       0 |
-| nil           |     2 |       0 |
 | Artistic-2.0  |     2 |       0 |
 | COPYLOVE      |     2 |       0 |
 | CeCILL        |     2 |       0 |
@@ -109,9 +109,9 @@
 | Ruby          |     1 |       0 |
 | ZLIB          |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  5337 |      88 |
+| total GNU     |  5344 |      88 |
 |---------------+-------+---------|
-| total         |  6044 |     100 |
+| total         |  6052 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -123,8 +123,9 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (2)     | Class    | License |
+| Package (3)     | Class    | License |
 |-----------------+----------+---------|
+| ada-ref-man     | gnu-elpa |         |
 | logpad          | github   |         |
 | uni-confusables | gnu-elpa |         |
 
@@ -142,8 +143,8 @@
 #+RESULTS: attic-overview
 | License       | Count | Percent |
 |---------------+-------+---------|
-| GPL-2+        |   812 |      58 |
-| GPL-3+        |   331 |      24 |
+| GPL-2+        |   812 |      59 |
+| GPL-3+        |   330 |      24 |
 | GPL-2         |    61 |       4 |
 | GPL           |    44 |       3 |
 | public-domain |    35 |       3 |
@@ -172,9 +173,9 @@
 | LGPL-2.1+     |     1 |       0 |
 | WTFPL-2       |     1 |       0 |
 |---------------+-------+---------|
-| total GNU     |  1285 |      93 |
+| total GNU     |  1284 |      93 |
 |---------------+-------+---------|
-| total         |  1389 |     100 |
+| total         |  1388 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown
