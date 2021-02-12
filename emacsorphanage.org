@@ -95,40 +95,55 @@ the orphanage to fix these issues.
 | setnu          | ✔ |   |
 | yafolding      | ✔ | ✔ |
 
-* Wiki packages needed by non-wiki packages on Melpa
+* Wiki packages needed by non-wiki packages
 
 These packages are being distributed on the Emacswiki and other
 packages that are not distributed on the Emacswiki depend on them.
-Anyone can edit packages on the Emacswiki, which is a big security
-risk, so eventually we want to remove those packages from Melpa.
-Not importing these packages from the wiki anymore is a step into
-that direction.
 
-Also see Melpa issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
+Anyone can edit packages on the Emacswiki, which is a big security
+risk, so we "mirror" a frozen copy from the orphanage instead of
+the world-writable copy from the wiki.
+
+Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 
 #+NAME: required-by-nonwiki
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "wiki needed by non-wiki" "wiki multiple files")
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Package (16)     | E | M |
-|------------------+---+---|
-| dirtree          | ✔ | ✔ |
-| ert-expectations | ✔ | ✔ |
-| findr            | ✔ | ✔ |
-| hide-lines       | ✔ | ✔ |
-| http-post-simple | ✔ | ✔ |
-| key-chord        | ✔ | ✔ |
-| levenshtein      | ✔ | ✔ |
-| linkd            | ✔ |   |
-| shell-command    | ✔ | ✔ |
-| shell-history    | ✔ | ✔ |
-| showtip          | ✔ | ✔ |
-| sr-speedbar      | ✔ | ✔ |
-| transpose-frame  | ✔ | ✔ |
-| tree-mode        | ✔ | ✔ |
-| w32-browser      | ✔ | ✔ |
-| windata          | ✔ | ✔ |
+| Package (31)       | E | M |
+|--------------------+---+---|
+| cygwin-mount       | ✔ |   |
+| dirtree            | ✔ | ✔ |
+| el-expectations    | ✔ |   |
+| ert-expectations   | ✔ | ✔ |
+| extract-text       | ✔ |   |
+| findr              | ✔ | ✔ |
+| hide-lines         | ✔ | ✔ |
+| highline           | ✔ |   |
+| http-post-simple   | ✔ | ✔ |
+| imdb               | ✔ |   |
+| key-chord          | ✔ | ✔ |
+| keyword-arg-macros | ✔ |   |
+| later-do           | ✔ |   |
+| levenshtein        | ✔ | ✔ |
+| linkd              | ✔ |   |
+| oddmuse            | ✔ |   |
+| org-json           | ✔ |   |
+| policy-switch      | ✔ |   |
+| run-assoc          | ✔ |   |
+| screenshot         | ✔ |   |
+| shell-command      | ✔ | ✔ |
+| shell-history      | ✔ | ✔ |
+| showtip            | ✔ | ✔ |
+| sr-speedbar        | ✔ | ✔ |
+| transpose-frame    | ✔ | ✔ |
+| tree-mode          | ✔ | ✔ |
+| unit-test          | ✔ |   |
+| vline              | ✔ |   |
+| w32-browser        | ✔ | ✔ |
+| windata            | ✔ | ✔ |
+| yaoddmuse          | ✔ |   |
 
 * Imported from non-git/hg repository
 
@@ -276,7 +291,4 @@ François.
   (emir--list-orphans nil)
 #+END_SRC
 #+RESULTS: new
-| Package (1) | E | M |
-|-------------+---+---|
-| image-plus  |   |   |
 

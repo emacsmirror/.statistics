@@ -10,70 +10,55 @@
 * Wiki packages required by non-wiki packages
 #+NAME: required-by-nonwiki
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Dependee" "Author" "Depender" "Type" "Author")
+  (epkg-with-org-header ("Dependee" "M" "Author" "Depender" "M" "Type" "Author")
     (-mapcat
      (lambda (dependee)
        (-mapcat (-lambda ((depender . features))
-                  (let ((depender-pkg (epkg depender)))
+                  (let ((depender-pkg (epkg depender))
+                        (name (oref dependee name)))
                     (and (not (epkg-wiki-package-p depender-pkg))
                          (not (epkg-shelved-package-p depender-pkg))
-                         `((,(oref dependee name)
+                         `((,name
+                            ,(if (melpa-get name) "✓" "")
                             ,(caar (oref dependee authors))
                             ,depender
+                            ,(if (melpa-get depender) "✓" "")
                             ,(if (-any #'symbolp features) "hard" "soft")
                             ,(caar (oref depender-pkg authors)))))))
                 (epkg-reverse-dependencies dependee)))
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (25)   | Author                        | Depender                      | Type | Author                                                           |
-|-----------------+-------------------------------+-------------------------------+------+------------------------------------------------------------------|
-| bookmark+       | Drew Adams, Thierry Volpiatto | one-key                       | hard | Andy Stewart                                                     |
-| cygwin-mount    | Michael Cook                  | vm                            | hard |                                                                  |
-| el-expectations | rubikitch                     | bts                           | hard | Hiroaki Otsu                                                     |
-| el-expectations | rubikitch                     | caskxy                        | soft | Hiroaki Otsu                                                     |
-| extract-text    | Joe Bloggs                    | gnus-summary-ext              | soft | Joe Bloggs                                                       |
-| filesets+       | Drew Adams                    | helm-filesets                 | soft | Graham Clark                                                     |
-| font-lock+      | Drew Adams                    | icons-in-terminal             | hard |                                                                  |
-| font-lock+      | Drew Adams                    | jemdoc-mode                   | soft | Dimitar Dimitrov                                                 |
-| frame-cmds      | Drew Adams                    | frame-ctr                     | hard | Takaaki ISHIKAWA                                                 |
-| hexrgb          | Drew Adams                    | jabber                        | hard |                                                                  |
-| hexrgb          | Drew Adams                    | on-screen                     | soft | Michael Heerdegen                                                |
-| hexrgb          | Drew Adams                    | one-key                       | hard | Andy Stewart                                                     |
-| hexrgb          | Drew Adams                    | paper-theme                   | hard | Göktuğ Kayaalp                                                   |
-| highlight       | Drew Adams                    | csound-mode                   | hard | Hlöðver Sigurðsson                                               |
-| highlight       | Drew Adams                    | evil-extra-operator           | hard | Dewdrops                                                         |
-| highlight       | Drew Adams                    | evil-search-highlight-persist | hard | Juanjo Alvarez                                                   |
-| highlight       | Drew Adams                    | floobits                      | hard | Geoff Greer                                                      |
-| highlight       | Drew Adams                    | lambdapi-mode                 | hard | Ashish Barnawal, Diego Riviero, Gabriel Hondet, Rodolphe Lepigre |
-| highlight       | Drew Adams                    | nrepl-eval-sexp-fu            | hard | Takeshi Banse                                                    |
-| highlight       | Drew Adams                    | php-boris-minor-mode          | hard | steckerhalter                                                    |
-| highlight       | Drew Adams                    | sonic-pi                      | hard | Joseph Wilk                                                      |
-| highlight       | Drew Adams                    | spiral                        | hard | Daniel Barreto                                                   |
-| highlight       | Drew Adams                    | zones                         | hard | Drew Adams                                                       |
-| highline        | Vinicius Jose Latorre         | emms                          | hard | Jorgen Schäfer                                                   |
-| icicles         | Drew Adams                    | rcodetools                    | hard |                                                                  |
-| imdb            |                               | movie                         | hard | Lars Magne Ingebrigtsen                                          |
-| isearch-prop    | Drew Adams                    | zones                         | soft | Drew Adams                                                       |
-| later-do        |                               | emms-player-mpv-jp-radios     | hard |                                                                  |
-| later-do        |                               | emms-player-simple-mpv        | hard |                                                                  |
-| misc-fns        | Drew Adams                    | frontside-javascript          | soft | Frontside Engineering                                            |
-| oddmuse         |                               | company                       | soft | Nikolaj Schumacher                                               |
-| org-json        | Changyuan Yu                  | es-mode                       | hard | Lee Hinman                                                       |
-| policy-switch   | Christoffer S. Hansen         | one-key                       | soft | Andy Stewart                                                     |
-| run-assoc       |                               | look-dired                    | hard | Joe Bloggs                                                       |
-| run-assoc       |                               | one-key                       | soft | Andy Stewart                                                     |
-| screenshot      | rubikitch                     | easy-escape                   | hard | Clément Pit--Claudel                                             |
-| strings         | Drew Adams                    | ergoemacs-mode                | soft | David Capello                                                    |
-| strings         | Drew Adams                    | frontside-javascript          | soft | Frontside Engineering                                            |
-| unit-test       | Mark Triggs                   | sbt                           | soft |                                                                  |
-| vline           | Taiki SUGAWARA                | nxhtml                        | soft | Lennart Borgman (lennart O borgman A gmail O com)                |
-| yaoddmuse       |                               | company                       | soft | Nikolaj Schumacher                                               |
-| yaoddmuse       |                               | one-key                       | soft | Andy Stewart                                                     |
-| yaoddmuse       |                               | org-readme                    | soft | Matthew L. Fidler                                                |
-| zoom-frm        | Drew Adams                    | hyperbole                     | soft | Bob Weiner                                                       |
+| Dependee (11) | M | Author                        | Depender                      | M | Type | Author                                                           |
+|---------------+---+-------------------------------+-------------------------------+---+------+------------------------------------------------------------------|
+| bookmark+     |   | Drew Adams, Thierry Volpiatto | one-key                       |   | hard | Andy Stewart                                                     |
+| filesets+     |   | Drew Adams                    | helm-filesets                 | ✓ | soft | Graham Clark                                                     |
+| font-lock+    |   | Drew Adams                    | icons-in-terminal             |   | hard |                                                                  |
+| font-lock+    |   | Drew Adams                    | jemdoc-mode                   | ✓ | soft | Dimitar Dimitrov                                                 |
+| frame-cmds    |   | Drew Adams                    | frame-ctr                     |   | hard | Takaaki ISHIKAWA                                                 |
+| hexrgb        |   | Drew Adams                    | jabber                        | ✓ | hard |                                                                  |
+| hexrgb        |   | Drew Adams                    | on-screen                     | ✓ | soft | Michael Heerdegen                                                |
+| hexrgb        |   | Drew Adams                    | one-key                       |   | hard | Andy Stewart                                                     |
+| hexrgb        |   | Drew Adams                    | paper-theme                   | ✓ | hard | Göktuğ Kayaalp                                                   |
+| highlight     | ✓ | Drew Adams                    | csound-mode                   | ✓ | hard | Hlöðver Sigurðsson                                               |
+| highlight     | ✓ | Drew Adams                    | evil-extra-operator           | ✓ | hard | Dewdrops                                                         |
+| highlight     | ✓ | Drew Adams                    | evil-search-highlight-persist | ✓ | hard | Juanjo Alvarez                                                   |
+| highlight     | ✓ | Drew Adams                    | floobits                      | ✓ | hard | Geoff Greer                                                      |
+| highlight     | ✓ | Drew Adams                    | lambdapi-mode                 | ✓ | hard | Ashish Barnawal, Diego Riviero, Gabriel Hondet, Rodolphe Lepigre |
+| highlight     | ✓ | Drew Adams                    | nrepl-eval-sexp-fu            | ✓ | hard | Takeshi Banse                                                    |
+| highlight     | ✓ | Drew Adams                    | php-boris-minor-mode          | ✓ | hard | steckerhalter                                                    |
+| highlight     | ✓ | Drew Adams                    | sonic-pi                      | ✓ | hard | Joseph Wilk                                                      |
+| highlight     | ✓ | Drew Adams                    | spiral                        | ✓ | hard | Daniel Barreto                                                   |
+| highlight     | ✓ | Drew Adams                    | zones                         |   | hard | Drew Adams                                                       |
+| icicles       |   | Drew Adams                    | rcodetools                    |   | hard |                                                                  |
+| isearch-prop  |   | Drew Adams                    | zones                         |   | soft | Drew Adams                                                       |
+| misc-fns      |   | Drew Adams                    | frontside-javascript          | ✓ | soft | Frontside Engineering                                            |
+| strings       |   | Drew Adams                    | ergoemacs-mode                | ✓ | soft | David Capello                                                    |
+| strings       |   | Drew Adams                    | frontside-javascript          | ✓ | soft | Frontside Engineering                                            |
+| zoom-frm      |   | Drew Adams                    | hyperbole                     |   | soft | Bob Weiner                                                       |
 
 - frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-775956533
+- Joe Bloggs: [[notmuch:id:87wnvdf24f.fsf@bernoul.li][(Email) Please migrate your packages away from Emacswiki]]
 
 * Wiki packages
 
@@ -93,7 +78,7 @@
 	     #'string< :key #'car))
 #+END_SRC
 #+RESULTS: all-wiki
-| Author (201)                                    | Package                        |
+| Author (199)                                    | Package                        |
 |-------------------------------------------------+--------------------------------|
 |                                                 | ac-dabbrev                     |
 |                                                 | acd                            |
@@ -174,7 +159,6 @@
 |                                                 | help-dwim                      |
 |                                                 | help-dwim-perlapi              |
 |                                                 | help-dwim-perldoc              |
-|                                                 | imdb                           |
 |                                                 | imenu-tree                     |
 |                                                 | inf-perl                       |
 |                                                 | ipa                            |
@@ -185,7 +169,6 @@
 |                                                 | jpl-reformat                   |
 |                                                 | keep-end                       |
 |                                                 | keyboard-macro-timer           |
-|                                                 | later-do                       |
 |                                                 | line-comment-banner            |
 |                                                 | line-num                       |
 |                                                 | linkify                        |
@@ -200,7 +183,6 @@
 |                                                 | mybuffers                      |
 |                                                 | mz-comment-fix                 |
 |                                                 | newsticker-notify              |
-|                                                 | oddmuse                        |
 |                                                 | openpaste                      |
 |                                                 | org-search-goto                |
 |                                                 | org-search-goto-ml             |
@@ -221,7 +203,6 @@
 |                                                 | repdet                         |
 |                                                 | ricette-mode                   |
 |                                                 | rmail-saver                    |
-|                                                 | run-assoc                      |
 |                                                 | rusewiki                       |
 |                                                 | school-points-off              |
 |                                                 | scrl-margs                     |
@@ -246,7 +227,6 @@
 |                                                 | webgen-mode                    |
 |                                                 | wimpy-del                      |
 |                                                 | xs-mode                        |
-|                                                 | yaoddmuse                      |
 |                                                 | yatm                           |
 | Aaron S. Hawley                                 | bmi                            |
 | Aaron S. Hawley                                 | fdlcap                         |
@@ -287,13 +267,11 @@
 | Changyuan Yu                                    | couchdb-document-text          |
 | Changyuan Yu                                    | mpris-dbus                     |
 | Changyuan Yu                                    | mpris-track-list               |
-| Changyuan Yu                                    | org-json                       |
 | Changyuan Yu                                    | stardict                       |
 | Charles Sebold                                  | vbs-repl                       |
 | Chong Yidong                                    | wikitext-mode                  |
 | Chris Done                                      | align-by-current-symbol        |
 | Chris Stucchio                                  | multi-eshell                   |
-| Christoffer S. Hansen                           | policy-switch                  |
 | ChunYe Wang                                     | wcy-swbuff                     |
 | Craig Lawson                                    | dired-column-widths            |
 | Craig McDaniel                                  | ppindent                       |
@@ -464,8 +442,6 @@
 | Joao Cachopo                                    | ediff-trees                    |
 | Joe Bloggs                                      | bbdb-sms                       |
 | Joe Bloggs                                      | bs-ext                         |
-| Joe Bloggs                                      | extract-text                   |
-| Joe Bloggs                                      | keyword-arg-macros             |
 | Joe Bloggs                                      | sms                            |
 | Joel J. Adamson                                 | enscript                       |
 | Johan Claesson                                  | jcl-command-subset             |
@@ -525,7 +501,6 @@
 | Mario Domgörgen                                 | oggel                          |
 | Mario Lang                                      | bf                             |
 | Mark Triggs                                     | gnus-notify                    |
-| Mark Triggs                                     | unit-test                      |
 | Martin Rudalics                                 | speck                          |
 | Mathias Dahl                                    | amarok                         |
 | Mathias Dahl                                    | electric-dot-and-dash          |
@@ -549,7 +524,6 @@
 | Michael Abraham Shulman                         | fortune-mode                   |
 | Michael Abraham Shulman                         | tagbody                        |
 | Michael Abrahams                                | etom                           |
-| Michael Cook                                    | cygwin-mount                   |
 | Michael Heerdegen                               | emacs-lock+                    |
 | Michael Schierl                                 | ireplace                       |
 | Michele Bini                                    | embeddedchangelog              |
@@ -624,7 +598,6 @@
 | Taiki SUGAWARA                                  | lcomp                          |
 | Taiki SUGAWARA                                  | paint                          |
 | Taiki SUGAWARA                                  | trans-regions                  |
-| Taiki SUGAWARA                                  | vline                          |
 | Takashi MITSUISHI                               | mail-cmple-addr                |
 | Takeshi Banse                                   | el-swank-fuzzy                 |
 | Tamas Patrovics                                 | autoinfo                       |
@@ -651,7 +624,6 @@
 | Vinicius Jose Latorre                           | ascii                          |
 | Vinicius Jose Latorre                           | blank-mode                     |
 | Vinicius Jose Latorre                           | dialog                         |
-| Vinicius Jose Latorre                           | highline                       |
 | Vinicius Jose Latorre                           | rational                       |
 | Vinicius Jose Latorre                           | spell-number                   |
 | Vinicius Jose Latorre                           | switch-file                    |
@@ -689,13 +661,11 @@
 | rubikitch                                       | d-insert-assert                |
 | rubikitch                                       | display-buffer-for-wide-screen |
 | rubikitch                                       | display-hatebu                 |
-| rubikitch                                       | el-expectations                |
 | rubikitch                                       | eldoc-extension                |
 | rubikitch                                       | emacs-init-check               |
 | rubikitch                                       | icicles-iswitchb               |
 | rubikitch                                       | install-elisp                  |
 | rubikitch                                       | mode-line-frame                |
-| rubikitch                                       | screenshot                     |
 | rubikitch                                       | space-chord                    |
 | rubikitch                                       | unify-buffer                   |
 | tkld                                            | mail-signature                 |
