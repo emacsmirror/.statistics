@@ -76,7 +76,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (83)                    | Class    | Feature                  | Reason                                              |
+| Package (84)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -84,6 +84,7 @@
 | auto-complete                   | github   | semantic-ia              | backward compatibility                              |
 | auto-complete-nxml              | github   | anything-project         | anything                                            |
 | bbdb                            | nongnu   | vm-autoloads             | generated external file                             |
+| bts                             | github   | pophint-config           | pending [[https://github.com/aki2o/emacs-bts/pull/17][#17]]                                         |
 | centered-window                 | github   | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                          |
 | citeproc                        | github   | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                           |
 | clj-refactor                    | github   | seq-25                   | backward compatibility                              |
@@ -225,8 +226,8 @@
 | vm            | orphaned |
 | wanderlust    | github   |
 
-* Filtered packages
-#+NAME: filtered
+* Filtered (minority) repositories
+#+NAME: filtered-minority
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header (3 "Package" "Reason" "M" "Url")
     (mapcar (pcase-lambda (`(,name ,args ,url))
@@ -237,7 +238,7 @@
                     url))
             (epkgs [name upstream-tree url] 'epkg-minority-package-p)))
 #+END_SRC
-#+RESULTS: filtered
+#+RESULTS: filtered-minority
 | Package (18)        | Reason           | M | Url                                          |
 |---------------------+------------------+---+----------------------------------------------|
 | pylint              | mostly non-elisp | ✓ | git@github.com:PyCQA/pylint.git              |
@@ -258,6 +259,47 @@
 | toggle              | all-in-one repo  | ✓ | git@github.com:zenspider/elisp.git           |
 | po-mode             | mostly non-elisp | ✓ | https://git.savannah.gnu.org/git/gettext.git |
 | cmake-mode          | mostly non-elisp | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
+
+* Filtered (subtree) repositories
+#+NAME: filtered-subtree
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header (3 "Package" "M" "Url")
+    (mapcar (pcase-lambda (`(,name ,args ,url))
+              (list name
+                    ;; (cadr (assoc name emir--diverging-reason))
+                    ;; (mapconcat #'identity args " ")
+                    (and (melpa-get name) "✓")
+                    url))
+            (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
+#+END_SRC
+#+RESULTS: filtered-subtree
+| Package (25)    | M | Url                                                                 |
+|-----------------+---+---------------------------------------------------------------------|
+| agda2-mode      | ✓ | git@github.com:agda/agda.git                                        |
+| company-go      | ✓ | git@github.com:nsf/gocode.git                                       |
+| cubicle-mode    | ✓ | git@github.com:cubicle-model-checker/cubicle.git                    |
+| dune            | ✓ | git@github.com:ocaml/dune.git                                       |
+| egison-mode     | ✓ | git@github.com:egison/egison.git                                    |
+| fuel            | ✓ | git@github.com:factor/factor.git                                    |
+| go-autocomplete | ✓ | git@github.com:nsf/gocode.git                                       |
+| golint          | ✓ | git@github.com:golang/lint.git                                      |
+| govc            | ✓ | git@github.com:vmware/govmomi.git                                   |
+| gvpr-mode       | ✓ | git@github.com:rodw/gvpr-lib.git                                    |
+| kivy-mode       | ✓ | git@github.com:kivy/kivy.git                                        |
+| lambdapi-mode   | ✓ | git@github.com:Deducteam/lambdapi.git                               |
+| lfe-mode        | ✓ | git@github.com:rvirding/lfe.git                                     |
+| mandoku         | ✓ | git@github.com:mandoku/mandoku.git                                  |
+| merlin          | ✓ | git@github.com:the-lambda-church/merlin.git                         |
+| mozart          |   | git@github.com:mozart/mozart2.git                                   |
+| mozc            | ✓ | git@github.com:google/mozc.git                                      |
+| password-store  | ✓ | https://git.zx2c4.com/password-store                                |
+| protobuf-mode   | ✓ | git@github.com:google/protobuf.git                                  |
+| rcodetools      |   | git@github.com:rcodetools/rcodetools.git                            |
+| scad-mode       | ✓ | git@github.com:openscad/openscad.git                                |
+| stumpwm-mode    | ✓ | git@github.com:stumpwm/stumpwm-contrib.git                          |
+| utop            | ✓ | git@github.com:diml/utop.git                                        |
+| widgetjs        | ✓ | git@github.com:foretagsplatsen/emacs-js.git                         |
+| zeitgeist       |   | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
 
 * Set main library
 #+NAME: no-mainlib

@@ -81,7 +81,7 @@
 | builtin   |  466 |     15 |       |   467 |    14 |       |
 | gnu-elpa  |  132 |    132 |       |       |   254 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4817 |   4817 |       |       |       |  4598 |
+| github    | 4816 |   4816 |       |       |       |  4597 |
 | gitlab    |  149 |    149 |       |       |       |   143 |
 | sourcehut |   25 |     25 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -97,9 +97,9 @@
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  130 |    130 |       |       |       |       |
-| shelved   | 1388 |        |  1388 |       |       |       |
+| shelved   | 1389 |        |  1389 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7899 |   6060 |  1388 |   467 |   268 |  4852 |
+| total     | 7899 |   6059 |  1389 |   467 |   268 |  4851 |
 
 * Emacs
 ** Prefer elpa
@@ -647,77 +647,3 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-
-** Diverging types
-#+NAME: melpa-diverging-types
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "Melpa" "Reason")
-    (cl-sort
-     (-keep
-      (pcase-lambda (`(,name ,class ,fetcher ,repo))
-        (and (not (pcase (list class fetcher)
-                    (`(subtree  github) t)
-                    (`(subtree  git)    t)
-                    (`(minority github) t)
-                    (`(minority git)    t)))
-             (pcase (list class fetcher)
-               ((and `(orphaned github)
-                     (guard (string-prefix-p "emacsorphanage/" repo)))
-                )
-               ((and `(,_ git)
-                     (guard (member class '(sourcehut gnu nongnu))))
-                )
-               ((and (or `(file github)
-                         `(wiki github)) ; for "highlight"
-                     (guard (string-prefix-p "emacsmirror/" repo)))
-                (list name class "MIRROR" "non-git/hg"))
-               ((and `(shelved github)
-                     (guard (string-prefix-p "emacsattic/" repo)))
-                (list name class "ATTIC" "obsolete"))
-               (_
-                (list name class fetcher
-                      (cadr (assoc name emir--diverging-reason)))))))
-      (epkg-sql [:select :distinct [packages:name
-                                    packages:class
-                                    melpa-recipes:class
-                                    melpa-recipes:repo]
-                 :from [packages melpa-recipes]
-                 :where    (= melpa-recipes:epkg-package packages:name)
-                 :and      (= melpa-recipes:epkg-package melpa-recipes:name)
-                 :and :not (= melpa-recipes:class        packages:class)
-                 :order-by [(asc packages:class)
-                            (asc packages:name)]]))
-     #'string< :key #'cl-cadddr))
-#+END_SRC
-#+RESULTS: melpa-diverging-types
-| Package (29)        | Class   | Melpa  | Reason              |
-|---------------------+---------+--------+---------------------|
-| cg                  | file    | MIRROR | non-git/hg          |
-| darcsum             | file    | MIRROR | non-git/hg          |
-| dsvn                | file    | MIRROR | non-git/hg          |
-| edit-list           | file    | MIRROR | non-git/hg          |
-| helm-ls-svn         | file    | MIRROR | non-git/hg          |
-| quack               | file    | MIRROR | non-git/hg          |
-| tex-smart-umlauts   | file    | MIRROR | non-git/hg          |
-| highlight           | wiki    | MIRROR | non-git/hg          |
-| angular-mode        | shelved | ATTIC  | obsolete            |
-| color-theme         | shelved | ATTIC  | obsolete            |
-| company-racer       | shelved | ATTIC  | obsolete            |
-| drawille            | shelved | ATTIC  | obsolete            |
-| e2wm-R              | shelved | ATTIC  | obsolete            |
-| edit-at-point       | shelved | ATTIC  | obsolete            |
-| eno                 | shelved | ATTIC  | obsolete            |
-| fold-dwim           | shelved | ATTIC  | obsolete            |
-| ido-migemo          | shelved | ATTIC  | obsolete            |
-| inlineR             | shelved | ATTIC  | obsolete            |
-| mic-paren           | shelved | ATTIC  | obsolete            |
-| org-doing           | shelved | ATTIC  | obsolete            |
-| org-multiple-keymap | shelved | ATTIC  | obsolete            |
-| org-wunderlist      | shelved | ATTIC  | obsolete            |
-| quick-preview       | shelved | ATTIC  | obsolete            |
-| redshank            | shelved | ATTIC  | obsolete            |
-| sos                 | shelved | ATTIC  | obsolete            |
-| fold-dwim-org       | shelved | github | obsolete dependency |
-| auth-source-pass    | builtin | github | part of Emacs 26.1  |
-| less-css-mode       | builtin | github | part of Emacs 26.1  |
-| faceup              | builtin | github | part of Emacs 27.1  |

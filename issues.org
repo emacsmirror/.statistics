@@ -7,69 +7,6 @@
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 :END:
-* Minority packages
-#+NAME: minority
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header (1 "Package" "Library")
-    (epkgs [name url] 'epkg-minority-package-p)))
-#+END_SRC
-#+RESULTS: minority
-| Package (18)        | Library                                      |
-|---------------------+----------------------------------------------|
-| pylint              | git@github.com:PyCQA/pylint.git              |
-| thrift              | git@github.com:apache/thrift.git             |
-| bibliothek          | git@github.com:cadadr/elisp.git              |
-| forecast            | git@github.com:cadadr/elisp.git              |
-| org-variable-pitch  | git@github.com:cadadr/elisp.git              |
-| paper-theme         | git@github.com:cadadr/elisp.git              |
-| cfengine-code-style | git@github.com:cfengine/core.git             |
-| cython-mode         | git@github.com:cython/cython.git             |
-| google-c-style      | git@github.com:google/styleguide.git         |
-| clang-format        | git@github.com:llvm/llvm-project.git         |
-| ninja-mode          | git@github.com:ninja-build/ninja.git         |
-| nemerle             | git@github.com:rsdn/nemerle.git              |
-| diffscuss-mode      | git@github.com:tomheon/diffscuss.git         |
-| smart-compile       | git@github.com:zenitani/elisp.git            |
-| autotest            | git@github.com:zenspider/elisp.git           |
-| toggle              | git@github.com:zenspider/elisp.git           |
-| po-mode             | https://git.savannah.gnu.org/git/gettext.git |
-| cmake-mode          | https://gitlab.kitware.com/cmake/cmake.git   |
-
-* Subtree packages
-#+NAME: subtree
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Library")
-    (epkgs [name url] 'epkg-subtree-package-p)))
-#+END_SRC
-#+RESULTS: subtree
-| Package (25)    | Library                                                             |
-|-----------------+---------------------------------------------------------------------|
-| agda2-mode      | git@github.com:agda/agda.git                                        |
-| company-go      | git@github.com:nsf/gocode.git                                       |
-| cubicle-mode    | git@github.com:cubicle-model-checker/cubicle.git                    |
-| dune            | git@github.com:ocaml/dune.git                                       |
-| egison-mode     | git@github.com:egison/egison.git                                    |
-| fuel            | git@github.com:factor/factor.git                                    |
-| go-autocomplete | git@github.com:nsf/gocode.git                                       |
-| golint          | git@github.com:golang/lint.git                                      |
-| govc            | git@github.com:vmware/govmomi.git                                   |
-| gvpr-mode       | git@github.com:rodw/gvpr-lib.git                                    |
-| kivy-mode       | git@github.com:kivy/kivy.git                                        |
-| lambdapi-mode   | git@github.com:Deducteam/lambdapi.git                               |
-| lfe-mode        | git@github.com:rvirding/lfe.git                                     |
-| mandoku         | git@github.com:mandoku/mandoku.git                                  |
-| merlin          | git@github.com:the-lambda-church/merlin.git                         |
-| mozart          | git@github.com:mozart/mozart2.git                                   |
-| mozc            | git@github.com:google/mozc.git                                      |
-| password-store  | https://git.zx2c4.com/password-store                                |
-| protobuf-mode   | git@github.com:google/protobuf.git                                  |
-| rcodetools      | git@github.com:rcodetools/rcodetools.git                            |
-| scad-mode       | git@github.com:openscad/openscad.git                                |
-| stumpwm-mode    | git@github.com:stumpwm/stumpwm-contrib.git                          |
-| utop            | git@github.com:diml/utop.git                                        |
-| widgetjs        | git@github.com:foretagsplatsen/emacs-js.git                         |
-| zeitgeist       | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
-
 * Features provided by multiple packages
 #+NAME: conflict
 #+BEGIN_SRC emacs-lisp
@@ -124,48 +61,42 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature        | Provider |
-|-------------+--------+----------------+----------|
-| bts         | github | pophint-config |          |
-
-- bts: https://github.com/aki2o/emacs-bts/pull/17
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
 #+NAME: archived
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Repository" "Melpa" "Reverse Dependencies")
+  (epkg-with-org-header ("Package" "Repository" "M" "Reverse Dependencies")
     (cl-sort
      (-keep (lambda (name)
               (and (member name emir--archived-packages)
                    (list name
                          (epkg-org-link name)
-                         (and (melpa-get name)
-                              ;; (oref (epkg name) downloads)
-                              "✓"
-                              )
+                         (and (melpa-get name) "✓")
+                         ;; (and (melpa-get name) (oref (epkg name) downloads))
                          (mapconcat (pcase-lambda (`(,name . ,_features)) name)
                                     (epkg-reverse-dependencies name) " "))))
             (epkgs 'name 'epkg-mirrored-package--eieio-childp))
      #'string< :key #'car))
 #+END_SRC
 #+RESULTS: archived
-| Package (5)   | Repository                 | Melpa | Reverse Dependencies |
-|---------------+----------------------------+-------+----------------------|
-| flymake-phpcs | [[https://github.com/senda-akiha/flymake-phpcs][senda-akiha/flymake-phpcs]]  | ✓     | drupal-mode          |
-| helm-ls-hg    | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]]      | ✓     | helm                 |
-| helm-w3m      | [[https://github.com/emacs-helm/helm-w3m][emacs-helm/helm-w3m]]        | ✓     | org-linkany          |
-| parinfer      | [[https://github.com/DogLooksGood/parinfer-mode][DogLooksGood/parinfer-mode]] | ✓     |                      |
-| snippet       | [[https://github.com/pkazmier/snippet.el][pkazmier/snippet.el]]        | ✓     | rails                |
-
-- flymake-phpcs: https://github.com/arnested/drupal-mode/issues/83
+| Package (4) | Repository                 | M | Reverse Dependencies |
+|-------------+----------------------------+---+----------------------|
+| helm-ls-hg  | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]]      | ✓ | helm                 |
+| helm-w3m    | [[https://github.com/emacs-helm/helm-w3m][emacs-helm/helm-w3m]]        | ✓ | org-linkany          |
+| parinfer    | [[https://github.com/DogLooksGood/parinfer-mode][DogLooksGood/parinfer-mode]] | ✓ |                      |
+| snippet     | [[https://github.com/pkazmier/snippet.el][pkazmier/snippet.el]]        | ✓ | rails                |
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.
 #+NAME: github-moved
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Old" "New")
-    (cl-sort (copy-sequence emir--moved-packages) #'string< :key #'cadr))
+  (epkg-with-org-header ("Package" "Old repository" "New repository" "M")
+    (mapcar (pcase-lambda (`(,name ,old ,new))
+              (list name old new
+                    ;;(and (melpa-get name) (oref (epkg name) downloads))))
+                    (and (melpa-get name) "✓")))
+            (cl-sort (copy-sequence emir--moved-packages)
+                     #'string< :key #'cadr)))
 #+END_SRC
 #+RESULTS: github-moved
-
