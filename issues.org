@@ -32,7 +32,14 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
+| Feature (2)             | Package           | Shelved |
+|-------------------------+-------------------+---------|
+| tree-sitter-langs       | tree-sitter       |         |
+| tree-sitter-langs       | tree-sitter-langs |         |
+| tree-sitter-langs-build | tree-sitter       |         |
+| tree-sitter-langs-build | tree-sitter-langs |         |
 
+- tree-sitter: https://github.com/melpa/melpa/pull/7439
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
 
@@ -80,12 +87,12 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+END_SRC
 #+RESULTS: archived
-| Package (4) | Repository                 | M | Reverse Dependencies |
-|-------------+----------------------------+---+----------------------|
-| helm-ls-hg  | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]]      | ✓ | helm                 |
-| helm-w3m    | [[https://github.com/emacs-helm/helm-w3m][emacs-helm/helm-w3m]]        | ✓ | org-linkany          |
-| parinfer    | [[https://github.com/DogLooksGood/parinfer-mode][DogLooksGood/parinfer-mode]] | ✓ |                      |
-| snippet     | [[https://github.com/pkazmier/snippet.el][pkazmier/snippet.el]]        | ✓ | rails                |
+| Package (2) | Repository            | M | Reverse Dependencies |
+|-------------+-----------------------+---+----------------------|
+| helm-ls-hg  | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]] | ✓ | helm                 |
+| helm-w3m    | [[https://github.com/emacs-helm/helm-w3m][emacs-helm/helm-w3m]]   | ✓ | org-linkany          |
+
+- [[notmuch-tree:thread:000000000000d97b][helm-*: by mail]]
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.
