@@ -79,7 +79,7 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    14 |       |
-| gnu-elpa  |  132 |    132 |       |       |   254 |       |
+| gnu-elpa  |  133 |    133 |       |       |   254 |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | github    | 4824 |   4824 |       |       |       |  4608 |
 | gitlab    |  149 |    149 |       |       |       |   143 |
@@ -87,7 +87,7 @@
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   75 |     75 |       |       |       |   103 |
+| git       |   74 |     74 |       |       |       |   103 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -247,7 +247,7 @@
                        [builtin gnu-elpa])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (121)              | Class  | Gelpa    | Link                                                 |
+| Package (120)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -356,7 +356,6 @@
 | undo-tree                  | gitlab | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                                      |
 | validate                   | github | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                                |
 | valign                     | github | external | [[https://github.com/casouri/valign][casouri/valign]]                                       |
-| vcl-mode                   | git    | external |                                                      |
 | vdiff                      | github | external | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                                  |
 | vlf                        | github | external | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                        |
 | wcheck-mode                | github | external | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                                 |
