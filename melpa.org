@@ -71,7 +71,7 @@ please first make sure they meet the minimal requirements.
   ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (538)                | Link                                       |
+| Package (550)                | Link                                       |
 |------------------------------+--------------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                       |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]                 |
@@ -87,8 +87,10 @@ please first make sure they meet the minimal requirements.
 | ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                               |
 | ant-project-mode             | [[https://github.com/skeeto/ant-project-mode][skeeto/ant-project-mode]]                    |
 | antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                        |
+| apheleia                     | [[https://github.com/raxod502/apheleia][raxod502/apheleia]]                          |
 | asciidoc                     | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                       |
 | assert-rtn                   | [[https://github.com/neil-smithline-elisp/assert-rtn][neil-smithline-elisp/assert-rtn]]            |
+| async-completing-read        | [[https://github.com/oantolin/async-completing-read][oantolin/async-completing-read]]             |
 | async-eval                   | [[https://github.com/nschum/async-eval.el][nschum/async-eval.el]]                       |
 | atoctx                       | [[https://github.com/quantumkid/atoctx][quantumkid/atoctx]]                          |
 | atom                         | [[https://github.com/fperrin/atom][fperrin/atom]]                               |
@@ -144,6 +146,7 @@ please first make sure they meet the minimal requirements.
 | comicscript                  | [[https://github.com/jkersey/comicscript][jkersey/comicscript]]                        |
 | company-ess                  | [[https://github.com/Lompik/company-ess][Lompik/company-ess]]                         |
 | compile-bookmarks            | [[https://github.com/nschum/compile-bookmarks.el][nschum/compile-bookmarks.el]]                |
+| completing-history           | [[https://github.com/oantolin/completing-history][oantolin/completing-history]]                |
 | constellations               | [[https://github.com/davep/constellations.el][davep/constellations.el]]                    |
 | cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                       |
 | crisp-mode                   | [[https://github.com/krisajenkins/crisp-mode][krisajenkins/crisp-mode]]                    |
@@ -166,6 +169,7 @@ please first make sure they meet the minimal requirements.
 | dictem                       | [[https://github.com/cheusov/dictem][cheusov/dictem]]                             |
 | diff-ediff                   | [[https://github.com/matthewlmcclure/diff-ediff][matthewlmcclure/diff-ediff]]                 |
 | diff-git                     | [[https://github.com/alanfalloon/diff-git.el][alanfalloon/diff-git.el]]                    |
+| director                     | [[https://github.com/bard/emacs-director][bard/emacs-director]]                        |
 | dired-hacks                  | [[https://github.com/Fuco1/dired-hacks][Fuco1/dired-hacks]]                          |
 | dired-sync                   | [[https://github.com/renard/dired-sync][renard/dired-sync]]                          |
 | dired-view                   | [[https://github.com/xwl/dired-view][xwl/dired-view]]                             |
@@ -177,6 +181,7 @@ please first make sure they meet the minimal requirements.
 | door-gnus                    | [[https://github.com/yyr/door-gnus][yyr/door-gnus]]                              |
 | doxygen                      | [[https://github.com/TreeRex/doxygen-el][TreeRex/doxygen-el]]                         |
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]               |
+| dumbparens                   | [[https://github.com/raxod502/dumbparens][raxod502/dumbparens]]                        |
 | dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                       |
 | e2wm-perspb                  | [[https://github.com/aki2o/e2wm-perspb][aki2o/e2wm-perspb]]                          |
 | eaf                          | [[https://github.com/manateelazycat/emacs-application-framework][manateelazycat/emacs-application-framework]] |
@@ -203,6 +208,7 @@ please first make sure they meet the minimal requirements.
 | emir                         | [[https://github.com/emacscollective/emir][emacscollective/emir]]                       |
 | emux                         | [[https://github.com/re5et/emux][re5et/emux]]                                 |
 | epackage                     | [[https://github.com/jaalto/project--emacs-epackage][jaalto/project--emacs-epackage]]             |
+| epithet                      | [[https://github.com/oantolin/epithet][oantolin/epithet]]                           |
 | epom                         | [[https://github.com/aufrank/epom][aufrank/epom]]                               |
 | eproject-peepopen            | [[https://github.com/mbarnett/eproject-peepopen][mbarnett/eproject-peepopen]]                 |
 | epydoc                       | [[https://github.com/mooz/epydoc][mooz/epydoc]]                                |
@@ -253,6 +259,7 @@ please first make sure they meet the minimal requirements.
 | gaplay                       | [[https://github.com/te223/gaplay-el][te223/gaplay-el]]                            |
 | gdb-bp-session               | [[https://github.com/jglee1027/gdb-bp-session][jglee1027/gdb-bp-session]]                   |
 | generic-edit-special         | [[https://github.com/lewang/generic-edit-special][lewang/generic-edit-special]]                |
+| gh-notify                    | [[https://github.com/anticomputer/gh-notify][anticomputer/gh-notify]]                     |
 | git-auto-commit              | [[https://github.com/renard/git-auto-commit][renard/git-auto-commit]]                     |
 | git-code-review              | [[https://github.com/psanford/git-code-review-el][psanford/git-code-review-el]]                |
 | git-emacs                    | [[https://github.com/tsgates/git-emacs][tsgates/git-emacs]]                          |
@@ -350,6 +357,7 @@ please first make sure they meet the minimal requirements.
 | linum-relativenumber         | [[https://github.com/scottjad/linum-relativenumber][scottjad/linum-relativenumber]]              |
 | lisp-editing                 | [[https://github.com/nicferrier/emacs-lisp-editing-tools][nicferrier/emacs-lisp-editing-tools]]        |
 | lispy-mnemonic               | [[https://github.com/itsjeyd/lispy-mnemonic][itsjeyd/lispy-mnemonic]]                     |
+| live-completions             | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]                  |
 | lookup                       | [[https://github.com/lookup2/lookup2][lookup2/lookup2]]                            |
 | loops                        | [[https://github.com/kensanata/loops][kensanata/loops]]                            |
 | lsdb                         | [[https://github.com/ikazuhiro/lsdb][ikazuhiro/lsdb]]                             |
@@ -364,6 +372,7 @@ please first make sure they meet the minimal requirements.
 | mark-forward-sexp            | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]                  |
 | mark-select                  | [[https://github.com/namikister/mark-select][namikister/mark-select]]                     |
 | masquerade-mode              | [[https://github.com/dsevilla/masquerade-mode-el][dsevilla/masquerade-mode-el]]                |
+| math-delimiters              | [[https://github.com/oantolin/math-delimiters][oantolin/math-delimiters]]                   |
 | metapost-mode+               | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                    |
 | mew-ical                     | [[https://github.com/tagoh/mew-ical][tagoh/mew-ical]]                             |
 | mew-unread                   | [[https://github.com/tortkis/mew-unread][tortkis/mew-unread]]                         |
@@ -447,6 +456,7 @@ please first make sure they meet the minimal requirements.
 | phantomjs                    | [[https://github.com/nicferrier/phantomjsel][nicferrier/phantomjsel]]                     |
 | pickel                       | [[https://github.com/tlh/pickel.el][tlh/pickel.el]]                              |
 | picolisp-wiki-mode           | [[https://github.com/tj64/picolisp-wiki-mode][tj64/picolisp-wiki-mode]]                    |
+| placeholder                  | [[https://github.com/oantolin/placeholder][oantolin/placeholder]]                       |
 | plone-mode                   | [[https://github.com/jone/plone-mode.el][jone/plone-mode.el]]                         |
 | pmd                          | [[https://github.com/pmd/pmd-emacs][pmd/pmd-emacs]]                              |
 | popup+                       | [[https://github.com/scjung/popup-plus][scjung/popup-plus]]                          |
@@ -480,6 +490,7 @@ please first make sure they meet the minimal requirements.
 | recs-mode                    | [[https://github.com/tlh/recs-mode.el][tlh/recs-mode.el]]                           |
 | reddit-mode                  | [[https://github.com/death/reddit-mode][death/reddit-mode]]                          |
 | remind-conf-mode             | [[https://github.com/sshelagh/remind-conf-mode][sshelagh/remind-conf-mode]]                  |
+| restricto                    | [[https://github.com/oantolin/restricto][oantolin/restricto]]                         |
 | revealjs-mode                | [[https://github.com/cjohansen/revealjs-mode][cjohansen/revealjs-mode]]                    |
 | review                       | [[https://github.com/gigamonkey/review][gigamonkey/review]]                          |
 | rotate-text                  | [[https://github.com/nschum/rotate-text.el][nschum/rotate-text.el]]                      |
@@ -579,6 +590,7 @@ please first make sure they meet the minimal requirements.
 | uzumaki                      | [[https://github.com/geyslan/uzumaki][geyslan/uzumaki]]                            |
 | vc-browse                    | [[https://github.com/ieure/vc-browse][ieure/vc-browse]]                            |
 | vc-partial-commit            | [[https://github.com/fperrin/vc-partial-commit][fperrin/vc-partial-commit]]                  |
+| velocity                     | [[https://github.com/bard/emacs-velocity][bard/emacs-velocity]]                        |
 | vim-modeline                 | [[https://github.com/cinsk/emacs-vim-modeline][cinsk/emacs-vim-modeline]]                   |
 | vimvars                      | [[https://github.com/jamesyoungman/vimvars][jamesyoungman/vimvars]]                      |
 | visual-indentation-mode      | [[https://github.com/skeeto/visual-indentation-mode][skeeto/visual-indentation-mode]]             |

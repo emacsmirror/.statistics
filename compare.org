@@ -81,7 +81,7 @@
 | builtin   |  466 |     15 |       |   467 |    14 |       |
 | gnu-elpa  |  133 |    133 |       |       |   254 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4824 |   4824 |       |       |       |  4608 |
+| github    | 4835 |   4835 |       |       |       |  4606 |
 | gitlab    |  149 |    149 |       |       |       |   143 |
 | sourcehut |   27 |     27 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -96,10 +96,10 @@
 | hg        |   15 |     15 |       |       |       |    13 |
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  130 |    130 |       |       |       |       |
+| orphaned  |  131 |    131 |       |       |       |       |
 | shelved   | 1391 |        |  1391 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7913 |   6071 |  1391 |   467 |   268 |  4867 |
+| total     | 7925 |   6083 |  1391 |   467 |   268 |  4865 |
 
 * Emacs
 ** Prefer elpa
@@ -420,7 +420,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (115)   | Secondary package                 | Class     |
+| Primary package (116)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -479,6 +479,7 @@
 | emacsql                 | emacsql-sqlite                    | github    |
 | embark                  | avy-embark-collect                | github    |
 | embark                  | embark-consult                    | github    |
+| espotify                | consult-spotify                   | git       |
 | esqlite                 | esqlite-helm                      | github    |
 | evil                    | evil-test-helpers                 | github    |
 | ewal                    | ewal-doom-themes                  | github    |
