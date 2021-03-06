@@ -79,10 +79,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    14 |       |
-| gnu-elpa  |  133 |    133 |       |       |   254 |       |
+| gnu-elpa  |  133 |    133 |       |       |   256 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4837 |   4837 |       |       |       |  4608 |
-| gitlab    |  150 |    150 |       |       |       |   144 |
+| github    | 4839 |   4839 |       |       |       |  4610 |
+| gitlab    |  151 |    151 |       |       |       |   145 |
 | sourcehut |   27 |     27 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -97,9 +97,9 @@
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  131 |    131 |       |       |       |       |
-| shelved   | 1391 |        |  1391 |       |       |       |
+| shelved   | 1390 |        |  1390 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7928 |   6086 |  1391 |   467 |   268 |  4868 |
+| total     | 7930 |   6089 |  1390 |   467 |   270 |  4871 |
 
 * Emacs
 ** Prefer elpa
@@ -198,14 +198,13 @@
               [subtree external])))
 #+END_SRC
 #+RESULTS: gelpa-unreleased
-| Package (6)      | Gelpa    |
+| Package (5)      | Gelpa    |
 |------------------+----------|
 | sql-smie         | external |
 | prefixed-core    | external |
 | package-fixes    | external |
 | shell-quasiquote | external |
 | systemd          | external |
-| ob-haxe          | external |
 
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
@@ -247,7 +246,7 @@
                        [builtin gnu-elpa])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (120)              | Class  | Gelpa    | Link                                                 |
+| Package (121)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -328,6 +327,7 @@
 | peg                        | github | external | [[https://github.com/ellerh/peg.el][ellerh/peg.el]]                                        |
 | pinentry                   | github | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                                     |
 | posframe                   | github | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                                     |
+| pyim                       | github | external | [[https://github.com/tumashu/pyim][tumashu/pyim]]                                         |
 | realgud                    | github | external | [[https://github.com/realgud/realgud][realgud/realgud]]                                      |
 | realgud-ipdb               | github | external | [[https://github.com/realgud/realgud-ipdb][realgud/realgud-ipdb]]                                 |
 | realgud-jdb                | github | external | [[https://github.com/realgud/realgud-jdb][realgud/realgud-jdb]]                                  |
