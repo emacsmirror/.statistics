@@ -66,6 +66,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
+| Package (1)          | Class  | Feature     | Provider    |
+|----------------------+--------+-------------+-------------|
+| frontside-javascript | github | company-lsp | company-lsp |
+
+- frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-794351381
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
