@@ -78,11 +78,11 @@
 #+RESULTS: summary
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
-| builtin   |  466 |     15 |       |   467 |    14 |       |
-| gnu-elpa  |  133 |    133 |       |       |   256 |       |
+| builtin   |  466 |     15 |       |   467 |    15 |       |
+| gnu-elpa  |  134 |    134 |       |       |   260 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4845 |   4845 |       |       |       |  4616 |
-| gitlab    |  151 |    151 |       |       |       |   145 |
+| github    | 4846 |   4846 |       |       |       |  4617 |
+| gitlab    |  152 |    152 |       |       |       |   147 |
 | sourcehut |   28 |     28 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  131 |    131 |       |       |       |       |
 | shelved   | 1391 |        |  1391 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7938 |   6096 |  1391 |   467 |   270 |  4878 |
+| total     | 7941 |   6099 |  1391 |   467 |   275 |  4881 |
 
 * Emacs
 ** Prefer elpa
@@ -156,7 +156,7 @@
     (-filter (pcase-lambda (`(,name ,class ,_url))
                (and (not (assoc name emir-pending-packages))
                     (not (assoc name emir--preferred-builtins))
-                    (not (member name '("counsel" "swiper"))) ; part of ivy
+                    (not (assoc name emir-secondary-packages))
                     (or (not (eq class 'core))
                         (epkg-builtin-package-p (epkg name)))))
              (epkg-sql [:select [name class url]
@@ -246,7 +246,7 @@
                        [builtin gnu-elpa])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (121)              | Class  | Gelpa    | Link                                                 |
+| Package (123)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -314,6 +314,7 @@
 | math-symbol-lists          | github | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                             |
 | mines                      | github | external | [[https://github.com/calancha/Minesweeper][calancha/Minesweeper]]                                 |
 | mmm-mode                   | github | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                                     |
+| modus-themes               | gitlab | core     | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]                             |
 | multishell                 | github | external | [[https://github.com/kenmanheimer/EmacsMultishell][kenmanheimer/EmacsMultishell]]                         |
 | muse                       | github | external | [[https://github.com/alexott/muse][alexott/muse]]                                         |
 | nameless                   | github | external | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                                   |
@@ -328,6 +329,7 @@
 | pinentry                   | github | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                                     |
 | posframe                   | github | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                                     |
 | pyim                       | github | external | [[https://github.com/tumashu/pyim][tumashu/pyim]]                                         |
+| pyim-basedict              | github | external | [[https://github.com/tumashu/pyim-basedict][tumashu/pyim-basedict]]                                |
 | realgud                    | github | external | [[https://github.com/realgud/realgud][realgud/realgud]]                                      |
 | realgud-ipdb               | github | external | [[https://github.com/realgud/realgud-ipdb][realgud/realgud-ipdb]]                                 |
 | realgud-jdb                | github | external | [[https://github.com/realgud/realgud-jdb][realgud/realgud-jdb]]                                  |
