@@ -90,12 +90,11 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+END_SRC
 #+RESULTS: archived
-| Package (2) | Repository            | M | Reverse Dependencies |
+| Package (1) | Repository            | M | Reverse Dependencies |
 |-------------+-----------------------+---+----------------------|
 | helm-ls-hg  | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]] | ✓ | helm                 |
-| helm-w3m    | [[https://github.com/emacs-helm/helm-w3m][emacs-helm/helm-w3m]]   | ✓ | org-linkany          |
 
-- [[notmuch-tree:thread:000000000000d97b][helm-*: by mail]]
+- [[notmuch-tree:thread:000000000000d97b][helm-ls-hg: by mail]]
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.

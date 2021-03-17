@@ -81,13 +81,13 @@
 | builtin   |  466 |     15 |       |   467 |    15 |       |
 | gnu-elpa  |  134 |    134 |       |       |   260 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4846 |   4846 |       |       |       |  4617 |
+| github    | 4848 |   4848 |       |       |       |  4618 |
 | gitlab    |  152 |    152 |       |       |       |   147 |
-| sourcehut |   28 |     28 |       |       |       |       |
+| sourcehut |   29 |     29 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   74 |     74 |       |       |       |   104 |
+| git       |   74 |     74 |       |       |       |   105 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  131 |    131 |       |       |       |       |
 | shelved   | 1391 |        |  1391 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7941 |   6099 |  1391 |   467 |   275 |  4881 |
+| total     | 7944 |   6102 |  1391 |   467 |   275 |  4883 |
 
 * Emacs
 ** Prefer elpa
@@ -422,7 +422,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (116)   | Secondary package                 | Class     |
+| Primary package (117)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -440,6 +440,7 @@
 | calfw                   | calfw-howm                        | github    |
 | calfw                   | calfw-ical                        | github    |
 | calfw                   | calfw-org                         | github    |
+| cfn-mode                | flycheck-cfn                      | gitlab    |
 | chumpy-windows          | spaces                            | github    |
 | chumpy-windows          | splitter                          | github    |
 | chumpy-windows          | window-jump                       | github    |
