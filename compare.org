@@ -81,7 +81,7 @@
 | builtin   |  466 |     15 |       |   467 |    15 |       |
 | gnu-elpa  |  134 |    134 |       |       |   260 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4850 |   4850 |       |       |       |  4621 |
+| github    | 4851 |   4851 |       |       |       |  4622 |
 | gitlab    |  154 |    154 |       |       |       |   149 |
 | sourcehut |   30 |     30 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  131 |    131 |       |       |       |       |
 | shelved   | 1391 |        |  1391 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7950 |   6108 |  1391 |   467 |   275 |  4890 |
+| total     | 7951 |   6109 |  1391 |   467 |   275 |  4891 |
 
 * Emacs
 ** Prefer elpa
@@ -422,7 +422,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (117)   | Secondary package                 | Class     |
+| Primary package (118)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -474,6 +474,7 @@
 | distel-completion-lib   | company-distel                    | github    |
 | dix                     | dix-evil                          | github    |
 | django-mode             | django-snippets                   | github    |
+| dylan                   | dime                              | github    |
 | eclim                   | ac-emacs-eclim                    | github    |
 | eclim                   | company-emacs-eclim               | github    |
 | elfeed                  | elfeed-web                        | github    |
