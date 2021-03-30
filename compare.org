@@ -81,13 +81,13 @@
 | builtin   |  466 |     15 |       |   467 |    15 |       |
 | gnu-elpa  |  134 |    134 |       |       |   260 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4851 |   4851 |       |       |       |  4622 |
-| gitlab    |  154 |    154 |       |       |       |   149 |
+| github    | 4855 |   4855 |       |       |       |  4626 |
+| gitlab    |  156 |    156 |       |       |       |   151 |
 | sourcehut |   30 |     30 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   75 |     75 |       |       |       |   107 |
+| git       |   76 |     76 |       |       |       |   109 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  131 |    131 |       |       |       |       |
 | shelved   | 1391 |        |  1391 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7951 |   6109 |  1391 |   467 |   275 |  4891 |
+| total     | 7958 |   6116 |  1391 |   467 |   275 |  4899 |
 
 * Emacs
 ** Prefer elpa
@@ -484,6 +484,7 @@
 | embark                  | avy-embark-collect                | github    |
 | embark                  | embark-consult                    | github    |
 | espotify                | consult-spotify                   | git       |
+| espotify                | ivy-spotify                       | git       |
 | esqlite                 | esqlite-helm                      | github    |
 | evil                    | evil-test-helpers                 | github    |
 | ewal                    | ewal-doom-themes                  | github    |
