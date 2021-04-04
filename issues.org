@@ -32,16 +32,11 @@
                        (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (3)   | Package                | Shelved |
-|---------------+------------------------+---------|
-| geiser-mit    | geiser                 |         |
-| geiser-mit    | geiser-mit             |         |
-| geiser-racket | geiser                 |         |
-| geiser-racket | geiser-racket          |         |
-| setup         | projectile-trailblazer |         |
-| setup         | setup                  |         |
+| Feature (1) | Package                | Shelved |
+|-------------+------------------------+---------|
+| setup       | projectile-trailblazer |         |
+| setup       | setup                  |         |
 
-- geiser*: https://github.com/melpa/melpa/pull/7494
 - setup: https://github.com/micdahl/projectile-trailblazer/issues/2
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
@@ -71,11 +66,13 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1)          | Class  | Feature     | Provider    |
-|----------------------+--------+-------------+-------------|
-| frontside-javascript | github | company-lsp | company-lsp |
+| Package (2)          | Class  | Feature        | Provider    |
+|----------------------+--------+----------------+-------------|
+| frontside-javascript | github | company-lsp    | company-lsp |
+| geiser               | gitlab | geiser-install |             |
 
 - frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-794351381
+- geiser: https://github.com/melpa/melpa/pull/7514
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.

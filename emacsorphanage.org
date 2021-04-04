@@ -186,7 +186,7 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (82)         | E | M |
+| Package (83)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -249,6 +249,7 @@ repositories have not seen a commit in a decade.
 | mongo                | ✔ | ✔ |
 | octicons             | ✔ | ✔ |
 | opam                 | ✔ | ✔ |
+| org-page             | ✔ | ✔ |
 | osx-trash            | ✔ | ✔ |
 | ov                   | ✔ | ✔ |
 | perl-utils           | ✔ |   |
