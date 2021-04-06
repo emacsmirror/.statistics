@@ -172,13 +172,13 @@ repositories have not seen a commit in a decade.
 #+NAME: tarball
 #+BEGIN_SRC emacs-lisp
   (emir--list-orphans "manual tarball import")
-#+END_SRC tarball
-#+RESULTS:
-| Package (3)  | Mirror   | Melpa    |
-|--------------+----------+----------|
-| picolisp     | orphaned |          |
-| session      | orphaned | orphaned |
-| sml-modeline | orphaned | orphaned |
+#+END_SRC
+#+RESULTS: tarball
+| Package (3)  | E | M |
+|--------------+---+---|
+| picolisp     | ✔ |   |
+| session      | ✔ | ✔ |
+| sml-modeline | ✔ | ✔ |
 
 * Dropped of by maintainer
 #+NAME: dropped
