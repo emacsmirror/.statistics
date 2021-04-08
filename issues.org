@@ -66,10 +66,12 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2)          | Class  | Feature        | Provider    |
-|----------------------+--------+----------------+-------------|
-| frontside-javascript | github | company-lsp    | company-lsp |
-| geiser               | gitlab | geiser-install |             |
+| Package (4)          | Class    | Feature                      | Provider    |
+|----------------------+----------+------------------------------+-------------|
+| excorporate          | gnu-elpa | excorporate-time-zone        |             |
+| frontside-javascript | github   | company-lsp                  | company-lsp |
+| phps-mode            | gnu-elpa | phps-mode-automation-grammar |             |
+| python-mode          | gitlab   | org-loaddefs                 |             |
 
 - frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-794351381
 - geiser: https://github.com/melpa/melpa/pull/7514
@@ -92,11 +94,13 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+END_SRC
 #+RESULTS: archived
-| Package (1) | Repository            | M | Reverse Dependencies |
-|-------------+-----------------------+---+----------------------|
-| helm-ls-hg  | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]] | ✓ | helm                 |
+| Package (2) | Repository             | M | Reverse Dependencies |
+|-------------+------------------------+---+----------------------|
+| helm-ls-hg  | [[https://github.com/emacs-helm/helm-ls-hg][emacs-helm/helm-ls-hg]]  | ✓ | helm                 |
+| ox-slimhtml | [[https://github.com/balddotcat/ox-slimhtml][balddotcat/ox-slimhtml]] | ✓ | org-anki             |
 
 - [[notmuch-tree:thread:000000000000d97b][helm-ls-hg: by mail]]
+- ox-slimhtml: to be made part of Org
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.

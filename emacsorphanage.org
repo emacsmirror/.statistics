@@ -186,7 +186,7 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (83)         | E | M |
+| Package (84)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -242,6 +242,7 @@ repositories have not seen a commit in a decade.
 | konoha-mode          | ✔ |   |
 | literate-coffee-mode | ✔ | ✔ |
 | ltsv                 | ✔ |   |
+| magit-gerrit         | ✔ | ✔ |
 | magit-p4             | ✔ | ✔ |
 | magit-stgit          | ✔ | ✔ |
 | magit-svn            | ✔ | ✔ |
