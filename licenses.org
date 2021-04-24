@@ -26,12 +26,11 @@
             hline ("total" ,total 100)))))
 
   (defun emir--insert-mirror-packages-using-licenses (&rest licenses)
-    (epkg-with-org-header ("Package" "License" "Class" "M" "Link")
-      (mapcar (pcase-lambda (`(,name ,license ,class ,repopage))
+    (epkg-with-org-header ("Package" "License" "Class" "M")
+      (mapcar (pcase-lambda (`(,name ,license ,class))
                 (list name license class
-                      (if (melpa-get name) t "")
-                      (and (not (eq class 'wiki)) repopage)))
-              (epkg-sql [:select [name license class repopage]
+                      (if (melpa-get name) t "")))
+              (epkg-sql [:select [name license class]
                          :from packages
                          :where license :in $v1
                          :and (not (= class 'shelved))
@@ -39,18 +38,12 @@
                         (apply #'vector licenses)))))
 
   (defun emir--insert-attic-packages-using-licenses (&rest licenses)
-    (epkg-with-org-header ("Package" "License" "Link")
-      (mapcar (pcase-lambda (`(,name ,license ,repopage))
-                (list name license
-                      (and (not (equal
-                                 repopage
-                                 "https://github.com/emacsmirror/emacswiki.org"))
-                           repopage)))
-              (epkg-sql [:select [name license repopage] :from packages
-                         :where license :in $v1
-                         :and (= class 'shelved)
-                         :order-by [(asc name)]]
-                        (apply #'vector licenses)))))
+    (epkg-with-org-header ("Package" "License")
+      (epkg-sql [:select [name license] :from packages
+                 :where license :in $v1
+                 :and (= class 'shelved)
+                 :order-by [(asc name)]]
+                (apply #'vector licenses))))
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 :END:
@@ -145,11 +138,10 @@
 | MIT           |    19 |       1 |
 | GPL-3         |    16 |       1 |
 | GPL-1+        |    14 |       1 |
+| ((custom))    |     9 |       1 |
 | as-is         |     8 |       1 |
 | BSD-3-clause  |     7 |       1 |
 | WTFPL         |     7 |       1 |
-| ((custom))    |     6 |       0 |
-| nil           |     4 |       0 |
 | BSD-2-clause  |     4 |       0 |
 | Apache-2.0    |     3 |       0 |
 | LGPL-3        |     3 |       0 |
@@ -168,25 +160,19 @@
 |---------------+-------+---------|
 | total GNU     |  1291 |      93 |
 |---------------+-------+---------|
-| total         |  1395 |     100 |
+| total         |  1394 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown
 #+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "License")
-    (epkg-sql [:select [name class license] :from packages
+  (epkg-with-org-header ("Package" "Class")
+    (epkg-sql [:select [name class] :from packages
                :where (isnull license)
                :and packages:class :in $v1
                :order-by [(asc name)]]
               [shelved])))
 #+END_SRC
 #+RESULTS: attic-unknown
-| Package (4) | Class   | License |
-|-------------+---------+---------|
-| epo         | shelved |         |
-| rmoo        | shelved |         |
-| tj-mode     | shelved |         |
-| yaham       | shelved |         |
 
 ** Custom licenses
 #+NAME: attic-custom
@@ -194,14 +180,17 @@
   (emir--insert-attic-packages-using-licenses "custom")
 #+END_SRC
 #+RESULTS: attic-custom
-| Package (6) | License | Link |
-|-------------+---------+------|
-| phutball    | custom  |      |
-| procmaillog | custom  |      |
-| psgml-jade  | custom  |      |
-| speedread   | custom  |      |
-| whine       | custom  |      |
-| youwill     | custom  |      |
+| Package (9) | License |
+|-------------+---------|
+| epo         | custom  |
+| phutball    | custom  |
+| procmaillog | custom  |
+| psgml-jade  | custom  |
+| rmoo        | custom  |
+| speedread   | custom  |
+| whine       | custom  |
+| yaham       | custom  |
+| youwill     | custom  |
 
 ** Problematic licenses
 #+NAME: attic-problematic
@@ -209,114 +198,114 @@
   (emir--insert-attic-packages-using-licenses "GPL" "GPL-2" "EPL")
 #+END_SRC
 #+RESULTS: attic-problematic
-| Package (106)       | License | Link                                          |
-|---------------------+---------+-----------------------------------------------|
-| align-regexp        | GPL     |                                               |
-| amigo               | GPL-2   |                                               |
-| atom-blogger        | GPL     |                                               |
-| axcess              | GPL     |                                               |
-| bibtex-mode         | GPL     |                                               |
-| blip                | GPL-2   |                                               |
-| breadcrumb          | GPL-2   | https://github.com/pheaver/breadcrumb         |
-| buffer-thumbnail    | GPL     |                                               |
-| byrd-biff           | GPL     |                                               |
-| cdt                 | GPL     |                                               |
-| clhs                | GPL     |                                               |
-| commit-patch-buffer | GPL-2   |                                               |
-| conjecture-mode     | GPL     |                                               |
-| copyedit            | GPL-2   |                                               |
-| cruisecontrol       | GPL-2   |                                               |
-| dbk                 | GPL     |                                               |
-| devkitemacs         | GPL-2   |                                               |
-| dired-a             | GPL     |                                               |
-| dms-sig             | GPL     |                                               |
-| e-blog              | GPL-2   |                                               |
-| ec                  | GPL-2   |                                               |
-| eform               | GPL     |                                               |
-| elder               | GPL     |                                               |
-| emdroid             | GPL-2   |                                               |
-| emuds               | GPL     |                                               |
-| env-print           | GPL     |                                               |
-| equinox             | GPL-2   |                                               |
-| esheet              | GPL-2   |                                               |
-| espect              | GPL-2   | https://github.com/rafl/espect                |
-| faith               | GPL     |                                               |
-| filewatch           | GPL     |                                               |
-| flip-tables         | GPL-2   |                                               |
-| fluiddb             | GPL-2   | https://github.com/hdurer/fluiddb.el          |
-| foldingo            | GPL     |                                               |
-| garble              | GPL-2   | https://github.com/davep/garble.el            |
-| gb4e                | GPL     |                                               |
-| global-modes        | GPL     |                                               |
-| haddoc              | GPL-2   |                                               |
-| hier-imenu          | GPL-2   |                                               |
-| html-helper-imenu   | GPL-2   |                                               |
-| hugs-mode           | GPL     |                                               |
-| icaps               | GPL-2   |                                               |
-| ifile-gnus          | GPL     |                                               |
-| ilisp               | GPL     |                                               |
-| inkmacs             | GPL     |                                               |
-| iso-html            | GPL     |                                               |
-| javadoc-help        | GPL-2   |                                               |
-| jhg-cload           | GPL-2   |                                               |
-| lbdb                | GPL-2   | https://github.com/davep/lbdb.el              |
-| line-numbers-mode   | GPL     |                                               |
-| lines               | GPL     |                                               |
-| lmselect            | GPL-2   |                                               |
-| media-files         | GPL-2   |                                               |
-| mgp-mode-cd         | GPL     |                                               |
-| miranda-mode        | GPL     |                                               |
-| mojo                | GPL-2   | https://github.com/samsonjs/mojo.el           |
-| mutt-alias          | GPL-2   | https://github.com/davep/mutt-alias.el        |
-| notebook            | GPL-2   |                                               |
-| osx-itunes          | GPL-2   |                                               |
-| osx-osascript       | GPL-2   |                                               |
-| osx-typecreator     | GPL-2   |                                               |
-| otp                 | GPL-2   |                                               |
-| outline-m           | GPL     |                                               |
-| pastie              | GPL     |                                               |
-| perl-myvar          | GPL-2   |                                               |
-| physical-line       | GPL     |                                               |
-| play-mode           | GPL-2   | https://github.com/emacsorphanage/plywood     |
-| point-ring          | GPL     |                                               |
-| popup-menu          | GPL     |                                               |
-| post                | GPL     |                                               |
-| qa                  | GPL-2   |                                               |
-| qtdoc               | GPL-2   |                                               |
-| recent              | GPL-2   |                                               |
-| redshank            | GPL     |                                               |
-| rep-words           | GPL-2   |                                               |
-| repeat-insert       | GPL     |                                               |
-| repeatable          | GPL-2   |                                               |
-| reportmail          | GPL     |                                               |
-| rtf-mode            | GPL-2   |                                               |
-| save-and-dwim       | GPL-2   |                                               |
-| sawfish             | GPL-2   |                                               |
-| scrmable            | GPL-2   |                                               |
-| slashdot            | GPL-2   |                                               |
-| slime-ritz          | EPL     |                                               |
-| spamprobe           | GPL-2   |                                               |
-| spectre-mode        | GPL     |                                               |
-| studlycaps          | GPL-2   |                                               |
-| summarye            | GPL     |                                               |
-| symlink-fix         | GPL     |                                               |
-| tab-in-tabular      | GPL-2   |                                               |
-| texmed              | GPL-2   |                                               |
-| tie-mode            | GPL     |                                               |
-| tiger               | GPL-2   |                                               |
-| tld                 | GPL-2   | https://github.com/davep/tld.el               |
-| todochiku           | GPL-2   |                                               |
-| tumblr              | GPL-2   | https://github.com/travisjeffery/emacs-tumblr |
-| twit                | GPL-2   | https://github.com/baudtack/twit.el           |
-| undo-group          | GPL-2   |                                               |
-| wc                  | GPL-2   |                                               |
-| webinfo             | GPL-2   | https://github.com/davep/webinfo.el           |
-| word-count          | GPL-2   |                                               |
-| word-counter        | GPL     |                                               |
-| work-timer          | GPL-2   |                                               |
-| wsh-repl            | GPL-2   | https://github.com/jonnay/wsh-repl            |
-| xbase               | GPL-2   |                                               |
-| zendmd-comint       | GPL-2   | https://github.com/jhanson/zendmd-comint.el   |
+| Package (106)       | License |
+|---------------------+---------|
+| align-regexp        | GPL     |
+| amigo               | GPL-2   |
+| atom-blogger        | GPL     |
+| axcess              | GPL     |
+| bibtex-mode         | GPL     |
+| blip                | GPL-2   |
+| breadcrumb          | GPL-2   |
+| buffer-thumbnail    | GPL     |
+| byrd-biff           | GPL     |
+| cdt                 | GPL     |
+| clhs                | GPL     |
+| commit-patch-buffer | GPL-2   |
+| conjecture-mode     | GPL     |
+| copyedit            | GPL-2   |
+| cruisecontrol       | GPL-2   |
+| dbk                 | GPL     |
+| devkitemacs         | GPL-2   |
+| dired-a             | GPL     |
+| dms-sig             | GPL     |
+| e-blog              | GPL-2   |
+| ec                  | GPL-2   |
+| eform               | GPL     |
+| elder               | GPL     |
+| emdroid             | GPL-2   |
+| emuds               | GPL     |
+| env-print           | GPL     |
+| equinox             | GPL-2   |
+| esheet              | GPL-2   |
+| espect              | GPL-2   |
+| faith               | GPL     |
+| filewatch           | GPL     |
+| flip-tables         | GPL-2   |
+| fluiddb             | GPL-2   |
+| foldingo            | GPL     |
+| garble              | GPL-2   |
+| gb4e                | GPL     |
+| global-modes        | GPL     |
+| haddoc              | GPL-2   |
+| hier-imenu          | GPL-2   |
+| html-helper-imenu   | GPL-2   |
+| hugs-mode           | GPL     |
+| icaps               | GPL-2   |
+| ifile-gnus          | GPL     |
+| ilisp               | GPL     |
+| inkmacs             | GPL     |
+| iso-html            | GPL     |
+| javadoc-help        | GPL-2   |
+| jhg-cload           | GPL-2   |
+| lbdb                | GPL-2   |
+| line-numbers-mode   | GPL     |
+| lines               | GPL     |
+| lmselect            | GPL-2   |
+| media-files         | GPL-2   |
+| mgp-mode-cd         | GPL     |
+| miranda-mode        | GPL     |
+| mojo                | GPL-2   |
+| mutt-alias          | GPL-2   |
+| notebook            | GPL-2   |
+| osx-itunes          | GPL-2   |
+| osx-osascript       | GPL-2   |
+| osx-typecreator     | GPL-2   |
+| otp                 | GPL-2   |
+| outline-m           | GPL     |
+| pastie              | GPL     |
+| perl-myvar          | GPL-2   |
+| physical-line       | GPL     |
+| play-mode           | GPL-2   |
+| point-ring          | GPL     |
+| popup-menu          | GPL     |
+| post                | GPL     |
+| qa                  | GPL-2   |
+| qtdoc               | GPL-2   |
+| recent              | GPL-2   |
+| redshank            | GPL     |
+| rep-words           | GPL-2   |
+| repeat-insert       | GPL     |
+| repeatable          | GPL-2   |
+| reportmail          | GPL     |
+| rtf-mode            | GPL-2   |
+| save-and-dwim       | GPL-2   |
+| sawfish             | GPL-2   |
+| scrmable            | GPL-2   |
+| slashdot            | GPL-2   |
+| slime-ritz          | EPL     |
+| spamprobe           | GPL-2   |
+| spectre-mode        | GPL     |
+| studlycaps          | GPL-2   |
+| summarye            | GPL     |
+| symlink-fix         | GPL     |
+| tab-in-tabular      | GPL-2   |
+| texmed              | GPL-2   |
+| tie-mode            | GPL     |
+| tiger               | GPL-2   |
+| tld                 | GPL-2   |
+| todochiku           | GPL-2   |
+| tumblr              | GPL-2   |
+| twit                | GPL-2   |
+| undo-group          | GPL-2   |
+| wc                  | GPL-2   |
+| webinfo             | GPL-2   |
+| word-count          | GPL-2   |
+| word-counter        | GPL     |
+| work-timer          | GPL-2   |
+| wsh-repl            | GPL-2   |
+| xbase               | GPL-2   |
+| zendmd-comint       | GPL-2   |
 
 Notes:
 - [[mu4e:msgid:87bmmrmt9x.fsf@ernst][(mail) GPL-2 maintainer feedback]]
