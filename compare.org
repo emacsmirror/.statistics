@@ -374,6 +374,46 @@
 | yasnippet                  | github | external | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                                 |
 | ztree                      | github | external | [[https://github.com/fourier/ztree][fourier/ztree]]                                        |
 
+** Prefer Elpa despite :url
+#+NAME: gelpa-prefer-gelpa
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" ":url")
+    (let ((alist (emir-gelpa--package-alist)))
+      (-keep (pcase-lambda (`(,name ,_class ,_gelpa))
+               (and-let* ((url (plist-get (cdr (assoc name alist)) :url)))
+                 (list name url)))
+             (epkg-sql [:select :distinct [packages:name
+                                           packages:class
+                                           gelpa-recipes:class]
+                        :from [packages gelpa-recipes]
+                        :where (= packages:name gelpa-recipes:epkg-package)
+                        :and packages:class :in $v1
+                        :order-by [(asc gelpa-recipes:url)
+                                   (asc packages:name)]]
+                       [gnu-elpa]))))
+#+END_SRC
+#+RESULTS: gelpa-prefer-gelpa
+| Package (18)        | :url                                              |
+|---------------------+---------------------------------------------------|
+| paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
+| vcl-mode            | git://git.gnu.org.ua/vcl-mode                     |
+| auto-overlays       | http://www.dr-qubit.org/git/predictive.git        |
+| dict-tree           | http://www.dr-qubit.org/git/predictive.git        |
+| heap                | http://www.dr-qubit.org/git/predictive.git        |
+| queue               | http://www.dr-qubit.org/git/predictive.git        |
+| tNFA                | http://www.dr-qubit.org/git/predictive.git        |
+| trie                | http://www.dr-qubit.org/git/predictive.git        |
+| shell-command+      | https://git.sr.ht/~zge/bang/tree/shell-command+   |
+| setup               | https://git.sr.ht/~zge/setup                      |
+| phps-mode           | https://github.com/cjohansson/emacs-phps-mode     |
+| clipboard-collector | https://github.com/clemera/clipboard-collector    |
+| ebdb                | https://github.com/girzel/ebdb.git                |
+| psgml               | https://github.com/lenst/psgml.git                |
+| ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
+| persist             | https://gitlab.com/phillord/persist.git           |
+| bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |
+| org-edna            | https://savannah.nongnu.org/projects/org-edna-el  |
+
 * Melpa
 ** New
 #+NAME: melpa-new
