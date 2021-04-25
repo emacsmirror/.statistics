@@ -66,17 +66,14 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (6)          | Class    | Feature                      | Provider    |
+| Package (4)          | Class    | Feature                      | Provider    |
 |----------------------+----------+------------------------------+-------------|
-| auth-source-keytar   | github   | keytar                       |             |
 | excorporate          | gnu-elpa | excorporate-time-zone        |             |
 | frontside-javascript | github   | company-lsp                  | company-lsp |
-| lsp-grammarly        | github   | keytar                       |             |
 | phps-mode            | gnu-elpa | phps-mode-automation-grammar |             |
 | python-mode          | gitlab   | org-loaddefs                 |             |
 
 - frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-794351381
-- geiser: https://github.com/melpa/melpa/pull/7514
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
