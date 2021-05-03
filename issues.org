@@ -66,10 +66,12 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2)          | Class  | Feature      | Provider    |
-|----------------------+--------+--------------+-------------|
-| frontside-javascript | github | company-lsp  | company-lsp |
-| python-mode          | gitlab | org-loaddefs |             |
+| Package (4)          | Class    | Feature      | Provider    |
+|----------------------+----------+--------------+-------------|
+| ebdb                 | gnu-elpa | org-contacts |             |
+| frontside-javascript | github   | company-lsp  | company-lsp |
+| orglue               | github   | org-mac-link |             |
+| python-mode          | gitlab   | org-loaddefs |             |
 
 - frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-794351381
 

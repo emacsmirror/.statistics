@@ -319,8 +319,9 @@
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (18)          | Class    | M | Library                         | Reason                     |
+| Package (19)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
+| pyim-cangjiedict      | git      | ✓ | pyim-cangjiedict.el             |                            |
 | chumpy-windows        | github   |   | window-jump.el                  | no primary entry point     |
 | dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point     |
 | edb                   | orphaned |   | lisp/database.el                | no/mismatched main library |

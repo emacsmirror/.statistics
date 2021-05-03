@@ -79,15 +79,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  135 |    135 |       |       |   263 |       |
+| gnu-elpa  |  135 |    135 |       |       |   264 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4868 |   4868 |       |       |       |  4639 |
-| gitlab    |  162 |    162 |       |       |       |   157 |
+| github    | 4867 |   4867 |       |       |       |  4641 |
+| gitlab    |  163 |    163 |       |       |       |   158 |
 | sourcehut |   31 |     31 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   76 |     76 |       |       |       |   110 |
+| git       |   77 |     77 |       |       |       |   110 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -96,10 +96,10 @@
 | hg        |   16 |     16 |       |       |       |    14 |
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  131 |    131 |       |       |       |       |
-| shelved   | 1394 |        |  1394 |       |       |       |
+| orphaned  |  130 |    130 |       |       |       |       |
+| shelved   | 1399 |        |  1399 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7983 |   6138 |  1394 |   467 |   278 |  4920 |
+| total     | 7988 |   6138 |  1399 |   467 |   279 |  4923 |
 
 * Emacs
 ** Prefer elpa
@@ -206,6 +206,23 @@
 | shell-quasiquote | external |
 | systemd          | external |
 
+** Shelved
+#+NAME: gelpa-shelved
+#+BEGIN_SRC emacs-lisp
+  (epkg-with-org-header ("Package" "Gelpa")
+    (epkg-sql [:select :distinct [packages:name gelpa-recipes:class]
+               :from [packages gelpa-recipes]
+               :where (= packages:name gelpa-recipes:name)
+               :and (= packages:class 'shelved)
+               :order-by [(asc packages:name)]]))
+#+END_SRC
+#+RESULTS: gelpa-shelved
+| Package (1) | Gelpa    |
+|-------------+----------|
+| clhs        | external |
+
+- clhs: https://github.com/melpa/melpa/pull/7529
+
 ** Prefer builtin
 #+NAME: gelpa-prefer-builtin
 #+BEGIN_SRC emacs-lisp
@@ -243,7 +260,7 @@
                         :where (= packages:name gelpa-recipes:epkg-package)
                         :and packages:class :not :in $v1
                         :order-by [(asc packages:name)]]
-                       [builtin gnu-elpa])))
+                       [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
 | Package (125)              | Class  | Gelpa    | Link                                                 |
