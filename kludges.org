@@ -319,9 +319,8 @@
                       'epkg-mirrored-package--eieio-childp))))
 #+END_SRC
 #+RESULTS: no-mainlib
-| Package (19)          | Class    | M | Library                         | Reason                     |
+| Package (21)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
-| pyim-cangjiedict      | git      | ✓ | pyim-cangjiedict.el             |                            |
 | chumpy-windows        | github   |   | window-jump.el                  | no primary entry point     |
 | dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point     |
 | edb                   | orphaned |   | lisp/database.el                | no/mismatched main library |
@@ -332,11 +331,14 @@
 | ultratex              | github   |   | lisp/ultex.el                   | no/mismatched main library |
 | ert-runner            | github   | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
 | literate-starter-kit  | github   | ✓ | init.el                         | not a package              |
+| pyim-cangjiedict      | git      | ✓ | pyim-cangjiedict.el             | pending [[https://github.com/melpa/melpa/pull/7543][#7543]]              |
 | auctex                | gnu      |   | tex.el                          | pkg/lib name mismatch      |
 | ddskk                 | github   | ✓ | skk.el                          | pkg/lib name mismatch      |
+| apropospriate-theme   | github   | ✓ | apropospriate.el                | two-variant theme          |
 | eziam-theme           | github   | ✓ | eziam-dark-theme.el             | two-variant theme          |
 | omtose-phellack-theme | github   | ✓ | variants/omtose-darker-theme.el | two-variant theme          |
+| zonokai-theme         | github   |   | zonokai.el                      | two-variant theme          |
 | farmhouse-theme       | github   | ✓ | farmhouse-dark-theme.el         | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
 | spacemacs-theme       | github   | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
-| punpun-theme          | git      | ✓ | punpun-dark-theme.el            | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
+| punpun-theme          | git      | ✓ | punpun-common.el                | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | majapahit-theme       | gitlab   | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
