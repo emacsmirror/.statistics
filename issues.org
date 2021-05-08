@@ -66,11 +66,12 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (2)          | Class  | Feature      | Provider    |
-|----------------------+--------+--------------+-------------|
-| frontside-javascript | github | company-lsp  | company-lsp |
-| python-mode          | gitlab | org-loaddefs |             |
+| Package (3)          | Class  | Feature               | Provider    |
+|----------------------+--------+-----------------------+-------------|
+| chronometrist-goal   | github | chronometrist-queries |             |
+| frontside-javascript | github | company-lsp           | company-lsp |
 
+- chronometrist-goal: https://github.com/contrapunctus-1/chronometrist-goal/commit/fa438dc5
 - frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-794351381
 
 * Packages whose repositories have been archived
@@ -114,7 +115,7 @@ Don't forget to update ~emir--moved-packages~ occasionally.
 #+RESULTS: github-moved
 
 * Missing library summary
-
+#+NAME: missing-summary
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "M")
     (mapcar (pcase-lambda (`(,name ,class))
@@ -128,15 +129,14 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                                    (not (= class 'shelved)))
                        :order-by [(asc name)]])))
 #+END_SRC
-#+RESULTS:
-| Package (7)       | Class   | M |
+#+RESULTS: missing-summary
+| Package (6)       | Class   | M |
 |-------------------+---------+---|
 | arc-dark-theme    | github  | ✓ |
 | dictem            | github  |   |
 | evil-escape       | github  | ✓ |
 | icons-in-terminal | github  |   |
 | jabber            | github  | ✓ |
-| trindle           | github  |   |
 | zeitgeist         | subtree |   |
 
 - arc-dark-theme: https://github.com/cfraz89/arc-dark-theme/pull/2
@@ -144,5 +144,4 @@ Don't forget to update ~emir--moved-packages~ occasionally.
 - evil-escape: https://github.com/syl20bnr/evil-escape/pull/98
 - icons-in-terminal: https://github.com/sebastiencs/icons-in-terminal/pull/40
 - jabber: https://github.com/legoscia/emacs-jabber/pull/38
-- trindle: https://github.com/daichirata/trindle/pull/1
 - zeitgeist: https://gitlab.freedesktop.org/zeitgeist/zeitgeist-datasources/-/merge_requests/1
