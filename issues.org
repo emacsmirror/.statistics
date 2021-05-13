@@ -66,12 +66,10 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (3)          | Class  | Feature               | Provider    |
-|----------------------+--------+-----------------------+-------------|
-| chronometrist-goal   | github | chronometrist-queries |             |
-| frontside-javascript | github | company-lsp           | company-lsp |
+| Package (1)          | Class  | Feature     | Provider    |
+|----------------------+--------+-------------+-------------|
+| frontside-javascript | github | company-lsp | company-lsp |
 
-- chronometrist-goal: https://github.com/contrapunctus-1/chronometrist-goal/commit/fa438dc5
 - frontside-javascript: https://github.com/melpa/melpa/pull/7403#issuecomment-794351381
 
 * Packages whose repositories have been archived

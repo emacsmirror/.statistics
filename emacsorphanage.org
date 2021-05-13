@@ -56,7 +56,7 @@ that are available from there).
   (emir--list-orphans "upstream disappeared")
 #+END_SRC
 #+RESULTS: disappeared
-| Package (9) | E | M |
+| Package (8) | E | M |
 |-------------+---+---|
 | dedicated   | ✔ | ✔ |
 | ecasound    | ✔ |   |
@@ -64,7 +64,6 @@ that are available from there).
 | miniedit    | ✔ | ✔ |
 | osd         | ✔ |   |
 | pager       | ✔ | ✔ |
-| pointback   | ✔ | ✔ |
 | smarty-mode | ✔ | ✔ |
 | tail        | ✔ |   |
 
@@ -111,7 +110,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "wiki needed by non-wiki" "wiki multiple files")
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Package (31)       | E | M |
+| Package (30)       | E | M |
 |--------------------+---+---|
 | cygwin-mount       | ✔ |   |
 | dirtree            | ✔ | ✔ |
@@ -119,7 +118,6 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | ert-expectations   | ✔ | ✔ |
 | extract-text       | ✔ |   |
 | findr              | ✔ | ✔ |
-| hide-lines         | ✔ | ✔ |
 | highline           | ✔ |   |
 | http-post-simple   | ✔ | ✔ |
 | imdb               | ✔ |   |
