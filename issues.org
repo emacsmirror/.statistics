@@ -17,19 +17,19 @@
                                               (isnull drop))]
                                  name))
         (setq feature (car feature))
-        (-if-let (elt (assq feature alist))
+        (if-let ((elt (assq feature alist)))
             (push name (cdr elt))
           (cl-pushnew (list feature name) alist))))
     (epkg-with-org-header ("Feature" "Package" "Shelved")
-      (mapcar (-lambda ((feature package))
+      (mapcar (pcase-lambda (`(,feature ,package))
                 (list feature package
                       (epkg-shelved-package-p (epkg package))))
-              (-mapcat (-lambda ((feature . providers))
-                         (and (> (length providers) 1)
-                              (list (list feature providers))
-                              (--map (list feature it)
+              (mapcan (pcase-lambda (`(,feature . ,providers))
+                        (and (> (length providers) 1)
+                             (list (list feature providers))
+                             (mapcar (lambda (elt) (list feature elt))
                                      (sort providers #'string<))))
-                       (cl-sort alist #'string< :key #'car)))))
+                      (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
 | Feature (1) | Package                | Shelved |
@@ -45,24 +45,24 @@ Reoccuring issues:
 #+NAME: unsatisfied
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Feature" "Provider")
-    (-mapcat
-     (-lambda ((name class))
+    (mapcan
+     (pcase-lambda (`(,name ,class))
        (let (alist)
-	 (-each (epkg-sql [:select feature :from required
-                           :where (and (= package $s1)
-                                       (isnull drop))]
-                          name)
-           (-lambda ((feature))
-             (-if-let (provider (epkg-provided-by feature))
-		 (when (epkg-sql [:select class :from packages
-                                  :where (and (= name $s1)
-                                              (= class 'shelved))]
-				 provider)
-                   (push (list feature provider) alist))
-               (push (list feature nil) alist))))
-	 (mapcar (-lambda ((feature provider))
+         (pcase-dolist (`(,feature)
+                        (epkg-sql [:select feature :from required
+                                   :where (and (= package $s1)
+                                               (isnull drop))]
+                                  name))
+           (if-let ((provider (epkg-provided-by feature)))
+               (when (epkg-sql [:select class :from packages
+                                :where (and (= name $s1)
+                                            (= class 'shelved))]
+                               provider)
+                 (push (list feature provider) alist))
+             (push (list feature nil) alist)))
+         (mapcar (pcase-lambda (`(,feature ,provider))
                    (list name class feature provider))
-		 (cl-sort alist #'string< :key #'car))))
+                 (cl-sort alist #'string< :key #'car))))
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied

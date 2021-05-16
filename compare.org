@@ -66,14 +66,16 @@
     (cl-decf (nth 2 (assq 'git table)))
     `(,@table
       ("total"
-       ,@(--reduce (cl-mapcar (lambda (a b)
-                                (+ (if (numberp a) a 0)
-                                   (if (numberp b) b 0)))
-                              acc it)
-                   (--keep (and (listp it)
-                                (symbolp (car it))
-                                (cdr it))
-                           table)))))
+       ,@(seq-reduce (lambda (acc elt)
+                       (cl-mapcar (lambda (a b)
+                                    (+ (if (numberp a) a 0)
+                                       (if (numberp b) b 0)))
+                                  acc elt))
+                     (--keep (and (listp it)
+                                  (symbolp (car it))
+                                  (cdr it))
+                             table)
+                     '(0 0 0 0 0 0 0)))))
 #+END_SRC
 #+RESULTS: summary
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
@@ -153,17 +155,17 @@
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Url")
-    (-filter (pcase-lambda (`(,name ,class ,_url))
-               (and (not (assoc name emir-pending-packages))
-                    (not (assoc name emir--preferred-builtins))
-                    (not (assoc name emir-secondary-packages))
-                    (or (not (eq class 'core))
-                        (epkg-builtin-package-p (epkg name)))))
-             (epkg-sql [:select [name class url]
-                        :from gelpa-recipes
-                        :where (or (isnull epkg-package)
-                                   (= class 'core))
-                        :order-by [(asc name)]])))
+    (seq-filter (pcase-lambda (`(,name ,class ,_url))
+                  (and (not (assoc name emir-pending-packages))
+                       (not (assoc name emir--preferred-builtins))
+                       (not (assoc name emir-secondary-packages))
+                       (or (not (eq class 'core))
+                           (epkg-builtin-package-p (epkg name)))))
+                (epkg-sql [:select [name class url]
+                           :from gelpa-recipes
+                           :where (or (isnull epkg-package)
+                                      (= class 'core))
+                           :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-new
 
@@ -171,9 +173,9 @@
 #+NAME: gelpa-pending
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa" "Reason")
-    (-keep (-lambda ((name class))
-             (--when-let (cadr (assoc name emir-pending-packages))
-               (list name class it)))
+    (-keep (pcase-lambda (`(,name ,class))
+             (and-let* ((reason (cadr (assoc name emir-pending-packages))))
+               (list name class reason)))
            (epkg-sql [:select [name class]
                       :from gelpa-recipes
                       :where (isnull epkg-package)
@@ -227,7 +229,7 @@
 #+NAME: gelpa-prefer-builtin
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa" "Reason")
-    (mapcar (-lambda ((name class))
+    (mapcar (pcase-lambda (`(,name ,class))
               (nconc (list name class)
                      (or (cdr (assoc name emir--preferred-builtins))
                          (list ""))))
@@ -436,7 +438,7 @@
 #+NAME: melpa-new
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Melpa" "Link")
-    (-keep (-lambda ((name fetcher url))
+    (-keep (pcase-lambda (`(,name ,fetcher ,url))
              (and (not (assoc name emir-pending-packages))
                   (not (or (emir--lookup-url url)
                            (cadr (assoc name emir-secondary-packages))))
@@ -456,9 +458,9 @@
 #+NAME: melpa-pending
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Melpa" "Reason")
-    (-keep (-lambda ((name class))
-             (--when-let (cadr (assoc name emir-pending-packages))
-               (list name class it)))
+    (-keep (pcase-lambda (`(,name ,class))
+             (and-let* ((reason (cadr (assoc name emir-pending-packages))))
+               (list name class reason)))
            (epkg-sql [:select [name class]
                       :from melpa-recipes
                       :where (isnull epkg-package)
@@ -692,7 +694,7 @@
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Mirror" "Melpa")
     (-keep
-     (-lambda ((name type url murl))
+     (pcase-lambda (`(,name ,type ,url ,murl))
        (and
         (not (or (and (string-prefix-p "hg::" url)
                       (equal murl (substring url 4)))

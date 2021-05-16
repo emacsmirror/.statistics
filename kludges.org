@@ -307,7 +307,7 @@
 #+NAME: no-mainlib
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header (4 "Package" "Class" "M" "Library" "Reason")
-    (-keep (-lambda ((name type library))
+    (-keep (pcase-lambda (`(,name ,type ,library))
                (and (not (eq type 'core))
                     (list name type
                           (and (melpa-get name) "✓")

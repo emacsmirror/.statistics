@@ -17,10 +17,10 @@
   (defun emir--list-orphans (&rest only)
     (epkg-with-org-header ("Package" "E" "M")
       (--keep
-       (-let* ((name (cdr (assq 'name it)))
-               (pkg  (epkg name))
-               (rcp  (melpa-get name))
-               (reason (cadr (assoc name emir--orphanage-reason))))
+       (let* ((name (cdr (assq 'name it)))
+              (pkg  (epkg name))
+              (rcp  (melpa-get name))
+              (reason (cadr (assoc name emir--orphanage-reason))))
          (and (or (not only)
                   (member reason only))
               (list name

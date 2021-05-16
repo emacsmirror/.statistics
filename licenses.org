@@ -6,10 +6,10 @@
   (require 'emir)
 
   (defun emir--format-license-table (table)
-    (--when-let (assoc "failure" table) (setcar it  "((failure))"))
-    (--when-let (assoc "pending" table) (setcar it  "((pending))"))
-    (--when-let (assoc "none" table)    (setcar it  "((none))"))
-    (--when-let (assoc "custom" table)  (setcar it  "((custom))"))
+    (when-let ((elt (assoc "failure" table))) (setcar elt "((failure))"))
+    (when-let ((elt (assoc "pending" table))) (setcar elt "((pending))"))
+    (when-let ((elt (assoc "none" table)))    (setcar elt "((none))"))
+    (when-let ((elt (assoc "custom" table)))  (setcar elt "((custom))"))
     (let ((total (apply '+ (mapcar 'cadr table)))
           (gnu   (apply '+ (mapcar (pcase-lambda (`(,license ,count))
                                      (if (and license
