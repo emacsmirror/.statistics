@@ -82,12 +82,12 @@
 | gnu-elpa  |  135 |    135 |       |       |   264 |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | github    | 4871 |   4871 |       |       |       |  4643 |
-| gitlab    |  163 |    163 |       |       |       |   159 |
+| gitlab    |  162 |    162 |       |       |       |   158 |
 | sourcehut |   32 |     32 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   79 |     79 |       |       |       |   112 |
+| git       |   80 |     80 |       |       |       |   114 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -99,7 +99,7 @@
 | orphaned  |  128 |    128 |       |       |       |       |
 | shelved   | 1402 |        |  1402 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7995 |   6142 |  1402 |   467 |   279 |  4928 |
+| total     | 7995 |   6142 |  1402 |   467 |   279 |  4929 |
 
 * Emacs
 ** Prefer elpa
@@ -481,7 +481,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (119)   | Secondary package                 | Class     |
+| Primary package (120)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -500,6 +500,7 @@
 | calfw                   | calfw-ical                        | github    |
 | calfw                   | calfw-org                         | github    |
 | cfn-mode                | flycheck-cfn                      | gitlab    |
+| chronometrist           | chronometrist-key-values          | git       |
 | chumpy-windows          | spaces                            | github    |
 | chumpy-windows          | splitter                          | github    |
 | chumpy-windows          | window-jump                       | github    |
@@ -691,14 +692,18 @@
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Mirror" "Melpa")
     (-keep
-     (-lambda ((name type url melpa-url))
-       (and (not (or (and (string-prefix-p "hg::" url)
-                          (equal melpa-url (substring url 4)))
-                     (string-prefix-p "git@github.com:emacsmirror/" melpa-url)
-                     (string-prefix-p "git@github.com:emacsattic/"  melpa-url)))
-            (list name
-                  (epkg-org-link  name)
-                  (melpa-org-link name))))
+     (-lambda ((name type url murl))
+       (and
+        (not (or (and (string-prefix-p "hg::" url)
+                      (equal murl (substring url 4)))
+                 (string-prefix-p "git@github.com:emacsmirror/" murl)
+                 (string-prefix-p "git@github.com:emacsattic/"  murl)
+                 (equal
+                  (if (string-suffix-p ".git"  url) (substring  url 0 -4)  url)
+                  (if (string-suffix-p ".git" murl) (substring murl 0 -4) murl))))
+        (list name
+              (epkg-org-link  name)
+              (melpa-org-link name))))
      (epkg-sql [:select :distinct [packages:name packages:class
                                    packages:url melpa-recipes:url]
                 :from [packages melpa-recipes]
