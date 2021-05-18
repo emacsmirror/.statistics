@@ -32,11 +32,14 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (1) | Package                | Shelved |
+| Feature (2) | Package                | Shelved |
 |-------------+------------------------+---------|
+| build-utils | dynaring               |         |
+| build-utils | symex                  |         |
 | setup       | projectile-trailblazer |         |
 | setup       | setup                  |         |
 
+- build-utils: https://github.com/countvajhula/symex.el/issues/27
 - setup: https://github.com/micdahl/projectile-trailblazer/issues/2
 Reoccuring issues:
 - test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])

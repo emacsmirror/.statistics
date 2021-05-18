@@ -81,9 +81,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  135 |    135 |       |       |   264 |       |
+| gnu-elpa  |  135 |    135 |       |       |   265 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4871 |   4871 |       |       |       |  4643 |
+| github    | 4878 |   4878 |       |       |       |  4649 |
 | gitlab    |  162 |    162 |       |       |       |   158 |
 | sourcehut |   32 |     32 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  128 |    128 |       |       |       |       |
 | shelved   | 1402 |        |  1402 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 7995 |   6142 |  1402 |   467 |   279 |  4929 |
+| total     | 8002 |   6149 |  1402 |   467 |   280 |  4935 |
 
 * Emacs
 ** Prefer elpa
@@ -265,7 +265,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (125)              | Class  | Gelpa    | Link                                                 |
+| Package (126)              | Class  | Gelpa    | Link                                                 |
 |----------------------------+--------+----------+------------------------------------------------------|
 | ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -321,6 +321,7 @@
 | hook-helpers               | nongnu | external | [[https://savannah.nongnu.org/projects/hook-helpers-el]] |
 | hydra                      | github | external | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                        |
 | hyperbole                  | gnu    | external | [[http://www.gnu.org/software/hyperbole]]                |
+| isearch-mb                 | github | external | [[https://github.com/astoff/isearch-mb][astoff/isearch-mb]]                                    |
 | ivy                        | github | external | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                       |
 | ivy-explorer               | github | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                                 |
 | ivy-posframe               | github | external | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                                 |
@@ -415,6 +416,7 @@
 | Package (18)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
+| org-edna            | bzr::https://bzr.savannah.gnu.org/r/org-edna-el   |
 | vcl-mode            | git://git.gnu.org.ua/vcl-mode                     |
 | auto-overlays       | http://www.dr-qubit.org/git/predictive.git        |
 | dict-tree           | http://www.dr-qubit.org/git/predictive.git        |
@@ -431,7 +433,6 @@
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
 | persist             | https://gitlab.com/phillord/persist.git           |
 | bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |
-| org-edna            | https://savannah.nongnu.org/projects/org-edna-el  |
 
 * Melpa
 ** New
