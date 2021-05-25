@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  135 |    135 |       |       |   265 |       |
+| gnu-elpa  |  134 |    134 |       |       |   265 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4878 |   4878 |       |       |       |  4649 |
+| github    | 4884 |   4884 |       |       |       |  4657 |
 | gitlab    |  162 |    162 |       |       |       |   158 |
-| sourcehut |   32 |     32 |       |       |       |       |
+| sourcehut |   31 |     31 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   80 |     80 |       |       |       |   114 |
+| git       |   80 |     80 |       |       |       |   112 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  128 |    128 |       |       |       |       |
-| shelved   | 1402 |        |  1402 |       |       |       |
+| shelved   | 1403 |        |  1403 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8002 |   6149 |  1402 |   467 |   280 |  4935 |
+| total     | 8007 |   6153 |  1403 |   467 |   280 |  4941 |
 
 * Emacs
 ** Prefer elpa
@@ -265,134 +265,135 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (126)              | Class  | Gelpa    | Link                                                 |
-|----------------------------+--------+----------+------------------------------------------------------|
-| ace-window                 | github | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
-| ack                        | github | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
-| aggressive-indent          | github | external | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]                     |
-| ahungry-theme              | github | external | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                          |
-| async                      | github | external | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                                 |
-| auctex                     | gnu    | external | [[https://savannah.gnu.org/projects/auctex]]             |
-| avy                        | github | external | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                          |
-| bbdb                       | nongnu | external | [[http://bbdb.sourceforge.net]]                          |
-| beacon                     | github | external | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                                     |
-| bnf-mode                   | github | external | [[https://github.com/sergeyklay/bnf-mode][sergeyklay/bnf-mode]]                                  |
-| buffer-expose              | github | external | [[https://github.com/clemera/buffer-expose][clemera/buffer-expose]]                                |
-| bug-hunter                 | github | external | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                           |
-| cobol-mode                 | git    | external |                                                      |
-| coffee-mode                | github | external | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                                  |
-| compact-docstrings         | github | external | [[https://github.com/cpitclaudel/compact-docstrings][cpitclaudel/compact-docstrings]]                       |
-| company                    | github | external | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                            |
-| company-math               | github | external | [[https://github.com/vspinu/company-math][vspinu/company-math]]                                  |
-| company-statistics         | github | external | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]                      |
-| context-coloring           | github | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]                  |
-| corfu                      | github | external | [[https://github.com/minad/corfu][minad/corfu]]                                          |
-| cpio-mode                  | github | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                     |
-| darkroom                   | github | external | [[https://github.com/joaotavora/darkroom][joaotavora/darkroom]]                                  |
-| dash                       | github | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                                      |
-| dbus-codegen               | github | external | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                                 |
-| delight                    | nongnu | external | [[https://savannah.nongnu.org/projects/delight]]         |
-| diff-hl                    | github | external | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                                       |
-| diffview                   | github | external | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                                 |
-| dired-git-info             | github | external | [[https://github.com/clemera/dired-git-info][clemera/dired-git-info]]                               |
-| disk-usage                 | gitlab | external | [[https://gitlab.com/ambrevar/emacs-disk-usage][ambrevar/emacs-disk-usage]]                            |
-| dts-mode                   | github | external | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                                     |
-| easy-kill                  | github | external | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                                     |
-| eev                        | github | external | [[https://github.com/edrx/eev][edrx/eev]]                                             |
-| eglot                      | github | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                                     |
-| eldoc-eval                 | github | external | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                          |
-| electric-spacing           | github | external | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                                 |
-| emms                       | gnu    | external | [[http://www.gnu.org/software/emms]]                     |
-| enwc                       | hg     | external | [[https://savannah.nongnu.org/p/enwc]]                   |
-| ergoemacs-mode             | github | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                             |
-| expand-region              | github | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                             |
-| exwm                       | github | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                          |
-| f90-interface-browser      | github | external | [[https://github.com/wence-/f90-iface][wence-/f90-iface]]                                     |
-| frog-menu                  | github | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                                    |
-| gcmh                       | gitlab | external | [[https://gitlab.com/koral/gcmh][koral/gcmh]]                                           |
-| ggtags                     | github | external | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                        |
-| gnome-c-style              | github | external | [[https://github.com/ueno/gnome-c-style][ueno/gnome-c-style]]                                   |
-| gnorb                      | github | external | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                         |
-| gpastel                    | github | external | [[https://github.com/DamienCassou/gpastel][DamienCassou/gpastel]]                                 |
-| greader                    | gitlab | external | [[https://gitlab.com/michelangelo-rodriguez/greader][michelangelo-rodriguez/greader]]                       |
-| guess-language             | github | external | [[https://github.com/tmalsburg/guess-language.el][tmalsburg/guess-language.el]]                          |
-| hiddenquote                | gitlab | external | [[https://gitlab.com/mauroaranda/hiddenquote/hiddenquote][mauroaranda/hiddenquote/hiddenquote]]                  |
-| highlight-escape-sequences | github | external | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]                    |
-| hook-helpers               | nongnu | external | [[https://savannah.nongnu.org/projects/hook-helpers-el]] |
-| hydra                      | github | external | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                        |
-| hyperbole                  | gnu    | external | [[http://www.gnu.org/software/hyperbole]]                |
-| isearch-mb                 | github | external | [[https://github.com/astoff/isearch-mb][astoff/isearch-mb]]                                    |
-| ivy                        | github | external | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                       |
-| ivy-explorer               | github | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                                 |
-| ivy-posframe               | github | external | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                                 |
-| js2-mode                   | github | external | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                        |
-| json-mode                  | github | external | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                                    |
-| kiwix                      | github | external | [[https://github.com/stardiviner/kiwix.el][stardiviner/kiwix.el]]                                 |
-| leaf                       | github | external | [[https://github.com/conao3/leaf.el][conao3/leaf.el]]                                       |
-| load-relative              | github | external | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                            |
-| loc-changes                | github | external | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                              |
-| loccur                     | github | external | [[https://github.com/fourier/loccur][fourier/loccur]]                                       |
-| math-symbol-lists          | github | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                             |
-| mines                      | github | external | [[https://github.com/calancha/Minesweeper][calancha/Minesweeper]]                                 |
-| mmm-mode                   | github | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                                     |
-| modus-themes               | gitlab | core     | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]                             |
-| multishell                 | github | external | [[https://github.com/kenmanheimer/EmacsMultishell][kenmanheimer/EmacsMultishell]]                         |
-| muse                       | github | external | [[https://github.com/alexott/muse][alexott/muse]]                                         |
-| nameless                   | github | external | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                                   |
-| names                      | github | external | [[https://github.com/Malabarba/names][Malabarba/names]]                                      |
-| ob-haxe                    | github | external | [[https://github.com/ianxm/ob-haxe.el][ianxm/ob-haxe.el]]                                     |
-| objed                      | github | external | [[https://github.com/clemera/objed][clemera/objed]]                                        |
-| on-screen                  | github | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]                       |
-| org                        | git    | external | [[https://orgmode.org]]                                  |
-| pabbrev                    | github | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                                     |
-| parsec                     | github | external | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                                |
-| peg                        | github | external | [[https://github.com/ellerh/peg.el][ellerh/peg.el]]                                        |
-| pinentry                   | github | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                                     |
-| posframe                   | github | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                                     |
-| pyim                       | github | external | [[https://github.com/tumashu/pyim][tumashu/pyim]]                                         |
-| pyim-basedict              | github | external | [[https://github.com/tumashu/pyim-basedict][tumashu/pyim-basedict]]                                |
-| realgud                    | github | external | [[https://github.com/realgud/realgud][realgud/realgud]]                                      |
-| realgud-ipdb               | github | external | [[https://github.com/realgud/realgud-ipdb][realgud/realgud-ipdb]]                                 |
-| realgud-jdb                | github | external | [[https://github.com/realgud/realgud-jdb][realgud/realgud-jdb]]                                  |
-| realgud-lldb               | github | external | [[https://github.com/realgud/realgud-lldb][realgud/realgud-lldb]]                                 |
-| realgud-node-debug         | github | external | [[https://github.com/realgud/realgud-node-debug][realgud/realgud-node-debug]]                           |
-| realgud-node-inspect       | github | external | [[https://github.com/realgud/realgud-node-inspect][realgud/realgud-node-inspect]]                         |
-| realgud-trepan-ni          | github | external | [[https://github.com/realgud/realgud-trepan-ni][realgud/realgud-trepan-ni]]                            |
-| rec-mode                   | gnu    | external | [[https://www.gnu.org/software/recutils]]                |
-| relint                     | github | external | [[https://github.com/mattiase/relint][mattiase/relint]]                                      |
-| rich-minority              | github | external | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                              |
-| rt-liberation              | nongnu | external | [[http://www.nongnu.org/rtliber]]                        |
-| scanner                    | gitlab | external | [[https://gitlab.com/rstocker/scanner][rstocker/scanner]]                                     |
-| slime-volleyball           | github | external | [[https://github.com/fitzsim/slime-volleyball][fitzsim/slime-volleyball]]                             |
-| smalltalk-mode             | nongnu | external | [[https://savannah.nongnu.org/projects/smalltalk-mode]]  |
-| sotlisp                    | github | external | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]                      |
-| spinner                    | github | external | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                                 |
-| sql-indent                 | github | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                                  |
-| ssh-deploy                 | github | external | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]                          |
-| system-packages            | gitlab | external | [[https://gitlab.com/jabranham/system-packages][jabranham/system-packages]]                            |
-| systemd                    | github | external | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                               |
-| temp-buffer-browse         | github | external | [[https://github.com/leoliu/temp-buffer-browse][leoliu/temp-buffer-browse]]                            |
-| test-simple                | github | external | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                              |
-| tiny                       | github | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                         |
-| tramp                      | gnu    | external | [[https://savannah.gnu.org/projects/tramp]]              |
-| transient                  | github | external | [[https://github.com/magit/transient][magit/transient]]                                      |
-| undo-tree                  | gitlab | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                                      |
-| validate                   | github | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                                |
-| valign                     | github | external | [[https://github.com/casouri/valign][casouri/valign]]                                       |
-| vdiff                      | github | external | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                                  |
-| vertico                    | github | external | [[https://github.com/minad/vertico][minad/vertico]]                                        |
-| vlf                        | github | external | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                        |
-| wcheck-mode                | github | external | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                                 |
-| wconf                      | github | external | [[https://github.com/ilohmar/wconf][ilohmar/wconf]]                                        |
-| web-server                 | github | external | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                            |
-| webfeeder                  | gitlab | external | [[https://gitlab.com/ambrevar/emacs-webfeeder][ambrevar/emacs-webfeeder]]                             |
-| websocket                  | github | external | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                               |
-| which-key                  | github | external | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]                              |
-| windower                   | gitlab | external | [[https://gitlab.com/ambrevar/emacs-windower][ambrevar/emacs-windower]]                              |
-| xelb                       | github | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                          |
-| xr                         | github | external | [[https://github.com/mattiase/xr][mattiase/xr]]                                          |
-| yasnippet                  | github | external | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                                 |
-| ztree                      | github | external | [[https://github.com/fourier/ztree][fourier/ztree]]                                        |
+| Package (127)              | Class     | Gelpa    | Link                                                 |
+|----------------------------+-----------+----------+------------------------------------------------------|
+| ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
+| ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
+| aggressive-indent          | github    | external | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]                     |
+| ahungry-theme              | github    | external | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                          |
+| async                      | github    | external | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                                 |
+| auctex                     | gnu       | external | [[https://savannah.gnu.org/projects/auctex]]             |
+| avy                        | github    | external | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                          |
+| bbdb                       | nongnu    | external | [[http://bbdb.sourceforge.net]]                          |
+| beacon                     | github    | external | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                                     |
+| bnf-mode                   | github    | external | [[https://github.com/sergeyklay/bnf-mode][sergeyklay/bnf-mode]]                                  |
+| buffer-expose              | github    | external | [[https://github.com/clemera/buffer-expose][clemera/buffer-expose]]                                |
+| bug-hunter                 | github    | external | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                           |
+| cobol-mode                 | git       | external |                                                      |
+| coffee-mode                | github    | external | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                                  |
+| compact-docstrings         | github    | external | [[https://github.com/cpitclaudel/compact-docstrings][cpitclaudel/compact-docstrings]]                       |
+| company                    | github    | external | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                            |
+| company-math               | github    | external | [[https://github.com/vspinu/company-math][vspinu/company-math]]                                  |
+| company-statistics         | github    | external | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]                      |
+| context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]                  |
+| corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                          |
+| cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                     |
+| darkroom                   | github    | external | [[https://github.com/joaotavora/darkroom][joaotavora/darkroom]]                                  |
+| dash                       | github    | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                                      |
+| dbus-codegen               | github    | external | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                                 |
+| delight                    | nongnu    | external | [[https://savannah.nongnu.org/projects/delight]]         |
+| diff-hl                    | github    | external | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                                       |
+| diffview                   | github    | external | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                                 |
+| dired-git-info             | github    | external | [[https://github.com/clemera/dired-git-info][clemera/dired-git-info]]                               |
+| disk-usage                 | gitlab    | external | [[https://gitlab.com/ambrevar/emacs-disk-usage][ambrevar/emacs-disk-usage]]                            |
+| dts-mode                   | github    | external | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                                     |
+| easy-kill                  | github    | external | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                                     |
+| eev                        | github    | external | [[https://github.com/edrx/eev][edrx/eev]]                                             |
+| eglot                      | github    | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                                     |
+| eldoc-eval                 | github    | external | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                          |
+| electric-spacing           | github    | external | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                                 |
+| emms                       | gnu       | external | [[http://www.gnu.org/software/emms]]                     |
+| enwc                       | hg        | external | [[https://savannah.nongnu.org/p/enwc]]                   |
+| ergoemacs-mode             | github    | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                             |
+| expand-region              | github    | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                             |
+| exwm                       | github    | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                          |
+| f90-interface-browser      | github    | external | [[https://github.com/wence-/f90-iface][wence-/f90-iface]]                                     |
+| frog-menu                  | github    | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                                    |
+| gcmh                       | gitlab    | external | [[https://gitlab.com/koral/gcmh][koral/gcmh]]                                           |
+| ggtags                     | github    | external | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                        |
+| gnome-c-style              | github    | external | [[https://github.com/ueno/gnome-c-style][ueno/gnome-c-style]]                                   |
+| gnorb                      | github    | external | [[https://github.com/girzel/gnorb][girzel/gnorb]]                                         |
+| gpastel                    | github    | external | [[https://github.com/DamienCassou/gpastel][DamienCassou/gpastel]]                                 |
+| greader                    | gitlab    | external | [[https://gitlab.com/michelangelo-rodriguez/greader][michelangelo-rodriguez/greader]]                       |
+| guess-language             | github    | external | [[https://github.com/tmalsburg/guess-language.el][tmalsburg/guess-language.el]]                          |
+| hiddenquote                | gitlab    | external | [[https://gitlab.com/mauroaranda/hiddenquote/hiddenquote][mauroaranda/hiddenquote/hiddenquote]]                  |
+| highlight-escape-sequences | github    | external | [[https://github.com/dgutov/highlight-escape-sequences][dgutov/highlight-escape-sequences]]                    |
+| hook-helpers               | nongnu    | external | [[https://savannah.nongnu.org/projects/hook-helpers-el]] |
+| hydra                      | github    | external | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                        |
+| hyperbole                  | gnu       | external | [[http://www.gnu.org/software/hyperbole]]                |
+| isearch-mb                 | github    | external | [[https://github.com/astoff/isearch-mb][astoff/isearch-mb]]                                    |
+| ivy                        | github    | external | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                       |
+| ivy-explorer               | github    | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                                 |
+| ivy-posframe               | github    | external | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                                 |
+| js2-mode                   | github    | external | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                        |
+| json-mode                  | github    | external | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                                    |
+| kiwix                      | github    | external | [[https://github.com/stardiviner/kiwix.el][stardiviner/kiwix.el]]                                 |
+| leaf                       | github    | external | [[https://github.com/conao3/leaf.el][conao3/leaf.el]]                                       |
+| load-relative              | github    | external | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                            |
+| loc-changes                | github    | external | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                              |
+| loccur                     | github    | external | [[https://github.com/fourier/loccur][fourier/loccur]]                                       |
+| math-symbol-lists          | github    | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                             |
+| mines                      | github    | external | [[https://github.com/calancha/Minesweeper][calancha/Minesweeper]]                                 |
+| mmm-mode                   | github    | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                                     |
+| modus-themes               | gitlab    | core     | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]                             |
+| multishell                 | github    | external | [[https://github.com/kenmanheimer/EmacsMultishell][kenmanheimer/EmacsMultishell]]                         |
+| muse                       | github    | external | [[https://github.com/alexott/muse][alexott/muse]]                                         |
+| nameless                   | github    | external | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                                   |
+| names                      | github    | external | [[https://github.com/Malabarba/names][Malabarba/names]]                                      |
+| ob-haxe                    | github    | external | [[https://github.com/ianxm/ob-haxe.el][ianxm/ob-haxe.el]]                                     |
+| objed                      | github    | external | [[https://github.com/clemera/objed][clemera/objed]]                                        |
+| on-screen                  | github    | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]                       |
+| org                        | git       | external | [[https://orgmode.org]]                                  |
+| pabbrev                    | github    | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                                     |
+| parsec                     | github    | external | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                                |
+| peg                        | github    | external | [[https://github.com/ellerh/peg.el][ellerh/peg.el]]                                        |
+| pinentry                   | github    | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                                     |
+| posframe                   | github    | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                                     |
+| pyim                       | github    | external | [[https://github.com/tumashu/pyim][tumashu/pyim]]                                         |
+| pyim-basedict              | github    | external | [[https://github.com/tumashu/pyim-basedict][tumashu/pyim-basedict]]                                |
+| realgud                    | github    | external | [[https://github.com/realgud/realgud][realgud/realgud]]                                      |
+| realgud-ipdb               | github    | external | [[https://github.com/realgud/realgud-ipdb][realgud/realgud-ipdb]]                                 |
+| realgud-jdb                | github    | external | [[https://github.com/realgud/realgud-jdb][realgud/realgud-jdb]]                                  |
+| realgud-lldb               | github    | external | [[https://github.com/realgud/realgud-lldb][realgud/realgud-lldb]]                                 |
+| realgud-node-debug         | github    | external | [[https://github.com/realgud/realgud-node-debug][realgud/realgud-node-debug]]                           |
+| realgud-node-inspect       | github    | external | [[https://github.com/realgud/realgud-node-inspect][realgud/realgud-node-inspect]]                         |
+| realgud-trepan-ni          | github    | external | [[https://github.com/realgud/realgud-trepan-ni][realgud/realgud-trepan-ni]]                            |
+| rec-mode                   | gnu       | external | [[https://www.gnu.org/software/recutils]]                |
+| relint                     | github    | external | [[https://github.com/mattiase/relint][mattiase/relint]]                                      |
+| rich-minority              | github    | external | [[https://github.com/Malabarba/rich-minority][Malabarba/rich-minority]]                              |
+| rt-liberation              | nongnu    | external | [[http://www.nongnu.org/rtliber]]                        |
+| scanner                    | gitlab    | external | [[https://gitlab.com/rstocker/scanner][rstocker/scanner]]                                     |
+| shell-command+             | sourcehut | external | [[https://git.sr.ht/~zge/bang][zge/bang]]                                             |
+| slime-volleyball           | github    | external | [[https://github.com/fitzsim/slime-volleyball][fitzsim/slime-volleyball]]                             |
+| smalltalk-mode             | nongnu    | external | [[https://savannah.nongnu.org/projects/smalltalk-mode]]  |
+| sotlisp                    | github    | external | [[https://github.com/Malabarba/speed-of-thought-lisp][Malabarba/speed-of-thought-lisp]]                      |
+| spinner                    | github    | external | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                                 |
+| sql-indent                 | github    | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                                  |
+| ssh-deploy                 | github    | external | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]                          |
+| system-packages            | gitlab    | external | [[https://gitlab.com/jabranham/system-packages][jabranham/system-packages]]                            |
+| systemd                    | github    | external | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                               |
+| temp-buffer-browse         | github    | external | [[https://github.com/leoliu/temp-buffer-browse][leoliu/temp-buffer-browse]]                            |
+| test-simple                | github    | external | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                              |
+| tiny                       | github    | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                         |
+| tramp                      | gnu       | external | [[https://savannah.gnu.org/projects/tramp]]              |
+| transient                  | github    | external | [[https://github.com/magit/transient][magit/transient]]                                      |
+| undo-tree                  | gitlab    | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                                      |
+| validate                   | github    | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                                |
+| valign                     | github    | external | [[https://github.com/casouri/valign][casouri/valign]]                                       |
+| vdiff                      | github    | external | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                                  |
+| vertico                    | github    | external | [[https://github.com/minad/vertico][minad/vertico]]                                        |
+| vlf                        | github    | external | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                        |
+| wcheck-mode                | github    | external | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                                 |
+| wconf                      | github    | external | [[https://github.com/ilohmar/wconf][ilohmar/wconf]]                                        |
+| web-server                 | github    | external | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                            |
+| webfeeder                  | gitlab    | external | [[https://gitlab.com/ambrevar/emacs-webfeeder][ambrevar/emacs-webfeeder]]                             |
+| websocket                  | github    | external | [[https://github.com/ahyatt/emacs-websocket][ahyatt/emacs-websocket]]                               |
+| which-key                  | github    | external | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]                              |
+| windower                   | gitlab    | external | [[https://gitlab.com/ambrevar/emacs-windower][ambrevar/emacs-windower]]                              |
+| xelb                       | github    | external | [[https://github.com/ch11ng/xelb][ch11ng/xelb]]                                          |
+| xr                         | github    | external | [[https://github.com/mattiase/xr][mattiase/xr]]                                          |
+| yasnippet                  | github    | external | [[https://github.com/joaotavora/yasnippet][joaotavora/yasnippet]]                                 |
+| ztree                      | github    | external | [[https://github.com/fourier/ztree][fourier/ztree]]                                        |
 
 ** Prefer Elpa despite :url
 #+NAME: gelpa-prefer-gelpa
@@ -413,7 +414,7 @@
                        [gnu-elpa]))))
 #+END_SRC
 #+RESULTS: gelpa-prefer-gelpa
-| Package (18)        | :url                                              |
+| Package (17)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/r/org-edna-el   |
@@ -424,7 +425,6 @@
 | queue               | http://www.dr-qubit.org/git/predictive.git        |
 | tNFA                | http://www.dr-qubit.org/git/predictive.git        |
 | trie                | http://www.dr-qubit.org/git/predictive.git        |
-| shell-command+      | https://git.sr.ht/~zge/bang/tree/shell-command+   |
 | setup               | https://git.sr.ht/~zge/setup                      |
 | phps-mode           | https://github.com/cjohansson/emacs-phps-mode     |
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
@@ -484,7 +484,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (120)   | Secondary package                 | Class     |
+| Primary package (119)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -513,7 +513,6 @@
 | codesearch              | projectile-codesearch             | github    |
 | colorless-themes        | lavenderless-theme                | sourcehut |
 | colorless-themes        | nordless-theme                    | sourcehut |
-| consult                 | consult-flycheck                  | github    |
 | copyit                  | copyit-pandoc                     | github    |
 | crystal-mode            | flycheck-crystal                  | github    |
 | ctl-mode                | gs-mode                           | github    |
