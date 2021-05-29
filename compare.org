@@ -81,9 +81,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  134 |    134 |       |       |   265 |       |
+| gnu-elpa  |  134 |    134 |       |       |   267 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4884 |   4884 |       |       |       |  4657 |
+| github    | 4888 |   4888 |       |       |       |  4657 |
 | gitlab    |  162 |    162 |       |       |       |   158 |
 | sourcehut |   31 |     31 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  128 |    128 |       |       |       |       |
 | shelved   | 1403 |        |  1403 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8007 |   6153 |  1403 |   467 |   280 |  4941 |
+| total     | 8011 |   6157 |  1403 |   467 |   282 |  4941 |
 
 * Emacs
 ** Prefer elpa
@@ -265,7 +265,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (127)              | Class     | Gelpa    | Link                                                 |
+| Package (129)              | Class     | Gelpa    | Link                                                 |
 |----------------------------+-----------+----------+------------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -285,6 +285,7 @@
 | company                    | github    | external | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                            |
 | company-math               | github    | external | [[https://github.com/vspinu/company-math][vspinu/company-math]]                                  |
 | company-statistics         | github    | external | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]                      |
+| consult                    | github    | external | [[https://github.com/minad/consult][minad/consult]]                                        |
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]                  |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                          |
 | cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                     |
@@ -332,6 +333,7 @@
 | load-relative              | github    | external | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                            |
 | loc-changes                | github    | external | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                              |
 | loccur                     | github    | external | [[https://github.com/fourier/loccur][fourier/loccur]]                                       |
+| marginalia                 | github    | external | [[https://github.com/minad/marginalia][minad/marginalia]]                                     |
 | math-symbol-lists          | github    | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                             |
 | mines                      | github    | external | [[https://github.com/calancha/Minesweeper][calancha/Minesweeper]]                                 |
 | mmm-mode                   | github    | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                                     |
