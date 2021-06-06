@@ -81,10 +81,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  134 |    134 |       |       |   267 |       |
+| gnu-elpa  |  134 |    134 |       |       |   268 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4893 |   4893 |       |       |       |  4663 |
-| gitlab    |  162 |    162 |       |       |       |   158 |
+| github    | 4903 |   4903 |       |       |       |  4673 |
+| gitlab    |  163 |    163 |       |       |       |   159 |
 | sourcehut |   31 |     31 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  128 |    128 |       |       |       |       |
 | shelved   | 1403 |        |  1403 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8016 |   6162 |  1403 |   467 |   282 |  4947 |
+| total     | 8027 |   6173 |  1403 |   467 |   283 |  4958 |
 
 * Emacs
 ** Prefer elpa
@@ -265,7 +265,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (129)              | Class     | Gelpa    | Link                                                 |
+| Package (130)              | Class     | Gelpa    | Link                                                 |
 |----------------------------+-----------+----------+------------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -293,6 +293,7 @@
 | dash                       | github    | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                                      |
 | dbus-codegen               | github    | external | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                                 |
 | delight                    | nongnu    | external | [[https://savannah.nongnu.org/projects/delight]]         |
+| devdocs                    | github    | external | [[https://github.com/astoff/devdocs.el][astoff/devdocs.el]]                                    |
 | diff-hl                    | github    | external | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                                       |
 | diffview                   | github    | external | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                                 |
 | dired-git-info             | github    | external | [[https://github.com/clemera/dired-git-info][clemera/dired-git-info]]                               |
@@ -486,7 +487,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (119)   | Secondary package                 | Class     |
+| Primary package (120)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
@@ -598,6 +599,7 @@
 | lean-mode               | company-lean                      | github    |
 | lean-mode               | helm-lean                         | github    |
 | load-theme-buffer-local | color-theme-buffer-local          | github    |
+| loopy                   | loopy-dash                        | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                 | github    |
 | magit                   | git-commit                        | github    |
 | magit                   | magit-libgit                      | github    |
