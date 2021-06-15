@@ -81,10 +81,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  134 |    134 |       |       |   268 |       |
+| gnu-elpa  |  134 |    134 |       |       |   269 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4903 |   4903 |       |       |       |  4673 |
-| gitlab    |  163 |    163 |       |       |       |   159 |
+| github    | 4905 |   4905 |       |       |       |  4675 |
+| gitlab    |  164 |    164 |       |       |       |   160 |
 | sourcehut |   31 |     31 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  128 |    128 |       |       |       |       |
-| shelved   | 1403 |        |  1403 |       |       |       |
+| shelved   | 1404 |        |  1404 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8027 |   6173 |  1403 |   467 |   283 |  4958 |
+| total     | 8031 |   6176 |  1404 |   467 |   284 |  4961 |
 
 * Emacs
 ** Prefer elpa
@@ -265,7 +265,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (130)              | Class     | Gelpa    | Link                                                 |
+| Package (131)              | Class     | Gelpa    | Link                                                 |
 |----------------------------+-----------+----------+------------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -383,6 +383,7 @@
 | undo-tree                  | gitlab    | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                                      |
 | validate                   | github    | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                                |
 | valign                     | github    | external | [[https://github.com/casouri/valign][casouri/valign]]                                       |
+| vc-hgcmd                   | github    | external | [[https://github.com/muffinmad/emacs-vc-hgcmd][muffinmad/emacs-vc-hgcmd]]                             |
 | vdiff                      | github    | external | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                                  |
 | vertico                    | github    | external | [[https://github.com/minad/vertico][minad/vertico]]                                        |
 | vlf                        | github    | external | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                        |

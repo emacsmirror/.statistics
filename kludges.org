@@ -76,7 +76,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (85)                    | Class    | Feature                  | Reason                                              |
+| Package (86)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -92,6 +92,7 @@
 | color-theme-sanityinc-solarized | github   | color-theme              | backward compatibility                              |
 | color-theme-sanityinc-tomorrow  | github   | color-theme              | backward compatibility                              |
 | company                         | github   | semantic-idle            | backward compatibility                              |
+| company-fuzzy                   | github   | flex                     | wiki soft                                           |
 | dic-lookup-w3m                  | orphaned | text-translator          | broken and optional                                 |
 | dictionary                      | github   | balloon-help             | XEmacs compatibility                                |
 | dired+                          | wiki     | help+20                  | backward compatibility                              |

@@ -71,6 +71,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
+| Package (1)  | Class  | Feature                | Provider |
+|--------------+--------+------------------------+----------|
+| solaire-mode | github | solaire-mode-autoloads |          |
+
+- solaire-mode: https://github.com/hlissner/emacs-solaire-mode/issues/44
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
@@ -90,11 +95,6 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+END_SRC
 #+RESULTS: archived
-| Package (1) | Repository             | M | Reverse Dependencies |
-|-------------+------------------------+---+----------------------|
-| ox-slimhtml | [[https://github.com/balddotcat/ox-slimhtml][balddotcat/ox-slimhtml]] | ✓ | org-anki             |
-
-- ox-slimhtml: https://github.com/eyeinsky/org-anki/issues/9
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.
