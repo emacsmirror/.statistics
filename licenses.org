@@ -62,7 +62,7 @@
 #+RESULTS: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4062 |      66 |
+| GPL-3.0-or-later  |  4066 |      66 |
 | GPL-2.0-or-later  |  1169 |      19 |
 | MIT               |   352 |       6 |
 | GPL-3.0-only      |   184 |       3 |
@@ -86,6 +86,7 @@
 | CeCILL-B          |     2 |       0 |
 | FSFAP             |     2 |       0 |
 | LGPL-2.1-only     |     2 |       0 |
+| nil               |     1 |       0 |
 | AGPL-3.0-only     |     1 |       0 |
 | Beerware          |     1 |       0 |
 | CC-0              |     1 |       0 |
@@ -96,9 +97,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5445 |      88 |
+| total GNU         |  5449 |      88 |
 |-------------------+-------+---------|
-| total             |  6176 |     100 |
+| total             |  6181 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -110,6 +111,11 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
+| Package (1) | Class  | License |
+|-------------+--------+---------|
+| clhs        | gitlab |         |
+
+- clhs: https://gitlab.com/sam-s/clhs/-/merge_requests/1
 
 * Emacsattic
 ** Overview
@@ -128,7 +134,7 @@
 | GPL-2.0-or-later  |   819 |      58 |
 | GPL-3.0-or-later  |   337 |      24 |
 | GPL-2.0-only      |    61 |       4 |
-| GPL               |    44 |       3 |
+| GPL               |    43 |       3 |
 | public-domain     |    37 |       3 |
 | MIT               |    19 |       1 |
 | GPL-3.0-only      |    16 |       1 |
@@ -152,9 +158,9 @@
 | LGPL-2.1-only     |     1 |       0 |
 | LGPL-2.1-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1299 |      93 |
+| total GNU         |  1298 |      93 |
 |-------------------+-------+---------|
-| total             |  1404 |     100 |
+| total             |  1403 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown
@@ -192,7 +198,7 @@
   (emir--insert-attic-packages-using-licenses "GPL" "GPL-2.0-only" "EPL")
 #+END_SRC
 #+RESULTS: attic-problematic
-| Package (106)       | License      |
+| Package (105)       | License      |
 |---------------------+--------------|
 | align-regexp        | GPL          |
 | amigo               | GPL-2.0-only |
@@ -204,7 +210,6 @@
 | buffer-thumbnail    | GPL          |
 | byrd-biff           | GPL          |
 | cdt                 | GPL          |
-| clhs                | GPL          |
 | commit-patch-buffer | GPL-2.0-only |
 | conjecture-mode     | GPL          |
 | copyedit            | GPL-2.0-only |
