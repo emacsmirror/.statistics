@@ -34,8 +34,8 @@
 #+RESULTS: conflict
 | Feature (4)      | Package                | Shelved |
 |------------------+------------------------+---------|
-| consult-flycheck | consult                |         |
-| consult-flycheck | consult-flycheck       |         |
+| kubernetes-tramp | kubernetes             |         |
+| kubernetes-tramp | kubernetes-tramp       |         |
 | ob-arduino       | arduino-mode           |         |
 | ob-arduino       | org-contrib            |         |
 | ol-notmuch       | ol-notmuch             |         |
@@ -43,6 +43,7 @@
 | setup            | projectile-trailblazer |         |
 | setup            | setup                  |         |
 
+- kubernetes-tramp: https://github.com/kubernetes-el/kubernetes-el/pull/167
 - org-contrib: migrating files won't be removed until next release
 - setup: https://github.com/micdahl/projectile-trailblazer/issues/2
 Reoccuring issues:
