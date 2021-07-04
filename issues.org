@@ -32,18 +32,17 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (4)      | Package                | Shelved |
-|------------------+------------------------+---------|
-| kubernetes-tramp | kubernetes             |         |
-| kubernetes-tramp | kubernetes-tramp       |         |
-| ob-arduino       | arduino-mode           |         |
-| ob-arduino       | org-contrib            |         |
-| ol-notmuch       | ol-notmuch             |         |
-| ol-notmuch       | org-contrib            |         |
-| setup            | projectile-trailblazer |         |
-| setup            | setup                  |         |
+| Feature (4)    | Package                | Shelved |
+|----------------+------------------------+---------|
+| ob-arduino     | arduino-mode           |         |
+| ob-arduino     | org-contrib            |         |
+| ol-notmuch     | ol-notmuch             |         |
+| ol-notmuch     | org-contrib            |         |
+| ox-koma-letter | org                    |         |
+| ox-koma-letter | org-contrib            |         |
+| setup          | projectile-trailblazer |         |
+| setup          | setup                  |         |
 
-- kubernetes-tramp: https://github.com/kubernetes-el/kubernetes-el/pull/167
 - org-contrib: migrating files won't be removed until next release
 - setup: https://github.com/micdahl/projectile-trailblazer/issues/2
 Reoccuring issues:
@@ -74,10 +73,12 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1)  | Class  | Feature                | Provider |
-|--------------+--------+------------------------+----------|
-| solaire-mode | github | solaire-mode-autoloads |          |
+| Package (2)    | Class  | Feature                | Provider |
+|----------------+--------+------------------------+----------|
+| bibtex-actions | github | oc                     |          |
+| solaire-mode   | github | solaire-mode-autoloads |          |
 
+- bibtex-actions: ~oc~ is upcoming org library
 - solaire-mode: https://github.com/hlissner/emacs-solaire-mode/issues/44
 
 * Packages whose repositories have been archived

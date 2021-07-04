@@ -83,13 +83,13 @@
 | builtin   |  466 |     15 |       |   467 |    15 |       |
 | gnu-elpa  |  134 |    134 |       |       |   268 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4911 |   4911 |       |       |       |  4680 |
-| gitlab    |  165 |    165 |       |       |       |   160 |
+| github    | 4913 |   4913 |       |       |       |  4681 |
+| gitlab    |  165 |    165 |       |       |       |   161 |
 | sourcehut |   32 |     32 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   80 |     80 |       |       |       |   113 |
+| git       |   80 |     80 |       |       |       |   112 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  128 |    128 |       |       |       |       |
 | shelved   | 1404 |        |  1404 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8039 |   6184 |  1404 |   467 |   283 |  4967 |
+| total     | 8041 |   6186 |  1404 |   467 |   283 |  4968 |
 
 * Emacs
 ** Prefer elpa
@@ -720,10 +720,10 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (5)    | Mirror                                   | Melpa                                     |
-|----------------+------------------------------------------+-------------------------------------------|
-| 0x0            | [[https://git.sr.ht/~zge/nullpointer-emacs]] | https://git.sr.ht/~pkal/nullpointer-emacs |
-| autocrypt      | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt         |
-| clang-capf     | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf        |
-| face-shift     | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift        |
-| insert-kaomoji | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji    |
+| Package (5)    | Mirror                                   | Melpa                                  |
+|----------------+------------------------------------------+----------------------------------------|
+| 0x0            | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                   |
+| autocrypt      | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt      |
+| clang-capf     | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf     |
+| face-shift     | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift     |
+| insert-kaomoji | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji |
