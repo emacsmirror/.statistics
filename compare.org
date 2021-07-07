@@ -83,8 +83,8 @@
 | builtin   |  466 |     15 |       |   467 |    15 |       |
 | gnu-elpa  |  134 |    134 |       |       |   268 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4913 |   4913 |       |       |       |  4681 |
-| gitlab    |  165 |    165 |       |       |       |   161 |
+| github    | 4916 |   4916 |       |       |       |  4685 |
+| gitlab    |  166 |    166 |       |       |       |   162 |
 | sourcehut |   32 |     32 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  128 |    128 |       |       |       |       |
 | shelved   | 1404 |        |  1404 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8041 |   6186 |  1404 |   467 |   283 |  4968 |
+| total     | 8045 |   6190 |  1404 |   467 |   283 |  4973 |
 
 * Emacs
 ** Prefer elpa
@@ -483,8 +483,9 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (120)   | Secondary package                 | Class     |
+| Primary package (121)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
+| 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
 | agda2-mode              | annotation                        | subtree   |
