@@ -81,9 +81,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  134 |    134 |       |       |   268 |       |
+| gnu-elpa  |  134 |    134 |       |       |   266 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4916 |   4916 |       |       |       |  4685 |
+| github    | 4915 |   4915 |       |       |       |  4685 |
 | gitlab    |  166 |    166 |       |       |       |   162 |
 | sourcehut |   32 |     32 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  128 |    128 |       |       |       |       |
-| shelved   | 1404 |        |  1404 |       |       |       |
+| shelved   | 1406 |        |  1406 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8045 |   6190 |  1404 |   467 |   283 |  4973 |
+| total     | 8046 |   6189 |  1406 |   467 |   281 |  4973 |
 
 * Emacs
 ** Prefer elpa
@@ -182,12 +182,6 @@
                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-pending
-| Package (2)          | Gelpa    | Reason                         |
-|----------------------+----------+--------------------------------|
-| modus-operandi-theme | external | to be merged into modus-themes |
-| modus-vivendi-theme  | external | to be merged into modus-themes |
-
-- modus*: https://github.com/melpa/melpa/issues/7245
 
 ** Unreleased
 #+NAME: gelpa-unreleased
