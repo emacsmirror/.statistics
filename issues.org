@@ -73,6 +73,10 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
+| Package (1)     | Class  | Feature         | Provider |
+|-----------------+--------+-----------------+----------|
+| org-roam-server | github | org-roam-buffer |          |
+| org-roam-server | github | org-roam-link   |          |
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
