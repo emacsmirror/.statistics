@@ -19,12 +19,13 @@
       (--keep
        (let* ((name (cdr (assq 'name it)))
               (pkg  (epkg name))
+              (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
               (rcp  (melpa-get name))
               (reason (cadr (assoc name emir--orphanage-reason))))
          (and (or (not only)
                   (member reason only))
               (list name
-                    (if pkg "✔" "")
+                    (if pkg (if (eq type 'orphaned) "✔" type) "")
                     (if rcp
                         (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
                             "✔"
@@ -56,7 +57,7 @@ that are available from there).
   (emir--list-orphans "upstream disappeared")
 #+END_SRC
 #+RESULTS: disappeared
-| Package (8) | E | M |
+| Package (9) | E | M |
 |-------------+---+---|
 | dedicated   | ✔ | ✔ |
 | ecasound    | ✔ |   |
@@ -66,6 +67,7 @@ that are available from there).
 | pager       | ✔ | ✔ |
 | smarty-mode | ✔ | ✔ |
 | tail        | ✔ |   |
+| vm          | ✔ |   |
 
 * Upstream is unresponsive but there are issues
 
@@ -107,10 +109,10 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 
 #+NAME: required-by-nonwiki
 #+BEGIN_SRC emacs-lisp
-  (emir--list-orphans "wiki needed by non-wiki" "wiki multiple files")
+  (emir--list-orphans "wiki needed by non-wiki")
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Package (30)       | E | M |
+| Package (28)       | E | M |
 |--------------------+---+---|
 | cygwin-mount       | ✔ |   |
 | dirtree            | ✔ | ✔ |
@@ -125,13 +127,11 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | keyword-arg-macros | ✔ |   |
 | later-do           | ✔ |   |
 | levenshtein        | ✔ | ✔ |
-| linkd              | ✔ |   |
 | oddmuse            | ✔ |   |
 | org-json           | ✔ |   |
 | policy-switch      | ✔ |   |
 | run-assoc          | ✔ |   |
 | screenshot         | ✔ |   |
-| shell-command      | ✔ |   |
 | shell-history      | ✔ | ✔ |
 | showtip            | ✔ | ✔ |
 | sr-speedbar        | ✔ | ✔ |
@@ -142,29 +142,6 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | w32-browser        | ✔ | ✔ |
 | windata            | ✔ | ✔ |
 | yaoddmuse          | ✔ |   |
-
-* Imported from non-git/hg repository
-
-The tools used to maintain the Emacsmirror do not support ~bzr~, ~cvs~,
-~darcs~, or ~fossil~.  So I manually import the upstream repositories into
-a ~git~ repository on the orphanage and then import the resulting ~git~
-repositories as if that were the actual upstream.
-
-I do not regularly update these repositories.  If you find that they
-are outdated, then please let me know.  However many of these package
-repositories have not seen a commit in a decade.
-
-#+NAME: non-git-hg
-#+BEGIN_SRC emacs-lisp
-  (emir--list-orphans "semi-automatic import")
-#+END_SRC
-#+RESULTS: non-git-hg
-| Package (4)    | E | M |
-|----------------+---+---|
-| confluence     | ✔ | ✔ |
-| dic-lookup-w3m | ✔ | ✔ |
-| nxhtml         | ✔ |   |
-| vm             | ✔ |   |
 
 * Imported from tarball
 #+NAME: tarball
@@ -184,9 +161,8 @@ repositories have not seen a commit in a decade.
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (84)         | E | M |
+| Package (83)         | E | M |
 |----------------------+---+---|
-| 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
 | ac-capf              | ✔ | ✔ |
 | ac-emoji             | ✔ | ✔ |
@@ -271,20 +247,16 @@ repositories have not seen a commit in a decade.
 | yascroll             | ✔ | ✔ |
 | zoom-window          | ✔ | ✔ |
 
-* The maintainer is dead
-
-Sadly there is one package where "orphan" has a more literal meaning
-than what I had in mind when I created the Emacs Orphanage.  RIP
-François.
-
+* Other
 #+NAME: rip
 #+BEGIN_SRC emacs-lisp
-  (emir--list-orphans "maintainer is dead")
+  (emir--list-orphans "maintainer is dead" "last subversion")
 #+END_SRC
 #+RESULTS: rip
-| Package (1) | E | M |
-|-------------+---+---|
-| org-grep    | ✔ | ✔ |
+| Package (2)    | E | M |
+|----------------+---+---|
+| dic-lookup-w3m | ✔ | ✔ |
+| org-grep       | ✔ | ✔ |
 
 * New
 #+NAME: new

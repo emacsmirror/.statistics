@@ -7,38 +7,6 @@
 #+END_SRC
 [[https://emacsmirror.net/stats][up]]
 :END:
-* Imported from the Emacsorphanage
-
-The upstreams of these packages use some version control system
-other than Git or Mercurial.  As you can see there are very few
-such packages, which is why support was removed from Melpa.
-Not having to support five vcs for the benefit of a handful of
-packages makes it more appealing to improve the remaining code.
-
-- ~shimbun~ isn't listed below because it is part of the ~w3m~ repository.
-
-#+NAME: from-orphanage
-#+BEGIN_SRC emacs-lisp
-  (epkg-with-org-header ("Package" "Vcs")
-    (-keep (pcase-lambda (`(,name ,vcs))
-             (and (melpa-get name)
-                  (list name vcs)))
-           emir--other-vcs))
-#+END_SRC
-#+RESULTS: from-orphanage
-| Package (10)      | Vcs   |
-|-------------------+-------|
-| cg                | svn   |
-| clang-format      | svn   |
-| color-theme       | bzr   |
-| confluence        | svn   |
-| darcsum           | darcs |
-| dic-lookup-w3m    | svn   |
-| dsvn              | svn   |
-| helm-ls-svn       | svn   |
-| tex-smart-umlauts | darcs |
-| w3m               | cvs   |
-
 * Missing from Melpa
 
 The below packages, which are available from the Emacsmirror, are
@@ -71,7 +39,7 @@ please first make sure they meet the minimal requirements.
   ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (551)                | Link                                       |
+| Package (548)                | Link                                       |
 |------------------------------+--------------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                       |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]                 |
@@ -104,7 +72,6 @@ please first make sure they meet the minimal requirements.
 | autocompletion-php-functions | [[https://github.com/ashizawa/autocompletion-php-functions][ashizawa/autocompletion-php-functions]]      |
 | avmmf                        | [[https://github.com/davep/avmmf.el][davep/avmmf.el]]                             |
 | awesome-tab                  | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]                 |
-| aws                          | [[https://github.com/ieure/aws-el][ieure/aws-el]]                               |
 | backups-mode                 | [[https://github.com/chadbraunduin/backups-mode][chadbraunduin/backups-mode]]                 |
 | bbcode                       | [[https://github.com/sensorflo/bbcode][sensorflo/bbcode]]                           |
 | bd-set-mark                  | [[https://github.com/lewang/bd-set-mark][lewang/bd-set-mark]]                         |
@@ -265,7 +232,6 @@ please first make sure they meet the minimal requirements.
 | git-find-file                | [[https://github.com/marktriggs/git-find-file.el][marktriggs/git-find-file.el]]                |
 | git-modes                    | [[https://github.com/magit/git-modes][magit/git-modes]]                            |
 | git-undo                     | [[https://github.com/jwiegley/git-undo-el][jwiegley/git-undo-el]]                       |
-| githorg                      | [[https://github.com/ieure/githorg][ieure/githorg]]                              |
 | gitsum                       | [[https://github.com/chneukirchen/gitsum][leahneukirchen/gitsum]]                      |
 | gmail-notifier               | [[https://github.com/xwl/gmail-notifier][xwl/gmail-notifier]]                         |
 | gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                          |
@@ -589,7 +555,6 @@ please first make sure they meet the minimal requirements.
 | unparen                      | [[https://github.com/kensanata/unparen][kensanata/unparen]]                          |
 | utf8islove                   | [[https://github.com/robsimmons/utf8islove][robsimmons/utf8islove]]                      |
 | uzumaki                      | [[https://github.com/geyslan/uzumaki][geyslan/uzumaki]]                            |
-| vc-browse                    | [[https://github.com/ieure/vc-browse][ieure/vc-browse]]                            |
 | vc-partial-commit            | [[https://github.com/fperrin/vc-partial-commit][fperrin/vc-partial-commit]]                  |
 | velocity                     | [[https://github.com/bard/emacs-velocity][bard/emacs-velocity]]                        |
 | vim-modeline                 | [[https://github.com/cinsk/emacs-vim-modeline][cinsk/emacs-vim-modeline]]                   |

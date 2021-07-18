@@ -52,7 +52,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (5)     | Class  | Feature           | Reason                 |
+| Package (4)     | Class  | Feature           | Reason                 |
 |-----------------+--------+-------------------+------------------------|
 | emacspeak       | github | amixer            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | analog            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
@@ -61,7 +61,6 @@
 | emacspeak       | github | tapestry          | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | emacspeak       | github | tetris            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
 | orgtbl-join     | github | org-insert-dblock | pending [[https://github.com/tbanel/orgtbljoin/issues/1][#1]]             |
-| riece           | nongnu | ptexinfmt         | fixme                  |
 | slime           | github | cl-indent         | part of Emacs          |
 | twittering-mode | github | ssl               | backward compatibility |
 | twittering-mode | github | test              | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
@@ -76,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (86)                    | Class    | Feature                  | Reason                                              |
+| Package (85)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -98,7 +97,6 @@
 | dired+                          | wiki     | help+20                  | backward compatibility                              |
 | dired+                          | wiki     | subr-21                  | backward compatibility                              |
 | doremi-cmd                      | wiki     | color-theme              | backward compatibility                              |
-| e2wm-R                          | shelved  | imgur                    | anything                                            |
 | eaf                             | github   | org-docview              | backward compatibility                              |
 | ebdb                            | gnu-elpa | vm-autoloads             | generated external file                             |
 | ecb                             | github   | escreen                  | shelved soft                                        |
@@ -130,6 +128,7 @@
 | lispxmp                         | github   | newxmp                   | pending: newxmp has not been released yet (email)   |
 | lispy                           | github   | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                           |
 | load-theme-buffer-local         | github   | color-theme              | backward compatibility                              |
+| markchars                       | gnu-elpa | idn                      | shelved soft                                        |
 | matlab-mode                     | git      | matlab-load              | generated internal file                             |
 | matlab-mode                     | git      | semantic-dep             | backward compatibility                              |
 | matlab-mode                     | git      | semantic-format          | backward compatibility                              |
@@ -147,13 +146,6 @@
 | molokai-theme                   | github   | color-theme              | backward compatibility                              |
 | navi2ch                         | github   | bitmap                   | XEmacs compatibility                                |
 | navi2ch                         | github   | spamfilter               | shelved soft                                        |
-| nxhtml                          | orphaned | anything                 | anything                                            |
-| nxhtml                          | orphaned | emacsw32                 | examples only                                       |
-| nxhtml                          | orphaned | flymake-js               | not a proper package                                |
-| nxhtml                          | orphaned | fold-dwim                | shelved soft                                        |
-| nxhtml                          | orphaned | typesetter               | not touched in ten years                            |
-| nxhtml                          | orphaned | w32-regdat               | Windows compatibility                               |
-| nxhtml                          | orphaned | w32shell                 | Windows compatibility                               |
 | org                             | git      | nnselect                 | forward compatibility (Emacs 28)                    |
 | org                             | git      | org-remember             | backward compatibility                              |
 | org-caldav                      | github   | org-icalendar            | backward compatibility                              |
@@ -212,7 +204,7 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: patched
-| Package (14)  | Class    |
+| Package (12)  | Class    |
 |---------------+----------|
 | apel          | github   |
 | flim          | github   |
@@ -220,13 +212,11 @@
 | karma         | github   |
 | lookup        | github   |
 | nav           | github   |
-| nxhtml        | orphaned |
 | oauth         | github   |
 | projmake-mode | github   |
 | queue         | gnu-elpa |
 | semi          | github   |
 | tenv          | github   |
-| vm            | orphaned |
 | wanderlust    | github   |
 
 * Filtered (minority) repositories
@@ -235,7 +225,7 @@
   (epkg-with-org-header (3 "Package" "Reason" "M" "Url")
     (mapcar (pcase-lambda (`(,name ,args ,url))
               (list name
-                    (cadr (assoc name emir--diverging-reason))
+                    (cadr (assoc name emir--minority-reason))
                     ;; (mapconcat #'identity args " ")
                     (and (melpa-get name) "✓")
                     url))
@@ -269,8 +259,8 @@
   (epkg-with-org-header (3 "Package" "M" "Url")
     (mapcar (pcase-lambda (`(,name ,args ,url))
               (list name
-                    ;; (cadr (assoc name emir--diverging-reason))
-                    ;; (mapconcat #'identity args " ")
+                    ;; (cadr (assoc name emir--...-reason))
+                    ;; args
                     (and (melpa-get name) "✓")
                     url))
             (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
