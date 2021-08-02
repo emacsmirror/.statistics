@@ -127,17 +127,15 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                        :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: missing-summary
-| Package (6)       | Class   | M |
+| Package (5)       | Class   | M |
 |-------------------+---------+---|
 | arc-dark-theme    | github  | ✓ |
-| dictem            | github  |   |
 | evil-escape       | github  | ✓ |
 | icons-in-terminal | github  |   |
 | jabber            | github  | ✓ |
 | zeitgeist         | subtree |   |
 
 - arc-dark-theme: https://github.com/cfraz89/arc-dark-theme/pull/2
-- dictem: https://github.com/cheusov/dictem/pull/2
 - evil-escape: https://github.com/syl20bnr/evil-escape/pull/98
 - icons-in-terminal: https://github.com/sebastiencs/icons-in-terminal/pull/40
 - jabber: https://github.com/legoscia/emacs-jabber/pull/38
