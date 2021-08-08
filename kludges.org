@@ -75,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (85)                    | Class    | Feature                  | Reason                                              |
+| Package (84)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -98,7 +98,6 @@
 | dired+                          | wiki     | subr-21                  | backward compatibility                              |
 | doremi-cmd                      | wiki     | color-theme              | backward compatibility                              |
 | eaf                             | github   | org-docview              | backward compatibility                              |
-| ebdb                            | gnu-elpa | vm-autoloads             | generated external file                             |
 | ecb                             | github   | escreen                  | shelved soft                                        |
 | ecb                             | github   | semantic-analyze         | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |
 | ecb                             | github   | semantic-ctxt            | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                         |

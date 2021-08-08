@@ -18,6 +18,7 @@
     (epkg-with-org-header ("Package" "E" "M")
       (--keep
        (let* ((name (cdr (assq 'name it)))
+              (name (if (equal name "image-plus") "image+" name))
               (pkg  (epkg name))
               (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
               (rcp  (melpa-get name))
@@ -57,17 +58,18 @@ that are available from there).
   (emir--list-orphans "upstream disappeared")
 #+END_SRC
 #+RESULTS: disappeared
-| Package (9) | E | M |
-|-------------+---+---|
-| dedicated   | ✔ | ✔ |
-| ecasound    | ✔ |   |
-| keydef      | ✔ | ✔ |
-| miniedit    | ✔ | ✔ |
-| osd         | ✔ |   |
-| pager       | ✔ | ✔ |
-| smarty-mode | ✔ | ✔ |
-| tail        | ✔ |   |
-| vm          | ✔ |   |
+| Package (10) | E | M |
+|--------------+---+---|
+| dedicated    | ✔ | ✔ |
+| ecasound     | ✔ |   |
+| image+       | ✔ | ✔ |
+| keydef       | ✔ | ✔ |
+| miniedit     | ✔ | ✔ |
+| osd          | ✔ |   |
+| pager        | ✔ | ✔ |
+| smarty-mode  | ✔ | ✔ |
+| tail         | ✔ |   |
+| vm           | ✔ |   |
 
 * Upstream is unresponsive but there are issues
 
@@ -112,7 +114,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "wiki needed by non-wiki")
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Package (28)       | E | M |
+| Package (27)       | E | M |
 |--------------------+---+---|
 | cygwin-mount       | ✔ |   |
 | dirtree            | ✔ | ✔ |
@@ -138,7 +140,6 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | transpose-frame    | ✔ | ✔ |
 | tree-mode          | ✔ | ✔ |
 | unit-test          | ✔ |   |
-| vline              | ✔ | ✔ |
 | w32-browser        | ✔ | ✔ |
 | windata            | ✔ | ✔ |
 | yaoddmuse          | ✔ |   |
@@ -161,8 +162,9 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "dropped by maintainer")
 #+END_SRC
 #+RESULTS: dropped
-| Package (83)         | E | M |
+| Package (84)         | E | M |
 |----------------------+---+---|
+| 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
 | ac-capf              | ✔ | ✔ |
 | ac-emoji             | ✔ | ✔ |

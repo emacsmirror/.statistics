@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  134 |    134 |       |       |   266 |       |
+| gnu-elpa  |  134 |    134 |       |       |   267 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4912 |   4912 |       |       |       |  4693 |
+| github    | 4917 |   4917 |       |       |       |  4696 |
 | gitlab    |  166 |    166 |       |       |       |   162 |
 | sourcehut |   34 |     34 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   80 |     80 |       |       |       |   114 |
+| git       |   81 |     81 |       |       |       |   114 |
 | subtree   |   25 |     25 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -98,10 +98,10 @@
 | hg        |   16 |     16 |       |       |       |    14 |
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  134 |    134 |       |       |       |       |
+| orphaned  |  133 |    133 |       |       |       |       |
 | shelved   | 1413 |        |  1413 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8058 |   6194 |  1413 |   467 |   281 |  4983 |
+| total     | 8063 |   6199 |  1413 |   467 |   282 |  4986 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (131)              | Class     | Gelpa    | Link                                                 |
+| Package (132)              | Class     | Gelpa    | Link                                                 |
 |----------------------------+-----------+----------+------------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -300,6 +300,7 @@
 | exwm                       | github    | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                          |
 | f90-interface-browser      | github    | external | [[https://github.com/wence-/f90-iface][wence-/f90-iface]]                                     |
 | frog-menu                  | github    | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                                    |
+| ftable                     | github    | external | [[https://github.com/casouri/ftable][casouri/ftable]]                                       |
 | gcmh                       | gitlab    | external | [[https://gitlab.com/koral/gcmh][koral/gcmh]]                                           |
 | ggtags                     | github    | external | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                        |
 | gnome-c-style              | github    | external | [[https://github.com/ueno/gnome-c-style][ueno/gnome-c-style]]                                   |

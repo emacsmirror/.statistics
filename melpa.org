@@ -611,9 +611,10 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (5)   | Link                              |
+| Package (6)   | Link                              |
 |---------------+-----------------------------------|
 | ebuild-mode   |                                   |
+| elpa-admin    |                                   |
 | mailscripts   |                                   |
 | piem          | [[https://git.kyleam.com/piem/about]] |
 | python-pep8   |                                   |
