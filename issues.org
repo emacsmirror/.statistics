@@ -32,16 +32,8 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (8)    | Package                | Shelved |
+| Feature (4)    | Package                | Shelved |
 |----------------+------------------------+---------|
-| concurrent     | deferred               |         |
-| concurrent     | eaf                    |         |
-| deferred       | deferred               |         |
-| deferred       | eaf                    |         |
-| epc            | eaf                    |         |
-| epc            | epc                    |         |
-| epcs           | eaf                    |         |
-| epcs           | epc                    |         |
 | ob-arduino     | arduino-mode           |         |
 | ob-arduino     | org-contrib            |         |
 | ol-notmuch     | ol-notmuch             |         |
@@ -51,7 +43,6 @@
 | setup          | projectile-trailblazer |         |
 | setup          | setup                  |         |
 
-- eaf: https://github.com/manateelazycat/emacs-application-framework/issues/757
 - org-contrib: migrating files won't be removed until next release
 - setup: https://github.com/micdahl/projectile-trailblazer/issues/2
 Reoccuring issues:
