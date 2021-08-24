@@ -52,18 +52,19 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (4)     | Class  | Feature           | Reason                 |
-|-----------------+--------+-------------------+------------------------|
-| emacspeak       | github | amixer            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | analog            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | nm                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | sudoku            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | tapestry          | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak       | github | tetris            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| orgtbl-join     | github | org-insert-dblock | pending [[https://github.com/tbanel/orgtbljoin/issues/1][#1]]             |
-| slime           | github | cl-indent         | part of Emacs          |
-| twittering-mode | github | ssl               | backward compatibility |
-| twittering-mode | github | test              | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
+| Package (5)            | Class  | Feature           | Reason                 |
+|------------------------+--------+-------------------+------------------------|
+| emacspeak              | github | amixer            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak              | github | analog            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak              | github | nm                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak              | github | sudoku            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak              | github | tapestry          | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| emacspeak              | github | tetris            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
+| orgtbl-join            | github | org-insert-dblock | pending [[https://github.com/tbanel/orgtbljoin/issues/1][#1]]             |
+| projectile-trailblazer | github | setup             | pending [[https://github.com/micdahl/projectile-trailblazer/issues/2][#2]]             |
+| slime                  | github | cl-indent         | part of Emacs          |
+| twittering-mode        | github | ssl               | backward compatibility |
+| twittering-mode        | github | test              | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
 
 * Drop required features
 #+NAME: required-drop

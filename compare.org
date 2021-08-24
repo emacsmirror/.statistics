@@ -81,9 +81,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  134 |    134 |       |       |   268 |       |
+| gnu-elpa  |  134 |    134 |       |       |   269 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4925 |   4925 |       |       |       |  4704 |
+| github    | 4930 |   4930 |       |       |       |  4710 |
 | gitlab    |  166 |    166 |       |       |       |   162 |
 | sourcehut |   34 |     34 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   55 |     55 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  134 |    134 |       |       |       |       |
-| shelved   | 1413 |        |  1413 |       |       |       |
+| shelved   | 1414 |        |  1414 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8073 |   6209 |  1413 |   467 |   283 |  4995 |
+| total     | 8079 |   6214 |  1414 |   467 |   284 |  5001 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (133)              | Class     | Gelpa    | Link                                                 |
+| Package (134)              | Class     | Gelpa    | Link                                                 |
 |----------------------------+-----------+----------+------------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                                   |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                        |
@@ -278,6 +278,7 @@
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]                  |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                          |
 | cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                     |
+| csharp-mode                | github    | external | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]                             |
 | darkroom                   | github    | external | [[https://github.com/joaotavora/darkroom][joaotavora/darkroom]]                                  |
 | dash                       | github    | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                                      |
 | dbus-codegen               | github    | external | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                                 |
@@ -479,7 +480,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (121)   | Secondary package                 | Class     |
+| Primary package (122)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -532,6 +533,7 @@
 | distel-completion-lib   | company-distel                    | github    |
 | dix                     | dix-evil                          | github    |
 | django-mode             | django-snippets                   | github    |
+| dogears                 | helm-dogears                      | github    |
 | dylan                   | dime                              | github    |
 | eclim                   | ac-emacs-eclim                    | github    |
 | eclim                   | company-emacs-eclim               | github    |

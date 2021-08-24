@@ -32,21 +32,16 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (4)    | Package                | Shelved |
-|----------------+------------------------+---------|
-| ob-arduino     | arduino-mode           |         |
-| ob-arduino     | org-contrib            |         |
-| ol-notmuch     | ol-notmuch             |         |
-| ol-notmuch     | org-contrib            |         |
-| ox-koma-letter | org                    |         |
-| ox-koma-letter | org-contrib            |         |
-| setup          | projectile-trailblazer |         |
-| setup          | setup                  |         |
+| Feature (3)    | Package      | Shelved |
+|----------------+--------------+---------|
+| ob-arduino     | arduino-mode |         |
+| ob-arduino     | org-contrib  |         |
+| ol-notmuch     | ol-notmuch   |         |
+| ol-notmuch     | org-contrib  |         |
+| ox-koma-letter | org          |         |
+| ox-koma-letter | org-contrib  |         |
 
 - org-contrib: migrating files won't be removed until next release
-- setup: https://github.com/micdahl/projectile-trailblazer/issues/2
-Reoccuring issues:
-- test-helper (see [[https://github.com/rejeep/ert-runner.el/issues/38][ert-runner#38]])
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -73,10 +68,11 @@ Reoccuring issues:
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1)     | Class  | Feature         | Provider |
-|-----------------+--------+-----------------+----------|
-| org-roam-server | github | org-roam-buffer |          |
-| org-roam-server | github | org-roam-link   |          |
+| Package (1) | Class  | Feature    | Provider |
+|-------------+--------+------------+----------|
+| help-find   | github | +help-fns+ |          |
+
+- https://github.com/duncanburke/help-find/commit/675811452f3824746d85973e9a510ba917556327
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
