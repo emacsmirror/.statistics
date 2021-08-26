@@ -81,9 +81,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  134 |    134 |       |       |   269 |       |
+| gnu-elpa  |  137 |    137 |       |       |   269 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4930 |   4930 |       |       |       |  4710 |
+| github    | 4927 |   4927 |       |       |       |  4710 |
 | gitlab    |  166 |    166 |       |       |       |   162 |
 | sourcehut |   34 |     34 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -260,7 +260,7 @@
                       [core])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (133)              | Class     | Upst | Elpa | Link                                |
+| Package (130)              | Class     | Upst | Elpa | Link                                |
 |----------------------------+-----------+------+------+-------------------------------------|
 | ace-window                 | github    |      |      | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                  |
 | ack                        | github    |      |      | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                       |
@@ -305,14 +305,12 @@
 | ergoemacs-mode             | github    |      |      | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]            |
 | expand-region              | github    |   18 |    1 | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]            |
 | exwm                       | github    |      |      | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                         |
-| f90-interface-browser      | github    |    2 |    6 | [[https://github.com/wence-/f90-iface][wence-/f90-iface]]                    |
 | flymake-proselint          | github    |      |      | [[https://github.com/manuel-uberti/flymake-proselint][manuel-uberti/flymake-proselint]]     |
 | frog-menu                  | github    |      |      | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                   |
 | ftable                     | github    |      |      | [[https://github.com/casouri/ftable][casouri/ftable]]                      |
 | gcmh                       | gitlab    |      |      | [[https://gitlab.com/koral/gcmh][koral/gcmh]]                          |
 | ggtags                     | github    |      |      | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                       |
 | gnome-c-style              | github    |      |      | [[https://github.com/ueno/gnome-c-style][ueno/gnome-c-style]]                  |
-| gnorb                      | github    |    3 |   89 | [[https://github.com/girzel/gnorb][girzel/gnorb]]                        |
 | gpastel                    | github    |      |      | [[https://github.com/DamienCassou/gpastel][DamienCassou/gpastel]]                |
 | greader                    | gitlab    |      |      | [[https://gitlab.com/michelangelo-rodriguez/greader][michelangelo-rodriguez/greader]]      |
 | guess-language             | github    |   30 |    3 | [[https://github.com/tmalsburg/guess-language.el][tmalsburg/guess-language.el]]         |
@@ -346,7 +344,6 @@
 | org                        | git       |    2 |      | [[https://orgmode.org]]                 |
 | pabbrev                    | github    |      |      | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                    |
 | parsec                     | github    |      |      | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]               |
-| peg                        | github    |      |   12 | [[https://github.com/ellerh/peg.el][ellerh/peg.el]]                       |
 | pinentry                   | github    |      |      | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                    |
 | posframe                   | github    |      |      | [[https://github.com/tumashu/posframe][tumashu/posframe]]                    |
 | pyim                       | github    |      |      | [[https://github.com/tumashu/pyim][tumashu/pyim]]                        |
