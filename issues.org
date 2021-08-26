@@ -68,11 +68,6 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1) | Class  | Feature    | Provider |
-|-------------+--------+------------+----------|
-| help-find   | github | +help-fns+ |          |
-
-- https://github.com/duncanburke/help-find/commit/675811452f3824746d85973e9a510ba917556327
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.

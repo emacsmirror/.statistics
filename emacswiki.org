@@ -29,13 +29,14 @@
      (epkgs nil 'epkg-wiki-package-p)))
 #+END_SRC
 #+RESULTS: required-by-nonwiki
-| Dependee (11) | M | Author                        | Depender                      | M | Type | Author                                                           |
+| Dependee (12) | M | Author                        | Depender                      | M | Type | Author                                                           |
 |---------------+---+-------------------------------+-------------------------------+---+------+------------------------------------------------------------------|
 | bookmark+     |   | Drew Adams, Thierry Volpiatto | one-key                       |   | hard | Andy Stewart                                                     |
 | filesets+     |   | Drew Adams                    | helm-filesets                 | ✓ | soft | Graham Clark                                                     |
 | font-lock+    |   | Drew Adams                    | icons-in-terminal             |   | hard |                                                                  |
 | font-lock+    |   | Drew Adams                    | jemdoc-mode                   | ✓ | soft | Dimitar Dimitrov                                                 |
 | frame-cmds    |   | Drew Adams                    | frame-ctr                     |   | hard | Takaaki ISHIKAWA                                                 |
+| help-fns+     |   | Drew Adams                    | help-find                     | ✓ | soft | Duncan Burke                                                     |
 | hexrgb        |   | Drew Adams                    | jabber                        | ✓ | hard |                                                                  |
 | hexrgb        |   | Drew Adams                    | on-screen                     | ✓ | soft | Michael Heerdegen                                                |
 | hexrgb        |   | Drew Adams                    | one-key                       |   | hard | Andy Stewart                                                     |
