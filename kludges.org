@@ -146,6 +146,7 @@
 | molokai-theme                   | github   | color-theme              | backward compatibility                              |
 | navi2ch                         | github   | bitmap                   | XEmacs compatibility                                |
 | navi2ch                         | github   | spamfilter               | shelved soft                                        |
+| org                             | git      | moz                      | shelved soft                                        |
 | org                             | git      | nnselect                 | forward compatibility (Emacs 28)                    |
 | org                             | git      | org-remember             | backward compatibility                              |
 | org-caldav                      | github   | org-icalendar            | backward compatibility                              |
@@ -176,6 +177,7 @@
 | tangotango-theme                | github   | color-theme              | backward compatibility                              |
 | tramp                           | gnu      | tramp-loaddefs           | generated internal file                             |
 | tss                             | github   | anything                 | anything                                            |
+| tss                             | github   | moz                      | shelved soft                                        |
 | twittering-mode                 | github   | alpaca                   | only required if epa isn't available                |
 | twittering-mode                 | github   | revive                   | false-positive                                      |
 | twittering-mode                 | github   | un-define                | XEmacs compatibility                                |
@@ -266,9 +268,10 @@
             (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
 #+END_SRC
 #+RESULTS: filtered-subtree
-| Package (25)    | M | Url                                                                 |
+| Package (26)    | M | Url                                                                 |
 |-----------------+---+---------------------------------------------------------------------|
 | agda2-mode      | ✓ | git@github.com:agda/agda.git                                        |
+| cg              | ✓ | git@github.com:GrammarSoft/cg3.git                                  |
 | company-go      | ✓ | git@github.com:nsf/gocode.git                                       |
 | cubicle-mode    | ✓ | git@github.com:cubicle-model-checker/cubicle.git                    |
 | dune            | ✓ | git@github.com:ocaml/dune.git                                       |
