@@ -39,7 +39,7 @@ please first make sure they meet the minimal requirements.
   ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (548)                | Link                                    |
+| Package (559)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -377,7 +377,15 @@ please first make sure they meet the minimal requirements.
 | nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                       |
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                       |
 | nyan-prompt                  | [[https://github.com/PuercoPop/nyan-prompt][PuercoPop/nyan-prompt]]                   |
+| ob-clojure-literate          | [[https://github.com/stardiviner/ob-clojure-literate][stardiviner/ob-clojure-literate]]         |
+| ob-julia                     | [[https://github.com/phrb/ob-julia][phrb/ob-julia]]                           |
 | ob-markdown                  | [[https://github.com/tnoda/ob-markdown][tnoda/ob-markdown]]                       |
+| ob-mathematica               | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 |
+| ob-php                       | [[https://github.com/stardiviner/ob-php][stardiviner/ob-php]]                      |
+| ob-redis                     | [[https://github.com/stardiviner/ob-redis][stardiviner/ob-redis]]                    |
+| ob-sclang                    | [[https://github.com/stardiviner/ob-sclang][stardiviner/ob-sclang]]                   |
+| ob-smiles                    | [[https://github.com/stardiviner/ob-smiles][stardiviner/ob-smiles]]                   |
+| ob-spice                     | [[https://github.com/stardiviner/ob-spice][stardiviner/ob-spice]]                    |
 | octopress-tentacle           | [[https://github.com/brighid/octopress-tentacle][brighid/octopress-tentacle]]              |
 | ogi                          | [[https://github.com/ryuslash/ogi][ryuslash/ogi]]                            |
 | old-fashioned-undo           | [[https://github.com/k-talo/old-fashioned-undo.el][k-talo/old-fashioned-undo.el]]            |
@@ -397,12 +405,15 @@ please first make sure they meet the minimal requirements.
 | org-hyde                     | [[https://github.com/punchagan/org-hyde][punchagan/org-hyde]]                      |
 | org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     |
 | org-nan                      | [[https://github.com/gkappler/org-nan][gkappler/org-nan]]                        |
+| org-notify                   | [[https://github.com/p-m/org-notify][p-m/org-notify]]                          |
+| org-passwords                | [[https://github.com/alfaromurillo/org-passwords.el][alfaromurillo/org-passwords.el]]          |
 | org-presie                   | [[https://github.com/nicferrier/org-presie][nicferrier/org-presie]]                   |
 | org-protocol-github-lines    | [[https://github.com/kidd/org-protocol-github-lines][kidd/org-protocol-github-lines]]          |
 | org-reading                  | [[https://github.com/abhiyerra/org-reading][abhiyerra/org-reading]]                   |
 | org-readme                   | [[https://github.com/mattfidler/org-readme][mattfidler/org-readme]]                   |
 | org-seenthis                 | [[https://github.com/juba/org-seenthis][juba/org-seenthis]]                       |
 | org-status                   | [[https://github.com/neil-smithline-elisp/org-status][neil-smithline-elisp/org-status]]         |
+| org-velocity                 | [[https://github.com/ruricolist/org-velocity][ruricolist/org-velocity]]                 |
 | org-watchdoc                 | [[https://github.com/tj64/org-watchdoc][tj64/org-watchdoc]]                       |
 | orgrade                      | [[https://github.com/gucong/emacs-orgrade][gucong/emacs-orgrade]]                    |
 | osm-mode                     | [[https://github.com/ruediger/osm-mode][ruediger/osm-mode]]                       |
@@ -600,6 +611,11 @@ please first make sure they meet the minimal requirements.
             (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
+| Package (3)                | Link                                 |
+|----------------------------+--------------------------------------|
+| org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]] |
+| org-mac-link               | [[https://gitlab.com/aimebertrand/org-mac-link][aimebertrand/org-mac-link]]            |
+| ox-rss                     | [[https://gitlab.com/nsavage/ox-rss][nsavage/ox-rss]]                       |
 
 ** Git
 #+NAME: missing-git
@@ -611,12 +627,13 @@ please first make sure they meet the minimal requirements.
 	    (epkgs 'name 'epkg-git-package)))
 #+END_SRC
 #+RESULTS: missing-git
-| Package (6)   | Link                              |
-|---------------+-----------------------------------|
-| ebuild-mode   |                                   |
-| elpa-admin    |                                   |
-| mailscripts   |                                   |
-| piem          | [[https://git.kyleam.com/piem/about]] |
-| python-pep8   |                                   |
-| python-pylint |                                   |
+| Package (7)   | Link                                       |
+|---------------+--------------------------------------------|
+| ebuild-mode   |                                            |
+| elpa-admin    |                                            |
+| mailscripts   |                                            |
+| org-link-edit | [[https://git.kyleam.com/org-link-edit/about]] |
+| piem          | [[https://git.kyleam.com/piem/about]]          |
+| python-pep8   |                                            |
+| python-pylint |                                            |
 

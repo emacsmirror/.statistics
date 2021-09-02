@@ -62,10 +62,10 @@
 #+RESULTS: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4095 |      66 |
+| GPL-3.0-or-later  |  4112 |      66 |
 | GPL-2.0-or-later  |  1162 |      19 |
 | MIT               |   352 |       6 |
-| GPL-3.0-only      |   185 |       3 |
+| GPL-3.0-only      |   190 |       3 |
 | BSD-2-Clause      |    84 |       1 |
 | BSD-3-Clause      |    65 |       1 |
 | Apache-2.0        |    52 |       1 |
@@ -75,18 +75,18 @@
 | as-is             |    27 |       0 |
 | ISC               |    23 |       0 |
 | AGPL-3.0-or-later |     8 |       0 |
+| GPL-2.0-only      |     7 |       0 |
 | LGPL-3.0-or-later |     7 |       0 |
-| GPL-2.0-only      |     6 |       0 |
 | Zlib              |     4 |       0 |
 | GPL-1.0-or-later  |     3 |       0 |
 | LGPL-3.0-only     |     3 |       0 |
+| nil               |     2 |       0 |
 | Artistic-2.0      |     2 |       0 |
 | COPYLOVE          |     2 |       0 |
 | CeCILL            |     2 |       0 |
 | CeCILL-B          |     2 |       0 |
 | FSFAP             |     2 |       0 |
 | LGPL-2.1-only     |     2 |       0 |
-| nil               |     1 |       0 |
 | AGPL-3.0-only     |     1 |       0 |
 | Beerware          |     1 |       0 |
 | CC-0              |     1 |       0 |
@@ -97,9 +97,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5472 |      88 |
+| total GNU         |  5495 |      88 |
 |-------------------+-------+---------|
-| total             |  6209 |     100 |
+| total             |  6233 |     100 |
 
 ** Unknown licenses
 #+NAME: mirror-unknown
@@ -111,11 +111,13 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (1) | Class  | License |
+| Package (2) | Class  | License |
 |-------------+--------+---------|
 | clhs        | gitlab |         |
+| ob-julia    | github |         |
 
 - clhs: https://gitlab.com/sam-s/clhs/-/merge_requests/1
+- ob-julia: https://github.com/gjkerns/ob-julia/issues/20
 
 * Emacsattic
 ** Overview
@@ -131,7 +133,7 @@
 #+RESULTS: attic-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-2.0-or-later  |   825 |      58 |
+| GPL-2.0-or-later  |   824 |      58 |
 | GPL-3.0-or-later  |   344 |      24 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
@@ -158,9 +160,9 @@
 | LGPL-2.1-only     |     1 |       0 |
 | LGPL-2.1-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1312 |      92 |
+| total GNU         |  1311 |      92 |
 |-------------------+-------+---------|
-| total             |  1419 |     100 |
+| total             |  1418 |     100 |
 
 ** Unknown licenses
 #+NAME: attic-unknown

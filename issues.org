@@ -32,16 +32,6 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (3)    | Package      | Shelved |
-|----------------+--------------+---------|
-| ob-arduino     | arduino-mode |         |
-| ob-arduino     | org-contrib  |         |
-| ol-notmuch     | ol-notmuch   |         |
-| ol-notmuch     | org-contrib  |         |
-| ox-koma-letter | org          |         |
-| ox-koma-letter | org-contrib  |         |
-
-- org-contrib: migrating files won't be removed until next release
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied

@@ -52,19 +52,6 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
-| Package (5)            | Class  | Feature           | Reason                 |
-|------------------------+--------+-------------------+------------------------|
-| emacspeak              | github | amixer            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak              | github | analog            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak              | github | nm                | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak              | github | sudoku            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak              | github | tapestry          | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| emacspeak              | github | tetris            | pending [[https://github.com/tvraman/emacspeak/pull/15][#15]]            |
-| orgtbl-join            | github | org-insert-dblock | pending [[https://github.com/tbanel/orgtbljoin/issues/1][#1]]             |
-| projectile-trailblazer | github | setup             | pending [[https://github.com/micdahl/projectile-trailblazer/issues/2][#2]]             |
-| slime                  | github | cl-indent         | part of Emacs          |
-| twittering-mode        | github | ssl               | backward compatibility |
-| twittering-mode        | github | test              | pending [[https://github.com/hayamiz/twittering-mode/pull/129][#129]]           |
 
 * Drop required features
 #+NAME: required-drop
@@ -76,7 +63,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (84)                    | Class    | Feature                  | Reason                                              |
+| Package (85)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -144,6 +131,8 @@
 | mhc                             | github   | pcustom                  | Mule compatibility                                  |
 | mhc                             | github   | poe                      | Mule compatibility                                  |
 | molokai-theme                   | github   | color-theme              | backward compatibility                              |
+| mu4e-views                      | github   | mu4e-utils               | backward compatibility                              |
+| mu4e-views                      | github   | mu4e-view-old            | backward compatibility                              |
 | navi2ch                         | github   | bitmap                   | XEmacs compatibility                                |
 | navi2ch                         | github   | spamfilter               | shelved soft                                        |
 | org                             | git      | moz                      | shelved soft                                        |
@@ -206,20 +195,29 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: patched
-| Package (12)  | Class    |
-|---------------+----------|
-| apel          | github   |
-| flim          | github   |
-| go            | github   |
-| karma         | github   |
-| lookup        | github   |
-| nav           | github   |
-| oauth         | github   |
-| projmake-mode | github   |
-| queue         | gnu-elpa |
-| semi          | github   |
-| tenv          | github   |
-| wanderlust    | github   |
+| Package (17)           | Class     |
+|------------------------+-----------|
+| apel                   | github    |
+| emacspeak              | github    |
+| flim                   | github    |
+| go                     | github    |
+| karma                  | github    |
+| lookup                 | github    |
+| nav                    | github    |
+| oauth                  | github    |
+| org-contrib            | sourcehut |
+| projectile-trailblazer | github    |
+| projmake-mode          | github    |
+| queue                  | gnu-elpa  |
+| semi                   | github    |
+| slime                  | github    |
+| tenv                   | github    |
+| twittering-mode        | github    |
+| wanderlust             | github    |
+
+- emacspeak: https://github.com/tvraman/emacspeak/issues/54
+- projectile-trailblazer: https://github.com/micdahl/projectile-trailblazer/issues/3
+- twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 
 * Filtered (minority) repositories
 #+NAME: filtered-minority
