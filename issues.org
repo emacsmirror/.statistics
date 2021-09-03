@@ -77,6 +77,16 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+END_SRC
 #+RESULTS: archived
+| Package (6)             | Repository                     | M | Reverse Dependencies |
+|-------------------------+--------------------------------+---+----------------------|
+| cat-safe                | [[https://github.com/skeeto/cat-safe][skeeto/cat-safe]]                |   |                      |
+| fakespace               | [[https://github.com/skeeto/elisp-fakespace][skeeto/elisp-fakespace]]         | ✓ |                      |
+| js-lookup               | [[https://github.com/skeeto/js-lookup][skeeto/js-lookup]]               |   |                      |
+| mouse-slider-mode       | [[https://github.com/skeeto/mouse-slider-mode][skeeto/mouse-slider-mode]]       | ✓ |                      |
+| rdp                     | [[https://github.com/skeeto/rdp][skeeto/rdp]]                     | ✓ | psl-mode             |
+| visual-indentation-mode | [[https://github.com/skeeto/visual-indentation-mode][skeeto/visual-indentation-mode]] |   |                      |
+
+- https://github.com/skeeto/psl-mode/issues/5
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.

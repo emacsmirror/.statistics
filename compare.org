@@ -81,10 +81,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  137 |    137 |       |       |   272 |       |
+| gnu-elpa  |  137 |    137 |       |       |   273 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4939 |   4939 |       |       |       |  4710 |
-| gitlab    |  170 |    170 |       |       |       |   163 |
+| github    | 4942 |   4942 |       |       |       |  4714 |
+| gitlab    |  171 |    171 |       |       |       |   163 |
 | sourcehut |   35 |     35 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1418 |        |  1418 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8102 |   6233 |  1418 |   467 |   287 |  5002 |
+| total     | 8106 |   6237 |  1418 |   467 |   288 |  5006 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (134)              | Class     | Gelpa    | Link                                   |
+| Package (135)              | Class     | Gelpa    | Link                                   |
 |----------------------------+-----------+----------+----------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                     |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                          |
@@ -296,6 +296,7 @@
 | eldoc-eval                 | github    | external | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]            |
 | electric-spacing           | github    | external | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                   |
 | emms                       | gnu       | external | [[http://www.gnu.org/software/emms][gnu:emms]]                               |
+| engrave-faces              | github    | external | [[https://github.com/tecosaur/engrave-faces][tecosaur/engrave-faces]]                 |
 | enwc                       | hg        | external | [[https://savannah.nongnu.org/p/enwc]]     |
 | ergoemacs-mode             | github    | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]               |
 | expand-region              | github    | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]               |
@@ -719,10 +720,11 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (5)    | Mirror                                   | Melpa                                  |
+| Package (6)    | Mirror                                   | Melpa                                  |
 |----------------+------------------------------------------+----------------------------------------|
 | 0x0            | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                   |
 | autocrypt      | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt      |
+| cl-format      | [[https://gitlab.com/akater/elisp-cl-format][akater/elisp-cl-format]]                   | [[https://github.com/alvinfrancis/cl-format][alvinfrancis/cl-format]]                 |
 | clang-capf     | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf     |
 | face-shift     | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift     |
 | insert-kaomoji | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji |
