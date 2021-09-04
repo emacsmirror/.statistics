@@ -83,8 +83,8 @@
 | builtin   |  466 |     15 |       |   467 |    15 |       |
 | gnu-elpa  |  137 |    137 |       |       |   273 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4942 |   4942 |       |       |       |  4714 |
-| gitlab    |  171 |    171 |       |       |       |   163 |
+| github    | 4935 |   4935 |       |       |       |  4713 |
+| gitlab    |  171 |    171 |       |       |       |   164 |
 | sourcehut |   35 |     35 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   54 |     54 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  134 |    134 |       |       |       |       |
-| shelved   | 1418 |        |  1418 |       |       |       |
+| shelved   | 1425 |        |  1425 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8106 |   6237 |  1418 |   467 |   288 |  5006 |
+| total     | 8106 |   6230 |  1425 |   467 |   288 |  5006 |
 
 * Emacs
 ** Prefer elpa
@@ -481,7 +481,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (122)   | Secondary package                 | Class     |
+| Primary package (123)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -688,6 +688,7 @@
 | ycm                     | company-ycm                       | github    |
 | ycmd                    | company-ycmd                      | github    |
 | ycmd                    | flycheck-ycmd                     | github    |
+| zettelkasten            | org-zettelkasten                  | github    |
 
 ** Diverging repositories
 #+NAME: melpa-diverging-repositories
@@ -720,11 +721,10 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (6)    | Mirror                                   | Melpa                                  |
+| Package (5)    | Mirror                                   | Melpa                                  |
 |----------------+------------------------------------------+----------------------------------------|
 | 0x0            | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                   |
 | autocrypt      | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt      |
-| cl-format      | [[https://gitlab.com/akater/elisp-cl-format][akater/elisp-cl-format]]                   | [[https://github.com/alvinfrancis/cl-format][alvinfrancis/cl-format]]                 |
 | clang-capf     | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf     |
 | face-shift     | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift     |
 | insert-kaomoji | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji |
