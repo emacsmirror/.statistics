@@ -17,7 +17,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-join
-| Package (14) | Class     | Feature        | Reason                                    |
+| Package (15) | Class     | Feature        | Reason                                    |
 |--------------+-----------+----------------+-------------------------------------------|
 | ddskk        | github    | skk-kanagaki   | inside directory containing .nosearch     |
 | ddskk        | github    | skk-tutcode    | inside directory containing .nosearch     |
@@ -29,6 +29,7 @@
 | finder       | builtin   | finder-inf     | generated                                 |
 | fuz          | github    | fuz-core       | provided by module                        |
 | geo          | sourcehut | geocode-emacs  | provided by module                        |
+| hotfuzz      | github    | hotfuzz-module | provided by module                        |
 | liberime     | github    | liberime-core  | provided by module                        |
 | realgud      | github    | bashdb         | inside directory containing .nosearch     |
 | sly          | github    | sly-buttons    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
