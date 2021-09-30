@@ -81,9 +81,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  137 |    137 |       |       |   275 |       |
+| gnu-elpa  |  137 |    137 |       |       |   277 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4949 |   4949 |       |       |       |  4722 |
+| github    | 4952 |   4952 |       |       |       |  4723 |
 | gitlab    |  173 |    173 |       |       |       |   167 |
 | sourcehut |   35 |     35 |       |       |       |       |
 | gnu       |    7 |      7 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1425 |        |  1425 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8123 |   6247 |  1425 |   467 |   290 |  5018 |
+| total     | 8126 |   6250 |  1425 |   467 |   292 |  5019 |
 
 * Emacs
 ** Prefer elpa
@@ -255,7 +255,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (138)              | Class     | Gelpa    | Link                                   |
+| Package (140)              | Class     | Gelpa    | Link                                   |
 |----------------------------+-----------+----------+----------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                     |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                          |
@@ -337,6 +337,7 @@
 | muse                       | github    | external | [[https://github.com/alexott/muse][alexott/muse]]                           |
 | nameless                   | github    | external | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                     |
 | names                      | github    | external | [[https://github.com/Malabarba/names][Malabarba/names]]                        |
+| nano-theme                 | github    | external | [[https://github.com/rougier/nano-theme][rougier/nano-theme]]                     |
 | ob-haxe                    | github    | external | [[https://github.com/ianxm/ob-haxe.el][ianxm/ob-haxe.el]]                       |
 | objed                      | github    | external | [[https://github.com/clemera/objed][clemera/objed]]                          |
 | on-screen                  | github    | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]         |
@@ -367,6 +368,7 @@
 | spinner                    | github    | external | [[https://github.com/Malabarba/spinner.el][Malabarba/spinner.el]]                   |
 | sql-indent                 | github    | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                    |
 | ssh-deploy                 | github    | external | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]            |
+| svg-lib                    | github    | external | [[https://github.com/rougier/svg-lib][rougier/svg-lib]]                        |
 | system-packages            | gitlab    | external | [[https://gitlab.com/jabranham/system-packages][jabranham/system-packages]]              |
 | systemd                    | github    | external | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                 |
 | taxy                       | github    | external | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                      |
