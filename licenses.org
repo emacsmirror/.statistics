@@ -62,15 +62,15 @@
 #+RESULTS: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4142 |      66 |
+| GPL-3.0-or-later  |  4149 |      66 |
 | GPL-2.0-or-later  |  1163 |      19 |
 | MIT               |   353 |       6 |
-| GPL-3.0-only      |   187 |       3 |
+| GPL-3.0-only      |   186 |       3 |
 | BSD-2-Clause      |    84 |       1 |
 | BSD-3-Clause      |    65 |       1 |
 | Apache-2.0        |    52 |       1 |
-| public-domain     |    37 |       1 |
 | WTFPL             |    36 |       1 |
+| public-domain     |    36 |       1 |
 | Unlicense         |    32 |       1 |
 | as-is             |    27 |       0 |
 | ISC               |    23 |       0 |
@@ -80,7 +80,6 @@
 | Zlib              |     4 |       0 |
 | GPL-1.0-or-later  |     3 |       0 |
 | LGPL-3.0-only     |     3 |       0 |
-| nil               |     2 |       0 |
 | Artistic-2.0      |     2 |       0 |
 | CC0-1.0           |     2 |       0 |
 | CECILL-2.1        |     2 |       0 |
@@ -89,6 +88,7 @@
 | FSFAP             |     2 |       0 |
 | LGPL-2.1-only     |     2 |       0 |
 | MPL-2.0           |     2 |       0 |
+| nil               |     1 |       0 |
 | AGPL-3.0-only     |     1 |       0 |
 | Beerware          |     1 |       0 |
 | MIT-0             |     1 |       0 |
@@ -96,9 +96,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5523 |      88 |
+| total GNU         |  5529 |      88 |
 |-------------------+-------+---------|
-| total             |  6257 |     100 |
+| total             |  6261 |     100 |
 
 ** Packages with unknown licenses
 #+NAME: mirror-unknown
@@ -112,16 +112,14 @@
               ["COPYLOVE"]))
 #+END_SRC
 #+RESULTS: mirror-unknown
-| Package (4)    | Class  | License  |
+| Package (3)    | Class  | License  |
 |----------------+--------+----------|
 | clhs           | gitlab |          |
 | nyan-prompt    | github | COPYLOVE |
-| ob-julia       | github |          |
 | password-vault | github | COPYLOVE |
 
 - clhs: https://gitlab.com/sam-s/clhs/-/merge_requests/1
 - nyan-prompt, password-vault: https://github.com/PuercoPop/password-vault/issues/4
-- ob-julia: https://github.com/gjkerns/ob-julia/issues/20
 
 ** Unknown licenses
 #+NAME: mirror-unknown-licenses
@@ -157,10 +155,10 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |   824 |      58 |
-| GPL-3.0-or-later  |   344 |      24 |
+| GPL-3.0-or-later  |   345 |      24 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
-| public-domain     |    39 |       3 |
+| public-domain     |    40 |       3 |
 | MIT               |    20 |       1 |
 | GPL-3.0-only      |    17 |       1 |
 | GPL-1.0-or-later  |    14 |       1 |
@@ -183,9 +181,9 @@
 | LGPL-2.1-only     |     1 |       0 |
 | LGPL-2.1-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1311 |      92 |
+| total GNU         |  1312 |      92 |
 |-------------------+-------+---------|
-| total             |  1424 |     100 |
+| total             |  1426 |     100 |
 
 ** Packages with unknown licenses
 #+NAME: attic-unknown

@@ -135,9 +135,9 @@
 | mu4e-views                      | github   | mu4e-view-old            | backward compatibility                              |
 | navi2ch                         | github   | bitmap                   | XEmacs compatibility                                |
 | navi2ch                         | github   | spamfilter               | shelved soft                                        |
-| org                             | git      | moz                      | shelved soft                                        |
-| org                             | git      | nnselect                 | forward compatibility (Emacs 28)                    |
-| org                             | git      | org-remember             | backward compatibility                              |
+| org                             | gnu      | moz                      | shelved soft                                        |
+| org                             | gnu      | nnselect                 | forward compatibility                               |
+| org                             | gnu      | org-remember             | backward compatibility                              |
 | org-caldav                      | github   | org-icalendar            | backward compatibility                              |
 | org-readme                      | github   | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
 | org-redmine                     | github   | anything                 | anything                                            |
@@ -266,34 +266,32 @@
             (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
 #+END_SRC
 #+RESULTS: filtered-subtree
-| Package (26)    | M | Url                                                                 |
-|-----------------+---+---------------------------------------------------------------------|
-| agda2-mode      | ✓ | git@github.com:agda/agda.git                                        |
-| cg              | ✓ | git@github.com:GrammarSoft/cg3.git                                  |
-| company-go      | ✓ | git@github.com:nsf/gocode.git                                       |
-| cubicle-mode    | ✓ | git@github.com:cubicle-model-checker/cubicle.git                    |
-| dune            | ✓ | git@github.com:ocaml/dune.git                                       |
-| egison-mode     | ✓ | git@github.com:egison/egison.git                                    |
-| fuel            | ✓ | git@github.com:factor/factor.git                                    |
-| go-autocomplete | ✓ | git@github.com:nsf/gocode.git                                       |
-| golint          | ✓ | git@github.com:golang/lint.git                                      |
-| govc            | ✓ | git@github.com:vmware/govmomi.git                                   |
-| gvpr-mode       | ✓ | git@github.com:rodw/gvpr-lib.git                                    |
-| kivy-mode       | ✓ | git@github.com:kivy/kivy.git                                        |
-| lambdapi-mode   | ✓ | git@github.com:Deducteam/lambdapi.git                               |
-| lfe-mode        | ✓ | git@github.com:rvirding/lfe.git                                     |
-| mandoku         | ✓ | git@github.com:mandoku/mandoku.git                                  |
-| merlin          | ✓ | git@github.com:the-lambda-church/merlin.git                         |
-| mozart          |   | git@github.com:mozart/mozart2.git                                   |
-| mozc            | ✓ | git@github.com:google/mozc.git                                      |
-| password-store  | ✓ | https://git.zx2c4.com/password-store                                |
-| protobuf-mode   | ✓ | git@github.com:google/protobuf.git                                  |
-| rcodetools      |   | git@github.com:rcodetools/rcodetools.git                            |
-| scad-mode       | ✓ | git@github.com:openscad/openscad.git                                |
-| stumpwm-mode    | ✓ | git@github.com:stumpwm/stumpwm-contrib.git                          |
-| utop            | ✓ | git@github.com:diml/utop.git                                        |
-| widgetjs        | ✓ | git@github.com:foretagsplatsen/emacs-js.git                         |
-| zeitgeist       |   | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
+| Package (24)   | M | Url                                                                 |
+|----------------+---+---------------------------------------------------------------------|
+| agda2-mode     | ✓ | git@github.com:agda/agda.git                                        |
+| cg             | ✓ | git@github.com:GrammarSoft/cg3.git                                  |
+| cubicle-mode   | ✓ | git@github.com:cubicle-model-checker/cubicle.git                    |
+| dune           | ✓ | git@github.com:ocaml/dune.git                                       |
+| egison-mode    | ✓ | git@github.com:egison/egison.git                                    |
+| fuel           | ✓ | git@github.com:factor/factor.git                                    |
+| golint         | ✓ | git@github.com:golang/lint.git                                      |
+| govc           | ✓ | git@github.com:vmware/govmomi.git                                   |
+| gvpr-mode      | ✓ | git@github.com:rodw/gvpr-lib.git                                    |
+| kivy-mode      | ✓ | git@github.com:kivy/kivy.git                                        |
+| lambdapi-mode  | ✓ | git@github.com:Deducteam/lambdapi.git                               |
+| lfe-mode       | ✓ | git@github.com:rvirding/lfe.git                                     |
+| mandoku        | ✓ | git@github.com:mandoku/mandoku.git                                  |
+| merlin         | ✓ | git@github.com:the-lambda-church/merlin.git                         |
+| mozart         |   | git@github.com:mozart/mozart2.git                                   |
+| mozc           | ✓ | git@github.com:google/mozc.git                                      |
+| password-store | ✓ | https://git.zx2c4.com/password-store                                |
+| protobuf-mode  | ✓ | git@github.com:google/protobuf.git                                  |
+| rcodetools     |   | git@github.com:rcodetools/rcodetools.git                            |
+| scad-mode      | ✓ | git@github.com:openscad/openscad.git                                |
+| stumpwm-mode   | ✓ | git@github.com:stumpwm/stumpwm-contrib.git                          |
+| utop           | ✓ | git@github.com:diml/utop.git                                        |
+| widgetjs       | ✓ | git@github.com:foretagsplatsen/emacs-js.git                         |
+| zeitgeist      |   | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
 
 * Set main library
 #+NAME: no-mainlib

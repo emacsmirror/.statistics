@@ -39,7 +39,7 @@ please first make sure they meet the minimal requirements.
   ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (555)                | Link                                    |
+| Package (552)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -55,7 +55,6 @@ please first make sure they meet the minimal requirements.
 | ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                            |
 | ant-project-mode             | [[https://github.com/skeeto/ant-project-mode][skeeto/ant-project-mode]]                 |
 | antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                     |
-| apheleia                     | [[https://github.com/raxod502/apheleia][raxod502/apheleia]]                       |
 | asciidoc                     | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                    |
 | assert-rtn                   | [[https://github.com/neil-smithline-elisp/assert-rtn][neil-smithline-elisp/assert-rtn]]         |
 | async-completing-read        | [[https://github.com/oantolin/async-completing-read][oantolin/async-completing-read]]          |
@@ -319,7 +318,6 @@ please first make sure they meet the minimal requirements.
 | lilypond-hook                | [[https://github.com/mjago/lilypond-hook][mjago/lilypond-hook]]                     |
 | linum-ace                    | [[https://github.com/coldnew/linum-ace][coldnew/linum-ace]]                       |
 | linum-relativenumber         | [[https://github.com/scottjad/linum-relativenumber][scottjad/linum-relativenumber]]           |
-| liquidmetal                  | [[https://github.com/jcs-elpa/liquidmetal][jcs-elpa/liquidmetal]]                    |
 | lisp-editing                 | [[https://github.com/nicferrier/emacs-lisp-editing-tools][nicferrier/emacs-lisp-editing-tools]]     |
 | lispy-mnemonic               | [[https://github.com/itsjeyd/lispy-mnemonic][itsjeyd/lispy-mnemonic]]                  |
 | live-completions             | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               |
@@ -376,7 +374,6 @@ please first make sure they meet the minimal requirements.
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                       |
 | nyan-prompt                  | [[https://github.com/PuercoPop/nyan-prompt][PuercoPop/nyan-prompt]]                   |
 | ob-clojure-literate          | [[https://github.com/stardiviner/ob-clojure-literate][stardiviner/ob-clojure-literate]]         |
-| ob-julia                     | [[https://github.com/phrb/ob-julia][phrb/ob-julia]]                           |
 | ob-markdown                  | [[https://github.com/tnoda/ob-markdown][tnoda/ob-markdown]]                       |
 | ob-mathematica               | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 |
 | ob-php                       | [[https://github.com/stardiviner/ob-php][stardiviner/ob-php]]                      |
@@ -607,8 +604,9 @@ please first make sure they meet the minimal requirements.
             (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
-| Package (3)                | Link                                 |
+| Package (4)                | Link                                 |
 |----------------------------+--------------------------------------|
+| boxy-headlines             | [[https://gitlab.com/tygrdev/boxy-headlines][tygrdev/boxy-headlines]]               |
 | org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]] |
 | org-mac-link               | [[https://gitlab.com/aimebertrand/org-mac-link][aimebertrand/org-mac-link]]            |
 | ox-rss                     | [[https://gitlab.com/nsavage/ox-rss][nsavage/ox-rss]]                       |
