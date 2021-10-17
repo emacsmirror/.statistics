@@ -267,7 +267,7 @@
             (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
 #+END_SRC
 #+RESULTS: filtered-subtree
-| Package (24)   | M | Url                                                                 |
+| Package (23)   | M | Url                                                                 |
 |----------------+---+---------------------------------------------------------------------|
 | agda2-mode     | ✓ | git@github.com:agda/agda.git                                        |
 | cg             | ✓ | git@github.com:GrammarSoft/cg3.git                                  |
@@ -291,7 +291,6 @@
 | scad-mode      | ✓ | git@github.com:openscad/openscad.git                                |
 | stumpwm-mode   | ✓ | git@github.com:stumpwm/stumpwm-contrib.git                          |
 | utop           | ✓ | git@github.com:diml/utop.git                                        |
-| widgetjs       | ✓ | git@github.com:foretagsplatsen/emacs-js.git                         |
 | zeitgeist      |   | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
 
 * Set main library

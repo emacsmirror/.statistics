@@ -83,14 +83,14 @@
 | builtin   |  466 |     16 |       |   467 |    16 |       |
 | gnu-elpa  |  138 |    138 |       |       |   285 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4970 |   4970 |       |       |       |  4734 |
-| gitlab    |  176 |    176 |       |       |       |   167 |
+| github    | 4960 |   4960 |       |       |       |  4727 |
+| gitlab    |  174 |    174 |       |       |       |   165 |
 | sourcehut |   35 |     35 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | git       |   86 |     86 |       |       |       |   116 |
-| subtree   |   24 |     24 |       |       |       |       |
+| subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
 | minority  |   18 |     18 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   54 |     54 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  134 |    134 |       |       |       |       |
-| shelved   | 1426 |        |  1426 |       |       |       |
+| shelved   | 1443 |        |  1443 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8149 |   6273 |  1426 |   467 |   301 |  5031 |
+| total     | 8153 |   6260 |  1443 |   467 |   301 |  5022 |
 
 * Emacs
 ** Prefer elpa
@@ -734,12 +734,11 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (7)         | Mirror                                   | Melpa                                    |
-|---------------------+------------------------------------------+------------------------------------------|
-| 0x0                 | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                     |
-| autocrypt           | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt        |
-| clang-capf          | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf       |
-| eide                | [[https://eide.hjuvi.fr.eu.org]]             | https://forge.chapril.org/hjuvi/eide.git |
-| face-shift          | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift       |
-| idle-highlight-mode | [[https://github.com/nonsequitur/idle-highlight-mode][nonsequitur/idle-highlight-mode]]          | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]     |
-| insert-kaomoji      | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji   |
+| Package (6)         | Mirror                                   | Melpa                                  |
+|---------------------+------------------------------------------+----------------------------------------|
+| 0x0                 | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                   |
+| autocrypt           | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt      |
+| clang-capf          | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf     |
+| face-shift          | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift     |
+| idle-highlight-mode | [[https://github.com/nonsequitur/idle-highlight-mode][nonsequitur/idle-highlight-mode]]          | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]   |
+| insert-kaomoji      | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji |

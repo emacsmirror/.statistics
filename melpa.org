@@ -39,7 +39,7 @@ please first make sure they meet the minimal requirements.
   ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (559)                | Link                                    |
+| Package (555)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -80,7 +80,6 @@ please first make sure they meet the minimal requirements.
 | binmove                      | [[https://github.com/beketa/binmove][beketa/binmove]]                          |
 | bookem                       | [[https://github.com/kjfletch/bookem-el][kjfletch/bookem-el]]                      |
 | bookiez                      | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                    |
-| bookmark-view                | [[https://github.com/minad/bookmark-view][minad/bookmark-view]]                     |
 | borg-queen                   | [[https://github.com/thblt/borg-queen][thblt/borg-queen]]                        |
 | buffer-action                | [[https://github.com/xwl/buffer-action][xwl/buffer-action]]                       |
 | buffer-timer                 | [[https://github.com/hardaker/elisp-buffer-timer][hardaker/elisp-buffer-timer]]             |
@@ -212,6 +211,7 @@ please first make sure they meet the minimal requirements.
 | finkinfo-mode                | [[https://github.com/xwl/finkinfo-mode][xwl/finkinfo-mode]]                       |
 | firefox-remote               | [[https://github.com/ruediger/emacs-firefox-remote][ruediger/emacs-firefox-remote]]           |
 | flowtimer                    | [[https://github.com/jrockway/time-utils-el][jrockway/time-utils-el]]                  |
+| flxy                         | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           |
 | flymake-csslint              | [[https://github.com/arnested/flymake-csslint][arnested/flymake-csslint]]                |
 | font-lock-ext                | [[https://github.com/sensorflo/font-lock-ext][sensorflo/font-lock-ext]]                 |
 | font-lock-regression-suite   | [[https://github.com/Lindydancer/font-lock-regression-suite][Lindydancer/font-lock-regression-suite]]  |
@@ -379,7 +379,6 @@ please first make sure they meet the minimal requirements.
 | nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                       |
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                       |
 | nyan-prompt                  | [[https://github.com/PuercoPop/nyan-prompt][PuercoPop/nyan-prompt]]                   |
-| ob-clojure-literate          | [[https://github.com/stardiviner/ob-clojure-literate][stardiviner/ob-clojure-literate]]         |
 | ob-markdown                  | [[https://github.com/tnoda/ob-markdown][tnoda/ob-markdown]]                       |
 | ob-mathematica               | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 |
 | ob-php                       | [[https://github.com/stardiviner/ob-php][stardiviner/ob-php]]                      |
@@ -412,7 +411,6 @@ please first make sure they meet the minimal requirements.
 | org-protocol-github-lines    | [[https://github.com/kidd/org-protocol-github-lines][kidd/org-protocol-github-lines]]          |
 | org-reading                  | [[https://github.com/abhiyerra/org-reading][abhiyerra/org-reading]]                   |
 | org-readme                   | [[https://github.com/mattfidler/org-readme][mattfidler/org-readme]]                   |
-| org-seenthis                 | [[https://github.com/juba/org-seenthis][juba/org-seenthis]]                       |
 | org-status                   | [[https://github.com/neil-smithline-elisp/org-status][neil-smithline-elisp/org-status]]         |
 | org-velocity                 | [[https://github.com/ruricolist/org-velocity][ruricolist/org-velocity]]                 |
 | org-watchdoc                 | [[https://github.com/tj64/org-watchdoc][tj64/org-watchdoc]]                       |
@@ -444,7 +442,6 @@ please first make sure they meet the minimal requirements.
 | popup-global-mark-ring       | [[https://github.com/whitypig/popup-global-mark-ring][whitypig/popup-global-mark-ring]]         |
 | posn-on-screen               | [[https://github.com/Sarcasm/posn-on-screen][Sarcasm/posn-on-screen]]                  |
 | powershell-mode              | [[https://github.com/fperrin/powershell-mode][fperrin/powershell-mode]]                 |
-| projectur                    | [[https://github.com/vderyagin/projectur][vderyagin/projectur]]                     |
 | projutils                    | [[https://github.com/fgallina/projutils.el][fgallina/projutils.el]]                   |
 | pry                          | [[https://github.com/jacott/emacs-pry][jacott/emacs-pry]]                        |
 | pulseaudio                   | [[https://github.com/suzp1984/pulseaudio-mode][suzp1984/pulseaudio-mode]]                |
@@ -483,7 +480,6 @@ please first make sure they meet the minimal requirements.
 | scan                         | [[https://github.com/larsmagne/scan.el][larsmagne/scan.el]]                       |
 | sclang                       | [[https://github.com/supercollider/scel][supercollider/scel]]                      |
 | screensend                   | [[https://github.com/benwbooth/screensend.el][benwbooth/screensend.el]]                 |
-| scriptify                    | [[https://github.com/vderyagin/scriptify][vderyagin/scriptify]]                     |
 | scrobble                     | [[https://github.com/larsmagne/scrobble.el][larsmagne/scrobble.el]]                   |
 | sentence-highlight           | [[https://github.com/sbelak/sentence-highlight][sbelak/sentence-highlight]]               |
 | seognil                      | [[https://github.com/md11235/seognil][md11235/seognil]]                         |
