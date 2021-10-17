@@ -80,16 +80,16 @@
 #+RESULTS: summary
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
-| builtin   |  466 |     15 |       |   467 |    15 |       |
-| gnu-elpa  |  138 |    138 |       |       |   283 |       |
+| builtin   |  466 |     16 |       |   467 |    16 |       |
+| gnu-elpa  |  138 |    138 |       |       |   285 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4959 |   4959 |       |       |       |  4731 |
-| gitlab    |  177 |    177 |       |       |       |   167 |
+| github    | 4970 |   4970 |       |       |       |  4734 |
+| gitlab    |  176 |    176 |       |       |       |   167 |
 | sourcehut |   35 |     35 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   85 |     85 |       |       |       |   116 |
+| git       |   86 |     86 |       |       |       |   116 |
 | subtree   |   24 |     24 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1426 |        |  1426 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8138 |   6261 |  1426 |   467 |   298 |  5028 |
+| total     | 8149 |   6273 |  1426 |   467 |   301 |  5031 |
 
 * Emacs
 ** Prefer elpa
@@ -154,17 +154,17 @@
 #+NAME: gelpa-new
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Url")
-    (seq-filter (pcase-lambda (`(,name ,class ,_url))
-                  (and (not (assoc name emir-pending-packages))
-                       (not (assoc name emir--preferred-builtins))
-                       (not (assoc name emir-secondary-packages))
-                       (or (not (eq class 'core))
-                           (epkg-builtin-package-p (epkg name)))))
-                (epkg-sql [:select [name class url]
-                           :from gelpa-recipes
-                           :where (or (isnull epkg-package)
-                                      (= class 'core))
-                           :order-by [(asc name)]])))
+    (mapcan (pcase-lambda (`(,name ,class ,url))
+              (and (not (assoc name emir-pending-packages))
+                   (not (assoc name emir--preferred-builtins))
+                   (not (assoc name emir-secondary-packages))
+                   (not (memq class '(core builtin)))
+                   (list (list name class (if (eq class 'core) "" url)))))
+            (epkg-sql [:select [name class url]
+                       :from gelpa-recipes
+                       :where (or (isnull epkg-package)
+                                  (= class 'core))
+                       :order-by [(asc name)]])))
 #+END_SRC
 #+RESULTS: gelpa-new
 
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (145)              | Class     | Gelpa    | Link                                      |
+| Package (147)              | Class     | Gelpa    | Link                                      |
 |----------------------------+-----------+----------+-------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                        |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                             |
@@ -279,6 +279,7 @@
 | consult                    | github    | external | [[https://github.com/minad/consult][minad/consult]]                             |
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]       |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                               |
+| coterm                     | git       | external | [[https://repo.or.cz/emacs-coterm.git]]       |
 | cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                          |
 | crdt                       | git       | external | [[https://code.librehq.com/qhong/crdt.el]]    |
 | csharp-mode                | github    | external | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]                  |
@@ -338,6 +339,7 @@
 | muse                       | github    | external | [[https://github.com/alexott/muse][alexott/muse]]                              |
 | nameless                   | github    | external | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                        |
 | names                      | github    | external | [[https://github.com/Malabarba/names][Malabarba/names]]                           |
+| nano-agenda                | github    | external | [[https://github.com/rougier/nano-agenda][rougier/nano-agenda]]                       |
 | nano-modeline              | github    | external | [[https://github.com/rougier/nano-modeline][rougier/nano-modeline]]                     |
 | nano-theme                 | github    | external | [[https://github.com/rougier/nano-theme][rougier/nano-theme]]                        |
 | ob-haxe                    | github    | external | [[https://github.com/ianxm/ob-haxe.el][ianxm/ob-haxe.el]]                          |

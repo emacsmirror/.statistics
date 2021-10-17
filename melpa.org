@@ -39,7 +39,7 @@ please first make sure they meet the minimal requirements.
   ;;    #'string< :key #'cadr))
 #+END_SRC
 #+RESULTS: missing-github
-| Package (552)                | Link                                    |
+| Package (559)                | Link                                    |
 |------------------------------+-----------------------------------------|
 | 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    |
 | a2ps-multibyte               | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              |
@@ -150,6 +150,11 @@ please first make sure they meet the minimal requirements.
 | dvorak-mode                  | [[https://github.com/traveter/dvorak-mode][traveter/dvorak-mode]]                    |
 | e2wm-perspb                  | [[https://github.com/aki2o/e2wm-perspb][aki2o/e2wm-perspb]]                       |
 | eaf                          | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   |
+| eaf-browser                  | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   |
+| eaf-file-manager             | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              |
+| eaf-pdf-viewer               | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                |
+| eaf-terminal                 | [[https://github.com/emacs-eaf/eaf-terminal][emacs-eaf/eaf-terminal]]                  |
+| eaf-video-player             | [[https://github.com/emacs-eaf/eaf-video-player][emacs-eaf/eaf-video-player]]              |
 | easy-imenu-index-generator   | [[https://github.com/tm8st/emacs-easy-imenu-index-generator][tm8st/emacs-easy-imenu-index-generator]]  |
 | easy-todo                    | [[https://github.com/xwl/easy-todo][xwl/easy-todo]]                           |
 | ebm                          | [[https://github.com/carrl/ebm][carrl/ebm]]                               |
@@ -217,6 +222,7 @@ please first make sure they meet the minimal requirements.
 | fs-mode                      | [[https://github.com/suzp1984/fs-mode][suzp1984/fs-mode]]                        |
 | fscroll                      | [[https://github.com/davep/fscroll.el][davep/fscroll.el]]                        |
 | fullscreen-mode              | [[https://github.com/ryantm/fullscreen-mode][ryantm/fullscreen-mode]]                  |
+| fuz-bin                      | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        |
 | fuzzy-find-in-project        | [[https://github.com/justinweiss/fuzzy-find-in-project][justinweiss/fuzzy-find-in-project]]       |
 | fuzzyjump                    | [[https://github.com/tomoya/fuzzyjump.el][tomoya/fuzzyjump.el]]                     |
 | ga                           | [[https://github.com/xwl/ga][xwl/ga]]                                  |
@@ -516,6 +522,7 @@ please first make sure they meet the minimal requirements.
 | stickies                     | [[https://github.com/tkosaka/emacs-lisp-stickies][tkosaka/emacs-lisp-stickies]]             |
 | straight                     | [[https://github.com/raxod502/straight.el][raxod502/straight.el]]                    |
 | string-template              | [[https://github.com/renard/string-template-el][renard/string-template-el]]               |
+| sublime-fuzzy                | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  |
 | sunrise-commander            | [[https://github.com/escherdragon/sunrise-commander][escherdragon/sunrise-commander]]          |
 | swallow-window               | [[https://github.com/pd/swallow-window.el][pd/swallow-window.el]]                    |
 | swarmhacker                  | [[https://github.com/nicferrier/emacs-swarmhacker][nicferrier/emacs-swarmhacker]]            |
@@ -604,9 +611,8 @@ please first make sure they meet the minimal requirements.
             (epkgs 'name 'epkg-gitlab-package)))
 #+END_SRC
 #+RESULTS: missing-gitlab
-| Package (4)                | Link                                 |
+| Package (3)                | Link                                 |
 |----------------------------+--------------------------------------|
-| boxy-headlines             | [[https://gitlab.com/tygrdev/boxy-headlines][tygrdev/boxy-headlines]]               |
 | org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]] |
 | org-mac-link               | [[https://gitlab.com/aimebertrand/org-mac-link][aimebertrand/org-mac-link]]            |
 | ox-rss                     | [[https://gitlab.com/nsavage/ox-rss][nsavage/ox-rss]]                       |
