@@ -81,11 +81,11 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   285 |       |
+| gnu-elpa  |  138 |    138 |       |       |   287 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4960 |   4960 |       |       |       |  4727 |
+| github    | 4961 |   4961 |       |       |       |  4727 |
 | gitlab    |  174 |    174 |       |       |       |   165 |
-| sourcehut |   35 |     35 |       |       |       |       |
+| sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1443 |        |  1443 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8153 |   6260 |  1443 |   467 |   301 |  5022 |
+| total     | 8155 |   6262 |  1443 |   467 |   303 |  5022 |
 
 * Emacs
 ** Prefer elpa
@@ -200,7 +200,7 @@
 | package-fixes    | external |
 | shell-quasiquote | external |
 | systemd          | external |
-| sketch-mode      | external |
+| comint-mime      | external |
 
 ** Shelved
 #+NAME: gelpa-shelved
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (147)              | Class     | Gelpa    | Link                                      |
+| Package (149)              | Class     | Gelpa    | Link                                      |
 |----------------------------+-----------+----------+-------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                        |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                             |
@@ -272,10 +272,12 @@
 | bug-hunter                 | github    | external | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                |
 | cobol-mode                 | git       | external |                                           |
 | coffee-mode                | github    | external | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                       |
+| comint-mime                | github    | external | [[https://github.com/astoff/comint-mime][astoff/comint-mime]]                        |
 | compact-docstrings         | github    | external | [[https://github.com/cpitclaudel/compact-docstrings][cpitclaudel/compact-docstrings]]            |
 | company                    | github    | external | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                 |
 | company-math               | github    | external | [[https://github.com/vspinu/company-math][vspinu/company-math]]                       |
 | company-statistics         | github    | external | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]           |
+| compat                     | sourcehut | external | [[https://git.sr.ht/~pkal/compat][pkal/compat]]                               |
 | consult                    | github    | external | [[https://github.com/minad/consult][minad/consult]]                             |
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]       |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                               |
