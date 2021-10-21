@@ -53,6 +53,13 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
+| Package (2) | Class  | Feature  | Reason                |
+|-------------+--------+----------+-----------------------|
+| company     | github | bbdb-com | provided by test file |
+| org-ref     | github | org-test | provided by test file |
+
+I currently don't have the energy to ask for conflicts to be resolved
+that only affect tests.
 
 * Drop required features
 #+NAME: required-drop
@@ -113,6 +120,7 @@
 | lacarte                         | wiki     | subr-21                  | backward compatibility                              |
 | lilypond                        | gnu      | ilisp                    | only required by a single undocumented command      |
 | lispxmp                         | github   | newxmp                   | pending: newxmp has not been released yet (email)   |
+| lispy                           | github   | clojure-semantic         | testing only                                        |
 | lispy                           | github   | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                           |
 | load-theme-buffer-local         | github   | color-theme              | backward compatibility                              |
 | markchars                       | gnu-elpa | idn                      | shelved soft                                        |
@@ -184,6 +192,8 @@
 | w3                              | gnu-elpa | xpm-button               | XEmacs compatibility                                |
 | w3m                             | github   | rfc6068                  | forward compatibility (Emacs 28)                    |
 | wanderlust                      | github   | spamfilter               | shelved soft                                        |
+| wanderlust                      | github   | x-face-mule              | XEmacs compatibility                                |
+| wanderlust                      | github   | x-face-xmas              | XEmacs compatibility                                |
 | yatex                           | hg       | hilit19                  | backward compatibility                              |
 
 * Patched packages
