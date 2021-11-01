@@ -81,10 +81,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   289 |       |
+| gnu-elpa  |  138 |    138 |       |       |   291 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4967 |   4967 |       |       |       |  4728 |
-| gitlab    |  176 |    176 |       |       |       |   167 |
+| github    | 4974 |   4974 |       |       |       |  4735 |
+| gitlab    |  177 |    177 |       |       |       |   168 |
 | sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1443 |        |  1443 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8165 |   6272 |  1443 |   467 |   305 |  5026 |
+| total     | 8173 |   6280 |  1443 |   467 |   307 |  5034 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (151)              | Class     | Gelpa    | Link                                          |
+| Package (152)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -302,6 +302,7 @@
 | eglot                      | github    | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                              |
 | eldoc-eval                 | github    | external | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                   |
 | electric-spacing           | github    | external | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                          |
+| embark                     | github    | external | [[https://github.com/oantolin/embark][oantolin/embark]]                               |
 | emms                       | gnu       | external | [[http://www.gnu.org/software/emms][gnu:emms]]                                      |
 | engrave-faces              | github    | external | [[https://github.com/tecosaur/engrave-faces][tecosaur/engrave-faces]]                        |
 | enwc                       | hg        | external | [[https://savannah.nongnu.org/p/enwc]]            |
