@@ -249,6 +249,23 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | yascroll             | ✔ | ✔ |
 | zoom-window          | ✔ | ✔ |
 
+* Revived using the orphanage
+
+The upstream has become unresponsive and a volunteer now maintains a
+fork under the umbrella of the orphanage.  I believe there are a few
+more packages in this category than listed below, but for a long time
+we did not track this as a separate reason for a package to be in the
+orphanage.
+
+#+NAME: revived
+#+BEGIN_SRC emacs-lisp
+  (emir--list-orphans "revived using fork")
+#+END_SRC
+#+RESULTS: revived
+| Package (1) | E      | M |
+|-------------+--------+---|
+| ox-pandoc   | github | ✔ |
+
 * Other
 #+NAME: rip
 #+BEGIN_SRC emacs-lisp
