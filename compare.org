@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   293 |       |
+| gnu-elpa  |  138 |    138 |       |       |   294 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4984 |   4984 |       |       |       |  4746 |
+| github    | 4990 |   4990 |       |       |       |  4752 |
 | gitlab    |  178 |    178 |       |       |       |   168 |
-| sourcehut |   36 |     36 |       |       |       |       |
+| sourcehut |   37 |     37 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   88 |     88 |       |       |       |   118 |
+| git       |   90 |     90 |       |       |       |   120 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1448 |        |  1448 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8189 |   6291 |  1448 |   467 |   309 |  5046 |
+| total     | 8198 |   6300 |  1448 |   467 |   310 |  5054 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (154)              | Class     | Gelpa    | Link                                          |
+| Package (155)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -353,6 +353,7 @@
 | on-screen                  | github    | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]                |
 | org                        | gnu       | external | [[https://git.savannah.gnu.org/cgit/org.git]]     |
 | org-real                   | gitlab    | external | [[https://gitlab.com/tygrdev/org-real][tygrdev/org-real]]                              |
+| org-transclusion           | github    | external | [[https://github.com/nobiot/org-transclusion][nobiot/org-transclusion]]                       |
 | pabbrev                    | github    | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                              |
 | parsec                     | github    | external | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                         |
 | pinentry                   | github    | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                              |
@@ -565,7 +566,6 @@
 | embark                  | avy-embark-collect                | github    |
 | embark                  | embark-consult                    | github    |
 | espotify                | consult-spotify                   | git       |
-| espotify                | ivy-spotify                       | git       |
 | esqlite                 | esqlite-helm                      | github    |
 | evil                    | evil-test-helpers                 | github    |
 | ewal                    | ewal-doom-themes                  | github    |
@@ -738,13 +738,13 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (8)         | Mirror                                   | Melpa                                                |
-|---------------------+------------------------------------------+------------------------------------------------------|
-| 0x0                 | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                                 |
-| autocrypt           | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt                    |
-| clang-capf          | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf                   |
-| face-shift          | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift                   |
-| idle-highlight-mode | [[https://github.com/nonsequitur/idle-highlight-mode][nonsequitur/idle-highlight-mode]]          | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]                 |
-| insert-kaomoji      | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji               |
-| ox-pandoc           | [[https://github.com/kawabata/ox-pandoc][kawabata/ox-pandoc]]                       | [[https://github.com/emacsorphanage/ox-pandoc][emacsorphanage/ox-pandoc]]                             |
-| visual-fill-column  | [[https://github.com/joostkremers/visual-fill-column][joostkremers/visual-fill-column]]          | https://codeberg.org/joostkremers/visual-fill-column |
+| Package (8)         | Mirror                                   | Melpa                                                    |
+|---------------------+------------------------------------------+----------------------------------------------------------|
+| 0x0                 | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                                     |
+| autocrypt           | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt                        |
+| clang-capf          | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf                       |
+| face-shift          | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift                       |
+| idle-highlight-mode | [[https://github.com/nonsequitur/idle-highlight-mode][nonsequitur/idle-highlight-mode]]          | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]                     |
+| insert-kaomoji      | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji                   |
+| ox-pandoc           | [[https://github.com/kawabata/ox-pandoc][kawabata/ox-pandoc]]                       | [[https://github.com/emacsorphanage/ox-pandoc][emacsorphanage/ox-pandoc]]                                 |
+| visual-fill-column  | [[https://github.com/joostkremers/visual-fill-column][joostkremers/visual-fill-column]]          | https://codeberg.org/joostkremers/visual-fill-column.git |

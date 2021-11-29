@@ -64,7 +64,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (85)                    | Class    | Feature                  | Reason                                              |
+| Package (84)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -149,7 +149,6 @@
 | pinot                           | github   | anything-config          | anything                                            |
 | plsense                         | github   | perl-completion          | anything                                            |
 | project-explorer                | github   | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]              |
-| proof-general                   | github   | proof-x-symbol           | only required by a single deprecated library        |
 | prosjekt                        | github   | anything                 | anything                                            |
 | python-mode                     | gitlab   | org-loaddefs             | generated external file                             |
 | python-mode                     | gitlab   | py-bug-numbered-tests    | testing only                                        |
