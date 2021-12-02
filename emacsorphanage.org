@@ -262,9 +262,9 @@ orphanage.
   (emir--list-orphans "revived using fork")
 #+END_SRC
 #+RESULTS: revived
-| Package (1) | E      | M |
-|-------------+--------+---|
-| ox-pandoc   | github | ✔ |
+| Package (1) | E | M |
+|-------------+---+---|
+| ox-pandoc   | ✔ | ✔ |
 
 * Other
 #+NAME: rip

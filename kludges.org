@@ -196,7 +196,7 @@
                :order-by [(asc name)]]))
 #+END_SRC
 #+RESULTS: patched
-| Package (17)           | Class     |
+| Package (16)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | emacspeak              | github    |
@@ -209,7 +209,6 @@
 | org-contrib            | sourcehut |
 | projectile-trailblazer | github    |
 | projmake-mode          | github    |
-| queue                  | gnu-elpa  |
 | semi                   | github    |
 | slime                  | github    |
 | tenv                   | github    |

@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   294 |       |
+| gnu-elpa  |  138 |    138 |       |       |   295 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4991 |   4991 |       |       |       |  4752 |
-| gitlab    |  178 |    178 |       |       |       |   168 |
-| sourcehut |   37 |     37 |       |       |       |       |
+| github    | 4988 |   4988 |       |       |       |  4752 |
+| gitlab    |  180 |    180 |       |       |       |   168 |
+| sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   89 |     89 |       |       |       |   120 |
+| git       |   90 |     90 |       |       |       |   120 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -98,10 +98,10 @@
 | hg        |   16 |     16 |       |       |       |    14 |
 | file      |   54 |     54 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  134 |    134 |       |       |       |       |
+| orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1448 |        |  1448 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8198 |   6300 |  1448 |   467 |   310 |  5054 |
+| total     | 8198 |   6300 |  1448 |   467 |   311 |  5054 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (155)              | Class     | Gelpa    | Link                                          |
+| Package (156)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -356,6 +356,7 @@
 | org-transclusion           | github    | external | [[https://github.com/nobiot/org-transclusion][nobiot/org-transclusion]]                       |
 | pabbrev                    | github    | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                              |
 | parsec                     | github    | external | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                         |
+| parser-generator           | github    | external | [[https://github.com/cjohansson/emacs-parser-generator][cjohansson/emacs-parser-generator]]             |
 | pinentry                   | github    | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                              |
 | posframe                   | github    | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                              |
 | pyim                       | github    | external | [[https://github.com/tumashu/pyim][tumashu/pyim]]                                  |
@@ -741,13 +742,3 @@
                 :order-by [(asc packages:name)]])))
 #+END_SRC
 #+RESULTS: melpa-diverging-repositories
-| Package (8)         | Mirror                                   | Melpa                                                    |
-|---------------------+------------------------------------------+----------------------------------------------------------|
-| 0x0                 | [[https://git.sr.ht/~zge/nullpointer-emacs]] | [[https://gitlab.com/willvaughn/emacs-0x0][willvaughn/emacs-0x0]]                                     |
-| autocrypt           | [[https://git.sr.ht/~zge/autocrypt]]         | https://git.sr.ht/~pkal/autocrypt                        |
-| clang-capf          | [[https://git.sr.ht/~zge/clang-capf]]        | https://git.sr.ht/~pkal/clang-capf                       |
-| face-shift          | [[https://git.sr.ht/~zge/face-shift]]        | https://git.sr.ht/~pkal/face-shift                       |
-| idle-highlight-mode | [[https://github.com/nonsequitur/idle-highlight-mode][nonsequitur/idle-highlight-mode]]          | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]                     |
-| insert-kaomoji      | [[https://git.sr.ht/~zge/kaomoji]]           | https://git.sr.ht/~pkal/insert-kaomoji                   |
-| ox-pandoc           | [[https://github.com/kawabata/ox-pandoc][kawabata/ox-pandoc]]                       | [[https://github.com/emacsorphanage/ox-pandoc][emacsorphanage/ox-pandoc]]                                 |
-| visual-fill-column  | [[https://github.com/joostkremers/visual-fill-column][joostkremers/visual-fill-column]]          | https://codeberg.org/joostkremers/visual-fill-column.git |
