@@ -83,13 +83,13 @@
 | builtin   |  466 |     16 |       |   467 |    16 |       |
 | gnu-elpa  |  138 |    138 |       |       |   295 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4991 |   4991 |       |       |       |  4754 |
+| github    | 4997 |   4997 |       |       |       |  4760 |
 | gitlab    |  182 |    182 |       |       |       |   170 |
 | sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   90 |     90 |       |       |       |   120 |
+| git       |   90 |     90 |       |       |       |   124 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1449 |        |  1449 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8203 |   6304 |  1449 |   467 |   311 |  5058 |
+| total     | 8209 |   6310 |  1449 |   467 |   311 |  5068 |
 
 * Emacs
 ** Prefer elpa
@@ -503,7 +503,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (122)   | Secondary package                 | Class     |
+| Primary package (123)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -560,6 +560,10 @@
 | dylan                   | dime                              | github    |
 | eclim                   | ac-emacs-eclim                    | github    |
 | eclim                   | company-emacs-eclim               | github    |
+| el-secretario           | el-secretario-elfeed              | sourcehut |
+| el-secretario           | el-secretario-mu4e                | sourcehut |
+| el-secretario           | el-secretario-notmuch             | sourcehut |
+| el-secretario           | el-secretario-org                 | sourcehut |
 | elfeed                  | elfeed-web                        | github    |
 | emacsql                 | emacsql-mysql                     | github    |
 | emacsql                 | emacsql-psql                      | github    |
