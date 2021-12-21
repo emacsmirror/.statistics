@@ -64,7 +64,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: required-drop
-| Package (84)                    | Class    | Feature                  | Reason                                              |
+| Package (85)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -102,6 +102,7 @@
 | folding                         | github   | mode-motion              | XEmacs compatibility                                |
 | frontside-javascript            | github   | company-lsp              | pending [[https://github.com/melpa/melpa/pull/7403][#7403]]                                       |
 | fstar-mode                      | github   | replace                  | replace.el doesn't provide feature in Emacs < 26    |
+| gradle                          | github   | project-root             | shelved soft                                        |
 | help+                           | wiki     | info+20                  | backward compatibility                              |
 | hyperbole                       | gnu      | efs                      | XEmacs compatibility                                |
 | hyperbole                       | gnu      | id-menubars              | unreleased, author says will be released eventually |

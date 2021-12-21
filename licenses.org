@@ -62,12 +62,12 @@
 #+RESULTS: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4213 |      67 |
-| GPL-2.0-or-later  |  1161 |      18 |
-| MIT               |   355 |       6 |
+| GPL-3.0-or-later  |  4212 |      67 |
+| GPL-2.0-or-later  |  1160 |      18 |
+| MIT               |   354 |       6 |
 | GPL-3.0-only      |   173 |       3 |
 | BSD-2-Clause      |    84 |       1 |
-| BSD-3-Clause      |    64 |       1 |
+| BSD-3-Clause      |    65 |       1 |
 | Apache-2.0        |    52 |       1 |
 | WTFPL             |    36 |       1 |
 | public-domain     |    35 |       1 |
@@ -96,9 +96,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5576 |      88 |
+| total GNU         |  5574 |      88 |
 |-------------------+-------+---------|
-| total             |  6310 |     100 |
+| total             |  6308 |     100 |
 
 ** Packages with unknown licenses
 #+NAME: mirror-unknown
@@ -154,13 +154,13 @@
 #+RESULTS: attic-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-2.0-or-later  |   828 |      57 |
-| GPL-3.0-or-later  |   352 |      24 |
+| GPL-2.0-or-later  |   829 |      57 |
+| GPL-3.0-or-later  |   353 |      24 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    40 |       3 |
 | GPL-3.0-only      |    28 |       2 |
-| MIT               |    20 |       1 |
+| MIT               |    21 |       1 |
 | GPL-1.0-or-later  |    14 |       1 |
 | ((custom))        |     9 |       1 |
 | BSD-3-Clause      |     8 |       1 |
@@ -181,9 +181,9 @@
 | LGPL-2.1-only     |     1 |       0 |
 | LGPL-2.1-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1334 |      92 |
+| total GNU         |  1336 |      92 |
 |-------------------+-------+---------|
-| total             |  1449 |     100 |
+| total             |  1452 |     100 |
 
 ** Packages with unknown licenses
 #+NAME: attic-unknown

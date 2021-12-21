@@ -73,10 +73,11 @@ Don't forget to update ~emir--archived-packages~ occasionally.
     (cl-sort
      (-keep (lambda (name)
               (and (member name emir--archived-packages)
+                   (not (assoc name emir-kept-packages))
                    (list name
                          (epkg-org-link name)
-                         (and (melpa-get name) "✓")
-                         ;; (and (melpa-get name) (oref (epkg name) downloads))
+                         ;; (and (melpa-get name) "✓")
+                         (and (melpa-get name) (oref (epkg name) downloads))
                          (mapconcat (pcase-lambda (`(,name . ,_features)) name)
                                     (epkg-reverse-dependencies name) " "))))
             (epkgs 'name 'epkg-mirrored-package--eieio-childp))
@@ -90,9 +91,10 @@ Don't forget to update ~emir--moved-packages~ occasionally.
 #+BEGIN_SRC emacs-lisp
   (epkg-with-org-header ("Package" "Old repository" "New repository" "M")
     (mapcar (pcase-lambda (`(,name ,old ,new))
-              (list name old new
-                    ;;(and (melpa-get name) (oref (epkg name) downloads))))
-                    (and (melpa-get name) "✓")))
+              (and (epkg name)
+                   (list name old new
+                         ;;(and (melpa-get name) (oref (epkg name) downloads))))
+                         (and (melpa-get name) "✓"))))
             (cl-sort (copy-sequence emir--moved-packages)
                      #'string< :key #'cadr)))
 #+END_SRC
