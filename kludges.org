@@ -96,6 +96,7 @@
 | emms-player-mpv-jp-radios       | github   | anything                 | anything                                            |
 | erlang                          | github   | tags                     | backward compatibility                              |
 | es-lib                          | github   | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]               |
+| evil-collection                 | github   | emoji                    | forward compatibility                               |
 | evil-collection                 | github   | image+                   | shelved soft [[https://github.com/emacs-evil/evil-collection/issues/399][#399]]                                   |
 | evil-collection                 | github   | shortdoc                 | forward compatibility (Emacs 28)                    |
 | extend-dnd                      | github   | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
@@ -134,6 +135,7 @@
 | mhc                             | github   | poe                      | Mule compatibility                                  |
 | molokai-theme                   | github   | color-theme              | backward compatibility                              |
 | mu4e-views                      | github   | mu4e-utils               | backward compatibility                              |
+| mu4e-views                      | github   | mu4e-view-gnus           | backward compatibility                              |
 | mu4e-views                      | github   | mu4e-view-old            | backward compatibility                              |
 | navi2ch                         | github   | bitmap                   | XEmacs compatibility                                |
 | navi2ch                         | github   | spamfilter               | shelved soft                                        |
