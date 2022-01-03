@@ -81,10 +81,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   295 |       |
+| gnu-elpa  |  138 |    138 |       |       |   298 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 4997 |   4997 |       |       |       |  4761 |
-| gitlab    |  182 |    182 |       |       |       |   170 |
+| github    | 5003 |   5003 |       |       |       |  4767 |
+| gitlab    |  185 |    185 |       |       |       |   171 |
 | sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1452 |        |  1452 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8212 |   6310 |  1452 |   467 |   311 |  5069 |
+| total     | 8221 |   6319 |  1452 |   467 |   314 |  5076 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (156)              | Class     | Gelpa    | Link                                          |
+| Package (159)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -265,6 +265,7 @@
 | avy                        | github    | external | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                   |
 | bbdb                       | nongnu    | external | [[http://bbdb.sourceforge.net][nongnu:bbdb]]                                   |
 | beacon                     | github    | external | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                              |
+| blist                      | gitlab    | external | [[https://gitlab.com/mmemmew/blist][mmemmew/blist]]                                 |
 | bnf-mode                   | github    | external | [[https://github.com/sergeyklay/bnf-mode][sergeyklay/bnf-mode]]                           |
 | boxy                       | gitlab    | external | [[https://gitlab.com/tygrdev/boxy][tygrdev/boxy]]                                  |
 | boxy-headings              | gitlab    | external | [[https://gitlab.com/tygrdev/boxy-headings][tygrdev/boxy-headings]]                         |
@@ -323,6 +324,7 @@
 | hook-helpers               | nongnu    | external | [[https://savannah.nongnu.org/projects/hook-helpers-el][nongnu:hook-helpers]]                           |
 | hydra                      | github    | external | [[https://github.com/abo-abo/hydra][abo-abo/hydra]]                                 |
 | hyperbole                  | gnu       | external | [[http://www.gnu.org/software/hyperbole][gnu:hyperbole]]                                 |
+| ilist                      | gitlab    | external | [[https://gitlab.com/mmemmew/ilist][mmemmew/ilist]]                                 |
 | isearch-mb                 | github    | external | [[https://github.com/astoff/isearch-mb][astoff/isearch-mb]]                             |
 | ivy                        | github    | external | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                |
 | ivy-explorer               | github    | external | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                          |
@@ -382,6 +384,7 @@
 | sql-indent                 | github    | external | [[https://github.com/bsvingen/sql-indent][bsvingen/sql-indent]]                           |
 | ssh-deploy                 | github    | external | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]                   |
 | svg-lib                    | github    | external | [[https://github.com/rougier/svg-lib][rougier/svg-lib]]                               |
+| svg-tag-mode               | github    | external | [[https://github.com/rougier/svg-tag-mode][rougier/svg-tag-mode]]                          |
 | system-packages            | gitlab    | external | [[https://gitlab.com/jabranham/system-packages][jabranham/system-packages]]                     |
 | systemd                    | github    | external | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                        |
 | taxy                       | github    | external | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                             |
@@ -503,7 +506,7 @@
                           (asc melpa-recipes:name)]]))
 #+END_SRC
 #+RESULTS: secondary-packages
-| Primary package (123)   | Secondary package                 | Class     |
+| Primary package (124)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -685,6 +688,7 @@
 | stan-mode               | stan-snippets                     | github    |
 | term-manager            | term-projectile                   | github    |
 | tern                    | tern-auto-complete                | github    |
+| tree-edit               | evil-tree-edit                    | github    |
 | tree-sitter             | tsc                               | github    |
 | treemacs                | treemacs-all-the-icons            | github    |
 | treemacs                | treemacs-evil                     | github    |
