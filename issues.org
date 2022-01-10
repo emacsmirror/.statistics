@@ -32,12 +32,6 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+END_SRC
 #+RESULTS: conflict
-| Feature (1)  | Package            | Shelved |
-|--------------+--------------------+---------|
-| matrix-theme | color-theme-modern |         |
-| matrix-theme | matrix-theme       |         |
-
-- matrix-theme: https://github.com/melpa/melpa/pull/7832
 
 * Packages with unsatisfied dependencies
 #+NAME: unsatisfied
@@ -64,11 +58,6 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+END_SRC
 #+RESULTS: unsatisfied
-| Package (1)    | Class  | Feature      | Provider |
-|----------------+--------+--------------+----------|
-| clj-decompiler | github | cider-compat |          |
-
-- clj-decompiler: https://github.com/bsless/clj-decompiler.el/issues/1
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.

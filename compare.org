@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   298 |       |
+| gnu-elpa  |  138 |    138 |       |       |   300 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5003 |   5003 |       |       |       |  4767 |
+| github    | 5004 |   5004 |       |       |       |  4767 |
 | gitlab    |  185 |    185 |       |       |       |   171 |
 | sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   90 |     90 |       |       |       |   124 |
+| git       |   91 |     91 |       |       |       |   125 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1452 |        |  1452 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8221 |   6319 |  1452 |   467 |   314 |  5076 |
+| total     | 8223 |   6321 |  1452 |   467 |   316 |  5077 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (159)              | Class     | Gelpa    | Link                                          |
+| Package (161)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -271,6 +271,7 @@
 | boxy-headings              | gitlab    | external | [[https://gitlab.com/tygrdev/boxy-headings][tygrdev/boxy-headings]]                         |
 | buffer-expose              | github    | external | [[https://github.com/clemera/buffer-expose][clemera/buffer-expose]]                         |
 | bug-hunter                 | github    | external | [[https://github.com/Malabarba/elisp-bug-hunter][Malabarba/elisp-bug-hunter]]                    |
+| cape                       | github    | external | [[https://github.com/minad/cape][minad/cape]]                                    |
 | capf-autosuggest           | git       | external | [[https://repo.or.cz/emacs-capf-autosuggest.git]] |
 | cobol-mode                 | git       | external |                                               |
 | coffee-mode                | github    | external | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                           |
@@ -390,6 +391,7 @@
 | taxy                       | github    | external | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                             |
 | taxy-magit-section         | github    | external | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                             |
 | temp-buffer-browse         | github    | external | [[https://github.com/leoliu/temp-buffer-browse][leoliu/temp-buffer-browse]]                     |
+| tempel                     | github    | external | [[https://github.com/minad/tempel][minad/tempel]]                                  |
 | test-simple                | github    | external | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                       |
 | tiny                       | github    | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                  |
 | tramp                      | gnu       | external | [[https://savannah.gnu.org/projects/tramp][gnu:tramp]]                                     |

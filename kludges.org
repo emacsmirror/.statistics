@@ -53,6 +53,13 @@
                :order-by [(asc package) (asc feature)]]))
 #+END_SRC
 #+RESULTS: provided-drop
+| Package (5)  | Class  | Feature              | Reason                |
+|--------------+--------+----------------------+-----------------------|
+| clojure-mode | github | test-helper          | conflicting test file |
+| elixir-mode  | github | test-helper          | conflicting test file |
+| gumshoe      | github | targets/install-deps | conflicting test file |
+| ivy          | github | targets/install-deps | conflicting test file |
+| w3m          | github | mime-view            | bogus provide form    |
 
 * Drop required features
 #+NAME: required-drop
