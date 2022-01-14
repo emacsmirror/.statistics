@@ -81,7 +81,7 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   300 |       |
+| gnu-elpa  |  138 |    138 |       |       |   301 |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | github    | 5004 |   5004 |       |       |       |  4767 |
 | gitlab    |  185 |    185 |       |       |       |   171 |
@@ -101,7 +101,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1452 |        |  1452 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8223 |   6321 |  1452 |   467 |   316 |  5077 |
+| total     | 8223 |   6321 |  1452 |   467 |   317 |  5077 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (161)              | Class     | Gelpa    | Link                                          |
+| Package (162)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -354,6 +354,7 @@
 | ob-haxe                    | github    | external | [[https://github.com/ianxm/ob-haxe.el][ianxm/ob-haxe.el]]                              |
 | objed                      | github    | external | [[https://github.com/clemera/objed][clemera/objed]]                                 |
 | on-screen                  | github    | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]                |
+| orderless                  | github    | external | [[https://github.com/oantolin/orderless][oantolin/orderless]]                            |
 | org                        | gnu       | external | [[https://git.savannah.gnu.org/cgit/org.git]]     |
 | org-real                   | gitlab    | external | [[https://gitlab.com/tygrdev/org-real][tygrdev/org-real]]                              |
 | org-transclusion           | github    | external | [[https://github.com/nobiot/org-transclusion][nobiot/org-transclusion]]                       |
