@@ -93,6 +93,32 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                      #'string< :key #'cadr)))
 #+END_SRC
 #+RESULTS: github-moved
+| Package (24)         | Old repository                   | New repository | M |
+|----------------------+----------------------------------+----------------+---|
+| amread-mode          | stardiviner/amread-mode          |                | ✓ |
+| arduino-mode         | stardiviner/arduino-mode         |                | ✓ |
+| company-nginx        | stardiviner/company-nginx        |                | ✓ |
+| edebug-inline-result | stardiviner/edebug-inline-result |                | ✓ |
+| eldoc-overlay        | stardiviner/eldoc-overlay        |                | ✓ |
+| rainbow-fart         | stardiviner/emacs-rainbow-fart   |                | ✓ |
+| goldendict           | stardiviner/goldendict.el        |                | ✓ |
+| inline-docs          | stardiviner/inline-docs.el       |                | ✓ |
+| kiwix                | stardiviner/kiwix.el             |                | ✓ |
+| major-mode-icons     | stardiviner/major-mode-icons     |                | ✓ |
+| mu4e-marker-icons    | stardiviner/mu4e-marker-icons    |                | ✓ |
+| ob-php               | stardiviner/ob-php               |                | ✓ |
+| ob-redis             | stardiviner/ob-redis             |                | ✓ |
+| ob-sclang            | stardiviner/ob-sclang            |                |   |
+| ob-smiles            | stardiviner/ob-smiles            |                | ✓ |
+| ob-spice             | stardiviner/ob-spice             |                | ✓ |
+| org-kindle           | stardiviner/org-kindle           |                | ✓ |
+| org-link-beautify    | stardiviner/org-link-beautify    |                | ✓ |
+| org-seek             | stardiviner/org-seek.el          |                | ✓ |
+| org-tag-beautify     | stardiviner/org-tag-beautify     |                | ✓ |
+| proxy-mode           | stardiviner/proxy-mode           |                | ✓ |
+| sdcv                 | stardiviner/sdcv.el              |                | ✓ |
+| smiles-mode          | stardiviner/smiles-mode          |                | ✓ |
+| spice-mode           | stardiviner/spice-mode           |                | ✓ |
 
 * Missing library summary
 #+NAME: missing-summary
