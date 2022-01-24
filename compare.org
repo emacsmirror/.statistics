@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   301 |       |
+| gnu-elpa  |  138 |    138 |       |       |   302 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5008 |   5008 |       |       |       |  4772 |
-| gitlab    |  186 |    186 |       |       |       |   172 |
+| github    | 5017 |   5017 |       |       |       |  4781 |
+| gitlab    |  188 |    188 |       |       |       |   174 |
 | sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   92 |     92 |       |       |       |   126 |
+| git       |   92 |     92 |       |       |       |   127 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1452 |        |  1452 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8229 |   6327 |  1452 |   467 |   317 |  5084 |
+| total     | 8240 |   6338 |  1452 |   467 |   318 |  5096 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+END_SRC
 #+RESULTS: gelpa-prefer-upstream
-| Package (162)              | Class     | Gelpa    | Link                                          |
+| Package (163)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -297,6 +297,7 @@
 | diffview                   | github    | external | [[https://github.com/mgalgs/diffview-mode][mgalgs/diffview-mode]]                          |
 | dired-git-info             | github    | external | [[https://github.com/clemera/dired-git-info][clemera/dired-git-info]]                        |
 | disk-usage                 | gitlab    | external | [[https://gitlab.com/ambrevar/emacs-disk-usage][ambrevar/emacs-disk-usage]]                     |
+| dtache                     | gitlab    | external | [[https://gitlab.com/niklaseklund/dtache][niklaseklund/dtache]]                           |
 | dts-mode                   | github    | external | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                              |
 | easy-escape                | github    | external | [[https://github.com/cpitclaudel/easy-escape][cpitclaudel/easy-escape]]                       |
 | easy-kill                  | github    | external | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                              |
@@ -530,6 +531,7 @@
 | calfw                   | calfw-org                         | github    |
 | cfn-mode                | flycheck-cfn                      | gitlab    |
 | chronometrist           | chronometrist-key-values          | git       |
+| chronometrist           | chronometrist-spark               | git       |
 | chumpy-windows          | spaces                            | github    |
 | chumpy-windows          | splitter                          | github    |
 | chumpy-windows          | window-jump                       | github    |
