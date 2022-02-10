@@ -1,15 +1,15 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Wiki
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Wiki
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Wiki packages required by non-wiki packages
-#+NAME: required-by-nonwiki
-#+BEGIN_SRC emacs-lisp
+#+name: required-by-nonwiki
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Dependee" "M" "Author" "Depender" "M" "Type" "Author")
     (mapcan
      (lambda (dependee)
@@ -27,8 +27,8 @@
                            ,(caar (oref depender-pkg authors)))))))
                (epkg-reverse-dependencies dependee)))
      (epkgs nil 'epkg-wiki-package-p)))
-#+END_SRC
-#+RESULTS: required-by-nonwiki
+#+end_src
+#+results: required-by-nonwiki
 | Dependee (12) | M | Author                        | Depender                      | M | Type | Author                                                           |
 |---------------+---+-------------------------------+-------------------------------+---+------+------------------------------------------------------------------|
 | bookmark+     |   | Drew Adams, Thierry Volpiatto | one-key                       |   | hard | Andy Stewart                                                     |
@@ -66,8 +66,8 @@
 - [[https://github.com/melpa/melpa/pull/5008#issuecomment-360103510][melpa#5008^1]]
 - [[https://github.com/melpa/melpa/pull/5008#issuecomment-360501258][melpa#5008^2]]
 
-#+NAME: all-wiki
-#+BEGIN_SRC emacs-lisp
+#+name: all-wiki
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Author" "Package")
     (cl-sort (mapcar (lambda (pkg)
 		       (list (or (caar (oref pkg maintainers))
@@ -76,8 +76,8 @@
 			     (oref pkg name)))
 		     (epkgs nil 'epkg-wiki-package-p))
 	     #'string< :key #'car))
-#+END_SRC
-#+RESULTS: all-wiki
+#+end_src
+#+results: all-wiki
 | Author (199)                                    | Package                        |
 |-------------------------------------------------+--------------------------------|
 |                                                 | ac-dabbrev                     |

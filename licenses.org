@@ -1,8 +1,8 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Licenses
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Licenses
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
 
   (defun emir--format-license-table (table)
@@ -44,13 +44,13 @@
                  :and (= class 'shelved)
                  :order-by [(asc name)]]
                 (apply #'vector licenses))))
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Emacsmirror
 ** Overview
-#+NAME: mirror-overview
-#+BEGIN_SRC emacs-lisp
+#+name: mirror-overview
+#+begin_src emacs-lisp
   (emir--format-license-table
    (epkg-sql [:select [license (funcall count *)] :as count
               :from packages
@@ -58,8 +58,8 @@
                           (not (= class 'shelved)))
               :group-by license
               :order-by [(desc count) (asc license)]]))
-#+END_SRC
-#+RESULTS: mirror-overview
+#+end_src
+#+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-3.0-or-later  |  4263 |      67 |
@@ -101,8 +101,8 @@
 | total             |  6347 |     100 |
 
 ** Packages with unknown licenses
-#+NAME: mirror-unknown
-#+BEGIN_SRC emacs-lisp
+#+name: mirror-unknown
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "License")
     (epkg-sql [:select [name class license] :from packages
                :where (and (or (isnull license)
@@ -110,8 +110,8 @@
                            (not (= class 'shelved)))
                :order-by [(asc name)]]
               ["COPYLOVE"]))
-#+END_SRC
-#+RESULTS: mirror-unknown
+#+end_src
+#+results: mirror-unknown
 | Package (3)    | Class  | License  |
 |----------------+--------+----------|
 | clhs           | gitlab |          |
@@ -122,8 +122,8 @@
 - nyan-prompt, password-vault: https://github.com/PuercoPop/password-vault/issues/4
 
 ** Unknown licenses
-#+NAME: mirror-unknown-licenses
-#+BEGIN_SRC emacs-lisp
+#+name: mirror-unknown-licenses
+#+begin_src emacs-lisp
   (epkg-with-org-header ("License")
     (cl-set-difference (delete '(nil)
                                (epkg-sql [:select :distinct [license]
@@ -132,8 +132,8 @@
                                           :order-by (asc license)]))
                        (mapcar #'list elx-spdx-license-identifiers)
                        :test #'equal))
-#+END_SRC
-#+RESULTS: mirror-unknown-licenses
+#+end_src
+#+results: mirror-unknown-licenses
 | License (3)   |
 |---------------|
 | COPYLOVE      |
@@ -142,16 +142,16 @@
 
 * Emacsattic
 ** Overview
-#+NAME: attic-overview
-#+BEGIN_SRC emacs-lisp
+#+name: attic-overview
+#+begin_src emacs-lisp
   (emir--format-license-table
    (epkg-sql [:select [license (funcall count *)] :as count
               :from packages
               :where (= class 'shelved)
               :group-by license
               :order-by count :desc]))
-#+END_SRC
-#+RESULTS: attic-overview
+#+end_src
+#+results: attic-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |   829 |      57 |
@@ -186,23 +186,23 @@
 | total             |  1452 |     100 |
 
 ** Packages with unknown licenses
-#+NAME: attic-unknown
-#+BEGIN_SRC emacs-lisp
+#+name: attic-unknown
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class")
     (epkg-sql [:select [name class] :from packages
                :where (isnull license)
                :and packages:class :in $v1
                :order-by [(asc name)]]
               [shelved])))
-#+END_SRC
-#+RESULTS: attic-unknown
+#+end_src
+#+results: attic-unknown
 
 ** Packages with custom licenses
-#+NAME: attic-custom
-#+BEGIN_SRC emacs-lisp
+#+name: attic-custom
+#+begin_src emacs-lisp
   (emir--insert-attic-packages-using-licenses "custom")
-#+END_SRC
-#+RESULTS: attic-custom
+#+end_src
+#+results: attic-custom
 | Package (9) | License |
 |-------------+---------|
 | epo         | custom  |
@@ -216,11 +216,11 @@
 | youwill     | custom  |
 
 ** Problematic licenses
-#+NAME: attic-problematic
-#+BEGIN_SRC emacs-lisp
+#+name: attic-problematic
+#+begin_src emacs-lisp
   (emir--insert-attic-packages-using-licenses "GPL" "GPL-2.0-only" "EPL")
-#+END_SRC
-#+RESULTS: attic-problematic
+#+end_src
+#+results: attic-problematic
 | Package (105)       | License      |
 |---------------------+--------------|
 | align-regexp        | GPL          |

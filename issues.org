@@ -1,15 +1,15 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Issues
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Issues
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Features provided by multiple packages
-#+NAME: conflict
-#+BEGIN_SRC emacs-lisp
+#+name: conflict
+#+begin_src emacs-lisp
   (let (alist)
     (dolist (name (epkgs 'name))
       (dolist (feature (epkg-sql [:select feature :from provided
@@ -30,12 +30,12 @@
                              (mapcar (lambda (elt) (list feature elt))
                                      (sort providers #'string<))))
                       (cl-sort alist #'string< :key #'car)))))
-#+END_SRC
-#+RESULTS: conflict
+#+end_src
+#+results: conflict
 
 * Packages with unsatisfied dependencies
-#+NAME: unsatisfied
-#+BEGIN_SRC emacs-lisp
+#+name: unsatisfied
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Feature" "Provider")
     (mapcan
      (pcase-lambda (`(,name ,class))
@@ -56,13 +56,13 @@
                    (list name class feature provider))
                  (cl-sort alist #'string< :key #'car))))
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
-#+END_SRC
-#+RESULTS: unsatisfied
+#+end_src
+#+results: unsatisfied
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
-#+NAME: archived
-#+BEGIN_SRC emacs-lisp
+#+name: archived
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Repository" "M" "Reverse Dependencies")
     (cl-sort
      (-keep (lambda (name)
@@ -76,13 +76,13 @@ Don't forget to update ~emir--archived-packages~ occasionally.
                                     (epkg-reverse-dependencies name) " "))))
             (epkgs 'name 'epkg-mirrored-package--eieio-childp))
      #'string< :key #'car))
-#+END_SRC
-#+RESULTS: archived
+#+end_src
+#+results: archived
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.
-#+NAME: github-moved
-#+BEGIN_SRC emacs-lisp
+#+name: github-moved
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Old repository" "New repository" "M")
     (mapcar (pcase-lambda (`(,name ,old ,new))
               (and (epkg name)
@@ -91,8 +91,8 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                          (and (melpa-get name) "✓"))))
             (cl-sort (copy-sequence emir--moved-packages)
                      #'string< :key #'cadr)))
-#+END_SRC
-#+RESULTS: github-moved
+#+end_src
+#+results: github-moved
 | Package (24)         | Old repository                   | New repository | M |
 |----------------------+----------------------------------+----------------+---|
 | amread-mode          | stardiviner/amread-mode          |                | ✓ |
@@ -123,8 +123,8 @@ Don't forget to update ~emir--moved-packages~ occasionally.
 - stardiviner: https://github.com/melpa/melpa/issues/7872
 
 * Missing library summary
-#+NAME: missing-summary
-#+BEGIN_SRC emacs-lisp
+#+name: missing-summary
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "M")
     (mapcar (pcase-lambda (`(,name ,class))
               (list name class
@@ -136,8 +136,8 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                                    (not (= class 'builtin))
                                    (not (= class 'shelved)))
                        :order-by [(asc name)]])))
-#+END_SRC
-#+RESULTS: missing-summary
+#+end_src
+#+results: missing-summary
 | Package (5)       | Class   | M |
 |-------------------+---------+---|
 | arc-dark-theme    | github  | ✓ |

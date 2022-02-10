@@ -1,15 +1,15 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Misc
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Misc
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Highest version
-#+NAME: highest-version
-#+BEGIN_SRC emacs-lisp
+#+name: highest-version
+#+begin_src emacs-lisp
   (epkg-with-org-header ("" "#" "%")
     (let ((zero 0)
           (one  0)
@@ -39,8 +39,8 @@
             (list 'odd   odd  (/ (* 100 odd)  all))
             (list 'none  none (/ (* 100 none) all))
             (list 'total all  (/ (* 100 all)  all)))))
-#+END_SRC
-#+RESULTS: highest-version
+#+end_src
+#+results: highest-version
 | (6)   |    # |   % |
 |-------+------+-----|
 | zero  | 1441 |  24 |

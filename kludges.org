@@ -1,22 +1,22 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Kludges
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Kludges
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Add provided features
-#+NAME: provided-join
-#+BEGIN_SRC emacs-lisp
+#+name: provided-join
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Feature" "Reason")
     (epkg-sql [:select [name class feature join]
                :from [packages provided]
                :where (and (= name package) (notnull join))
                :order-by [(asc package) (asc feature)]]))
-#+END_SRC
-#+RESULTS: provided-join
+#+end_src
+#+results: provided-join
 | Package (15) | Class     | Feature        | Reason                                    |
 |--------------+-----------+----------------+-------------------------------------------|
 | ddskk        | github    | skk-kanagaki   | inside directory containing .nosearch     |
@@ -44,15 +44,15 @@
 | vterm        | github    | vterm-module   | provided by module                        |
 
 * Drop provided features
-#+NAME: provided-drop
-#+BEGIN_SRC emacs-lisp
+#+name: provided-drop
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Feature" "Reason")
     (epkg-sql [:select [name class feature drop]
                :from [packages provided]
                :where (and (= name package) (notnull drop))
                :order-by [(asc package) (asc feature)]]))
-#+END_SRC
-#+RESULTS: provided-drop
+#+end_src
+#+results: provided-drop
 | Package (5)  | Class  | Feature              | Reason                |
 |--------------+--------+----------------------+-----------------------|
 | clojure-mode | github | test-helper          | conflicting test file |
@@ -62,15 +62,15 @@
 | w3m          | github | mime-view            | bogus provide form    |
 
 * Drop required features
-#+NAME: required-drop
-#+BEGIN_SRC emacs-lisp
+#+name: required-drop
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Feature" "Reason")
     (epkg-sql [:select [name class feature drop]
                :from [packages required]
                :where (and (= name package) (notnull drop))
                :order-by [(asc package) (asc feature)]]))
-#+END_SRC
-#+RESULTS: required-drop
+#+end_src
+#+results: required-drop
 | Package (85)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
@@ -196,15 +196,15 @@
 | yatex                           | hg       | hilit19                  | backward compatibility                              |
 
 * Patched packages
-#+NAME: patched
-#+BEGIN_SRC emacs-lisp
+#+name: patched
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class")
     (epkg-sql [:select [name class]
                :from packages
                :where (= patched 't)
                :order-by [(asc name)]]))
-#+END_SRC
-#+RESULTS: patched
+#+end_src
+#+results: patched
 | Package (16)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
@@ -229,8 +229,8 @@
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 
 * Filtered (minority) repositories
-#+NAME: filtered-minority
-#+BEGIN_SRC emacs-lisp
+#+name: filtered-minority
+#+begin_src emacs-lisp
   (epkg-with-org-header (3 "Package" "Reason" "M" "Url")
     (mapcar (pcase-lambda (`(,name ,args ,url))
               (list name
@@ -239,8 +239,8 @@
                     (and (melpa-get name) "✓")
                     url))
             (epkgs [name upstream-tree url] 'epkg-minority-package-p)))
-#+END_SRC
-#+RESULTS: filtered-minority
+#+end_src
+#+results: filtered-minority
 | Package (18)        | Reason           | M | Url                                          |
 |---------------------+------------------+---+----------------------------------------------|
 | pylint              | mostly non-elisp | ✓ | git@github.com:PyCQA/pylint.git              |
@@ -263,8 +263,8 @@
 | cmake-mode          | mostly non-elisp | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
 
 * Filtered (subtree) repositories
-#+NAME: filtered-subtree
-#+BEGIN_SRC emacs-lisp
+#+name: filtered-subtree
+#+begin_src emacs-lisp
   (epkg-with-org-header (3 "Package" "M" "Url")
     (mapcar (pcase-lambda (`(,name ,args ,url))
               (list name
@@ -273,8 +273,8 @@
                     (and (melpa-get name) "✓")
                     url))
             (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
-#+END_SRC
-#+RESULTS: filtered-subtree
+#+end_src
+#+results: filtered-subtree
 | Package (23)   | M | Url                                                                 |
 |----------------+---+---------------------------------------------------------------------|
 | agda2-mode     |   | git@github.com:agda/agda.git                                        |
@@ -302,8 +302,8 @@
 | zeitgeist      |   | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
 
 * Set main library
-#+NAME: no-mainlib
-#+BEGIN_SRC emacs-lisp
+#+name: no-mainlib
+#+begin_src emacs-lisp
   (epkg-with-org-header (4 "Package" "Class" "M" "Library" "Reason")
     (-keep (pcase-lambda (`(,name ,type ,library))
                (and (not (eq type 'core))
@@ -317,8 +317,8 @@
                       :order-by [(asc name)]]
                      (closql-where-class-in
                       'epkg-mirrored-package--eieio-childp))))
-#+END_SRC
-#+RESULTS: no-mainlib
+#+end_src
+#+results: no-mainlib
 | Package (20)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
 | chumpy-windows        | github   |   | window-jump.el                  | no primary entry point     |

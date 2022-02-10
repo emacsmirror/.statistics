@@ -1,10 +1,10 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Melpa
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Melpa
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Missing from Melpa
@@ -18,8 +18,8 @@ minimal requirements.
 Also see https://github.com/melpa/melpa/issues/7892.
 
 ** Github
-#+NAME: missing-github
-#+BEGIN_SRC emacs-lisp
+#+name: missing-github
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Modified" "Link" "Summary")
     (cl-sort
      (-keep (pcase-lambda (`(,name ,summary))
@@ -34,8 +34,8 @@ Also see https://github.com/melpa/melpa/issues/7892.
                          (and summary (string-replace "|" ";" summary)))))
             (epkgs [name summary] 'epkg-github-package))
      #'string> :key #'cadr))
-#+END_SRC
-#+RESULTS: missing-github
+#+end_src
+#+results: missing-github
 | Package (552)                |   Modified | Link                                    | Summary                                                                                     |
 |------------------------------+------------+-----------------------------------------+---------------------------------------------------------------------------------------------|
 | emacspeak                    | 2022-02-07 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                                                  |
@@ -592,15 +592,15 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | gitsum                       | 2008-08-09 | [[https://github.com/chneukirchen/gitsum][leahneukirchen/gitsum]]                   | Basic darcsum feelalike for Git                                                             |
 
 ** Gitlab
-#+NAME: missing-gitlab
-#+BEGIN_SRC emacs-lisp
+#+name: missing-gitlab
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
                  (not (gelpa-get it))
                  (list it (epkg-org-link it)))
             (epkgs 'name 'epkg-gitlab-package)))
-#+END_SRC
-#+RESULTS: missing-gitlab
+#+end_src
+#+results: missing-gitlab
 | Package (3)                | Link                                 |
 |----------------------------+--------------------------------------|
 | org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]] |
@@ -608,15 +608,15 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | ox-rss                     | [[https://gitlab.com/nsavage/ox-rss][nsavage/ox-rss]]                       |
 
 ** Git
-#+NAME: missing-git
-#+BEGIN_SRC emacs-lisp
+#+name: missing-git
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Link")
     (--keep (and (not (melpa-get it))
                  (not (gelpa-get it))
                  (list it (epkg-org-link it)))
 	    (epkgs 'name 'epkg-git-package)))
-#+END_SRC
-#+RESULTS: missing-git
+#+end_src
+#+results: missing-git
 | Package (7)   | Link                                       |
 |---------------+--------------------------------------------|
 | ebuild-mode   |                                            |

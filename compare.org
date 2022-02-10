@@ -1,15 +1,15 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Overview
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Overview
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Summary
-#+NAME: summary
-#+BEGIN_SRC emacs-lisp
+#+name: summary
+#+begin_src emacs-lisp
   (require 'finder-inf)
   (let* ((builtin (read (car (process-lines
                               emir-emacs-reference "-Q" "--batch" "--eval"
@@ -76,8 +76,8 @@
                                   (cdr it))
                              table)
                      '(0 0 0 0 0 0 0)))))
-#+END_SRC
-#+RESULTS: summary
+#+end_src
+#+results: summary
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
@@ -105,8 +105,8 @@
 
 * Emacs
 ** Prefer elpa
-#+NAME: builtin-prefer-elpa
-#+BEGIN_SRC emacs-lisp
+#+name: builtin-prefer-elpa
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class")
     (epkg-sql [:select :distinct [packages:name packages:class]
                :from [packages builtin-libraries]
@@ -114,8 +114,8 @@
                :and packages:class :in $v1
                :order-by [(asc packages:name)]]
               [gnu-elpa core]))
-#+END_SRC
-#+RESULTS: builtin-prefer-elpa
+#+end_src
+#+results: builtin-prefer-elpa
 | Package (14) | Class |
 |--------------+-------|
 | cl-print     | core  |
@@ -134,8 +134,8 @@
 | xref         | core  |
 
 ** Prefer upstream
-#+NAME: builtin-prefer-upstream
-#+BEGIN_SRC emacs-lisp
+#+name: builtin-prefer-upstream
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class")
     (epkg-sql [:select :distinct [packages:name packages:class]
                :from [packages builtin-libraries]
@@ -143,16 +143,16 @@
                :and packages:class :not :in $v1
                :order-by [(asc packages:name)]]
               [builtin gnu-elpa core]))
-#+END_SRC
-#+RESULTS: builtin-prefer-upstream
+#+end_src
+#+results: builtin-prefer-upstream
 | Package (1) | Class |
 |-------------+-------|
 | tramp       | gnu   |
 
 * Gelpa
 ** New
-#+NAME: gelpa-new
-#+BEGIN_SRC emacs-lisp
+#+name: gelpa-new
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Url")
     (mapcan (pcase-lambda (`(,name ,class ,url))
               (and (not (assoc name emir-pending-packages))
@@ -165,12 +165,12 @@
                        :where (or (isnull epkg-package)
                                   (= class 'core))
                        :order-by [(asc name)]])))
-#+END_SRC
-#+RESULTS: gelpa-new
+#+end_src
+#+results: gelpa-new
 
 ** Pending
-#+NAME: gelpa-pending
-#+BEGIN_SRC emacs-lisp
+#+name: gelpa-pending
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa" "Reason")
     (-keep (pcase-lambda (`(,name ,class))
              (and-let* ((reason (cadr (assoc name emir-pending-packages))))
@@ -179,20 +179,20 @@
                       :from gelpa-recipes
                       :where (isnull epkg-package)
                       :order-by [(asc name)]])))
-#+END_SRC
-#+RESULTS: gelpa-pending
+#+end_src
+#+results: gelpa-pending
 
 ** Unreleased
-#+NAME: gelpa-unreleased
-#+BEGIN_SRC emacs-lisp
+#+name: gelpa-unreleased
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa")
     (epkg-sql [:select [name class]
                :from gelpa-recipes
                :where class :in $v1
                :and (isnull released)]
               [subtree external])))
-#+END_SRC
-#+RESULTS: gelpa-unreleased
+#+end_src
+#+results: gelpa-unreleased
 | Package (6)      | Gelpa    |
 |------------------+----------|
 | sql-smie         | external |
@@ -203,20 +203,20 @@
 | comint-mime      | external |
 
 ** Shelved
-#+NAME: gelpa-shelved
-#+BEGIN_SRC emacs-lisp
+#+name: gelpa-shelved
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa")
     (epkg-sql [:select :distinct [packages:name gelpa-recipes:class]
                :from [packages gelpa-recipes]
                :where (= packages:name gelpa-recipes:name)
                :and (= packages:class 'shelved)
                :order-by [(asc packages:name)]]))
-#+END_SRC
-#+RESULTS: gelpa-shelved
+#+end_src
+#+results: gelpa-shelved
 
 ** Prefer builtin
-#+NAME: gelpa-prefer-builtin
-#+BEGIN_SRC emacs-lisp
+#+name: gelpa-prefer-builtin
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa" "Reason")
     (mapcar (pcase-lambda (`(,name ,class))
               (nconc (list name class)
@@ -227,8 +227,8 @@
                        :where (= packages:name gelpa-recipes:name)
                        :and (= packages:class 'builtin)
                        :order-by [(asc packages:name)]])))
-#+END_SRC
-#+RESULTS: gelpa-prefer-builtin
+#+end_src
+#+results: gelpa-prefer-builtin
 | Package (4) | Gelpa    | Reason              |
 |-------------+----------+---------------------|
 | cl-generic  | external | backport of builtin |
@@ -237,8 +237,8 @@
 | seq         | external | backport of builtin |
 
 ** Prefer upstream
-#+NAME: gelpa-prefer-upstream
-#+BEGIN_SRC emacs-lisp
+#+name: gelpa-prefer-upstream
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Gelpa" "Link")
     (-keep (pcase-lambda (`(,name ,class ,gelpa))
                (and (not (and (eq class 'core)
@@ -252,8 +252,8 @@
                         :and packages:class :not :in $v1
                         :order-by [(asc packages:name)]]
                        [builtin gnu-elpa shelved])))
-#+END_SRC
-#+RESULTS: gelpa-prefer-upstream
+#+end_src
+#+results: gelpa-prefer-upstream
 | Package (165)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
@@ -423,8 +423,8 @@
 | ztree                      | github    | external | [[https://github.com/fourier/ztree][fourier/ztree]]                                 |
 
 ** Prefer Elpa despite :url
-#+NAME: gelpa-prefer-gelpa
-#+BEGIN_SRC emacs-lisp
+#+name: gelpa-prefer-gelpa
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" ":url")
     (let ((alist (emir-gelpa--package-alist)))
       (-keep (pcase-lambda (`(,name ,_class ,_gelpa))
@@ -439,8 +439,8 @@
                         :order-by [(asc gelpa-recipes:url)
                                    (asc packages:name)]]
                        [gnu-elpa]))))
-#+END_SRC
-#+RESULTS: gelpa-prefer-gelpa
+#+end_src
+#+results: gelpa-prefer-gelpa
 | Package (17)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
@@ -463,8 +463,8 @@
 
 * Melpa
 ** New
-#+NAME: melpa-new
-#+BEGIN_SRC emacs-lisp
+#+name: melpa-new
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Melpa" "Link")
     (-keep (pcase-lambda (`(,name ,fetcher ,url))
              (and (not (assoc name emir-pending-packages))
@@ -480,12 +480,12 @@
                       :where (isnull epkg-package)
                       :order-by [(asc url)
                                  (asc name)]])))
-#+END_SRC
-#+RESULTS: melpa-new
+#+end_src
+#+results: melpa-new
 
 ** Pending
-#+NAME: melpa-pending
-#+BEGIN_SRC emacs-lisp
+#+name: melpa-pending
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Melpa" "Reason")
     (-keep (pcase-lambda (`(,name ,class))
              (and-let* ((reason (cadr (assoc name emir-pending-packages))))
@@ -494,12 +494,12 @@
                       :from melpa-recipes
                       :where (isnull epkg-package)
                       :order-by [(asc name)]])))
-#+END_SRC
-#+RESULTS: melpa-pending
+#+end_src
+#+results: melpa-pending
 
 ** Shared repositories
-#+NAME: secondary-packages
-#+BEGIN_SRC emacs-lisp
+#+name: secondary-packages
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Primary package" "Secondary package" "Class")
     (epkg-sql [:select :distinct [packages:name
                                   melpa-recipes:name
@@ -510,8 +510,8 @@
                             melpa-recipes:name)
                :order-by [(asc packages:name)
                           (asc melpa-recipes:name)]]))
-#+END_SRC
-#+RESULTS: secondary-packages
+#+end_src
+#+results: secondary-packages
 | Primary package (124)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
@@ -724,8 +724,8 @@
 | zettelkasten            | org-zettelkasten                  | github    |
 
 ** Diverging repositories
-#+NAME: melpa-diverging-repositories
-#+BEGIN_SRC emacs-lisp
+#+name: melpa-diverging-repositories
+#+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Mirror" "Melpa")
     (-keep
      (pcase-lambda (`(,name ,type ,url ,murl))
@@ -752,5 +752,5 @@
                 :and :not (= packages:class 'gnu-elpa)
                 :and :not (= packages:class 'wiki)
                 :order-by [(asc packages:name)]])))
-#+END_SRC
-#+RESULTS: melpa-diverging-repositories
+#+end_src
+#+results: melpa-diverging-repositories

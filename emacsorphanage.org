@@ -1,8 +1,8 @@
 :PREAMBLE:
-#+TITLE: Epkgs: Orphanage
-#+SETUPFILE: .orgconfig
-#+NAME: setup
-#+BEGIN_SRC emacs-lisp :results silent
+#+title: Epkgs: Orphanage
+#+setupfile: .orgconfig
+#+name: setup
+#+begin_src emacs-lisp :results silent
   (require 'emir)
 
   (defconst emir--orphans-cache
@@ -33,7 +33,7 @@
                           (closql--abbrev-class (eieio-object-class rcp)))
                       ""))))
        emir--orphans-cache)))
-#+END_SRC
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Upstream has disappeared but there are dependents
@@ -53,11 +53,11 @@ just the attic, did so because other mirrored packages depend on them,
 and/or because they are available from Melpa (I mirror all packages
 that are available from there).
 
-#+NAME: disappeared
-#+BEGIN_SRC emacs-lisp
+#+name: disappeared
+#+begin_src emacs-lisp
   (emir--list-orphans "upstream disappeared")
-#+END_SRC
-#+RESULTS: disappeared
+#+end_src
+#+results: disappeared
 | Package (10) | E | M |
 |--------------+---+---|
 | dedicated    | ✔ | ✔ |
@@ -83,11 +83,11 @@ the orphanage to fix these issues.
   authoritive upstream.  Attempts to get the various non-upstreams
   talking have failed so far.
 
-#+NAME: unresponsive
-#+BEGIN_SRC emacs-lisp
+#+name: unresponsive
+#+begin_src emacs-lisp
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
-#+END_SRC
-#+RESULTS: unresponsive
+#+end_src
+#+results: unresponsive
 | Package (7)    | E | M |
 |----------------+---+---|
 | edb            | ✔ |   |
@@ -109,11 +109,11 @@ the world-writable copy from the wiki.
 
 Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 
-#+NAME: required-by-nonwiki
-#+BEGIN_SRC emacs-lisp
+#+name: required-by-nonwiki
+#+begin_src emacs-lisp
   (emir--list-orphans "wiki needed by non-wiki")
-#+END_SRC
-#+RESULTS: required-by-nonwiki
+#+end_src
+#+results: required-by-nonwiki
 | Package (27)       | E | M |
 |--------------------+---+---|
 | cygwin-mount       | ✔ |   |
@@ -145,11 +145,11 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | yaoddmuse          | ✔ |   |
 
 * Imported from tarball
-#+NAME: tarball
-#+BEGIN_SRC emacs-lisp
+#+name: tarball
+#+begin_src emacs-lisp
   (emir--list-orphans "manual tarball import")
-#+END_SRC
-#+RESULTS: tarball
+#+end_src
+#+results: tarball
 | Package (3)  | E | M |
 |--------------+---+---|
 | picolisp     | ✔ |   |
@@ -157,11 +157,11 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | sml-modeline | ✔ | ✔ |
 
 * Dropped of by maintainer
-#+NAME: dropped
-#+BEGIN_SRC emacs-lisp
+#+name: dropped
+#+begin_src emacs-lisp
   (emir--list-orphans "dropped by maintainer")
-#+END_SRC
-#+RESULTS: dropped
+#+end_src
+#+results: dropped
 | Package (84)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
@@ -257,30 +257,30 @@ more packages in this category than listed below, but for a long time
 we did not track this as a separate reason for a package to be in the
 orphanage.
 
-#+NAME: revived
-#+BEGIN_SRC emacs-lisp
+#+name: revived
+#+begin_src emacs-lisp
   (emir--list-orphans "revived using fork")
-#+END_SRC
-#+RESULTS: revived
+#+end_src
+#+results: revived
 | Package (1) | E | M |
 |-------------+---+---|
 | ox-pandoc   | ✔ | ✔ |
 
 * Other
-#+NAME: rip
-#+BEGIN_SRC emacs-lisp
+#+name: rip
+#+begin_src emacs-lisp
   (emir--list-orphans "maintainer is dead" "last subversion")
-#+END_SRC
-#+RESULTS: rip
+#+end_src
+#+results: rip
 | Package (2)    | E | M |
 |----------------+---+---|
 | dic-lookup-w3m | ✔ | ✔ |
 | org-grep       | ✔ | ✔ |
 
 * New
-#+NAME: new
-#+BEGIN_SRC emacs-lisp
+#+name: new
+#+begin_src emacs-lisp
   (emir--list-orphans nil)
-#+END_SRC
-#+RESULTS: new
+#+end_src
+#+results: new
 
