@@ -93,12 +93,6 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                      #'string< :key #'cadr)))
 #+end_src
 #+results: github-moved
-| Package (2) | Old repository        | New repository | M |
-|-------------+-----------------------+----------------+---|
-| ob-sclang   | stardiviner/ob-sclang |                |   |
-| ob-spice    | stardiviner/ob-spice  |                | ✓ |
-
-- stardiviner: https://github.com/melpa/melpa/issues/7872
 
 * Missing library summary
 #+name: missing-summary

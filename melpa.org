@@ -36,7 +36,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
      #'string> :key #'cadr))
 #+end_src
 #+results: missing-github
-| Package (552)                |   Modified | Link                                    | Summary                                                                                     |
+| Package (551)                |   Modified | Link                                    | Summary                                                                                     |
 |------------------------------+------------+-----------------------------------------+---------------------------------------------------------------------------------------------|
 | emir                         | 2022-02-10 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                                                    |
 | eaf                          | 2022-02-08 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                                                 |
@@ -69,11 +69,10 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | org-notify                   | 2021-08-11 | [[https://github.com/p-m/org-notify][p-m/org-notify]]                          | Notifications for Org-mode                                                                  |
 | dictem                       | 2021-07-28 | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          | DICT protocol client (rfc-2229) for [X]Emacs                                                |
 | text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                                            |
-| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                                                   |
+| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                                                     |
 | goby                         | 2021-07-07 | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                                                   |
 | touchgrid                    | 2021-06-30 | [[https://github.com/larsmagne/touchgrid.el][larsmagne/touchgrid.el]]                  | Executing actions based on input events                                                     |
 | org-velocity                 | 2021-06-09 | [[https://github.com/ruricolist/org-velocity][ruricolist/org-velocity]]                 | Something like Notational Velocity for Org                                                  |
-| ob-sclang                    | 2021-05-27 | [[https://github.com/stardiviner/ob-sclang][stardiviner/ob-sclang]]                   | SCLang support for Org-mode Babel                                                           |
 | ob-mathematica               | 2021-05-05 | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 | Org-babel functions for Mathematica evaluation                                              |
 | trindle                      | 2021-05-05 | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      | Simple Emacs LISP management extension                                                      |
 | icons-in-terminal            | 2021-05-04 | [[https://github.com/sebastiencs/icons-in-terminal][sebastiencs/icons-in-terminal]]           |                                                                                             |
@@ -617,11 +616,12 @@ Also see https://github.com/melpa/melpa/issues/7892.
 	    (epkgs 'name 'epkg-git-package)))
 #+end_src
 #+results: missing-git
-| Package (7)   | Link                                       |
+| Package (8)   | Link                                       |
 |---------------+--------------------------------------------|
 | ebuild-mode   |                                            |
 | elpa-admin    |                                            |
 | mailscripts   |                                            |
+| ob-sclang     | [[https://repo.or.cz/ob-sclang.git]]           |
 | org-link-edit | [[https://git.kyleam.com/org-link-edit/about]] |
 | piem          | [[https://git.kyleam.com/piem/about]]          |
 | python-pep8   |                                            |
