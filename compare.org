@@ -83,13 +83,13 @@
 | builtin   |  466 |     16 |       |   467 |    16 |       |
 | gnu-elpa  |  138 |    138 |       |       |   304 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5025 |   5025 |       |       |       |  4788 |
+| github    | 5003 |   5003 |       |       |       |  4766 |
 | gitlab    |  189 |    189 |       |       |       |   175 |
 | sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |   92 |     92 |       |       |       |   127 |
+| git       |  114 |    114 |       |       |       |   149 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -335,7 +335,7 @@
 | js2-mode                   | github    | external | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                 |
 | json-mode                  | github    | external | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                             |
 | kind-icon                  | github    | external | [[https://github.com/jdtsmith/kind-icon][jdtsmith/kind-icon]]                            |
-| kiwix                      | github    | external | [[https://github.com/stardiviner/kiwix.el][stardiviner/kiwix.el]]                          |
+| kiwix                      | git       | external | [[https://github.com/stardiviner/kiwix.el]]       |
 | leaf                       | github    | external | [[https://github.com/conao3/leaf.el][conao3/leaf.el]]                                |
 | load-relative              | github    | external | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                     |
 | loc-changes                | github    | external | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                       |
