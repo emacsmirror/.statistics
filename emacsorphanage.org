@@ -162,7 +162,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "dropped by maintainer")
 #+end_src
 #+results: dropped
-| Package (84)         | E | M |
+| Package (83)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -191,7 +191,6 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | git-gutter           | ✔ | ✔ |
 | git-gutter-fringe    | ✔ | ✔ |
 | git-messenger        | ✔ | ✔ |
-| gnuplot              | ✔ | ✔ |
 | go-add-tags          | ✔ | ✔ |
 | go-direx             | ✔ | ✔ |
 | go-eldoc             | ✔ | ✔ |
