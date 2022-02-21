@@ -81,10 +81,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   304 |       |
+| gnu-elpa  |  138 |    138 |       |       |   306 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5006 |   5006 |       |       |       |  4769 |
-| gitlab    |  189 |    189 |       |       |       |   175 |
+| github    | 5012 |   5012 |       |       |       |  4774 |
+| gitlab    |  190 |    190 |       |       |       |   176 |
 | sourcehut |   36 |     36 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  134 |    134 |       |       |       |       |
-| shelved   | 1452 |        |  1452 |       |       |       |
+| shelved   | 1455 |        |  1455 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8253 |   6351 |  1452 |   467 |   320 |  5108 |
+| total     | 8263 |   6358 |  1455 |   467 |   322 |  5114 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (165)              | Class     | Gelpa    | Link                                          |
+| Package (167)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -366,6 +366,7 @@
 | parser-generator           | github    | external | [[https://github.com/cjohansson/emacs-parser-generator][cjohansson/emacs-parser-generator]]             |
 | pinentry                   | github    | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                              |
 | posframe                   | github    | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                              |
+| pq                         | github    | external | [[https://github.com/anse1/emacs-libpq][anse1/emacs-libpq]]                             |
 | pyim                       | github    | external | [[https://github.com/tumashu/pyim][tumashu/pyim]]                                  |
 | pyim-basedict              | github    | external | [[https://github.com/tumashu/pyim-basedict][tumashu/pyim-basedict]]                         |
 | realgud                    | github    | external | [[https://github.com/realgud/realgud][realgud/realgud]]                               |
@@ -399,6 +400,7 @@
 | test-simple                | github    | external | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                       |
 | tiny                       | github    | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                  |
 | tramp                      | gnu       | external | [[https://savannah.gnu.org/projects/tramp][gnu:tramp]]                                     |
+| tramp-nspawn               | github    | external | [[https://github.com/bjc/tramp-nspawn][bjc/tramp-nspawn]]                              |
 | transient                  | github    | external | [[https://github.com/magit/transient][magit/transient]]                               |
 | undo-tree                  | gitlab    | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                               |
 | validate                   | github    | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                         |
@@ -512,7 +514,7 @@
                           (asc melpa-recipes:name)]]))
 #+end_src
 #+results: secondary-packages
-| Primary package (124)   | Secondary package                 | Class     |
+| Primary package (125)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -723,6 +725,7 @@
 | ycmd                    | company-ycmd                      | github    |
 | ycmd                    | flycheck-ycmd                     | github    |
 | zettelkasten            | org-zettelkasten                  | github    |
+| zk                      | zk-index                          | github    |
 
 ** Diverging repositories
 #+name: melpa-diverging-repositories
