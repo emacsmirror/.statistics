@@ -58,6 +58,9 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
+| Package (1) | Class  | Feature | Provider |
+|-------------+--------+---------+----------|
+| chezmoi     | github | window  |          |
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
