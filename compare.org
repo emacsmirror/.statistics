@@ -83,8 +83,8 @@
 | builtin   |  466 |     16 |       |   467 |    16 |       |
 | gnu-elpa  |  138 |    138 |       |       |   309 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5018 |   5018 |       |       |       |  4781 |
-| gitlab    |  190 |    190 |       |       |       |   176 |
+| github    | 5022 |   5022 |       |       |       |  4784 |
+| gitlab    |  192 |    192 |       |       |       |   178 |
 | sourcehut |   37 |     37 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  134 |    134 |       |       |       |       |
-| shelved   | 1455 |        |  1455 |       |       |       |
+| shelved   | 1457 |        |  1457 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8271 |   6366 |  1455 |   467 |   325 |  5122 |
+| total     | 8279 |   6372 |  1457 |   467 |   325 |  5127 |
 
 * Emacs
 ** Prefer elpa
@@ -276,7 +276,6 @@
 | capf-autosuggest           | git       | external | [[https://repo.or.cz/emacs-capf-autosuggest.git]] |
 | cobol-mode                 | git       | external |                                               |
 | code-cells                 | github    | external | [[https://github.com/astoff/code-cells.el][astoff/code-cells.el]]                          |
-| coffee-mode                | github    | external | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                           |
 | comint-mime                | github    | external | [[https://github.com/astoff/comint-mime][astoff/comint-mime]]                            |
 | compact-docstrings         | github    | external | [[https://github.com/cpitclaudel/compact-docstrings][cpitclaudel/compact-docstrings]]                |
 | company                    | github    | external | [[https://github.com/company-mode/company-mode][company-mode/company-mode]]                     |
@@ -363,6 +362,7 @@
 | org-real                   | gitlab    | external | [[https://gitlab.com/tygrdev/org-real][tygrdev/org-real]]                              |
 | org-remark                 | github    | external | [[https://github.com/nobiot/org-remark][nobiot/org-remark]]                             |
 | org-transclusion           | github    | external | [[https://github.com/nobiot/org-transclusion][nobiot/org-transclusion]]                       |
+| osm                        | github    | external | [[https://github.com/minad/osm][minad/osm]]                                     |
 | pabbrev                    | github    | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                              |
 | parsec                     | github    | external | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                         |
 | parser-generator           | github    | external | [[https://github.com/cjohansson/emacs-parser-generator][cjohansson/emacs-parser-generator]]             |
