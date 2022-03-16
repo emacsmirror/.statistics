@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   309 |       |
+| gnu-elpa  |  138 |    138 |       |       |   311 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5022 |   5022 |       |       |       |  4784 |
-| gitlab    |  192 |    192 |       |       |       |   178 |
-| sourcehut |   37 |     37 |       |       |       |       |
+| github    | 5026 |   5026 |       |       |       |  4788 |
+| gitlab    |  192 |    192 |       |       |       |   177 |
+| sourcehut |   38 |     38 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  117 |    117 |       |       |       |   151 |
+| git       |  117 |    117 |       |       |       |   152 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1457 |        |  1457 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8279 |   6372 |  1457 |   467 |   325 |  5127 |
+| total     | 8284 |   6377 |  1457 |   467 |   327 |  5131 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (170)              | Class     | Gelpa    | Link                                          |
+| Package (172)              | Class     | Gelpa    | Link                                          |
 |----------------------------+-----------+----------+-----------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                            |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                 |
@@ -341,6 +341,7 @@
 | load-relative              | github    | external | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                     |
 | loc-changes                | github    | external | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                       |
 | loccur                     | github    | external | [[https://github.com/fourier/loccur][fourier/loccur]]                                |
+| logos                      | gitlab    | external | [[https://gitlab.com/protesilaos/logos][protesilaos/logos]]                             |
 | marginalia                 | github    | external | [[https://github.com/minad/marginalia][minad/marginalia]]                              |
 | math-symbol-lists          | github    | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                      |
 | mct                        | gitlab    | external | [[https://gitlab.com/protesilaos/mct][protesilaos/mct]]                               |
@@ -359,6 +360,7 @@
 | on-screen                  | github    | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]                |
 | orderless                  | github    | external | [[https://github.com/oantolin/orderless][oantolin/orderless]]                            |
 | org                        | gnu       | external | [[https://git.savannah.gnu.org/cgit/org.git]]     |
+| org-modern                 | github    | external | [[https://github.com/minad/org-modern][minad/org-modern]]                              |
 | org-real                   | gitlab    | external | [[https://gitlab.com/tygrdev/org-real][tygrdev/org-real]]                              |
 | org-remark                 | github    | external | [[https://github.com/nobiot/org-remark][nobiot/org-remark]]                             |
 | org-transclusion           | github    | external | [[https://github.com/nobiot/org-transclusion][nobiot/org-transclusion]]                       |
