@@ -62,10 +62,10 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4297 |      67 |
+| GPL-3.0-or-later  |  4299 |      67 |
 | GPL-2.0-or-later  |  1153 |      18 |
-| MIT               |   358 |       6 |
-| GPL-3.0-only      |   169 |       3 |
+| MIT               |   359 |       6 |
+| GPL-3.0-only      |   170 |       3 |
 | BSD-2-Clause      |    84 |       1 |
 | BSD-3-Clause      |    65 |       1 |
 | Apache-2.0        |    52 |       1 |
@@ -83,12 +83,10 @@
 | Artistic-2.0      |     2 |       0 |
 | CECILL-2.1        |     2 |       0 |
 | CECILL-B          |     2 |       0 |
-| COPYLOVE          |     2 |       0 |
 | FSFAP             |     2 |       0 |
 | GPL-2.0-only      |     2 |       0 |
 | LGPL-2.1-only     |     2 |       0 |
 | MPL-2.0           |     2 |       0 |
-| nil               |     1 |       0 |
 | AGPL-3.0-only     |     1 |       0 |
 | Beerware          |     1 |       0 |
 | MIT-0             |     1 |       0 |
@@ -97,49 +95,25 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5645 |      88 |
+| total GNU         |  5648 |      88 |
 |-------------------+-------+---------|
-| total             |  6384 |     100 |
+| total             |  6385 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
 #+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "License")
-    (epkg-sql [:select [name class license] :from packages
-               :where (and (or (isnull license)
-                               (in license $v1))
-                           (not (= class 'shelved)))
-               :order-by [(asc name)]]
-              ["COPYLOVE"]))
+  (epkg-with-org-header ("Package" "Class" "License" "M")
+    (mapcar (pcase-lambda (`(,name ,class ,license))
+              (list name class license
+                    (and (melpa-get name) "✓")))
+            (epkg-sql [:select [name class license] :from packages
+                       :where (and (not (= class 'shelved))
+                                   (not (in license $v1)))
+                       :order-by [(asc name)]]
+                      (vconcat ["as-is" "public-domain"]
+                               elx-spdx-license-identifiers))))
 #+end_src
 #+results: mirror-unknown
-| Package (3)    | Class  | License  |
-|----------------+--------+----------|
-| clhs           | gitlab |          |
-| nyan-prompt    | github | COPYLOVE |
-| password-vault | github | COPYLOVE |
-
-- clhs: https://gitlab.com/sam-s/clhs/-/merge_requests/1
-- nyan-prompt, password-vault: https://github.com/PuercoPop/password-vault/issues/4
-
-** Unknown licenses
-#+name: mirror-unknown-licenses
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("License")
-    (cl-set-difference (delete '(nil)
-                               (epkg-sql [:select :distinct [license]
-                                          :from packages
-                                          :where (not (= class 'shelved))
-                                          :order-by (asc license)]))
-                       (mapcar #'list elx-spdx-license-identifiers)
-                       :test #'equal))
-#+end_src
-#+results: mirror-unknown-licenses
-| License (3)   |
-|---------------|
-| COPYLOVE      |
-| as-is         |
-| public-domain |
 
 * Emacsattic
 ** Overview
@@ -156,7 +130,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |   829 |      57 |
-| GPL-3.0-or-later  |   357 |      25 |
+| GPL-3.0-or-later  |   357 |      24 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    40 |       3 |
@@ -171,6 +145,7 @@
 | BSD-2-Clause      |     4 |       0 |
 | Apache-2.0        |     3 |       0 |
 | LGPL-3.0-only     |     3 |       0 |
+| COPYLOVE          |     2 |       0 |
 | GPL-2.1-or-later  |     2 |       0 |
 | MS-PL             |     2 |       0 |
 | AGPL-3.0-or-later |     1 |       0 |
@@ -184,37 +159,37 @@
 |-------------------+-------+---------|
 | total GNU         |  1341 |      92 |
 |-------------------+-------+---------|
-| total             |  1457 |     100 |
+| total             |  1459 |     100 |
 
-** Packages with unknown licenses
+** Packages with unknown/custom licenses
 #+name: attic-unknown
 #+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Class")
-    (epkg-sql [:select [name class] :from packages
-               :where (isnull license)
-               :and packages:class :in $v1
-               :order-by [(asc name)]]
-              [shelved])))
+  (epkg-with-org-header ("Package" "Class" "License" "M")
+    (mapcar (pcase-lambda (`(,name ,class ,license))
+              (list name class license
+                    (and (melpa-get name) "✓")))
+            (epkg-sql [:select [name class license] :from packages
+                       :where (and (= class 'shelved)
+                                   (not (in license $v1)))
+                       :order-by [(asc name)]]
+                      (vconcat ["as-is" "public-domain"
+                                "GPL" "GPL-2.1-or-later" "BSD" "EPL"]
+                               elx-spdx-license-identifiers))))
 #+end_src
 #+results: attic-unknown
-
-** Packages with custom licenses
-#+name: attic-custom
-#+begin_src emacs-lisp
-  (emir--insert-attic-packages-using-licenses "custom")
-#+end_src
-#+results: attic-custom
-| Package (9) | License |
-|-------------+---------|
-| epo         | custom  |
-| phutball    | custom  |
-| procmaillog | custom  |
-| psgml-jade  | custom  |
-| rmoo        | custom  |
-| speedread   | custom  |
-| whine       | custom  |
-| yaham       | custom  |
-| youwill     | custom  |
+| Package (11)   | Class   | License  | M |
+|----------------+---------+----------+---|
+| epo            | shelved | custom   |   |
+| nyan-prompt    | shelved | COPYLOVE |   |
+| password-vault | shelved | COPYLOVE |   |
+| phutball       | shelved | custom   |   |
+| procmaillog    | shelved | custom   |   |
+| psgml-jade     | shelved | custom   |   |
+| rmoo           | shelved | custom   |   |
+| speedread      | shelved | custom   |   |
+| whine          | shelved | custom   |   |
+| yaham          | shelved | custom   |   |
+| youwill        | shelved | custom   |   |
 
 ** Problematic licenses
 #+name: attic-problematic
