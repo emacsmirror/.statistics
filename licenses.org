@@ -62,7 +62,7 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4299 |      67 |
+| GPL-3.0-or-later  |  4301 |      67 |
 | GPL-2.0-or-later  |  1153 |      18 |
 | MIT               |   359 |       6 |
 | GPL-3.0-only      |   170 |       3 |
@@ -95,9 +95,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5648 |      88 |
+| total GNU         |  5650 |      88 |
 |-------------------+-------+---------|
-| total             |  6385 |     100 |
+| total             |  6387 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -130,7 +130,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |   829 |      57 |
-| GPL-3.0-or-later  |   357 |      24 |
+| GPL-3.0-or-later  |   357 |      25 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    40 |       3 |
@@ -145,7 +145,6 @@
 | BSD-2-Clause      |     4 |       0 |
 | Apache-2.0        |     3 |       0 |
 | LGPL-3.0-only     |     3 |       0 |
-| COPYLOVE          |     2 |       0 |
 | GPL-2.1-or-later  |     2 |       0 |
 | MS-PL             |     2 |       0 |
 | AGPL-3.0-or-later |     1 |       0 |
@@ -159,7 +158,7 @@
 |-------------------+-------+---------|
 | total GNU         |  1341 |      92 |
 |-------------------+-------+---------|
-| total             |  1459 |     100 |
+| total             |  1457 |     100 |
 
 ** Packages with unknown/custom licenses
 #+name: attic-unknown
@@ -177,19 +176,17 @@
                                elx-spdx-license-identifiers))))
 #+end_src
 #+results: attic-unknown
-| Package (11)   | Class   | License  | M |
-|----------------+---------+----------+---|
-| epo            | shelved | custom   |   |
-| nyan-prompt    | shelved | COPYLOVE |   |
-| password-vault | shelved | COPYLOVE |   |
-| phutball       | shelved | custom   |   |
-| procmaillog    | shelved | custom   |   |
-| psgml-jade     | shelved | custom   |   |
-| rmoo           | shelved | custom   |   |
-| speedread      | shelved | custom   |   |
-| whine          | shelved | custom   |   |
-| yaham          | shelved | custom   |   |
-| youwill        | shelved | custom   |   |
+| Package (9) | Class   | License | M |
+|-------------+---------+---------+---|
+| epo         | shelved | custom  |   |
+| phutball    | shelved | custom  |   |
+| procmaillog | shelved | custom  |   |
+| psgml-jade  | shelved | custom  |   |
+| rmoo        | shelved | custom  |   |
+| speedread   | shelved | custom  |   |
+| whine       | shelved | custom  |   |
+| yaham       | shelved | custom  |   |
+| youwill     | shelved | custom  |   |
 
 ** Problematic licenses
 #+name: attic-problematic
