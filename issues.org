@@ -58,12 +58,14 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (2) | Class  | Feature | Provider |
-|-------------+--------+---------+----------|
-| chezmoi     | github | window  |          |
-| demap       | gitlab | window  |          |
+| Package (4)   | Class  | Feature         | Provider |
+|---------------+--------+-----------------+----------|
+| chezmoi       | github | window          |          |
+| demap         | gitlab | window          |          |
+| python-mode   | gitlab | setup-ert-tests |          |
+| rt-liberation | nongnu | nnselect        |          |
 
-- windows: Emacs provides that feature staring with v28
+- window: Emacs provides that feature staring with v28
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
