@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  138 |    138 |       |       |   312 |       |
+| gnu-elpa  |  138 |    138 |       |       |   313 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5044 |   5044 |       |       |       |  4807 |
-| gitlab    |  194 |    194 |       |       |       |   178 |
-| sourcehut |   38 |     38 |       |       |       |       |
+| github    | 5050 |   5050 |       |       |       |  4814 |
+| gitlab    |  195 |    195 |       |       |       |   179 |
+| sourcehut |   39 |     39 |       |       |       |       |
 | gnu       |    8 |      8 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  118 |    118 |       |       |       |   153 |
+| git       |  118 |    118 |       |       |       |   154 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1458 |        |  1458 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8306 |   6398 |  1458 |   467 |   328 |  5152 |
+| total     | 8314 |   6406 |  1458 |   467 |   329 |  5161 |
 
 * Emacs
 ** Prefer elpa
@@ -193,14 +193,13 @@
               [subtree external])))
 #+end_src
 #+results: gelpa-unreleased
-| Package (6)      | Gelpa    |
+| Package (5)      | Gelpa    |
 |------------------+----------|
 | sql-smie         | external |
 | prefixed-core    | external |
 | package-fixes    | external |
 | shell-quasiquote | external |
 | systemd          | external |
-| comint-mime      | external |
 
 ** Shelved
 #+name: gelpa-shelved

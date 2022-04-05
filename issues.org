@@ -58,14 +58,23 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (4)   | Class  | Feature         | Provider |
-|---------------+--------+-----------------+----------|
-| chezmoi       | github | window          |          |
-| demap         | gitlab | window          |          |
-| python-mode   | gitlab | setup-ert-tests |          |
-| rt-liberation | nongnu | nnselect        |          |
+| Package (11)    | Class  | Feature            | Provider |
+|-----------------+--------+--------------------+----------|
+| auctex-cluttex  | github | tex-buf            |          |
+| auctex-latexmk  | github | tex-buf            |          |
+| chezmoi         | github | window             |          |
+| demap           | gitlab | window             |          |
+| latex-extra     | github | tex-buf            |          |
+| org-roam        | github | emacsql-libsqlite3 |          |
+| python-mode     | gitlab | setup-ert-tests    |          |
+| rt-liberation   | nongnu | nnselect           |          |
+| sage-shell-mode | github | tex-buf            |          |
+| ultratex        | github | tex-buf            |          |
+| xenops          | github | tex-buf            |          |
 
+- tex-buf: In auctex tex-buf was merged into tex
 - window: Emacs provides that feature staring with v28
+- org-roam: https://github.com/org-roam/org-roam/issues/2146
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.

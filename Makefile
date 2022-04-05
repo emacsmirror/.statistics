@@ -30,6 +30,7 @@ BABEL  = $(HTML:.html=.org)
 
 DEPS   = borg
 DEPS  += closql
+DEPS  += compat
 DEPS  += dash
 DEPS  += elx
 DEPS  += emir
