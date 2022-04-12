@@ -321,8 +321,9 @@
                       'epkg-mirrored-package--eieio-childp))))
 #+end_src
 #+results: no-mainlib
-| Package (20)          | Class    | M | Library                         | Reason                     |
+| Package (21)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
+| flymake-collection    | github   |   | src/flymake-collection.el       |                            |
 | chumpy-windows        | github   |   | window-jump.el                  | no primary entry point     |
 | dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point     |
 | edb                   | orphaned |   | lisp/database.el                | no/mismatched main library |

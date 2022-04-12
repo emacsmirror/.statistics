@@ -95,6 +95,11 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+end_src
 #+results: archived
+| Package (1)       | Repository                      | M | Reverse Dependencies |
+|-------------------+---------------------------------+---+----------------------|
+| flymake-proselint | [[https://github.com/manuel-uberti/flymake-proselint][manuel-uberti/flymake-proselint]] |   |                      |
+
+- manuel-uberti: is in the process of moving all his packages, I believe
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.
@@ -110,6 +115,11 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                      #'string< :key #'cadr)))
 #+end_src
 #+results: github-moved
+| Package (1) | Old repository              | New repository | M |
+|-------------+-----------------------------+----------------+---|
+| flower      | PositiveTechnologies/flower |                | ✓ |
+
+- flower: https://github.com/melpa/melpa/pull/5302
 
 * Missing library summary
 #+name: missing-summary
