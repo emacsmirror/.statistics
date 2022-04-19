@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  139 |    139 |       |       |   316 |       |
+| gnu-elpa  |  139 |    139 |       |       |   317 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5055 |   5055 |       |       |       |  4819 |
+| github    | 5058 |   5058 |       |       |       |  4821 |
 | gitlab    |  195 |    195 |       |       |       |   178 |
 | sourcehut |   40 |     40 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  118 |    118 |       |       |       |   155 |
+| git       |  119 |    119 |       |       |       |   156 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  590 |    590 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1458 |        |  1458 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8323 |   6415 |  1458 |   467 |   332 |  5166 |
+| total     | 8327 |   6419 |  1458 |   467 |   333 |  5169 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (176)              | Class     | Gelpa    | Link                                            |
+| Package (177)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -421,6 +421,7 @@
 | vertico                    | github    | external | [[https://github.com/minad/vertico][minad/vertico]]                                   |
 | vertico-posframe           | github    | external | [[https://github.com/tumashu/vertico-posframe][tumashu/vertico-posframe]]                        |
 | vlf                        | github    | external | [[https://github.com/m00natic/vlfi][m00natic/vlfi]]                                   |
+| vundo                      | github    | external | [[https://github.com/casouri/vundo][casouri/vundo]]                                   |
 | wcheck-mode                | github    | external | [[https://github.com/tlikonen/wcheck-mode][tlikonen/wcheck-mode]]                            |
 | wconf                      | github    | external | [[https://github.com/ilohmar/wconf][ilohmar/wconf]]                                   |
 | web-server                 | github    | external | [[https://github.com/eschulte/emacs-web-server][eschulte/emacs-web-server]]                       |
@@ -522,7 +523,7 @@
                           (asc melpa-recipes:name)]]))
 #+end_src
 #+results: secondary-packages
-| Primary package (126)   | Secondary package                 | Class     |
+| Primary package (125)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -600,7 +601,6 @@
 | flutter                 | flutter-l10n-flycheck             | github    |
 | flx                     | flx-ido                           | github    |
 | flycheck-aspell         | flymake-aspell                    | github    |
-| flymake-collection      | flymake-rest                      | github    |
 | flyspell-correct        | flyspell-correct-avy-menu         | github    |
 | flyspell-correct        | flyspell-correct-helm             | github    |
 | flyspell-correct        | flyspell-correct-ivy              | github    |
@@ -768,8 +768,10 @@
                 :order-by [(asc packages:name)]])))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (1)  | Mirror                   | Melpa                                       |
-|--------------+--------------------------+---------------------------------------------|
-| modus-themes | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]] | https://git.sr.ht/~protesilaos/modus-themes |
+| Package (2)  | Mirror                      | Melpa                                       |
+|--------------+-----------------------------+---------------------------------------------|
+| flower       | [[https://github.com/PositiveTechnologies/flower][PositiveTechnologies/flower]] | [[https://github.com/FlowerAutomation/flower][FlowerAutomation/flower]]                     |
+| modus-themes | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]    | https://git.sr.ht/~protesilaos/modus-themes |
 
+- flower: https://github.com/melpa/melpa/pull/7991
 - protesilaos: is in the process of moving all his packages

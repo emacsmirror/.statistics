@@ -54,7 +54,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+end_src
 #+results: provided-drop
-| Package (6)  | Class  | Feature              | Reason                |
+| Package (7)  | Class  | Feature              | Reason                |
 |--------------+--------+----------------------+-----------------------|
 | clojure-mode | github | test-helper          | conflicting test file |
 | elixir-mode  | github | test-helper          | conflicting test file |
@@ -62,6 +62,7 @@
 | ivy          | github | targets/install-deps | conflicting test file |
 | org          | gnu    | org-test             | conflicting test file |
 | org-gcal     | github | org-test             | conflicting test file |
+| topspace     | github | director             | bundled test utility  |
 
 * Drop required features
 #+name: required-drop
@@ -127,7 +128,6 @@
 | lispy                           | github   | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                           |
 | load-theme-buffer-local         | github   | color-theme              | backward compatibility                              |
 | markchars                       | gnu-elpa | idn                      | shelved soft                                        |
-| matlab-mode                     | git      | matlab-load              | generated internal file                             |
 | matlab-mode                     | git      | semantic-dep             | backward compatibility                              |
 | matlab-mode                     | git      | semantic-format          | backward compatibility                              |
 | matlab-mode                     | git      | semanticdb               | backward compatibility                              |
@@ -323,7 +323,7 @@
 #+results: no-mainlib
 | Package (21)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
-| flymake-collection    | github   |   | src/flymake-collection.el       |                            |
+| flymake-collection    | github   | ✓ | src/flymake-collection.el       |                            |
 | chumpy-windows        | github   |   | window-jump.el                  | no primary entry point     |
 | dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point     |
 | edb                   | orphaned |   | lisp/database.el                | no/mismatched main library |
