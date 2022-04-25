@@ -81,11 +81,11 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  139 |    139 |       |       |   317 |       |
+| gnu-elpa  |  139 |    139 |       |       |   319 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5058 |   5058 |       |       |       |  4821 |
-| gitlab    |  195 |    195 |       |       |       |   178 |
-| sourcehut |   40 |     40 |       |       |       |       |
+| github    | 5061 |   5061 |       |       |       |  4824 |
+| gitlab    |  196 |    196 |       |       |       |   179 |
+| sourcehut |   42 |     42 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1458 |        |  1458 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8327 |   6419 |  1458 |   467 |   333 |  5169 |
+| total     | 8333 |   6425 |  1458 |   467 |   335 |  5173 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (177)              | Class     | Gelpa    | Link                                            |
+| Package (179)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -289,6 +289,7 @@
 | cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                |
 | crdt                       | git       | external | [[https://code.librehq.com/qhong/crdt.el]]          |
 | csharp-mode                | github    | external | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]                        |
+| cursory                    | sourcehut | external | [[https://git.sr.ht/~protesilaos/cursory][protesilaos/cursory]]                             |
 | darkroom                   | github    | external | [[https://github.com/joaotavora/darkroom][joaotavora/darkroom]]                             |
 | dash                       | github    | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                                 |
 | dbus-codegen               | github    | external | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                            |
@@ -408,6 +409,7 @@
 | tempel                     | github    | external | [[https://github.com/minad/tempel][minad/tempel]]                                    |
 | test-simple                | github    | external | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                         |
 | tiny                       | github    | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                    |
+| tmr                        | sourcehut | external | [[https://git.sr.ht/~protesilaos/tmr][protesilaos/tmr]]                                 |
 | tramp                      | gnu       | external | [[https://savannah.gnu.org/projects/tramp][gnu:tramp]]                                       |
 | tramp-nspawn               | github    | external | [[https://github.com/bjc/tramp-nspawn][bjc/tramp-nspawn]]                                |
 | transient                  | github    | external | [[https://github.com/magit/transient][magit/transient]]                                 |
@@ -768,10 +770,11 @@
                 :order-by [(asc packages:name)]])))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (2)  | Mirror                      | Melpa                                       |
-|--------------+-----------------------------+---------------------------------------------|
-| flower       | [[https://github.com/PositiveTechnologies/flower][PositiveTechnologies/flower]] | [[https://github.com/FlowerAutomation/flower][FlowerAutomation/flower]]                     |
-| modus-themes | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]    | https://git.sr.ht/~protesilaos/modus-themes |
+| Package (3)  | Mirror                               | Melpa                                       |
+|--------------+--------------------------------------+---------------------------------------------|
+| eide         | [[https://forge.chapril.org/hjuvi/eide]] | https://forge.chalec.org/hjuvi/eide.git     |
+| flower       | [[https://github.com/PositiveTechnologies/flower][PositiveTechnologies/flower]]          | [[https://github.com/FlowerAutomation/flower][FlowerAutomation/flower]]                     |
+| modus-themes | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]             | https://git.sr.ht/~protesilaos/modus-themes |
 
 - flower: https://github.com/melpa/melpa/pull/7991
 - protesilaos: is in the process of moving all his packages
