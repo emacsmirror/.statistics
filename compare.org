@@ -81,18 +81,18 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  466 |     16 |       |   467 |    16 |       |
-| gnu-elpa  |  140 |    140 |       |       |   322 |       |
+| gnu-elpa  |  140 |    140 |       |       |   324 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5067 |   5067 |       |       |       |  4830 |
-| gitlab    |  196 |    196 |       |       |       |   177 |
+| github    | 5076 |   5076 |       |       |       |  4837 |
+| gitlab    |  198 |    198 |       |       |       |   154 |
 | sourcehut |   43 |     43 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  120 |    120 |       |       |       |   159 |
+| git       |  120 |    120 |       |       |       |   184 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| wiki      |  590 |    590 |       |       |       |       |
+| wiki      |  591 |    591 |       |       |       |       |
 | minority  |   18 |     18 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | hg        |   16 |     16 |       |       |       |    14 |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1458 |        |  1458 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8342 |   6434 |  1458 |   467 |   338 |  5180 |
+| total     | 8354 |   6446 |  1458 |   467 |   340 |  5189 |
 
 * Emacs
 ** Prefer elpa
@@ -254,7 +254,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (181)              | Class     | Gelpa    | Link                                            |
+| Package (183)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -287,6 +287,7 @@
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                     |
 | coterm                     | git       | external | [[https://repo.or.cz/emacs-coterm.git]]             |
 | cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                |
+| cpupower                   | gitlab    | external | [[https://gitlab.com/steve-emacs-stuff/cpupower-el][steve-emacs-stuff/cpupower-el]]                   |
 | crdt                       | git       | external | [[https://code.librehq.com/qhong/crdt.el]]          |
 | csharp-mode                | github    | external | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]                        |
 | cursory                    | sourcehut | external | [[https://git.sr.ht/~protesilaos/cursory][protesilaos/cursory]]                             |
@@ -412,6 +413,7 @@
 | test-simple                | github    | external | [[https://github.com/rocky/emacs-test-simple][rocky/emacs-test-simple]]                         |
 | tiny                       | github    | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                    |
 | tmr                        | sourcehut | external | [[https://git.sr.ht/~protesilaos/tmr][protesilaos/tmr]]                                 |
+| tomelr                     | github    | external | [[https://github.com/kaushalmodi/tomelr][kaushalmodi/tomelr]]                              |
 | tramp                      | gnu       | external | [[https://savannah.gnu.org/projects/tramp][gnu:tramp]]                                       |
 | tramp-nspawn               | github    | external | [[https://github.com/bjc/tramp-nspawn][bjc/tramp-nspawn]]                                |
 | transient                  | github    | external | [[https://github.com/magit/transient][magit/transient]]                                 |
@@ -773,14 +775,38 @@
                 :order-by [(asc packages:name)]])))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (6)  | Mirror                               | Melpa                                                |
-|--------------+--------------------------------------+------------------------------------------------------|
-| dtache       | [[https://gitlab.com/niklaseklund/dtache][niklaseklund/dtache]]                  | https://git.sr.ht/~niklaseklund/dtache               |
-| eide         | [[https://forge.chapril.org/hjuvi/eide]] | https://forge.chalec.org/hjuvi/eide.git              |
-| flower       | [[https://github.com/PositiveTechnologies/flower][PositiveTechnologies/flower]]          | [[https://github.com/FlowerAutomation/flower][FlowerAutomation/flower]]                              |
-| modus-themes | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]             | https://git.sr.ht/~protesilaos/modus-themes          |
-| py-autopep8  | [[https://github.com/paetzke/py-autopep8.el][paetzke/py-autopep8.el]]               | [[https://github.com/ideasman42/emacs-py-autopep8][ideasman42/emacs-py-autopep8]]                         |
-| utimeclock   | [[https://gitlab.com/ideasman42/emacs-utimeclock][ideasman42/emacs-utimeclock]]          | https://codeberg.org/ideasman42/emacs-utimeclock.git |
+| Package (30)         | Mirror                                | Melpa                                                          |
+|----------------------+---------------------------------------+----------------------------------------------------------------|
+| bookmark-in-project  | [[https://gitlab.com/ideasman42/emacs-bookmark-in-project][ideasman42/emacs-bookmark-in-project]]  | https://codeberg.org/ideasman42/emacs-bookmark-in-project.git  |
+| counsel-at-point     | [[https://gitlab.com/ideasman42/emacs-counsel-at-point][ideasman42/emacs-counsel-at-point]]     | https://codeberg.org/ideasman42/emacs-counsel-at-point.git     |
+| cycle-at-point       | [[https://gitlab.com/ideasman42/emacs-cycle-at-point][ideasman42/emacs-cycle-at-point]]       | https://codeberg.org/ideasman42/emacs-cycle-at-point.git       |
+| default-font-presets | [[https://gitlab.com/ideasman42/emacs-default-font-presets][ideasman42/emacs-default-font-presets]] | https://codeberg.org/ideasman42/emacs-default-font-presets.git |
+| diff-ansi            | [[https://gitlab.com/ideasman42/emacs-diff-ansi][ideasman42/emacs-diff-ansi]]            | https://codeberg.org/ideasman42/emacs-diff-ansi.git            |
+| diff-at-point        | [[https://gitlab.com/ideasman42/emacs-diff-at-point][ideasman42/emacs-diff-at-point]]        | https://codeberg.org/ideasman42/emacs-diff-at-point.git        |
+| doc-show-inline      | [[https://gitlab.com/ideasman42/emacs-doc-show-inline][ideasman42/emacs-doc-show-inline]]      | https://codeberg.org/ideasman42/emacs-doc-show-inline.git      |
+| dtache               | [[https://gitlab.com/niklaseklund/dtache][niklaseklund/dtache]]                   | https://git.sr.ht/~niklaseklund/dtache                         |
+| eide                 | [[https://forge.chapril.org/hjuvi/eide]]  | https://forge.chalec.org/hjuvi/eide.git                        |
+| flower               | [[https://github.com/PositiveTechnologies/flower][PositiveTechnologies/flower]]           | [[https://github.com/FlowerAutomation/flower][FlowerAutomation/flower]]                                        |
+| hl-block-mode        | [[https://gitlab.com/ideasman42/emacs-hl-block-mode][ideasman42/emacs-hl-block-mode]]        | https://codeberg.org/ideasman42/emacs-hl-block-mode.git        |
+| hl-prog-extra        | [[https://gitlab.com/ideasman42/emacs-hl-prog-extra][ideasman42/emacs-hl-prog-extra]]        | https://codeberg.org/ideasman42/emacs-hl-prog-extra.git        |
+| idle-highlight-mode  | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]  | https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git  |
+| inkpot-theme         | [[https://gitlab.com/ideasman42/emacs-inkpot-theme][ideasman42/emacs-inkpot-theme]]         | https://codeberg.org/ideasman42/emacs-theme-inkpot.git         |
+| magit-commit-mark    | [[https://gitlab.com/ideasman42/emacs-magit-commit-mark][ideasman42/emacs-magit-commit-mark]]    | https://codeberg.org/ideasman42/emacs-magit-commit-mark.git    |
+| mode-line-idle       | [[https://gitlab.com/ideasman42/emacs-mode-line-idle][ideasman42/emacs-mode-line-idle]]       | https://codeberg.org/ideasman42/emacs-mode-line-idle.git       |
+| modus-themes         | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]              | https://git.sr.ht/~protesilaos/modus-themes                    |
+| oblivion-theme       | [[https://gitlab.com/ideasman42/emacs-oblivion-theme][ideasman42/emacs-oblivion-theme]]       | https://codeberg.org/ideasman42/emacs-theme-oblivion.git       |
+| py-autopep8          | [[https://github.com/paetzke/py-autopep8.el][paetzke/py-autopep8.el]]                | https://codeberg.org/ideasman42/emacs-py-autopep8.git          |
+| recomplete           | [[https://gitlab.com/ideasman42/emacs-recomplete][ideasman42/emacs-recomplete]]           | https://codeberg.org/ideasman42/emacs-recomplete.git           |
+| revert-buffer-all    | [[https://gitlab.com/ideasman42/emacs-revert-buffer-all][ideasman42/emacs-revert-buffer-all]]    | https://codeberg.org/ideasman42/emacs-revert-buffer-all.git    |
+| run-stuff            | [[https://gitlab.com/ideasman42/emacs-run-stuff][ideasman42/emacs-run-stuff]]            | https://codeberg.org/ideasman42/emacs-run-stuff.git            |
+| scroll-on-drag       | [[https://gitlab.com/ideasman42/emacs-scroll-on-drag][ideasman42/emacs-scroll-on-drag]]       | https://codeberg.org/ideasman42/emacs-scroll-on-drag.git       |
+| scroll-on-jump       | [[https://gitlab.com/ideasman42/emacs-scroll-on-jump][ideasman42/emacs-scroll-on-jump]]       | https://codeberg.org/ideasman42/emacs-scroll-on-jump.git       |
+| sidecar-locals       | [[https://gitlab.com/ideasman42/emacs-sidecar-locals][ideasman42/emacs-sidecar-locals]]       | https://codeberg.org/ideasman42/emacs-sidecar-locals.git       |
+| spatial-navigate     | [[https://gitlab.com/ideasman42/emacs-spatial-navigate][ideasman42/emacs-spatial-navigate]]     | https://codeberg.org/ideasman42/emacs-spatial-navigate.git     |
+| spell-fu             | [[https://gitlab.com/ideasman42/emacs-spell-fu][ideasman42/emacs-spell-fu]]             | https://codeberg.org/ideasman42/emacs-spell-fu.git             |
+| undo-fu              | [[https://gitlab.com/ideasman42/emacs-undo-fu][ideasman42/emacs-undo-fu]]              | https://codeberg.org/ideasman42/emacs-undo-fu.git              |
+| undo-fu-session      | [[https://gitlab.com/ideasman42/emacs-undo-fu-session][ideasman42/emacs-undo-fu-session]]      | https://codeberg.org/ideasman42/emacs-undo-fu-session.git      |
+| utimeclock           | [[https://gitlab.com/ideasman42/emacs-utimeclock][ideasman42/emacs-utimeclock]]           | https://codeberg.org/ideasman42/emacs-utimeclock.git           |
 
 - flower: https://github.com/melpa/melpa/pull/7991
 - protesilaos: is in the process of moving all his packages
