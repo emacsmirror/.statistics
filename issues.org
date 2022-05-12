@@ -58,16 +58,13 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (11)    | Class  | Feature            | Provider |
+| Package (8)     | Class  | Feature            | Provider |
 |-----------------+--------+--------------------+----------|
 | auctex-cluttex  | github | tex-buf            |          |
 | auctex-latexmk  | github | tex-buf            |          |
-| chezmoi         | github | window             |          |
-| demap           | gitlab | window             |          |
 | latex-extra     | github | tex-buf            |          |
 | org-roam        | github | emacsql-libsqlite3 |          |
 | python-mode     | gitlab | setup-ert-tests    |          |
-| rt-liberation   | nongnu | nnselect           |          |
 | sage-shell-mode | github | tex-buf            |          |
 | ultratex        | github | tex-buf            |          |
 | xenops          | github | tex-buf            |          |
