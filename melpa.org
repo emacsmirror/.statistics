@@ -37,7 +37,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
      #'string> :key #'cadr))
 #+end_src
 #+results: missing-github
-| Package (551)                |   Modified | Link                                    | Summary                                                                |
+| Package (550)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
 | eaf                          | 2022-05-12 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | emacspeak                    | 2022-05-12 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
@@ -46,7 +46,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | mini-popup                   | 2022-05-11 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
 | snails                       | 2022-05-10 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
 | eaf-browser                  | 2022-05-09 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
-| dumbparens                   | 2022-05-08 | [[https://github.com/raxod502/dumbparens][raxod502/dumbparens]]                     | Simple paren-matching solution                                         |
+| dumbparens                   | 2022-05-08 | [[https://github.com/radian-software/dumbparens][radian-software/dumbparens]]              | Simple paren-matching solution                                         |
 | eaf-pdf-viewer               | 2022-05-07 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
 | guess-tex-master             | 2022-05-05 | [[https://github.com/mattfidler/guess-tex-master.el][mattfidler/guess-tex-master.el]]          | Guess LaTeX Master File                                                |
 | movie                        | 2022-05-03 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
@@ -98,7 +98,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | dired-hacks                  | 2021-04-03 | [[https://github.com/Fuco1/dired-hacks][Fuco1/dired-hacks]]                       | Utilities and helpers for dired-hacks collection                       |
 | ess-stata-mode               | 2021-03-25 | [[https://github.com/emacs-ess/ess-stata-mode][emacs-ess/ess-stata-mode]]                | Stata customization                                                    |
 | mark-forward-sexp            | 2021-03-10 | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]               | Mark regions sematically inside balanced expressions                   |
-| interleave                   | 2021-02-16 | [[https://github.com/rudolfochrist/interleave][rudolfochrist/interleave]]                | Interleaving text books since 2015                                     |
 | epithet                      | 2021-02-15 | [[https://github.com/oantolin/epithet][oantolin/epithet]]                        | Rename buffers with descriptive names                                  |
 | velocity                     | 2021-01-31 | [[https://github.com/bard/emacs-velocity][bard/emacs-velocity]]                     | Search, browse, create text in multiple formats                        |
 | tenv                         | 2021-01-26 | [[https://github.com/aki2o/elisp-test][aki2o/elisp-test]]                        | Provide functions for test environment building                        |

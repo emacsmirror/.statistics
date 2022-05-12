@@ -81,9 +81,9 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    16 |       |
-| gnu-elpa  |  140 |    140 |       |       |   324 |       |
+| gnu-elpa  |  140 |    140 |       |       |   325 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5074 |   5074 |       |       |       |  4837 |
+| github    | 5071 |   5071 |       |       |       |  4835 |
 | gitlab    |  198 |    198 |       |       |       |   154 |
 | sourcehut |   43 |     43 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  134 |    134 |       |       |       |       |
-| shelved   | 1458 |        |  1458 |       |       |       |
+| shelved   | 1462 |        |  1462 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8356 |   6444 |  1458 |   474 |   340 |  5189 |
+| total     | 8357 |   6441 |  1462 |   474 |   341 |  5187 |
 
 * Emacs
 ** Prefer elpa
@@ -257,7 +257,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (183)              | Class     | Gelpa    | Link                                            |
+| Package (184)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -377,6 +377,7 @@
 | parsec                     | github    | external | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                           |
 | parser-generator           | github    | external | [[https://github.com/cjohansson/emacs-parser-generator][cjohansson/emacs-parser-generator]]               |
 | pinentry                   | github    | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                                |
+| plz                        | github    | external | [[https://github.com/alphapapa/plz.el][alphapapa/plz.el]]                                |
 | poke                       | gnu       | external | [[https://git.savannah.gnu.org/cgit/poke.git]]      |
 | poke-mode                  | gnu       | external | [[https://git.savannah.gnu.org/cgit/poke-mode.git]] |
 | posframe                   | github    | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                                |
@@ -782,7 +783,7 @@
                 :order-by [(asc packages:name)]])))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (30)         | Mirror                                | Melpa                                                          |
+| Package (29)         | Mirror                                | Melpa                                                          |
 |----------------------+---------------------------------------+----------------------------------------------------------------|
 | bookmark-in-project  | [[https://gitlab.com/ideasman42/emacs-bookmark-in-project][ideasman42/emacs-bookmark-in-project]]  | https://codeberg.org/ideasman42/emacs-bookmark-in-project.git  |
 | counsel-at-point     | [[https://gitlab.com/ideasman42/emacs-counsel-at-point][ideasman42/emacs-counsel-at-point]]     | https://codeberg.org/ideasman42/emacs-counsel-at-point.git     |
@@ -793,7 +794,6 @@
 | doc-show-inline      | [[https://gitlab.com/ideasman42/emacs-doc-show-inline][ideasman42/emacs-doc-show-inline]]      | https://codeberg.org/ideasman42/emacs-doc-show-inline.git      |
 | dtache               | [[https://gitlab.com/niklaseklund/dtache][niklaseklund/dtache]]                   | https://git.sr.ht/~niklaseklund/dtache                         |
 | eide                 | [[https://forge.chapril.org/hjuvi/eide]]  | https://forge.chalec.org/hjuvi/eide.git                        |
-| flower               | [[https://github.com/PositiveTechnologies/flower][PositiveTechnologies/flower]]           | [[https://github.com/FlowerAutomation/flower][FlowerAutomation/flower]]                                        |
 | hl-block-mode        | [[https://gitlab.com/ideasman42/emacs-hl-block-mode][ideasman42/emacs-hl-block-mode]]        | https://codeberg.org/ideasman42/emacs-hl-block-mode.git        |
 | hl-prog-extra        | [[https://gitlab.com/ideasman42/emacs-hl-prog-extra][ideasman42/emacs-hl-prog-extra]]        | https://codeberg.org/ideasman42/emacs-hl-prog-extra.git        |
 | idle-highlight-mode  | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]  | https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git  |

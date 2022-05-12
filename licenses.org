@@ -62,7 +62,7 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4326 |      67 |
+| GPL-3.0-or-later  |  4324 |      67 |
 | GPL-2.0-or-later  |  1174 |      18 |
 | MIT               |   366 |       6 |
 | GPL-3.0-only      |   172 |       3 |
@@ -73,7 +73,7 @@
 | Unlicense         |    33 |       1 |
 | public-domain     |    31 |       0 |
 | as-is             |    27 |       0 |
-| ISC               |    23 |       0 |
+| ISC               |    22 |       0 |
 | AGPL-3.0-or-later |     8 |       0 |
 | CC0-1.0           |     7 |       0 |
 | LGPL-3.0-or-later |     7 |       0 |
@@ -95,9 +95,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5697 |      88 |
+| total GNU         |  5695 |      88 |
 |-------------------+-------+---------|
-| total             |  6444 |     100 |
+| total             |  6441 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -130,7 +130,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |   829 |      57 |
-| GPL-3.0-or-later  |   358 |      25 |
+| GPL-3.0-or-later  |   361 |      25 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    40 |       3 |
@@ -146,19 +146,19 @@
 | Apache-2.0        |     3 |       0 |
 | LGPL-3.0-only     |     3 |       0 |
 | GPL-2.1-or-later  |     2 |       0 |
+| ISC               |     2 |       0 |
 | MS-PL             |     2 |       0 |
 | AGPL-3.0-or-later |     1 |       0 |
 | Artistic-1.0      |     1 |       0 |
 | BSD               |     1 |       0 |
 | Beerware          |     1 |       0 |
 | EPL               |     1 |       0 |
-| ISC               |     1 |       0 |
 | LGPL-2.1-only     |     1 |       0 |
 | LGPL-2.1-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1342 |      92 |
+| total GNU         |  1345 |      92 |
 |-------------------+-------+---------|
-| total             |  1458 |     100 |
+| total             |  1462 |     100 |
 
 ** Packages with unknown/custom licenses
 #+name: attic-unknown
