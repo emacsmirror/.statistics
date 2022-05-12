@@ -39,11 +39,14 @@ Also see https://github.com/melpa/melpa/issues/7892.
 #+results: missing-github
 | Package (551)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| eaf                          | 2022-05-09 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| eaf                          | 2022-05-12 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| emacspeak                    | 2022-05-12 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| emir                         | 2022-05-12 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
+| mu4e                         | 2022-05-12 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
+| mini-popup                   | 2022-05-11 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
+| snails                       | 2022-05-10 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
 | eaf-browser                  | 2022-05-09 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
-| emacspeak                    | 2022-05-09 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
 | dumbparens                   | 2022-05-08 | [[https://github.com/raxod502/dumbparens][raxod502/dumbparens]]                     | Simple paren-matching solution                                         |
-| mu4e                         | 2022-05-08 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
 | eaf-pdf-viewer               | 2022-05-07 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
 | guess-tex-master             | 2022-05-05 | [[https://github.com/mattfidler/guess-tex-master.el][mattfidler/guess-tex-master.el]]          | Guess LaTeX Master File                                                |
 | movie                        | 2022-05-03 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
@@ -53,7 +56,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | fuz-bin                      | 2022-04-30 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
 | github-tags                  | 2022-04-30 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
 | eaf-terminal                 | 2022-04-23 | [[https://github.com/emacs-eaf/eaf-terminal][emacs-eaf/eaf-terminal]]                  | Terminal plugins                                                       |
-| emir                         | 2022-04-22 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | sublime-fuzzy                | 2022-04-21 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
 | bookiez                      | 2022-04-15 | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                    | Managing Books                                                         |
 | cddb                         | 2022-04-15 | [[https://github.com/larsmagne/cddb.el][larsmagne/cddb.el]]                       | Cddb interface                                                         |
@@ -63,8 +65,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | pvr                          | 2022-04-15 | [[https://github.com/larsmagne/pvr.el][larsmagne/pvr.el]]                        | Personal Video Recorder                                                |
 | scan                         | 2022-04-15 | [[https://github.com/larsmagne/scan.el][larsmagne/scan.el]]                       | Scanning Sleeves                                                       |
 | tellstick                    | 2022-04-15 | [[https://github.com/larsmagne/tellstick.el][larsmagne/tellstick.el]]                  | Controlling tellstick controllers                                      |
-| snails                       | 2022-04-13 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
-| mini-popup                   | 2022-04-12 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
 | ga                           | 2022-04-06 | [[https://github.com/xwl/ga][xwl/ga]]                                  | Generic apt alike interfaces for various package management tools      |
 | pymacs                       | 2022-04-02 | [[https://github.com/dgentry/Pymacs][dgentry/Pymacs]]                          | Interface between Emacs Lisp and Python                                |
 | eaf-video-player             | 2022-03-30 | [[https://github.com/emacs-eaf/eaf-video-player][emacs-eaf/eaf-video-player]]              | Video player                                                           |
