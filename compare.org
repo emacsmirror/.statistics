@@ -83,13 +83,13 @@
 | builtin   |  470 |     16 |       |   474 |    16 |       |
 | gnu-elpa  |  140 |    140 |       |       |   325 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5071 |   5071 |       |       |       |  4835 |
-| gitlab    |  198 |    198 |       |       |       |   154 |
-| sourcehut |   43 |     43 |       |       |       |       |
+| github    | 5073 |   5073 |       |       |       |  4838 |
+| gitlab    |  172 |    172 |       |       |       |   155 |
+| sourcehut |   45 |     45 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  120 |    120 |       |       |       |   184 |
+| git       |  146 |    146 |       |       |       |   184 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  134 |    134 |       |       |       |       |
 | shelved   | 1462 |        |  1462 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8357 |   6441 |  1462 |   474 |   341 |  5187 |
+| total     | 8361 |   6445 |  1462 |   474 |   341 |  5191 |
 
 * Emacs
 ** Prefer elpa
@@ -304,7 +304,7 @@
 | diminish                   | github    | external | [[https://github.com/myrjola/diminish.el][myrjola/diminish.el]]                             |
 | dired-git-info             | github    | external | [[https://github.com/clemera/dired-git-info][clemera/dired-git-info]]                          |
 | disk-usage                 | gitlab    | external | [[https://gitlab.com/ambrevar/emacs-disk-usage][ambrevar/emacs-disk-usage]]                       |
-| dtache                     | gitlab    | external | [[https://gitlab.com/niklaseklund/dtache][niklaseklund/dtache]]                             |
+| dtache                     | sourcehut | external | [[https://git.sr.ht/~niklaseklund/dtache][niklaseklund/dtache]]                             |
 | dts-mode                   | github    | external | [[https://github.com/bgamari/dts-mode][bgamari/dts-mode]]                                |
 | easy-escape                | github    | external | [[https://github.com/cpitclaudel/easy-escape][cpitclaudel/easy-escape]]                         |
 | easy-kill                  | github    | external | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                                |
@@ -355,7 +355,7 @@
 | mct                        | gitlab    | external | [[https://gitlab.com/protesilaos/mct][protesilaos/mct]]                                 |
 | mines                      | github    | external | [[https://github.com/calancha/Minesweeper][calancha/Minesweeper]]                            |
 | mmm-mode                   | github    | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                                |
-| modus-themes               | gitlab    | core     | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]                        |
+| modus-themes               | sourcehut | core     | [[https://git.sr.ht/~protesilaos/modus-themes][protesilaos/modus-themes]]                        |
 | multishell                 | github    | external | [[https://github.com/kenmanheimer/EmacsMultishell][kenmanheimer/EmacsMultishell]]                    |
 | muse                       | github    | external | [[https://github.com/alexott/muse][alexott/muse]]                                    |
 | nameless                   | github    | external | [[https://github.com/Malabarba/Nameless][Malabarba/Nameless]]                              |
@@ -559,7 +559,6 @@
 | calfw                   | calfw-ical                        | github    |
 | calfw                   | calfw-org                         | github    |
 | cfn-mode                | flycheck-cfn                      | gitlab    |
-| chronometrist           | chronometrist-key-values          | git       |
 | chronometrist           | chronometrist-spark               | git       |
 | chumpy-windows          | spaces                            | github    |
 | chumpy-windows          | splitter                          | github    |
@@ -783,37 +782,3 @@
                 :order-by [(asc packages:name)]])))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (29)         | Mirror                                | Melpa                                                          |
-|----------------------+---------------------------------------+----------------------------------------------------------------|
-| bookmark-in-project  | [[https://gitlab.com/ideasman42/emacs-bookmark-in-project][ideasman42/emacs-bookmark-in-project]]  | https://codeberg.org/ideasman42/emacs-bookmark-in-project.git  |
-| counsel-at-point     | [[https://gitlab.com/ideasman42/emacs-counsel-at-point][ideasman42/emacs-counsel-at-point]]     | https://codeberg.org/ideasman42/emacs-counsel-at-point.git     |
-| cycle-at-point       | [[https://gitlab.com/ideasman42/emacs-cycle-at-point][ideasman42/emacs-cycle-at-point]]       | https://codeberg.org/ideasman42/emacs-cycle-at-point.git       |
-| default-font-presets | [[https://gitlab.com/ideasman42/emacs-default-font-presets][ideasman42/emacs-default-font-presets]] | https://codeberg.org/ideasman42/emacs-default-font-presets.git |
-| diff-ansi            | [[https://gitlab.com/ideasman42/emacs-diff-ansi][ideasman42/emacs-diff-ansi]]            | https://codeberg.org/ideasman42/emacs-diff-ansi.git            |
-| diff-at-point        | [[https://gitlab.com/ideasman42/emacs-diff-at-point][ideasman42/emacs-diff-at-point]]        | https://codeberg.org/ideasman42/emacs-diff-at-point.git        |
-| doc-show-inline      | [[https://gitlab.com/ideasman42/emacs-doc-show-inline][ideasman42/emacs-doc-show-inline]]      | https://codeberg.org/ideasman42/emacs-doc-show-inline.git      |
-| dtache               | [[https://gitlab.com/niklaseklund/dtache][niklaseklund/dtache]]                   | https://git.sr.ht/~niklaseklund/dtache                         |
-| eide                 | [[https://forge.chapril.org/hjuvi/eide]]  | https://forge.chalec.org/hjuvi/eide.git                        |
-| hl-block-mode        | [[https://gitlab.com/ideasman42/emacs-hl-block-mode][ideasman42/emacs-hl-block-mode]]        | https://codeberg.org/ideasman42/emacs-hl-block-mode.git        |
-| hl-prog-extra        | [[https://gitlab.com/ideasman42/emacs-hl-prog-extra][ideasman42/emacs-hl-prog-extra]]        | https://codeberg.org/ideasman42/emacs-hl-prog-extra.git        |
-| idle-highlight-mode  | [[https://gitlab.com/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]  | https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git  |
-| inkpot-theme         | [[https://gitlab.com/ideasman42/emacs-inkpot-theme][ideasman42/emacs-inkpot-theme]]         | https://codeberg.org/ideasman42/emacs-theme-inkpot.git         |
-| magit-commit-mark    | [[https://gitlab.com/ideasman42/emacs-magit-commit-mark][ideasman42/emacs-magit-commit-mark]]    | https://codeberg.org/ideasman42/emacs-magit-commit-mark.git    |
-| mode-line-idle       | [[https://gitlab.com/ideasman42/emacs-mode-line-idle][ideasman42/emacs-mode-line-idle]]       | https://codeberg.org/ideasman42/emacs-mode-line-idle.git       |
-| modus-themes         | [[https://gitlab.com/protesilaos/modus-themes][protesilaos/modus-themes]]              | https://git.sr.ht/~protesilaos/modus-themes                    |
-| oblivion-theme       | [[https://gitlab.com/ideasman42/emacs-oblivion-theme][ideasman42/emacs-oblivion-theme]]       | https://codeberg.org/ideasman42/emacs-theme-oblivion.git       |
-| py-autopep8          | [[https://github.com/paetzke/py-autopep8.el][paetzke/py-autopep8.el]]                | https://codeberg.org/ideasman42/emacs-py-autopep8.git          |
-| recomplete           | [[https://gitlab.com/ideasman42/emacs-recomplete][ideasman42/emacs-recomplete]]           | https://codeberg.org/ideasman42/emacs-recomplete.git           |
-| revert-buffer-all    | [[https://gitlab.com/ideasman42/emacs-revert-buffer-all][ideasman42/emacs-revert-buffer-all]]    | https://codeberg.org/ideasman42/emacs-revert-buffer-all.git    |
-| run-stuff            | [[https://gitlab.com/ideasman42/emacs-run-stuff][ideasman42/emacs-run-stuff]]            | https://codeberg.org/ideasman42/emacs-run-stuff.git            |
-| scroll-on-drag       | [[https://gitlab.com/ideasman42/emacs-scroll-on-drag][ideasman42/emacs-scroll-on-drag]]       | https://codeberg.org/ideasman42/emacs-scroll-on-drag.git       |
-| scroll-on-jump       | [[https://gitlab.com/ideasman42/emacs-scroll-on-jump][ideasman42/emacs-scroll-on-jump]]       | https://codeberg.org/ideasman42/emacs-scroll-on-jump.git       |
-| sidecar-locals       | [[https://gitlab.com/ideasman42/emacs-sidecar-locals][ideasman42/emacs-sidecar-locals]]       | https://codeberg.org/ideasman42/emacs-sidecar-locals.git       |
-| spatial-navigate     | [[https://gitlab.com/ideasman42/emacs-spatial-navigate][ideasman42/emacs-spatial-navigate]]     | https://codeberg.org/ideasman42/emacs-spatial-navigate.git     |
-| spell-fu             | [[https://gitlab.com/ideasman42/emacs-spell-fu][ideasman42/emacs-spell-fu]]             | https://codeberg.org/ideasman42/emacs-spell-fu.git             |
-| undo-fu              | [[https://gitlab.com/ideasman42/emacs-undo-fu][ideasman42/emacs-undo-fu]]              | https://codeberg.org/ideasman42/emacs-undo-fu.git              |
-| undo-fu-session      | [[https://gitlab.com/ideasman42/emacs-undo-fu-session][ideasman42/emacs-undo-fu-session]]      | https://codeberg.org/ideasman42/emacs-undo-fu-session.git      |
-| utimeclock           | [[https://gitlab.com/ideasman42/emacs-utimeclock][ideasman42/emacs-utimeclock]]           | https://codeberg.org/ideasman42/emacs-utimeclock.git           |
-
-- flower: https://github.com/melpa/melpa/pull/7991
-- protesilaos: is in the process of moving all his packages
