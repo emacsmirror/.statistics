@@ -83,13 +83,13 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   328 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5074 |   5074 |       |       |       |  4838 |
+| github    | 5075 |   5075 |       |       |       |  4841 |
 | gitlab    |  172 |    172 |       |       |       |   155 |
 | sourcehut |   46 |     46 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  150 |    150 |       |       |       |   188 |
+| git       |  151 |    151 |       |       |       |   189 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1462 |        |  1462 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8369 |   6453 |  1462 |   474 |   343 |  5195 |
+| total     | 8371 |   6455 |  1462 |   474 |   343 |  5199 |
 
 * Emacs
 ** Prefer elpa
@@ -539,7 +539,7 @@
                           (asc melpa-recipes:name)]]))
 #+end_src
 #+results: secondary-packages
-| Primary package (125)   | Secondary package                 | Class     |
+| Primary package (126)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -750,6 +750,7 @@
 | ycm                     | company-ycm                       | github    |
 | ycmd                    | company-ycmd                      | github    |
 | ycmd                    | flycheck-ycmd                     | github    |
+| zetteldesk              | zetteldesk-kb                     | github    |
 | zettelkasten            | org-zettelkasten                  | github    |
 | zk                      | zk-index                          | github    |
 

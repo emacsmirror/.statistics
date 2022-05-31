@@ -32,6 +32,25 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+end_src
 #+results: conflict
+| Feature (4)     | Package              | Shelved |
+|-----------------+----------------------+---------|
+| light           | emacspeak            |         |
+| light           | ultratex             |         |
+| my-byte-compile | counsel-etags        |         |
+| my-byte-compile | eacl                 |         |
+| my-byte-compile | elpa-mirror          |         |
+| my-byte-compile | evil-matchit         |         |
+| my-byte-compile | evil-nerd-commenter  |         |
+| my-byte-compile | find-file-in-project |         |
+| my-byte-compile | mybigword            |         |
+| my-byte-compile | shellcop             |         |
+| my-byte-compile | shenshou             |         |
+| my-byte-compile | vc-msg               |         |
+| my-byte-compile | wucuo                |         |
+| my-elint        | evil-matchit         |         |
+| my-elint        | evil-nerd-commenter  |         |
+| org-contacts    | org-contacts         |         |
+| org-contacts    | org-contrib          |         |
 
 * Packages with unsatisfied dependencies
 #+name: unsatisfied
@@ -58,16 +77,17 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (8)     | Class  | Feature            | Provider |
-|-----------------+--------+--------------------+----------|
-| auctex-cluttex  | github | tex-buf            |          |
-| auctex-latexmk  | github | tex-buf            |          |
-| latex-extra     | github | tex-buf            |          |
-| org-roam        | github | emacsql-libsqlite3 |          |
-| python-mode     | gitlab | setup-ert-tests    |          |
-| sage-shell-mode | github | tex-buf            |          |
-| ultratex        | github | tex-buf            |          |
-| xenops          | github | tex-buf            |          |
+| Package (9)         | Class  | Feature                        | Provider |
+|---------------------+--------+--------------------------------+----------|
+| auctex-cluttex      | github | tex-buf                        |          |
+| auctex-latexmk      | github | tex-buf                        |          |
+| latex-extra         | github | tex-buf                        |          |
+| org-roam            | github | emacsql-libsqlite3             |          |
+| python-mode         | gitlab | setup-ert-tests                |          |
+| run-command-recipes | github | run-command-recipes-hashtables |          |
+| sage-shell-mode     | github | tex-buf                        |          |
+| ultratex            | github | tex-buf                        |          |
+| xenops              | github | tex-buf                        |          |
 
 - tex-buf: In auctex tex-buf was merged into tex
 - org-roam: https://github.com/org-roam/org-roam/issues/2146
