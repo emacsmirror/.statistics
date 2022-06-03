@@ -77,20 +77,22 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (9)         | Class  | Feature                        | Provider |
-|---------------------+--------+--------------------------------+----------|
-| auctex-cluttex      | github | tex-buf                        |          |
-| auctex-latexmk      | github | tex-buf                        |          |
-| latex-extra         | github | tex-buf                        |          |
-| org-roam            | github | emacsql-libsqlite3             |          |
-| python-mode         | gitlab | setup-ert-tests                |          |
-| run-command-recipes | github | run-command-recipes-hashtables |          |
-| sage-shell-mode     | github | tex-buf                        |          |
-| ultratex            | github | tex-buf                        |          |
-| xenops              | github | tex-buf                        |          |
+| Package (6)     | Class  | Feature | Provider |
+|-----------------+--------+---------+----------|
+| auctex-cluttex  | github | tex-buf |          |
+| auctex-latexmk  | github | tex-buf |          |
+| latex-extra     | github | tex-buf |          |
+| sage-shell-mode | github | tex-buf |          |
+| ultratex        | github | tex-buf |          |
+| xenops          | github | tex-buf |          |
 
-- tex-buf: In auctex tex-buf was merged into tex
-- org-roam: https://github.com/org-roam/org-roam/issues/2146
+- tex-buf
+  - https://github.com/tsuu32/auctex-cluttex/issues/7
+  - https://github.com/tom-tan/auctex-latexmk/issues/44
+  - https://github.com/Malabarba/latex-extra/issues/35
+  - https://github.com/sagemath/sage-shell-mode/issues/63
+  - https://github.com/jhpalmieri/ultratex/issues/1
+  - https://github.com/dandavison/xenops/issues/48
 
 * Packages whose repositories have been archived
 Don't forget to update ~emir--archived-packages~ occasionally.
@@ -111,11 +113,6 @@ Don't forget to update ~emir--archived-packages~ occasionally.
      #'string< :key #'car))
 #+end_src
 #+results: archived
-| Package (1)       | Repository                      | M | Reverse Dependencies |
-|-------------------+---------------------------------+---+----------------------|
-| flymake-proselint | [[https://github.com/manuel-uberti/flymake-proselint][manuel-uberti/flymake-proselint]] |   |                      |
-
-- manuel-uberti: is in the process of moving all his packages, I believe
 
 * Github repositories that were moved or removed
 Don't forget to update ~emir--moved-packages~ occasionally.

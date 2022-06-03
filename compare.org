@@ -83,9 +83,9 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   328 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5075 |   5075 |       |       |       |  4841 |
+| github    | 5074 |   5074 |       |       |       |  4841 |
 | gitlab    |  172 |    172 |       |       |       |   155 |
-| sourcehut |   46 |     46 |       |       |       |       |
+| sourcehut |   47 |     47 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
@@ -319,7 +319,7 @@
 | ergoemacs-mode             | github    | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                        |
 | expand-region              | github    | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                        |
 | exwm                       | github    | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                     |
-| flymake-proselint          | github    | external | [[https://github.com/manuel-uberti/flymake-proselint][manuel-uberti/flymake-proselint]]                 |
+| flymake-proselint          | sourcehut | external | [[https://git.sr.ht/~manuel-uberti/flycheck-proselint][manuel-uberti/flycheck-proselint]]                |
 | fontaine                   | sourcehut | external | [[https://git.sr.ht/~protesilaos/fontaine][protesilaos/fontaine]]                            |
 | frog-menu                  | github    | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                               |
 | ftable                     | github    | external | [[https://github.com/casouri/ftable][casouri/ftable]]                                  |

@@ -74,7 +74,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+end_src
 #+results: required-drop
-| Package (84)                    | Class    | Feature                  | Reason                                              |
+| Package (86)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -153,8 +153,10 @@
 | org-readme                      | github   | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                         |
 | org-redmine                     | github   | anything                 | anything                                            |
 | org-ref                         | github   | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                         |
+| org-roam                        | github   | emacsql-libsqlite3       | backward compatibility                              |
 | org-toodledo                    | github   | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                            |
 | osa                             | github   | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]]   |
+| ox-hugo                         | github   | org-info                 | backward compatibility                              |
 | ox-latex-subfigure              | github   | org-loaddefs             | generated external file                             |
 | pinot                           | github   | anything-config          | anything                                            |
 | plsense                         | github   | perl-completion          | anything                                            |
@@ -163,6 +165,7 @@
 | python-mode                     | gitlab   | org-loaddefs             | generated external file                             |
 | python-mode                     | gitlab   | py-bug-numbered-tests    | testing only                                        |
 | python-mode                     | gitlab   | pymacs                   | it's complicated (email)                            |
+| python-mode                     | gitlab   | setup-ert-tests          | testing only                                        |
 | r-autoyas                       | github   | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                          |
 | rcodetools                      | subtree  | anything                 | anything                                            |
 | rcodetools                      | subtree  | anything-show-completion | anything                                            |

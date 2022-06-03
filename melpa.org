@@ -39,23 +39,23 @@ Also see https://github.com/melpa/melpa/issues/7892.
 #+results: missing-github
 | Package (550)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| emacspeak                    | 2022-05-31 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
-| mu4e                         | 2022-05-30 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
-| fuz-bin                      | 2022-05-28 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
-| sublime-fuzzy                | 2022-05-28 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
+| emacspeak                    | 2022-06-03 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| snails                       | 2022-06-03 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
+| flx-rs                       | 2022-06-02 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
+| flxy                         | 2022-06-02 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
+| fuz-bin                      | 2022-06-02 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
+| github-tags                  | 2022-06-02 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
+| mu4e                         | 2022-06-02 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
+| sublime-fuzzy                | 2022-06-02 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
 | eaf                          | 2022-05-26 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | eaf-pdf-viewer               | 2022-05-26 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
-| flx-rs                       | 2022-05-24 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
 | eaf-file-manager             | 2022-05-17 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
 | movie                        | 2022-05-16 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
 | emir                         | 2022-05-12 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | mini-popup                   | 2022-05-11 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
-| snails                       | 2022-05-10 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
 | eaf-browser                  | 2022-05-09 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
 | dumbparens                   | 2022-05-08 | [[https://github.com/radian-software/dumbparens][radian-software/dumbparens]]              | Simple paren-matching solution                                         |
 | guess-tex-master             | 2022-05-05 | [[https://github.com/mattfidler/guess-tex-master.el][mattfidler/guess-tex-master.el]]          | Guess LaTeX Master File                                                |
-| flxy                         | 2022-04-30 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
-| github-tags                  | 2022-04-30 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
 | eaf-terminal                 | 2022-04-23 | [[https://github.com/emacs-eaf/eaf-terminal][emacs-eaf/eaf-terminal]]                  | Terminal plugins                                                       |
 | bookiez                      | 2022-04-15 | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                    | Managing Books                                                         |
 | cddb                         | 2022-04-15 | [[https://github.com/larsmagne/cddb.el][larsmagne/cddb.el]]                       | Cddb interface                                                         |
@@ -74,6 +74,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | buffer-action                | 2022-03-03 | [[https://github.com/xwl/buffer-action][xwl/buffer-action]]                       | Perform actions(compile/run, etc) in buffer based on mode/filename     |
 | director                     | 2022-01-21 | [[https://github.com/bard/emacs-director][bard/emacs-director]]                     | Simulate user sessions                                                 |
 | speechd                      | 2021-12-31 | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     | Library for accessing Speech Dispatcher                                |
+| polyp                        | 2021-11-26 | [[https://github.com/minad/polyp][minad/polyp]]                             | Nested transient menus                                                 |
 | uchronia                     | 2021-11-26 | [[https://github.com/minad/uchronia][minad/uchronia]]                          | Uchronia mode                                                          |
 | math-delimiters              | 2021-10-28 | [[https://github.com/oantolin/math-delimiters][oantolin/math-delimiters]]                | Insert math delimiters in TeX, LaTeX and Org buffers                   |
 | awesome-tab                  | 2021-10-18 | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]              | Provide an out of box configuration to use tab in Emacs                |
@@ -94,7 +95,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | mv-shell                     | 2021-05-04 | [[https://github.com/nflath/mv-shell][nflath/mv-shell]]                         | Keep buffers in sync with filename throughout 'mv'commands in shell-mo |
 | zone-matrix                  | 2021-05-01 | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        | The matrix screen saver on Emacs                                       |
 | frame-ctr                    | 2021-04-15 | [[https://github.com/takaxp/frame-ctr][takaxp/frame-ctr]]                        | A tool to control frame size, position, and font size                  |
-| polyp                        | 2021-04-13 | [[https://github.com/minad/polyp][minad/polyp]]                             | Nested transient menus                                                 |
 | dired-hacks                  | 2021-04-03 | [[https://github.com/Fuco1/dired-hacks][Fuco1/dired-hacks]]                       | Utilities and helpers for dired-hacks collection                       |
 | ess-stata-mode               | 2021-03-25 | [[https://github.com/emacs-ess/ess-stata-mode][emacs-ess/ess-stata-mode]]                | Stata customization                                                    |
 | mark-forward-sexp            | 2021-03-10 | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]               | Mark regions sematically inside balanced expressions                   |
