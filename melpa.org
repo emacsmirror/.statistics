@@ -37,22 +37,24 @@ Also see https://github.com/melpa/melpa/issues/7892.
      #'string> :key #'cadr))
 #+end_src
 #+results: missing-github
-| Package (550)                |   Modified | Link                                    | Summary                                                                |
+| Package (551)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| emacspeak                    | 2022-06-03 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
-| snails                       | 2022-06-03 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
+| emacspeak                    | 2022-06-07 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| fzf-native                   | 2022-06-06 | [[https://github.com/dangduc/fzf-native][dangduc/fzf-native]]                      | Fuzzy completion style                                                 |
+| smartchr                     | 2022-06-06 | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                  | Emacs version of smartchr.vim                                          |
+| snails                       | 2022-06-06 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
+| mini-popup                   | 2022-06-05 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
+| mu4e                         | 2022-06-05 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
 | flx-rs                       | 2022-06-02 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
 | flxy                         | 2022-06-02 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
 | fuz-bin                      | 2022-06-02 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
 | github-tags                  | 2022-06-02 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
-| mu4e                         | 2022-06-02 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
 | sublime-fuzzy                | 2022-06-02 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
 | eaf                          | 2022-05-26 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | eaf-pdf-viewer               | 2022-05-26 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
 | eaf-file-manager             | 2022-05-17 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
 | movie                        | 2022-05-16 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
 | emir                         | 2022-05-12 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
-| mini-popup                   | 2022-05-11 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
 | eaf-browser                  | 2022-05-09 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
 | dumbparens                   | 2022-05-08 | [[https://github.com/radian-software/dumbparens][radian-software/dumbparens]]              | Simple paren-matching solution                                         |
 | guess-tex-master             | 2022-05-05 | [[https://github.com/mattfidler/guess-tex-master.el][mattfidler/guess-tex-master.el]]          | Guess LaTeX Master File                                                |
@@ -65,6 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | pvr                          | 2022-04-15 | [[https://github.com/larsmagne/pvr.el][larsmagne/pvr.el]]                        | Personal Video Recorder                                                |
 | scan                         | 2022-04-15 | [[https://github.com/larsmagne/scan.el][larsmagne/scan.el]]                       | Scanning Sleeves                                                       |
 | tellstick                    | 2022-04-15 | [[https://github.com/larsmagne/tellstick.el][larsmagne/tellstick.el]]                  | Controlling tellstick controllers                                      |
+| straight                     | 2022-04-13 | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
 | ga                           | 2022-04-06 | [[https://github.com/xwl/ga][xwl/ga]]                                  | Generic apt alike interfaces for various package management tools      |
 | pymacs                       | 2022-04-02 | [[https://github.com/dgentry/Pymacs][dgentry/Pymacs]]                          | Interface between Emacs Lisp and Python                                |
 | eaf-video-player             | 2022-03-30 | [[https://github.com/emacs-eaf/eaf-video-player][emacs-eaf/eaf-video-player]]              | Video player                                                           |
@@ -78,7 +81,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | uchronia                     | 2021-11-26 | [[https://github.com/minad/uchronia][minad/uchronia]]                          | Uchronia mode                                                          |
 | math-delimiters              | 2021-10-28 | [[https://github.com/oantolin/math-delimiters][oantolin/math-delimiters]]                | Insert math delimiters in TeX, LaTeX and Org buffers                   |
 | awesome-tab                  | 2021-10-18 | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]              | Provide an out of box configuration to use tab in Emacs                |
-| straight                     | 2021-09-27 | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
 | infix                        | 2021-09-14 | [[https://github.com/rspeele/infix-dot-el][rspeele/infix.el]]                        | Infix operators for Emacs Lisp                                         |
 | sclang                       | 2021-09-04 | [[https://github.com/supercollider/scel][supercollider/scel]]                      | IDE for working with the SuperCollider language                        |
 | latch                        | 2021-08-11 | [[https://github.com/skeeto/elisp-latch][skeeto/elisp-latch]]                      | Promises and latches for Elisp                                         |
@@ -266,7 +268,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | lyricwiki                    | 2014-09-28 | [[https://github.com/febuiles/lyricwiki.el][febuiles/lyricwiki.el]]                   | An Emacs mode to fetch lyrics                                          |
 | ert-buffer-report            | 2014-09-21 | [[https://github.com/tj64/ert-buffer-report][tj64/ert-buffer-report]]                  | Extensions for ert-buffer.el                                           |
 | ecd                          | 2014-09-16 | [[https://github.com/akicho8/ecd][akicho8/ecd]]                             | Easy Change Directory                                                  |
-| smartchr                     | 2014-07-28 | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                  | Emacs version of smartchr.vim                                          |
 | mail-bug                     | 2014-07-27 | [[https://github.com/xaccrocheur/mail-bug][yPhil-gh/mail-bug]]                       | A purely IMAP based email client for EMACS                             |
 | a2ps-multibyte               | 2014-07-16 | [[https://github.com/ffevotte/a2ps-multibyte.el][ffevotte/a2ps-multibyte.el]]              | Print buffers with a2ps even when they are encoded in utf-8            |
 | go-svg                       | 2014-07-06 | [[https://github.com/yhvh/go-svg-mode][yhvh/go-svg-mode]]                        | A go gtp interface with svg image support                              |
