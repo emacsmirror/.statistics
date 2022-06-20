@@ -17,32 +17,33 @@
                :order-by [(asc package) (asc feature)]]))
 #+end_src
 #+results: provided-join
-| Package (16) | Class     | Feature        | Reason                                    |
-|--------------+-----------+----------------+-------------------------------------------|
-| ddskk        | github    | skk-kanagaki   | inside directory containing .nosearch     |
-| ddskk        | github    | skk-tutcode    | inside directory containing .nosearch     |
-| edb          | orphaned  | edbcore        | generated                                 |
-| emacs        | builtin   | cus-load       | generated                                 |
-| emacs        | builtin   | leim-list      | generated                                 |
-| emacspeak    | github    | dtk-css-speech | inside directory containing .nosearch     |
-| eshell       | builtin   | esh-groups     | generated                                 |
-| finder       | builtin   | finder-inf     | generated                                 |
-| fuz          | github    | fuz-core       | provided by module                        |
-| geo          | sourcehut | geocode-emacs  | provided by module                        |
-| hotfuzz      | github    | hotfuzz-module | provided by module                        |
-| liberime     | github    | liberime-core  | provided by module                        |
-| pq           | github    | pq-core        | provided by module                        |
-| realgud      | github    | bashdb         | inside directory containing .nosearch     |
-| sly          | github    | sly-buttons    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-cl-indent  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-common     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-completion | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-messages   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-parse      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-tests      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sqlite3      | github    | sqlite3-api    | provided by module                        |
-| tree-sitter  | github    | tsc-dyn        | provided by module                        |
-| vterm        | github    | vterm-module   | provided by module                        |
+| Package (17) | Class     | Feature           | Reason                                    |
+|--------------+-----------+-------------------+-------------------------------------------|
+| ddskk        | github    | skk-kanagaki      | inside directory containing .nosearch     |
+| ddskk        | github    | skk-tutcode       | inside directory containing .nosearch     |
+| edb          | orphaned  | edbcore           | generated                                 |
+| emacs        | builtin   | cus-load          | generated                                 |
+| emacs        | builtin   | leim-list         | generated                                 |
+| emacspeak    | github    | dtk-css-speech    | inside directory containing .nosearch     |
+| eshell       | builtin   | esh-groups        | generated                                 |
+| finder       | builtin   | finder-inf        | generated                                 |
+| fuz          | github    | fuz-core          | provided by module                        |
+| fzf-native   | github    | fzf-native-module | provided by module                        |
+| geo          | sourcehut | geocode-emacs     | provided by module                        |
+| hotfuzz      | github    | hotfuzz-module    | provided by module                        |
+| liberime     | github    | liberime-core     | provided by module                        |
+| pq           | github    | pq-core           | provided by module                        |
+| realgud      | github    | bashdb            | inside directory containing .nosearch     |
+| sly          | github    | sly-buttons       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-cl-indent     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-common        | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-completion    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-messages      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-parse         | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly          | github    | sly-tests         | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sqlite3      | github    | sqlite3-api       | provided by module                        |
+| tree-sitter  | github    | tsc-dyn           | provided by module                        |
+| vterm        | github    | vterm-module      | provided by module                        |
 
 * Drop provided features
 #+name: provided-drop
@@ -74,7 +75,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+end_src
 #+results: required-drop
-| Package (86)                    | Class    | Feature                  | Reason                                              |
+| Package (85)                    | Class    | Feature                  | Reason                                              |
 |---------------------------------+----------+--------------------------+-----------------------------------------------------|
 | ac-octave                       | github   | octave-inf               | backward compatibility                              |
 | achievements                    | gitlab   | command-frequency        | shelved soft                                        |
@@ -118,7 +119,6 @@
 | hyperbole                       | gnu      | id-menubars              | unreleased, author says will be released eventually |
 | icicles                         | wiki     | anything                 | anything                                            |
 | icicles                         | wiki     | color-theme              | backward compatibility                              |
-| jabber                          | github   | un-define                | XEmacs compatibility                                |
 | jda                             | github   | anything                 | anything                                            |
 | jdee                            | github   | working                  | stand-alone cedet compatibility                     |
 | lacarte                         | wiki     | subr-21                  | backward compatibility                              |

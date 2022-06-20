@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    15 |       |
-| gnu-elpa  |  141 |    141 |       |       |   328 |       |
+| gnu-elpa  |  141 |    141 |       |       |   329 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5075 |   5075 |       |       |       |  4841 |
-| gitlab    |  172 |    172 |       |       |       |   155 |
-| sourcehut |   47 |     47 |       |       |       |       |
+| github    | 5078 |   5078 |       |       |       |  4847 |
+| gitlab    |  173 |    173 |       |       |       |   157 |
+| sourcehut |   48 |     48 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  151 |    151 |       |       |       |   189 |
+| git       |  153 |    153 |       |       |       |   191 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -101,7 +101,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1462 |        |  1462 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8372 |   6456 |  1462 |   474 |   343 |  5199 |
+| total     | 8379 |   6463 |  1462 |   474 |   344 |  5209 |
 
 * Emacs
 ** Prefer elpa
@@ -257,12 +257,13 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (186)              | Class     | Gelpa    | Link                                            |
+| Package (187)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
 | aggressive-indent          | github    | external | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]                |
 | ahungry-theme              | github    | external | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                     |
+| aircon-theme               | sourcehut | external | [[https://git.sr.ht/~chambln/aircon-theme.el][chambln/aircon-theme.el]]                         |
 | async                      | github    | external | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                            |
 | auctex                     | gnu       | external | [[https://savannah.gnu.org/projects/auctex][gnu:auctex]]                                      |
 | avy                        | github    | external | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                     |
@@ -539,7 +540,7 @@
                           (asc melpa-recipes:name)]]))
 #+end_src
 #+results: secondary-packages
-| Primary package (126)   | Secondary package                 | Class     |
+| Primary package (127)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -622,6 +623,7 @@
 | flyspell-correct        | flyspell-correct-popup            | github    |
 | friendly-shell          | friendly-remote-shell             | github    |
 | friendly-shell          | friendly-shell-command            | github    |
+| frimacs                 | ob-fricas                         | github    |
 | fsharp-mode             | eglot-fsharp                      | github    |
 | fuz                     | helm-fuz                          | github    |
 | git-emacs               | git-blamed                        | github    |
@@ -751,6 +753,7 @@
 | ycmd                    | company-ycmd                      | github    |
 | ycmd                    | flycheck-ycmd                     | github    |
 | zetteldesk              | zetteldesk-kb                     | github    |
+| zetteldesk              | zetteldesk-ref                    | github    |
 | zettelkasten            | org-zettelkasten                  | github    |
 | zk                      | zk-index                          | github    |
 

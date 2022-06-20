@@ -77,15 +77,19 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (6)     | Class  | Feature | Provider |
-|-----------------+--------+---------+----------|
-| auctex-cluttex  | github | tex-buf |          |
-| auctex-latexmk  | github | tex-buf |          |
-| latex-extra     | github | tex-buf |          |
-| sage-shell-mode | github | tex-buf |          |
-| ultratex        | github | tex-buf |          |
-| xenops          | github | tex-buf |          |
+| Package (7)     | Class  | Feature        | Provider |
+|-----------------+--------+----------------+----------|
+| auctex-cluttex  | github | tex-buf        |          |
+| auctex-latexmk  | github | tex-buf        |          |
+| jabber-otr      | github | jabber-chat    |          |
+| jabber-otr      | github | jabber-history |          |
+| jabber-otr      | github | jabber-muc     |          |
+| latex-extra     | github | tex-buf        |          |
+| sage-shell-mode | github | tex-buf        |          |
+| ultratex        | github | tex-buf        |          |
+| xenops          | github | tex-buf        |          |
 
+- jabber-otr: https://github.com/melpa/melpa/pull/8055
 - tex-buf
   - https://github.com/tsuu32/auctex-cluttex/issues/7
   - https://github.com/tom-tan/auctex-latexmk/issues/44
@@ -128,6 +132,10 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                      #'string< :key #'cadr)))
 #+end_src
 #+results: github-moved
+| Package (2)       | Old repository             | New repository             | M |
+|-------------------+----------------------------+----------------------------+---|
+| goto-char-preview | jcs-elpa/goto-char-preview | emacs-vs/goto-char-preview | ✓ |
+| goto-line-preview | jcs-elpa/goto-line-preview | emacs-vs/goto-line-preview | ✓ |
 
 * Missing library summary
 #+name: missing-summary
@@ -145,12 +153,11 @@ Don't forget to update ~emir--moved-packages~ occasionally.
                        :order-by [(asc name)]])))
 #+end_src
 #+results: missing-summary
-| Package (5)       | Class   | M |
+| Package (4)       | Class   | M |
 |-------------------+---------+---|
 | arc-dark-theme    | github  | ✓ |
 | evil-escape       | github  | ✓ |
 | icons-in-terminal | github  |   |
-| jabber            | github  | ✓ |
 | zeitgeist         | subtree |   |
 
 - arc-dark-theme: https://github.com/cfraz89/arc-dark-theme/pull/2
