@@ -81,15 +81,15 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    15 |       |
-| gnu-elpa  |  141 |    141 |       |       |   329 |       |
+| gnu-elpa  |  141 |    141 |       |       |   334 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5078 |   5078 |       |       |       |  4847 |
-| gitlab    |  173 |    173 |       |       |       |   157 |
-| sourcehut |   48 |     48 |       |       |       |       |
+| github    | 5103 |   5103 |       |       |       |  4879 |
+| gitlab    |  175 |    175 |       |       |       |   157 |
+| sourcehut |   50 |     50 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  153 |    153 |       |       |       |   191 |
+| git       |  160 |    160 |       |       |       |   201 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  135 |    135 |       |       |       |       |
-| shelved   | 1462 |        |  1462 |       |       |       |
+| shelved   | 1463 |        |  1463 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8379 |   6463 |  1462 |   474 |   344 |  5209 |
+| total     | 8416 |   6499 |  1463 |   474 |   349 |  5251 |
 
 * Emacs
 ** Prefer elpa
@@ -257,13 +257,14 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (187)              | Class     | Gelpa    | Link                                            |
+| Package (192)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
 | aggressive-indent          | github    | external | [[https://github.com/Malabarba/aggressive-indent-mode][Malabarba/aggressive-indent-mode]]                |
 | ahungry-theme              | github    | external | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                     |
 | aircon-theme               | sourcehut | external | [[https://git.sr.ht/~chambln/aircon-theme.el][chambln/aircon-theme.el]]                         |
+| assess                     | github    | external | [[https://github.com/phillord/assess][phillord/assess]]                                 |
 | async                      | github    | external | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                            |
 | auctex                     | gnu       | external | [[https://savannah.gnu.org/projects/auctex][gnu:auctex]]                                      |
 | avy                        | github    | external | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                     |
@@ -289,6 +290,7 @@
 | consult                    | github    | external | [[https://github.com/minad/consult][minad/consult]]                                   |
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]             |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                     |
+| corfu-doc                  | github    | external | [[https://github.com/galeo/corfu-doc][galeo/corfu-doc]]                                 |
 | coterm                     | git       | external | [[https://repo.or.cz/emacs-coterm.git]]             |
 | cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                |
 | cpupower                   | gitlab    | external | [[https://gitlab.com/steve-emacs-stuff/cpupower-el][steve-emacs-stuff/cpupower-el]]                   |
@@ -299,6 +301,7 @@
 | dash                       | github    | external | [[https://github.com/magnars/dash.el][magnars/dash.el]]                                 |
 | dbus-codegen               | github    | external | [[https://github.com/ueno/dbus-codegen-el][ueno/dbus-codegen-el]]                            |
 | delight                    | nongnu    | external | [[https://savannah.nongnu.org/projects/delight][nongnu:delight]]                                  |
+| denote                     | sourcehut | external | [[https://git.sr.ht/~protesilaos/denote][protesilaos/denote]]                              |
 | detached                   | sourcehut | external | [[https://git.sr.ht/~niklaseklund/detached.el][niklaseklund/detached.el]]                        |
 | devdocs                    | github    | external | [[https://github.com/astoff/devdocs.el][astoff/devdocs.el]]                               |
 | diff-hl                    | github    | external | [[https://github.com/dgutov/diff-hl][dgutov/diff-hl]]                                  |
@@ -352,6 +355,7 @@
 | loc-changes                | github    | external | [[https://github.com/rocky/emacs-loc-changes][rocky/emacs-loc-changes]]                         |
 | loccur                     | github    | external | [[https://github.com/fourier/loccur][fourier/loccur]]                                  |
 | logos                      | gitlab    | external | [[https://gitlab.com/protesilaos/logos][protesilaos/logos]]                               |
+| m-buffer                   | github    | external | [[https://github.com/phillord/m-buffer-el][phillord/m-buffer-el]]                            |
 | marginalia                 | github    | external | [[https://github.com/minad/marginalia][minad/marginalia]]                                |
 | math-symbol-lists          | github    | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                        |
 | mct                        | gitlab    | external | [[https://gitlab.com/protesilaos/mct][protesilaos/mct]]                                 |
@@ -371,6 +375,7 @@
 | orderless                  | github    | external | [[https://github.com/oantolin/orderless][oantolin/orderless]]                              |
 | org                        | gnu       | external | [[https://git.savannah.gnu.org/cgit/org.git]]       |
 | org-modern                 | github    | external | [[https://github.com/minad/org-modern][minad/org-modern]]                                |
+| org-notify                 | github    | external | [[https://github.com/p-m/org-notify][p-m/org-notify]]                                  |
 | org-real                   | gitlab    | external | [[https://gitlab.com/tygrdev/org-real][tygrdev/org-real]]                                |
 | org-remark                 | github    | external | [[https://github.com/nobiot/org-remark][nobiot/org-remark]]                               |
 | org-transclusion           | github    | external | [[https://github.com/nobiot/org-transclusion][nobiot/org-transclusion]]                         |
@@ -482,7 +487,7 @@
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
 | ebdb                | https://github.com/girzel/ebdb.git                |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
-| persist             | https://gitlab.com/phillord/persist.git           |
+| persist             | https://gitlab.com/phillord/persist               |
 | bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |
 
 * Melpa
@@ -540,7 +545,7 @@
                           (asc melpa-recipes:name)]]))
 #+end_src
 #+results: secondary-packages
-| Primary package (127)   | Secondary package                 | Class     |
+| Primary package (128)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -566,6 +571,7 @@
 | chumpy-windows          | splitter                          | github    |
 | chumpy-windows          | window-jump                       | github    |
 | circe                   | tracking                          | github    |
+| citar                   | citar-embark                      | github    |
 | clojure-essential-ref   | clojure-essential-ref-nov         | github    |
 | clojure-mode            | clojure-mode-extra-font-locking   | github    |
 | codesearch              | projectile-codesearch             | github    |
@@ -752,8 +758,10 @@
 | ycm                     | company-ycm                       | github    |
 | ycmd                    | company-ycmd                      | github    |
 | ycmd                    | flycheck-ycmd                     | github    |
+| zetteldesk              | zetteldesk-info                   | github    |
 | zetteldesk              | zetteldesk-kb                     | github    |
 | zetteldesk              | zetteldesk-ref                    | github    |
+| zetteldesk              | zetteldesk-remark                 | github    |
 | zettelkasten            | org-zettelkasten                  | github    |
 | zk                      | zk-index                          | github    |
 
@@ -788,3 +796,8 @@
                 :order-by [(asc packages:name)]])))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (3)     | Mirror                 | Melpa                                         |
+|-----------------+------------------------+-----------------------------------------------|
+| git-lens        | [[https://gitlab.com/pidu/git-lens][pidu/git-lens]]          | https://codeberg.org/pidu/git-lens            |
+| git-timemachine | [[https://gitlab.com/pidu/git-timemachine][pidu/git-timemachine]]   | https://codeberg.org/pidu/git-timemachine.git |
+| tok-theme       | [[https://github.com/topikettunen/tok-theme][topikettunen/tok-theme]] | https://git.sr.ht/~tok/tok-theme              |
