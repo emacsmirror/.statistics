@@ -83,13 +83,13 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   334 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5103 |   5103 |       |       |       |  4879 |
-| gitlab    |  175 |    175 |       |       |       |   157 |
-| sourcehut |   50 |     50 |       |       |       |       |
+| github    | 5090 |   5090 |       |       |       |  4870 |
+| gitlab    |  172 |    172 |       |       |       |   156 |
+| sourcehut |   52 |     52 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  160 |    160 |       |       |       |   201 |
+| git       |  168 |    168 |       |       |       |   209 |
 | subtree   |   23 |     23 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
@@ -99,9 +99,9 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  135 |    135 |       |       |       |       |
-| shelved   | 1463 |        |  1463 |       |       |       |
+| shelved   | 1469 |        |  1469 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8416 |   6499 |  1463 |   474 |   349 |  5251 |
+| total     | 8416 |   6493 |  1469 |   474 |   349 |  5249 |
 
 * Emacs
 ** Prefer elpa
@@ -433,7 +433,7 @@
 | validate                   | github    | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                           |
 | valign                     | github    | external | [[https://github.com/casouri/valign][casouri/valign]]                                  |
 | vc-backup                  | sourcehut | external | [[https://git.sr.ht/~pkal/vc-backup][pkal/vc-backup]]                                  |
-| vc-got                     | git       | external | [[https://git.omarpolo.com/vc-got]]                 |
+| vc-got                     | github    | external | [[https://github.com/omar-polo/vc-got][omar-polo/vc-got]]                                |
 | vc-hgcmd                   | github    | external | [[https://github.com/muffinmad/emacs-vc-hgcmd][muffinmad/emacs-vc-hgcmd]]                        |
 | vdiff                      | github    | external | [[https://github.com/justbur/emacs-vdiff][justbur/emacs-vdiff]]                             |
 | vertico                    | github    | external | [[https://github.com/minad/vertico][minad/vertico]]                                   |
@@ -597,7 +597,7 @@
 | distel-completion-lib   | auto-complete-distel              | github    |
 | distel-completion-lib   | company-distel                    | github    |
 | dix                     | dix-evil                          | github    |
-| django-mode             | django-snippets                   | github    |
+| django-mode             | django-snippets                   | shelved   |
 | dogears                 | helm-dogears                      | github    |
 | dylan                   | dime                              | github    |
 | eclim                   | ac-emacs-eclim                    | github    |
@@ -654,7 +654,7 @@
 | jump                    | inflections                       | github    |
 | kaesar                  | kaesar-file                       | github    |
 | kaesar                  | kaesar-mode                       | github    |
-| kaleidoscope            | kaleidoscope-evil-state-flash     | github    |
+| kaleidoscope            | kaleidoscope-evil-state-flash     | git       |
 | keg                     | flycheck-keg                      | github    |
 | keg                     | keg-mode                          | github    |
 | kubel                   | kubel-evil                        | github    |
@@ -768,36 +768,10 @@
 ** Diverging repositories
 #+name: melpa-diverging-repositories
 #+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Mirror" "Melpa")
-    (-keep
-     (pcase-lambda (`(,name ,type ,url ,murl))
-       (and
-        (not (or (and (string-prefix-p "hg::" url)
-                      (equal murl (substring url 4)))
-                 (string-prefix-p "git@github.com:emacsmirror/" murl)
-                 (string-prefix-p "git@github.com:emacsattic/"  murl)
-                 (equal
-                  (if (string-suffix-p ".git"  url) (substring  url 0 -4)  url)
-                  (if (string-suffix-p ".git" murl) (substring murl 0 -4) murl))))
-        (list name
-              (epkg-org-link  name)
-              (melpa-org-link name))))
-     (epkg-sql [:select :distinct [packages:name packages:class
-                                   packages:url melpa-recipes:url]
-                :from [packages melpa-recipes]
-                :where    (= melpa-recipes:epkg-package packages:name)
-                :and      (= melpa-recipes:epkg-package melpa-recipes:name)
-                :and :not (= packages:url melpa-recipes:url)
-                :and :not (= packages:class 'minority)
-                :and :not (= packages:class 'subtree)
-                :and :not (= packages:class 'builtin)
-                :and :not (= packages:class 'gnu-elpa)
-                :and :not (= packages:class 'wiki)
-                :order-by [(asc packages:name)]])))
+  (epkg-with-org-header ("Package" "Mirror" "" "Melpa" "")
+    (mapcar
+     (pcase-lambda (`(,name ,type ,url ,fetcher ,murl))
+       (list name type (epkg-org-link name) fetcher (melpa-org-link name)))
+     (emir-melpa--migrated-packages)))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (3)     | Mirror                 | Melpa                                         |
-|-----------------+------------------------+-----------------------------------------------|
-| git-lens        | [[https://gitlab.com/pidu/git-lens][pidu/git-lens]]          | https://codeberg.org/pidu/git-lens            |
-| git-timemachine | [[https://gitlab.com/pidu/git-timemachine][pidu/git-timemachine]]   | https://codeberg.org/pidu/git-timemachine.git |
-| tok-theme       | [[https://github.com/topikettunen/tok-theme][topikettunen/tok-theme]] | https://git.sr.ht/~tok/tok-theme              |

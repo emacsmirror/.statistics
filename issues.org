@@ -32,29 +32,14 @@
                       (cl-sort alist #'string< :key #'car)))))
 #+end_src
 #+results: conflict
-| Feature (6)      | Package              | Shelved |
-|------------------+----------------------+---------|
-| el-mock          | el-mock              |         |
-| el-mock          | rgb                  |         |
-| ert-expectations | ert-expectations     |         |
-| ert-expectations | rgb                  |         |
-| light            | emacspeak            |         |
-| light            | ultratex             |         |
-| my-byte-compile  | counsel-etags        |         |
-| my-byte-compile  | eacl                 |         |
-| my-byte-compile  | elpa-mirror          |         |
-| my-byte-compile  | evil-matchit         |         |
-| my-byte-compile  | evil-nerd-commenter  |         |
-| my-byte-compile  | find-file-in-project |         |
-| my-byte-compile  | mybigword            |         |
-| my-byte-compile  | shellcop             |         |
-| my-byte-compile  | shenshou             |         |
-| my-byte-compile  | vc-msg               |         |
-| my-byte-compile  | wucuo                |         |
-| org-contacts     | org-contacts         |         |
-| org-contacts     | org-contrib          |         |
-| tabulated-list   | font-lock-studio     |         |
-| tabulated-list   | tabulated-list       |         |
+| Feature (2)      | Package          | Shelved |
+|------------------+------------------+---------|
+| el-mock          | el-mock          |         |
+| el-mock          | rgb              |         |
+| ert-expectations | ert-expectations |         |
+| ert-expectations | rgb              |         |
+
+- rgb: https://gitlab.com/cwpitts/rgb.el/-/issues/1
 
 * Packages with unsatisfied dependencies
 #+name: unsatisfied
@@ -81,7 +66,7 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (7)     | Class  | Feature        | Provider |
+| Package (6)     | Class  | Feature        | Provider |
 |-----------------+--------+----------------+----------|
 | auctex-cluttex  | github | tex-buf        |          |
 | auctex-latexmk  | github | tex-buf        |          |
@@ -90,7 +75,6 @@
 | jabber-otr      | github | jabber-muc     |          |
 | latex-extra     | github | tex-buf        |          |
 | sage-shell-mode | github | tex-buf        |          |
-| ultratex        | github | tex-buf        |          |
 | xenops          | github | tex-buf        |          |
 
 - jabber-otr: https://github.com/melpa/melpa/pull/8055
@@ -106,7 +90,7 @@
 Don't forget to update ~emir--archived-packages~ occasionally.
 #+name: archived
 #+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Repository" "M" "Reverse Dependencies")
+  (epkg-with-org-header ("Package" "Repository" "Melpa" "Reverse Dependencies")
     (cl-sort
      (-keep (lambda (name)
               (and (member name emir--archived-packages)
