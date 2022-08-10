@@ -11,10 +11,11 @@
 #+name: summary
 #+begin_src emacs-lisp
   (require 'finder-inf)
-  (let* ((builtin (read (car (process-lines
-                              emir-emacs-reference "-Q" "--batch" "--eval"
-                              "(progn (require 'finder-inf)
-                                      (princ (length package--builtins)))"))))
+  (let* ((builtin 474) ; KLUDGE
+         ;; (builtin (read (car (process-lines
+         ;;                      emir-emacs-reference "-Q" "--batch" "--eval"
+         ;;                      "(progn (require 'finder-inf)
+         ;;                              (princ (length package--builtins)))"))))
          (builtin-emir (length (epkgs 'name 'epkg-builtin-package-p)))
          (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1]
