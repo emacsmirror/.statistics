@@ -66,9 +66,8 @@
      (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
 #+end_src
 #+results: unsatisfied
-| Package (6)     | Class  | Feature        | Provider |
+| Package (5)     | Class  | Feature        | Provider |
 |-----------------+--------+----------------+----------|
-| auctex-cluttex  | github | tex-buf        |          |
 | auctex-latexmk  | github | tex-buf        |          |
 | jabber-otr      | github | jabber-chat    |          |
 | jabber-otr      | github | jabber-history |          |
@@ -79,11 +78,9 @@
 
 - jabber-otr: https://github.com/melpa/melpa/pull/8055
 - tex-buf
-  - https://github.com/tsuu32/auctex-cluttex/issues/7
   - https://github.com/tom-tan/auctex-latexmk/issues/44
   - https://github.com/Malabarba/latex-extra/issues/35
   - https://github.com/sagemath/sage-shell-mode/issues/63
-  - https://github.com/jhpalmieri/ultratex/issues/1
   - https://github.com/dandavison/xenops/issues/48
 
 * Packages whose repositories have been archived

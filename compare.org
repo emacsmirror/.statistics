@@ -82,10 +82,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    15 |       |
-| gnu-elpa  |  141 |    141 |       |       |   334 |       |
+| gnu-elpa  |  141 |    141 |       |       |   337 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5090 |   5090 |       |       |       |  4870 |
-| gitlab    |  172 |    172 |       |       |       |   156 |
+| github    | 5098 |   5098 |       |       |       |  4876 |
+| gitlab    |  173 |    173 |       |       |       |   157 |
 | sourcehut |   52 |     52 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
@@ -102,7 +102,7 @@
 | orphaned  |  135 |    135 |       |       |       |       |
 | shelved   | 1469 |        |  1469 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8416 |   6493 |  1469 |   474 |   349 |  5249 |
+| total     | 8425 |   6502 |  1469 |   474 |   352 |  5256 |
 
 * Emacs
 ** Prefer elpa
@@ -258,7 +258,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (192)              | Class     | Gelpa    | Link                                            |
+| Package (195)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -289,6 +289,7 @@
 | company-statistics         | github    | external | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]                 |
 | compat                     | sourcehut | external | [[https://git.sr.ht/~pkal/compat][pkal/compat]]                                     |
 | consult                    | github    | external | [[https://github.com/minad/consult][minad/consult]]                                   |
+| consult-recoll             | git       | external | [[https://codeberg.org/jao/consult-recoll]]         |
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]             |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                     |
 | corfu-doc                  | github    | external | [[https://github.com/galeo/corfu-doc][galeo/corfu-doc]]                                 |
@@ -361,6 +362,7 @@
 | math-symbol-lists          | github    | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                        |
 | mct                        | gitlab    | external | [[https://gitlab.com/protesilaos/mct][protesilaos/mct]]                                 |
 | mines                      | github    | external | [[https://github.com/calancha/Minesweeper][calancha/Minesweeper]]                            |
+| minibuffer-header          | github    | external | [[https://github.com/rougier/minibuffer-header][rougier/minibuffer-header]]                       |
 | mmm-mode                   | github    | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                                |
 | modus-themes               | sourcehut | core     | [[https://git.sr.ht/~protesilaos/modus-themes][protesilaos/modus-themes]]                        |
 | multishell                 | github    | external | [[https://github.com/kenmanheimer/EmacsMultishell][kenmanheimer/EmacsMultishell]]                    |
@@ -384,6 +386,7 @@
 | pabbrev                    | github    | external | [[https://github.com/phillord/pabbrev][phillord/pabbrev]]                                |
 | parsec                     | github    | external | [[https://github.com/cute-jumper/parsec.el][cute-jumper/parsec.el]]                           |
 | parser-generator           | github    | external | [[https://github.com/cjohansson/emacs-parser-generator][cjohansson/emacs-parser-generator]]               |
+| perl-doc                   | github    | external | [[https://github.com/HaraldJoerg/emacs-perl-doc][HaraldJoerg/emacs-perl-doc]]                      |
 | pinentry                   | github    | external | [[https://github.com/ueno/pinentry-el][ueno/pinentry-el]]                                |
 | plz                        | github    | external | [[https://github.com/alphapapa/plz.el][alphapapa/plz.el]]                                |
 | poke                       | gnu       | external | [[https://git.savannah.gnu.org/cgit/poke.git]]      |
@@ -497,9 +500,9 @@
 #+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Melpa" "Link")
     (-keep (pcase-lambda (`(,name ,fetcher ,url))
-             (and (not (assoc name emir-pending-packages))
-                  (not (or (emir--lookup-url url)
-                           (cadr (assoc name emir-secondary-packages))))
+             (and (not (or (emir--lookup-url url)
+                           (assoc name emir-pending-packages)
+                           (assoc name emir-secondary-packages)))
                   (list name
                         (and-let* ((class (emir--url-to-class url)))
                           (closql--abbrev-class class))
@@ -546,7 +549,7 @@
                           (asc melpa-recipes:name)]]))
 #+end_src
 #+results: secondary-packages
-| Primary package (128)   | Secondary package                 | Class     |
+| Primary package (129)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -565,6 +568,7 @@
 | calfw                   | calfw-howm                        | github    |
 | calfw                   | calfw-ical                        | github    |
 | calfw                   | calfw-org                         | github    |
+| cardano-tx              | cardano-wallet                    | github    |
 | cfn-mode                | flycheck-cfn                      | gitlab    |
 | chronometrist           | chronometrist-key-values          | git       |
 | chronometrist           | chronometrist-spark               | git       |
