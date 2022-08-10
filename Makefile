@@ -8,9 +8,9 @@ S3_ZONE        ?= s3-website.eu-central-1
 PUBLISH_S3_URL ?= http://$(DOMAIN).$(S3_ZONE).amazonaws.com
 
 EMACS           ?= emacs
-SITE_LISP       ?= ~/.emacs.d/lib/
-EPKG_REPOSITORY ?= ~/git/emacs/epkgs/
-CUSTOM_FILE     ?= ~/.emacs.d/custom.el
+SITE_LISP       ?= ~/.config/emacs/lib/
+EPKG_REPOSITORY ?= ~/src/emacs/epkgs/
+CUSTOM_FILE     ?= ~/.config/emacs/custom.el
 
 SRC   = .
 DST   = /stats
