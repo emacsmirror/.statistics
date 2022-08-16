@@ -82,16 +82,16 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    15 |       |
-| gnu-elpa  |  141 |    141 |       |       |   337 |       |
+| gnu-elpa  |  141 |    141 |       |       |   338 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5098 |   5098 |       |       |       |  4876 |
+| github    | 5101 |   5101 |       |       |       |  4879 |
 | gitlab    |  173 |    173 |       |       |       |   157 |
-| sourcehut |   52 |     52 |       |       |       |       |
+| sourcehut |   55 |     55 |       |       |       |       |
 | gnu       |   10 |     10 |       |       |       |       |
 | nongnu    |    8 |      8 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  168 |    168 |       |       |       |   209 |
-| subtree   |   23 |     23 |       |       |       |       |
+| git       |  169 |    169 |       |       |       |   213 |
+| subtree   |   22 |     22 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
 | minority  |   18 |     18 |       |       |       |       |
@@ -100,9 +100,9 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  135 |    135 |       |       |       |       |
-| shelved   | 1469 |        |  1469 |       |       |       |
+| shelved   | 1471 |        |  1471 |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8425 |   6502 |  1469 |   474 |   352 |  5256 |
+| total     | 8433 |   6508 |  1471 |   474 |   353 |  5263 |
 
 * Emacs
 ** Prefer elpa
@@ -258,7 +258,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (195)              | Class     | Gelpa    | Link                                            |
+| Package (196)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -315,6 +315,7 @@
 | easy-escape                | github    | external | [[https://github.com/cpitclaudel/easy-escape][cpitclaudel/easy-escape]]                         |
 | easy-kill                  | github    | external | [[https://github.com/leoliu/easy-kill][leoliu/easy-kill]]                                |
 | eev                        | github    | external | [[https://github.com/edrx/eev][edrx/eev]]                                        |
+| ef-themes                  | sourcehut | external | [[https://git.sr.ht/~protesilaos/ef-themes][protesilaos/ef-themes]]                           |
 | eglot                      | github    | external | [[https://github.com/joaotavora/eglot][joaotavora/eglot]]                                |
 | eldoc-eval                 | github    | external | [[https://github.com/thierryvolpiatto/eldoc-eval][thierryvolpiatto/eldoc-eval]]                     |
 | electric-spacing           | github    | external | [[https://github.com/xwl/electric-spacing][xwl/electric-spacing]]                            |
@@ -549,7 +550,7 @@
                           (asc melpa-recipes:name)]]))
 #+end_src
 #+results: secondary-packages
-| Primary package (129)   | Secondary package                 | Class     |
+| Primary package (130)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -568,7 +569,11 @@
 | calfw                   | calfw-howm                        | github    |
 | calfw                   | calfw-ical                        | github    |
 | calfw                   | calfw-org                         | github    |
+| cardano-tx              | bech32                            | github    |
 | cardano-tx              | cardano-wallet                    | github    |
+| cardano-tx              | cbor                              | github    |
+| cardano-tx              | ouroboros                         | github    |
+| cardano-tx              | readable-numbers                  | github    |
 | cfn-mode                | flycheck-cfn                      | gitlab    |
 | chronometrist           | chronometrist-key-values          | git       |
 | chronometrist           | chronometrist-spark               | git       |
@@ -612,6 +617,7 @@
 | el-secretario           | el-secretario-notmuch             | sourcehut |
 | el-secretario           | el-secretario-org                 | sourcehut |
 | elfeed                  | elfeed-web                        | github    |
+| elfeed-tube             | elfeed-tube-mpv                   | github    |
 | emacsql                 | emacsql-mysql                     | github    |
 | emacsql                 | emacsql-psql                      | github    |
 | emacsql                 | emacsql-sqlite                    | github    |
@@ -780,3 +786,36 @@
      (emir-melpa--migrated-packages)))
 #+end_src
 #+results: melpa-diverging-repositories
+
+** Diverging branches
+#+name: melpa-diverging-branches
+#+begin_src emacs-lisp
+  (epkg-with-org-header ("Package" "Branch" "Melpa Branch" "Class" "Repo")
+    (mapcar (pcase-lambda (`(,name ,branch ,melpa-branch ,class))
+              (list name branch melpa-branch class
+                    (epkg-org-link name)))
+            (epkg-sql [:select :distinct [packages:name
+                                          packages:upstream-branch
+                                          melpa-recipes:branch
+                                          packages:class]
+                       :from [packages melpa-recipes]
+                       :where (and (= packages:name melpa-recipes:name)
+                                   (or (and (isnull  packages:upstream-branch)
+                                            (notnull melpa-recipes:branch))
+                                       (and (notnull packages:upstream-branch)
+                                            (isnull  melpa-recipes:branch))
+                                       (!= packages:upstream-branch
+                                           melpa-recipes:branch)))
+                       :order-by [(asc packages:name)]])))
+#+end_src
+#+results: melpa-diverging-branches
+| Package (8)       | Branch | Melpa Branch | Class  | Repo                                         |
+|-------------------+--------+--------------+--------+----------------------------------------------|
+| elnode            |        | melpa        | github | [[https://github.com/jcaw/elnode][jcaw/elnode]]                                  |
+| highlight         |        | melpa        | wiki   | [[https://github.com/emacsmirror/emacswiki.org]] |
+| insfactor         |        | release      | github | [[https://github.com/duelinmarkers/insfactor.el][duelinmarkers/insfactor.el]]                   |
+| keepass-mode      |        | melpa        | github | [[https://github.com/ifosch/keepass-mode][ifosch/keepass-mode]]                          |
+| neato-graph-bar   |        | release      | gitlab | [[https://gitlab.com/RobertCochran/neato-graph-bar][RobertCochran/neato-graph-bar]]                |
+| prettier          |        | release      | github | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                          |
+| tree-sitter       |        | release      | github | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]]          |
+| tree-sitter-langs |        | release      | github | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]]          |

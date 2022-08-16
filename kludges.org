@@ -55,7 +55,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+end_src
 #+results: provided-drop
-| Package (9)      | Class     | Feature              | Reason                |
+| Package (10)     | Class     | Feature              | Reason                |
 |------------------+-----------+----------------------+-----------------------|
 | clojure-mode     | github    | test-helper          | conflicting test file |
 | elixir-mode      | github    | test-helper          | conflicting test file |
@@ -65,6 +65,8 @@
 | ivy              | github    | targets/install-deps | conflicting test file |
 | org              | gnu       | org-test             | conflicting test file |
 | org-gcal         | github    | org-test             | conflicting test file |
+| rgb              | gitlab    | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| rgb              | gitlab    | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
 | srht             | sourcehut | test                 | test file vs. package |
 
 * Drop required features
@@ -282,31 +284,30 @@
             (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
 #+end_src
 #+results: filtered-subtree
-| Package (23)   | M | Url                                                                 |
-|----------------+---+---------------------------------------------------------------------|
-| agda2-mode     |   | git@github.com:agda/agda.git                                        |
-| cg             | ✓ | git@github.com:GrammarSoft/cg3.git                                  |
-| cubicle-mode   | ✓ | git@github.com:cubicle-model-checker/cubicle.git                    |
-| dune           | ✓ | git@github.com:ocaml/dune.git                                       |
-| egison-mode    | ✓ | git@github.com:egison/egison.git                                    |
-| fuel           | ✓ | git@github.com:factor/factor.git                                    |
-| golint         | ✓ | git@github.com:golang/lint.git                                      |
-| govc           | ✓ | git@github.com:vmware/govmomi.git                                   |
-| gvpr-mode      | ✓ | git@github.com:rodw/gvpr-lib.git                                    |
-| kivy-mode      | ✓ | git@github.com:kivy/kivy.git                                        |
-| lambdapi-mode  | ✓ | git@github.com:Deducteam/lambdapi.git                               |
-| lfe-mode       | ✓ | git@github.com:rvirding/lfe.git                                     |
-| mandoku        | ✓ | git@github.com:mandoku/mandoku.git                                  |
-| merlin         | ✓ | git@github.com:the-lambda-church/merlin.git                         |
-| mozart         |   | git@github.com:mozart/mozart2.git                                   |
-| mozc           | ✓ | git@github.com:google/mozc.git                                      |
-| password-store | ✓ | https://git.zx2c4.com/password-store                                |
-| protobuf-mode  | ✓ | git@github.com:google/protobuf.git                                  |
-| rcodetools     |   | git@github.com:rcodetools/rcodetools.git                            |
-| scad-mode      | ✓ | git@github.com:openscad/openscad.git                                |
-| stumpwm-mode   | ✓ | git@github.com:stumpwm/stumpwm-contrib.git                          |
-| utop           | ✓ | git@github.com:diml/utop.git                                        |
-| zeitgeist      |   | https://anongit.freedesktop.org/git/zeitgeist/zeitgeist-datasources |
+| Package (22)   | M | Url                                              |
+|----------------+---+--------------------------------------------------|
+| agda2-mode     |   | git@github.com:agda/agda.git                     |
+| cg             | ✓ | git@github.com:GrammarSoft/cg3.git               |
+| cubicle-mode   | ✓ | git@github.com:cubicle-model-checker/cubicle.git |
+| dune           | ✓ | git@github.com:ocaml/dune.git                    |
+| egison-mode    | ✓ | git@github.com:egison/egison.git                 |
+| fuel           | ✓ | git@github.com:factor/factor.git                 |
+| golint         | ✓ | git@github.com:golang/lint.git                   |
+| govc           | ✓ | git@github.com:vmware/govmomi.git                |
+| gvpr-mode      | ✓ | git@github.com:rodw/gvpr-lib.git                 |
+| kivy-mode      | ✓ | git@github.com:kivy/kivy.git                     |
+| lambdapi-mode  | ✓ | git@github.com:Deducteam/lambdapi.git            |
+| lfe-mode       | ✓ | git@github.com:rvirding/lfe.git                  |
+| mandoku        | ✓ | git@github.com:mandoku/mandoku.git               |
+| merlin         | ✓ | git@github.com:the-lambda-church/merlin.git      |
+| mozart         |   | git@github.com:mozart/mozart2.git                |
+| mozc           | ✓ | git@github.com:google/mozc.git                   |
+| password-store | ✓ | https://git.zx2c4.com/password-store             |
+| protobuf-mode  | ✓ | git@github.com:google/protobuf.git               |
+| rcodetools     |   | git@github.com:rcodetools/rcodetools.git         |
+| scad-mode      | ✓ | git@github.com:openscad/openscad.git             |
+| stumpwm-mode   | ✓ | git@github.com:stumpwm/stumpwm-contrib.git       |
+| utop           | ✓ | git@github.com:diml/utop.git                     |
 
 * Set main library
 #+name: no-mainlib
@@ -349,3 +350,36 @@
 | spacemacs-theme       | github   | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | punpun-theme          | git      | ✓ | punpun-common.el                | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | majapahit-theme       | gitlab   | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
+
+* Set tracked branch
+#+name: set-branch
+#+begin_src emacs-lisp
+(epkg-with-org-header ("Package" "Branch" "Class" "Repo")
+  (mapcar (pcase-lambda (`(,name ,branch ,class))
+            (list name branch class
+                  (epkg-org-link name)))
+          (epkg-sql [:select [name upstream-branch class]
+                     :from packages
+                     :where (notnull upstream-branch)
+                     :order-by [(asc name)]])))
+#+end_src
+#+results: set-branch
+| Package (8)        | Branch                     | Class     | Repo                                             |
+|--------------------+----------------------------+-----------+--------------------------------------------------|
+| async-backup       | development                | git       | [[https://tildegit.org/contrapunctus/async-backup]]  |
+| chronometrist      | dev                        | git       | [[https://tildegit.org/contrapunctus/chronometrist]] |
+| elpa-admin         | elpa-admin                 | git       |                                                  |
+| jabber             | production                 | git       | [[https://codeberg.org/emacs-jabber/emacs-jabber]]   |
+| shell-command+     | shell-command+             | sourcehut | [[https://git.sr.ht/~zge/bang][zge/bang]]                                         |
+| sxiv               | dev                        | git       | [[https://tildegit.org/contrapunctus/sxiv]]          |
+| taxy-magit-section | package/taxy-magit-section | github    | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                                |
+| zero-input         | pkg                        | git       | [[https://gitlab.emacsos.com/sylecn/zero-el]]        |
+
+- async-backup (by contrapunctus)
+- chronometrist (by contrapunctus)
+- jabber (by contrapunctus)
+- sxiv (by contrapunctus)
+- taxy-magit-section: https://github.com/alphapapa/taxy.el/issues/3
+- zero-input: https://github.com/melpa/melpa/pull/6479#issuecomment-549320412
+  The file in ~pkg~ is generated from files in ~master~.
+

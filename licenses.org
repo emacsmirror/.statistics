@@ -62,10 +62,10 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4376 |      67 |
+| GPL-3.0-or-later  |  4382 |      67 |
 | GPL-2.0-or-later  |  1176 |      18 |
-| MIT               |   368 |       6 |
-| GPL-3.0-only      |   174 |       3 |
+| MIT               |   367 |       6 |
+| GPL-3.0-only      |   175 |       3 |
 | BSD-2-Clause      |    84 |       1 |
 | BSD-3-Clause      |    70 |       1 |
 | Apache-2.0        |    52 |       1 |
@@ -95,9 +95,11 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5751 |      88 |
+| total GNU         |  5758 |      88 |
 |-------------------+-------+---------|
-| total             |  6502 |     100 |
+| total             |  6508 |     100 |
+
+- GPL-2.0-only: https://github.com/SebastianMeisel/journalctl-mode/issues/18
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -130,7 +132,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |   829 |      56 |
-| GPL-3.0-or-later  |   367 |      25 |
+| GPL-3.0-or-later  |   369 |      25 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    40 |       3 |
@@ -156,9 +158,9 @@
 | LGPL-2.1-only     |     1 |       0 |
 | LGPL-2.1-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1351 |      92 |
+| total GNU         |  1353 |      92 |
 |-------------------+-------+---------|
-| total             |  1469 |     100 |
+| total             |  1471 |     100 |
 
 ** Packages with unknown/custom licenses
 #+name: attic-unknown
