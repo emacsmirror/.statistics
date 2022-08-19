@@ -323,8 +323,7 @@
                       :where (notnull library)
                       :and class :in $v1
                       :order-by [(asc name)]]
-                     (closql-where-class-in
-                      'epkg-mirrored-package--eieio-childp))))
+                     (closql-where-class-in [mirrored*] (epkg-db)))))
 #+end_src
 #+results: no-mainlib
 | Package (21)          | Class    | M | Library                         | Reason                     |
@@ -364,16 +363,13 @@
                      :order-by [(asc name)]])))
 #+end_src
 #+results: set-branch
-| Package (8)        | Branch                     | Class     | Repo                                             |
-|--------------------+----------------------------+-----------+--------------------------------------------------|
-| async-backup       | development                | git       | [[https://tildegit.org/contrapunctus/async-backup]]  |
-| chronometrist      | dev                        | git       | [[https://tildegit.org/contrapunctus/chronometrist]] |
-| elpa-admin         | elpa-admin                 | git       |                                                  |
-| jabber             | production                 | git       | [[https://codeberg.org/emacs-jabber/emacs-jabber]]   |
-| shell-command+     | shell-command+             | sourcehut | [[https://git.sr.ht/~zge/bang][zge/bang]]                                         |
-| sxiv               | dev                        | git       | [[https://tildegit.org/contrapunctus/sxiv]]          |
-| taxy-magit-section | package/taxy-magit-section | github    | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                                |
-| zero-input         | pkg                        | git       | [[https://gitlab.emacsos.com/sylecn/zero-el]]        |
+| Package (5)        | Branch                     | Class    | Repo                                      |
+|--------------------+----------------------------+----------+-------------------------------------------|
+| async-backup       | development                | codeberg | [[https://codeberg.org/contrapunctus/async-backup][contrapunctus/async-backup]]                |
+| elpa-admin         | elpa-admin                 | git      |                                           |
+| sxiv               | dev                        | codeberg | [[https://codeberg.org/contrapunctus/sxiv.el][contrapunctus/sxiv.el]]                     |
+| taxy-magit-section | package/taxy-magit-section | github   | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                         |
+| zero-input         | pkg                        | git      | [[https://gitlab.emacsos.com/sylecn/zero-el]] |
 
 - async-backup (by contrapunctus)
 - chronometrist (by contrapunctus)

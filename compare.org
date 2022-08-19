@@ -32,21 +32,25 @@
                   hline
                   (github      0  0  "" "" "" 0)
                   (gitlab      0  0  "" "" "" 0)
-                  (sourcehut   0  0  "" "" "" "")
-                  (gnu         0  0  "" "" "" "")
-                  (nongnu      0  0  "" "" "" "")
+                  (codeberg    0  0  "" "" "" 0)
+                  (sourcehut   0  0  "" "" "" 0)
+                  (gnu         0  0  "" "" "" 0)
+                  (nongnu      0  0  "" "" "" 0)
                   hline
                   (git         0  0  "" "" "" 0)
-                  (subtree     0  0  "" "" "" "")
+                  (hg          0  0  "" "" "" 0)
                   hline
-                  (wiki        0  0  "" "" "" "")
+                  (subtree     0  0  "" "" "" "")
                   (minority    0  0  "" "" "" "")
                   hline
-                  (hg          0  0  "" "" "" 0)
+                  (wiki        0  0  "" "" "" "")
                   (file        0  0  "" "" "" "")
                   hline
-                  (orphaned    0  0  "" "" "" "")
-                  (shelved     ,shelved "" ,shelved "" "" "")
+                  (orphaned    0  0  "" "" "" 0)
+                  (shelved     ,shelved "" ,shelved "" "" 0)
+                  (mirror      "" "" "" "" "" 0)
+                  hline
+                  (secondary   "" "" "" "" "" 0)
                   hline)))
     (dolist (class (epkgs 'class 'epkg-mirrored-package--eieio-childp))
       (when (eq class 'core)
@@ -56,8 +60,19 @@
             (cl-incf (nth 1 elt))
             (cl-incf (nth 2 elt)))
         (error "No entry for %s" class)))
-    (dolist (fetcher (epkg-sql [:select class :from melpa-recipes]))
-      (cl-incf (nth 6 (assq (car fetcher) table))))
+    (pcase-dolist (`(,fetcher ,url ,name ,epkg-package)
+                   (epkg-sql [:select [class url name epkg-package]
+                              :from melpa-recipes]))
+      (let ((type
+             (pcase fetcher
+               ((guard (not (equal name epkg-package))) 'secondary)
+               ((and 'git (guard (string-prefix-p "https://git.savannah.gnu.org" url))) 'gnu)
+               ((and 'git (guard (string-prefix-p "https://git.savannah.nongnu.org" url))) 'nongnu)
+               ((and 'github (guard (string-prefix-p "git@github.com:emacsorphanage/" url))) 'orphaned)
+               ((and 'github (guard (string-prefix-p "git@github.com:emacsattic/" url))) 'shelved)
+               ((and 'github (guard (string-prefix-p "git@github.com:emacsmirror/" url))) 'mirror)
+               (_ fetcher))))
+        (cl-incf (nth 6 (assq type table)))))
     ;; KLUDGE for org.  Avoid saying that this builtin package is
     ;; missing just because we mirror it from the upstream repo.
     ;; Also don't count it twice.
@@ -84,25 +99,61 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   338 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5101 |   5101 |       |       |       |  4879 |
-| gitlab    |  173 |    173 |       |       |       |   157 |
-| sourcehut |   55 |     55 |       |       |       |       |
-| gnu       |   10 |     10 |       |       |       |       |
-| nongnu    |    8 |      8 |       |       |       |       |
+| github    | 5100 |   5100 |       |       |       |  4540 |
+| gitlab    |  173 |    173 |       |       |       |   155 |
+| codeberg  |   63 |     63 |       |       |       |    63 |
+| sourcehut |   56 |     56 |       |       |       |    41 |
+| gnu       |   10 |     10 |       |       |       |     1 |
+| nongnu    |    8 |      8 |       |       |       |     3 |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  169 |    169 |       |       |       |   213 |
+| git       |  106 |    106 |       |       |       |    93 |
+| hg        |   16 |     16 |       |       |       |    14 |
+|-----------+------+--------+-------+-------+-------+-------|
 | subtree   |   22 |     22 |       |       |       |       |
-|-----------+------+--------+-------+-------+-------+-------|
-| wiki      |  591 |    591 |       |       |       |       |
 | minority  |   18 |     18 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| hg        |   16 |     16 |       |       |       |    14 |
+| wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  135 |    135 |       |       |       |       |
-| shelved   | 1471 |        |  1471 |       |       |       |
+| orphaned  |  135 |    135 |       |       |       |   101 |
+| shelved   | 1471 |        |  1471 |       |       |    18 |
+| mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8433 |   6508 |  1471 |   474 |   353 |  5263 |
+| secondary |      |        |       |       |       |   230 |
+|-----------+------+--------+-------+-------+-------+-------|
+| total     | 8433 |   6508 |  1471 |   474 |   353 |  5268 |
+
+- The Emacsmirror database tracks all builtin packages (see ~Epkgs~
+  column) but it only mirrors the source of packages that are also
+  available from GNU Elpa as "core" packages (see ~Mirror~ column).
+
+- TODO Explain other discrepancies in the ~builtin~ row.
+
+- The Emacsmirror prefers mirroring packages from the upstream
+  repository, even when they are also available from GNU Elpa.
+  That explaining the apparent discrepancy in the ~gnu-elpa~ row.
+
+- Melpa only appears to track more plain ~git~ repositories, because
+  the Emacsmirror uses the ~subtree~ and ~minority~ sub-types for some
+  of them.
+
+- Melpa gets some packages from the Emacsmirror (~mirror~), because
+  for one reason or another it is not able to get them directly from
+  upstream.
+
+- Melpa also gets some packages from the Emacsattic (~shelved~), likely
+  because the upstream repository has disappeared.  Such packages are
+  "shelved", that is, they are moved from the Emacsmirror to the
+  Emacsattic.  Melpa doesn't support demoting packages like this, so
+  here I tend to keep them around longer, treating the attic as the
+  "upstream".
+
+- When a repository is used to maintain a "main" package as well
+  as one or more "extentions" to that package, then Melpa often
+  distributes these packages individually, while the Emacsmirror
+  does not split up such repositories into multiple packages.
+  Such "secondary packages" are accounted for in the ~secondary~
+  row.
 
 * Emacs
 ** Prefer elpa
@@ -289,7 +340,7 @@
 | company-statistics         | github    | external | [[https://github.com/company-mode/company-statistics][company-mode/company-statistics]]                 |
 | compat                     | sourcehut | external | [[https://git.sr.ht/~pkal/compat][pkal/compat]]                                     |
 | consult                    | github    | external | [[https://github.com/minad/consult][minad/consult]]                                   |
-| consult-recoll             | git       | external | [[https://codeberg.org/jao/consult-recoll]]         |
+| consult-recoll             | codeberg  | external | [[https://codeberg.org/jao/consult-recoll][jao/consult-recoll]]                              |
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]             |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                     |
 | corfu-doc                  | github    | external | [[https://github.com/galeo/corfu-doc][galeo/corfu-doc]]                                 |
@@ -410,7 +461,7 @@
 | rt-liberation              | nongnu    | external | [[http://www.nongnu.org/rtliber][nongnu:rt-liberation]]                            |
 | satchel                    | sourcehut | external | [[https://git.sr.ht/~theo/satchel][theo/satchel]]                                    |
 | scanner                    | gitlab    | external | [[https://gitlab.com/rstocker/scanner][rstocker/scanner]]                                |
-| shell-command+             | sourcehut | external | [[https://git.sr.ht/~zge/bang][zge/bang]]                                        |
+| shell-command+             | sourcehut | external | [[https://git.sr.ht/~pkal/shell-command-plus][pkal/shell-command-plus]]                         |
 | sketch-mode                | github    | external | [[https://github.com/dalanicolai/sketch-mode][dalanicolai/sketch-mode]]                         |
 | slime-volleyball           | github    | external | [[https://github.com/fitzsim/slime-volleyball][fitzsim/slime-volleyball]]                        |
 | smalltalk-mode             | nongnu    | external | [[https://savannah.nongnu.org/projects/smalltalk-mode][nongnu:smalltalk-mode]]                           |
@@ -575,8 +626,8 @@
 | cardano-tx              | ouroboros                         | github    |
 | cardano-tx              | readable-numbers                  | github    |
 | cfn-mode                | flycheck-cfn                      | gitlab    |
-| chronometrist           | chronometrist-key-values          | git       |
-| chronometrist           | chronometrist-spark               | git       |
+| chronometrist           | chronometrist-key-values          | codeberg  |
+| chronometrist           | chronometrist-spark               | codeberg  |
 | chumpy-windows          | spaces                            | github    |
 | chumpy-windows          | splitter                          | github    |
 | chumpy-windows          | window-jump                       | github    |
@@ -624,8 +675,8 @@
 | emacsql-sqlite-builtin  | emacsql-sqlite-module             | github    |
 | embark                  | avy-embark-collect                | github    |
 | embark                  | embark-consult                    | github    |
-| espotify                | consult-spotify                   | git       |
-| espotify                | ivy-spotify                       | git       |
+| espotify                | consult-spotify                   | codeberg  |
+| espotify                | ivy-spotify                       | codeberg  |
 | esqlite                 | esqlite-helm                      | github    |
 | evil                    | evil-test-helpers                 | github    |
 | ewal                    | ewal-doom-themes                  | github    |
@@ -790,32 +841,63 @@
 ** Diverging branches
 #+name: melpa-diverging-branches
 #+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Branch" "Melpa Branch" "Class" "Repo")
-    (mapcar (pcase-lambda (`(,name ,branch ,melpa-branch ,class))
-              (list name branch melpa-branch class
+  (epkg-with-org-header ("Package" "Used" "Forced" "Melpa" "Class" "Fetcher" "Repo")
+    (mapcar (pcase-lambda (`(,name ,used ,forced ,melpa ,class ,fetcher))
+              (list name used forced melpa class fetcher
                     (epkg-org-link name)))
             (epkg-sql [:select :distinct [packages:name
+                                          packages:branch
                                           packages:upstream-branch
                                           melpa-recipes:branch
-                                          packages:class]
+                                          packages:class
+                                          melpa-recipes:class]
                        :from [packages melpa-recipes]
                        :where (and (= packages:name melpa-recipes:name)
+                                   ;; (not (or (= melpa-recipes:branch "melpa")
+                                   ;;          (= melpa-recipes:branch "release")))
+                                   (not (= packages:class 'wiki))
                                    (or (and (isnull  packages:upstream-branch)
                                             (notnull melpa-recipes:branch))
                                        (and (notnull packages:upstream-branch)
                                             (isnull  melpa-recipes:branch))
-                                       (!= packages:upstream-branch
-                                           melpa-recipes:branch)))
+                                       (!= packages:branch melpa-recipes:branch)))
                        :order-by [(asc packages:name)]])))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (8)       | Branch | Melpa Branch | Class  | Repo                                         |
-|-------------------+--------+--------------+--------+----------------------------------------------|
-| elnode            |        | melpa        | github | [[https://github.com/jcaw/elnode][jcaw/elnode]]                                  |
-| highlight         |        | melpa        | wiki   | [[https://github.com/emacsmirror/emacswiki.org]] |
-| insfactor         |        | release      | github | [[https://github.com/duelinmarkers/insfactor.el][duelinmarkers/insfactor.el]]                   |
-| keepass-mode      |        | melpa        | github | [[https://github.com/ifosch/keepass-mode][ifosch/keepass-mode]]                          |
-| neato-graph-bar   |        | release      | gitlab | [[https://gitlab.com/RobertCochran/neato-graph-bar][RobertCochran/neato-graph-bar]]                |
-| prettier          |        | release      | github | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                          |
-| tree-sitter       |        | release      | github | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]]          |
-| tree-sitter-langs |        | release      | github | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]]          |
+| Package (4)       | Used   | Forced | Melpa   | Class  | Fetcher | Repo                                |
+|-------------------+--------+--------+---------+--------+---------+-------------------------------------|
+| elnode            | master |        | melpa   | github | github  | [[https://github.com/jcaw/elnode][jcaw/elnode]]                         |
+| prettier          | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                 |
+| tree-sitter       | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]] |
+| tree-sitter-langs | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]] |
+
+- elnode: https://github.com/jcaw/elnode/issues/1
+- prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-651687425
+- tree-sitter*: https://github.com/emacs-tree-sitter/elisp-tree-sitter/issues/237
+
+* Github                                                           :noexport:
+** Archived repositories
+#+name: github-archived
+#+begin_src emacs-lisp
+  (epkg-with-org-header ("Package" "Repository" "Melpa" "Dependants")
+    (mapcar (pcase-lambda (`(,name ,downloads))
+              (list name (epkg-org-link name) downloads
+                    (mapconcat #'car (epkg-reverse-dependencies name) " ")))
+            (epkg-sql [:select [name downloads] :from packages
+                       :where (= upstream-state 'archived)
+                       :order-by [(asc name)]])))
+#+end_src
+#+results: github-archived
+
+** Removed repositories
+#+name: github-removed
+#+begin_src emacs-lisp
+  (epkg-with-org-header ("Package" "Repository" "Melpa" "Dependants")
+    (mapcar (pcase-lambda (`(,name ,downloads))
+              (list name (epkg-org-link name) downloads
+                    (mapconcat #'car (epkg-reverse-dependencies name) " ")))
+            (epkg-sql [:select [name downloads] :from packages
+                       :where (= upstream-state 'removed)
+                       :order-by [(asc name)]])))
+#+end_src
+#+results: github-removed
