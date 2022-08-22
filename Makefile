@@ -94,7 +94,7 @@ force:
 	grep -v "Evaluation of this emacs-lisp code block" | true
 	@rm -f $@~
 
-publish: html
+publish:
 	@echo "Uploading to $(PUBLISH_BUCKET)..."
 	@aws s3 sync $(SRC) $(PUBLISH_BUCKET)$(DST) --delete $(SYNC)
 	@echo "Performing CDN invalidation"
