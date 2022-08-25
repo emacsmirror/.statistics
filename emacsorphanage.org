@@ -22,7 +22,7 @@
               (pkg  (epkg name))
               (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
               (rcp  (melpa-get name))
-              (reason (cadr (assoc name emir--orphanage-reason))))
+              (reason (emir--config name :orphanage)))
          (and (or (not only)
                   (member reason only))
               (list name

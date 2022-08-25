@@ -55,7 +55,7 @@
          (mapcar (pcase-lambda (`(,feature ,provider))
                    (list name class feature provider))
                  (cl-sort alist #'string< :key #'car))))
-     (epkgs [name class] 'epkg-mirrored-package--eieio-childp)))
+     (epkgs [name class] [mirrored*])))
 #+end_src
 #+results: unsatisfied
 | Package (4)     | Class  | Feature | Provider |

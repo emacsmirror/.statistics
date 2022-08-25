@@ -16,7 +16,7 @@
          ;;                      emir-emacs-reference "-Q" "--batch" "--eval"
          ;;                      "(progn (require 'finder-inf)
          ;;                              (princ (length package--builtins)))"))))
-         (builtin-emir (length (epkgs 'name 'epkg-builtin-package-p)))
+         (builtin-emir (length (epkgs 'name [builtin])))
          (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1]
                                          [core])))
@@ -24,7 +24,7 @@
                                           :where class :in $v1
                                           :and (notnull released)]
                                          [external])))
-         (shelved      (length (epkgs 'name 'epkg-shelved-package-p)))
+         (shelved      (length (epkgs 'name [shelved])))
          (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
                   hline
                   (builtin     ,builtin-emir 0 "" ,builtin ,builtin-elpa "")
@@ -52,7 +52,7 @@
                   hline
                   (secondary   "" "" "" "" "" 0)
                   hline)))
-    (dolist (class (epkgs 'class 'epkg-mirrored-package--eieio-childp))
+    (dolist (class (epkgs 'class [mirrored*]))
       (when (eq class 'core)
         (setq class 'builtin))
       (if-let ((elt (assq class table)))
@@ -210,10 +210,9 @@
 #+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Class" "Url")
     (mapcan (pcase-lambda (`(,name ,class ,url))
-              (and (not (assoc name emir-pending-packages))
-                   (not (assoc name emir--preferred-builtins))
-                   (not (assoc name emir-secondary-packages))
-                   (not (memq class '(core builtin)))
+              (and (emir--config name :delayed)
+                   (emir--config name :secondary)
+                   (emir--config name :builtin-preferred)
                    (list (list name class (if (eq class 'core) "" url)))))
             (epkg-sql [:select [name class url]
                        :from gelpa-recipes
@@ -223,19 +222,19 @@
 #+end_src
 #+results: gelpa-new
 
-** Pending
-#+name: gelpa-pending
+** Delayed
+#+name: gelpa-delayed
 #+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa" "Reason")
     (-keep (pcase-lambda (`(,name ,class))
-             (and-let* ((reason (cadr (assoc name emir-pending-packages))))
+             (and-let* ((reason (emir--config name :delayed)))
                (list name class reason)))
            (epkg-sql [:select [name class]
                       :from gelpa-recipes
                       :where (isnull epkg-package)
                       :order-by [(asc name)]])))
 #+end_src
-#+results: gelpa-pending
+#+results: gelpa-delayed
 
 ** Unreleased
 #+name: gelpa-unreleased
@@ -274,9 +273,8 @@
 #+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Gelpa" "Reason")
     (mapcar (pcase-lambda (`(,name ,class))
-              (nconc (list name class)
-                     (or (cdr (assoc name emir--preferred-builtins))
-                         (list ""))))
+              (list name class
+                    (or (emir--config name :builtin-preferred) "")))
             (epkg-sql [:select :distinct [packages:name gelpa-recipes:class]
                        :from [packages gelpa-recipes]
                        :where (= packages:name gelpa-recipes:name)
@@ -553,8 +551,8 @@
   (epkg-with-org-header ("Package" "Class" "Melpa" "Link")
     (-keep (pcase-lambda (`(,name ,fetcher ,url))
              (and (not (or (emir--lookup-url url)
-                           (assoc name emir-pending-packages)
-                           (assoc name emir-secondary-packages)))
+                           (emir--config name :delayed)
+                           (emir--config name :secondary)))
                   (list name
                         (and-let* ((class (emir--url-to-class url)))
                           (closql--abbrev-class class))
@@ -568,19 +566,19 @@
 #+end_src
 #+results: melpa-new
 
-** Pending
-#+name: melpa-pending
+** Delayed
+#+name: melpa-delayed
 #+begin_src emacs-lisp
   (epkg-with-org-header ("Package" "Melpa" "Reason")
     (-keep (pcase-lambda (`(,name ,class))
-             (and-let* ((reason (cadr (assoc name emir-pending-packages))))
+             (and-let* ((reason (emir--config name :delayed)))
                (list name class reason)))
            (epkg-sql [:select [name class]
                       :from melpa-recipes
                       :where (isnull epkg-package)
                       :order-by [(asc name)]])))
 #+end_src
-#+results: melpa-pending
+#+results: melpa-delayed
 | Package (2) | Melpa  | Reason                                                    |
 |-------------+--------+-----------------------------------------------------------|
 | connection  | github | Don't add; part of upstream dictionary but not Emacs 28.1 |

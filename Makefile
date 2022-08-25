@@ -10,7 +10,6 @@ PUBLISH_S3_URL ?= http://$(DOMAIN).$(S3_ZONE).amazonaws.com
 EMACS           ?= emacs
 SITE_LISP       ?= ~/.config/emacs/lib/
 EPKG_REPOSITORY ?= ~/src/emacs/epkgs/
-CUSTOM_FILE     ?= ~/.config/emacs/custom.el
 
 SRC   = .
 DST   = /stats
@@ -18,15 +17,8 @@ SYNC  = --exclude "*"
 SYNC += --include "*.html"
 SYNC += --exclude "index.html"
 
-HTML   = compare.html
-HTML  += emacsorphanage.html
-HTML  += emacswiki.html
-HTML  += issues.html
-HTML  += kludges.html
-HTML  += licenses.html
-HTML  += melpa.html
-
-BABEL  = $(HTML:.html=.org)
+BABEL = $(filter-out config.org misc.org, $(wildcard *.org))
+HTML  = $(BABEL:.org=.html)
 
 DEPS   = borg
 DEPS  += closql
@@ -73,7 +65,6 @@ force:
 %.org: force
 	@echo "Updating $@..."
 	@$(BATCH) $@ --eval "(progn\
-	(load \"$(CUSTOM_FILE)\")\
 	(require 'org)\
 	(setq epkg-repository \"$(EPKG_REPOSITORY)\")\
 	(setq org-confirm-babel-evaluate nil)\

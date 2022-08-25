@@ -33,7 +33,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
                          (epkg-org-link name)
                          (and summary (truncate-string-to-width
                                        (string-replace "|" ";" summary) 70)))))
-            (epkgs [name summary] 'epkg-github-package))
+            (epkgs [name summary] [github]))
      #'string> :key #'cadr))
 #+end_src
 #+results: missing-github
@@ -596,7 +596,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
     (--keep (and (not (melpa-get it))
                  (not (gelpa-get it))
                  (list it (epkg-org-link it)))
-            (epkgs 'name 'epkg-gitlab-package)))
+            (epkgs 'name [gitlab])))
 #+end_src
 #+results: missing-gitlab
 | Package (2)                | Link                                 |
@@ -611,7 +611,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
     (--keep (and (not (melpa-get it))
                  (not (gelpa-get it))
                  (list it (epkg-org-link it)))
-	    (epkgs 'name 'epkg-git-package)))
+	    (epkgs 'name [git])))
 #+end_src
 #+results: missing-git
 | Package (9)   | Link                                       |

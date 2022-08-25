@@ -17,7 +17,7 @@
           (odd  0)
           (none 0)
           (all  0))
-      (dolist (pkg (epkgs nil 'epkg-mirrored-package--eieio-childp))
+      (dolist (pkg (epkgs nil [mirrored*]))
         (cl-incf all)
         (with-epkg-repository pkg
           (if-let ((tag (magit-git-string "tag" "--sort=-v:refname")))

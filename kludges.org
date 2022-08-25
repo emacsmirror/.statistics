@@ -241,12 +241,12 @@
   (epkg-with-org-header (3 "Package" "Reason" "Suspended" "M" "Url")
     (mapcar (pcase-lambda (`(,name ,args ,url))
               (list name
-                    (cadr (assoc name emir--minority-reason))
-                    (cadr (assoc name emir-suspended-packages))
+                    (emir--config name :minority)
+                    (emir--config name :suspended)
                     ;; (mapconcat #'identity args " ")
                     (and (melpa-get name) "✓")
                     url))
-            (cl-sort (epkgs [name upstream-tree url] 'epkg-minority-package-p)
+            (cl-sort (epkgs [name upstream-tree url] [minority])
                      #'string< :key #'caddr)))
 #+end_src
 #+results: filtered-minority
@@ -281,7 +281,7 @@
                     ;; args
                     (and (melpa-get name) "✓")
                     url))
-            (epkgs [name upstream-tree url] 'epkg-subtree-package-p)))
+            (epkgs [name upstream-tree url] [subtree])))
 #+end_src
 #+results: filtered-subtree
 | Package (22)   | M | Url                                              |
@@ -318,7 +318,7 @@
                     (list name type
                           (and (melpa-get name) "✓")
                           library
-                          (cadr (assoc name emir--library-reason)))))
+                          (emir--config name :library))))
            (epkg-sql [:select [name class library] :from packages
                       :where (notnull library)
                       :and class :in $v1
