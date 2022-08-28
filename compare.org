@@ -97,12 +97,12 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    15 |       |
-| gnu-elpa  |  141 |    141 |       |       |   338 |       |
+| gnu-elpa  |  141 |    141 |       |       |   339 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5102 |   5102 |       |       |       |  4543 |
-| gitlab    |  173 |    173 |       |       |       |   155 |
+| github    | 5105 |   5105 |       |       |       |  4546 |
+| gitlab    |  173 |    173 |       |       |       |   154 |
 | codeberg  |   63 |     63 |       |       |       |    63 |
-| sourcehut |   58 |     58 |       |       |       |    42 |
+| sourcehut |   59 |     59 |       |       |       |    43 |
 | gnu       |   10 |     10 |       |       |       |     1 |
 | nongnu    |    8 |      8 |       |       |       |     3 |
 |-----------+------+--------+-------+-------+-------+-------|
@@ -115,13 +115,13 @@
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  135 |    135 |       |       |       |   101 |
-| shelved   | 1472 |        |  1472 |       |       |    18 |
+| orphaned  |  135 |    135 |       |       |       |   100 |
+| shelved   | 1471 |        |  1471 |       |       |    18 |
 | mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
-| secondary |      |        |       |       |       |   225 |
+| secondary |      |        |       |       |       |   224 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8437 |   6511 |  1472 |   474 |   353 |  5267 |
+| total     | 8440 |   6515 |  1471 |   474 |   354 |  5268 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -307,7 +307,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (196)              | Class     | Gelpa    | Link                                            |
+| Package (197)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -480,6 +480,7 @@
 | tiny                       | github    | external | [[https://github.com/abo-abo/tiny][abo-abo/tiny]]                                    |
 | tmr                        | sourcehut | external | [[https://git.sr.ht/~protesilaos/tmr][protesilaos/tmr]]                                 |
 | tomelr                     | github    | external | [[https://github.com/kaushalmodi/tomelr][kaushalmodi/tomelr]]                              |
+| topspace                   | github    | external | [[https://github.com/trevorpogue/topspace][trevorpogue/topspace]]                            |
 | tramp                      | gnu       | external | [[https://savannah.gnu.org/projects/tramp][gnu:tramp]]                                       |
 | tramp-nspawn               | github    | external | [[https://github.com/bjc/tramp-nspawn][bjc/tramp-nspawn]]                                |
 | transient                  | github    | external | [[https://github.com/magit/transient][magit/transient]]                                 |
@@ -725,7 +726,6 @@
 | loopy                   | loopy-dash                        | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                 | github    |
 | magit                   | git-commit                        | github    |
-| magit                   | magit-libgit                      | github    |
 | magit                   | magit-section                     | github    |
 | major-mode-hydra        | pretty-hydra                      | github    |
 | maxima                  | company-maxima                    | gitlab    |

@@ -37,13 +37,19 @@ Also see https://github.com/melpa/melpa/issues/7892.
      #'string> :key #'cadr))
 #+end_src
 #+results: missing-github
-| Package (549)                |   Modified | Link                                    | Summary                                                                |
+| Package (550)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| emacspeak                    | 2022-08-21 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
-| snails                       | 2022-08-21 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
-| mu4e                         | 2022-08-20 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
+| emacspeak                    | 2022-08-28 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| mu4e                         | 2022-08-27 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
+| eaf                          | 2022-08-26 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| snails                       | 2022-08-26 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
+| emir                         | 2022-08-25 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
+| flx-rs                       | 2022-08-25 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
+| flxy                         | 2022-08-25 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
+| fuz-bin                      | 2022-08-25 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
+| github-tags                  | 2022-08-25 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
+| sublime-fuzzy                | 2022-08-25 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
 | straight                     | 2022-08-19 | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
-| eaf                          | 2022-08-18 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | movie                        | 2022-08-18 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
 | eaf-browser                  | 2022-08-12 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
 | fzf-native                   | 2022-08-08 | [[https://github.com/dangduc/fzf-native][dangduc/fzf-native]]                      | Fuzzy completion style                                                 |
@@ -54,19 +60,14 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | ultratex                     | 2022-07-28 | [[https://github.com/jhpalmieri/ultratex][jhpalmieri/ultratex]]                     | Ultra-TeX mode                                                         |
 | egit                         | 2022-07-19 | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                        | Emacs git commit history interface ala gitk and qgit                   |
 | awesome-tab                  | 2022-07-05 | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]              | Provide an out of box configuration to use tab in Emacs                |
-| flxy                         | 2022-07-04 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
-| github-tags                  | 2022-07-04 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
-| sublime-fuzzy                | 2022-07-04 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
 | mini-popup                   | 2022-07-02 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
-| flx-rs                       | 2022-06-30 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
 | pymacs                       | 2022-06-24 | [[https://github.com/dgentry/Pymacs][dgentry/Pymacs]]                          | Interface between Emacs Lisp and Python                                |
+| libgit                       | 2022-06-20 | [[https://github.com/magit/libegit2][magit/libegit2]]                          | Thin bindings to libgit2                                               |
 | touchgrid                    | 2022-06-19 | [[https://github.com/larsmagne/touchgrid.el][larsmagne/touchgrid.el]]                  | Executing actions based on input events                                |
-| fuz-bin                      | 2022-06-17 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
 | eaf-terminal                 | 2022-06-16 | [[https://github.com/emacs-eaf/eaf-terminal][emacs-eaf/eaf-terminal]]                  | Terminal plugins                                                       |
 | epithet                      | 2022-06-15 | [[https://github.com/oantolin/epithet][oantolin/epithet]]                        | Rename buffers with descriptive names                                  |
 | speechd                      | 2022-06-08 | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     | Library for accessing Speech Dispatcher                                |
 | smartchr                     | 2022-06-06 | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                  | Emacs version of smartchr.vim                                          |
-| emir                         | 2022-05-12 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | dumbparens                   | 2022-05-08 | [[https://github.com/radian-software/dumbparens][radian-software/dumbparens]]              | Simple paren-matching solution                                         |
 | guess-tex-master             | 2022-05-05 | [[https://github.com/mattfidler/guess-tex-master.el][mattfidler/guess-tex-master.el]]          | Guess LaTeX Master File                                                |
 | bookiez                      | 2022-04-15 | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                    | Managing Books                                                         |
@@ -599,10 +600,11 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs 'name [gitlab])))
 #+end_src
 #+results: missing-gitlab
-| Package (2)                | Link                                 |
-|----------------------------+--------------------------------------|
-| org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]] |
-| ox-rss                     | [[https://gitlab.com/nsavage/ox-rss][nsavage/ox-rss]]                       |
+| Package (3)                | Link                                  |
+|----------------------------+---------------------------------------|
+| org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]  |
+| ox-rss                     | [[https://gitlab.com/nsavage/ox-rss][nsavage/ox-rss]]                        |
+| swift-playground-mode      | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]] |
 
 ** Git
 #+name: missing-git

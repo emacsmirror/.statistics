@@ -88,9 +88,8 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+end_src
 #+results: unresponsive
-| Package (8)    | E | M |
+| Package (7)    | E | M |
 |----------------+---+---|
-| adoc-mode      | ✔ | ✔ |
 | edb            | ✔ |   |
 | elisp-depend   | ✔ | ✔ |
 | hyperspec      | ✔ |   |
