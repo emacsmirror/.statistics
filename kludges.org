@@ -326,7 +326,7 @@
                      (closql-where-class-in [mirrored*] (epkg-db)))))
 #+end_src
 #+results: no-mainlib
-| Package (21)          | Class    | M | Library                         | Reason                     |
+| Package (20)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
 | flymake-collection    | github   | ✓ | src/flymake-collection.el       |                            |
 | chumpy-windows        | github   |   | window-jump.el                  | no primary entry point     |
@@ -338,7 +338,6 @@
 | ne2wm                 | github   |   | ne2wm-setup.el                  | no/mismatched main library |
 | ultratex              | github   |   | lisp/ultex.el                   | no/mismatched main library |
 | ert-runner            | github   | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| literate-starter-kit  | github   | ✓ | init.el                         | not a package              |
 | auctex                | gnu      |   | tex.el                          | pkg/lib name mismatch      |
 | ddskk                 | github   | ✓ | skk.el                          | pkg/lib name mismatch      |
 | apropospriate-theme   | github   | ✓ | apropospriate.el                | two-variant theme          |

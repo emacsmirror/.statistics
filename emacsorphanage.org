@@ -162,7 +162,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "dropped by maintainer")
 #+end_src
 #+results: dropped
-| Package (83)         | E | M |
+| Package (82)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -219,7 +219,6 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | ltsv                 | ✔ |   |
 | magit-gerrit         | ✔ | ✔ |
 | magit-p4             | ✔ | ✔ |
-| magit-stgit          | ✔ | ✔ |
 | magit-svn            | ✔ | ✔ |
 | manage-minor-mode    | ✔ | ✔ |
 | mongo                | ✔ | ✔ |

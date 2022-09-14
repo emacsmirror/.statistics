@@ -115,13 +115,13 @@
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  135 |    135 |       |       |       |   100 |
+| orphaned  |  134 |    134 |       |       |       |    99 |
 | shelved   | 1471 |        |  1471 |       |       |    18 |
 | mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
 | secondary |      |        |       |       |       |   224 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8451 |   6526 |  1471 |   474 |   354 |  5278 |
+| total     | 8450 |   6525 |  1471 |   474 |   354 |  5277 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
