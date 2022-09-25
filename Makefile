@@ -68,6 +68,7 @@ force:
 	(require 'org)\
 	(setq epkg-repository \"$(EPKG_REPOSITORY)\")\
 	(setq org-confirm-babel-evaluate nil)\
+	(org-fold-show-all)\
 	(org-babel-execute-buffer)\
 	(save-buffer))" 2>&1 | grep -v \
 	-e "((" \
