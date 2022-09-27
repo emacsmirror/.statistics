@@ -39,24 +39,25 @@ Also see https://github.com/melpa/melpa/issues/7892.
 #+results: missing-github
 | Package (549)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| emacspeak                    | 2022-09-12 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
-| eaf-pdf-viewer               | 2022-09-10 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
-| mu4e                         | 2022-09-08 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
-| org-extra-emphasis           | 2022-09-08 | [[https://github.com/QiangF/org-extra-emphasis][QiangF/org-extra-emphasis]]               | Extra Emphasis markers for Org                                         |
-| flx-rs                       | 2022-09-06 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
-| flxy                         | 2022-09-06 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
-| fuz-bin                      | 2022-09-06 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
-| github-tags                  | 2022-09-06 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
-| sublime-fuzzy                | 2022-09-06 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
+| eaf                          | 2022-09-27 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| emacspeak                    | 2022-09-27 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| modelica-mode                | 2022-09-26 | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            | Major mode for editing Modelica files                                  |
+| eaf-file-manager             | 2022-09-25 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
+| emir                         | 2022-09-25 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
+| eaf-pdf-viewer               | 2022-09-20 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
+| mu4e                         | 2022-09-19 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
+| flx-rs                       | 2022-09-16 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
+| github-tags                  | 2022-09-16 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
+| flxy                         | 2022-09-14 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
+| fuz-bin                      | 2022-09-14 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
+| sublime-fuzzy                | 2022-09-14 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
+| org-extra-emphasis           | 2022-09-13 | [[https://github.com/QiangF/org-extra-emphasis][QiangF/org-extra-emphasis]]               | Extra Emphasis markers for Org                                         |
 | movie                        | 2022-09-04 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
-| eaf                          | 2022-09-01 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | snails                       | 2022-08-26 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
-| emir                         | 2022-08-25 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | straight                     | 2022-08-19 | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
 | eaf-browser                  | 2022-08-12 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
 | fzf-native                   | 2022-08-08 | [[https://github.com/dangduc/fzf-native][dangduc/fzf-native]]                      | Fuzzy completion style                                                 |
 | git-undo                     | 2022-08-07 | [[https://github.com/jwiegley/git-undo-el][jwiegley/git-undo-el]]                    | Revert region to most recent Git historical version                    |
-| eaf-file-manager             | 2022-08-03 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
 | ultratex                     | 2022-07-28 | [[https://github.com/jhpalmieri/ultratex][jhpalmieri/ultratex]]                     | Ultra-TeX mode                                                         |
 | egit                         | 2022-07-19 | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                        | Emacs git commit history interface ala gitk and qgit                   |
 | awesome-tab                  | 2022-07-05 | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]              | Provide an out of box configuration to use tab in Emacs                |
@@ -92,8 +93,8 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | sclang                       | 2021-09-04 | [[https://github.com/supercollider/scel][supercollider/scel]]                      | IDE for working with the SuperCollider language                        |
 | latch                        | 2021-08-11 | [[https://github.com/skeeto/elisp-latch][skeeto/elisp-latch]]                      | Promises and latches for Elisp                                         |
 | dictem                       | 2021-07-28 | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          | DICT protocol client (rfc-2229) for [X]Emacs                           |
-| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                                       |
-| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                                |
+| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                       |
+| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                              |
 | goby                         | 2021-07-07 | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
 | ob-mathematica               | 2021-05-05 | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 | Org-babel functions for Mathematica evaluation                         |
 | trindle                      | 2021-05-05 | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      | Simple Emacs LISP management extension                                 |
@@ -560,7 +561,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | keats                        | 2010-04-18 | [[https://github.com/rejeep/keats][rejeep/keats]]                            | Keybinding Cheats                                                      |
 | cn-outline                   | 2010-03-22 | [[https://github.com/mori-dev/cn-outline][mori-dev/cn-outline]]                     | Minor mode for column-number-base line folding                         |
 | flowtimer                    | 2010-03-04 | [[https://github.com/jrockway/time-utils-el][jrockway/time-utils-el]]                  | Let yourself work in sprints                                           |
-| modelica-mode                | 2010-02-17 | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            | Major mode for editing Modelica files                                  |
 | mythryl-mode                 | 2010-02-11 | [[https://github.com/phr/mythryl-mode][phr/mythryl-mode]]                        | Major mode for editing Mythryl code                                    |
 | epom                         | 2010-02-10 | [[https://github.com/aufrank/epom][aufrank/epom]]                            | Pomodoro time management in emacs                                      |
 | antlr-runtime                | 2010-02-08 | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                     | Antlr runtime                                                          |

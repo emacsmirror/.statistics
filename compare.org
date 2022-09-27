@@ -97,10 +97,10 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    15 |       |
-| gnu-elpa  |  141 |    141 |       |       |   339 |       |
+| gnu-elpa  |  141 |    141 |       |       |   346 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5113 |   5113 |       |       |       |  4555 |
-| gitlab    |  174 |    174 |       |       |       |   155 |
+| github    | 5119 |   5119 |       |       |       |  4560 |
+| gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   60 |     60 |       |       |       |    42 |
 | gnu       |   10 |     10 |       |       |       |     1 |
@@ -115,13 +115,13 @@
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  134 |    134 |       |       |       |    99 |
-| shelved   | 1471 |        |  1471 |       |       |    18 |
+| orphaned  |  133 |    133 |       |       |       |    99 |
+| shelved   | 1472 |        |  1472 |       |       |    18 |
 | mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
-| secondary |      |        |       |       |       |   224 |
+| secondary |      |        |       |       |       |   225 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8450 |   6525 |  1471 |   474 |   354 |  5277 |
+| total     | 8457 |   6531 |  1472 |   474 |   361 |  5284 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -247,7 +247,7 @@
               [subtree external])))
 #+end_src
 #+results: gelpa-unreleased
-| Package (6)      | Gelpa    |
+| Package (7)      | Gelpa    |
 |------------------+----------|
 | sql-smie         | external |
 | prefixed-core    | external |
@@ -255,6 +255,7 @@
 | shell-quasiquote | external |
 | systemd          | external |
 | poke-mode        | external |
+| hcel             | external |
 
 ** Shelved
 #+name: gelpa-shelved
@@ -307,7 +308,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (197)              | Class     | Gelpa    | Link                                            |
+| Package (200)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -373,6 +374,7 @@
 | engrave-faces              | github    | external | [[https://github.com/tecosaur/engrave-faces][tecosaur/engrave-faces]]                          |
 | enwc                       | hg        | external | [[https://savannah.nongnu.org/p/enwc]]              |
 | ergoemacs-mode             | github    | external | [[https://github.com/ergoemacs/ergoemacs-mode][ergoemacs/ergoemacs-mode]]                        |
+| ess                        | github    | external | [[https://github.com/emacs-ess/ESS][emacs-ess/ESS]]                                   |
 | expand-region              | github    | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                        |
 | exwm                       | github    | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                     |
 | flymake-proselint          | sourcehut | external | [[https://git.sr.ht/~manuel-uberti/flycheck-proselint][manuel-uberti/flycheck-proselint]]                |
@@ -427,6 +429,7 @@
 | on-screen                  | github    | external | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]                  |
 | orderless                  | github    | external | [[https://github.com/oantolin/orderless][oantolin/orderless]]                              |
 | org                        | gnu       | external | [[https://git.savannah.gnu.org/cgit/org.git]]       |
+| org-contacts               | git       | external | [[https://repo.or.cz/org-contacts.git]]             |
 | org-modern                 | github    | external | [[https://github.com/minad/org-modern][minad/org-modern]]                                |
 | org-notify                 | github    | external | [[https://github.com/p-m/org-notify][p-m/org-notify]]                                  |
 | org-real                   | gitlab    | external | [[https://gitlab.com/tygrdev/org-real][tygrdev/org-real]]                                |
@@ -441,6 +444,7 @@
 | plz                        | github    | external | [[https://github.com/alphapapa/plz.el][alphapapa/plz.el]]                                |
 | poke                       | gnu       | external | [[https://git.savannah.gnu.org/cgit/poke.git]]      |
 | poke-mode                  | gnu       | external | [[https://git.savannah.gnu.org/cgit/poke-mode.git]] |
+| polymode                   | github    | external | [[https://github.com/polymode/polymode][polymode/polymode]]                               |
 | posframe                   | github    | external | [[https://github.com/tumashu/posframe][tumashu/posframe]]                                |
 | pq                         | github    | external | [[https://github.com/anse1/emacs-libpq][anse1/emacs-libpq]]                               |
 | pulsar                     | gitlab    | external | [[https://gitlab.com/protesilaos/pulsar][protesilaos/pulsar]]                              |
@@ -526,7 +530,7 @@
                        [gnu-elpa]))))
 #+end_src
 #+results: gelpa-prefer-gelpa
-| Package (16)        | :url                                              |
+| Package (17)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/r/org-edna-el   |
@@ -541,6 +545,7 @@
 | phps-mode           | https://github.com/cjohansson/emacs-phps-mode     |
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
 | ebdb                | https://github.com/girzel/ebdb.git                |
+| chess               | https://github.com/jwiegley/emacs-chess.git       |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
 | persist             | https://gitlab.com/phillord/persist               |
 | bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |

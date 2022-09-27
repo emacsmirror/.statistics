@@ -21,7 +21,7 @@
 | nadvice    | backport of builtin |
 | seq        | backport of builtin |
 
-* Delayed
+* Delayed                                                            :config:
 #+NAME: store--delayed
 #+BEGIN_SRC emacs-lisp :var value=table--delayed
   (emir--store-table 'var-delayed value)

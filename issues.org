@@ -58,12 +58,13 @@
      (epkgs [name class] [mirrored*])))
 #+end_src
 #+results: unsatisfied
-| Package (4)     | Class  | Feature | Provider |
-|-----------------+--------+---------+----------|
-| auctex-latexmk  | github | tex-buf |          |
-| latex-extra     | github | tex-buf |          |
-| sage-shell-mode | github | tex-buf |          |
-| xenops          | github | tex-buf |          |
+| Package (5)     | Class  | Feature          | Provider |
+|-----------------+--------+------------------+----------|
+| auctex-latexmk  | github | tex-buf          |          |
+| latex-extra     | github | tex-buf          |          |
+| lsp-treemacs    | github | treemacs-treelib |          |
+| sage-shell-mode | github | tex-buf          |          |
+| xenops          | github | tex-buf          |          |
 
 - tex-buf
   - https://github.com/tom-tan/auctex-latexmk/issues/44
