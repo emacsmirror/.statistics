@@ -127,7 +127,7 @@
               :from packages
               :where (= class 'shelved)
               :group-by license
-              :order-by count :desc]))
+              :order-by [(desc count) (asc license)]]))
 #+end_src
 #+results: attic-overview
 | License           | Count | Percent |

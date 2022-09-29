@@ -308,7 +308,7 @@
                        [builtin gnu-elpa shelved])))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (200)              | Class     | Gelpa    | Link                                            |
+| Package (199)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -342,7 +342,6 @@
 | consult-recoll             | codeberg  | external | [[https://codeberg.org/jao/consult-recoll][jao/consult-recoll]]                              |
 | context-coloring           | github    | external | [[https://github.com/jacksonrayhamilton/context-coloring][jacksonrayhamilton/context-coloring]]             |
 | corfu                      | github    | external | [[https://github.com/minad/corfu][minad/corfu]]                                     |
-| corfu-doc                  | github    | external | [[https://github.com/galeo/corfu-doc][galeo/corfu-doc]]                                 |
 | coterm                     | git       | external | [[https://repo.or.cz/emacs-coterm.git]]             |
 | cpio-mode                  | github    | external | [[https://github.com/dlewan/cpio-mode][dlewan/cpio-mode]]                                |
 | cpupower                   | gitlab    | external | [[https://gitlab.com/steve-emacs-stuff/cpupower-el][steve-emacs-stuff/cpupower-el]]                   |
@@ -377,7 +376,7 @@
 | ess                        | github    | external | [[https://github.com/emacs-ess/ESS][emacs-ess/ESS]]                                   |
 | expand-region              | github    | external | [[https://github.com/magnars/expand-region.el][magnars/expand-region.el]]                        |
 | exwm                       | github    | external | [[https://github.com/ch11ng/exwm][ch11ng/exwm]]                                     |
-| flymake-proselint          | sourcehut | external | [[https://git.sr.ht/~manuel-uberti/flycheck-proselint][manuel-uberti/flycheck-proselint]]                |
+| flymake-proselint          | sourcehut | external | [[https://git.sr.ht/~manuel-uberti/flymake-proselint][manuel-uberti/flymake-proselint]]                 |
 | fontaine                   | sourcehut | external | [[https://git.sr.ht/~protesilaos/fontaine][protesilaos/fontaine]]                            |
 | frog-menu                  | github    | external | [[https://github.com/clemera/frog-menu][clemera/frog-menu]]                               |
 | ftable                     | github    | external | [[https://github.com/casouri/ftable][casouri/ftable]]                                  |

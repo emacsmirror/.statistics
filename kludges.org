@@ -79,7 +79,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+end_src
 #+results: required-drop
-| Package (85)                    | Class     | Feature                  | Reason                                            |
+| Package (86)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -125,6 +125,7 @@
 | jda                             | github    | anything                 | anything                                          |
 | jdee                            | github    | working                  | stand-alone cedet compatibility                   |
 | lacarte                         | wiki      | subr-21                  | backward compatibility                            |
+| latex-extra                     | github    | tex-buf                  | backward compatibility                            |
 | lilypond                        | gnu       | ilisp                    | only required by a single undocumented command    |
 | lispxmp                         | github    | newxmp                   | pending: newxmp has not been released yet (email) |
 | lispy                           | github    | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                         |
