@@ -5,16 +5,20 @@
 #+begin_src emacs-lisp :results silent
   (require 'emir)
 #+end_src
+#+name: addheader
+#+header: :var rows="" :var header=""
+#+begin_src elisp :hlines yes :results none
+  (epkg-add-org-header rows header)
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Add provided features
 #+name: provided-join
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "Feature" "Reason")
-    (epkg-sql [:select [name class feature join]
-               :from [packages provided]
-               :where (and (= name package) (notnull join))
-               :order-by [(asc package) (asc feature)]]))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
+  (epkg-sql [:select [name class feature join]
+             :from [packages provided]
+             :where (and (= name package) (notnull join))
+             :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-join
 | Package (17) | Class     | Feature           | Reason                                    |
@@ -47,12 +51,11 @@
 
 * Drop provided features
 #+name: provided-drop
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "Feature" "Reason")
-    (epkg-sql [:select [name class feature drop]
-               :from [packages provided]
-               :where (and (= name package) (notnull drop))
-               :order-by [(asc package) (asc feature)]]))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
+  (epkg-sql [:select [name class feature drop]
+             :from [packages provided]
+             :where (and (= name package) (notnull drop))
+             :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-drop
 | Package (10)     | Class     | Feature              | Reason                |
@@ -71,12 +74,11 @@
 
 * Drop required features
 #+name: required-drop
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Class" "Feature" "Reason")
-    (epkg-sql [:select [name class feature drop]
-               :from [packages required]
-               :where (and (= name package) (notnull drop))
-               :order-by [(asc package) (asc feature)]]))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
+  (epkg-sql [:select [name class feature drop]
+             :from [packages required]
+             :where (and (= name package) (notnull drop))
+             :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
 | Package (87)                    | Class     | Feature                  | Reason                                            |
@@ -206,12 +208,11 @@
 
 * Patched packages
 #+name: patched
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Class")
-    (epkg-sql [:select [name class]
-               :from packages
-               :where (= patched 't)
-               :order-by [(asc name)]]))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
+  (epkg-sql [:select [name class]
+             :from packages
+             :where (= patched 't)
+             :order-by [(asc name)]])
 #+end_src
 #+results: patched
 | Package (16)           | Class     |
@@ -239,17 +240,16 @@
 
 * Filtered (minority) repositories
 #+name: filtered-minority
-#+begin_src emacs-lisp
-  (epkg-with-org-header (3 "Package" "Reason" "Suspended" "M" "Url")
-    (mapcar (pcase-lambda (`(,name ,args ,url))
-              (list name
-                    (emir--config name :minority)
-                    (emir--config name :suspended)
-                    ;; (mapconcat #'identity args " ")
-                    (and (melpa-get name) "✓")
-                    url))
-            (cl-sort (epkgs [name upstream-tree url] [minority])
-                     #'string< :key #'caddr)))
+#+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "Reason" "Suspended" "M" "Url"))
+  (mapcar (pcase-lambda (`(,name ,args ,url))
+            (list name
+                  (emir--config name :minority)
+                  (emir--config name :suspended)
+                  ;; (mapconcat #'identity args " ")
+                  (and (melpa-get name) "✓")
+                  url))
+          (cl-sort (epkgs [name upstream-tree url] [minority])
+                   #'string< :key #'caddr))
 #+end_src
 #+results: filtered-minority
 | Package (18)        | Reason           | Suspended      | M | Url                                          |
@@ -275,15 +275,14 @@
 
 * Filtered (subtree) repositories
 #+name: filtered-subtree
-#+begin_src emacs-lisp
-  (epkg-with-org-header (3 "Package" "M" "Url")
-    (mapcar (pcase-lambda (`(,name ,args ,url))
-              (list name
-                    ;; (cadr (assoc name emir--...-reason))
-                    ;; args
-                    (and (melpa-get name) "✓")
-                    url))
-            (epkgs [name upstream-tree url] [subtree])))
+#+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "M" "Url"))
+  (mapcar (pcase-lambda (`(,name ,args ,url))
+            (list name
+                  ;; (cadr (assoc name emir--...-reason))
+                  ;; args
+                  (and (melpa-get name) "✓")
+                  url))
+          (epkgs [name upstream-tree url] [subtree]))
 #+end_src
 #+results: filtered-subtree
 | Package (22)   | M | Url                                              |
@@ -313,19 +312,18 @@
 
 * Set main library
 #+name: no-mainlib
-#+begin_src emacs-lisp
-  (epkg-with-org-header (4 "Package" "Class" "M" "Library" "Reason")
-    (-keep (pcase-lambda (`(,name ,type ,library))
-               (and (not (eq type 'core))
-                    (list name type
-                          (and (melpa-get name) "✓")
-                          library
-                          (emir--config name :library))))
-           (epkg-sql [:select [name class library] :from packages
-                      :where (notnull library)
-                      :and class :in $v1
-                      :order-by [(asc name)]]
-                     (closql-where-class-in [mirrored*] (epkg-db)))))
+#+begin_src emacs-lisp :post addheader(*this*,'(4 "Package" "Class" "M" "Library" "Reason"))
+  (seq-keep (pcase-lambda (`(,name ,type ,library))
+              (and (not (eq type 'core))
+                   (list name type
+                         (and (melpa-get name) "✓")
+                         library
+                         (emir--config name :library))))
+            (epkg-sql [:select [name class library] :from packages
+                       :where (notnull library)
+                       :and class :in $v1
+                       :order-by [(asc name)]]
+                      (closql-where-class-in [mirrored*] (epkg-db))))
 #+end_src
 #+results: no-mainlib
 | Package (20)          | Class    | M | Library                         | Reason                     |
@@ -353,15 +351,14 @@
 
 * Set tracked branch
 #+name: set-branch
-#+begin_src emacs-lisp
-(epkg-with-org-header ("Package" "Branch" "Class" "Repo")
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Branch" "Class" "Repo"))
   (mapcar (pcase-lambda (`(,name ,branch ,class))
             (list name branch class
                   (epkg-org-link name)))
           (epkg-sql [:select [name upstream-branch class]
                      :from packages
                      :where (notnull upstream-branch)
-                     :order-by [(asc name)]])))
+                     :order-by [(asc name)]]))
 #+end_src
 #+results: set-branch
 | Package (6)        | Branch                     | Class    | Repo                                      |

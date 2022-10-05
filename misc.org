@@ -5,40 +5,44 @@
 #+begin_src emacs-lisp :results silent
   (require 'emir)
 #+end_src
+#+name: addheader
+#+header: :var rows="" :var header=""
+#+begin_src elisp :hlines yes :results none
+  (epkg-add-org-header rows header)
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Highest version
 #+name: highest-version
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("" "#" "%")
-    (let ((zero 0)
-          (one  0)
-          (more 0)
-          (odd  0)
-          (none 0)
-          (all  0))
-      (dolist (pkg (epkgs nil [mirrored*]))
-        (cl-incf all)
-        (with-epkg-repository pkg
-          (if-let ((tag (magit-git-string "tag" "--sort=-v:refname")))
-              (if-let ((major (ignore-errors
-                                (car (version-to-list
-                                      (if (string-match "\\`[^0-9]*" tag)
-                                          (substring tag (match-end 0))
-                                        tag))))))
-                  (pcase major
-                    (0 (cl-incf zero))
-                    (1 (cl-incf one))
-                    (_ (cl-incf more)))
-                (message "%-20s %s" (oref pkg name) tag)
-                (cl-incf odd))
-            (cl-incf none))))
-      (list (list 'zero  zero (/ (* 100 zero) all))
-            (list 'one   one  (/ (* 100 one)  all))
-            (list 'more  more (/ (* 100 more) all))
-            (list 'odd   odd  (/ (* 100 odd)  all))
-            (list 'none  none (/ (* 100 none) all))
-            (list 'total all  (/ (* 100 all)  all)))))
+#+begin_src emacs-lisp :post addheader(*this*,'("" "#" "%"))
+  (let ((zero 0)
+        (one  0)
+        (more 0)
+        (odd  0)
+        (none 0)
+        (all  0))
+    (dolist (pkg (epkgs nil [mirrored*]))
+      (cl-incf all)
+      (with-epkg-repository pkg
+        (if-let ((tag (magit-git-string "tag" "--sort=-v:refname")))
+            (if-let ((major (ignore-errors
+                              (car (version-to-list
+                                    (if (string-match "\\`[^0-9]*" tag)
+                                        (substring tag (match-end 0))
+                                      tag))))))
+                (pcase major
+                  (0 (cl-incf zero))
+                  (1 (cl-incf one))
+                  (_ (cl-incf more)))
+              (message "%-20s %s" (oref pkg name) tag)
+              (cl-incf odd))
+          (cl-incf none))))
+    (list (list 'zero  zero (/ (* 100 zero) all))
+          (list 'one   one  (/ (* 100 one)  all))
+          (list 'more  more (/ (* 100 more) all))
+          (list 'odd   odd  (/ (* 100 odd)  all))
+          (list 'none  none (/ (* 100 none) all))
+          (list 'total all  (/ (* 100 all)  all))))
 #+end_src
 #+results: highest-version
 | (6)   |    # |   % |

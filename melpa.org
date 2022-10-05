@@ -5,6 +5,11 @@
 #+begin_src emacs-lisp :results silent
   (require 'emir)
 #+end_src
+#+name: addheader
+#+header: :var rows="" :var header=""
+#+begin_src elisp :hlines yes :results none
+  (epkg-add-org-header rows header)
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Missing from Melpa
@@ -19,22 +24,21 @@ Also see https://github.com/melpa/melpa/issues/7892.
 
 ** Github
 #+name: missing-github
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Modified" "Link" "Summary")
-    (cl-sort
-     (-keep (pcase-lambda (`(,name ,summary))
-              (and (not (melpa-get name))
-                   (not (gelpa-get name))
-                   (list name
-                         (with-emir-repository (epkg name)
-                           (magit-git-string
-                            "log" "-1" "--format=%cd" "--date=short"))
-                         ;; (and (member name emir--archived-packages) t)
-                         (epkg-org-link name)
-                         (and summary (truncate-string-to-width
-                                       (string-replace "|" ";" summary) 70)))))
-            (epkgs [name summary] [github]))
-     #'string> :key #'cadr))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Modified" "Link" "Summary"))
+  (cl-sort
+   (seq-keep (pcase-lambda (`(,name ,summary))
+               (and (not (melpa-get name))
+                    (not (gelpa-get name))
+                    (list name
+                          (with-emir-repository (epkg name)
+                            (magit-git-string
+                             "log" "-1" "--format=%cd" "--date=short"))
+                          ;; (and (member name emir--archived-packages) t)
+                          (epkg-org-link name)
+                          (and summary (truncate-string-to-width
+                                        (string-replace "|" ";" summary) 70)))))
+             (epkgs [name summary] [github]))
+   #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
 | Package (549)                |   Modified | Link                                    | Summary                                                                |
@@ -93,8 +97,8 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | sclang                       | 2021-09-04 | [[https://github.com/supercollider/scel][supercollider/scel]]                      | IDE for working with the SuperCollider language                        |
 | latch                        | 2021-08-11 | [[https://github.com/skeeto/elisp-latch][skeeto/elisp-latch]]                      | Promises and latches for Elisp                                         |
 | dictem                       | 2021-07-28 | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          | DICT protocol client (rfc-2229) for [X]Emacs                           |
-| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                       |
-| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                              |
+| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                                       |
+| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                                |
 | goby                         | 2021-07-07 | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
 | ob-mathematica               | 2021-05-05 | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 | Org-babel functions for Mathematica evaluation                         |
 | trindle                      | 2021-05-05 | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      | Simple Emacs LISP management extension                                 |
@@ -591,12 +595,11 @@ Also see https://github.com/melpa/melpa/issues/7892.
 
 ** Gitlab
 #+name: missing-gitlab
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Link")
-    (--keep (and (not (melpa-get it))
-                 (not (gelpa-get it))
-                 (list it (epkg-org-link it)))
-            (epkgs 'name [gitlab])))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
+  (--keep (and (not (melpa-get it))
+               (not (gelpa-get it))
+               (list it (epkg-org-link it)))
+          (epkgs 'name [gitlab]))
 #+end_src
 #+results: missing-gitlab
 | Package (3)                | Link                                  |
@@ -607,12 +610,11 @@ Also see https://github.com/melpa/melpa/issues/7892.
 
 ** Git
 #+name: missing-git
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Package" "Link")
-    (--keep (and (not (melpa-get it))
-                 (not (gelpa-get it))
-                 (list it (epkg-org-link it)))
-	    (epkgs 'name [git])))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
+  (--keep (and (not (melpa-get it))
+               (not (gelpa-get it))
+               (list it (epkg-org-link it)))
+          (epkgs 'name [git]))
 #+end_src
 #+results: missing-git
 | Package (9)   | Link                                       |

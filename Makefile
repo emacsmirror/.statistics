@@ -72,9 +72,12 @@ force:
 	(org-babel-execute-buffer)\
 	(save-buffer))" 2>&1 | grep -v \
 	-e "((" \
+	-e "result silenced" \
 	-e "Code block evaluation complete." \
 	-e "Code block returned no value." \
-	-e "custom.el (source)..."
+	-e "custom.el (source)..." \
+	-e "Executing Elisp code block (addheader)..." \
+	-e "Package autoload is deprecated"
 	@echo
 
 %.html: %.org

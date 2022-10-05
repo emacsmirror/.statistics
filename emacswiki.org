@@ -5,28 +5,32 @@
 #+begin_src emacs-lisp :results silent
   (require 'emir)
 #+end_src
+#+name: addheader
+#+header: :var rows="" :var header=""
+#+begin_src elisp :hlines yes :results none
+  (epkg-add-org-header rows header)
+#+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Wiki packages required by non-wiki packages
 #+name: required-by-nonwiki
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Dependee" "M" "Author" "Depender" "M" "Type" "Author")
-    (mapcan
-     (lambda (dependee)
-       (mapcan (pcase-lambda (`(,depender . ,features))
-                 (let ((depender-pkg (epkg depender))
-                       (name (oref dependee name)))
-                   (and (not (epkg-wiki-package-p depender-pkg))
-                        (not (epkg-shelved-package-p depender-pkg))
-                        `((,name
-                           ,(if (melpa-get name) "✓" "")
-                           ,(caar (oref dependee authors))
-                           ,depender
-                           ,(if (melpa-get depender) "✓" "")
-                           ,(if (seq-some #'symbolp features) "hard" "soft")
-                           ,(caar (oref depender-pkg authors)))))))
-               (epkg-reverse-dependencies dependee)))
-     (epkgs nil [wiki])))
+#+begin_src emacs-lisp :post addheader(*this*,'("Dependee" "M" "Author" "Depender" "M" "Type" "Author"))
+  (mapcan
+   (lambda (dependee)
+     (mapcan (pcase-lambda (`(,depender . ,features))
+               (let ((depender-pkg (epkg depender))
+                     (name (oref dependee name)))
+                 (and (not (epkg-wiki-package-p depender-pkg))
+                      (not (epkg-shelved-package-p depender-pkg))
+                      `((,name
+                         ,(if (melpa-get name) "✓" "")
+                         ,(caar (oref dependee authors))
+                         ,depender
+                         ,(if (melpa-get depender) "✓" "")
+                         ,(if (seq-some #'symbolp features) "hard" "soft")
+                         ,(caar (oref depender-pkg authors)))))))
+             (epkg-reverse-dependencies dependee)))
+   (epkgs nil [wiki]))
 #+end_src
 #+results: required-by-nonwiki
 | Dependee (12) | M | Author                        | Depender                      | M | Type | Author                                                           |
@@ -64,15 +68,14 @@
 - [[https://github.com/melpa/melpa/pull/5008#issuecomment-360501258][melpa#5008^2]]
 
 #+name: all-wiki
-#+begin_src emacs-lisp
-  (epkg-with-org-header ("Author" "Package")
-    (cl-sort (mapcar (lambda (pkg)
-		       (list (or (caar (oref pkg maintainers))
-				 (caar (oref pkg authors))
-				 "")
-			     (oref pkg name)))
-		     (epkgs nil [wiki]))
-	     #'string< :key #'car))
+#+begin_src emacs-lisp :post addheader(*this*,'("Author" "Package"))
+  (cl-sort (mapcar (lambda (pkg)
+                     (list (or (caar (oref pkg maintainers))
+                               (caar (oref pkg authors))
+                               "")
+                           (oref pkg name)))
+                   (epkgs nil [wiki]))
+           #'string< :key #'car)
 #+end_src
 #+results: all-wiki
 | Author (199)                                    | Package                        |

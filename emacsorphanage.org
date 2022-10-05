@@ -15,24 +15,30 @@
                            #'string< :key (lambda (it) (cdr (assq 'name it))))))
 
   (defun emir--list-orphans (&rest only)
-    (epkg-with-org-header ("Package" "E" "M")
-      (--keep
-       (let* ((name (cdr (assq 'name it)))
-              (name (if (equal name "image-plus") "image+" name))
-              (pkg  (epkg name))
-              (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
-              (rcp  (melpa-get name))
-              (reason (emir--config name :orphanage)))
-         (and (or (not only)
-                  (member reason only))
-              (list name
-                    (if pkg (if (eq type 'orphaned) "✔" type) "")
-                    (if rcp
-                        (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
-                            "✔"
-                          (closql--abbrev-class (eieio-object-class rcp)))
-                      ""))))
-       emir--orphans-cache)))
+    (epkg-add-org-header
+     (--keep
+      (let* ((name (cdr (assq 'name it)))
+             (name (if (equal name "image-plus") "image+" name))
+             (pkg  (epkg name))
+             (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
+             (rcp  (melpa-get name))
+             (reason (emir--config name :orphanage)))
+        (and (or (not only)
+                 (member reason only))
+             (list name
+                   (if pkg (if (eq type 'orphaned) "✔" type) "")
+                   (if rcp
+                       (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
+                           "✔"
+                         (closql--abbrev-class (eieio-object-class rcp)))
+                     ""))))
+      emir--orphans-cache)
+     '("Package" "E" "M")))
+#+end_src
+#+name: addheader
+#+header: :var rows="" :var header=""
+#+begin_src elisp :hlines yes :results none
+  (epkg-add-org-header rows header)
 #+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
