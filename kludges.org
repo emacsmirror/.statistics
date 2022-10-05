@@ -79,7 +79,7 @@
                :order-by [(asc package) (asc feature)]]))
 #+end_src
 #+results: required-drop
-| Package (86)                    | Class     | Feature                  | Reason                                            |
+| Package (87)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -201,6 +201,7 @@
 | w3                              | gnu-elpa  | xpm-button               | XEmacs compatibility                              |
 | w3m                             | github    | rfc6068                  | forward compatibility (Emacs 28)                  |
 | wanderlust                      | github    | spamfilter               | shelved soft                                      |
+| xenops                          | github    | tex-buf                  | backward compatibility                            |
 | yatex                           | hg        | hilit19                  | backward compatibility                            |
 
 * Patched packages
