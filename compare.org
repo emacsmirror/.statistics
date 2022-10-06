@@ -831,6 +831,9 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (1)     | Mirror |                                | Melpa  |                              |
+|-----------------+--------+--------------------------------+--------+------------------------------|
+| farmhouse-theme | github | [[https://github.com/emacsorphanage/farmhouse-theme][emacsorphanage/farmhouse-theme]] | github | [[https://github.com/mattly/emacs-farmhouse-theme][mattly/emacs-farmhouse-theme]] |
 
 ** Diverging branches
 #+name: melpa-diverging-branches
