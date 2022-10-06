@@ -104,7 +104,7 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   346 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5119 |   5119 |       |       |       |  4560 |
+| github    | 5122 |   5122 |       |       |       |  4563 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   60 |     60 |       |       |       |    42 |
@@ -126,7 +126,7 @@
 |-----------+------+--------+-------+-------+-------+-------|
 | secondary |      |        |       |       |       |   225 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8457 |   6531 |  1472 |   474 |   361 |  5284 |
+| total     | 8460 |   6534 |  1472 |   474 |   361 |  5287 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -255,7 +255,7 @@
 | shell-quasiquote | external |
 | systemd          | external |
 | poke-mode        | external |
-| hcel             | external |
+| agitate          | external |
 
 ** Shelved
 #+name: gelpa-shelved
@@ -525,7 +525,7 @@
                         [gnu-elpa])))
 #+end_src
 #+results: gelpa-prefer-gelpa
-| Package (17)        | :url                                              |
+| Package (18)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/r/org-edna-el   |
@@ -542,6 +542,7 @@
 | ebdb                | https://github.com/girzel/ebdb.git                |
 | chess               | https://github.com/jwiegley/emacs-chess.git       |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
+| ediprolog           | https://github.com/triska/ediprolog               |
 | persist             | https://gitlab.com/phillord/persist               |
 | bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |
 
