@@ -13,6 +13,9 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Missing from Melpa
+:PROPERTIES:
+:ID:       7d6ef98f-8f71-4f28-8e89-532d5b48d61a
+:END:
 
 The below packages, which are available from the Emacsmirror, are
 missing from Melpa.  Not all of those packages should be added to
@@ -23,6 +26,9 @@ minimal requirements.
 Also see https://github.com/melpa/melpa/issues/7892.
 
 ** Github
+:PROPERTIES:
+:ID:       6a667542-10c1-4c12-a4f3-839be669c2f2
+:END:
 #+name: missing-github
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Modified" "Link" "Summary"))
   (cl-sort
@@ -594,6 +600,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | gitsum                       | 2008-08-09 | [[https://github.com/chneukirchen/gitsum][leahneukirchen/gitsum]]                   | Basic darcsum feelalike for Git                                        |
 
 ** Gitlab
+:PROPERTIES:
+:ID:       1b55899d-76c8-48a1-9a39-94adc009695e
+:END:
 #+name: missing-gitlab
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
   (--keep (and (not (melpa-get it))
@@ -609,6 +618,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | swift-playground-mode      | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]] |
 
 ** Git
+:PROPERTIES:
+:ID:       853ade07-5577-43ff-a220-3ae8232ffada
+:END:
 #+name: missing-git
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
   (--keep (and (not (melpa-get it))

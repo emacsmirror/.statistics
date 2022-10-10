@@ -13,6 +13,9 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Wiki packages required by non-wiki packages
+:PROPERTIES:
+:ID:       8e8fd389-e8f5-42aa-8aa5-a07174ff1c66
+:END:
 #+name: required-by-nonwiki
 #+begin_src emacs-lisp :post addheader(*this*,'("Dependee" "M" "Author" "Depender" "M" "Type" "Author"))
   (mapcan
@@ -62,6 +65,9 @@
 | zoom-frm      |   | Drew Adams                    | hyperbole                     |   | soft | Bob Weiner                                                       |
 
 * Wiki packages
+:PROPERTIES:
+:ID:       426a3871-8368-4882-9ed9-ae75ebb46316
+:END:
 
 - rubykitch [[https://github.com/melpa/melpa/issues/5020][melpa#5020]]
 - [[https://github.com/melpa/melpa/pull/5008#issuecomment-360103510][melpa#5008^1]]

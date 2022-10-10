@@ -13,6 +13,9 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Summary
+:PROPERTIES:
+:ID:       023e4161-8c52-44e7-8f26-dfddbfc016f4
+:END:
 #+name: summary
 #+begin_src emacs-lisp
   (require 'finder-inf)
@@ -161,7 +164,13 @@
   row.
 
 * Emacs
+:PROPERTIES:
+:ID:       d33670d0-33bd-4db5-93d7-57357ac25678
+:END:
 ** Prefer elpa
+:PROPERTIES:
+:ID:       0d5482d5-f620-4ae4-92ab-dcc4cb096e08
+:END:
 #+name: builtin-prefer-elpa
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
   (epkg-sql [:select :distinct [packages:name packages:class]
@@ -191,6 +200,9 @@
 | xref         | core  |
 
 ** Prefer upstream
+:PROPERTIES:
+:ID:       43da9d6f-fffb-420f-af20-96f069324cce
+:END:
 #+name: builtin-prefer-upstream
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
   (epkg-sql [:select :distinct [packages:name packages:class]
@@ -208,7 +220,13 @@
 | transient   | github |
 
 * Gelpa
+:PROPERTIES:
+:ID:       6aff2bdd-72bd-4902-80ce-56a8d1c911f2
+:END:
 ** New
+:PROPERTIES:
+:ID:       de3995d6-9c4e-4014-8233-fd4e0e0c4440
+:END:
 #+name: gelpa-new
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Url"))
   (mapcan (pcase-lambda (`(,name ,class ,url))
@@ -225,6 +243,9 @@
 #+results: gelpa-new
 
 ** Delayed
+:PROPERTIES:
+:ID:       d846eae7-e7a9-4b3b-be50-655f9736d770
+:END:
 #+name: gelpa-delayed
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Gelpa" "Reason"))
   (seq-keep (pcase-lambda (`(,name ,class))
@@ -238,6 +259,9 @@
 #+results: gelpa-delayed
 
 ** Unreleased
+:PROPERTIES:
+:ID:       abd15ba1-082f-411d-a557-7f5ff0e0200a
+:END:
 #+name: gelpa-unreleased
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Gelpa"))
   (epkg-sql [:select [name class]
@@ -258,6 +282,9 @@
 | agitate          | external |
 
 ** Shelved
+:PROPERTIES:
+:ID:       b17f6889-621c-45ec-bbbd-f433ba1ab06c
+:END:
 #+name: gelpa-shelved
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Gelpa"))
   (epkg-sql [:select :distinct [packages:name gelpa-recipes:class]
@@ -269,6 +296,9 @@
 #+results: gelpa-shelved
 
 ** Prefer builtin
+:PROPERTIES:
+:ID:       7a20ccb7-7e22-4110-aaae-02cdc725398f
+:END:
 #+name: gelpa-prefer-builtin
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Gelpa" "Reason"))
   (mapcar (pcase-lambda (`(,name ,class))
@@ -289,6 +319,9 @@
 | seq         | external | backport of builtin |
 
 ** Prefer upstream
+:PROPERTIES:
+:ID:       4ff2af7f-eaa4-461c-869f-a2978821320d
+:END:
 #+name: gelpa-prefer-upstream
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Gelpa" "Link"))
   (seq-keep (pcase-lambda (`(,name ,class ,gelpa))
@@ -508,6 +541,9 @@
 | ztree                      | github    | external | [[https://github.com/fourier/ztree][fourier/ztree]]                                   |
 
 ** Prefer Elpa despite :url
+:PROPERTIES:
+:ID:       14eaeffa-20a4-4e4e-a3ec-cb0711b0c08d
+:END:
 #+name: gelpa-prefer-gelpa
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" ":url"))
   (let ((alist (emir-gelpa--package-alist)))
@@ -547,7 +583,13 @@
 | bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |
 
 * Melpa
+:PROPERTIES:
+:ID:       eff92541-4709-4bcf-bff1-2be1120ccfbd
+:END:
 ** New
+:PROPERTIES:
+:ID:       80bbc73b-c1ad-4dc1-b86c-39e8f7b3bb70
+:END:
 #+name: melpa-new
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Melpa" "Link"))
   (seq-keep (pcase-lambda (`(,name ,fetcher ,url))
@@ -568,6 +610,9 @@
 #+results: melpa-new
 
 ** Delayed
+:PROPERTIES:
+:ID:       5f94df6a-24e1-4e74-a16a-0649c669a526
+:END:
 #+name: melpa-delayed
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Melpa" "Reason"))
   (seq-keep (pcase-lambda (`(,name ,class))
@@ -585,6 +630,9 @@
 | link        | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
 
 ** Shared repositories
+:PROPERTIES:
+:ID:       cb112869-6eb7-4a10-9d20-6868d2885461
+:END:
 #+name: secondary-packages
 #+begin_src emacs-lisp :post addheader(*this*,'("Primary package" "Secondary package" "Class"))
   (epkg-sql [:select :distinct [packages:name
@@ -825,6 +873,9 @@
 | zk                      | zk-index                          | github    |
 
 ** Diverging repositories
+:PROPERTIES:
+:ID:       493d7e47-cfad-4cbe-b8fb-643a63306fe5
+:END:
 #+name: melpa-diverging-repositories
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Mirror" "" "Melpa" ""))
   (mapcar (pcase-lambda (`(,name ,type ,url ,fetcher ,murl))
@@ -834,6 +885,9 @@
 #+results: melpa-diverging-repositories
 
 ** Diverging branches
+:PROPERTIES:
+:ID:       4739083e-ce34-4e33-84e5-f9bfd77b218f
+:END:
 #+name: melpa-diverging-branches
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Used" "Forced" "Melpa" "Class" "Fetcher" "Repo"))
   (mapcar (pcase-lambda (`(,name ,used ,forced ,melpa ,class ,fetcher))
@@ -870,7 +924,13 @@
 - tree-sitter*: https://github.com/emacs-tree-sitter/elisp-tree-sitter/issues/237
 
 * Github                                                           :noexport:
+:PROPERTIES:
+:ID:       402d9d91-94f5-4412-b57d-1dd0ae9adc55
+:END:
 ** Archived repositories
+:PROPERTIES:
+:ID:       a621dd5e-a206-4dad-b03f-deb33c0960db
+:END:
 #+name: github-archived
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Repository" "Melpa" "Dependants"))
   (mapcar (pcase-lambda (`(,name ,downloads))
@@ -883,6 +943,9 @@
 #+results: github-archived
 
 ** Removed repositories
+:PROPERTIES:
+:ID:       c9985064-5573-4119-acd0-5b8bf08902ae
+:END:
 #+name: github-removed
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Repository" "Melpa" "Dependants"))
   (mapcar (pcase-lambda (`(,name ,downloads))

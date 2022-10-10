@@ -13,6 +13,9 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Add provided features
+:PROPERTIES:
+:ID:       e4844f48-a3c2-4e4c-86fd-a2e5104938e6
+:END:
 #+name: provided-join
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
   (epkg-sql [:select [name class feature join]
@@ -50,6 +53,9 @@
 | vterm        | github    | vterm-module      | provided by module                        |
 
 * Drop provided features
+:PROPERTIES:
+:ID:       287c7fda-8210-4590-b5c1-42d746348cf9
+:END:
 #+name: provided-drop
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
   (epkg-sql [:select [name class feature drop]
@@ -74,6 +80,9 @@
 | srht             | sourcehut | test                 | test file vs. package |
 
 * Drop required features
+:PROPERTIES:
+:ID:       17fd0158-6dd9-42f2-8c71-5839839c30dd
+:END:
 #+name: required-drop
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
   (epkg-sql [:select [name class feature drop]
@@ -208,6 +217,9 @@
 | yatex                           | hg        | hilit19                  | backward compatibility                            |
 
 * Patched packages
+:PROPERTIES:
+:ID:       c76cd7ab-1ba6-4256-96f8-05a147bd58ac
+:END:
 #+name: patched
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
   (epkg-sql [:select [name class]
@@ -240,6 +252,9 @@
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 
 * Filtered (minority) repositories
+:PROPERTIES:
+:ID:       d5907eab-b5e3-436d-9637-c0f3ad581bdc
+:END:
 #+name: filtered-minority
 #+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "Reason" "Suspended" "M" "Url"))
   (mapcar (pcase-lambda (`(,name ,args ,url))
@@ -275,6 +290,9 @@
 | cmake-mode          | mostly non-elisp | slow           | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
 
 * Filtered (subtree) repositories
+:PROPERTIES:
+:ID:       b747ad33-ce62-48f8-9b91-852470cee627
+:END:
 #+name: filtered-subtree
 #+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "M" "Url"))
   (mapcar (pcase-lambda (`(,name ,args ,url))
@@ -312,6 +330,9 @@
 | utop           | ✓ | git@github.com:diml/utop.git                     |
 
 * Set main library
+:PROPERTIES:
+:ID:       43de71ec-d382-4b53-acdf-562cca94ef62
+:END:
 #+name: no-mainlib
 #+begin_src emacs-lisp :post addheader(*this*,'(4 "Package" "Class" "M" "Library" "Reason"))
   (seq-keep (pcase-lambda (`(,name ,type ,library))
@@ -351,6 +372,9 @@
 | majapahit-theme       | gitlab   | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 
 * Set tracked branch
+:PROPERTIES:
+:ID:       143977ed-3e79-4a30-ab35-f2b2123addf1
+:END:
 #+name: set-branch
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Branch" "Class" "Repo"))
   (mapcar (pcase-lambda (`(,name ,branch ,class))

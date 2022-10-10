@@ -43,6 +43,9 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Upstream has disappeared but there are dependents
+:PROPERTIES:
+:ID:       5428bc8d-7949-40ff-bcca-d21fcbf4849e
+:END:
 
 The upstream repository or file download for these packages has
 disappeared.
@@ -78,6 +81,9 @@ that are available from there).
 | vm           | ✔ |   |
 
 * Upstream is unresponsive but there are issues
+:PROPERTIES:
+:ID:       f8703683-84ea-4a2c-9774-83bb3703aac8
+:END:
 
 The upstream repositories for these packages still existed (or at
 least they still existed when the packages were added here), but the
@@ -105,6 +111,9 @@ the orphanage to fix these issues.
 | yafolding      | ✔ | ✔ |
 
 * Wiki packages needed by non-wiki packages
+:PROPERTIES:
+:ID:       09e75274-9792-4670-8847-507cd2b28776
+:END:
 
 These packages are being distributed on the Emacswiki and other
 packages that are not distributed on the Emacswiki depend on them.
@@ -151,6 +160,9 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | yaoddmuse          | ✔ |   |
 
 * Imported from tarball
+:PROPERTIES:
+:ID:       e8589487-88f3-46c8-8c97-ab2972a1a5e4
+:END:
 #+name: tarball
 #+begin_src emacs-lisp
   (emir--list-orphans "manual tarball import")
@@ -163,6 +175,9 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | sml-modeline | ✔ | ✔ |
 
 * Dropped of by maintainer
+:PROPERTIES:
+:ID:       c3c2ed97-b25b-4826-9501-b1020ee035f2
+:END:
 #+name: dropped
 #+begin_src emacs-lisp
   (emir--list-orphans "dropped by maintainer")
@@ -254,6 +269,9 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | zoom-window          | ✔ | ✔ |
 
 * Revived using the orphanage
+:PROPERTIES:
+:ID:       427d95e3-212d-49ae-bc6b-1a704fb217c0
+:END:
 
 The upstream has become unresponsive and a volunteer now maintains a
 fork under the umbrella of the orphanage.  I believe there are a few
@@ -271,6 +289,9 @@ orphanage.
 | ox-pandoc   | ✔ | ✔ |
 
 * Other
+:PROPERTIES:
+:ID:       9de7e052-bde3-443b-a2f7-00d52c68cc59
+:END:
 #+name: rip
 #+begin_src emacs-lisp
   (emir--list-orphans "maintainer is dead" "last subversion")
@@ -282,6 +303,9 @@ orphanage.
 | org-grep       | ✔ | ✔ |
 
 * New
+:PROPERTIES:
+:ID:       facb6c4a-6c45-487b-b099-54f8677cccd6
+:END:
 #+name: new
 #+begin_src emacs-lisp
   (emir--list-orphans nil)
