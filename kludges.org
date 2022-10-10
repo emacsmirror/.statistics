@@ -58,7 +58,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-drop
-| Package (10)     | Class     | Feature              | Reason                |
+| Package (11)     | Class     | Feature              | Reason                |
 |------------------+-----------+----------------------+-----------------------|
 | clojure-mode     | github    | test-helper          | conflicting test file |
 | elixir-mode      | github    | test-helper          | conflicting test file |
@@ -66,6 +66,7 @@
 | font-lock-studio | github    | tabulated-list       | harmless in test file |
 | gumshoe          | github    | targets/install-deps | conflicting test file |
 | ivy              | github    | targets/install-deps | conflicting test file |
+| kurecolor        | github    | etd                  | wontfix [[https://github.com/emacsfodder/kurecolor/issues/17][#17]]           |
 | org              | gnu       | org-test             | conflicting test file |
 | org-gcal         | github    | org-test             | conflicting test file |
 | rgb              | gitlab    | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
