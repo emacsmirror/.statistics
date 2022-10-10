@@ -104,7 +104,7 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   346 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5122 |   5122 |       |       |       |  4563 |
+| github    | 5128 |   5128 |       |       |       |  4568 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   60 |     60 |       |       |       |    42 |
@@ -120,13 +120,13 @@
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  133 |    133 |       |       |       |    99 |
+| orphaned  |  133 |    133 |       |       |       |   100 |
 | shelved   | 1472 |        |  1472 |       |       |    18 |
 | mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
-| secondary |      |        |       |       |       |   225 |
+| secondary |      |        |       |       |       |   226 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8460 |   6534 |  1472 |   474 |   361 |  5287 |
+| total     | 8466 |   6540 |  1472 |   474 |   361 |  5294 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -667,6 +667,7 @@
 | elfeed                  | elfeed-web                        | github    |
 | elfeed-tube             | elfeed-tube-mpv                   | github    |
 | emacsql                 | emacsql-mysql                     | github    |
+| emacsql                 | emacsql-pg                        | github    |
 | emacsql                 | emacsql-psql                      | github    |
 | emacsql                 | emacsql-sqlite                    | github    |
 | emacsql-sqlite-builtin  | emacsql-sqlite-module             | github    |
@@ -831,9 +832,6 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (1)     | Mirror |                                | Melpa  |                              |
-|-----------------+--------+--------------------------------+--------+------------------------------|
-| farmhouse-theme | github | [[https://github.com/emacsorphanage/farmhouse-theme][emacsorphanage/farmhouse-theme]] | github | [[https://github.com/mattly/emacs-farmhouse-theme][mattly/emacs-farmhouse-theme]] |
 
 ** Diverging branches
 #+name: melpa-diverging-branches
