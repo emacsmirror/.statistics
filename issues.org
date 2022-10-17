@@ -67,14 +67,20 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (2)     | Class  | Feature | Provider |
-|-----------------+--------+---------+----------|
-| auctex-latexmk  | github | tex-buf |          |
-| sage-shell-mode | github | tex-buf |          |
+| Package (6)     | Class  | Feature                | Provider          |
+|-----------------+--------+------------------------+-------------------|
+| auctex-latexmk  | github | tex-buf                |                   |
+| calibredb       | github | icons-in-terminal      | icons-in-terminal |
+| company-box     | github | icons-in-terminal      | icons-in-terminal |
+| omnibox         | github | icons-in-terminal      | icons-in-terminal |
+| org-roam        | github | emacsql-sqlite-builtin |                   |
+| org-roam        | github | emacsql-sqlite-module  |                   |
+| sage-shell-mode | github | tex-buf                |                   |
 
 - tex-buf
   - https://github.com/tom-tan/auctex-latexmk/issues/44
   - https://github.com/sagemath/sage-shell-mode/issues/63
+- TODO patch icons-in-terminal
 
 * Missing library summary
 :PROPERTIES:

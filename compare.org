@@ -107,7 +107,7 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   346 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5128 |   5128 |       |       |       |  4568 |
+| github    | 5128 |   5128 |       |       |       |  4569 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   60 |     60 |       |       |       |    42 |
@@ -123,13 +123,13 @@
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  133 |    133 |       |       |       |   100 |
-| shelved   | 1472 |        |  1472 |       |       |    18 |
+| orphaned  |  134 |    134 |       |       |       |   101 |
+| shelved   | 1474 |        |  1474 |       |       |    18 |
 | mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
-| secondary |      |        |       |       |       |   226 |
+| secondary |      |        |       |       |       |   227 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8466 |   6540 |  1472 |   474 |   361 |  5294 |
+| total     | 8469 |   6541 |  1474 |   474 |   361 |  5297 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -624,10 +624,11 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: melpa-delayed
-| Package (2) | Melpa  | Reason                                                    |
-|-------------+--------+-----------------------------------------------------------|
-| connection  | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
-| link        | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
+| Package (3)     | Melpa  | Reason                                                    |
+|-----------------+--------+-----------------------------------------------------------|
+| connection      | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
+| django-snippets | github | Don't add; part of shelved django-mode                    |
+| link            | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
 
 ** Shared repositories
 :PROPERTIES:
@@ -646,7 +647,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (130)   | Secondary package                 | Class     |
+| Primary package (128)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -703,7 +704,6 @@
 | distel-completion-lib   | auto-complete-distel              | github    |
 | distel-completion-lib   | company-distel                    | github    |
 | dix                     | dix-evil                          | github    |
-| django-mode             | django-snippets                   | shelved   |
 | dogears                 | helm-dogears                      | github    |
 | dylan                   | dime                              | github    |
 | eclim                   | ac-emacs-eclim                    | github    |
@@ -718,7 +718,7 @@
 | emacsql                 | emacsql-pg                        | github    |
 | emacsql                 | emacsql-psql                      | github    |
 | emacsql                 | emacsql-sqlite                    | github    |
-| emacsql-sqlite-builtin  | emacsql-sqlite-module             | github    |
+| emacsql                 | emacsql-sqlite-module             | github    |
 | embark                  | avy-embark-collect                | github    |
 | embark                  | embark-consult                    | github    |
 | espotify                | consult-spotify                   | codeberg  |
@@ -883,6 +883,20 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (9)    | Mirror  |                             | Melpa  |                             |
+|----------------+---------+-----------------------------+--------+-----------------------------|
+| base16-theme   | github  | [[https://github.com/tinted-theming/base16-emacs][tinted-theming/base16-emacs]] | github | [[https://github.com/base16-project/base16-emacs][base16-project/base16-emacs]] |
+| django-mode    | shelved | [[https://github.com/unrelentingtech/django-mode][unrelentingtech/django-mode]] | github | [[https://github.com/unrelentingtech/django-mode][unrelentingtech/django-mode]] |
+| flycheck-julia | shelved | [[https://github.com/gdkrmr/flycheck-julia][gdkrmr/flycheck-julia]]       | github | [[https://github.com/gdkrmr/flycheck-julia][gdkrmr/flycheck-julia]]       |
+| fold-dwim-org  | shelved | [[https://github.com/mattfidler/fold-dwim-org][mattfidler/fold-dwim-org]]    | github | [[https://github.com/mattfidler/fold-dwim-org][mattfidler/fold-dwim-org]]    |
+| lsp-python-ms  | shelved | [[https://github.com/emacs-lsp/lsp-python-ms][emacs-lsp/lsp-python-ms]]     | github | [[https://github.com/emacs-lsp/lsp-python-ms][emacs-lsp/lsp-python-ms]]     |
+| magit-gh-pulls | shelved | [[https://github.com/sigma/magit-gh-pulls][sigma/magit-gh-pulls]]        | github | [[https://github.com/sigma/magit-gh-pulls][sigma/magit-gh-pulls]]        |
+| twtxt          | shelved | [[https://github.com/deadblackclover/twtxt-el][deadblackclover/twtxt-el]]    | github | [[https://github.com/deadblackclover/twtxt-el][deadblackclover/twtxt-el]]    |
+| weechat        | shelved | [[https://github.com/the-kenny/weechat.el][the-kenny/weechat.el]]        | github | [[https://github.com/the-kenny/weechat.el][the-kenny/weechat.el]]        |
+| weechat-alert  | shelved | [[https://github.com/Kungi/weechat-alert][Kungi/weechat-alert]]         | github | [[https://github.com/Kungi/weechat-alert][Kungi/weechat-alert]]         |
+
+The Emacsmirror is strickter than Melpa, so the number of shelved
+packages in this list will necessarily grow.
 
 ** Diverging branches
 :PROPERTIES:

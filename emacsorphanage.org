@@ -100,10 +100,11 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+end_src
 #+results: unresponsive
-| Package (7)    | E | M |
+| Package (8)    | E | M |
 |----------------+---+---|
 | edb            | ✔ |   |
 | elisp-depend   | ✔ | ✔ |
+| evil-escape    | ✔ | ✔ |
 | hyperspec      | ✔ |   |
 | oberon         | ✔ | ✔ |
 | read-char-spec | ✔ |   |
@@ -183,7 +184,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "dropped by maintainer")
 #+end_src
 #+results: dropped
-| Package (82)         | E | M |
+| Package (83)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -207,6 +208,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | evil-anzu            | ✔ | ✔ |
 | evil-textobj-line    | ✔ | ✔ |
 | fancy-battery        | ✔ | ✔ |
+| farmhouse-theme      | ✔ | ✔ |
 | fontawesome          | ✔ | ✔ |
 | gh-md                | ✔ | ✔ |
 | git-gutter           | ✔ | ✔ |
@@ -267,6 +269,8 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | undohist             | ✔ | ✔ |
 | yascroll             | ✔ | ✔ |
 | zoom-window          | ✔ | ✔ |
+
+- farmhouse-theme: TODO rename to farmhouse-themes
 
 * Revived using the orphanage
 :PROPERTIES:

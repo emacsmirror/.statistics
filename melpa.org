@@ -47,22 +47,23 @@ Also see https://github.com/melpa/melpa/issues/7892.
    #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (549)                |   Modified | Link                                    | Summary                                                                |
+| Package (548)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| emacspeak                    | 2022-10-10 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| emacspeak                    | 2022-10-17 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| emir                         | 2022-10-17 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
+| mu4e                         | 2022-10-16 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
+| eaf                          | 2022-10-15 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| eaf-file-manager             | 2022-10-13 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
+| org-extra-emphasis           | 2022-10-11 | [[https://github.com/QiangF/org-extra-emphasis][QiangF/org-extra-emphasis]]               | Extra Emphasis markers for Org                                         |
+| seognil                      | 2022-10-11 | [[https://github.com/md11235/seognil][md11235/seognil]]                         | Query words in massaged dictionaries in lingoes format                 |
 | modelica-mode                | 2022-10-10 | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            | Major mode for editing Modelica files                                  |
-| eaf                          | 2022-10-09 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
-| eaf-file-manager             | 2022-10-03 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
-| mu4e                         | 2022-10-03 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
 | eaf-browser                  | 2022-09-30 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
-| emir                         | 2022-09-25 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | eaf-pdf-viewer               | 2022-09-20 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
 | flx-rs                       | 2022-09-16 | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
 | github-tags                  | 2022-09-16 | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
 | flxy                         | 2022-09-14 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
 | fuz-bin                      | 2022-09-14 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
 | sublime-fuzzy                | 2022-09-14 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
-| org-extra-emphasis           | 2022-09-13 | [[https://github.com/QiangF/org-extra-emphasis][QiangF/org-extra-emphasis]]               | Extra Emphasis markers for Org                                         |
 | movie                        | 2022-09-04 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
 | snails                       | 2022-08-26 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
 | straight                     | 2022-08-19 | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
@@ -108,7 +109,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | goby                         | 2021-07-07 | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
 | ob-mathematica               | 2021-05-05 | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 | Org-babel functions for Mathematica evaluation                         |
 | trindle                      | 2021-05-05 | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      | Simple Emacs LISP management extension                                 |
-| icons-in-terminal            | 2021-05-04 | [[https://github.com/sebastiencs/icons-in-terminal][sebastiencs/icons-in-terminal]]           |                                                                        |
 | mailcrypt                    | 2021-05-04 | [[https://github.com/barak/mailcrypt][barak/mailcrypt]]                         | Mail encryption with PGP                                               |
 | mv-shell                     | 2021-05-04 | [[https://github.com/nflath/mv-shell][nflath/mv-shell]]                         | Keep buffers in sync with filename throughout 'mv'commands in shell-mo |
 | zone-matrix                  | 2021-05-01 | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        | The matrix screen saver on Emacs                                       |
@@ -143,7 +143,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | expectations-mode            | 2019-06-19 | [[https://github.com/gar3thjon3s/expectations-mode][clojure-expectations/expectations-mode]]  | Minor mode for expectations tests                                      |
 | emux                         | 2019-06-09 | [[https://github.com/re5et/emux][re5et/emux]]                              | Emacs Lisp Behaviour-Driven Development framework                      |
 | insert-time                  | 2019-06-03 | [[https://github.com/rmm5t/insert-time.el][rmm5t/insert-time.el]]                    | Insert time and date stamps at point                                   |
-| seognil                      | 2019-04-13 | [[https://github.com/md11235/seognil][md11235/seognil]]                         | Query words in massaged dictionaries in lingoes format                 |
 | helm-words                   | 2019-03-12 | [[https://github.com/pronobis/helm-words][pronobis/helm-words]]                     | Helm extension for looking up words in dictionaries and thesauri       |
 | exim                         | 2019-02-06 | [[https://github.com/ch11ng/exim][ch11ng/exim]]                             | Emacs X Input Method                                                   |
 | org-passwords                | 2019-01-02 | [[https://github.com/alfaromurillo/org-passwords.el][alfaromurillo/org-passwords.el]]          | Org derived mode for managing passwords                                |
