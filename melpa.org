@@ -49,11 +49,14 @@ Also see https://github.com/melpa/melpa/issues/7892.
 #+results: missing-github
 | Package (548)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| emacspeak                    | 2022-10-17 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
-| emir                         | 2022-10-17 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
+| emacspeak                    | 2022-10-24 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| eaf-file-manager             | 2022-10-22 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
+| emir                         | 2022-10-22 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
+| movie                        | 2022-10-22 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
+| indent-hints-mode            | 2022-10-21 | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                | Get some hints about whether your buffer is                            |
+| eaf                          | 2022-10-20 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| snails                       | 2022-10-19 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
 | mu4e                         | 2022-10-16 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
-| eaf                          | 2022-10-15 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
-| eaf-file-manager             | 2022-10-13 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
 | org-extra-emphasis           | 2022-10-11 | [[https://github.com/QiangF/org-extra-emphasis][QiangF/org-extra-emphasis]]               | Extra Emphasis markers for Org                                         |
 | seognil                      | 2022-10-11 | [[https://github.com/md11235/seognil][md11235/seognil]]                         | Query words in massaged dictionaries in lingoes format                 |
 | modelica-mode                | 2022-10-10 | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            | Major mode for editing Modelica files                                  |
@@ -64,8 +67,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | flxy                         | 2022-09-14 | [[https://github.com/jcs-elpa/flxy][jcs-elpa/flxy]]                           | Fast, character-based search library in Rust                           |
 | fuz-bin                      | 2022-09-14 | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
 | sublime-fuzzy                | 2022-09-14 | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
-| movie                        | 2022-09-04 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
-| snails                       | 2022-08-26 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
 | straight                     | 2022-08-19 | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
 | fzf-native                   | 2022-08-08 | [[https://github.com/dangduc/fzf-native][dangduc/fzf-native]]                      | Fuzzy completion style                                                 |
 | git-undo                     | 2022-08-07 | [[https://github.com/jwiegley/git-undo-el][jwiegley/git-undo-el]]                    | Revert region to most recent Git historical version                    |
@@ -241,7 +242,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | auto-document                | 2015-12-03 | [[https://github.com/rubikitch/auto-document][rubikitch/auto-document]]                 | Automatic document generator of Emacs Lisp                             |
 | bbcode                       | 2015-11-19 | [[https://github.com/sensorflo/bbcode][sensorflo/bbcode]]                        | A major-mode for editing bbcode                                        |
 | ios-config-mode              | 2015-11-04 | [[https://github.com/nibrahim/IOS-config-mode][nibrahim/IOS-config-mode]]                | Edit Cisco IOS configuration files                                     |
-| indent-hints-mode            | 2015-09-23 | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                | Get some hints about whether your buffer is                            |
 | accelerate                   | 2015-09-02 | [[https://github.com/yagunov/accelerate.el][yagunov/accelerate.el]]                   | Pump numeric arg for auto-repeated interactive commands                |
 | spinasm-mode                 | 2015-08-22 | [[https://github.com/segoh/spinasm-mode][segoh/spinasm-mode]]                      | Mode for editing SpinAsm code                                          |
 | pgrok                        | 2015-08-05 | [[https://github.com/juri/pgrok][juri/pgrok]]                              | Project Grokking for Emacs                                             |

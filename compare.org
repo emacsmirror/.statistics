@@ -107,7 +107,7 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   346 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5128 |   5128 |       |       |       |  4569 |
+| github    | 5126 |   5126 |       |       |       |  4569 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   60 |     60 |       |       |       |    42 |
@@ -123,13 +123,13 @@
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  134 |    134 |       |       |       |   101 |
-| shelved   | 1474 |        |  1474 |       |       |    18 |
+| orphaned  |  135 |    135 |       |       |       |   101 |
+| shelved   | 1475 |        |  1475 |       |       |    18 |
 | mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
 | secondary |      |        |       |       |       |   227 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8469 |   6541 |  1474 |   474 |   361 |  5297 |
+| total     | 8469 |   6540 |  1475 |   474 |   361 |  5297 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -444,7 +444,7 @@
 | mct                        | gitlab    | external | [[https://gitlab.com/protesilaos/mct][protesilaos/mct]]                                 |
 | mines                      | github    | external | [[https://github.com/calancha/Minesweeper][calancha/Minesweeper]]                            |
 | minibuffer-header          | github    | external | [[https://github.com/rougier/minibuffer-header][rougier/minibuffer-header]]                       |
-| mmm-mode                   | github    | external | [[https://github.com/purcell/mmm-mode][purcell/mmm-mode]]                                |
+| mmm-mode                   | github    | external | [[https://github.com/dgutov/mmm-mode][dgutov/mmm-mode]]                                 |
 | modus-themes               | sourcehut | core     | [[https://git.sr.ht/~protesilaos/modus-themes][protesilaos/modus-themes]]                        |
 | multishell                 | github    | external | [[https://github.com/kenmanheimer/EmacsMultishell][kenmanheimer/EmacsMultishell]]                    |
 | muse                       | github    | external | [[https://github.com/alexott/muse][alexott/muse]]                                    |
@@ -883,9 +883,8 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (9)    | Mirror  |                             | Melpa  |                             |
+| Package (8)    | Mirror  |                             | Melpa  |                             |
 |----------------+---------+-----------------------------+--------+-----------------------------|
-| base16-theme   | github  | [[https://github.com/tinted-theming/base16-emacs][tinted-theming/base16-emacs]] | github | [[https://github.com/base16-project/base16-emacs][base16-project/base16-emacs]] |
 | django-mode    | shelved | [[https://github.com/unrelentingtech/django-mode][unrelentingtech/django-mode]] | github | [[https://github.com/unrelentingtech/django-mode][unrelentingtech/django-mode]] |
 | flycheck-julia | shelved | [[https://github.com/gdkrmr/flycheck-julia][gdkrmr/flycheck-julia]]       | github | [[https://github.com/gdkrmr/flycheck-julia][gdkrmr/flycheck-julia]]       |
 | fold-dwim-org  | shelved | [[https://github.com/mattfidler/fold-dwim-org][mattfidler/fold-dwim-org]]    | github | [[https://github.com/mattfidler/fold-dwim-org][mattfidler/fold-dwim-org]]    |

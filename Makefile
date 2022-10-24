@@ -28,6 +28,7 @@ DEPS  += elx
 DEPS  += emir
 DEPS  += epkg/lisp
 DEPS  += emacsql
+DEPS  += f
 DEPS  += ghub/lisp
 DEPS  += graphql
 DEPS  += llama
