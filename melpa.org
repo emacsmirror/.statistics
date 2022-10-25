@@ -47,7 +47,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
    #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (549)                |   Modified | Link                                    | Summary                                                                |
+| Package (547)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
 | icons-in-terminal            | 2022-10-25 | [[https://github.com/sebastiencs/icons-in-terminal][sebastiencs/icons-in-terminal]]           | Use any font without replacing or patching your font                   |
 | emacspeak                    | 2022-10-24 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
@@ -192,7 +192,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | paredit-c                    | 2017-08-16 | [[https://github.com/dandavison/paredit-c][dandavison/paredit-c]]                    | Paredit mode for C-style languages                                     |
 | show-arglist                 | 2017-08-16 | [[https://github.com/peccu/show-arglist.el][peccu/show-arglist.el]]                   | Showing arglist of function at point                                   |
 | sentence-highlight           | 2017-08-12 | [[https://github.com/sbelak/sentence-highlight][sbelak/sentence-highlight]]               | Highlight the current sentence                                         |
-| chumpy-windows               | 2017-08-09 | [[https://github.com/chumpage/chumpy-windows][chumpage/chumpy-windows]]                 | Move left/right/up/down through your windows                           |
 | ergore                       | 2017-08-05 | [[https://github.com/jonnay/ergore][jonnay/ergore]]                           | Personal Bitlbee robot and helper                                      |
 | pcb-mode                     | 2017-08-05 | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     | Major mode providing a pcb mode hook for Emacs                         |
 | cdecl                        | 2017-08-03 | [[https://github.com/jhgorrell/cdecl-el][jhgorrell/cdecl-el]]                      | Run cdecl                                                              |
@@ -225,7 +224,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | screensend                   | 2016-06-06 | [[https://github.com/benwbooth/screensend.el][benwbooth/screensend.el]]                 | Send blocks of text from emacs to screen or tmux sessions              |
 | json-sexp-mode               | 2016-05-24 | [[https://github.com/TaylanUB/json-sexp-mode][TaylanUB/json-sexp-mode]]                 | Edit JSON in s-expression form                                         |
 | org-helpers                  | 2016-03-26 | [[https://github.com/leoc/org-helpers.el][leoc/org-helpers.el]]                     | Summered for Emacs                                                     |
-| zonokai-theme                | 2016-03-21 | [[https://github.com/ZehCnaS34/zonokai-emacs][ZehCnaS34/zonokai-emacs]]                 | Blue based theme for emacs                                             |
 | eimap                        | 2016-02-22 | [[https://github.com/corecode/eimap][corecode/eimap]]                          | Imap processing using a streaming data model                           |
 | pulseaudio                   | 2016-02-22 | [[https://github.com/suzp1984/pulseaudio-mode][suzp1984/pulseaudio-mode]]                | Pulseaudio control panel                                               |
 | old-fashioned-undo           | 2016-02-21 | [[https://github.com/k-talo/old-fashioned-undo.el][k-talo/old-fashioned-undo.el]]            | Undo/Redo in very simple, and old fashioned way                        |
@@ -295,7 +293,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | try-code                     | 2014-05-05 | [[https://github.com/lewang/try-code][lewang/try-code]]                         | Try out a new idea by commenting out old code                          |
 | eviews                       | 2014-05-03 | [[https://github.com/vapniks/eviews-mode][vapniks/eviews-mode]]                     | Major-mode for editing eviews program files                            |
 | org-hlc                      | 2014-04-17 | [[https://github.com/tj64/org-hlc][tj64/org-hlc]]                            | Hidden-lines-cookies for folded Org-mode headlines                     |
-| html5                        | 2014-04-16 | [[https://github.com/hober/html5-el][hober/html5-el]]                          | Named Character References in HTML5                                    |
+| html5-tok                    | 2014-04-16 | [[https://github.com/hober/html5-el][hober/html5-el]]                          | HTML Tokenizer                                                         |
 | org-watchdoc                 | 2014-04-10 | [[https://github.com/tj64/org-watchdoc][tj64/org-watchdoc]]                       | Watchdog for exported Org-mode trees                                   |
 | im-notification              | 2014-03-21 | [[https://github.com/bvtrach/emacs-im-notification][bvtrach/emacs-im-notification]]           | Emacs input method notification via D-Bus                              |
 | drill-instructor             | 2014-03-07 | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            | Enforce key-bind of Emacs                                              |

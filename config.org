@@ -88,16 +88,13 @@
 |-----------------------+----------------------------|
 | apropospriate-theme   | two-variant theme          |
 | auctex                | pkg/lib name mismatch      |
-| chumpy-windows        | no primary entry point     |
-| ddskk                 | pkg/lib name mismatch      |
-| dired-hacks           | no primary entry point     |
+| ddskk                 | pkg/lib name mismatch [[https://github.com/skk-dev/ddskk/pull/209][#209]] |
+| dired-hacks           | no primary entry point [[https://github.com/Fuco1/dired-hacks/issues/31][#31]] |
 | edb                   | no/mismatched main library |
 | emacs-speaks-nonmem   | no/mismatched main library |
 | emux                  | no/mismatched main library |
 | ert-runner            | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
 | eziam-theme           | two-variant theme          |
-| farmhouse-theme       | two-variant theme [[https://github.com/mattly/emacs-farmhouse-theme/pull/3][#3]]       |
-| html5                 | no/mismatched main library |
 | literate-starter-kit  | not a package              |
 | majapahit-theme       | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 | ne2wm                 | no/mismatched main library |
@@ -105,7 +102,6 @@
 | punpun-theme          | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | spacemacs-theme       | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | ultratex              | no/mismatched main library |
-| zonokai-theme         | two-variant theme          |
 
 * Minority                                                            :stats:
 :PROPERTIES:
@@ -191,7 +187,7 @@
 | evil-textobj-line    | dropped by maintainer   |
 | extract-text         | wiki needed by non-wiki |
 | fancy-battery        | dropped by maintainer   |
-| farmhouse-theme      | dropped by maintainer   |
+| farmhouse-themes     | dropped by maintainer   |
 | findr                | wiki needed by non-wiki |
 | fontawesome          | dropped by maintainer   |
 | gh-md                | dropped by maintainer   |
