@@ -228,12 +228,14 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (16)           | Class     |
+| Package (18)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
+| auctex-latexmk         | github    |
 | emacspeak              | github    |
 | flim                   | github    |
 | go                     | github    |
+| icons-in-terminal      | github    |
 | karma                  | github    |
 | lookup                 | github    |
 | nav                    | github    |

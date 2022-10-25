@@ -67,17 +67,6 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (5)    | Class  | Feature                | Provider          |
-|----------------+--------+------------------------+-------------------|
-| auctex-latexmk | github | tex-buf                |                   |
-| calibredb      | github | icons-in-terminal      | icons-in-terminal |
-| company-box    | github | icons-in-terminal      | icons-in-terminal |
-| omnibox        | github | icons-in-terminal      | icons-in-terminal |
-| org-roam       | github | emacsql-sqlite-builtin |                   |
-| org-roam       | github | emacsql-sqlite-module  |                   |
-
-- auctex-latexmk: https://github.com/tom-tan/auctex-latexmk/issues/44
-- TODO patch icons-in-terminal
 
 * Missing library summary
 :PROPERTIES:

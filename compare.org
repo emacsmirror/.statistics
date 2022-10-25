@@ -107,7 +107,7 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   346 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5126 |   5126 |       |       |       |  4569 |
+| github    | 5127 |   5127 |       |       |       |  4569 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   60 |     60 |       |       |       |    42 |
@@ -124,12 +124,12 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  135 |    135 |       |       |       |   101 |
-| shelved   | 1475 |        |  1475 |       |       |    18 |
+| shelved   | 1474 |        |  1474 |       |       |    18 |
 | mirror    |      |        |       |       |       |     9 |
 |-----------+------+--------+-------+-------+-------+-------|
 | secondary |      |        |       |       |       |   227 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8469 |   6540 |  1475 |   474 |   361 |  5297 |
+| total     | 8469 |   6541 |  1474 |   474 |   361 |  5297 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -266,20 +266,21 @@
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Gelpa"))
   (epkg-sql [:select [name class]
              :from gelpa-recipes
-             :where class :in $v1
-             :and (isnull released)]
+             :where (and (in class $v1)
+                         (isnull released))
+             :order-by [(asc name)]]
             [subtree external])
 #+end_src
 #+results: gelpa-unreleased
 | Package (7)      | Gelpa    |
 |------------------+----------|
-| sql-smie         | external |
-| prefixed-core    | external |
-| package-fixes    | external |
-| shell-quasiquote | external |
-| systemd          | external |
-| poke-mode        | external |
 | agitate          | external |
+| package-fixes    | external |
+| poke-mode        | external |
+| prefixed-core    | external |
+| shell-quasiquote | external |
+| sql-smie         | external |
+| systemd          | external |
 
 ** Shelved
 :PROPERTIES:
