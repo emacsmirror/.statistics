@@ -100,16 +100,18 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+end_src
 #+results: unresponsive
-| Package (8)    | E | M |
-|----------------+---+---|
-| edb            | ✔ |   |
-| elisp-depend   | ✔ | ✔ |
-| evil-escape    | ✔ | ✔ |
-| hyperspec      | ✔ |   |
-| oberon         | ✔ | ✔ |
-| read-char-spec | ✔ |   |
-| setnu          | ✔ |   |
-| yafolding      | ✔ | ✔ |
+| Package (10)       | E | M |
+|--------------------+---+---|
+| edb                | ✔ |   |
+| elisp-depend       | ✔ | ✔ |
+| evil-escape        | ✔ | ✔ |
+| hyperspec          | ✔ |   |
+| macrostep          | ✔ | ✔ |
+| oberon             | ✔ | ✔ |
+| read-char-spec     | ✔ |   |
+| setnu              | ✔ |   |
+| which-key-posframe | ✔ | ✔ |
+| yafolding          | ✔ | ✔ |
 
 * Wiki packages needed by non-wiki packages
 :PROPERTIES:

@@ -107,7 +107,7 @@
 | builtin   |  470 |     16 |       |   474 |    15 |       |
 | gnu-elpa  |  141 |    141 |       |       |   346 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5127 |   5127 |       |       |       |  4569 |
+| github    | 5125 |   5125 |       |       |       |  4566 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   60 |     60 |       |       |       |    42 |
@@ -123,9 +123,9 @@
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  135 |    135 |       |       |       |   101 |
+| orphaned  |  137 |    137 |       |       |       |   103 |
 | shelved   | 1474 |        |  1474 |       |       |    18 |
-| mirror    |      |        |       |       |       |     9 |
+| mirror    |      |        |       |       |       |    10 |
 |-----------+------+--------+-------+-------+-------+-------|
 | secondary |      |        |       |       |       |   227 |
 |-----------+------+--------+-------+-------+-------+-------|
@@ -719,6 +719,7 @@
 | emacsql                 | emacsql-pg                        | github    |
 | emacsql                 | emacsql-psql                      | github    |
 | emacsql                 | emacsql-sqlite                    | github    |
+| emacsql                 | emacsql-sqlite-builtin            | github    |
 | emacsql                 | emacsql-sqlite-module             | github    |
 | embark                  | avy-embark-collect                | github    |
 | embark                  | embark-consult                    | github    |
