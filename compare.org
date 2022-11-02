@@ -105,16 +105,16 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    16 |       |
-| gnu-elpa  |  141 |    141 |       |       |   345 |       |
+| gnu-elpa  |  141 |    141 |       |       |   353 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5124 |   5124 |       |       |       |  4567 |
+| github    | 5122 |   5122 |       |       |       |  4570 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
-| sourcehut |   60 |     60 |       |       |       |    42 |
+| sourcehut |   61 |     61 |       |       |       |    43 |
 | gnu       |   10 |     10 |       |       |       |     1 |
 | nongnu    |    8 |      8 |       |       |       |     3 |
 |-----------+------+--------+-------+-------+-------+-------|
-| git       |  105 |    105 |       |       |       |    93 |
+| git       |  104 |    104 |       |       |       |    92 |
 | hg        |   16 |     16 |       |       |       |    14 |
 |-----------+------+--------+-------+-------+-------+-------|
 | subtree   |   22 |     22 |       |       |       |       |
@@ -124,12 +124,12 @@
 | file      |   53 |     53 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | orphaned  |  137 |    137 |       |       |       |   103 |
-| shelved   | 1474 |        |  1474 |       |       |    18 |
+| shelved   | 1481 |        |  1481 |       |       |    18 |
 | mirror    |      |        |       |       |       |    10 |
 |-----------+------+--------+-------+-------+-------+-------|
-| secondary |      |        |       |       |       |   226 |
+| secondary |      |        |       |       |       |   227 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8468 |   6540 |  1474 |   474 |   361 |  5297 |
+| total     | 8473 |   6538 |  1481 |   474 |   369 |  5301 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -340,7 +340,7 @@
                       [builtin gnu-elpa shelved]))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (199)              | Class     | Gelpa    | Link                                            |
+| Package (202)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -416,6 +416,7 @@
 | ggtags                     | github    | external | [[https://github.com/leoliu/ggtags][leoliu/ggtags]]                                   |
 | gnome-c-style              | github    | external | [[https://github.com/ueno/gnome-c-style][ueno/gnome-c-style]]                              |
 | gpastel                    | github    | external | [[https://github.com/DamienCassou/gpastel][DamienCassou/gpastel]]                            |
+| graphql                    | github    | external | [[https://github.com/vermiculus/graphql.el][vermiculus/graphql.el]]                           |
 | greader                    | gitlab    | external | [[https://gitlab.com/michelangelo-rodriguez/greader][michelangelo-rodriguez/greader]]                  |
 | gtags-mode                 | github    | external | [[https://github.com/Ergus/gtags-mode][Ergus/gtags-mode]]                                |
 | guess-language             | github    | external | [[https://github.com/tmalsburg/guess-language.el][tmalsburg/guess-language.el]]                     |
@@ -520,6 +521,8 @@
 | tramp-nspawn               | github    | external | [[https://github.com/bjc/tramp-nspawn][bjc/tramp-nspawn]]                                |
 | transient                  | github    | external | [[https://github.com/magit/transient][magit/transient]]                                 |
 | undo-tree                  | gitlab    | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                                 |
+| url-scgi                   | github    | external | [[https://github.com/skangas/url-scgi][skangas/url-scgi]]                                |
+| use-package                | github    | external | [[https://github.com/jwiegley/use-package][jwiegley/use-package]]                            |
 | validate                   | github    | external | [[https://github.com/Malabarba/validate.el][Malabarba/validate.el]]                           |
 | valign                     | github    | external | [[https://github.com/casouri/valign][casouri/valign]]                                  |
 | vc-backup                  | sourcehut | external | [[https://git.sr.ht/~pkal/vc-backup][pkal/vc-backup]]                                  |
@@ -781,6 +784,7 @@
 | merlin                  | merlin-iedit                      | subtree   |
 | metal-archives          | metal-archives-shopping-list      | github    |
 | nameframe               | nameframe-perspective             | github    |
+| nameframe               | nameframe-project                 | github    |
 | nameframe               | nameframe-projectile              | github    |
 | nand2tetris             | company-nand2tetris               | github    |
 | nand2tetris             | nand2tetris-assembler             | github    |
@@ -895,7 +899,8 @@
 | weechat-alert  | shelved | [[https://github.com/Kungi/weechat-alert][Kungi/weechat-alert]]         | github | [[https://github.com/Kungi/weechat-alert][Kungi/weechat-alert]]         |
 
 The Emacsmirror is strickter than Melpa, so the number of shelved
-packages in this list will necessarily grow.
+packages in this list will necessarily grow.  FIXME actually this
+should be a separate list.
 
 ** Diverging branches
 :PROPERTIES:
