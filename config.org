@@ -337,17 +337,19 @@
   (emir--store-table 'var-secondary value)
 #+END_SRC
 #+NAME: table--secondary
-| Secondary      | Primary |
-|----------------+---------|
-| embark-consult | embark  |
-| counsel        | ivy     |
-| ivy-avy        | ivy     |
-| ivy-hydra      | ivy     |
-| swiper         | ivy     |
-| merlin-ac      | merlin  |
-| merlin-company | merlin  |
-| merlin-iedit   | merlin  |
-| shimbun        | w3m     |
+| Secondary      | Primary     |
+|----------------+-------------|
+| embark-consult | embark      |
+| lv             | hydra       |
+| counsel        | ivy         |
+| ivy-avy        | ivy         |
+| ivy-hydra      | ivy         |
+| swiper         | ivy         |
+| merlin-ac      | merlin      |
+| merlin-company | merlin      |
+| merlin-iedit   | merlin      |
+| bind-key       | use-package |
+| shimbun        | w3m         |
 
 * Suspended                                                          :config:
 :PROPERTIES:

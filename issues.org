@@ -39,18 +39,6 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (4)          | Package       | Shelved |
-|----------------------+---------------+---------|
-| package-build        | cask          |         |
-| package-build        | package-build |         |
-| package-build-badges | cask          |         |
-| package-build-badges | package-build |         |
-| package-recipe       | cask          |         |
-| package-recipe       | package-build |         |
-| package-recipe-mode  | cask          |         |
-| package-recipe-mode  | package-build |         |
-
-- cask: https://github.com/cask/cask/issues/580
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -79,11 +67,6 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (1) | Class    | Feature       | Provider |
-|-------------+----------+---------------+----------|
-| ada-mode    | gnu-elpa | gnat-compiler |          |
-
-- ada-mode: contacted by email
 
 * Missing library summary
 :PROPERTIES:
