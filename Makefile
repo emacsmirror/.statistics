@@ -16,6 +16,8 @@ DST   = /stats
 SYNC  = --exclude "*"
 SYNC += --include "*.html"
 SYNC += --exclude "index.html"
+SYNC += --exclude "borg/*"
+SYNC += --exclude "epkg/*"
 
 BABEL = $(filter-out config.org misc.org, $(wildcard *.org))
 HTML  = $(BABEL:.org=.html)
