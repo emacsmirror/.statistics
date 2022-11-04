@@ -660,7 +660,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (127)   | Secondary package                 | Class     |
+| Primary package (129)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -763,6 +763,7 @@
 | historian               | ivy-historian                     | github    |
 | hydra                   | lv                                | github    |
 | indent-lint             | flycheck-indent                   | github    |
+| islisp-mode             | inferior-islisp                   | gitlab    |
 | ivy                     | counsel                           | github    |
 | ivy                     | ivy-avy                           | github    |
 | ivy                     | ivy-hydra                         | github    |
@@ -872,6 +873,8 @@
 | wgrep                   | wgrep-ag                          | github    |
 | wgrep                   | wgrep-helm                        | github    |
 | wgrep                   | wgrep-pt                          | github    |
+| window-jump             | spaces                            | github    |
+| window-jump             | splitter                          | github    |
 | xwwp                    | xwwp-follow-link-helm             | github    |
 | xwwp                    | xwwp-follow-link-ivy              | github    |
 | ycm                     | company-ycm                       | github    |
@@ -916,26 +919,9 @@ should be a separate list.
 :END:
 #+name: melpa-diverging-branches
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Used" "Forced" "Melpa" "Class" "Fetcher" "Repo"))
-  (mapcar (pcase-lambda (`(,name ,used ,forced ,melpa ,class ,fetcher))
-            (list name used forced melpa class fetcher
-                  (epkg-org-link name)))
-          (epkg-sql [:select :distinct [packages:name
-                                        packages:branch
-                                        packages:upstream-branch
-                                        melpa-recipes:branch
-                                        packages:class
-                                        melpa-recipes:class]
-                     :from [packages melpa-recipes]
-                     :where (and (= packages:name melpa-recipes:name)
-                                 ;; (not (or (= melpa-recipes:branch "melpa")
-                                 ;;          (= melpa-recipes:branch "release")))
-                                 (not (= packages:class 'wiki))
-                                 (or (and (isnull  packages:upstream-branch)
-                                          (notnull melpa-recipes:branch))
-                                     (and (notnull packages:upstream-branch)
-                                          (isnull  melpa-recipes:branch))
-                                     (!= packages:branch melpa-recipes:branch)))
-                     :order-by [(asc packages:name)]]))
+  (mapcar (pcase-lambda (`(,name . ,rest))
+            `(,name ,@rest ,(epkg-org-link name)))
+          (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
 | Package (4)       | Used   | Forced | Melpa   | Class  | Fetcher | Repo                                |
@@ -945,7 +931,9 @@ should be a separate list.
 | tree-sitter       | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]] |
 | tree-sitter-langs | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]] |
 
-- elnode: https://github.com/jcaw/elnode/issues/1
+- elnode:
+  https://github.com/jcaw/elnode/issues/1
+  https://github.com/melpa/melpa/issues/6184
 - prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-651687425
 - tree-sitter*: https://github.com/emacs-tree-sitter/elisp-tree-sitter/issues/237
 

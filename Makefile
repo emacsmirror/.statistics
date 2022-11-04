@@ -34,6 +34,7 @@ DEPS  += graphql
 DEPS  += llama
 DEPS  += magit/lisp
 DEPS  += org/lisp
+DEPS  += package-build
 DEPS  += packed
 DEPS  += s
 DEPS  += transient/lisp
