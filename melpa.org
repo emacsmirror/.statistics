@@ -47,8 +47,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
    #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (547)                |   Modified | Link                                    | Summary                                                                |
+| Package (549)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
+| monorepo-zenitani            | 2022-11-09 | [[https://github.com/zenitani/elisp][zenitani/elisp]]                          | A monorepo containing unrelated packages                               |
 | eaf                          | 2022-11-08 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | eaf-browser                  | 2022-11-08 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
 | emacspeak                    | 2022-11-08 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
@@ -72,7 +73,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | straight                     | 2022-08-19 | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
 | fzf-native                   | 2022-08-08 | [[https://github.com/dangduc/fzf-native][dangduc/fzf-native]]                      | Fuzzy completion style                                                 |
 | git-undo                     | 2022-08-07 | [[https://github.com/jwiegley/git-undo-el][jwiegley/git-undo-el]]                    | Revert region to most recent Git historical version                    |
-| ultratex                     | 2022-07-28 | [[https://github.com/jhpalmieri/ultratex][jhpalmieri/ultratex]]                     | Ultra-TeX mode                                                         |
+| ultex                        | 2022-07-28 | [[https://github.com/jhpalmieri/ultratex][jhpalmieri/ultratex]]                     | Ultra-TeX mode                                                         |
 | egit                         | 2022-07-19 | [[https://github.com/jimhourihan/egit][jimhourihan/egit]]                        | Emacs git commit history interface ala gitk and qgit                   |
 | awesome-tab                  | 2022-07-05 | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]              | Provide an out of box configuration to use tab in Emacs                |
 | mini-popup                   | 2022-07-02 | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
@@ -82,6 +83,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | epithet                      | 2022-06-15 | [[https://github.com/oantolin/epithet][oantolin/epithet]]                        | Rename buffers with descriptive names                                  |
 | speechd                      | 2022-06-08 | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     | Library for accessing Speech Dispatcher                                |
 | smartchr                     | 2022-06-06 | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                  | Emacs version of smartchr.vim                                          |
+| monorepo-cadadr              | 2022-06-05 | [[https://github.com/cadadr/elisp][cadadr/elisp]]                            | A monorepo containing unrelated packages                               |
 | dumbparens                   | 2022-05-08 | [[https://github.com/radian-software/dumbparens][radian-software/dumbparens]]              | Simple paren-matching solution                                         |
 | guess-tex-master             | 2022-05-05 | [[https://github.com/mattfidler/guess-tex-master.el][mattfidler/guess-tex-master.el]]          | Guess LaTeX Master File                                                |
 | bookiez                      | 2022-04-15 | [[https://github.com/larsmagne/bookiez.el][larsmagne/bookiez.el]]                    | Managing Books                                                         |
@@ -106,8 +108,8 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | sclang                       | 2021-09-04 | [[https://github.com/supercollider/scel][supercollider/scel]]                      | IDE for working with the SuperCollider language                        |
 | latch                        | 2021-08-11 | [[https://github.com/skeeto/elisp-latch][skeeto/elisp-latch]]                      | Promises and latches for Elisp                                         |
 | dictem                       | 2021-07-28 | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          | DICT protocol client (rfc-2229) for [X]Emacs                           |
-| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                       |
-| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                              |
+| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                                       |
+| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                                |
 | goby                         | 2021-07-07 | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
 | ob-mathematica               | 2021-05-05 | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 | Org-babel functions for Mathematica evaluation                         |
 | trindle                      | 2021-05-05 | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      | Simple Emacs LISP management extension                                 |

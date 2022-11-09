@@ -107,7 +107,7 @@
 | builtin   |  470 |     16 |       |   474 |    16 |       |
 | gnu-elpa  |  144 |    144 |       |       |   352 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5128 |   5128 |       |       |       |  4572 |
+| github    | 5130 |   5130 |       |       |       |  4565 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
 | sourcehut |   64 |     64 |       |       |       |    43 |
@@ -118,7 +118,7 @@
 | hg        |   16 |     16 |       |       |       |    14 |
 |-----------+------+--------+-------+-------+-------+-------|
 | subtree   |   22 |     22 |       |       |       |       |
-| minority  |   18 |     18 |       |       |       |       |
+| minority  |   11 |     11 |       |       |       |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | wiki      |  591 |    591 |       |       |       |       |
 | file      |   53 |     53 |       |       |       |       |
@@ -127,9 +127,9 @@
 | shelved   | 1484 |        |  1484 |       |       |    18 |
 | mirror    |      |        |       |       |       |    10 |
 |-----------+------+--------+-------+-------+-------+-------|
-| secondary |      |        |       |       |       |   227 |
+| secondary |      |        |       |       |       |   232 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8490 |   6552 |  1484 |   474 |   368 |  5303 |
+| total     | 8485 |   6547 |  1484 |   474 |   368 |  5301 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -923,13 +923,12 @@ should be a separate list.
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (5)       | Used   | Forced | Melpa   | Class   | Fetcher | Repo                                        |
-|-------------------+--------+--------+---------+---------+---------+---------------------------------------------|
-| cg                | main   | main   |         | subtree | github  | [[https://visl.sdu.dk/constraint_grammar.html]] |
-| elnode            | master |        | melpa   | github  | github  | [[https://github.com/jcaw/elnode][jcaw/elnode]]                                 |
-| prettier          | master |        | release | github  | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                         |
-| tree-sitter       | master |        | release | github  | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]]         |
-| tree-sitter-langs | master |        | release | github  | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]]         |
+| Package (4)       | Used   | Forced | Melpa   | Class  | Fetcher | Repo                                |
+|-------------------+--------+--------+---------+--------+---------+-------------------------------------|
+| elnode            | master |        | melpa   | github | github  | [[https://github.com/jcaw/elnode][jcaw/elnode]]                         |
+| prettier          | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                 |
+| tree-sitter       | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]] |
+| tree-sitter-langs | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]] |
 
 - elnode:
   https://github.com/jcaw/elnode/issues/1

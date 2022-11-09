@@ -228,7 +228,7 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (18)           | Class     |
+| Package (19)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | auctex-latexmk         | github    |
@@ -238,6 +238,7 @@
 | icons-in-terminal      | github    |
 | karma                  | github    |
 | lookup                 | github    |
+| monorepo-zenitani      | github    |
 | nav                    | github    |
 | oauth                  | github    |
 | org-contrib            | sourcehut |
@@ -258,7 +259,7 @@
 :ID:       d5907eab-b5e3-436d-9637-c0f3ad581bdc
 :END:
 #+name: filtered-minority
-#+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "Reason" "Suspended" "M" "Url"))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Reason" "Suspended" "M" "Url"))
   (mapcar (pcase-lambda (`(,name ,args ,url))
             (list name
                   (emir--config name :minority)
@@ -267,29 +268,34 @@
                   (and (melpa-get name) "✓")
                   url))
           (cl-sort (epkgs [name upstream-tree url] [minority])
-                   #'string< :key #'caddr))
+                   #'string< :key #'car))
 #+end_src
 #+results: filtered-minority
-| Package (18)        | Reason           | Suspended      | M | Url                                          |
+| Package (11)        | Reason           | Suspended      | M | Url                                          |
 |---------------------+------------------+----------------+---+----------------------------------------------|
+| cfengine-code-style | mostly non-elisp | slow           | ✓ | git@github.com:cfengine/core.git             |
+| clang-format        | mostly non-elisp | extremely slow | ✓ | git@github.com:llvm/llvm-project.git         |
+| cmake-mode          | mostly non-elisp | slow           | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
+| cython-mode         | mostly non-elisp | slow           | ✓ | git@github.com:cython/cython.git             |
+| diffscuss-mode      | mostly non-elisp |                | ✓ | git@github.com:tomheon/diffscuss.git         |
+| google-c-style      | mostly non-elisp |                | ✓ | git@github.com:google/styleguide.git         |
+| nemerle             | mostly non-elisp |                | ✓ | git@github.com:rsdn/nemerle.git              |
+| ninja-mode          | mostly non-elisp |                | ✓ | git@github.com:ninja-build/ninja.git         |
+| po-mode             | mostly non-elisp |                | ✓ | https://git.savannah.gnu.org/git/gettext.git |
 | pylint              | mostly non-elisp |                | ✓ | git@github.com:PyCQA/pylint.git              |
 | thrift              | mostly non-elisp |                | ✓ | git@github.com:apache/thrift.git             |
-| bibliothek          | all-in-one repo  |                | ✓ | git@github.com:cadadr/elisp.git              |
-| forecast            | all-in-one repo  |                | ✓ | git@github.com:cadadr/elisp.git              |
-| org-variable-pitch  | all-in-one repo  |                | ✓ | git@github.com:cadadr/elisp.git              |
-| paper-theme         | all-in-one repo  |                | ✓ | git@github.com:cadadr/elisp.git              |
-| cfengine-code-style | mostly non-elisp | slow           | ✓ | git@github.com:cfengine/core.git             |
-| cython-mode         | mostly non-elisp | slow           | ✓ | git@github.com:cython/cython.git             |
-| google-c-style      | mostly non-elisp |                | ✓ | git@github.com:google/styleguide.git         |
-| clang-format        | mostly non-elisp | extremely slow | ✓ | git@github.com:llvm/llvm-project.git         |
-| ninja-mode          | mostly non-elisp |                | ✓ | git@github.com:ninja-build/ninja.git         |
-| nemerle             | mostly non-elisp |                | ✓ | git@github.com:rsdn/nemerle.git              |
-| diffscuss-mode      | mostly non-elisp |                | ✓ | git@github.com:tomheon/diffscuss.git         |
-| smart-compile       | all-in-one repo  |                | ✓ | git@github.com:zenitani/elisp.git            |
-| autotest            | all-in-one repo  |                | ✓ | git@github.com:zenspider/elisp.git           |
-| toggle              | all-in-one repo  |                | ✓ | git@github.com:zenspider/elisp.git           |
-| po-mode             | mostly non-elisp |                | ✓ | https://git.savannah.gnu.org/git/gettext.git |
-| cmake-mode          | mostly non-elisp | slow           | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
+
+- cfengine-code-style: https://github.com/cfengine/core/discussions/5101
+- clang-format: https://github.com/llvm/llvm-project/issues/58902
+- cmake-mode: I have no account on this gitlab instance, not contacted
+- cython-mode: https://github.com/cython/cython/issues/5122
+- diffscuss-mode: https://github.com/tomheon/diffscuss/issues/43
+- google-c-style: https://github.com/google/styleguide/issues/726
+- nemerle: https://github.com/rsdn/nemerle/issues/13359
+- ninja-mode: https://github.com/ninja-build/ninja/issues/2213
+- po-mode: mailing list, not contacted
+- pylint: https://github.com/PyCQA/pylint/issues/7737
+- thrift: issues disabled, not contacted
 
 * Filtered (subtree) repositories
 :PROPERTIES:
@@ -350,24 +356,28 @@
                       (closql-where-class-in [mirrored*] (epkg-db))))
 #+end_src
 #+results: no-mainlib
-| Package (16)          | Class    | M | Library                         | Reason                     |
+| Package (13)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
-| flymake-collection    | github   | ✓ | src/flymake-collection.el       |                            |
-| dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point [[https://github.com/Fuco1/dired-hacks/issues/31][#31]] |
+| auctex                | gnu      |   | tex.el                          | auctex.el.in is invalid    |
+| dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point     |
 | edb                   | orphaned |   | lisp/database.el                | no/mismatched main library |
 | emacs-speaks-nonmem   | github   |   | esn-start.el                    | no/mismatched main library |
 | emux                  | github   |   | emux-base.el                    | no/mismatched main library |
 | ne2wm                 | github   |   | ne2wm-setup.el                  | no/mismatched main library |
-| ultratex              | github   |   | lisp/ultex.el                   | no/mismatched main library |
 | ert-runner            | github   | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| auctex                | gnu      |   | tex.el                          | pkg/lib name mismatch      |
-| ddskk                 | github   | ✓ | skk.el                          | pkg/lib name mismatch [[https://github.com/skk-dev/ddskk/pull/209][#209]] |
 | apropospriate-theme   | github   | ✓ | apropospriate.el                | two-variant theme          |
 | eziam-theme           | github   | ✓ | eziam-dark-theme.el             | two-variant theme          |
 | omtose-phellack-theme | github   | ✓ | variants/omtose-darker-theme.el | two-variant theme          |
 | spacemacs-theme       | github   | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
 | punpun-theme          | git      | ✓ | punpun-common.el                | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | majapahit-theme       | gitlab   | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
+
+- dired-hacks: https://github.com/Fuco1/dired-hacks/pull/193
+- edb: Once [[https://github.com/massemanet/distel/pull/73][distel#73]] is merged, I can add ~edb.el~ here.
+- emacs-speaks-nonmem: Once [[https://github.com/mattfidler/Emacs-Speaks-NONMEM/pull/30][#30]] is merged, also rename to ~esn~.
+- emux: https://github.com/re5et/emux/pull/4
+- ne2wm: https://github.com/tkf/ne2wm/pull/3
+- *-theme: https://github.com/melpa/melpa/issues/8219
 
 * Set tracked branch
 :PROPERTIES:
@@ -384,15 +394,14 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: set-branch
-| Package (7)        | Branch                     | Class    | Repo                                        |
-|--------------------+----------------------------+----------+---------------------------------------------|
-| ansible-vault      | master                     | github   | [[https://github.com/zellio/ansible-vault-mode][zellio/ansible-vault-mode]]                   |
-| async-backup       | development                | codeberg | [[https://codeberg.org/contrapunctus/async-backup][contrapunctus/async-backup]]                  |
-| cg                 | main                       | subtree  | [[https://visl.sdu.dk/constraint_grammar.html]] |
-| elpa-admin         | elpa-admin                 | git      |                                             |
-| sxiv               | dev                        | codeberg | [[https://codeberg.org/contrapunctus/sxiv.el][contrapunctus/sxiv.el]]                       |
-| taxy-magit-section | package/taxy-magit-section | github   | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                           |
-| zero-input         | pkg                        | git      | [[https://gitlab.emacsos.com/sylecn/zero-el]]   |
+| Package (6)        | Branch                     | Class    | Repo                                      |
+|--------------------+----------------------------+----------+-------------------------------------------|
+| ansible-vault      | master                     | github   | [[https://github.com/zellio/ansible-vault-mode][zellio/ansible-vault-mode]]                 |
+| async-backup       | development                | codeberg | [[https://codeberg.org/contrapunctus/async-backup][contrapunctus/async-backup]]                |
+| elpa-admin         | elpa-admin                 | git      |                                           |
+| sxiv               | dev                        | codeberg | [[https://codeberg.org/contrapunctus/sxiv.el][contrapunctus/sxiv.el]]                     |
+| taxy-magit-section | package/taxy-magit-section | github   | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                         |
+| zero-input         | pkg                        | git      | [[https://gitlab.emacsos.com/sylecn/zero-el]] |
 
 - ansible-vault: Tags are on this branch.
 - async-backup (by contrapunctus)

@@ -86,22 +86,19 @@
 #+NAME: table--library
 | Package               | Reason                     |
 |-----------------------+----------------------------|
-| apropospriate-theme   | two-variant theme          |
-| auctex                | pkg/lib name mismatch      |
-| ddskk                 | pkg/lib name mismatch [[https://github.com/skk-dev/ddskk/pull/209][#209]] |
-| dired-hacks           | no primary entry point [[https://github.com/Fuco1/dired-hacks/issues/31][#31]] |
+| auctex                | auctex.el.in is invalid    |
+| dired-hacks           | no primary entry point     |
 | edb                   | no/mismatched main library |
 | emacs-speaks-nonmem   | no/mismatched main library |
 | emux                  | no/mismatched main library |
-| ert-runner            | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| eziam-theme           | two-variant theme          |
-| literate-starter-kit  | not a package              |
-| majapahit-theme       | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 | ne2wm                 | no/mismatched main library |
+| ert-runner            | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
+| apropospriate-theme   | two-variant theme          |
+| eziam-theme           | two-variant theme          |
+| majapahit-theme       | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 | omtose-phellack-theme | two-variant theme          |
 | punpun-theme          | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
 | spacemacs-theme       | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
-| ultratex              | no/mismatched main library |
 
 * Minority                                                            :stats:
 :PROPERTIES:
