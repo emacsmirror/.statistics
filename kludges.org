@@ -384,14 +384,15 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: set-branch
-| Package (6)        | Branch                     | Class    | Repo                                      |
-|--------------------+----------------------------+----------+-------------------------------------------|
-| ansible-vault      | master                     | github   | [[https://github.com/zellio/ansible-vault-mode][zellio/ansible-vault-mode]]                 |
-| async-backup       | development                | codeberg | [[https://codeberg.org/contrapunctus/async-backup][contrapunctus/async-backup]]                |
-| elpa-admin         | elpa-admin                 | git      |                                           |
-| sxiv               | dev                        | codeberg | [[https://codeberg.org/contrapunctus/sxiv.el][contrapunctus/sxiv.el]]                     |
-| taxy-magit-section | package/taxy-magit-section | github   | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                         |
-| zero-input         | pkg                        | git      | [[https://gitlab.emacsos.com/sylecn/zero-el]] |
+| Package (7)        | Branch                     | Class    | Repo                                        |
+|--------------------+----------------------------+----------+---------------------------------------------|
+| ansible-vault      | master                     | github   | [[https://github.com/zellio/ansible-vault-mode][zellio/ansible-vault-mode]]                   |
+| async-backup       | development                | codeberg | [[https://codeberg.org/contrapunctus/async-backup][contrapunctus/async-backup]]                  |
+| cg                 | main                       | subtree  | [[https://visl.sdu.dk/constraint_grammar.html]] |
+| elpa-admin         | elpa-admin                 | git      |                                             |
+| sxiv               | dev                        | codeberg | [[https://codeberg.org/contrapunctus/sxiv.el][contrapunctus/sxiv.el]]                       |
+| taxy-magit-section | package/taxy-magit-section | github   | [[https://github.com/alphapapa/taxy.el][alphapapa/taxy.el]]                           |
+| zero-input         | pkg                        | git      | [[https://gitlab.emacsos.com/sylecn/zero-el]]   |
 
 - ansible-vault: Tags are on this branch.
 - async-backup (by contrapunctus)

@@ -107,10 +107,10 @@
 | builtin   |  470 |     16 |       |   474 |    16 |       |
 | gnu-elpa  |  144 |    144 |       |       |   352 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5127 |   5127 |       |       |       |  4571 |
+| github    | 5128 |   5128 |       |       |       |  4572 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
-| sourcehut |   65 |     65 |       |       |       |    44 |
+| sourcehut |   64 |     64 |       |       |       |    43 |
 | gnu       |   10 |     10 |       |       |       |     1 |
 | nongnu    |    8 |      8 |       |       |       |     3 |
 |-----------+------+--------+-------+-------+-------+-------|
@@ -923,12 +923,13 @@ should be a separate list.
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (4)       | Used   | Forced | Melpa   | Class  | Fetcher | Repo                                |
-|-------------------+--------+--------+---------+--------+---------+-------------------------------------|
-| elnode            | master |        | melpa   | github | github  | [[https://github.com/jcaw/elnode][jcaw/elnode]]                         |
-| prettier          | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                 |
-| tree-sitter       | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]] |
-| tree-sitter-langs | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]] |
+| Package (5)       | Used   | Forced | Melpa   | Class   | Fetcher | Repo                                        |
+|-------------------+--------+--------+---------+---------+---------+---------------------------------------------|
+| cg                | main   | main   |         | subtree | github  | [[https://visl.sdu.dk/constraint_grammar.html]] |
+| elnode            | master |        | melpa   | github  | github  | [[https://github.com/jcaw/elnode][jcaw/elnode]]                                 |
+| prettier          | master |        | release | github  | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                         |
+| tree-sitter       | master |        | release | github  | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]]         |
+| tree-sitter-langs | master |        | release | github  | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]]         |
 
 - elnode:
   https://github.com/jcaw/elnode/issues/1
