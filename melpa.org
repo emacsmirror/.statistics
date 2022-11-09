@@ -47,19 +47,19 @@ Also see https://github.com/melpa/melpa/issues/7892.
    #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (548)                |   Modified | Link                                    | Summary                                                                |
+| Package (547)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
-| emacspeak                    | 2022-11-02 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| eaf                          | 2022-11-08 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| eaf-browser                  | 2022-11-08 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
+| emacspeak                    | 2022-11-08 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| eaf-file-manager             | 2022-11-06 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
+| eaf-terminal                 | 2022-11-06 | [[https://github.com/emacs-eaf/eaf-terminal][emacs-eaf/eaf-terminal]]                  | Terminal plugins                                                       |
+| emir                         | 2022-11-04 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | eaf-pdf-viewer               | 2022-11-01 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
 | snails                       | 2022-11-01 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
 | mu4e                         | 2022-10-30 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
-| dir-treeview-themes          | 2022-10-28 | [[https://github.com/tilmanrassy/emacs-dir-treeview-themes][tilmanrassy/emacs-dir-treeview-themes]]   | Themes for dir-treeview                                                |
-| eaf                          | 2022-10-28 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
-| eaf-browser                  | 2022-10-28 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
 | movie                        | 2022-10-27 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
-| eaf-file-manager             | 2022-10-26 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
 | icons-in-terminal            | 2022-10-25 | [[https://github.com/sebastiencs/icons-in-terminal][sebastiencs/icons-in-terminal]]           | Use any font without replacing or patching your font                   |
-| emir                         | 2022-10-22 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | indent-hints-mode            | 2022-10-21 | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                | Get some hints about whether your buffer is                            |
 | org-extra-emphasis           | 2022-10-11 | [[https://github.com/QiangF/org-extra-emphasis][QiangF/org-extra-emphasis]]               | Extra Emphasis markers for Org                                         |
 | seognil                      | 2022-10-11 | [[https://github.com/md11235/seognil][md11235/seognil]]                         | Query words in massaged dictionaries in lingoes format                 |
@@ -79,7 +79,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | pymacs                       | 2022-06-24 | [[https://github.com/dgentry/Pymacs][dgentry/Pymacs]]                          | Interface between Emacs Lisp and Python                                |
 | libgit                       | 2022-06-20 | [[https://github.com/magit/libegit2][magit/libegit2]]                          | Thin bindings to libgit2                                               |
 | touchgrid                    | 2022-06-19 | [[https://github.com/larsmagne/touchgrid.el][larsmagne/touchgrid.el]]                  | Executing actions based on input events                                |
-| eaf-terminal                 | 2022-06-16 | [[https://github.com/emacs-eaf/eaf-terminal][emacs-eaf/eaf-terminal]]                  | Terminal plugins                                                       |
 | epithet                      | 2022-06-15 | [[https://github.com/oantolin/epithet][oantolin/epithet]]                        | Rename buffers with descriptive names                                  |
 | speechd                      | 2022-06-08 | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     | Library for accessing Speech Dispatcher                                |
 | smartchr                     | 2022-06-06 | [[https://github.com/imakado/emacs-smartchr][imakado/emacs-smartchr]]                  | Emacs version of smartchr.vim                                          |

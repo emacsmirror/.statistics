@@ -105,12 +105,12 @@
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
 | builtin   |  470 |     16 |       |   474 |    16 |       |
-| gnu-elpa  |  144 |    144 |       |       |   353 |       |
+| gnu-elpa  |  144 |    144 |       |       |   352 |       |
 |-----------+------+--------+-------+-------+-------+-------|
-| github    | 5121 |   5121 |       |       |       |  4565 |
+| github    | 5127 |   5127 |       |       |       |  4571 |
 | gitlab    |  175 |    175 |       |       |       |   156 |
 | codeberg  |   64 |     64 |       |       |       |    64 |
-| sourcehut |   64 |     64 |       |       |       |    43 |
+| sourcehut |   65 |     65 |       |       |       |    44 |
 | gnu       |   10 |     10 |       |       |       |     1 |
 | nongnu    |    8 |      8 |       |       |       |     3 |
 |-----------+------+--------+-------+-------+-------+-------|
@@ -129,7 +129,7 @@
 |-----------+------+--------+-------+-------+-------+-------|
 | secondary |      |        |       |       |       |   227 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8483 |   6545 |  1484 |   474 |   369 |  5296 |
+| total     | 8490 |   6552 |  1484 |   474 |   368 |  5303 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -341,7 +341,7 @@
                       [builtin gnu-elpa shelved]))
 #+end_src
 #+results: gelpa-prefer-upstream
-| Package (209)              | Class     | Gelpa    | Link                                            |
+| Package (208)              | Class     | Gelpa    | Link                                            |
 |----------------------------+-----------+----------+-------------------------------------------------|
 | ace-window                 | github    | external | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | external | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -349,7 +349,6 @@
 | agitate                    | sourcehut | external | [[https://git.sr.ht/~protesilaos/agitate][protesilaos/agitate]]                             |
 | ahungry-theme              | github    | external | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                     |
 | aircon-theme               | sourcehut | external | [[https://git.sr.ht/~chambln/aircon-theme.el][chambln/aircon-theme.el]]                         |
-| assess                     | github    | external | [[https://github.com/phillord/assess][phillord/assess]]                                 |
 | async                      | github    | external | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                            |
 | auctex                     | gnu       | external | [[https://savannah.gnu.org/projects/auctex][gnu:auctex]]                                      |
 | avy                        | github    | external | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                     |
@@ -447,7 +446,6 @@
 | loccur                     | github    | external | [[https://github.com/fourier/loccur][fourier/loccur]]                                  |
 | logos                      | gitlab    | external | [[https://gitlab.com/protesilaos/logos][protesilaos/logos]]                               |
 | luwak                      | git       | external | [[https://g.ypei.me/luwak.git]]                     |
-| m-buffer                   | github    | external | [[https://github.com/phillord/m-buffer-el][phillord/m-buffer-el]]                            |
 | marginalia                 | github    | external | [[https://github.com/minad/marginalia][minad/marginalia]]                                |
 | math-symbol-lists          | github    | external | [[https://github.com/vspinu/math-symbol-lists][vspinu/math-symbol-lists]]                        |
 | mct                        | gitlab    | external | [[https://gitlab.com/protesilaos/mct][protesilaos/mct]]                                 |
@@ -527,6 +525,7 @@
 | tramp                      | gnu       | external | [[https://savannah.gnu.org/projects/tramp][gnu:tramp]]                                       |
 | tramp-nspawn               | github    | external | [[https://github.com/bjc/tramp-nspawn][bjc/tramp-nspawn]]                                |
 | transient                  | github    | external | [[https://github.com/magit/transient][magit/transient]]                                 |
+| triples                    | github    | external | [[https://github.com/ahyatt/triples][ahyatt/triples]]                                  |
 | undo-tree                  | gitlab    | external | [[https://gitlab.com/tsc25/undo-tree][tsc25/undo-tree]]                                 |
 | url-scgi                   | github    | external | [[https://github.com/skangas/url-scgi][skangas/url-scgi]]                                |
 | use-package                | github    | external | [[https://github.com/jwiegley/use-package][jwiegley/use-package]]                            |
@@ -955,6 +954,9 @@ should be a separate list.
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
+| Package (1) | Repository            | Melpa | Dependants |
+|-------------+-----------------------+-------+------------|
+| helm-ctest  | [[https://github.com/danlamanna/helm-ctest][danlamanna/helm-ctest]] | 14029 |            |
 
 ** Removed repositories
 :PROPERTIES:
