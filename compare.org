@@ -104,7 +104,7 @@
 #+results: summary
 |           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
 |-----------+------+--------+-------+-------+-------+-------|
-| builtin   |  470 |     16 |       |   474 |    16 |       |
+| builtin   |  470 |      1 |       |   474 |    16 |       |
 | gnu-elpa  |  144 |    144 |       |       |   352 |       |
 |-----------+------+--------+-------+-------+-------+-------|
 | github    | 5132 |   5132 |       |       |       |  4565 |
@@ -129,7 +129,7 @@
 |-----------+------+--------+-------+-------+-------+-------|
 | secondary |      |        |       |       |       |   232 |
 |-----------+------+--------+-------+-------+-------+-------|
-| total     | 8485 |   6547 |  1484 |   474 |   368 |  5301 |
+| total     | 8485 |   6532 |  1484 |   474 |   368 |  5301 |
 
 - The Emacsmirror database tracks all builtin packages (see ~Epkgs~
   column) but it only mirrors the source of packages that are also
@@ -181,23 +181,6 @@
             [gnu-elpa core])
 #+end_src
 #+results: builtin-prefer-elpa
-| Package (15) | Class |
-|--------------+-------|
-| cl-print     | core  |
-| eldoc        | core  |
-| erc          | core  |
-| flymake      | core  |
-| jsonrpc      | core  |
-| let-alist    | core  |
-| map          | core  |
-| ntlm         | core  |
-| project      | core  |
-| python       | core  |
-| so-long      | core  |
-| soap-client  | core  |
-| svg          | core  |
-| verilog-mode | core  |
-| xref         | core  |
 
 ** Prefer upstream
 :PROPERTIES:
@@ -242,6 +225,22 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: gelpa-new
+| Package (14) | Class | Url |
+|--------------+-------+-----|
+| eldoc        | core  |     |
+| erc          | core  |     |
+| flymake      | core  |     |
+| jsonrpc      | core  |     |
+| let-alist    | core  |     |
+| map          | core  |     |
+| ntlm         | core  |     |
+| project      | core  |     |
+| python       | core  |     |
+| so-long      | core  |     |
+| soap-client  | core  |     |
+| svg          | core  |     |
+| verilog-mode | core  |     |
+| xref         | core  |     |
 
 ** Delayed
 :PROPERTIES:
@@ -314,12 +313,26 @@
                      :order-by [(asc packages:name)]]))
 #+end_src
 #+results: gelpa-prefer-builtin
-| Package (4) | Gelpa    | Reason              |
-|-------------+----------+---------------------|
-| cl-generic  | external | backport of builtin |
-| cl-lib      | external | backport of builtin |
-| nadvice     | external | backport of builtin |
-| seq         | external | backport of builtin |
+| Package (18) | Gelpa    | Reason              |
+|--------------+----------+---------------------|
+| cl-generic   | external | backport of builtin |
+| cl-lib       | external | backport of builtin |
+| eldoc        | core     |                     |
+| erc          | core     |                     |
+| flymake      | core     |                     |
+| jsonrpc      | core     |                     |
+| let-alist    | core     |                     |
+| map          | core     |                     |
+| nadvice      | external | backport of builtin |
+| ntlm         | core     |                     |
+| project      | core     |                     |
+| python       | core     |                     |
+| seq          | external | backport of builtin |
+| so-long      | core     |                     |
+| soap-client  | core     |                     |
+| svg          | core     |                     |
+| verilog-mode | core     |                     |
+| xref         | core     |                     |
 
 ** Prefer upstream
 :PROPERTIES:
