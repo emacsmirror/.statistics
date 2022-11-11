@@ -270,21 +270,19 @@
                    #'string< :key #'car))
 #+end_src
 #+results: filtered-minority
-| Package (11)        | Reason           | Suspended      | M | Url                                          |
-|---------------------+------------------+----------------+---+----------------------------------------------|
-| cfengine-code-style | mostly non-elisp | slow           | ✓ | git@github.com:cfengine/core.git             |
-| clang-format        | mostly non-elisp | extremely slow | ✓ | git@github.com:llvm/llvm-project.git         |
-| cmake-mode          | mostly non-elisp | slow           | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
-| cython-mode         | mostly non-elisp | slow           | ✓ | git@github.com:cython/cython.git             |
-| diffscuss-mode      | mostly non-elisp |                | ✓ | git@github.com:tomheon/diffscuss.git         |
-| google-c-style      | mostly non-elisp |                | ✓ | git@github.com:google/styleguide.git         |
-| nemerle             | mostly non-elisp |                | ✓ | git@github.com:rsdn/nemerle.git              |
-| ninja-mode          | mostly non-elisp |                | ✓ | git@github.com:ninja-build/ninja.git         |
-| po-mode             | mostly non-elisp |                | ✓ | https://git.savannah.gnu.org/git/gettext.git |
-| pylint              | mostly non-elisp |                | ✓ | git@github.com:PyCQA/pylint.git              |
-| thrift              | mostly non-elisp |                | ✓ | git@github.com:apache/thrift.git             |
+| Package (10)   | Reason           | Suspended      | M | Url                                          |
+|----------------+------------------+----------------+---+----------------------------------------------|
+| clang-format   | mostly non-elisp | extremely slow | ✓ | git@github.com:llvm/llvm-project.git         |
+| cmake-mode     | mostly non-elisp | slow           | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
+| cython-mode    | mostly non-elisp | slow           | ✓ | git@github.com:cython/cython.git             |
+| diffscuss-mode | mostly non-elisp |                | ✓ | git@github.com:tomheon/diffscuss.git         |
+| google-c-style | mostly non-elisp |                | ✓ | git@github.com:google/styleguide.git         |
+| nemerle        | mostly non-elisp |                | ✓ | git@github.com:rsdn/nemerle.git              |
+| ninja-mode     | mostly non-elisp |                | ✓ | git@github.com:ninja-build/ninja.git         |
+| po-mode        | mostly non-elisp |                | ✓ | https://git.savannah.gnu.org/git/gettext.git |
+| pylint         | mostly non-elisp |                | ✓ | git@github.com:PyCQA/pylint.git              |
+| thrift         | mostly non-elisp |                | ✓ | git@github.com:apache/thrift.git             |
 
-- cfengine-code-style: https://github.com/cfengine/core/discussions/5101
 - clang-format: https://github.com/llvm/llvm-project/issues/58902
 - cmake-mode: I have no account on this gitlab instance, not contacted
 - cython-mode: https://github.com/cython/cython/issues/5122
@@ -311,7 +309,7 @@
           (epkgs [name upstream-tree url] [subtree]))
 #+end_src
 #+results: filtered-subtree
-| Package (22)   | M | Url                                              |
+| Package (21)   | M | Url                                              |
 |----------------+---+--------------------------------------------------|
 | agda2-mode     |   | git@github.com:agda/agda.git                     |
 | cg             | ✓ | git@github.com:GrammarSoft/cg3.git               |
@@ -332,7 +330,6 @@
 | password-store | ✓ | https://git.zx2c4.com/password-store             |
 | protobuf-mode  | ✓ | git@github.com:google/protobuf.git               |
 | rcodetools     |   | git@github.com:rcodetools/rcodetools.git         |
-| scad-mode      | ✓ | git@github.com:openscad/openscad.git             |
 | stumpwm-mode   | ✓ | git@github.com:stumpwm/stumpwm-contrib.git       |
 | utop           | ✓ | git@github.com:diml/utop.git                     |
 
