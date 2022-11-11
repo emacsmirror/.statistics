@@ -63,11 +63,10 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-drop
-| Package (11)     | Class     | Feature              | Reason                  |
+| Package (10)     | Class     | Feature              | Reason                  |
 |------------------+-----------+----------------------+-------------------------|
 | clojure-mode     | github    | test-helper          | conflicting test file   |
 | elixir-mode      | github    | test-helper          | conflicting test file   |
-| emacspeak        | github    | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]             |
 | font-lock-studio | github    | tabulated-list       | harmless in test file   |
 | gumshoe          | github    | targets/install-deps | conflicting test file   |
 | ivy              | github    | targets/install-deps | conflicting test file   |
@@ -205,6 +204,7 @@
 | vm                              | orphaned  | highlight-headers        | XEmacs compatibility                              |
 | vm                              | orphaned  | timer-funcs              | XEmacs compatibility                              |
 | vm                              | orphaned  | vm-autoloads             | generated internal file                           |
+| w3                              | gnu-elpa  | dtk-css-speech           | used to be part of emacspeak, not needed          |
 | w3                              | gnu-elpa  | dtk-voices               | used to be part of emacspeak, not needed          |
 | w3                              | gnu-elpa  | w3-site-init             | leftover noise                                    |
 | w3                              | gnu-elpa  | x-font-menu              | XEmacs compatibility                              |
@@ -270,18 +270,17 @@
                    #'string< :key #'car))
 #+end_src
 #+results: filtered-minority
-| Package (10)   | Reason           | Suspended      | M | Url                                          |
-|----------------+------------------+----------------+---+----------------------------------------------|
-| clang-format   | mostly non-elisp | extremely slow | ✓ | git@github.com:llvm/llvm-project.git         |
-| cmake-mode     | mostly non-elisp | slow           | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
-| cython-mode    | mostly non-elisp | slow           | ✓ | git@github.com:cython/cython.git             |
-| diffscuss-mode | mostly non-elisp |                | ✓ | git@github.com:tomheon/diffscuss.git         |
-| google-c-style | mostly non-elisp |                | ✓ | git@github.com:google/styleguide.git         |
-| nemerle        | mostly non-elisp |                | ✓ | git@github.com:rsdn/nemerle.git              |
-| ninja-mode     | mostly non-elisp |                | ✓ | git@github.com:ninja-build/ninja.git         |
-| po-mode        | mostly non-elisp |                | ✓ | https://git.savannah.gnu.org/git/gettext.git |
-| pylint         | mostly non-elisp |                | ✓ | git@github.com:PyCQA/pylint.git              |
-| thrift         | mostly non-elisp |                | ✓ | git@github.com:apache/thrift.git             |
+| Package (9)    | Reason           | Suspended | M | Url                                          |
+|----------------+------------------+-----------+---+----------------------------------------------|
+| clang-format   | mostly non-elisp | slow      | ✓ | git@github.com:llvm/llvm-project.git         |
+| cmake-mode     | mostly non-elisp | slow      | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
+| cython-mode    | mostly non-elisp | slow      | ✓ | git@github.com:cython/cython.git             |
+| diffscuss-mode | mostly non-elisp |           | ✓ | git@github.com:tomheon/diffscuss.git         |
+| google-c-style | mostly non-elisp |           | ✓ | git@github.com:google/styleguide.git         |
+| nemerle        | mostly non-elisp |           | ✓ | git@github.com:rsdn/nemerle.git              |
+| ninja-mode     | mostly non-elisp |           | ✓ | git@github.com:ninja-build/ninja.git         |
+| po-mode        | mostly non-elisp |           | ✓ | https://git.savannah.gnu.org/git/gettext.git |
+| thrift         | mostly non-elisp |           | ✓ | git@github.com:apache/thrift.git             |
 
 - clang-format: https://github.com/llvm/llvm-project/issues/58902
 - cmake-mode: I have no account on this gitlab instance, not contacted

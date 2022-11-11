@@ -256,6 +256,7 @@
 | popup-complete       | dropped by maintainer   |
 | popwin               | dropped by maintainer   |
 | pyimpsort            | dropped by maintainer   |
+| pylint               | dropped by maintainer   |
 | quickrun             | dropped by maintainer   |
 | read-char-spec       | upstream unresponsive   |
 | reverse-theme        | dropped by maintainer   |
@@ -357,17 +358,12 @@
   (emir--store-table 'var-suspended value)
 #+END_SRC
 #+NAME: table--suspended
-| Package             | Reason         |
-|---------------------+----------------|
-| cfengine-code-style | slow           |
-| clang-format        | extremely slow |
-| cmake-mode          | slow           |
-| cython-mode         | slow           |
-| make-mode           | slow           |
-
-- icicles: It freezes except when I try to investigate why it freezes.
-- cfengine-code-style, clang-format, make-mode, cython-mode: pending
-  filtering improvements
+| Package      | Reason |
+|--------------+--------|
+| clang-format | slow   |
+| cmake-mode   | slow   |
+| cython-mode  | slow   |
+| make-mode    | slow   |
 
 * Homepage                                                            :input:
 :PROPERTIES:

@@ -49,17 +49,18 @@ Also see https://github.com/melpa/melpa/issues/7892.
 #+results: missing-github
 | Package (549)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
+| distel                       | 2022-11-11 | [[https://github.com/massemanet/distel][massemanet/distel]]                       | Top-level of distel package, loads all subparts                        |
+| eaf-browser                  | 2022-11-11 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
 | emacspeak                    | 2022-11-11 | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
+| eaf                          | 2022-11-10 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
+| eaf-file-manager             | 2022-11-10 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
 | esn                          | 2022-11-10 | [[https://github.com/mattfidler/Emacs-Speaks-NONMEM][mattfidler/Emacs-Speaks-NONMEM]]          | Emacs Speaks NONMEM                                                    |
+| emir                         | 2022-11-09 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | monorepo-zenitani            | 2022-11-09 | [[https://github.com/zenitani/elisp][zenitani/elisp]]                          | A monorepo containing unrelated packages                               |
-| eaf                          | 2022-11-08 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
-| eaf-browser                  | 2022-11-08 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
-| eaf-file-manager             | 2022-11-06 | [[https://github.com/emacs-eaf/eaf-file-manager][emacs-eaf/eaf-file-manager]]              | File manager                                                           |
+| mu4e                         | 2022-11-07 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
 | eaf-terminal                 | 2022-11-06 | [[https://github.com/emacs-eaf/eaf-terminal][emacs-eaf/eaf-terminal]]                  | Terminal plugins                                                       |
-| emir                         | 2022-11-04 | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | eaf-pdf-viewer               | 2022-11-01 | [[https://github.com/emacs-eaf/eaf-pdf-viewer][emacs-eaf/eaf-pdf-viewer]]                | PDF Viewer                                                             |
 | snails                       | 2022-11-01 | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
-| mu4e                         | 2022-10-30 | [[https://github.com/djcb/mu][djcb/mu]]                                 | Part of mu4e, the mu mail user agent                                   |
 | movie                        | 2022-10-27 | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
 | icons-in-terminal            | 2022-10-25 | [[https://github.com/sebastiencs/icons-in-terminal][sebastiencs/icons-in-terminal]]           | Use any font without replacing or patching your font                   |
 | indent-hints-mode            | 2022-10-21 | [[https://github.com/mgalgs/indent-hints-mode][mgalgs/indent-hints-mode]]                | Get some hints about whether your buffer is                            |
@@ -140,7 +141,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | restricto                    | 2020-05-17 | [[https://github.com/oantolin/restricto][oantolin/restricto]]                      | Restrict to current minibuffer completion candidates                   |
 | metapost-mode+               | 2020-05-04 | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                 | Drawing with metapost interactively in Emacs                           |
 | yaol                         | 2020-05-03 | [[https://github.com/aki2o/yaol-el][aki2o/yaol-el]]                           | Yet another outline                                                    |
-| distel                       | 2020-02-03 | [[https://github.com/massemanet/distel][massemanet/distel]]                       | Top-level of distel package, loads all subparts                        |
 | asciidoc                     | 2019-11-28 | [[https://github.com/metaperl/asciidoc-el][metaperl/asciidoc-el]]                    | Asciidoc text file development support                                 |
 | cc-chainsaw                  | 2019-11-25 | [[https://github.com/abo-abo/cc-chainsaw][abo-abo/cc-chainsaw]]                     | A few tricks to make c++-mode go                                       |
 | pdfscan                      | 2019-11-11 | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    | Scanning and cropping                                                  |
