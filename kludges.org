@@ -17,29 +17,22 @@
 :ID:       e4844f48-a3c2-4e4c-86fd-a2e5104938e6
 :END:
 #+name: provided-join
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
+#+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "Class" "Feature" "Reason"))
   (epkg-sql [:select [name class feature join]
              :from [packages provided]
              :where (and (= name package) (notnull join))
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-join
-| Package (17) | Class     | Feature           | Reason                                    |
+| Package (16) | Class     | Feature           | Reason                                    |
 |--------------+-----------+-------------------+-------------------------------------------|
-| ddskk        | github    | skk-kanagaki      | inside directory containing .nosearch     |
-| ddskk        | github    | skk-tutcode       | inside directory containing .nosearch     |
 | edb          | orphaned  | edbcore           | generated                                 |
 | emacs        | builtin   | cus-load          | generated                                 |
 | emacs        | builtin   | leim-list         | generated                                 |
-| emacspeak    | github    | dtk-css-speech    | inside directory containing .nosearch     |
 | eshell       | builtin   | esh-groups        | generated                                 |
 | finder       | builtin   | finder-inf        | generated                                 |
-| fuz          | github    | fuz-core          | provided by module                        |
-| fzf-native   | github    | fzf-native-module | provided by module                        |
-| geo          | sourcehut | geocode-emacs     | provided by module                        |
-| hotfuzz      | github    | hotfuzz-module    | provided by module                        |
-| liberime     | github    | liberime-core     | provided by module                        |
-| pq           | github    | pq-core           | provided by module                        |
+| ddskk        | github    | skk-kanagaki      | inside directory containing .nosearch     |
+| ddskk        | github    | skk-tutcode       | inside directory containing .nosearch     |
 | realgud      | github    | bashdb            | inside directory containing .nosearch     |
 | sly          | github    | sly-buttons       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly          | github    | sly-cl-indent     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
@@ -48,6 +41,12 @@
 | sly          | github    | sly-messages      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly          | github    | sly-parse         | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
 | sly          | github    | sly-tests         | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| fuz          | github    | fuz-core          | provided by module                        |
+| fzf-native   | github    | fzf-native-module | provided by module                        |
+| geo          | sourcehut | geocode-emacs     | provided by module                        |
+| hotfuzz      | github    | hotfuzz-module    | provided by module                        |
+| liberime     | github    | liberime-core     | provided by module                        |
+| pq           | github    | pq-core           | provided by module                        |
 | sqlite3      | github    | sqlite3-api       | provided by module                        |
 | tree-sitter  | github    | tsc-dyn           | provided by module                        |
 | vterm        | github    | vterm-module      | provided by module                        |
@@ -64,20 +63,20 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-drop
-| Package (11)     | Class     | Feature              | Reason                |
-|------------------+-----------+----------------------+-----------------------|
-| clojure-mode     | github    | test-helper          | conflicting test file |
-| elixir-mode      | github    | test-helper          | conflicting test file |
-| emacspeak        | github    | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
-| font-lock-studio | github    | tabulated-list       | harmless in test file |
-| gumshoe          | github    | targets/install-deps | conflicting test file |
-| ivy              | github    | targets/install-deps | conflicting test file |
-| kurecolor        | github    | etd                  | wontfix [[https://github.com/emacsfodder/kurecolor/issues/17][#17]]           |
-| org              | gnu       | org-test             | conflicting test file |
-| org-gcal         | github    | org-test             | conflicting test file |
-| rgb              | gitlab    | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| rgb              | gitlab    | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| srht             | sourcehut | test                 | test file vs. package |
+| Package (11)     | Class     | Feature              | Reason                  |
+|------------------+-----------+----------------------+-------------------------|
+| clojure-mode     | github    | test-helper          | conflicting test file   |
+| elixir-mode      | github    | test-helper          | conflicting test file   |
+| emacspeak        | github    | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]             |
+| font-lock-studio | github    | tabulated-list       | harmless in test file   |
+| gumshoe          | github    | targets/install-deps | conflicting test file   |
+| ivy              | github    | targets/install-deps | conflicting test file   |
+| kurecolor        | github    | etd                  | wontfix [[https://github.com/emacsfodder/kurecolor/issues/17][#17]]             |
+| org              | gnu       | org-test             | conflicting test file   |
+| org-gcal         | github    | org-test             | conflicting test file   |
+| rgb              | gitlab    | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]              |
+| rgb              | gitlab    | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]              |
+| srht             | sourcehut | test                 | test file vs. package [[https://lists.sr.ht/~akagi/srht.el/%3C87iljmckpl.fsf%40bernoul.li%3E][*]] |
 
 * Drop required features
 :PROPERTIES:
@@ -356,16 +355,14 @@
                       (closql-where-class-in [mirrored*] (epkg-db))))
 #+end_src
 #+results: no-mainlib
-| Package (13)          | Class    | M | Library                         | Reason                     |
+| Package (11)          | Class    | M | Library                         | Reason                     |
 |-----------------------+----------+---+---------------------------------+----------------------------|
 | auctex                | gnu      |   | tex.el                          | auctex.el.in is invalid    |
 | dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point     |
 | edb                   | orphaned |   | lisp/database.el                | no/mismatched main library |
-| emacs-speaks-nonmem   | github   |   | esn-start.el                    | no/mismatched main library |
 | emux                  | github   |   | emux-base.el                    | no/mismatched main library |
 | ne2wm                 | github   |   | ne2wm-setup.el                  | no/mismatched main library |
 | ert-runner            | github   | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| apropospriate-theme   | github   | ✓ | apropospriate.el                | two-variant theme          |
 | eziam-theme           | github   | ✓ | eziam-dark-theme.el             | two-variant theme          |
 | omtose-phellack-theme | github   | ✓ | variants/omtose-darker-theme.el | two-variant theme          |
 | spacemacs-theme       | github   | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
@@ -374,10 +371,11 @@
 
 - dired-hacks: https://github.com/Fuco1/dired-hacks/pull/193
 - edb: Once [[https://github.com/massemanet/distel/pull/73][distel#73]] is merged, I can add ~edb.el~ here.
-- emacs-speaks-nonmem: Once [[https://github.com/mattfidler/Emacs-Speaks-NONMEM/pull/30][#30]] is merged, also rename to ~esn~.
 - emux: https://github.com/re5et/emux/pull/4
 - ne2wm: https://github.com/tkf/ne2wm/pull/3
-- *-theme: https://github.com/melpa/melpa/issues/8219
+- *-theme:
+  https://github.com/melpa/melpa/issues/8219
+  [[notmuch-tree:thread:000000000001426e and (folder:jonas@bernoul.li/INBOX.Sent)][(mail) Teach package.el about renamed packages]]
 
 * Set tracked branch
 :PROPERTIES:

@@ -49,6 +49,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 #+results: missing-github
 | Package (549)                |   Modified | Link                                    | Summary                                                                |
 |------------------------------+------------+-----------------------------------------+------------------------------------------------------------------------|
+| esn                          | 2022-11-10 | [[https://github.com/mattfidler/Emacs-Speaks-NONMEM][mattfidler/Emacs-Speaks-NONMEM]]          | Emacs Speaks NONMEM                                                    |
 | monorepo-zenitani            | 2022-11-09 | [[https://github.com/zenitani/elisp][zenitani/elisp]]                          | A monorepo containing unrelated packages                               |
 | eaf                          | 2022-11-08 | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | eaf-browser                  | 2022-11-08 | [[https://github.com/emacs-eaf/eaf-browser][emacs-eaf/eaf-browser]]                   | Browser plugins                                                        |
@@ -108,8 +109,8 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | sclang                       | 2021-09-04 | [[https://github.com/supercollider/scel][supercollider/scel]]                      | IDE for working with the SuperCollider language                        |
 | latch                        | 2021-08-11 | [[https://github.com/skeeto/elisp-latch][skeeto/elisp-latch]]                      | Promises and latches for Elisp                                         |
 | dictem                       | 2021-07-28 | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          | DICT protocol client (rfc-2229) for [X]Emacs                           |
-| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                                       |
-| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                                |
+| text-align                   | 2021-07-12 | [[https://github.com/akicho8/text-align][akicho8/text-align]]                      | スペースを削除してカラムを揃える                                       |
+| live-completions             | 2021-07-09 | [[https://github.com/oantolin/live-completions][oantolin/live-completions]]               | Live updating of the *Completions* buffer                              |
 | goby                         | 2021-07-07 | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
 | ob-mathematica               | 2021-05-05 | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 | Org-babel functions for Mathematica evaluation                         |
 | trindle                      | 2021-05-05 | [[https://github.com/daic-h/trindle][daichirata/trindle]]                      | Simple Emacs LISP management extension                                 |
@@ -219,7 +220,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | git-emacs                    | 2016-10-28 | [[https://github.com/tsgates/git-emacs][tsgates/git-emacs]]                       | Yet another git emacs mode for newbies                                 |
 | package-demo                 | 2016-10-05 | [[https://github.com/vermiculus/package-demo][vermiculus/package-demo]]                 | Scripted emacs sessions                                                |
 | maildir                      | 2016-08-14 | [[https://github.com/nicferrier/emacs-maildir][nicferrier/emacs-maildir]]                | A full maildir handling tool                                           |
-| emacs-speaks-nonmem          | 2016-07-22 | [[https://github.com/mattfidler/Emacs-Speaks-NONMEM][mattfidler/Emacs-Speaks-NONMEM]]          | Starting Emacs Speaks NONMEM                                           |
 | h2o                          | 2016-07-19 | [[https://github.com/punchagan/h2o][punchagan/h2o]]                           | Orgmode-formatted READMEs for your ELisp                               |
 | org-manage                   | 2016-07-17 | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     | Manage org files in a given directory                                  |
 | docsetutil                   | 2016-07-07 | [[https://github.com/leoliu/docsetutil-el][leoliu/docsetutil-el]]                    | Use Cocoa/iOS documentations in emacs                                  |
