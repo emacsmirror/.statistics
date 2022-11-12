@@ -127,8 +127,8 @@
   Epkg database, but no individual repositories exist for them on the
   Emacsmirror.
 
-- "core" packages (i.e., those that are also distributed on GNU Elpa
-  for use by older Emacs releases) used to be mirrored but no tool
+- "Core" packages (i.e., those that are also distributed on GNU Elpa
+  for use with older Emacs releases) used to be mirrored but no tool
   exists that is truely capable of doing that reliably and
   efficiently, so these repositories ended up never being updated and
   were removed.
@@ -141,10 +141,6 @@
 - The Emacsmirror prefers mirroring packages from the upstream
   repository, even when they are also available from GNU Elpa.
   That explaining the apparent discrepancy in the ~gnu-elpa~ row.
-
-- Melpa only appears to track more plain ~git~ repositories, because
-  the Emacsmirror uses the ~subtree~ and ~minority~ sub-types for some
-  of them.
 
 - Melpa gets some packages from the Emacsmirror (~mirror~ row), because
   for one reason or another it is not able to get them directly from
