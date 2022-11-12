@@ -19,11 +19,10 @@
 #+name: summary
 #+begin_src emacs-lisp
   (require 'finder-inf)
-  (let* ((builtin 474) ; KLUDGE
-         ;; (builtin (read (car (process-lines
-         ;;                      emir-emacs-reference "-Q" "--batch" "--eval"
-         ;;                      "(progn (require 'finder-inf)
-         ;;                              (princ (length package--builtins)))"))))
+  (let* ((builtin 472)
+         ;; This is a bit costly.
+         ;; (builtin (length (emir--builtin-packages-alist)))
+         ;; This does not include "org", "tramp" and "transient".
          (builtin-emir (length (epkgs 'name [builtin])))
          (builtin-elpa (length (epkg-sql [:select * :from gelpa-recipes
                                           :where class :in $v1]
@@ -33,9 +32,9 @@
                                           :and (notnull released)]
                                          [external])))
          (shelved      (length (epkgs 'name [shelved])))
-         (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "Gelpa" "Melpa")
+         (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "GNU Elpa" "Melpa")
                   hline
-                  (builtin     ,builtin-emir 0 "" ,builtin ,builtin-elpa "")
+                  (builtin     ,builtin-emir "" "" ,builtin ,builtin-elpa "")
                   (gnu-elpa    0  0  "" "" ,gelpa "")
                   hline
                   (github      0  0  "" "" "" 0)
@@ -81,13 +80,6 @@
                ((and 'github (guard (string-prefix-p "git@github.com:emacsmirror/" url))) 'mirror)
                (_ fetcher))))
         (cl-incf (nth 6 (assq type table)))))
-    ;; KLUDGE for org.  Avoid saying that this builtin package is
-    ;; missing just because we mirror it from the upstream repo.
-    ;; Also don't count it twice.
-    (cl-incf (nth 1 (assq 'builtin table)))
-    (cl-incf (nth 2 (assq 'builtin table)))
-    (cl-decf (nth 1 (assq 'git table)))
-    (cl-decf (nth 2 (assq 'git table)))
     `(,@table
       ("total"
        ,@(seq-reduce (lambda (acc elt)
@@ -102,40 +94,49 @@
                      '(0 0 0 0 0 0 0)))))
 #+end_src
 #+results: summary
-|           | Epkg | Mirror | Attic | Emacs | Gelpa | Melpa |
-|-----------+------+--------+-------+-------+-------+-------|
-| builtin   |  470 |      1 |       |   474 |    16 |       |
-| gnu-elpa  |  144 |    144 |       |       |   352 |       |
-|-----------+------+--------+-------+-------+-------+-------|
-| github    | 5132 |   5132 |       |       |       |  4564 |
-| gitlab    |  175 |    175 |       |       |       |   156 |
-| codeberg  |   64 |     64 |       |       |       |    64 |
-| sourcehut |   64 |     64 |       |       |       |    43 |
-| gnu       |   10 |     10 |       |       |       |     1 |
-| nongnu    |    8 |      8 |       |       |       |     3 |
-|-----------+------+--------+-------+-------+-------+-------|
-| git       |  106 |    106 |       |       |       |    92 |
-| hg        |   16 |     16 |       |       |       |    14 |
-|-----------+------+--------+-------+-------+-------+-------|
-| subtree   |   21 |     21 |       |       |       |       |
-| minority  |    9 |      9 |       |       |       |       |
-|-----------+------+--------+-------+-------+-------+-------|
-| wiki      |  591 |    591 |       |       |       |       |
-| file      |   53 |     53 |       |       |       |       |
-|-----------+------+--------+-------+-------+-------+-------|
-| orphaned  |  138 |    138 |       |       |       |   104 |
-| shelved   | 1484 |        |  1484 |       |       |    18 |
-| mirror    |      |        |       |       |       |    10 |
-|-----------+------+--------+-------+-------+-------+-------|
-| secondary |      |        |       |       |       |   232 |
-|-----------+------+--------+-------+-------+-------+-------|
-| total     | 8485 |   6532 |  1484 |   474 |   368 |  5301 |
+|           | Epkg | Mirror | Attic | Emacs | GNU Elpa | Melpa |
+|-----------+------+--------+-------+-------+----------+-------|
+| builtin   |  469 |        |       |   472 |       16 |       |
+| gnu-elpa  |  144 |    144 |       |       |      352 |       |
+|-----------+------+--------+-------+-------+----------+-------|
+| github    | 5132 |   5132 |       |       |          |  4564 |
+| gitlab    |  175 |    175 |       |       |          |   156 |
+| codeberg  |   64 |     64 |       |       |          |    64 |
+| sourcehut |   64 |     64 |       |       |          |    43 |
+| gnu       |   10 |     10 |       |       |          |     1 |
+| nongnu    |    8 |      8 |       |       |          |     3 |
+|-----------+------+--------+-------+-------+----------+-------|
+| git       |  107 |    107 |       |       |          |    92 |
+| hg        |   16 |     16 |       |       |          |    14 |
+|-----------+------+--------+-------+-------+----------+-------|
+| subtree   |   21 |     21 |       |       |          |       |
+| minority  |    9 |      9 |       |       |          |       |
+|-----------+------+--------+-------+-------+----------+-------|
+| wiki      |  591 |    591 |       |       |          |       |
+| file      |   53 |     53 |       |       |          |       |
+|-----------+------+--------+-------+-------+----------+-------|
+| orphaned  |  138 |    138 |       |       |          |   104 |
+| shelved   | 1484 |        |  1484 |       |          |    18 |
+| mirror    |      |        |       |       |          |    10 |
+|-----------+------+--------+-------+-------+----------+-------|
+| secondary |      |        |       |       |          |   232 |
+|-----------+------+--------+-------+-------+----------+-------|
+| total     | 8485 |   6532 |  1484 |   472 |      368 |  5301 |
 
-- The Emacsmirror database tracks all builtin packages (see ~Epkgs~
-  column) but it only mirrors the source of packages that are also
-  available from GNU Elpa as "core" packages (see ~Mirror~ column).
+- Most built-in packages are not mirrored.  They are included in the
+  Epkg database, but no individual repositories exist for them on the
+  Emacsmirror.
 
-- TODO Explain other discrepancies in the ~builtin~ row.
+- "core" packages (i.e., those that are also distributed on GNU Elpa
+  for use by older Emacs releases) used to be mirrored but no tool
+  exists that is truely capable of doing that reliably and
+  efficiently, so these repositories ended up never being updated and
+  were removed.
+
+- Three built-in packages (~org~, ~tramp~ and ~transient~) are mirrored, but
+  in those cases the Emacsmirror tracks the upstream repositories, not
+  the version in Emacs, which explains the apparent discrepancy in the
+  ~builtin~ row.
 
 - The Emacsmirror prefers mirroring packages from the upstream
   repository, even when they are also available from GNU Elpa.
@@ -145,23 +146,23 @@
   the Emacsmirror uses the ~subtree~ and ~minority~ sub-types for some
   of them.
 
-- Melpa gets some packages from the Emacsmirror (~mirror~), because
+- Melpa gets some packages from the Emacsmirror (~mirror~ row), because
   for one reason or another it is not able to get them directly from
   upstream.
 
-- Melpa also gets some packages from the Emacsattic (~shelved~), likely
-  because the upstream repository has disappeared.  Such packages are
-  "shelved", that is, they are moved from the Emacsmirror to the
-  Emacsattic.  Melpa doesn't support demoting packages like this, so
-  here I tend to keep them around longer, treating the attic as the
-  "upstream".
+- Melpa also gets some packages from the Emacsattic (~shelved~ row),
+  likely because the upstream repository has disappeared.  Such
+  packages are "shelved", that is, they are moved from the Emacsmirror
+  to the Emacsattic.  Melpa doesn't support demoting packages like
+  this, so here we tend to keep them around longer, treating the attic
+  as the "upstream".
 
 - When a repository is used to maintain a "main" package as well
   as one or more "extentions" to that package, then Melpa often
   distributes these packages individually, while the Emacsmirror
   does not split up such repositories into multiple packages.
   Such "secondary packages" are accounted for in the ~secondary~
-  row.
+  row and listedin  the "Shared repository" table below.
 
 * Emacs
 :PROPERTIES:
@@ -202,7 +203,7 @@
 | tramp       | gnu    |
 | transient   | github |
 
-* Gelpa
+* GNU Elpa
 :PROPERTIES:
 :ID:       6aff2bdd-72bd-4902-80ce-56a8d1c911f2
 :END:
