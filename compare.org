@@ -75,9 +75,9 @@
                ((guard (not (equal name epkg-package))) 'secondary)
                ((and 'git (guard (string-prefix-p "https://git.savannah.gnu.org" url))) 'gnu)
                ((and 'git (guard (string-prefix-p "https://git.savannah.nongnu.org" url))) 'nongnu)
-               ((and 'github (guard (string-prefix-p "git@github.com:emacsorphanage/" url))) 'orphaned)
-               ((and 'github (guard (string-prefix-p "git@github.com:emacsattic/" url))) 'shelved)
-               ((and 'github (guard (string-prefix-p "git@github.com:emacsmirror/" url))) 'mirror)
+               ((and 'github (guard (string-prefix-p "https://github.com/emacsorphanage/" url))) 'orphaned)
+               ((and 'github (guard (string-prefix-p "https://github.com/emacsattic/" url))) 'shelved)
+               ((and 'github (guard (string-prefix-p "https://github.com/emacsmirror/" url))) 'mirror)
                (_ fetcher))))
         (cl-incf (nth 6 (assq type table)))))
     `(,@table
@@ -99,14 +99,14 @@
 | builtin   |  469 |        |       |   472 |       16 |       |
 | gnu-elpa  |  144 |    144 |       |       |      352 |       |
 |-----------+------+--------+-------+-------+----------+-------|
-| github    | 5132 |   5132 |       |       |          |  4564 |
+| github    | 5139 |   5139 |       |       |          |  4571 |
 | gitlab    |  175 |    175 |       |       |          |   156 |
 | codeberg  |   64 |     64 |       |       |          |    64 |
-| sourcehut |   64 |     64 |       |       |          |    43 |
+| sourcehut |   65 |     65 |       |       |          |    44 |
 | gnu       |   10 |     10 |       |       |          |     1 |
 | nongnu    |    8 |      8 |       |       |          |     3 |
 |-----------+------+--------+-------+-------+----------+-------|
-| git       |  107 |    107 |       |       |          |    92 |
+| git       |  106 |    106 |       |       |          |    92 |
 | hg        |   16 |     16 |       |       |          |    14 |
 |-----------+------+--------+-------+-------+----------+-------|
 | subtree   |   21 |     21 |       |       |          |       |
@@ -119,9 +119,9 @@
 | shelved   | 1484 |        |  1484 |       |          |    18 |
 | mirror    |      |        |       |       |          |    10 |
 |-----------+------+--------+-------+-------+----------+-------|
-| secondary |      |        |       |       |          |   232 |
+| secondary |      |        |       |       |          |   236 |
 |-----------+------+--------+-------+-------+----------+-------|
-| total     | 8485 |   6532 |  1484 |   472 |      368 |  5301 |
+| total     | 8492 |   6539 |  1484 |   472 |      368 |  5313 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -669,7 +669,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (129)   | Secondary package                 | Class     |
+| Primary package (132)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -792,6 +792,7 @@
 | lean-mode               | helm-lean                         | github    |
 | load-theme-buffer-local | color-theme-buffer-local          | github    |
 | loopy                   | loopy-dash                        | github    |
+| lurk-mode               | ob-lurk                           | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                 | github    |
 | magit                   | git-commit                        | github    |
 | magit                   | magit-section                     | github    |
@@ -801,6 +802,11 @@
 | merlin                  | merlin-company                    | subtree   |
 | merlin                  | merlin-iedit                      | subtree   |
 | metal-archives          | metal-archives-shopping-list      | github    |
+| monorepo-cadadr         | bibliothek                        | github    |
+| monorepo-cadadr         | forecast                          | github    |
+| monorepo-cadadr         | org-variable-pitch                | github    |
+| monorepo-cadadr         | paper-theme                       | github    |
+| monorepo-zenitani       | smart-compile                     | github    |
 | nameframe               | nameframe-perspective             | github    |
 | nameframe               | nameframe-project                 | github    |
 | nameframe               | nameframe-projectile              | github    |
@@ -829,8 +835,10 @@
 | pig-mode                | pig-snippets                      | github    |
 | pollen-mode             | company-pollen                    | github    |
 | prescient               | company-prescient                 | github    |
+| prescient               | corfu-prescient                   | github    |
 | prescient               | ivy-prescient                     | github    |
 | prescient               | selectrum-prescient               | github    |
+| prescient               | vertico-prescient                 | github    |
 | processing-mode         | processing-snippets               | github    |
 | prosjekt                | dirtree-prosjekt                  | github    |
 | prosjekt                | helm-prosjekt                     | github    |
@@ -894,6 +902,7 @@
 | zetteldesk              | zetteldesk-ref                    | github    |
 | zetteldesk              | zetteldesk-remark                 | github    |
 | zettelkasten            | org-zettelkasten                  | github    |
+| zk                      | zk-desktop                        | github    |
 | zk                      | zk-index                          | github    |
 
 ** Diverging repositories
@@ -907,20 +916,6 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (8)    | Mirror  |                             | Melpa  |                             |
-|----------------+---------+-----------------------------+--------+-----------------------------|
-| django-mode    | shelved | [[https://github.com/unrelentingtech/django-mode][unrelentingtech/django-mode]] | github | [[https://github.com/unrelentingtech/django-mode][unrelentingtech/django-mode]] |
-| flycheck-julia | shelved | [[https://github.com/gdkrmr/flycheck-julia][gdkrmr/flycheck-julia]]       | github | [[https://github.com/gdkrmr/flycheck-julia][gdkrmr/flycheck-julia]]       |
-| fold-dwim-org  | shelved | [[https://github.com/mattfidler/fold-dwim-org][mattfidler/fold-dwim-org]]    | github | [[https://github.com/mattfidler/fold-dwim-org][mattfidler/fold-dwim-org]]    |
-| lsp-python-ms  | shelved | [[https://github.com/emacs-lsp/lsp-python-ms][emacs-lsp/lsp-python-ms]]     | github | [[https://github.com/emacs-lsp/lsp-python-ms][emacs-lsp/lsp-python-ms]]     |
-| magit-gh-pulls | shelved | [[https://github.com/sigma/magit-gh-pulls][sigma/magit-gh-pulls]]        | github | [[https://github.com/sigma/magit-gh-pulls][sigma/magit-gh-pulls]]        |
-| twtxt          | shelved | [[https://github.com/deadblackclover/twtxt-el][deadblackclover/twtxt-el]]    | github | [[https://github.com/deadblackclover/twtxt-el][deadblackclover/twtxt-el]]    |
-| weechat        | shelved | [[https://github.com/the-kenny/weechat.el][the-kenny/weechat.el]]        | github | [[https://github.com/the-kenny/weechat.el][the-kenny/weechat.el]]        |
-| weechat-alert  | shelved | [[https://github.com/Kungi/weechat-alert][Kungi/weechat-alert]]         | github | [[https://github.com/Kungi/weechat-alert][Kungi/weechat-alert]]         |
-
-The Emacsmirror is strickter than Melpa, so the number of shelved
-packages in this list will necessarily grow.  FIXME actually this
-should be a separate list.
 
 ** Diverging branches
 :PROPERTIES:
@@ -945,6 +940,60 @@ should be a separate list.
   https://github.com/melpa/melpa/issues/6184
 - prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-651687425
 - tree-sitter*: https://github.com/emacs-tree-sitter/elisp-tree-sitter/issues/237
+
+** From Emacsmirror
+:PROPERTIES:
+:ID:       df84d811-660f-4800-9cad-5e34c7b6ae9b
+:END:
+#+name: melpa-from-mirror
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Url"))
+  (epkg-sql [:select [name url] :from melpa-recipes
+             :where (like url '"\"https://github.com/emacsmirror%")])
+#+end_src
+#+results: melpa-from-mirror
+| Package (10)      | Url                                              |
+|-------------------+--------------------------------------------------|
+| auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
+| clang-format      | https://github.com/emacsmirror/clang-format      |
+| darcsum           | https://github.com/emacsmirror/darcsum           |
+| dsvn              | https://github.com/emacsmirror/dsvn              |
+| edit-list         | https://github.com/emacsmirror/edit-list         |
+| helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
+| tex-smart-umlauts | https://github.com/emacsmirror/tex-smart-umlauts |
+| quack             | https://github.com/emacsmirror/quack             |
+| po-mode           | https://github.com/emacsmirror/po-mode           |
+| highlight         | https://github.com/emacsmirror/highlight         |
+
+** From Emacsattic
+:PROPERTIES:
+:ID:       0b98c697-7373-40b2-8096-f71c9457cf55
+:END:
+#+name: melpa-from-attic
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Url"))
+  (epkg-sql [:select [name url] :from melpa-recipes
+             :where (like url '"\"https://github.com/emacsattic%")])
+#+end_src
+#+results: melpa-from-attic
+| Package (18)        | Url                                               |
+|---------------------+---------------------------------------------------|
+| angular-mode        | https://github.com/emacsattic/angular-mode        |
+| color-theme         | https://github.com/emacsattic/color-theme         |
+| company-go          | https://github.com/emacsattic/company-go          |
+| company-racer       | https://github.com/emacsattic/company-racer       |
+| drawille            | https://github.com/emacsattic/drawille            |
+| e2wm-R              | https://github.com/emacsattic/e2wm-R              |
+| edit-at-point       | https://github.com/emacsattic/edit-at-point       |
+| eno                 | https://github.com/emacsattic/eno                 |
+| fold-dwim           | https://github.com/emacsattic/fold-dwim           |
+| go-autocomplete     | https://github.com/emacsattic/go-autocomplete     |
+| ido-migemo          | https://github.com/emacsattic/ido-migemo          |
+| inlineR             | https://github.com/emacsattic/inlineR             |
+| mic-paren           | https://github.com/emacsattic/mic-paren           |
+| org-doing           | https://github.com/emacsattic/org-doing           |
+| org-multiple-keymap | https://github.com/emacsattic/org-multiple-keymap |
+| org-wunderlist      | https://github.com/emacsattic/org-wunderlist      |
+| quick-preview       | https://github.com/emacsattic/quick-preview       |
+| redshank            | https://github.com/emacsattic/redshank            |
 
 * Github                                                           :noexport:
 :PROPERTIES:
