@@ -652,6 +652,56 @@
 | django-snippets | github | Don't add; part of shelved django-mode                    |
 | link            | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
 
+** Shelved
+:PROPERTIES:
+:ID:       ad356942-4584-4cef-8292-1cdba76e5845
+:END:
+#+name: melpa-shelved
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Url"))
+  (epkg-sql [:select [packages:name packages:url]
+             :from [packages melpa-recipes]
+             :where (and (= melpa-recipes:epkg-package packages:name)
+                         (in packages:class $v1))
+             :order-by [(asc packages:name)]]
+            [shelved])
+#+end_src
+#+results: melpa-shelved
+| Package (33)                | Url                                                                         |
+|-----------------------------+-----------------------------------------------------------------------------|
+| angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
+| bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
+| color-theme                 | https://github.com/emacsorphanage/color-theme                               |
+| company-go                  | https://github.com/nsf/gocode                                               |
+| company-racer               | https://github.com/emacsorphanage/company-racer                             |
+| django-mode                 | https://github.com/unrelentingtech/django-mode                              |
+| drawille                    | https://github.com/josuah/drawille-el                                       |
+| e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
+| edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
+| eno                         | https://github.com/enoson/eno.el                                            |
+| flycheck-gometalinter       | https://github.com/favadi/flycheck-gometalinter.git                         |
+| flycheck-julia              | https://github.com/gdkrmr/flycheck-julia                                    |
+| fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
+| fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
+| go-autocomplete             | https://github.com/nsf/gocode                                               |
+| help-find-org-mode          | https://github.com/EricCrosson/help-find-org-mode.git                       |
+| ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
+| inlineR                     | https://github.com/myuhe/inlineR.el                                         |
+| journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode.git                      |
+| lsp-python-ms               | https://github.com/emacs-lsp/lsp-python-ms                                  |
+| magit-gh-pulls              | https://github.com/sigma/magit-gh-pulls                                     |
+| mic-paren                   | http://www.gnuvola.org/software/j/mic-paren/mic-paren.el                    |
+| org-doing                   | https://github.com/rudolfolah/org-doing                                     |
+| org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
+| org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
+| paradox                     | https://github.com/Malabarba/paradox.git                                    |
+| qt-pro-mode                 | https://github.com/EricCrosson/qt-pro-mode.git                              |
+| quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
+| redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
+| twtxt                       | https://github.com/deadblackclover/twtxt-el                                 |
+| unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |
+| weechat                     | https://github.com/the-kenny/weechat.el                                     |
+| weechat-alert               | https://github.com/Kungi/weechat-alert                                      |
+
 ** Shared repositories
 :PROPERTIES:
 :ID:       cb112869-6eb7-4a10-9d20-6868d2885461
