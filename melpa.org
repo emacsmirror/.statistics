@@ -33,8 +33,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Modified" "Link" "Summary"))
   (cl-sort
    (seq-keep (pcase-lambda (`(,name ,summary))
-               (and (not (melpa-get name))
-                    (not (gelpa-get name))
+               (and (not (epkg-get-recipe 'melpa name))
+                    (not (epkg-get-recipe 'gnu name))
+                    (not (epkg-get-recipe 'nongnu name))
                     (list name
                           (with-emir-repository (epkg name)
                             (magit-git-string
@@ -605,8 +606,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
 :END:
 #+name: missing-gitlab
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
-  (--keep (and (not (melpa-get it))
-               (not (gelpa-get it))
+  (--keep (and (not (epkg-get-recipe 'melpa it))
+               (not (epkg-get-recipe 'gnu it))
+               (not (epkg-get-recipe 'nongnu it))
                (list it (epkg-org-link it)))
           (epkgs 'name [gitlab]))
 #+end_src
@@ -623,8 +625,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
 :END:
 #+name: missing-git
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
-  (--keep (and (not (melpa-get it))
-               (not (gelpa-get it))
+  (--keep (and (not (epkg-get-recipe 'melpa it))
+               (not (epkg-get-recipe 'gnu it))
+               (not (epkg-get-recipe 'nongnu it))
                (list it (epkg-org-link it)))
           (epkgs 'name [git]))
 #+end_src

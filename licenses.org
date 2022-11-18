@@ -29,7 +29,7 @@
     (epkg-add-org-header
      (mapcar (pcase-lambda (`(,name ,license ,class))
                (list name license class
-                     (if (melpa-get name) t "")))
+                     (if (epkg-get-recipe 'melpa name) t "")))
              (epkg-sql [:select [name license class]
                         :from packages
                         :where license :in $v1
@@ -123,7 +123,7 @@
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "License" "M"))
   (mapcar (pcase-lambda (`(,name ,class ,license))
             (list name class license
-                  (and (melpa-get name) "✓")))
+                  (and (epkg-get-recipe 'melpa name) "✓")))
           (epkg-sql [:select [name class license] :from packages
                      :where (and (not (= class 'shelved))
                                  (not (in license $v1)))
@@ -194,7 +194,7 @@
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "License" "M"))
   (mapcar (pcase-lambda (`(,name ,class ,license))
             (list name class license
-                  (and (melpa-get name) "✓")))
+                  (and (epkg-get-recipe 'melpa name) "✓")))
           (epkg-sql [:select [name class license] :from packages
                      :where (and (= class 'shelved)
                                  (not (in license $v1)))

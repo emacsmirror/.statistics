@@ -80,7 +80,7 @@
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "M"))
   (mapcar (pcase-lambda (`(,name ,class))
             (list name class
-                  (and (melpa-get name) "✓")))
+                  (and (epkg-get-recipe 'melpa name) "✓")))
           (epkg-sql [:select [name class]
                      :from packages
                      ;;:where (isnull commentary)

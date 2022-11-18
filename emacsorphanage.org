@@ -21,7 +21,7 @@
              (name (if (equal name "image-plus") "image+" name))
              (pkg  (epkg name))
              (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
-             (rcp  (melpa-get name))
+             (rcp  (epkg-get-recipe 'melpa name))
              (reason (emir--config name :orphanage)))
         (and (or (not only)
                  (member reason only))

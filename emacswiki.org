@@ -26,43 +26,45 @@
                  (and (not (epkg-wiki-package-p depender-pkg))
                       (not (epkg-shelved-package-p depender-pkg))
                       `((,name
-                         ,(if (melpa-get name) "✓" "")
-                         ,(caar (oref dependee authors))
+                         ,(if (epkg-get-recipe 'melpa name) "✓" "")
+                         ,(and-let* ((author (caar (oref dependee authors))))
+                            (substring author 0 (string-match "," author)))
                          ,depender
-                         ,(if (melpa-get depender) "✓" "")
+                         ,(if (epkg-get-recipe 'melpa depender) "✓" "")
                          ,(if (seq-some #'symbolp features) "hard" "soft")
-                         ,(caar (oref depender-pkg authors)))))))
+                         ,(and-let* ((author (caar (oref depender-pkg authors))))
+                            (substring author 0 (string-match "," author))))))))
              (epkg-reverse-dependencies dependee)))
    (epkgs nil [wiki]))
 #+end_src
 #+results: required-by-nonwiki
-| Dependee (12) | M | Author                        | Depender                      | M | Type | Author                                                           |
-|---------------+---+-------------------------------+-------------------------------+---+------+------------------------------------------------------------------|
-| bookmark+     |   | Drew Adams, Thierry Volpiatto | one-key                       |   | hard | Andy Stewart                                                     |
-| filesets+     |   | Drew Adams                    | helm-filesets                 | ✓ | soft | Graham Clark                                                     |
-| font-lock+    |   | Drew Adams                    | icons-in-terminal             |   | hard | Sebastien Chapuis                                                |
-| font-lock+    |   | Drew Adams                    | jemdoc-mode                   | ✓ | soft | Dimitar Dimitrov                                                 |
-| frame-cmds    |   | Drew Adams                    | frame-ctr                     |   | hard | Takaaki ISHIKAWA                                                 |
-| help-fns+     |   | Drew Adams                    | help-find                     | ✓ | soft | Duncan Burke                                                     |
-| hexrgb        |   | Drew Adams                    | jabber                        | ✓ | hard | Magnus Henoch                                                    |
-| hexrgb        |   | Drew Adams                    | monorepo-cadadr               |   | hard | Göktuğ Kayaalp                                                   |
-| hexrgb        |   | Drew Adams                    | on-screen                     | ✓ | soft | Michael Heerdegen                                                |
-| hexrgb        |   | Drew Adams                    | one-key                       |   | hard | Andy Stewart                                                     |
-| highlight     | ✓ | Drew Adams                    | csound-mode                   | ✓ | hard | Hlöðver Sigurðsson                                               |
-| highlight     | ✓ | Drew Adams                    | evil-extra-operator           | ✓ | soft | Dewdrops                                                         |
-| highlight     | ✓ | Drew Adams                    | evil-search-highlight-persist | ✓ | hard | Juanjo Alvarez                                                   |
-| highlight     | ✓ | Drew Adams                    | floobits                      | ✓ | hard | Geoff Greer                                                      |
-| highlight     | ✓ | Drew Adams                    | lambdapi-mode                 | ✓ | hard | Ashish Barnawal, Diego Riviero, Gabriel Hondet, Rodolphe Lepigre |
-| highlight     | ✓ | Drew Adams                    | nrepl-eval-sexp-fu            | ✓ | hard | Takeshi Banse                                                    |
-| highlight     | ✓ | Drew Adams                    | php-boris-minor-mode          | ✓ | hard | steckerhalter                                                    |
-| highlight     | ✓ | Drew Adams                    | sonic-pi                      | ✓ | hard | Joseph Wilk                                                      |
-| highlight     | ✓ | Drew Adams                    | spiral                        |   | hard | Daniel Barreto                                                   |
-| highlight     | ✓ | Drew Adams                    | zones                         |   | hard | Drew Adams                                                       |
-| icicles       |   | Drew Adams                    | rcodetools                    |   | hard |                                                                  |
-| isearch-prop  |   | Drew Adams                    | zones                         |   | soft | Drew Adams                                                       |
-| misc-fns      |   | Drew Adams                    | frontside-javascript          | ✓ | soft | Frontside Engineering                                            |
-| strings       |   | Drew Adams                    | frontside-javascript          | ✓ | soft | Frontside Engineering                                            |
-| zoom-frm      |   | Drew Adams                    | hyperbole                     |   | soft | Bob Weiner                                                       |
+| Dependee (12) | M | Author     | Depender                      | M | Type | Author                |
+|---------------+---+------------+-------------------------------+---+------+-----------------------|
+| bookmark+     |   | Drew Adams | one-key                       |   | hard | Andy Stewart          |
+| filesets+     |   | Drew Adams | helm-filesets                 | ✓ | soft | Graham Clark          |
+| font-lock+    |   | Drew Adams | icons-in-terminal             |   | hard | Sebastien Chapuis     |
+| font-lock+    |   | Drew Adams | jemdoc-mode                   | ✓ | soft | Dimitar Dimitrov      |
+| frame-cmds    |   | Drew Adams | frame-ctr                     |   | hard | Takaaki ISHIKAWA      |
+| help-fns+     |   | Drew Adams | help-find                     | ✓ | soft | Duncan Burke          |
+| hexrgb        |   | Drew Adams | jabber                        | ✓ | hard | Magnus Henoch         |
+| hexrgb        |   | Drew Adams | monorepo-cadadr               |   | hard | Göktuğ Kayaalp        |
+| hexrgb        |   | Drew Adams | on-screen                     | ✓ | soft | Michael Heerdegen     |
+| hexrgb        |   | Drew Adams | one-key                       |   | hard | Andy Stewart          |
+| highlight     | ✓ | Drew Adams | csound-mode                   | ✓ | hard | Hlöðver Sigurðsson    |
+| highlight     | ✓ | Drew Adams | evil-extra-operator           | ✓ | soft | Dewdrops              |
+| highlight     | ✓ | Drew Adams | evil-search-highlight-persist | ✓ | hard | Juanjo Alvarez        |
+| highlight     | ✓ | Drew Adams | floobits                      | ✓ | hard | Geoff Greer           |
+| highlight     | ✓ | Drew Adams | lambdapi-mode                 | ✓ | hard | Ashish Barnawal       |
+| highlight     | ✓ | Drew Adams | nrepl-eval-sexp-fu            | ✓ | hard | Takeshi Banse         |
+| highlight     | ✓ | Drew Adams | php-boris-minor-mode          | ✓ | hard | steckerhalter         |
+| highlight     | ✓ | Drew Adams | sonic-pi                      | ✓ | hard | Joseph Wilk           |
+| highlight     | ✓ | Drew Adams | spiral                        |   | hard | Daniel Barreto        |
+| highlight     | ✓ | Drew Adams | zones                         |   | hard | Drew Adams            |
+| icicles       |   | Drew Adams | rcodetools                    |   | hard |                       |
+| isearch-prop  |   | Drew Adams | zones                         |   | soft | Drew Adams            |
+| misc-fns      |   | Drew Adams | frontside-javascript          | ✓ | soft | Frontside Engineering |
+| strings       |   | Drew Adams | frontside-javascript          | ✓ | soft | Frontside Engineering |
+| zoom-frm      |   | Drew Adams | hyperbole                     |   | soft | Bob Weiner            |
 
 * Wiki packages
 :PROPERTIES:

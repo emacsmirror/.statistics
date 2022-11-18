@@ -263,7 +263,7 @@
                   (emir--config name :minority)
                   (emir--config name :suspended)
                   ;; (mapconcat #'identity args " ")
-                  (and (melpa-get name) "✓")
+                  (and (epkg-get-recipe 'melpa name) "✓")
                   url))
           (cl-sort (epkgs [name upstream-tree url] [minority])
                    #'string< :key #'car))
@@ -302,7 +302,7 @@
             (list name
                   ;; (cadr (assoc name emir--...-reason))
                   ;; args
-                  (and (melpa-get name) "✓")
+                  (and (epkg-get-recipe 'melpa name) "✓")
                   url))
           (epkgs [name upstream-tree url] [subtree]))
 #+end_src
@@ -340,7 +340,7 @@
   (seq-keep (pcase-lambda (`(,name ,type ,library))
               (and (not (eq type 'core))
                    (list name type
-                         (and (melpa-get name) "✓")
+                         (and (epkg-get-recipe 'melpa name) "✓")
                          library
                          (emir--config name :library))))
             (epkg-sql [:select [name class library] :from packages
