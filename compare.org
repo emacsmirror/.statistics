@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      134 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5139 |   5139 |       |       |      154 |         146 |  4571 |
-| gitlab      |  175 |    175 |       |       |       18 |          13 |   156 |
-| codeberg    |   64 |     64 |       |       |        1 |          17 |    64 |
-| sourcehut   |   65 |     65 |       |       |       20 |           4 |    44 |
+| github      | 5141 |   5141 |       |       |      154 |         146 |  4571 |
+| gitlab      |  176 |    176 |       |       |       18 |          13 |   156 |
+| codeberg    |   67 |     67 |       |       |        1 |          17 |    64 |
+| sourcehut   |   67 |     67 |       |       |       20 |           4 |    44 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     1 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -135,7 +135,7 @@
 | secondary   |      |        |       |       |          |             |   236 |
 | unreleased  |      |        |       |       |        8 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8492 |   6539 |  1484 |   472 |      377 |         185 |  5313 |
+| total       | 8500 |   6547 |  1484 |   472 |      377 |         185 |  5313 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -612,22 +612,10 @@
                  (list (list name class (if (eq class 'core) "" url)))))
           (epkg-sql [:select [name class url]
                      :from nongnu-elpa-recipes
-                     :where (or (isnull epkg-package)
-                                ;; FIXME (= class 'core)
-                                )
+                     :where (isnull epkg-package)
                      :order-by [(asc name)]]))
 #+end_src
 #+results: nongnu-elpa-new
-| Package (8)      | Class     | Url                                            |
-|------------------+-----------+------------------------------------------------|
-| corfu-terminal   | codeberg  | https://codeberg.org/akib/emacs-corfu-terminal |
-| flymake-popon    | codeberg  | https://codeberg.org/akib/emacs-flymake-popon  |
-| haskell-tng-mode | gitlab    | https://gitlab.com/tseenshe/haskell-tng.el     |
-| popon            | codeberg  | https://codeberg.org/akib/emacs-popon          |
-| subed            | github    | https://github.com/sachac/subed                |
-| sweeprolog       | github    | https://github.com/SWI-Prolog/packages-sweep   |
-| swsw             | sourcehut | https://git.sr.ht/~dsemy/swsw                  |
-| vcomplete        | sourcehut | https://git.sr.ht/~dsemy/vcomplete             |
 
 ** Delayed
 :PROPERTIES:
@@ -736,7 +724,7 @@
                       [builtin gnu-elpa shelved]))
 #+end_src
 #+results: nongnu-elpa-prefer-upstream
-| Package (172)         | Class     | Elpa      | Link                                      |
+| Package (180)         | Class     | Elpa      | Link                                      |
 |-----------------------+-----------+-----------+-------------------------------------------|
 | afternoon-theme       | github    | github    | [[https://github.com/osener/emacs-afternoon-theme][osener/emacs-afternoon-theme]]              |
 | alect-themes          | github    | github    | [[https://github.com/alezost/alect-themes][alezost/alect-themes]]                      |
@@ -758,6 +746,7 @@
 | cider                 | github    | github    | [[https://github.com/clojure-emacs/cider][clojure-emacs/cider]]                       |
 | clojure-mode          | github    | github    | [[https://github.com/clojure-emacs/clojure-mode][clojure-emacs/clojure-mode]]                |
 | coffee-mode           | github    | github    | [[https://github.com/defunkt/coffee-mode][defunkt/coffee-mode]]                       |
+| corfu-terminal        | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-corfu-terminal][akib/emacs-corfu-terminal]]                 |
 | crux                  | github    | github    | [[https://github.com/bbatsov/crux][bbatsov/crux]]                              |
 | cyberpunk-theme       | github    | github    | [[https://github.com/n3mo/cyberpunk-theme.el][n3mo/cyberpunk-theme.el]]                   |
 | cycle-at-point        | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-cycle-at-point][ideasman42/emacs-cycle-at-point]]           |
@@ -784,6 +773,7 @@
 | evil-numbers          | github    | github    | [[https://github.com/juliapath/evil-numbers][juliapath/evil-numbers]]                    |
 | evil-visualstar       | github    | github    | [[https://github.com/bling/evil-visualstar][bling/evil-visualstar]]                     |
 | flymake-kondor        | github    | github    | [[https://github.com/turbo-cafe/flymake-kondor][turbo-cafe/flymake-kondor]]                 |
+| flymake-popon         | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-flymake-popon][akib/emacs-flymake-popon]]                  |
 | focus                 | github    | github    | [[https://github.com/larstvei/Focus][larstvei/Focus]]                            |
 | forth-mode            | github    | github    | [[https://github.com/larsbrinkhoff/forth-mode][larsbrinkhoff/forth-mode]]                  |
 | free-keys             | github    | github    | [[https://github.com/Fuco1/free-keys][Fuco1/free-keys]]                           |
@@ -809,6 +799,7 @@
 | guru-mode             | github    | github    | [[https://github.com/bbatsov/guru-mode][bbatsov/guru-mode]]                         |
 | haml-mode             | github    | github    | [[https://github.com/nex3/haml-mode][nex3/haml-mode]]                            |
 | haskell-mode          | github    | github    | [[https://github.com/haskell/haskell-mode][haskell/haskell-mode]]                      |
+| haskell-tng-mode      | gitlab    | gitlab    | [[https://gitlab.com/tseenshe/haskell-tng.el][tseenshe/haskell-tng.el]]                   |
 | helm                  | github    | github    | [[https://github.com/emacs-helm/helm][emacs-helm/helm]]                           |
 | highlight-parentheses | sourcehut | sourcehut | [[https://git.sr.ht/~tsdh/highlight-parentheses.el][tsdh/highlight-parentheses.el]]             |
 | hl-block-mode         | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-hl-block-mode][ideasman42/emacs-hl-block-mode]]            |
@@ -857,6 +848,7 @@
 | pcre2el               | github    | github    | [[https://github.com/joddie/pcre2el][joddie/pcre2el]]                            |
 | pdf-tools             | github    | github    | [[https://github.com/vedang/pdf-tools][vedang/pdf-tools]]                          |
 | php-mode              | github    | github    | [[https://github.com/emacs-php/php-mode][emacs-php/php-mode]]                        |
+| popon                 | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-popon][akib/emacs-popon]]                          |
 | popup                 | github    | github    | [[https://github.com/auto-complete/popup-el][auto-complete/popup-el]]                    |
 | projectile            | github    | github    | [[https://github.com/bbatsov/projectile][bbatsov/projectile]]                        |
 | proof-general         | github    | github    | [[https://github.com/ProofGeneral/PG][ProofGeneral/PG]]                           |
@@ -883,7 +875,10 @@
 | spacemacs-theme       | github    | github    | [[https://github.com/nashamri/spacemacs-theme][nashamri/spacemacs-theme]]                  |
 | spell-fu              | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-spell-fu][ideasman42/emacs-spell-fu]]                 |
 | subatomic-theme       | github    | github    | [[https://github.com/cryon/subatomic][cryon/subatomic-theme]]                     |
+| subed                 | github    | github    | [[https://github.com/sachac/subed][sachac/subed]]                              |
+| sweeprolog            | github    | github    | [[https://github.com/SWI-Prolog/packages-sweep][SWI-Prolog/packages-sweep]]                 |
 | swift-mode            | github    | github    | [[https://github.com/swift-emacs/swift-mode][swift-emacs/swift-mode]]                    |
+| swsw                  | sourcehut | sourcehut | [[https://git.sr.ht/~dsemy/swsw][dsemy/swsw]]                                |
 | symbol-overlay        | github    | github    | [[https://github.com/wolray/symbol-overlay][wolray/symbol-overlay]]                     |
 | systemd               | github    | github    | [[https://github.com/holomorph/systemd-mode][holomorph/systemd-mode]]                    |
 | tablist               | github    | github    | [[https://github.com/politza/tablist][politza/tablist]]                           |
@@ -898,6 +893,7 @@
 | undo-fu               | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-undo-fu][ideasman42/emacs-undo-fu]]                  |
 | undo-fu-session       | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-undo-fu-session][ideasman42/emacs-undo-fu-session]]          |
 | vc-fossil             | github    | github    | [[https://github.com/venks1/emacs-fossil][venks1/emacs-fossil]]                       |
+| vcomplete             | sourcehut | sourcehut | [[https://git.sr.ht/~dsemy/vcomplete][dsemy/vcomplete]]                           |
 | visual-fill-column    | codeberg  | codeberg  | [[https://codeberg.org/joostkremers/visual-fill-column][joostkremers/visual-fill-column]]           |
 | web-mode              | github    | github    | [[https://github.com/fxbois/web-mode][fxbois/web-mode]]                           |
 | webpaste              | github    | github    | [[https://github.com/etu/webpaste.el][etu/webpaste.el]]                           |
