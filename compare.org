@@ -1026,13 +1026,11 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (132)   | Secondary package                 | Class     |
+| Primary package (131)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
 | ac-php                  | company-php                       | github    |
-| agda2-mode              | annotation                        | subtree   |
-| agda2-mode              | eri                               | subtree   |
 | ameba                   | flycheck-ameba                    | github    |
 | axiom-environment       | company-axiom                     | git       |
 | axiom-environment       | ob-axiom                          | git       |
