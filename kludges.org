@@ -257,11 +257,14 @@
 :ID:       d5907eab-b5e3-436d-9637-c0f3ad581bdc
 :END:
 #+name: filtered-minority
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Reason" "Suspended" "M" "Url"))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Modified" "M" "Url"))
   (mapcar (pcase-lambda (`(,name ,args ,url))
             (list name
-                  (emir--config name :minority)
-                  (emir--config name :suspended)
+                  (with-emir-repository (epkg name)
+                    (magit-git-string
+                     "log" "-1" "--format=%cd" "--date=short"))
+                  ;; (emir--config name :minority)
+                  ;; (emir--config name :suspended)
                   ;; (mapconcat #'identity args " ")
                   (and (epkg-get-recipe 'melpa name) "✓")
                   url))
@@ -269,17 +272,17 @@
                    #'string< :key #'car))
 #+end_src
 #+results: filtered-minority
-| Package (9)    | Reason           | Suspended | M | Url                                          |
-|----------------+------------------+-----------+---+----------------------------------------------|
-| clang-format   | mostly non-elisp | slow      | ✓ | git@github.com:llvm/llvm-project.git         |
-| cmake-mode     | mostly non-elisp | slow      | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
-| cython-mode    | mostly non-elisp | slow      | ✓ | git@github.com:cython/cython.git             |
-| diffscuss-mode | mostly non-elisp |           | ✓ | git@github.com:tomheon/diffscuss.git         |
-| google-c-style | mostly non-elisp |           | ✓ | git@github.com:google/styleguide.git         |
-| nemerle        | mostly non-elisp |           | ✓ | git@github.com:rsdn/nemerle.git              |
-| ninja-mode     | mostly non-elisp |           | ✓ | git@github.com:ninja-build/ninja.git         |
-| po-mode        | mostly non-elisp |           | ✓ | https://git.savannah.gnu.org/git/gettext.git |
-| thrift         | mostly non-elisp |           | ✓ | git@github.com:apache/thrift.git             |
+| Package (9)    |   Modified | M | Url                                          |
+|----------------+------------+---+----------------------------------------------|
+| clang-format   | 2019-11-06 | ✓ | git@github.com:llvm/llvm-project.git         |
+| cmake-mode     | 2022-08-22 | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
+| cython-mode    | 2019-01-11 | ✓ | git@github.com:cython/cython.git             |
+| diffscuss-mode | 2014-10-14 | ✓ | git@github.com:tomheon/diffscuss.git         |
+| google-c-style | 2022-02-10 | ✓ | git@github.com:google/styleguide.git         |
+| nemerle        | 2016-10-28 | ✓ | git@github.com:rsdn/nemerle.git              |
+| ninja-mode     | 2018-09-06 | ✓ | git@github.com:ninja-build/ninja.git         |
+| po-mode        | 2020-06-06 | ✓ | https://git.savannah.gnu.org/git/gettext.git |
+| thrift         | 2014-03-12 | ✓ | git@github.com:apache/thrift.git             |
 
 - clang-format: https://github.com/llvm/llvm-project/issues/58902
 - cmake-mode: I have no account on this gitlab instance, not contacted
@@ -297,39 +300,40 @@
 :ID:       b747ad33-ce62-48f8-9b91-852470cee627
 :END:
 #+name: filtered-subtree
-#+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "M" "Url"))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Modified" "M" "Url"))
   (mapcar (pcase-lambda (`(,name ,args ,url))
             (list name
-                  ;; (cadr (assoc name emir--...-reason))
-                  ;; args
+                  (with-emir-repository (epkg name)
+                    (magit-git-string
+                     "log" "-1" "--format=%cd" "--date=short"))
                   (and (epkg-get-recipe 'melpa name) "✓")
                   url))
           (epkgs [name upstream-tree url] [subtree]))
 #+end_src
 #+results: filtered-subtree
-| Package (21)   | M | Url                                              |
-|----------------+---+--------------------------------------------------|
-| agda2-mode     |   | https://github.com/agda/agda                     |
-| cg             | ✓ | git@github.com:GrammarSoft/cg3.git               |
-| cubicle-mode   | ✓ | git@github.com:cubicle-model-checker/cubicle.git |
-| dune           | ✓ | git@github.com:ocaml/dune.git                    |
-| egison-mode    | ✓ | git@github.com:egison/egison.git                 |
-| fuel           | ✓ | git@github.com:factor/factor.git                 |
-| golint         | ✓ | git@github.com:golang/lint.git                   |
-| govc           | ✓ | git@github.com:vmware/govmomi.git                |
-| gvpr-mode      | ✓ | git@github.com:rodw/gvpr-lib.git                 |
-| kivy-mode      | ✓ | git@github.com:kivy/kivy.git                     |
-| lambdapi-mode  | ✓ | git@github.com:Deducteam/lambdapi.git            |
-| lfe-mode       | ✓ | git@github.com:rvirding/lfe.git                  |
-| mandoku        | ✓ | git@github.com:mandoku/mandoku.git               |
-| merlin         | ✓ | git@github.com:the-lambda-church/merlin.git      |
-| mozart         |   | git@github.com:mozart/mozart2.git                |
-| mozc           | ✓ | git@github.com:google/mozc.git                   |
-| password-store | ✓ | https://git.zx2c4.com/password-store             |
-| protobuf-mode  | ✓ | git@github.com:google/protobuf.git               |
-| rcodetools     |   | git@github.com:rcodetools/rcodetools.git         |
-| stumpwm-mode   | ✓ | git@github.com:stumpwm/stumpwm-contrib.git       |
-| utop           | ✓ | git@github.com:diml/utop.git                     |
+| Package (21)   |   Modified | M | Url                                              |
+|----------------+------------+---+--------------------------------------------------|
+| agda2-mode     | 2022-11-07 |   | https://github.com/agda/agda                     |
+| cg             | 2022-09-30 | ✓ | git@github.com:GrammarSoft/cg3.git               |
+| cubicle-mode   | 2017-10-09 | ✓ | git@github.com:cubicle-model-checker/cubicle.git |
+| dune           | 2019-10-16 | ✓ | git@github.com:ocaml/dune.git                    |
+| egison-mode    | 2020-01-08 | ✓ | git@github.com:egison/egison.git                 |
+| fuel           | 2022-11-08 | ✓ | git@github.com:factor/factor.git                 |
+| golint         | 2018-02-21 | ✓ | git@github.com:golang/lint.git                   |
+| govc           | 2022-05-06 | ✓ | git@github.com:vmware/govmomi.git                |
+| gvpr-mode      | 2018-10-17 | ✓ | git@github.com:rodw/gvpr-lib.git                 |
+| kivy-mode      | 2021-03-18 | ✓ | git@github.com:kivy/kivy.git                     |
+| lambdapi-mode  | 2022-09-09 | ✓ | git@github.com:Deducteam/lambdapi.git            |
+| lfe-mode       | 2021-06-03 | ✓ | git@github.com:rvirding/lfe.git                  |
+| mandoku        | 2018-04-03 | ✓ | git@github.com:mandoku/mandoku.git               |
+| merlin         | 2022-06-29 | ✓ | git@github.com:the-lambda-church/merlin.git      |
+| mozart         | 2017-11-11 |   | git@github.com:mozart/mozart2.git                |
+| mozc           | 2022-07-07 | ✓ | git@github.com:google/mozc.git                   |
+| password-store | 2022-09-06 | ✓ | https://git.zx2c4.com/password-store             |
+| protobuf-mode  | 2022-03-18 | ✓ | git@github.com:google/protobuf.git               |
+| rcodetools     | 2016-09-15 |   | git@github.com:rcodetools/rcodetools.git         |
+| stumpwm-mode   | 2018-06-29 | ✓ | git@github.com:stumpwm/stumpwm-contrib.git       |
+| utop           | 2022-11-03 | ✓ | git@github.com:diml/utop.git                     |
 
 * Set main library
 :PROPERTIES:
@@ -350,27 +354,30 @@
                       (closql-where-class-in [mirrored*] (epkg-db))))
 #+end_src
 #+results: no-mainlib
-| Package (11)          | Class    | M | Library                         | Reason                     |
-|-----------------------+----------+---+---------------------------------+----------------------------|
-| auctex                | gnu      |   | tex.el                          | auctex.el.in is invalid    |
-| dired-hacks           | github   |   | dired-hacks-utils.el            | no primary entry point     |
-| edb                   | orphaned |   | lisp/database.el                | no/mismatched main library |
-| emux                  | github   |   | emux-base.el                    | no/mismatched main library |
-| ne2wm                 | github   |   | ne2wm-setup.el                  | no/mismatched main library |
-| ert-runner            | github   | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| eziam-theme           | github   | ✓ | eziam-dark-theme.el             | two-variant theme          |
-| omtose-phellack-theme | github   | ✓ | variants/omtose-darker-theme.el | two-variant theme          |
-| spacemacs-theme       | github   | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
-| punpun-theme          | git      | ✓ | punpun-common.el                | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
-| majapahit-theme       | gitlab   | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
+| Package (10)          | Class  | M | Library                         | Reason                     |
+|-----------------------+--------+---+---------------------------------+----------------------------|
+| auctex                | gnu    |   | tex.el                          | auctex.el.in is invalid    |
+| dired-hacks           | github |   | dired-hacks-utils.el            | no primary entry point     |
+| emux                  | github |   | emux-base.el                    | no/mismatched main library |
+| ne2wm                 | github |   | ne2wm-setup.el                  | no/mismatched main library |
+| ert-runner            | github | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
+| eziam-theme           | github | ✓ | eziam-dark-theme.el             | two-variant theme          |
+| omtose-phellack-theme | github | ✓ | variants/omtose-darker-theme.el | two-variant theme          |
+| spacemacs-theme       | github | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
+| punpun-theme          | git    | ✓ | punpun-common.el                | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
+| majapahit-theme       | gitlab | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
 
 - dired-hacks: https://github.com/Fuco1/dired-hacks/pull/193
-- edb: Once [[https://github.com/massemanet/distel/pull/73][distel#73]] is merged, I can add ~edb.el~ here.
 - emux: https://github.com/re5et/emux/pull/4
 - ne2wm: https://github.com/tkf/ne2wm/pull/3
 - *-theme:
-  https://github.com/melpa/melpa/issues/8219
-  [[notmuch-tree:thread:000000000001426e and (folder:jonas@bernoul.li/INBOX.Sent)][(mail) Teach package.el about renamed packages]]
+  - https://github.com/melpa/melpa/issues/8219
+  - [[notmuch-tree:thread:000000000001426e and (folder:jonas@bernoul.li/INBOX.Sent)][(mail) Teach package.el about renamed packages]]
+  - eziam-theme: https://github.com/thblt/eziam-theme-emacs/pull/25
+  - omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
+  - spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/63
+  - punpun-theme: https://github.com/melpa/melpa/issues/8219#issuecomment-1321248457
+  - majapahit-theme: https://github.com/melpa/melpa/issues/8219#issuecomment-1321248457
 
 * Set tracked branch
 :PROPERTIES:

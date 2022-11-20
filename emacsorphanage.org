@@ -186,7 +186,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "dropped by maintainer")
 #+end_src
 #+results: dropped
-| Package (84)         | E | M |
+| Package (86)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -237,6 +237,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | helm-robe            | ✔ | ✔ |
 | helm-swoop           | ✔ | ✔ |
 | helm-themes          | ✔ | ✔ |
+| help-find-org-mode   | ✔ | ✔ |
 | import-popwin        | ✔ | ✔ |
 | jedi-eldoc           | ✔ |   |
 | konoha-mode          | ✔ |   |
@@ -258,6 +259,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | popwin               | ✔ | ✔ |
 | pyimpsort            | ✔ | ✔ |
 | pylint               | ✔ | ✔ |
+| qt-pro-mode          | ✔ | ✔ |
 | quickrun             | ✔ | ✔ |
 | reverse-theme        | ✔ | ✔ |
 | smeargle             | ✔ | ✔ |

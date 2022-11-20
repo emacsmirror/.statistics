@@ -109,17 +109,17 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  469 |        |       |   472 |       16 |             |       |
-| gnu-elpa    |  144 |    144 |       |       |      134 |             |       |
-| nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
+| gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
+| nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5141 |   5141 |       |       |      154 |         146 |  4571 |
+| github      | 5141 |   5141 |       |       |      154 |         146 |  4569 |
 | gitlab      |  176 |    176 |       |       |       18 |          13 |   156 |
 | codeberg    |   67 |     67 |       |       |        1 |          17 |    64 |
 | sourcehut   |   67 |     67 |       |       |       20 |           4 |    44 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     1 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  106 |    106 |       |       |       14 |           3 |    92 |
+| git         |  106 |    106 |       |       |       15 |           4 |    92 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -128,14 +128,14 @@
 | wiki        |  591 |    591 |       |       |          |             |       |
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  138 |    138 |       |       |          |             |   104 |
-| shelved     | 1484 |        |  1484 |       |          |             |    18 |
+| orphaned    |  140 |    140 |       |       |          |             |   106 |
+| shelved     | 1482 |        |  1482 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   236 |
 | unreleased  |      |        |       |       |        8 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8500 |   6547 |  1484 |   472 |      377 |         185 |  5313 |
+| total       | 8500 |   6549 |  1482 |   472 |      377 |         185 |  5313 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -481,7 +481,7 @@
 | js2-mode                   | github    | github    | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                   |
 | json-mode                  | github    | internal  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                               |
 | kind-icon                  | github    | github    | [[https://github.com/jdtsmith/kind-icon][jdtsmith/kind-icon]]                              |
-| kiwix                      | git       | internal  | [[https://repo.or.cz/kiwix.el.git]]                 |
+| kiwix                      | git       | git       | [[https://repo.or.cz/kiwix.el.git]]                 |
 | leaf                       | github    | github    | [[https://github.com/conao3/leaf.el][conao3/leaf.el]]                                  |
 | lin                        | sourcehut | sourcehut | [[https://git.sr.ht/~protesilaos/lin][protesilaos/lin]]                                 |
 | load-relative              | github    | github    | [[https://github.com/rocky/emacs-load-relative][rocky/emacs-load-relative]]                       |
@@ -734,7 +734,7 @@
 | anzu                  | orphaned  | github    | [[https://github.com/emacsorphanage/anzu][emacsorphanage/anzu]]                       |
 | apache-mode           | github    | github    | [[https://github.com/emacs-php/apache-mode][emacs-php/apache-mode]]                     |
 | apropospriate-theme   | github    | github    | [[https://github.com/waymondo/apropospriate-theme][waymondo/apropospriate-theme]]              |
-| arduino-mode          | git       | internal  | [[https://repo.or.cz/arduino-mode.git]]       |
+| arduino-mode          | git       | git       | [[https://repo.or.cz/arduino-mode.git]]       |
 | autothemer            | github    | github    | [[https://github.com/sebastiansturm/autothemer][jasonm23/autothemer]]                       |
 | better-jumper         | github    | github    | [[https://github.com/gilbertw1/better-jumper][gilbertw1/better-jumper]]                   |
 | bind-map              | github    | github    | [[https://github.com/justbur/emacs-bind-map][justbur/emacs-bind-map]]                    |
@@ -969,7 +969,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (33)                | Url                                                                         |
+| Package (31)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -986,7 +986,6 @@
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
 | fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
-| help-find-org-mode          | https://github.com/EricCrosson/help-find-org-mode.git                       |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
@@ -997,7 +996,6 @@
 | org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
 | org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
-| qt-pro-mode                 | https://github.com/EricCrosson/qt-pro-mode.git                              |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | twtxt                       | https://github.com/deadblackclover/twtxt-el                                 |
