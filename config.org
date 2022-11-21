@@ -84,21 +84,8 @@
   (emir--store-table 'var-library value)
 #+END_SRC
 #+NAME: table--library
-| Package               | Reason                     |
-|-----------------------+----------------------------|
-| auctex                | auctex.el.in is invalid    |
-| dired-hacks           | no primary entry point     |
-| edb                   | no/mismatched main library |
-| emacs-speaks-nonmem   | no/mismatched main library |
-| emux                  | no/mismatched main library |
-| ne2wm                 | no/mismatched main library |
-| ert-runner            | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| apropospriate-theme   | two-variant theme          |
-| eziam-theme           | two-variant theme          |
-| majapahit-theme       | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
-| omtose-phellack-theme | two-variant theme          |
-| punpun-theme          | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
-| spacemacs-theme       | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
+| Package | Reason |
+|---------+--------|
 
 * Minority                                                            :stats:
 :PROPERTIES:

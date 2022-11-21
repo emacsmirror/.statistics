@@ -84,7 +84,7 @@
                               :from melpa-recipes]))
       (let ((type
              (pcase fetcher
-               ((guard (not (equal name epkg-package))) 'secondary)
+               ((guard (and epkg-package (not (equal name epkg-package)))) 'secondary)
                ((and 'git (guard (string-prefix-p "https://git.savannah.gnu.org" url))) 'gnu)
                ((and 'git (guard (string-prefix-p "https://git.savannah.nongnu.org" url))) 'nongnu)
                ((and 'github (guard (string-prefix-p "https://github.com/emacsorphanage/" url))) 'orphaned)
@@ -112,7 +112,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5141 |   5141 |       |       |      154 |         146 |  4569 |
+| github      | 5145 |   5145 |       |       |      154 |         146 |  4578 |
 | gitlab      |  176 |    176 |       |       |       18 |          13 |   156 |
 | codeberg    |   67 |     67 |       |       |        1 |          17 |    64 |
 | sourcehut   |   67 |     67 |       |       |       20 |           4 |    44 |
@@ -132,10 +132,10 @@
 | shelved     | 1482 |        |  1482 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   236 |
+| secondary   |      |        |       |       |          |             |   231 |
 | unreleased  |      |        |       |       |        8 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8500 |   6549 |  1482 |   472 |      377 |         185 |  5313 |
+| total       | 8504 |   6553 |  1482 |   472 |      377 |         185 |  5317 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -1013,9 +1013,9 @@
                                 melpa-recipes:name
                                 packages:class]
              :from [packages melpa-recipes]
-             :where (= packages:name melpa-recipes:epkg-package)
-             :and :not (= melpa-recipes:epkg-package
-                          melpa-recipes:name)
+             :where (and (= packages:name melpa-recipes:epkg-package)
+                         (not (= melpa-recipes:epkg-package
+                                 melpa-recipes:name)))
              :order-by [(asc packages:name)
                         (asc melpa-recipes:name)]])
 #+end_src

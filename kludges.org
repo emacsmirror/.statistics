@@ -226,11 +226,15 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (19)           | Class     |
+| Package (24)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
+| auctex                 | gnu       |
 | auctex-latexmk         | github    |
+| dired-hacks            | github    |
 | emacspeak              | github    |
+| emux                   | github    |
+| ert-runner             | github    |
 | flim                   | github    |
 | go                     | github    |
 | icons-in-terminal      | github    |
@@ -238,6 +242,7 @@
 | lookup                 | github    |
 | monorepo-zenitani      | github    |
 | nav                    | github    |
+| ne2wm                  | github    |
 | oauth                  | github    |
 | org-contrib            | sourcehut |
 | projectile-trailblazer | github    |
@@ -249,8 +254,13 @@
 | wanderlust             | github    |
 
 - emacspeak: https://github.com/tvraman/emacspeak/issues/54
+- ert-runner: https://github.com/rejeep/ert-runner.el/pull/16
 - projectile-trailblazer: https://github.com/micdahl/projectile-trailblazer/issues/3
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
+Still hoping/expecting these will be merged:
+- dired-hacks: https://github.com/Fuco1/dired-hacks/pull/193
+- emux: https://github.com/re5et/emux/pull/4
+- ne2wm: https://github.com/tkf/ne2wm/pull/3
 
 * Filtered (minority) repositories
 :PROPERTIES:
@@ -340,13 +350,14 @@
 :ID:       43de71ec-d382-4b53-acdf-562cca94ef62
 :END:
 #+name: no-mainlib
-#+begin_src emacs-lisp :post addheader(*this*,'(4 "Package" "Class" "M" "Library" "Reason"))
+#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "M" "Library"))
   (seq-keep (pcase-lambda (`(,name ,type ,library))
               (and (not (eq type 'core))
                    (list name type
                          (and (epkg-get-recipe 'melpa name) "✓")
                          library
-                         (emir--config name :library))))
+                         ;; (emir--config name :library)
+                         )))
             (epkg-sql [:select [name class library] :from packages
                        :where (notnull library)
                        :and class :in $v1
@@ -354,29 +365,17 @@
                       (closql-where-class-in [mirrored*] (epkg-db))))
 #+end_src
 #+results: no-mainlib
-| Package (10)          | Class  | M | Library                         | Reason                     |
-|-----------------------+--------+---+---------------------------------+----------------------------|
-| auctex                | gnu    |   | tex.el                          | auctex.el.in is invalid    |
-| dired-hacks           | github |   | dired-hacks-utils.el            | no primary entry point     |
-| emux                  | github |   | emux-base.el                    | no/mismatched main library |
-| ne2wm                 | github |   | ne2wm-setup.el                  | no/mismatched main library |
-| ert-runner            | github | ✓ | ert-runner.el                   | not a library [[https://github.com/rejeep/ert-runner.el/pull/16][#16]]          |
-| eziam-theme           | github | ✓ | eziam-dark-theme.el             | two-variant theme          |
-| omtose-phellack-theme | github | ✓ | variants/omtose-darker-theme.el | two-variant theme          |
-| spacemacs-theme       | github | ✓ | spacemacs-common.el             | two-variant theme [[https://github.com/nashamri/spacemacs-theme/pull/63][#63]]      |
-| punpun-theme          | git    | ✓ | punpun-common.el                | two-variant theme [[https://github.com/wasamasa/punpun-theme/pull/7][#7]]       |
-| majapahit-theme       | gitlab | ✓ | majapahit-dark-theme.el         | two-variant theme [[https://gitlab.com/franksn/majapahit-theme/merge_requests/1][#1]]       |
+| Package (3)           | Class  | M | Library                         |
+|-----------------------+--------+---+---------------------------------|
+| majapahit-theme       | gitlab | ✓ | majapahit-dark-theme.el         |
+| omtose-phellack-theme | github | ✓ | variants/omtose-darker-theme.el |
+| spacemacs-theme       | github | ✓ | spacemacs-common.el             |
 
-- dired-hacks: https://github.com/Fuco1/dired-hacks/pull/193
-- emux: https://github.com/re5et/emux/pull/4
-- ne2wm: https://github.com/tkf/ne2wm/pull/3
 - *-theme:
   - https://github.com/melpa/melpa/issues/8219
   - [[notmuch-tree:thread:000000000001426e and (folder:jonas@bernoul.li/INBOX.Sent)][(mail) Teach package.el about renamed packages]]
-  - eziam-theme: https://github.com/thblt/eziam-theme-emacs/pull/25
   - omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
   - spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/63
-  - punpun-theme: https://github.com/melpa/melpa/issues/8219#issuecomment-1321248457
   - majapahit-theme: https://github.com/melpa/melpa/issues/8219#issuecomment-1321248457
 
 * Set tracked branch
