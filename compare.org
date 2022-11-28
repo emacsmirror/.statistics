@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5145 |   5145 |       |       |      154 |         146 |  4578 |
-| gitlab      |  176 |    176 |       |       |       18 |          13 |   156 |
-| codeberg    |   67 |     67 |       |       |        1 |          17 |    64 |
-| sourcehut   |   67 |     67 |       |       |       20 |           4 |    44 |
+| github      | 5148 |   5148 |       |       |      154 |         146 |  4581 |
+| gitlab      |  177 |    177 |       |       |       18 |          13 |   157 |
+| codeberg    |   76 |     76 |       |       |        1 |          29 |    64 |
+| sourcehut   |   69 |     69 |       |       |       21 |           4 |    44 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     1 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  106 |    106 |       |       |       15 |           4 |    92 |
+| git         |  106 |    106 |       |       |       16 |           4 |    92 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -133,9 +133,9 @@
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   231 |
-| unreleased  |      |        |       |       |        8 |           1 |       |
+| unreleased  |      |        |       |       |        7 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8504 |   6553 |  1482 |   472 |      377 |         185 |  5317 |
+| total       | 8519 |   6568 |  1482 |   472 |      378 |         197 |  5321 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -230,15 +230,10 @@
                  (list (list name class (if (eq class 'core) "" url)))))
           (epkg-sql [:select [name class url]
                      :from gnu-elpa-recipes
-                     :where (or (isnull epkg-package)
-                                ;; FIXME (= class 'core)
-                                )
+                     :where (isnull epkg-package)
                      :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-new
-| Package (1) | Class     | Url                                      |
-|-------------+-----------+------------------------------------------|
-| jarchive    | sourcehut | https://git.sr.ht/~dannyfreeman/jarchive |
 
 ** Delayed
 :PROPERTIES:
@@ -384,7 +379,7 @@
                       [builtin gnu-elpa shelved]))
 #+end_src
 #+results: gnu-elpa-prefer-upstream
-| Package (208)              | Class     | Elpa      | Link                                            |
+| Package (210)              | Class     | Elpa      | Link                                            |
 |----------------------------+-----------+-----------+-------------------------------------------------|
 | ace-window                 | github    | github    | [[https://github.com/abo-abo/ace-window][abo-abo/ace-window]]                              |
 | ack                        | github    | github    | [[https://github.com/leoliu/ack-el][leoliu/ack-el]]                                   |
@@ -392,8 +387,9 @@
 | agitate                    | sourcehut | sourcehut | [[https://git.sr.ht/~protesilaos/agitate][protesilaos/agitate]]                             |
 | ahungry-theme              | github    | github    | [[https://github.com/ahungry/color-theme-ahungry][ahungry/color-theme-ahungry]]                     |
 | aircon-theme               | sourcehut | sourcehut | [[https://git.sr.ht/~chambln/aircon-theme.el][chambln/aircon-theme.el]]                         |
+| altcaps                    | sourcehut | sourcehut | [[https://git.sr.ht/~protesilaos/altcaps][protesilaos/altcaps]]                             |
 | async                      | github    | github    | [[https://github.com/jwiegley/emacs-async][jwiegley/emacs-async]]                            |
-| auctex                     | gnu       | gnu       | [[https://savannah.gnu.org/projects/auctex][gnu:auctex]]                                      |
+| auctex                     | gnu       | gnu       | [[https://www.gnu.org/software/auctex][gnu:auctex]]                                      |
 | avy                        | github    | github    | [[https://github.com/abo-abo/avy][abo-abo/avy]]                                     |
 | bbdb                       | nongnu    | nongnu    | [[http://bbdb.sourceforge.net][nongnu:bbdb]]                                     |
 | beacon                     | github    | github    | [[https://github.com/Malabarba/beacon][Malabarba/beacon]]                                |
@@ -478,6 +474,7 @@
 | ivy                        | github    | github    | [[https://github.com/abo-abo/swiper][abo-abo/swiper]]                                  |
 | ivy-explorer               | github    | github    | [[https://github.com/clemera/ivy-explorer][clemera/ivy-explorer]]                            |
 | ivy-posframe               | github    | github    | [[https://github.com/tumashu/ivy-posframe][tumashu/ivy-posframe]]                            |
+| jarchive                   | sourcehut | sourcehut | [[https://git.sr.ht/~dannyfreeman/jarchive][dannyfreeman/jarchive]]                           |
 | js2-mode                   | github    | github    | [[https://github.com/mooz/js2-mode][mooz/js2-mode]]                                   |
 | json-mode                  | github    | internal  | [[https://github.com/joshwnj/json-mode][joshwnj/json-mode]]                               |
 | kind-icon                  | github    | github    | [[https://github.com/jdtsmith/kind-icon][jdtsmith/kind-icon]]                              |
@@ -724,7 +721,7 @@
                       [builtin gnu-elpa shelved]))
 #+end_src
 #+results: nongnu-elpa-prefer-upstream
-| Package (180)         | Class     | Elpa      | Link                                      |
+| Package (192)         | Class     | Elpa      | Link                                      |
 |-----------------------+-----------+-----------+-------------------------------------------|
 | afternoon-theme       | github    | github    | [[https://github.com/osener/emacs-afternoon-theme][osener/emacs-afternoon-theme]]              |
 | alect-themes          | github    | github    | [[https://github.com/alezost/alect-themes][alezost/alect-themes]]                      |
@@ -739,8 +736,10 @@
 | better-jumper         | github    | github    | [[https://github.com/gilbertw1/better-jumper][gilbertw1/better-jumper]]                   |
 | bind-map              | github    | github    | [[https://github.com/justbur/emacs-bind-map][justbur/emacs-bind-map]]                    |
 | bison-mode            | github    | github    | [[https://github.com/Wilfred/bison-mode][Wilfred/bison-mode]]                        |
+| blow                  | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-blow][akib/emacs-blow]]                           |
 | boxquote              | github    | github    | [[https://github.com/davep/boxquote.el][davep/boxquote.el]]                         |
 | buttercup             | github    | github    | [[https://github.com/jorgenschaefer/emacs-buttercup][jorgenschaefer/emacs-buttercup]]            |
+| camera                | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-camera][akib/emacs-camera]]                         |
 | caml                  | github    | github    | [[https://github.com/ocaml/caml-mode][ocaml/caml-mode]]                           |
 | cdlatex               | github    | github    | [[https://github.com/cdominik/cdlatex][cdominik/cdlatex]]                          |
 | cider                 | github    | github    | [[https://github.com/clojure-emacs/cider][clojure-emacs/cider]]                       |
@@ -752,11 +751,13 @@
 | cycle-at-point        | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-cycle-at-point][ideasman42/emacs-cycle-at-point]]           |
 | d-mode                | github    | github    | [[https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode][Emacs-D-Mode-Maintainers/Emacs-D-Mode]]     |
 | dart-mode             | github    | github    | [[https://github.com/bradyt/dart-mode][bradyt/dart-mode]]                          |
+| devhelp               | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-devhelp][akib/emacs-devhelp]]                        |
 | diff-ansi             | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-diff-ansi][ideasman42/emacs-diff-ansi]]                |
 | doc-show-inline       | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-doc-show-inline][ideasman42/emacs-doc-show-inline]]          |
 | dockerfile-mode       | github    | github    | [[https://github.com/spotify/dockerfile-mode][spotify/dockerfile-mode]]                   |
 | dracula-theme         | github    | github    | [[https://github.com/dracula/emacs][dracula/emacs]]                             |
 | drupal-mode           | github    | github    | [[https://github.com/arnested/drupal-mode][arnested/drupal-mode]]                      |
+| eat                   | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-eat][akib/emacs-eat]]                            |
 | edit-indirect         | github    | github    | [[https://github.com/Fanael/edit-indirect][Fanael/edit-indirect]]                      |
 | editorconfig          | github    | github    | [[https://github.com/editorconfig/editorconfig-emacs][editorconfig/editorconfig-emacs]]           |
 | elixir-mode           | github    | github    | [[https://github.com/elixir-editors/emacs-elixir][elixir-editors/emacs-elixir]]               |
@@ -777,6 +778,7 @@
 | focus                 | github    | github    | [[https://github.com/larstvei/Focus][larstvei/Focus]]                            |
 | forth-mode            | github    | github    | [[https://github.com/larsbrinkhoff/forth-mode][larsbrinkhoff/forth-mode]]                  |
 | free-keys             | github    | github    | [[https://github.com/Fuco1/free-keys][Fuco1/free-keys]]                           |
+| gc-buffers            | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-gc-buffers][akib/emacs-gc-buffers]]                     |
 | geiser                | gitlab    | gitlab    | [[https://gitlab.com/emacs-geiser/geiser][emacs-geiser/geiser]]                       |
 | geiser-chez           | gitlab    | gitlab    | [[https://gitlab.com/emacs-geiser/chez][emacs-geiser/chez]]                         |
 | geiser-chibi          | gitlab    | gitlab    | [[https://gitlab.com/emacs-geiser/chibi][emacs-geiser/chibi]]                        |
@@ -790,6 +792,7 @@
 | geiser-stklos         | gitlab    | gitlab    | [[https://gitlab.com/emacs-geiser/stklos][emacs-geiser/stklos]]                       |
 | git-modes             | github    | github    | [[https://github.com/magit/git-modes][magit/git-modes]]                           |
 | gnu-apl-mode          | github    | github    | [[https://github.com/lokedhs/gnu-apl-mode][lokedhs/gnu-apl-mode]]                      |
+| gnu-indent            | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-gnu-indent][akib/emacs-gnu-indent]]                     |
 | gnuplot               | github    | github    | [[https://github.com/emacs-gnuplot/gnuplot][emacs-gnuplot/gnuplot]]                     |
 | go-mode               | github    | github    | [[https://github.com/dominikh/go-mode.el][dominikh/go-mode.el]]                       |
 | gotham-theme          | git       | git       | [[https://depp.brause.cc/gotham-theme]]       |
@@ -803,6 +806,7 @@
 | helm                  | github    | github    | [[https://github.com/emacs-helm/helm][emacs-helm/helm]]                           |
 | highlight-parentheses | sourcehut | sourcehut | [[https://git.sr.ht/~tsdh/highlight-parentheses.el][tsdh/highlight-parentheses.el]]             |
 | hl-block-mode         | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-hl-block-mode][ideasman42/emacs-hl-block-mode]]            |
+| hl-column             | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-hl-column][akib/emacs-hl-column]]                      |
 | htmlize               | github    | github    | [[https://github.com/hniksic/emacs-htmlize][hniksic/emacs-htmlize]]                     |
 | idle-highlight-mode   | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-idle-highlight-mode][ideasman42/emacs-idle-highlight-mode]]      |
 | idris-mode            | github    | github    | [[https://github.com/idris-hackers/idris-mode][idris-hackers/idris-mode]]                  |
@@ -810,6 +814,7 @@
 | inf-clojure           | github    | github    | [[https://github.com/clojure-emacs/inf-clojure][clojure-emacs/inf-clojure]]                 |
 | inf-ruby              | github    | github    | [[https://github.com/nonsequitur/inf-ruby][nonsequitur/inf-ruby]]                      |
 | inkpot-theme          | codeberg  | codeberg  | [[https://codeberg.org/ideasman42/emacs-theme-inkpot][ideasman42/emacs-theme-inkpot]]             |
+| iwindow               | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-iwindow][akib/emacs-iwindow]]                        |
 | j-mode                | github    | github    | [[https://github.com/zellio/j-mode][zellio/j-mode]]                             |
 | jade-mode             | github    | github    | [[https://github.com/brianc/jade-mode][brianc/jade-mode]]                          |
 | jinja2-mode           | github    | github    | [[https://github.com/paradoxxxzero/jinja2-mode][paradoxxxzero/jinja2-mode]]                 |
@@ -822,6 +827,7 @@
 | markdown-mode         | github    | github    | [[https://github.com/jrblevin/markdown-mode][jrblevin/markdown-mode]]                    |
 | material-theme        | github    | github    | [[https://github.com/cpaulik/emacs-material-theme][cpaulik/emacs-material-theme]]              |
 | mentor                | github    | github    | [[https://github.com/skangas/mentor][skangas/mentor]]                            |
+| minibar               | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-minibar][akib/emacs-minibar]]                        |
 | moe-theme             | github    | github    | [[https://github.com/kuanyui/moe-theme.el][kuanyui/moe-theme.el]]                      |
 | monokai-theme         | github    | github    | [[https://github.com/oneKelvinSmith/monokai-emacs][oneKelvinSmith/monokai-emacs]]              |
 | mpv                   | github    | github    | [[https://github.com/kljohann/mpv.el][kljohann/mpv.el]]                           |
@@ -884,6 +890,7 @@
 | tablist               | github    | github    | [[https://github.com/politza/tablist][politza/tablist]]                           |
 | tangotango-theme      | github    | github    | [[https://github.com/juba/color-theme-tangotango][juba/color-theme-tangotango]]               |
 | telephone-line        | github    | github    | [[https://github.com/dbordak/telephone-line][dbordak/telephone-line]]                    |
+| testcover-mark-line   | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-testcover-mark-line][akib/emacs-testcover-mark-line]]            |
 | textile-mode          | github    | github    | [[https://github.com/juba/textile-mode][juba/textile-mode]]                         |
 | toc-org               | github    | github    | [[https://github.com/snosov1/toc-org][snosov1/toc-org]]                           |
 | treeview              | github    | github    | [[https://github.com/tilmanrassy/emacs-treeview][tilmanrassy/emacs-treeview]]                |
@@ -898,8 +905,10 @@
 | web-mode              | github    | github    | [[https://github.com/fxbois/web-mode][fxbois/web-mode]]                           |
 | webpaste              | github    | github    | [[https://github.com/etu/webpaste.el][etu/webpaste.el]]                           |
 | wgrep                 | github    | github    | [[https://github.com/mhayashi1120/Emacs-wgrep][mhayashi1120/Emacs-wgrep]]                  |
+| why-this              | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-why-this][akib/emacs-why-this]]                       |
 | with-editor           | github    | github    | [[https://github.com/magit/with-editor][magit/with-editor]]                         |
 | with-simulated-input  | github    | github    | [[https://github.com/DarwinAwardWinner/with-simulated-input][DarwinAwardWinner/with-simulated-input]]    |
+| workroom              | codeberg  | codeberg  | [[https://codeberg.org/akib/emacs-workroom][akib/emacs-workroom]]                       |
 | ws-butler             | github    | github    | [[https://github.com/lewang/ws-butler][lewang/ws-butler]]                          |
 | xml-rpc               | github    | github    | [[https://github.com/hexmode/xml-rpc-el][xml-rpc-el/xml-rpc-el]]                     |
 | yaml-mode             | github    | github    | [[https://github.com/yoshiki/yaml-mode][yoshiki/yaml-mode]]                         |
