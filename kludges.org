@@ -88,7 +88,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (87)                    | Class     | Feature                  | Reason                                            |
+| Package (88)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -96,6 +96,7 @@
 | auto-complete                   | github    | semantic-ia              | backward compatibility                            |
 | auto-complete-nxml              | github    | anything-project         | anything                                          |
 | bbdb                            | nongnu    | vm-autoloads             | generated external file                           |
+| borg                            | github    | loaddefs-gen             | forward compatibility                             |
 | bts                             | github    | pophint-config           | pending [[https://github.com/aki2o/emacs-bts/pull/17][#17]]                                       |
 | centered-window                 | github    | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                        |
 | citeproc                        | github    | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                         |

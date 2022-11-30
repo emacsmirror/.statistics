@@ -236,6 +236,7 @@
 | osx-trash            | dropped by maintainer   |
 | ov                   | dropped by maintainer   |
 | ox-pandoc            | revived using fork      |
+| packed               | dropped by maintainer   |
 | pager                | upstream disappeared    |
 | perl-utils           | dropped by maintainer   |
 | picolisp             | manual tarball import   |
@@ -347,12 +348,8 @@
   (emir--store-table 'var-suspended value)
 #+END_SRC
 #+NAME: table--suspended
-| Package      | Reason |
-|--------------+--------|
-| clang-format | slow   |
-| cmake-mode   | slow   |
-| cython-mode  | slow   |
-| make-mode    | slow   |
+| Package | Reason |
+|---------+--------|
 
 * Homepage                                                            :input:
 :PROPERTIES:
