@@ -71,6 +71,9 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
+| Package (1) | Class  | Feature | Provider |
+|-------------+--------+---------+----------|
+| wanderlust  | github | wl-news |          |
 
 * Missing library summary
 :PROPERTIES:

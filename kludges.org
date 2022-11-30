@@ -282,11 +282,10 @@ Still hoping/expecting these will be merged:
                    #'string< :key #'car))
 #+end_src
 #+results: filtered-minority
-| Package (9)    |   Modified | M | Url                                          |
+| Package (8)    |   Modified | M | Url                                          |
 |----------------+------------+---+----------------------------------------------|
 | clang-format   | 2019-11-06 | ✓ | git@github.com:llvm/llvm-project.git         |
 | cmake-mode     | 2022-08-22 | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
-| cython-mode    | 2019-01-11 | ✓ | git@github.com:cython/cython.git             |
 | diffscuss-mode | 2014-10-14 | ✓ | git@github.com:tomheon/diffscuss.git         |
 | google-c-style | 2022-02-10 | ✓ | git@github.com:google/styleguide.git         |
 | nemerle        | 2016-10-28 | ✓ | git@github.com:rsdn/nemerle.git              |
@@ -296,13 +295,11 @@ Still hoping/expecting these will be merged:
 
 - clang-format: https://github.com/llvm/llvm-project/issues/58902
 - cmake-mode: I have no account on this gitlab instance, not contacted
-- cython-mode: https://github.com/cython/cython/issues/5122
 - diffscuss-mode: https://github.com/tomheon/diffscuss/issues/43
 - google-c-style: https://github.com/google/styleguide/issues/726
 - nemerle: https://github.com/rsdn/nemerle/issues/13359
 - ninja-mode: https://github.com/ninja-build/ninja/issues/2213
 - po-mode: mailing list, not contacted
-- pylint: https://github.com/PyCQA/pylint/issues/7737
 - thrift: issues disabled, not contacted
 
 * Filtered (subtree) repositories
