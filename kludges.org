@@ -227,7 +227,7 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (24)           | Class     |
+| Package (26)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | auctex                 | gnu       |
@@ -241,10 +241,12 @@
 | icons-in-terminal      | github    |
 | karma                  | github    |
 | lookup                 | github    |
+| majapahit-theme        | gitlab    |
 | monorepo-zenitani      | github    |
 | nav                    | github    |
 | ne2wm                  | github    |
 | oauth                  | github    |
+| omtose-phellack-theme  | github    |
 | org-contrib            | sourcehut |
 | projectile-trailblazer | github    |
 | projmake-mode          | github    |
@@ -256,6 +258,8 @@
 
 - emacspeak: https://github.com/tvraman/emacspeak/issues/54
 - ert-runner: https://github.com/rejeep/ert-runner.el/pull/16
+- majapahit-theme: https://gitlab.com/franksn/majapahit-theme/-/merge_requests/2
+- omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
 - projectile-trailblazer: https://github.com/micdahl/projectile-trailblazer/issues/3
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 Still hoping/expecting these will be merged:
@@ -363,18 +367,11 @@ Still hoping/expecting these will be merged:
                       (closql-where-class-in [mirrored*] (epkg-db))))
 #+end_src
 #+results: no-mainlib
-| Package (3)           | Class  | M | Library                         |
-|-----------------------+--------+---+---------------------------------|
-| majapahit-theme       | gitlab | ✓ | majapahit-dark-theme.el         |
-| omtose-phellack-theme | github | ✓ | variants/omtose-darker-theme.el |
-| spacemacs-theme       | github | ✓ | spacemacs-common.el             |
+| Package (1)     | Class  | M | Library             |
+|-----------------+--------+---+---------------------|
+| spacemacs-theme | github | ✓ | spacemacs-common.el |
 
-- *-theme:
-  - https://github.com/melpa/melpa/issues/8219
-  - [[notmuch-tree:thread:000000000001426e and (folder:jonas@bernoul.li/INBOX.Sent)][(mail) Teach package.el about renamed packages]]
-  - omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
-  - spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/63
-  - majapahit-theme: https://github.com/melpa/melpa/issues/8219#issuecomment-1321248457
+- spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/63, [[https://github.com/melpa/melpa/issues/8219][melpa#8219]]
 
 * Set tracked branch
 :PROPERTIES:
