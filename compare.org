@@ -28,8 +28,8 @@
          (table `(("" "Epkg" "Mirror" "Attic" "Emacs" "GNU Elpa" "NonGNU Elpa" "Melpa")
                   hline
                   (builtin     ,builtin-emir "" "" ,builtin  0 "" "")
-                  (gnu-elpa     0  0  "" ""  0 "" "")
-                  (nongnu-elpa  0  0  "" "" ""  0 "")
+                  (gnu-elpa     0  0 "" ""  0 "" "")
+                  (nongnu-elpa  0  0 "" "" ""  0 "")
                   hline
                   (github       0  0 "" ""  0  0  0)
                   (gitlab       0  0 "" ""  0  0  0)
@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5148 |   5148 |       |       |      154 |         146 |  4580 |
-| gitlab      |  177 |    177 |       |       |       18 |          13 |   157 |
+| github      | 5150 |   5150 |       |       |      154 |         147 |  4583 |
+| gitlab      |  178 |    178 |       |       |       18 |          13 |   158 |
 | codeberg    |   76 |     76 |       |       |        1 |          29 |    64 |
-| sourcehut   |   68 |     68 |       |       |       21 |           4 |    43 |
+| sourcehut   |   70 |     70 |       |       |       22 |           4 |    44 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     1 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  141 |    141 |       |       |          |             |   107 |
-| shelved     | 1482 |        |  1482 |       |          |             |    18 |
+| shelved     | 1483 |        |  1483 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   231 |
 | unreleased  |      |        |       |       |        7 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8518 |   6567 |  1482 |   472 |      378 |         197 |  5320 |
+| total       | 8524 |   6572 |  1483 |   472 |      379 |         198 |  5325 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -491,7 +491,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (31)                | Url                                                                         |
+| Package (32)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -508,6 +508,7 @@
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
 | fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
+| helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
@@ -885,9 +886,6 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (1) | Repository            | Melpa | Dependants |
-|-------------+-----------------------+-------+------------|
-| helm-ctest  | [[https://github.com/danlamanna/helm-ctest][danlamanna/helm-ctest]] | 14029 |            |
 
 ** Removed repositories
 :PROPERTIES:
