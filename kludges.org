@@ -227,7 +227,7 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (26)           | Class     |
+| Package (27)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | auctex                 | gnu       |
@@ -252,20 +252,22 @@
 | projmake-mode          | github    |
 | semi                   | github    |
 | slime                  | github    |
+| spacemacs-theme        | github    |
 | tenv                   | github    |
 | twittering-mode        | github    |
 | wanderlust             | github    |
 
 - emacspeak: https://github.com/tvraman/emacspeak/issues/54
 - ert-runner: https://github.com/rejeep/ert-runner.el/pull/16
-- majapahit-theme: https://gitlab.com/franksn/majapahit-theme/-/merge_requests/2
-- omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
 - projectile-trailblazer: https://github.com/micdahl/projectile-trailblazer/issues/3
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 Still hoping/expecting these will be merged:
 - dired-hacks: https://github.com/Fuco1/dired-hacks/pull/193
 - emux: https://github.com/re5et/emux/pull/4
+- majapahit-theme: https://gitlab.com/franksn/majapahit-theme/-/merge_requests/2
 - ne2wm: https://github.com/tkf/ne2wm/pull/3
+- omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
+- spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/199
 
 * Filtered (minority) repositories
 :PROPERTIES:
@@ -367,11 +369,6 @@ Still hoping/expecting these will be merged:
                       (closql-where-class-in [mirrored*] (epkg-db))))
 #+end_src
 #+results: no-mainlib
-| Package (1)     | Class  | M | Library             |
-|-----------------+--------+---+---------------------|
-| spacemacs-theme | github | ✓ | spacemacs-common.el |
-
-- spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/63, [[https://github.com/melpa/melpa/issues/8219][melpa#8219]]
 
 * Set tracked branch
 :PROPERTIES:
