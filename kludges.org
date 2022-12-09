@@ -60,21 +60,23 @@
   (epkg-sql [:select [name class feature drop]
              :from [packages provided]
              :where (and (= name package) (notnull drop))
-             :order-by [(asc package) (asc feature)]])
+             :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (9)      | Class  | Feature              | Reason                |
+| Package (11)     | Class  | Feature              | Reason                |
 |------------------+--------+----------------------+-----------------------|
-| clojure-mode     | github | test-helper          | conflicting test file |
-| elixir-mode      | github | test-helper          | conflicting test file |
+| rgb              | gitlab | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| rgb              | gitlab | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| kurecolor        | github | etd                  | wontfix [[https://github.com/emacsfodder/kurecolor/issues/17][#17]]           |
+| cider            | github | integration-tests    | conflicting test file |
+| fsharp-mode      | github | integration-tests    | conflicting test file |
+| org              | gnu    | org-test             | conflicting test file |
+| org-gcal         | github | org-test             | conflicting test file |
 | font-lock-studio | github | tabulated-list       | harmless in test file |
 | gumshoe          | github | targets/install-deps | conflicting test file |
 | ivy              | github | targets/install-deps | conflicting test file |
-| kurecolor        | github | etd                  | wontfix [[https://github.com/emacsfodder/kurecolor/issues/17][#17]]           |
-| org              | gnu    | org-test             | conflicting test file |
-| org-gcal         | github | org-test             | conflicting test file |
-| rgb              | gitlab | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| rgb              | gitlab | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| clojure-mode     | github | test-helper          | conflicting test file |
+| elixir-mode      | github | test-helper          | conflicting test file |
 
 * Drop required features
 :PROPERTIES:
