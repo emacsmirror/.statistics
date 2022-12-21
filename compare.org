@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5151 |   5151 |       |       |      152 |         160 |  4585 |
-| gitlab      |  180 |    180 |       |       |       18 |          13 |   160 |
-| codeberg    |   76 |     76 |       |       |        1 |          29 |    64 |
+| github      | 5160 |   5160 |       |       |      152 |         160 |  4594 |
+| gitlab      |  181 |    181 |       |       |       18 |          13 |   161 |
+| codeberg    |   77 |     77 |       |       |        1 |          30 |    64 |
 | sourcehut   |   71 |     71 |       |       |       23 |           4 |    44 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  107 |    107 |       |       |       16 |           4 |    92 |
+| git         |  107 |    107 |       |       |       16 |           5 |    92 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -132,10 +132,10 @@
 | shelved     | 1484 |        |  1484 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   231 |
+| secondary   |      |        |       |       |          |             |   232 |
 | unreleased  |      |        |       |       |        7 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8530 |   6577 |  1484 |   472 |      381 |         211 |  5330 |
+| total       | 8541 |   6588 |  1484 |   472 |      381 |         213 |  5341 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -546,7 +546,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (131)   | Secondary package                 | Class     |
+| Primary package (132)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -595,6 +595,7 @@
 | dired-hacks             | dired-rainbow                     | github    |
 | dired-hacks             | dired-ranger                      | github    |
 | dired-hacks             | dired-subtree                     | github    |
+| dired-rsync             | dired-rsync-transient             | github    |
 | distel-completion-lib   | auto-complete-distel              | github    |
 | distel-completion-lib   | company-distel                    | github    |
 | dix                     | dix-evil                          | github    |
