@@ -112,7 +112,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5160 |   5160 |       |       |      152 |         160 |  4594 |
+| github      | 5161 |   5161 |       |       |      152 |         161 |  4595 |
 | gitlab      |  181 |    181 |       |       |       18 |          13 |   161 |
 | codeberg    |   77 |     77 |       |       |        1 |          30 |    64 |
 | sourcehut   |   71 |     71 |       |       |       23 |           4 |    44 |
@@ -135,7 +135,7 @@
 | secondary   |      |        |       |       |          |             |   232 |
 | unreleased  |      |        |       |       |        7 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8541 |   6588 |  1484 |   472 |      381 |         213 |  5341 |
+| total       | 8542 |   6589 |  1484 |   472 |      381 |         214 |  5342 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -345,13 +345,13 @@
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/r/org-edna-el   |
-| vcl-mode            | git://git.gnu.org.ua/vcl-mode                     |
 | auto-overlays       | http://www.dr-qubit.org/git/predictive.git        |
 | dict-tree           | http://www.dr-qubit.org/git/predictive.git        |
 | heap                | http://www.dr-qubit.org/git/predictive.git        |
 | queue               | http://www.dr-qubit.org/git/predictive.git        |
 | tNFA                | http://www.dr-qubit.org/git/predictive.git        |
 | trie                | http://www.dr-qubit.org/git/predictive.git        |
+| vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
 | setup               | https://git.sr.ht/~pkal/setup                     |
 | phps-mode           | https://github.com/cjohansson/emacs-phps-mode     |
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
