@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5164 |   5164 |       |       |      152 |         161 |  4599 |
+| github      | 5170 |   5170 |       |       |      153 |         162 |  4606 |
 | gitlab      |  181 |    181 |       |       |       18 |          13 |   161 |
 | codeberg    |   79 |     79 |       |       |        1 |          30 |    66 |
-| sourcehut   |   71 |     71 |       |       |       23 |           4 |    44 |
+| sourcehut   |   71 |     71 |       |       |       22 |           4 |    45 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  141 |    141 |       |       |          |             |   107 |
-| shelved     | 1485 |        |  1485 |       |          |             |    18 |
+| shelved     | 1488 |        |  1488 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   232 |
+| secondary   |      |        |       |       |          |             |   231 |
 | unreleased  |      |        |       |       |        7 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8548 |   6594 |  1485 |   472 |      381 |         214 |  5348 |
+| total       | 8557 |   6600 |  1488 |   472 |      381 |         215 |  5355 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -494,10 +494,11 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (32)                | Url                                                                         |
+| Package (34)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
+| cfml-mode                   | https://github.com/amyers634/cfml-mode                                      |
 | color-theme                 | https://github.com/emacsorphanage/color-theme                               |
 | company-go                  | https://github.com/nsf/gocode                                               |
 | company-racer               | https://github.com/emacsorphanage/company-racer                             |
@@ -520,6 +521,7 @@
 | mic-paren                   | http://www.gnuvola.org/software/j/mic-paren/mic-paren.el                    |
 | org-doing                   | https://github.com/rudolfolah/org-doing                                     |
 | org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
+| org-pivotal                 | https://github.com/org-pivotal/org-pivotal                                  |
 | org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
@@ -546,7 +548,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (132)   | Secondary package                 | Class     |
+| Primary package (131)   | Secondary package                 | Class     |
 |-------------------------+-----------------------------------+-----------|
 | 750words                | ox-750words                       | github    |
 | ac-php                  | ac-php-core                       | github    |
@@ -777,7 +779,6 @@
 | zetteldesk              | zetteldesk-kb                     | github    |
 | zetteldesk              | zetteldesk-ref                    | github    |
 | zetteldesk              | zetteldesk-remark                 | github    |
-| zettelkasten            | org-zettelkasten                  | github    |
 | zk                      | zk-desktop                        | github    |
 | zk                      | zk-index                          | github    |
 

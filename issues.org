@@ -39,6 +39,10 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
+| Feature (1)      | Package          | Shelved |
+|------------------+------------------+---------|
+| org-zettelkasten | org-zettelkasten |         |
+| org-zettelkasten | zettelkasten     |         |
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -67,9 +71,11 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (7)    | Class  | Feature     | Provider |
+| Package (9)    | Class  | Feature     | Provider |
 |----------------+--------+-------------+----------|
 | amx            | github | helm-config |          |
+| elixir-ts-mode | github | treesit     |          |
+| heex-ts-mode   | github | treesit     |          |
 | helm-ag-r      | github | helm-config |          |
 | helm-cmd-t     | github | helm-config |          |
 | helm-dirset    | github | helm-config |          |
