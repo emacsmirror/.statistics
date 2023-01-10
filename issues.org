@@ -71,28 +71,29 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (18)       | Class    | Feature            | Provider |
+| Package (12)       | Class    | Feature            | Provider |
 |--------------------+----------+--------------------+----------|
-| acd                | wiki     | complete           |          |
 | amx                | github   | helm-config        |          |
-| clibpc             | wiki     | complete           |          |
 | es                 | github   | assoc              |          |
-| grc                | github   | assoc              |          |
-| gtk-perl           | wiki     | complete           |          |
 | helm-ag-r          | github   | helm-config        |          |
 | helm-cmd-t         | github   | helm-config        |          |
 | helm-dirset        | github   | helm-config        |          |
 | helm-git-files     | github   | helm-config        |          |
-| ireplace           | wiki     | assoc              |          |
 | muse               | github   | assoc              |          |
 | navorski           | github   | assoc              |          |
-| php-doc            | wiki     | complete           |          |
 | rcirc-ssh          | github   | assoc              |          |
 | serverspec         | github   | helm-config        |          |
 | shoes-off          | github   | assoc              |          |
 | tree-sitter-indent | codeberg | csharp-tree-sitter |          |
 
+- assoc:
+  - https://github.com/leathekd/es.el/issues/2
+  - https://github.com/alexott/muse/issues/13 (has dependants)
+  - https://github.com/roman/navorski.el/issues/11 (in melpa)
+  - https://github.com/nicferrier/rcirc-ssh-sessions/issues/1
+  - https://github.com/nicferrier/shoes-off/issues/8
 - helm-config: https://github.com/emacs-helm/helm/issues/2578
+- tree-sitter-indent: https://github.com/emacs-csharp/csharp-mode#obsoletion-warning
 
 * Missing library summary
 :PROPERTIES:
