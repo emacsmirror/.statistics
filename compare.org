@@ -19,8 +19,8 @@
 #+name: summary
 #+begin_src emacs-lisp
   (require 'finder-inf)
-  (let* ((builtin 472)
-         ;; This is a bit costly.
+  (let* ((builtin 482)
+         ;; This is costly and noisy, and mostly constant.
          ;; (builtin (length (emir--builtin-packages-alist)))
          ;; This does not include "org", "tramp" and "transient".
          (builtin-emir (length (epkgs 'name [builtin])))
@@ -108,12 +108,12 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  469 |        |       |   472 |       19 |             |       |
+| builtin     |  479 |        |       |   482 |       19 |             |       |
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5170 |   5170 |       |       |      153 |         162 |  4606 |
-| gitlab      |  181 |    181 |       |       |       18 |          13 |   161 |
+| github      | 5165 |   5165 |       |       |      153 |         162 |  4606 |
+| gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
 | codeberg    |   79 |     79 |       |       |        1 |          30 |    66 |
 | sourcehut   |   71 |     71 |       |       |       22 |           4 |    45 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     2 |
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  141 |    141 |       |       |          |             |   107 |
-| shelved     | 1488 |        |  1488 |       |          |             |    18 |
+| shelved     | 1487 |        |  1487 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   231 |
 | unreleased  |      |        |       |       |        7 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8557 |   6600 |  1488 |   472 |      381 |         215 |  5355 |
+| total       | 8560 |   6594 |  1487 |   482 |      381 |         215 |  5355 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -299,26 +299,31 @@
                      :order-by [(asc packages:name)]]))
 #+end_src
 #+results: gnu-elpa-prefer-builtin
-| Package (18) | Elpa     | Reason              |
-|--------------+----------+---------------------|
-| cl-generic   | internal | backport of builtin |
-| cl-lib       | internal | backport of builtin |
-| eldoc        | core     |                     |
-| erc          | core     |                     |
-| flymake      | core     |                     |
-| jsonrpc      | core     |                     |
-| let-alist    | core     |                     |
-| map          | core     |                     |
-| nadvice      | internal | backport of builtin |
-| ntlm         | core     |                     |
-| project      | core     |                     |
-| python       | core     |                     |
-| seq          | internal | backport of builtin |
-| so-long      | core     |                     |
-| soap-client  | core     |                     |
-| svg          | core     |                     |
-| verilog-mode | core     |                     |
-| xref         | core     |                     |
+| Package (23)        | Elpa     | Reason              |
+|---------------------+----------+---------------------|
+| bind-key            | core     |                     |
+| cl-generic          | internal | backport of builtin |
+| cl-lib              | internal | backport of builtin |
+| csharp-mode         | github   |                     |
+| eglot               | core     |                     |
+| eldoc               | core     |                     |
+| erc                 | core     |                     |
+| external-completion | core     |                     |
+| flymake             | core     |                     |
+| jsonrpc             | core     |                     |
+| let-alist           | core     |                     |
+| map                 | core     |                     |
+| nadvice             | internal | backport of builtin |
+| ntlm                | core     |                     |
+| project             | core     |                     |
+| python              | core     |                     |
+| seq                 | internal | backport of builtin |
+| so-long             | core     |                     |
+| soap-client         | core     |                     |
+| svg                 | core     |                     |
+| use-package         | core     |                     |
+| verilog-mode        | core     |                     |
+| xref                | core     |                     |
 
 ** Prefer Elpa despite :url
 :PROPERTIES:
@@ -756,10 +761,10 @@
 | treemacs                | treemacs-perspective              | github    |
 | treemacs                | treemacs-projectile               | github    |
 | treemacs                | treemacs-tab-bar                  | github    |
-| use-package             | bind-chord                        | github    |
-| use-package             | bind-key                          | github    |
-| use-package             | use-package-chords                | github    |
-| use-package             | use-package-ensure-system-package | github    |
+| use-package             | bind-chord                        | builtin   |
+| use-package             | bind-key                          | builtin   |
+| use-package             | use-package-chords                | builtin   |
+| use-package             | use-package-ensure-system-package | builtin   |
 | vdm-mode                | flycheck-vdm                      | github    |
 | vdm-mode                | vdm-comint                        | github    |
 | vdm-mode                | vdm-snippets                      | github    |

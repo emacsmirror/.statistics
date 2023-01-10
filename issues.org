@@ -71,17 +71,26 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (9)    | Class  | Feature     | Provider |
-|----------------+--------+-------------+----------|
-| amx            | github | helm-config |          |
-| elixir-ts-mode | github | treesit     |          |
-| heex-ts-mode   | github | treesit     |          |
-| helm-ag-r      | github | helm-config |          |
-| helm-cmd-t     | github | helm-config |          |
-| helm-dirset    | github | helm-config |          |
-| helm-git-files | github | helm-config |          |
-| serverspec     | github | helm-config |          |
-| yaml-pro       | github | treesit     |          |
+| Package (18)       | Class    | Feature            | Provider |
+|--------------------+----------+--------------------+----------|
+| acd                | wiki     | complete           |          |
+| amx                | github   | helm-config        |          |
+| clibpc             | wiki     | complete           |          |
+| es                 | github   | assoc              |          |
+| grc                | github   | assoc              |          |
+| gtk-perl           | wiki     | complete           |          |
+| helm-ag-r          | github   | helm-config        |          |
+| helm-cmd-t         | github   | helm-config        |          |
+| helm-dirset        | github   | helm-config        |          |
+| helm-git-files     | github   | helm-config        |          |
+| ireplace           | wiki     | assoc              |          |
+| muse               | github   | assoc              |          |
+| navorski           | github   | assoc              |          |
+| php-doc            | wiki     | complete           |          |
+| rcirc-ssh          | github   | assoc              |          |
+| serverspec         | github   | helm-config        |          |
+| shoes-off          | github   | assoc              |          |
+| tree-sitter-indent | codeberg | csharp-tree-sitter |          |
 
 - helm-config: https://github.com/emacs-helm/helm/issues/2578
 
