@@ -24,7 +24,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-join
-| Package (16) | Class     | Feature           | Reason                                    |
+| Package (17) | Class     | Feature           | Reason                                    |
 |--------------+-----------+-------------------+-------------------------------------------|
 | edb          | orphaned  | edbcore           | generated                                 |
 | emacs        | builtin   | cus-load          | generated                                 |
@@ -50,6 +50,7 @@
 | sqlite3      | github    | sqlite3-api       | provided by module                        |
 | tree-sitter  | github    | tsc-dyn           | provided by module                        |
 | vterm        | github    | vterm-module      | provided by module                        |
+| xeft         | sourcehut | xapian-lite       | provided by module                        |
 
 * Drop provided features
 :PROPERTIES:

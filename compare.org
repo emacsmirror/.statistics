@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5164 |   5164 |       |       |      153 |         162 |  4606 |
+| github      | 5162 |   5162 |       |       |      153 |         162 |  4608 |
 | gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
 | codeberg    |   79 |     79 |       |       |        1 |          30 |    66 |
-| sourcehut   |   71 |     71 |       |       |       22 |           4 |    45 |
+| sourcehut   |   73 |     73 |       |       |       24 |           4 |    45 |
 | gnu         |   10 |     10 |       |       |        8 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  141 |    141 |       |       |          |             |   107 |
-| shelved     | 1493 |        |  1493 |       |          |             |    18 |
+| shelved     | 1497 |        |  1497 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   231 |
+| secondary   |      |        |       |       |          |             |   230 |
 | unreleased  |      |        |       |       |        7 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8560 |   6588 |  1493 |   482 |      381 |         215 |  5355 |
+| total       | 8564 |   6588 |  1497 |   482 |      383 |         215 |  5356 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -250,9 +250,6 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-delayed
-| Package (1)         | Elpa | Reason                     |
-|---------------------+------+----------------------------|
-| external-completion | core | Will be part of Emacs 29.1 |
 
 ** Unreleased
 :PROPERTIES:
@@ -761,7 +758,6 @@
 | treemacs                | treemacs-perspective              | github    |
 | treemacs                | treemacs-projectile               | github    |
 | treemacs                | treemacs-tab-bar                  | github    |
-| use-package             | bind-chord                        | builtin   |
 | use-package             | bind-key                          | builtin   |
 | use-package             | use-package-chords                | builtin   |
 | use-package             | use-package-ensure-system-package | builtin   |

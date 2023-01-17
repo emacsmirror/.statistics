@@ -48,7 +48,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (546)                | Link                                    | Summary                                                                |
+| Package (543)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -316,7 +316,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | tellstick                    | [[https://github.com/larsmagne/tellstick.el][larsmagne/tellstick.el]]                  | Controlling tellstick controllers                                      |
 | touchgrid                    | [[https://github.com/larsmagne/touchgrid.el][larsmagne/touchgrid.el]]                  | Executing actions based on input events                                |
 | explain-pause-mode           | [[https://github.com/lastquestion/explain-pause-mode][lastquestion/explain-pause-mode]]         | Explain emacs pauses                                                   |
-| es                           | [[https://github.com/leathekd/es.el][leathekd/es.el]]                          | An elasticsearch client for Emacs                                      |
 | grr                          | [[https://github.com/leathekd/grr.el][leathekd/grr.el]]                         | Simple Growl notifications for Emacs and Mac OS X                      |
 | org-helpers                  | [[https://github.com/leoc/org-helpers.el][leoc/org-helpers.el]]                     | Summered for Emacs                                                     |
 | docsetutil                   | [[https://github.com/leoliu/docsetutil-el][leoliu/docsetutil-el]]                    | Use Cocoa/iOS documentations in emacs                                  |
@@ -399,8 +398,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | paste                        | [[https://github.com/nicferrier/pasteel][nicferrier/pasteel]]                      | Paste server with elnode                                               |
 | phantomjs                    | [[https://github.com/nicferrier/phantomjsel][nicferrier/phantomjsel]]                  | Handle phantomjs                                                       |
 | rcirc-robots                 | [[https://github.com/nicferrier/rcirc-robots][nicferrier/rcirc-robots]]                 | Robots based on rcirc irc                                              |
-| rcirc-ssh                    | [[https://github.com/nicferrier/rcirc-ssh-sessions][nicferrier/rcirc-ssh-sessions]]           | Do irc over ssh sessions                                               |
-| shoes-off                    | [[https://github.com/nicferrier/shoes-off][nicferrier/shoes-off]]                    | Irc bouncer                                                            |
 | skinny                       | [[https://github.com/nicferrier/skinny][nicferrier/skinny]]                       | A blog engine with elnode                                              |
 | ssl-mode                     | [[https://github.com/npc3/ssl-mode][npc3/ssl-mode]]                           | Emacs Major mode for S/SL files                                        |
 | async-eval                   | [[https://github.com/nschum/async-eval.el][nschum/async-eval.el]]                    | Execute Emacs lisp in a separate process                               |
