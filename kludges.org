@@ -90,7 +90,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (87)                    | Class     | Feature                  | Reason                                            |
+| Package (86)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -164,7 +164,6 @@
 | org                             | gnu       | moz                      | shelved soft                                      |
 | org                             | gnu       | nnselect                 | forward compatibility                             |
 | org                             | gnu       | org-remember             | backward compatibility                            |
-| org-caldav                      | github    | org-icalendar            | backward compatibility                            |
 | org-readme                      | github    | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                       |
 | org-redmine                     | github    | anything                 | anything                                          |
 | org-ref                         | github    | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                       |

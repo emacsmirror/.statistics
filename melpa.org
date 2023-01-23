@@ -48,7 +48,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (543)                | Link                                    | Summary                                                                |
+| Package (542)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -368,7 +368,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | polyp                        | [[https://github.com/minad/polyp][minad/polyp]]                             | Nested transient menus                                                 |
 | uchronia                     | [[https://github.com/minad/uchronia][minad/uchronia]]                          | Uchronia mode                                                          |
 | lilypond-hook                | [[https://github.com/mjago/lilypond-hook][mjago/lilypond-hook]]                     | Automatically display and play lilypond Score                          |
-| modelica-mode                | [[https://github.com/modelica-tools/modelica-mode][modelica-tools/modelica-mode]]            | Major mode for editing Modelica files                                  |
 | epydoc                       | [[https://github.com/mooz/epydoc][mooz/epydoc]]                             | Pydoc interface for emacs                                              |
 | cn-outline                   | [[https://github.com/mori-dev/cn-outline][mori-dev/cn-outline]]                     | Minor mode for column-number-base line folding                         |
 | sync-scroll                  | [[https://github.com/mori-dev/sync-scroll][mori-dev/sync-scroll]]                    | Scroll Up and Scroll Down 2 window                                     |
@@ -607,10 +606,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
           (epkgs 'name [gitlab]))
 #+end_src
 #+results: missing-gitlab
-| Package (3)                | Link                                  |
+| Package (2)                | Link                                  |
 |----------------------------+---------------------------------------|
 | org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]  |
-| ox-rss                     | [[https://gitlab.com/nsavage/ox-rss][nsavage/ox-rss]]                        |
 | swift-playground-mode      | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]] |
 
 ** Git
