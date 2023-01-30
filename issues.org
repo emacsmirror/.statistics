@@ -71,13 +71,17 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (9)        | Class    | Feature            | Provider |
+| Package (10)       | Class    | Feature            | Provider |
 |--------------------+----------+--------------------+----------|
 | amx                | github   | helm-config        |          |
 | helm-ag-r          | github   | helm-config        |          |
 | helm-cmd-t         | github   | helm-config        |          |
 | helm-dirset        | github   | helm-config        |          |
 | helm-git-files     | github   | helm-config        |          |
+| mic                | github   | feat1              |          |
+| mic                | github   | feat2              |          |
+| mic                | github   | feat3              |          |
+| mic                | github   | feat4              |          |
 | muse               | github   | assoc              |          |
 | navorski           | github   | assoc              |          |
 | serverspec         | github   | helm-config        |          |

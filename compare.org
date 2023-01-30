@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5170 |   5170 |       |       |      153 |         162 |  4617 |
+| github      | 5176 |   5176 |       |       |      154 |         162 |  4624 |
 | gitlab      |  179 |    179 |       |       |       18 |          13 |   161 |
 | codeberg    |   79 |     79 |       |       |        1 |          30 |    66 |
-| sourcehut   |   73 |     73 |       |       |       24 |           4 |    45 |
-| gnu         |   10 |     10 |       |       |        8 |           0 |     2 |
+| sourcehut   |   74 |     74 |       |       |       24 |           4 |    46 |
+| gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     3 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  108 |    108 |       |       |       16 |           5 |    93 |
+| git         |  108 |    108 |       |       |       16 |           4 |    93 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  141 |    141 |       |       |          |             |   107 |
-| shelved     | 1497 |        |  1497 |       |          |             |    18 |
+| shelved     | 1498 |        |  1498 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    10 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   230 |
-| unreleased  |      |        |       |       |        7 |           1 |       |
+| unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8572 |   6596 |  1497 |   482 |      383 |         215 |  5366 |
+| total       | 8580 |   6603 |  1498 |   482 |      384 |         214 |  5374 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -496,7 +496,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (34)                | Url                                                                         |
+| Package (35)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -509,6 +509,7 @@
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
 | eno                         | https://github.com/enoson/eno.el                                            |
+| flow-js2-mode               | https://github.com/Fuco1/flow-js2-mode                                      |
 | flycheck-gometalinter       | https://github.com/favadi/flycheck-gometalinter.git                         |
 | flycheck-julia              | https://github.com/gdkrmr/flycheck-julia                                    |
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
