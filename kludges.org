@@ -227,12 +227,11 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (27)           | Class     |
+| Package (26)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | auctex                 | gnu       |
 | auctex-latexmk         | github    |
-| dired-hacks            | github    |
 | emacspeak              | github    |
 | emux                   | github    |
 | ert-runner             | github    |
@@ -262,7 +261,6 @@
 - projectile-trailblazer: https://github.com/micdahl/projectile-trailblazer/issues/3
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 Still hoping/expecting these will be merged:
-- dired-hacks: https://github.com/Fuco1/dired-hacks/pull/193
 - emux: https://github.com/re5et/emux/pull/4
 - majapahit-theme: https://gitlab.com/franksn/majapahit-theme/-/merge_requests/2
 - ne2wm: https://github.com/tkf/ne2wm/pull/3
