@@ -33,16 +33,14 @@
   (emir--store-table 'var-delayed value)
 #+END_SRC
 #+NAME: table--delayed
-| Package                           | Reason                                                    |
-|-----------------------------------+-----------------------------------------------------------|
-| connection                        | Don't add; part of upstream dictionary but not Emacs 28.1 |
-| django-snippets                   | Don't add; part of shelved django-mode                    |
-| external-completion               | Don't add: will be part of Emacs 29.1                     |
-| link                              | Don't add; part of upstream dictionary but not Emacs 28.1 |
-| bind-chord                        | Don't add until moved to a separate repository            |
-| pcmpl-git                         | Don't add; library with same name part of Emacs 29.1      |
-| use-package-chords                | Don't add; part of bind-chord                             |
-| use-package-ensure-system-package | Don't add; will be part of Emacs 29.1                     |
+| Package            | Reason                                               |
+|--------------------+------------------------------------------------------|
+| connection         | Don't add; part of upstream dictionary but not Emacs |
+| django-snippets    | Don't add; part of shelved django-mode               |
+| link               | Don't add; part of upstream dictionary but not Emacs |
+| bind-chord         | Don't add until moved to a separate repository       |
+| use-package-chords | Don't add; part of bind-chord                        |
+| beframe            | Being renamed to reframe                             |
 
 * Diverging                                                           :stats:
 :PROPERTIES:

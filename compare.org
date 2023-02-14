@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5183 |   5183 |       |       |      154 |         162 |  4633 |
+| github      | 5184 |   5184 |       |       |      154 |         162 |  4633 |
 | gitlab      |  180 |    180 |       |       |       18 |          13 |   162 |
 | codeberg    |   79 |     79 |       |       |        1 |          30 |    66 |
-| sourcehut   |   74 |     74 |       |       |       25 |           4 |    46 |
+| sourcehut   |   74 |     74 |       |       |       26 |           4 |    46 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  108 |    108 |       |       |       16 |           4 |    93 |
+| git         |  109 |    109 |       |       |       16 |           4 |    94 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -135,7 +135,7 @@
 | secondary   |      |        |       |       |          |             |   231 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8588 |   6611 |  1498 |   482 |      384 |         214 |  5384 |
+| total       | 8590 |   6613 |  1498 |   482 |      385 |         214 |  5385 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -250,6 +250,9 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-delayed
+| Package (1) | Elpa      | Reason                   |
+|-------------+-----------+--------------------------|
+| beframe     | sourcehut | Being renamed to reframe |
 
 ** Unreleased
 :PROPERTIES:
@@ -476,11 +479,11 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: melpa-delayed
-| Package (3)     | Melpa  | Reason                                                    |
-|-----------------+--------+-----------------------------------------------------------|
-| connection      | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
-| django-snippets | github | Don't add; part of shelved django-mode                    |
-| link            | github | Don't add; part of upstream dictionary but not Emacs 28.1 |
+| Package (3)     | Melpa  | Reason                                               |
+|-----------------+--------+------------------------------------------------------|
+| connection      | github | Don't add; part of upstream dictionary but not Emacs |
+| django-snippets | github | Don't add; part of shelved django-mode               |
+| link            | github | Don't add; part of upstream dictionary but not Emacs |
 
 ** Shelved
 :PROPERTIES:
