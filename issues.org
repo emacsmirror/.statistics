@@ -39,6 +39,12 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
+| Feature (1) | Package  | Shelved |
+|-------------+----------+---------|
+| op-template | darkman  |         |
+| op-template | org-page |         |
+
+- darkman: https://github.com/grtcdr/darkman.el/pull/12
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -67,22 +73,23 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (11)           | Class    | Feature                     | Provider |
-|------------------------+----------+-----------------------------+----------|
-| amx                    | github   | helm-config                 |          |
-| helm-ag-r              | github   | helm-config                 |          |
-| helm-cmd-t             | github   | helm-config                 |          |
-| helm-dirset            | github   | helm-config                 |          |
-| helm-git-files         | github   | helm-config                 |          |
-| mic                    | github   | feat1                       |          |
-| mic                    | github   | feat2                       |          |
-| mic                    | github   | feat3                       |          |
-| mic                    | github   | feat4                       |          |
-| muse                   | github   | assoc                       |          |
-| navorski               | github   | assoc                       |          |
-| serverspec             | github   | helm-config                 |          |
-| tree-sitter-indent     | codeberg | csharp-tree-sitter          |          |
-| wisitoken-grammar-mode | gnu-elpa | wisitoken_grammar_1-process |          |
+| Package (12)           | Class    | Feature                     | Provider        |
+|------------------------+----------+-----------------------------+-----------------|
+| amx                    | github   | helm-config                 |                 |
+| helm-ag-r              | github   | helm-config                 |                 |
+| helm-cmd-t             | github   | helm-config                 |                 |
+| helm-dirset            | github   | helm-config                 |                 |
+| helm-git-files         | github   | helm-config                 |                 |
+| mic                    | github   | feat1                       |                 |
+| mic                    | github   | feat2                       |                 |
+| mic                    | github   | feat3                       |                 |
+| mic                    | github   | feat4                       |                 |
+| muse                   | github   | assoc                       |                 |
+| navorski               | github   | assoc                       |                 |
+| org-roam               | github   | emacsql-sqlite3             | emacsql-sqlite3 |
+| serverspec             | github   | helm-config                 |                 |
+| tree-sitter-indent     | codeberg | csharp-tree-sitter          |                 |
+| wisitoken-grammar-mode | gnu-elpa | wisitoken_grammar_1-process |                 |
 
 - assoc:
   - https://github.com/alexott/muse/issues/13 (has dependants)

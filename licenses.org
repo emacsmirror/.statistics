@@ -75,8 +75,8 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4490 |      68 |
-| GPL-2.0-or-later  |  1170 |      18 |
+| GPL-3.0-or-later  |  4495 |      68 |
+| GPL-2.0-or-later  |  1169 |      18 |
 | MIT               |   378 |       6 |
 | GPL-3.0-only      |   167 |       3 |
 | BSD-2-Clause      |    84 |       1 |
@@ -84,8 +84,8 @@
 | Apache-2.0        |    55 |       1 |
 | WTFPL             |    36 |       1 |
 | Unlicense         |    35 |       1 |
-| public-domain     |    31 |       0 |
-| ISC               |    24 |       0 |
+| public-domain     |    30 |       0 |
+| ISC               |    25 |       0 |
 | as-is             |    24 |       0 |
 | AGPL-3.0-or-later |    10 |       0 |
 | CC0-1.0           |     8 |       0 |
@@ -94,13 +94,13 @@
 | GPL-1.0-or-later  |     3 |       0 |
 | GPL-3.0           |     3 |       0 |
 | LGPL-3.0-only     |     3 |       0 |
+| 0BSD              |     2 |       0 |
 | Artistic-2.0      |     2 |       0 |
 | CECILL-2.1        |     2 |       0 |
 | CECILL-B          |     2 |       0 |
 | FSFAP             |     2 |       0 |
 | LGPL-2.1-only     |     2 |       0 |
 | MPL-2.0           |     2 |       0 |
-| 0BSD              |     1 |       0 |
 | AGPL-3.0-only     |     1 |       0 |
 | Beerware          |     1 |       0 |
 | MIT-0             |     1 |       0 |
@@ -109,9 +109,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5856 |      88 |
+| total GNU         |  5860 |      88 |
 |-------------------+-------+---------|
-| total             |  6622 |     100 |
+| total             |  6627 |     100 |
 
 - GPL-2.0-only: https://github.com/SebastianMeisel/journalctl-mode/issues/18
 
@@ -153,8 +153,8 @@
 #+results: attic-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-2.0-or-later  |   836 |      56 |
-| GPL-3.0-or-later  |   391 |      26 |
+| GPL-2.0-or-later  |   837 |      56 |
+| GPL-3.0-or-later  |   392 |      26 |
 | GPL-2.0-only      |    62 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    39 |       3 |
@@ -182,9 +182,9 @@
 | LGPL-2.1-only     |     1 |       0 |
 | LGPL-2.1-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1383 |      92 |
+| total GNU         |  1385 |      92 |
 |-------------------+-------+---------|
-| total             |  1501 |     100 |
+| total             |  1503 |     100 |
 
 ** Packages with unknown/custom licenses
 :PROPERTIES:
