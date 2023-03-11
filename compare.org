@@ -112,8 +112,8 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5195 |   5195 |       |       |      156 |         158 |  4645 |
-| gitlab      |  180 |    180 |       |       |       18 |          13 |   162 |
+| github      | 5195 |   5195 |       |       |      156 |         158 |  4642 |
+| gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
 | codeberg    |   81 |     81 |       |       |        1 |          30 |    68 |
 | sourcehut   |   75 |     75 |       |       |       26 |           4 |    47 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
@@ -128,14 +128,14 @@
 | wiki        |  586 |    586 |       |       |          |             |       |
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  141 |    141 |       |       |          |             |   107 |
+| orphaned    |  142 |    142 |       |       |          |             |   108 |
 | shelved     | 1503 |        |  1503 |       |          |             |    18 |
-| mirror      |      |        |       |       |          |             |    10 |
+| mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   230 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8609 |   6627 |  1503 |   482 |      387 |         210 |  5399 |
+| total       | 8610 |   6628 |  1503 |   482 |      387 |         210 |  5398 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -834,18 +834,20 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
-| Package (10)      | Url                                              |
-|-------------------+--------------------------------------------------|
-| auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
-| clang-format      | https://github.com/emacsmirror/clang-format      |
-| darcsum           | https://github.com/emacsmirror/darcsum           |
-| dsvn              | https://github.com/emacsmirror/dsvn              |
-| edit-list         | https://github.com/emacsmirror/edit-list         |
-| helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
-| highlight         | https://github.com/emacsmirror/highlight         |
-| po-mode           | https://github.com/emacsmirror/po-mode           |
-| quack             | https://github.com/emacsmirror/quack             |
-| tex-smart-umlauts | https://github.com/emacsmirror/tex-smart-umlauts |
+| Package (12)          | Url                                                  |
+|-----------------------+------------------------------------------------------|
+| auctex-latexmk        | https://github.com/emacsmirror/auctex-latexmk        |
+| clang-format          | https://github.com/emacsmirror/clang-format          |
+| darcsum               | https://github.com/emacsmirror/darcsum               |
+| dsvn                  | https://github.com/emacsmirror/dsvn                  |
+| edit-list             | https://github.com/emacsmirror/edit-list             |
+| helm-ls-svn           | https://github.com/emacsmirror/helm-ls-svn           |
+| highlight             | https://github.com/emacsmirror/highlight             |
+| majapahit-themes      | https://github.com/emacsmirror/majapahit-themes      |
+| omtose-phellack-theme | https://github.com/emacsmirror/omtose-phellack-theme |
+| po-mode               | https://github.com/emacsmirror/po-mode               |
+| quack                 | https://github.com/emacsmirror/quack                 |
+| tex-smart-umlauts     | https://github.com/emacsmirror/tex-smart-umlauts     |
 
 ** From Emacsattic
 :PROPERTIES:

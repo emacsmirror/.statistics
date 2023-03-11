@@ -100,11 +100,12 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+end_src
 #+results: unresponsive
-| Package (10)       | E | M |
+| Package (11)       | E | M |
 |--------------------+---+---|
 | edb                | ✔ |   |
 | elisp-depend       | ✔ | ✔ |
 | evil-escape        | ✔ | ✔ |
+| helm-gitignore     | ✔ | ✔ |
 | hyperspec          | ✔ |   |
 | macrostep          | ✔ | ✔ |
 | oberon             | ✔ | ✔ |

@@ -39,12 +39,6 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (1) | Package  | Shelved |
-|-------------+----------+---------|
-| op-template | darkman  |         |
-| op-template | org-page |         |
-
-- darkman: https://github.com/grtcdr/darkman.el/pull/12
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
