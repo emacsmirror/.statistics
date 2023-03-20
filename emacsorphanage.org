@@ -100,7 +100,7 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+end_src
 #+results: unresponsive
-| Package (11)       | E | M |
+| Package (12)       | E | M |
 |--------------------+---+---|
 | edb                | ✔ |   |
 | elisp-depend       | ✔ | ✔ |
@@ -111,6 +111,7 @@ the orphanage to fix these issues.
 | oberon             | ✔ | ✔ |
 | read-char-spec     | ✔ |   |
 | setnu              | ✔ |   |
+| tablist            | ✔ | ✔ |
 | which-key-posframe | ✔ | ✔ |
 | yafolding          | ✔ | ✔ |
 

@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5206 |   5206 |       |       |      158 |         158 |  4651 |
+| github      | 5211 |   5211 |       |       |      160 |         159 |  4655 |
 | gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
 | codeberg    |   81 |     81 |       |       |        1 |          30 |    68 |
-| sourcehut   |   76 |     76 |       |       |       26 |           4 |    48 |
+| sourcehut   |   77 |     77 |       |       |       26 |           4 |    49 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  109 |    109 |       |       |       16 |           4 |    94 |
+| git         |  110 |    110 |       |       |       16 |           4 |    95 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -128,14 +128,14 @@
 | wiki        |  586 |    586 |       |       |          |             |       |
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  142 |    142 |       |       |          |             |   108 |
+| orphaned    |  143 |    143 |       |       |          |             |   109 |
 | shelved     | 1504 |        |  1504 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   231 |
+| secondary   |      |        |       |       |          |             |   233 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8623 |   6640 |  1504 |   482 |      389 |         210 |  5409 |
+| total       | 8631 |   6648 |  1504 |   482 |      391 |         211 |  5418 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -554,7 +554,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (132)   | Secondary package               | Class     |
+| Primary package (133)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -754,6 +754,8 @@
 | stan-mode               | stan-snippets                   | github    |
 | term-manager            | term-projectile                 | github    |
 | tern                    | tern-auto-complete              | github    |
+| transient-extras        | transient-extras-a2ps           | github    |
+| transient-extras        | transient-extras-lp             | github    |
 | tree-edit               | evil-tree-edit                  | github    |
 | tree-sitter             | tsc                             | github    |
 | treemacs                | treemacs-all-the-icons          | github    |

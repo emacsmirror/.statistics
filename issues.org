@@ -67,7 +67,7 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (12)           | Class    | Feature                     | Provider        |
+| Package (13)           | Class    | Feature                     | Provider        |
 |------------------------+----------+-----------------------------+-----------------|
 | amx                    | github   | helm-config                 |                 |
 | helm-ag-r              | github   | helm-config                 |                 |
@@ -81,6 +81,7 @@
 | muse                   | github   | assoc                       |                 |
 | navorski               | github   | assoc                       |                 |
 | org-roam               | github   | emacsql-sqlite3             | emacsql-sqlite3 |
+| php-mode               | github   | lsp-bridge                  |                 |
 | serverspec             | github   | helm-config                 |                 |
 | tree-sitter-indent     | codeberg | csharp-tree-sitter          |                 |
 | wisitoken-grammar-mode | gnu-elpa | wisitoken_grammar_1-process |                 |
