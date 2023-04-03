@@ -355,8 +355,9 @@
   (emir--store-table 'var-suspended value)
 #+END_SRC
 #+NAME: table--suspended
-| Package | Reason |
-|---------+--------|
+| Package         | Reason       |
+|-----------------+--------------|
+| spacemacs-theme | Pending [[https://github.com/nashamri/spacemacs-theme/pull/199][#199]] |
 
 * Homepage                                                            :input:
 :PROPERTIES:

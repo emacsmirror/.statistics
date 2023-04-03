@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5216 |   5216 |       |       |      160 |         159 |  4660 |
-| gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
-| codeberg    |   81 |     81 |       |       |        1 |          30 |    68 |
-| sourcehut   |   77 |     77 |       |       |       26 |           4 |    47 |
+| github      | 5216 |   5216 |       |       |      161 |         160 |  4662 |
+| gitlab      |  177 |    177 |       |       |       18 |          13 |   158 |
+| codeberg    |   82 |     82 |       |       |        1 |          30 |    69 |
+| sourcehut   |   82 |     82 |       |       |       32 |           4 |    47 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  110 |    110 |       |       |       16 |           4 |    95 |
+| git         |  113 |    113 |       |       |       16 |           4 |    98 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  143 |    143 |       |       |          |             |   109 |
-| shelved     | 1506 |        |  1506 |       |          |             |    18 |
+| shelved     | 1508 |        |  1508 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   233 |
-| unreleased  |      |        |       |       |        6 |           1 |       |
+| unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8638 |   6653 |  1506 |   482 |      391 |         211 |  5421 |
+| total       | 8646 |   6659 |  1508 |   482 |      398 |         211 |  5424 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -250,9 +250,6 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-delayed
-| Package (1) | Elpa      | Reason                   |
-|-------------+-----------+--------------------------|
-| beframe     | sourcehut | Being renamed to reframe |
 
 ** Unreleased
 :PROPERTIES:
@@ -499,7 +496,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (35)                | Url                                                                         |
+| Package (37)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -511,6 +508,7 @@
 | drawille                    | https://github.com/josuah/drawille-el                                       |
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
+| elein                       | https://github.com/remvee/elein                                             |
 | eno                         | https://github.com/enoson/eno.el                                            |
 | flow-js2-mode               | https://github.com/Fuco1/flow-js2-mode                                      |
 | flycheck-gometalinter       | https://github.com/favadi/flycheck-gometalinter.git                         |
@@ -531,6 +529,7 @@
 | org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
+| redprl                      | https://github.com/RedPRL/sml-redprl                                        |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | twtxt                       | https://github.com/deadblackclover/twtxt-el                                 |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |

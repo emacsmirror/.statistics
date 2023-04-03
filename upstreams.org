@@ -385,6 +385,7 @@
 - auto-diff please consult a search engine
 - auto-dim-other-buffers https://github.com/mina86/auto-dim-other-buffers.el
 - auto-document https://github.com/rubikitch/auto-document
+- auto-header https://git.sr.ht/~pkal/auto-header
 - auto-highlight-symbol https://github.com/elp-revive/auto-highlight-symbol
 - auto-indent https://github.com/emacsmirror/emacswiki.org
 - auto-indent-mode https://github.com/mattfidler/auto-indent-mode.el
@@ -527,6 +528,7 @@
 - beatnik http://zaaf.nl/emacs/emacs.html
 - beef-mode https://github.com/thechampagne/beef-mode
 - beeminder https://github.com/Sodaware/beeminder.el
+- beframe https://git.sr.ht/~protesilaos/beframe
 - beginend https://github.com/DamienCassou/beginend
 - beginner https://github.com/emacsmirror/emacswiki.org
 - belarus-holidays http://bitbucket.org/EugeneMakei/belarus-holidays.el
@@ -887,6 +889,7 @@
 - chocolate-theme https://github.com/SavchenkoValeriy/emacs-chocolate-theme
 - choice-program https://github.com/plandes/choice-program
 - choose please consult a search engine
+- chroma https://github.com/galdor/chroma
 - chronometer https://github.com/marcelotoledo/chronometer
 - chronometrist https://codeberg.org/contrapunctus/chronometrist
 - chronometrist-goal https://codeberg.org/contrapunctus/chronometrist-goal
@@ -933,6 +936,7 @@
 - clang-format+ https://github.com/SavchenkoValeriy/emacs-clang-format-plus
 - clang-lookup https://github.com/sheijk/clang-lookup
 - clasker https://github.com/clasker/clasker
+- clause https://codeberg.org/martianh/clause.el
 - clay-mode https://bitbucket.org/prafulla/clay-mode
 - cldoc http://homepage1.nifty.com/bmonkey/emacs/index-en.html
 - clean-aindent-mode https://github.com/pmarinov/clean-aindent-mode
@@ -1034,7 +1038,6 @@
 - color-theme-x https://github.com/ajsquared/color-theme-x
 - colorless-themes https://git.sr.ht/~lthms/colorless-themes.el
 - colormaps https://github.com/lepisma/colormaps.el
-- colors https://github.com/galdor/colors
 - colour-region https://github.com/vapniks/colour-region
 - colour-schemes please consult a search engine
 - column-enforce-mode https://github.com/jordonbiondo/column-enforce-mode
@@ -4163,6 +4166,7 @@
 - jiggle http://www.eskimo.com/~seldon
 - jimb-patch please consult a search engine
 - jinja2-mode https://github.com/paradoxxxzero/jinja2-mode
+- jinx https://github.com/minad/jinx
 - jira https://github.com/emacsmirror/emacswiki.org
 - jira-markup-mode https://github.com/mnuessler/jira-markup-mode
 - jiralib2 https://github.com/nyyManni/jiralib2
@@ -4711,7 +4715,7 @@
 - magit-todos https://github.com/alphapapa/magit-todos
 - magit-topgit https://github.com/greenrd/magit-topgit
 - magit-tramp https://github.com/sigma/magit-tramp
-- magit-vcsh https://gitlab.com/stepnem/magit-vcsh-el
+- magit-vcsh http://git.smrk.net/magit-vcsh.el
 - magit-view-file https://github.com/renard/magit-view-file
 - magithub https://github.com/vermiculus/magithub
 - magma-mode https://github.com/ThibautVerron/magma-mode
@@ -5248,6 +5252,7 @@
 - ngn https://github.com/davep/ngn.el
 - nhexl-mode https://git.savannah.gnu.org/cgit/emacs/elpa.git/log/?h=externals/nhexl-mode
 - niceify-info https://github.com/aaron-em/niceify-info.el
+- nickel-mode https://github.com/nickel-lang/nickel-mode
 - niconama https://github.com/NOBUTOKA/niconama.el
 - night-owl-theme https://github.com/aaronjensen/night-owl-emacs
 - nikki https://github.com/th994/nikki
@@ -5513,6 +5518,7 @@
 - opener https://github.com/0robustus1/opener.el
 - openfoam https://github.com/ralph-schleicher/emacs-openfoam
 - openpaste https://github.com/emacsmirror/emacswiki.org
+- openpgp https://git.sr.ht/~pkal/openpgp
 - opensource https://github.com/OpenSourceOrg/el-opensourceorg
 - openssl-cipher https://github.com/mhayashi1120/Emacs-openssl-cipher
 - openstack-cgit-browse-file https://github.com/chmouel/openstack-cgit-browse-file
@@ -7150,6 +7156,7 @@
 - sis https://github.com/laishulu/emacs-smart-input-source
 - sisu-mode https://git.savannah.gnu.org/cgit/emacs/elpa.git/log/?h=externals/sisu-mode
 - sisyphus https://github.com/magit/sisyphus
+- site-lisp https://git.sr.ht/~pkal/site-lisp
 - sixcolors-mode https://github.com/mastro35/sixcolors-mode
 - ska-skel-matlab https://github.com/emacsmirror/emacswiki.org
 - skeleton https://git.savannah.gnu.org/cgit/emacs.git
@@ -7453,7 +7460,7 @@
 - string-utils https://github.com/rolandwalker/string-utils
 - strings https://github.com/emacsmirror/emacswiki.org
 - stripe-buffer https://github.com/sabof/stripe-buffer
-- stripes https://gitlab.com/stepnem/stripes-el
+- stripes http://git.smrk.net/stripes.el
 - strokes https://git.savannah.gnu.org/cgit/emacs.git
 - structure-edit please consult a search engine
 - studly https://git.savannah.gnu.org/cgit/emacs.git
@@ -8120,7 +8127,7 @@
 - vcl-mode https://git.savannah.gnu.org/cgit/emacs/elpa.git/log/?h=externals/vcl-mode
 - vcomp https://github.com/tarsius/vcomp
 - vcomplete https://git.sr.ht/~dsemy/vcomplete
-- vcsh https://gitlab.com/stepnem/vcsh-el
+- vcsh http://git.smrk.net/vcsh.el
 - vcursor https://git.savannah.gnu.org/cgit/emacs.git
 - vdf-mode https://github.com/plapadoo/vdf-mode
 - vdiff https://github.com/justbur/emacs-vdiff
@@ -8512,6 +8519,7 @@
 - xref https://git.savannah.gnu.org/cgit/emacs.git
 - xref-js2 https://github.com/js-emacs/xref-js2
 - xref-rst https://codeberg.org/ideasman42/emacs-xref-rst
+- xref-union https://git.sr.ht/~pkal/xref-union
 - xresources-theme https://github.com/martenlienen/xresources-theme
 - xs-mode https://github.com/emacsmirror/emacswiki.org
 - xscheme https://git.savannah.gnu.org/cgit/emacs.git
