@@ -24,33 +24,34 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-join
-| Package (17) | Class     | Feature           | Reason                                    |
-|--------------+-----------+-------------------+-------------------------------------------|
-| edb          | orphaned  | edbcore           | generated                                 |
-| emacs        | builtin   | cus-load          | generated                                 |
-| emacs        | builtin   | leim-list         | generated                                 |
-| eshell       | builtin   | esh-groups        | generated                                 |
-| finder       | builtin   | finder-inf        | generated                                 |
-| ddskk        | github    | skk-kanagaki      | inside directory containing .nosearch     |
-| ddskk        | github    | skk-tutcode       | inside directory containing .nosearch     |
-| realgud      | github    | bashdb            | inside directory containing .nosearch     |
-| sly          | github    | sly-buttons       | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-cl-indent     | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-common        | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-completion    | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-messages      | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-parse         | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| sly          | github    | sly-tests         | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
-| fuz          | github    | fuz-core          | provided by module                        |
-| fzf-native   | github    | fzf-native-module | provided by module                        |
-| geo          | sourcehut | geocode-emacs     | provided by module                        |
-| hotfuzz      | github    | hotfuzz-module    | provided by module                        |
-| liberime     | github    | liberime-core     | provided by module                        |
-| pq           | github    | pq-core           | provided by module                        |
-| sqlite3      | github    | sqlite3-api       | provided by module                        |
-| tree-sitter  | github    | tsc-dyn           | provided by module                        |
-| vterm        | github    | vterm-module      | provided by module                        |
-| xeft         | sourcehut | xapian-lite       | provided by module                        |
+| Package (18)           | Class     | Feature                     | Reason                                    |
+|------------------------+-----------+-----------------------------+-------------------------------------------|
+| edb                    | orphaned  | edbcore                     | generated                                 |
+| emacs                  | builtin   | cus-load                    | generated                                 |
+| emacs                  | builtin   | leim-list                   | generated                                 |
+| eshell                 | builtin   | esh-groups                  | generated                                 |
+| finder                 | builtin   | finder-inf                  | generated                                 |
+| ddskk                  | github    | skk-kanagaki                | inside directory containing .nosearch     |
+| ddskk                  | github    | skk-tutcode                 | inside directory containing .nosearch     |
+| realgud                | github    | bashdb                      | inside directory containing .nosearch     |
+| sly                    | github    | sly-buttons                 | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly                    | github    | sly-cl-indent               | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly                    | github    | sly-common                  | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly                    | github    | sly-completion              | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly                    | github    | sly-messages                | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly                    | github    | sly-parse                   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| sly                    | github    | sly-tests                   | inside directory containing .nosearch [[https://github.com/joaotavora/sly/pull/85][#85]] |
+| fuz                    | github    | fuz-core                    | provided by module                        |
+| fzf-native             | github    | fzf-native-module           | provided by module                        |
+| geo                    | sourcehut | geocode-emacs               | provided by module                        |
+| hotfuzz                | github    | hotfuzz-module              | provided by module                        |
+| liberime               | github    | liberime-core               | provided by module                        |
+| pq                     | github    | pq-core                     | provided by module                        |
+| sqlite3                | github    | sqlite3-api                 | provided by module                        |
+| tree-sitter            | github    | tsc-dyn                     | provided by module                        |
+| vterm                  | github    | vterm-module                | provided by module                        |
+| wisitoken-grammar-mode | gnu-elpa  | wisitoken_grammar_1-process | provided by module                        |
+| xeft                   | sourcehut | xapian-lite                 | provided by module                        |
 
 * Drop provided features
 :PROPERTIES:
@@ -90,7 +91,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (86)                    | Class     | Feature                  | Reason                                            |
+| Package (88)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -155,6 +156,10 @@
 | mhc                             | github    | mhc-xmas                 | XEmacs compatibility                              |
 | mhc                             | github    | pcustom                  | Mule compatibility                                |
 | mhc                             | github    | poe                      | Mule compatibility                                |
+| mic                             | github    | feat1                    | for tests only                                    |
+| mic                             | github    | feat2                    | for tests only                                    |
+| mic                             | github    | feat3                    | for tests only                                    |
+| mic                             | github    | feat4                    | for tests only                                    |
 | molokai-theme                   | github    | color-theme              | backward compatibility                            |
 | mu4e-views                      | github    | mu4e-utils               | backward compatibility                            |
 | mu4e-views                      | github    | mu4e-view-gnus           | backward compatibility                            |
@@ -167,6 +172,7 @@
 | org-redmine                     | github    | anything                 | anything                                          |
 | org-ref                         | github    | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                       |
 | org-roam                        | github    | emacsql-libsqlite3       | backward compatibility                            |
+| org-roam                        | github    | emacsql-sqlite3          | optional legacy backend                           |
 | org-toodledo                    | github    | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                          |
 | osa                             | github    | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]] |
 | ox-hugo                         | github    | org-info                 | backward compatibility                            |
@@ -191,6 +197,7 @@
 | string-utils                    | github    | obarray-fns              | shelved soft                                      |
 | tangotango-theme                | github    | color-theme              | backward compatibility                            |
 | tramp                           | gnu       | tramp-loaddefs           | generated internal file                           |
+| tree-sitter-indent              | codeberg  | csharp-tree-sitter       | for tests only                                    |
 | tss                             | github    | anything                 | anything                                          |
 | tss                             | github    | moz                      | shelved soft                                      |
 | twittering-mode                 | github    | alpaca                   | only required if epa isn't available              |
