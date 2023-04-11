@@ -188,7 +188,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
   (emir--list-orphans "dropped by maintainer")
 #+end_src
 #+results: dropped
-| Package (87)         | E | M |
+| Package (88)         | E | M |
 |----------------------+---+---|
 | 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
@@ -253,6 +253,7 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | octicons             | ✔ | ✔ |
 | opam                 | ✔ | ✔ |
 | org-page             | ✔ | ✔ |
+| org-redmine          | ✔ | ✔ |
 | osx-trash            | ✔ | ✔ |
 | ov                   | ✔ | ✔ |
 | packed               | ✔ | ✔ |

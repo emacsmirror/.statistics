@@ -169,7 +169,7 @@
 | org                             | gnu       | nnselect                 | forward compatibility                             |
 | org                             | gnu       | org-remember             | backward compatibility                            |
 | org-readme                      | github    | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                       |
-| org-redmine                     | github    | anything                 | anything                                          |
+| org-redmine                     | orphaned  | anything                 | anything                                          |
 | org-ref                         | github    | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                       |
 | org-roam                        | github    | emacsql-libsqlite3       | backward compatibility                            |
 | org-roam                        | github    | emacsql-sqlite3          | optional legacy backend                           |
