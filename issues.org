@@ -67,17 +67,16 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (4) | Class  | Feature             | Provider |
+| Package (3) | Class  | Feature             | Provider |
 |-------------+--------+---------------------+----------|
-| amx         | github | helm-config         |          |
 | muse        | github | assoc               |          |
 | navorski    | github | assoc               |          |
 | tree-edit   | github | evil-tree-edit-view |          |
 
 - assoc:
   - https://github.com/alexott/muse/issues/13 (has dependants)
-  - https://github.com/roman/navorski.el/issues/11 (in melpa)
-- helm-config: https://github.com/emacs-helm/helm/issues/2578
+  - https://github.com/roman/navorski.el/issues/11 (pr) (in melpa)
+- tree-edit: https://github.com/ethan-leba/tree-edit/pull/63
 
 * Missing library summary
 :PROPERTIES:

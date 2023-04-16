@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5215 |   5215 |       |       |      161 |         160 |  4660 |
+| github      | 5217 |   5217 |       |       |      161 |         160 |  4662 |
 | gitlab      |  177 |    177 |       |       |       18 |          13 |   158 |
-| codeberg    |   82 |     82 |       |       |        1 |          30 |    69 |
-| sourcehut   |   84 |     84 |       |       |       33 |           4 |    48 |
+| codeberg    |   83 |     83 |       |       |        1 |          30 |    70 |
+| sourcehut   |   84 |     84 |       |       |       33 |           4 |    47 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  113 |    113 |       |       |       16 |           4 |    98 |
+| git         |  113 |    113 |       |       |       16 |           4 |    99 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  144 |    144 |       |       |          |             |   110 |
-| shelved     | 1514 |        |  1514 |       |          |             |    18 |
+| shelved     | 1515 |        |  1515 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   234 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8668 |   6661 |  1514 |   482 |      399 |         211 |  5425 |
+| total       | 8672 |   6664 |  1515 |   482 |      399 |         211 |  5428 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -201,8 +201,8 @@
 #+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
   (epkg-sql [:select :distinct [packages:name packages:class]
              :from [packages builtin-libraries]
-             :where (= packages:name builtin-libraries:package)
-             :and packages:class :not :in $v1
+             :where (and (= packages:name builtin-libraries:package)
+                         (not (in packages:class $v1)))
              :order-by [(asc packages:name)]]
             [builtin gnu-elpa core])
 #+end_src
