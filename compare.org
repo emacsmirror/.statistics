@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5217 |   5217 |       |       |      161 |         160 |  4662 |
-| gitlab      |  177 |    177 |       |       |       18 |          13 |   158 |
+| github      | 5222 |   5222 |       |       |      161 |         160 |  4669 |
+| gitlab      |  178 |    178 |       |       |       18 |          13 |   159 |
 | codeberg    |   83 |     83 |       |       |        1 |          30 |    70 |
-| sourcehut   |   84 |     84 |       |       |       33 |           4 |    47 |
+| sourcehut   |   84 |     84 |       |       |       33 |           4 |    48 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,14 +128,14 @@
 | wiki        |  586 |    586 |       |       |          |             |       |
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  144 |    144 |       |       |          |             |   110 |
-| shelved     | 1515 |        |  1515 |       |          |             |    18 |
+| orphaned    |  144 |    144 |       |       |          |             |   109 |
+| shelved     | 1516 |        |  1516 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   234 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8672 |   6664 |  1515 |   482 |      399 |         211 |  5428 |
+| total       | 8679 |   6670 |  1516 |   482 |      399 |         211 |  5436 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -901,6 +901,11 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
+| Package (1) | Repository           | Melpa | Dependants                                                 |
+|-------------+----------------------+-------+------------------------------------------------------------|
+| oauth       | [[https://github.com/psanford/emacs-oauth][psanford/emacs-oauth]] |  5612 | identica-mode readability tumblesocks twitel yammer zotero |
+
+- oauth: https://github.com/melpa/melpa/issues/8510
 
 ** Removed repositories
 :PROPERTIES:
@@ -916,8 +921,3 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-removed
-| Package (1)   | Repository               | Melpa | Dependants |
-|---------------+--------------------------+-------+------------|
-| emms-bilibili | [[https://github.com/iBytePress/emms-bilibili][iBytePress/emms-bilibili]] |   250 |            |
-
-- emms-bilibili: https://github.com/melpa/melpa/pull/5218

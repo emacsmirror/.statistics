@@ -308,10 +308,10 @@ orphanage.
   (emir--list-orphans "maintainer is dead" "last subversion")
 #+end_src
 #+results: rip
-| Package (2)    | E | M |
-|----------------+---+---|
-| dic-lookup-w3m | ✔ | ✔ |
-| org-grep       | ✔ | ✔ |
+| Package (2)    | E | M         |
+|----------------+---+-----------|
+| dic-lookup-w3m | ✔ | ✔         |
+| org-grep       | ✔ | sourcehut |
 
 * New
 :PROPERTIES:

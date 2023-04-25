@@ -67,16 +67,16 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (3) | Class  | Feature             | Provider |
-|-------------+--------+---------------------+----------|
-| muse        | github | assoc               |          |
-| navorski    | github | assoc               |          |
-| tree-edit   | github | evil-tree-edit-view |          |
+| Package (3) | Class  | Feature          | Provider |
+|-------------+--------+------------------+----------|
+| ewal        | github | spacemacs-common |          |
+| muse        | github | assoc            |          |
+| navorski    | github | assoc            |          |
 
 - assoc:
   - https://github.com/alexott/muse/issues/13 (has dependants)
   - https://github.com/roman/navorski.el/issues/11 (pr) (in melpa)
-- tree-edit: https://github.com/ethan-leba/tree-edit/pull/63
+- ewal: https://github.com/cyruseuros/ewal/issues/4
 
 * Missing library summary
 :PROPERTIES:
