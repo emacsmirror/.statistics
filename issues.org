@@ -39,6 +39,12 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
+| Feature (1) | Package | Shelved |
+|-------------+---------+---------|
+| hmac-sha1   | flim    |         |
+| hmac-sha1   | oauth   |         |
+
+- hmac-sha1: https://github.com/melpa/melpa/pull/8512#issuecomment-1529114018
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -67,8 +73,9 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (3) | Class  | Feature          | Provider |
+| Package (4) | Class  | Feature          | Provider |
 |-------------+--------+------------------+----------|
+| autobuild   | github | selcand          |          |
 | ewal        | github | spacemacs-common |          |
 | muse        | github | assoc            |          |
 | navorski    | github | assoc            |          |
@@ -76,6 +83,7 @@
 - assoc:
   - https://github.com/alexott/muse/issues/13 (has dependants)
   - https://github.com/roman/navorski.el/issues/11 (pr) (in melpa)
+- autobuild: https://github.com/erjoalgo/autobuild/commit/42a24e09c3a5
 - ewal: https://github.com/cyruseuros/ewal/issues/4
 
 * Missing library summary

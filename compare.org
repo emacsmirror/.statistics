@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5228 |   5228 |       |       |      161 |         160 |  4674 |
-| gitlab      |  178 |    178 |       |       |       18 |          13 |   159 |
+| github      | 5232 |   5232 |       |       |      161 |         160 |  4678 |
+| gitlab      |  179 |    179 |       |       |       18 |          13 |   160 |
 | codeberg    |   83 |     83 |       |       |        1 |          30 |    70 |
-| sourcehut   |   84 |     84 |       |       |       33 |           4 |    48 |
+| sourcehut   |   84 |     84 |       |       |       34 |           4 |    48 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -132,10 +132,10 @@
 | shelved     | 1516 |        |  1516 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   234 |
+| secondary   |      |        |       |       |          |             |   237 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8685 |   6676 |  1516 |   482 |      399 |         211 |  5441 |
+| total       | 8690 |   6681 |  1516 |   482 |      400 |         211 |  5449 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -553,7 +553,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (133)   | Secondary package               | Class     |
+| Primary package (134)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -576,6 +576,9 @@
 | cardano-tx              | ouroboros                       | github    |
 | cardano-tx              | readable-numbers                | github    |
 | cfn-mode                | flycheck-cfn                    | gitlab    |
+| chatgpt-shell           | dall-e-shell                    | github    |
+| chatgpt-shell           | ob-chatgpt-shell                | github    |
+| chatgpt-shell           | ob-dall-e-shell                 | github    |
 | chronometrist           | chronometrist-key-values        | codeberg  |
 | chronometrist           | chronometrist-spark             | codeberg  |
 | circe                   | tracking                        | github    |
@@ -901,11 +904,6 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (1) | Repository           | Melpa | Dependants                                                 |
-|-------------+----------------------+-------+------------------------------------------------------------|
-| oauth       | [[https://github.com/psanford/emacs-oauth][psanford/emacs-oauth]] |  5612 | identica-mode readability tumblesocks twitel yammer zotero |
-
-- oauth: https://github.com/melpa/melpa/issues/8510
 
 ** Removed repositories
 :PROPERTIES:
