@@ -73,18 +73,18 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (4) | Class  | Feature          | Provider |
-|-------------+--------+------------------+----------|
-| autobuild   | github | selcand          |          |
-| ewal        | github | spacemacs-common |          |
-| muse        | github | assoc            |          |
-| navorski    | github | assoc            |          |
+| Package (4) | Class  | Feature | Provider |
+|-------------+--------+---------+----------|
+| autobuild   | github | selcand |          |
+| mame        | github | elmame  |          |
+| muse        | github | assoc   |          |
+| navorski    | github | assoc   |          |
 
 - assoc:
   - https://github.com/alexott/muse/issues/13 (has dependants)
   - https://github.com/roman/navorski.el/issues/11 (pr) (in melpa)
 - autobuild: https://github.com/erjoalgo/autobuild/commit/42a24e09c3a5
-- ewal: https://github.com/cyruseuros/ewal/issues/4
+- mame: https://github.com/melpa/melpa/pull/8526#issuecomment-1538221327
 
 * Missing library summary
 :PROPERTIES:
