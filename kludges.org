@@ -295,12 +295,12 @@ Still hoping/expecting these will be merged:
 | Package (8)    |   Modified | M | Url                                          |
 |----------------+------------+---+----------------------------------------------|
 | clang-format   | 2019-11-06 | ✓ | git@github.com:llvm/llvm-project.git         |
-| cmake-mode     | 2022-08-22 | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
+| cmake-mode     | 2023-04-21 | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
 | diffscuss-mode | 2014-10-14 | ✓ | git@github.com:tomheon/diffscuss.git         |
 | google-c-style | 2022-02-10 | ✓ | git@github.com:google/styleguide.git         |
 | nemerle        | 2016-10-28 | ✓ | git@github.com:rsdn/nemerle.git              |
-| ninja-mode     | 2018-09-06 | ✓ | git@github.com:ninja-build/ninja.git         |
-| po-mode        | 2020-06-06 | ✓ | https://git.savannah.gnu.org/git/gettext.git |
+| ninja-mode     | 2023-03-28 | ✓ | git@github.com:ninja-build/ninja.git         |
+| po-mode        | 2023-03-10 | ✓ | https://git.savannah.gnu.org/git/gettext.git |
 | thrift         | 2014-03-12 | ✓ | git@github.com:apache/thrift.git             |
 
 - clang-format: https://github.com/llvm/llvm-project/issues/58902
@@ -330,27 +330,27 @@ Still hoping/expecting these will be merged:
 #+results: filtered-subtree
 | Package (21)   |   Modified | M | Url                                              |
 |----------------+------------+---+--------------------------------------------------|
-| agda2-mode     | 2022-11-07 |   | https://github.com/agda/agda                     |
+| agda2-mode     | 2023-03-27 |   | https://github.com/agda/agda                     |
 | cg             | 2022-09-30 | ✓ | git@github.com:GrammarSoft/cg3.git               |
 | cubicle-mode   | 2017-10-09 | ✓ | git@github.com:cubicle-model-checker/cubicle.git |
 | dune           | 2019-10-16 | ✓ | git@github.com:ocaml/dune.git                    |
 | egison-mode    | 2020-01-08 | ✓ | git@github.com:egison/egison.git                 |
-| fuel           | 2022-11-08 | ✓ | git@github.com:factor/factor.git                 |
+| fuel           | 2023-02-26 | ✓ | git@github.com:factor/factor.git                 |
 | golint         | 2018-02-21 | ✓ | git@github.com:golang/lint.git                   |
 | govc           | 2022-05-06 | ✓ | git@github.com:vmware/govmomi.git                |
 | gvpr-mode      | 2018-10-17 | ✓ | git@github.com:rodw/gvpr-lib.git                 |
 | kivy-mode      | 2021-03-18 | ✓ | git@github.com:kivy/kivy.git                     |
-| lambdapi-mode  | 2022-09-09 | ✓ | git@github.com:Deducteam/lambdapi.git            |
+| lambdapi-mode  | 2023-05-13 | ✓ | git@github.com:Deducteam/lambdapi.git            |
 | lfe-mode       | 2021-06-03 | ✓ | git@github.com:rvirding/lfe.git                  |
 | mandoku        | 2018-04-03 | ✓ | git@github.com:mandoku/mandoku.git               |
-| merlin         | 2022-06-29 | ✓ | git@github.com:the-lambda-church/merlin.git      |
+| merlin         | 2023-05-10 | ✓ | git@github.com:the-lambda-church/merlin.git      |
 | mozart         | 2017-11-11 |   | git@github.com:mozart/mozart2.git                |
-| mozc           | 2022-07-07 | ✓ | git@github.com:google/mozc.git                   |
-| password-store | 2022-09-06 | ✓ | https://git.zx2c4.com/password-store             |
+| mozc           | 2023-05-05 | ✓ | git@github.com:google/mozc.git                   |
+| password-store | 2023-05-03 | ✓ | https://git.zx2c4.com/password-store             |
 | protobuf-mode  | 2022-03-18 | ✓ | git@github.com:google/protobuf.git               |
 | rcodetools     | 2016-09-15 |   | git@github.com:rcodetools/rcodetools.git         |
 | stumpwm-mode   | 2018-06-29 | ✓ | git@github.com:stumpwm/stumpwm-contrib.git       |
-| utop           | 2022-11-03 | ✓ | git@github.com:diml/utop.git                     |
+| utop           | 2023-04-19 | ✓ | git@github.com:diml/utop.git                     |
 
 * Set main library
 :PROPERTIES:
