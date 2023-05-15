@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5237 |   5237 |       |       |      164 |         160 |  4682 |
-| gitlab      |  179 |    179 |       |       |       18 |          13 |   160 |
+| github      | 5242 |   5242 |       |       |      164 |         161 |  4688 |
+| gitlab      |  177 |    177 |       |       |       18 |          13 |   158 |
 | codeberg    |   83 |     83 |       |       |        1 |          30 |    70 |
-| sourcehut   |   85 |     85 |       |       |       35 |           4 |    48 |
+| sourcehut   |   87 |     87 |       |       |       35 |           4 |    50 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -135,7 +135,7 @@
 | secondary   |      |        |       |       |          |             |   237 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8697 |   6688 |  1516 |   482 |      404 |         211 |  5454 |
+| total       | 8702 |   6693 |  1516 |   482 |      404 |         212 |  5460 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -553,7 +553,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (134)   | Secondary package               | Class     |
+| Primary package (135)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -607,7 +607,6 @@
 | dired-hacks             | dired-ranger                    | github    |
 | dired-hacks             | dired-subtree                   | github    |
 | dired-rsync             | dired-rsync-transient           | github    |
-| distel-completion-lib   | auto-complete-distel            | github    |
 | distel-completion-lib   | company-distel                  | github    |
 | dix                     | dix-evil                        | github    |
 | dogears                 | helm-dogears                    | github    |
@@ -728,6 +727,7 @@
 | prescient               | selectrum-prescient             | github    |
 | prescient               | vertico-prescient               | github    |
 | processing-mode         | processing-snippets             | github    |
+| projection              | projection-multi                | github    |
 | prosjekt                | dirtree-prosjekt                | github    |
 | prosjekt                | helm-prosjekt                   | github    |
 | psalm                   | flycheck-psalm                  | github    |
@@ -823,9 +823,7 @@
 | tree-sitter       | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]] |
 | tree-sitter-langs | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]] |
 
-- elnode:
-  https://github.com/jcaw/elnode/issues/1
-  https://github.com/melpa/melpa/issues/6184
+- elnode: https://github.com/jcaw/elnode/issues/1
 - prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-651687425
 - tree-sitter*: https://github.com/emacs-tree-sitter/elisp-tree-sitter/issues/237
 
