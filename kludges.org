@@ -233,7 +233,7 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (25)           | Class     |
+| Package (27)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | auctex                 | gnu       |
@@ -248,7 +248,9 @@
 | lookup                 | github    |
 | majapahit-themes       | gitlab    |
 | monorepo-zenitani      | github    |
+| muse                   | github    |
 | nav                    | github    |
+| navorski               | github    |
 | ne2wm                  | github    |
 | omtose-phellack-theme  | github    |
 | org-contrib            | sourcehut |
@@ -268,6 +270,8 @@
 Still hoping/expecting these will be merged:
 - emux: https://github.com/re5et/emux/pull/4
 - majapahit-theme: https://gitlab.com/franksn/majapahit-theme/-/merge_requests/2
+- muse: https://github.com/alexott/muse/issues/13
+- navorski: https://github.com/roman/navorski.el/issues/11
 - ne2wm: https://github.com/tkf/ne2wm/pull/3
 - omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
 - spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/199

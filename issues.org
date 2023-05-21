@@ -73,15 +73,10 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (3) | Class  | Feature | Provider |
+| Package (1) | Class  | Feature | Provider |
 |-------------+--------+---------+----------|
 | autobuild   | github | selcand |          |
-| muse        | github | assoc   |          |
-| navorski    | github | assoc   |          |
 
-- assoc:
-  - https://github.com/alexott/muse/issues/13 (has dependants)
-  - https://github.com/roman/navorski.el/issues/11 (pr) (in melpa)
 - autobuild: https://github.com/erjoalgo/autobuild/commit/42a24e09c3a5
 
 * Missing library summary
