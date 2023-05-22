@@ -6,7 +6,7 @@
   (require 'emir)
 #+end_src
 #+name: addheader
-#+header: :var rows="" :var header=""
+#+header: :var header="" :var rows=""
 #+begin_src elisp :hlines yes :results none
   (epkg-add-org-header rows header)
 #+end_src
@@ -183,7 +183,7 @@
 :ID:       0d5482d5-f620-4ae4-92ab-dcc4cb096e08
 :END:
 #+name: builtin-prefer-elpa
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
   (epkg-sql [:select :distinct [packages:name packages:class]
              :from [packages builtin-libraries]
              :where (= packages:name builtin-libraries:package)
@@ -198,7 +198,7 @@
 :ID:       43da9d6f-fffb-420f-af20-96f069324cce
 :END:
 #+name: builtin-prefer-upstream
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
   (epkg-sql [:select :distinct [packages:name packages:class]
              :from [packages builtin-libraries]
              :where (and (= packages:name builtin-libraries:package)
@@ -222,7 +222,7 @@
 :ID:       de3995d6-9c4e-4014-8233-fd4e0e0c4440
 :END:
 #+name: gnu-elpa-new
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Url"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Url"),*this*)
   (mapcan (pcase-lambda (`(,name ,class ,url))
             (and (not (emir--config name :delayed))
                  (not (emir--config name :secondary))
@@ -240,7 +240,7 @@
 :ID:       d846eae7-e7a9-4b3b-be50-655f9736d770
 :END:
 #+name: gnu-elpa-delayed
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Elpa" "Reason"))
+#+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
   (seq-keep (pcase-lambda (`(,name ,class))
               (and-let* ((reason (emir--config name :delayed)))
                 (list name class reason)))
@@ -256,7 +256,7 @@
 :ID:       abd15ba1-082f-411d-a557-7f5ff0e0200a
 :END:
 #+name: gnu-elpa-unreleased
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Elpa"))
+#+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql [:select [name class]
              :from gnu-elpa-recipes
              :where (and (in class $v1)
@@ -271,7 +271,7 @@
 :ID:       b17f6889-621c-45ec-bbbd-f433ba1ab06c
 :END:
 #+name: gnu-elpa-shelved
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Elpa"))
+#+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql [:select :distinct [packages:name gnu-elpa-recipes:class]
              :from [packages gnu-elpa-recipes]
              :where (= packages:name gnu-elpa-recipes:name)
@@ -285,7 +285,7 @@
 :ID:       7a20ccb7-7e22-4110-aaae-02cdc725398f
 :END:
 #+name: gnu-elpa-prefer-builtin
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Elpa" "Reason"))
+#+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
   (mapcar (pcase-lambda (`(,name ,class))
             (list name class
                   (or (emir--config name :builtin-preferred) "")))
@@ -327,7 +327,7 @@
 :ID:       14eaeffa-20a4-4e4e-a3ec-cb0711b0c08d
 :END:
 #+name: gnu-elpa-prefer-elpa
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" ":url"))
+#+begin_src emacs-lisp :post addheader('("Package" ":url"),*this*)
   (let ((alist (emir-gelpa--recipes-alist emir-gnu-elpa-repository)))
     (seq-keep (pcase-lambda (`(,name ,_class ,_elpa))
                 (and-let* ((url (plist-get (cdr (assoc name alist)) :url)))
@@ -373,7 +373,7 @@
 :ID:       0e3e300d-2683-4600-829a-024f4c1bd34e
 :END:
 #+name: nongnu-elpa-new
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Url"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Url"),*this*)
   (mapcan (pcase-lambda (`(,name ,class ,url))
             (and (not (emir--config name :delayed))
                  (not (emir--config name :secondary))
@@ -391,7 +391,7 @@
 :ID:       bb885ac5-e755-4cac-9766-3a40b9075926
 :END:
 #+name: nongnu-elpa-delayed
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Elpa" "Reason"))
+#+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
   (seq-keep (pcase-lambda (`(,name ,class))
               (and-let* ((reason (emir--config name :delayed)))
                 (list name class reason)))
@@ -407,7 +407,7 @@
 :ID:       20acb40f-27db-4c8f-8a10-cf5a7c84bae7
 :END:
 #+name: nongnu-elpa-unreleased
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Elpa"))
+#+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql [:select [name class]
              :from nongnu-elpa-recipes
              :where (and (in class $v1)
@@ -422,7 +422,7 @@
 :ID:       1e805a02-8c5b-4d8d-92c0-94c38135582c
 :END:
 #+name: nongnu-elpa-shelved
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Elpa"))
+#+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql [:select :distinct [packages:name nongnu-elpa-recipes:class]
              :from [packages nongnu-elpa-recipes]
              :where (= packages:name nongnu-elpa-recipes:name)
@@ -443,7 +443,7 @@
 :ID:       80bbc73b-c1ad-4dc1-b86c-39e8f7b3bb70
 :END:
 #+name: melpa-new
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Melpa" "Link"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Melpa" "Link"),*this*)
   (seq-keep (pcase-lambda (`(,name ,fetcher ,url))
               (and (not (or (emir--lookup-url url)
                             (emir--config name :delayed)
@@ -466,7 +466,7 @@
 :ID:       5f94df6a-24e1-4e74-a16a-0649c669a526
 :END:
 #+name: melpa-delayed
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Melpa" "Reason"))
+#+begin_src emacs-lisp :post addheader('("Package" "Melpa" "Reason"),*this*)
   (seq-keep (pcase-lambda (`(,name ,class))
               (and-let* ((reason (emir--config name :delayed)))
                 (list name class reason)))
@@ -487,7 +487,7 @@
 :ID:       ad356942-4584-4cef-8292-1cdba76e5845
 :END:
 #+name: melpa-shelved
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Url"))
+#+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
   (epkg-sql [:select [packages:name packages:url]
              :from [packages melpa-recipes]
              :where (and (= melpa-recipes:epkg-package packages:name)
@@ -541,7 +541,7 @@
 :ID:       cb112869-6eb7-4a10-9d20-6868d2885461
 :END:
 #+name: secondary-packages
-#+begin_src emacs-lisp :post addheader(*this*,'("Primary package" "Secondary package" "Class"))
+#+begin_src emacs-lisp :post addheader('("Primary package" "Secondary package" "Class"),*this*)
   (epkg-sql [:select :distinct [packages:name
                                 melpa-recipes:name
                                 packages:class]
@@ -798,7 +798,7 @@
 :ID:       493d7e47-cfad-4cbe-b8fb-643a63306fe5
 :END:
 #+name: melpa-diverging-repositories
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Mirror" "" "Melpa" ""))
+#+begin_src emacs-lisp :post addheader('("Package" "Mirror" "" "Melpa" ""),*this*)
   (mapcar (pcase-lambda (`(,name ,type ,url ,fetcher ,murl))
             (list name type (epkg-org-link name) fetcher (melpa-org-link name)))
           (emir-melpa--migrated-packages))
@@ -810,7 +810,7 @@
 :ID:       4739083e-ce34-4e33-84e5-f9bfd77b218f
 :END:
 #+name: melpa-diverging-branches
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Used" "Forced" "Melpa" "Class" "Fetcher" "Repo"))
+#+begin_src emacs-lisp :post addheader('("Package" "Used" "Forced" "Melpa" "Class" "Fetcher" "Repo"),*this*)
   (mapcar (pcase-lambda (`(,name . ,rest))
             `(,name ,@rest ,(epkg-org-link name)))
           (emir-melpa--diverging-branches))
@@ -832,7 +832,7 @@
 :ID:       df84d811-660f-4800-9cad-5e34c7b6ae9b
 :END:
 #+name: melpa-from-mirror
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Url"))
+#+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
   (epkg-sql [:select [name url] :from melpa-recipes
              :where (like url '"\"https://github.com/emacsmirror%")
              :order-by [(asc name)]])
@@ -858,7 +858,7 @@
 :ID:       0b98c697-7373-40b2-8096-f71c9457cf55
 :END:
 #+name: melpa-from-attic
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Url"))
+#+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
   (epkg-sql [:select [name url] :from melpa-recipes
              :where (like url '"\"https://github.com/emacsattic%")])
 #+end_src
@@ -893,7 +893,7 @@
 :ID:       a621dd5e-a206-4dad-b03f-deb33c0960db
 :END:
 #+name: github-archived
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Repository" "Melpa" "Dependants"))
+#+begin_src emacs-lisp :post addheader('("Package" "Repository" "Melpa" "Dependants"),*this*)
   (mapcar (pcase-lambda (`(,name ,downloads))
             (list name (epkg-org-link name) downloads
                   (mapconcat #'car (epkg-reverse-dependencies name) " ")))
@@ -908,7 +908,7 @@
 :ID:       c9985064-5573-4119-acd0-5b8bf08902ae
 :END:
 #+name: github-removed
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Repository" "Melpa" "Dependants"))
+#+begin_src emacs-lisp :post addheader('("Package" "Repository" "Melpa" "Dependants"),*this*)
   (mapcar (pcase-lambda (`(,name ,downloads))
             (list name (epkg-org-link name) downloads
                   (mapconcat #'car (epkg-reverse-dependencies name) " ")))

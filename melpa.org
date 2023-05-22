@@ -6,7 +6,7 @@
   (require 'emir)
 #+end_src
 #+name: addheader
-#+header: :var rows="" :var header=""
+#+header: :var header="" :var rows=""
 #+begin_src elisp :hlines yes :results none
   (epkg-add-org-header rows header)
 #+end_src
@@ -30,7 +30,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 :ID:       6a667542-10c1-4c12-a4f3-839be669c2f2
 :END:
 #+name: missing-github
-#+begin_src emacs-lisp :post addheader(*this*,'(1 "Package" "Link" "Summary"))
+#+begin_src emacs-lisp :post addheader('(1 "Package" "Link" "Summary"),*this*)
   ;; (cl-sort
   (seq-keep (pcase-lambda (`(,name ,summary))
               (and (not (epkg-get-recipe 'melpa name))
@@ -599,7 +599,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 :ID:       1b55899d-76c8-48a1-9a39-94adc009695e
 :END:
 #+name: missing-gitlab
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
+#+begin_src emacs-lisp :post addheader('("Package" "Link"),*this*)
   (--keep (and (not (epkg-get-recipe 'melpa it))
                (not (epkg-get-recipe 'gnu it))
                (not (epkg-get-recipe 'nongnu it))
@@ -617,7 +617,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 :ID:       853ade07-5577-43ff-a220-3ae8232ffada
 :END:
 #+name: missing-git
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Link"))
+#+begin_src emacs-lisp :post addheader('("Package" "Link"),*this*)
   (--keep (and (not (epkg-get-recipe 'melpa it))
                (not (epkg-get-recipe 'gnu it))
                (not (epkg-get-recipe 'nongnu it))

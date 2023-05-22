@@ -6,7 +6,7 @@
   (require 'emir)
 #+end_src
 #+name: addheader
-#+header: :var rows="" :var header=""
+#+header: :var header="" :var rows=""
 #+begin_src elisp :hlines yes :results none
   (epkg-add-org-header rows header)
 #+end_src
@@ -17,7 +17,7 @@
 :ID:       8e8fd389-e8f5-42aa-8aa5-a07174ff1c66
 :END:
 #+name: required-by-nonwiki
-#+begin_src emacs-lisp :post addheader(*this*,'("Dependee" "M" "Author" "Depender" "M" "Type" "Author"))
+#+begin_src emacs-lisp :post addheader('("Dependee" "M" "Author" "Depender" "M" "Type" "Author"),*this*)
   (mapcan
    (lambda (dependee)
      (mapcan (pcase-lambda (`(,depender . ,features))
@@ -77,7 +77,7 @@
 - [[https://github.com/melpa/melpa/pull/5008#issuecomment-360501258][melpa#5008^2]]
 
 #+name: all-wiki
-#+begin_src emacs-lisp :post addheader(*this*,'("Author" "Package"))
+#+begin_src emacs-lisp :post addheader('("Author" "Package"),*this*)
   (cl-sort (mapcar (lambda (pkg)
                      (list (or (caar (oref pkg maintainers))
                                (caar (oref pkg authors))

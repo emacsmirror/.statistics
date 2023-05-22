@@ -36,7 +36,7 @@
      '("Package" "E" "M")))
 #+end_src
 #+name: addheader
-#+header: :var rows="" :var header=""
+#+header: :var header="" :var rows=""
 #+begin_src elisp :hlines yes :results none
   (epkg-add-org-header rows header)
 #+end_src

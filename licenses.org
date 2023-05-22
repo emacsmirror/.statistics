@@ -48,7 +48,7 @@
      '("Package" "License")))
 #+end_src
 #+name: addheader
-#+header: :var rows="" :var header=""
+#+header: :var header="" :var rows=""
 #+begin_src elisp :hlines yes :results none
   (epkg-add-org-header rows header)
 #+end_src
@@ -118,7 +118,7 @@
 :ID:       8c2b349e-1106-4788-98a2-19eca4d3646b
 :END:
 #+name: mirror-unknown
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "License" "M"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "License" "M"),*this*)
   (mapcar (pcase-lambda (`(,name ,class ,license))
             (list name class license
                   (and (epkg-get-recipe 'melpa name) "✓")))
@@ -189,7 +189,7 @@
 :ID:       500171ea-ae3f-4c35-a746-4e04a690258e
 :END:
 #+name: attic-unknown
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "License" "M"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "License" "M"),*this*)
   (mapcar (pcase-lambda (`(,name ,class ,license))
             (list name class license
                   (and (epkg-get-recipe 'melpa name) "✓")))

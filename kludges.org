@@ -6,7 +6,7 @@
   (require 'emir)
 #+end_src
 #+name: addheader
-#+header: :var rows="" :var header=""
+#+header: :var header="" :var rows=""
 #+begin_src elisp :hlines yes :results none
   (epkg-add-org-header rows header)
 #+end_src
@@ -17,7 +17,7 @@
 :ID:       e4844f48-a3c2-4e4c-86fd-a2e5104938e6
 :END:
 #+name: provided-join
-#+begin_src emacs-lisp :post addheader(*this*,'(3 "Package" "Class" "Feature" "Reason"))
+#+begin_src emacs-lisp :post addheader('(3 "Package" "Class" "Feature" "Reason"),*this*)
   (epkg-sql [:select [name class feature join]
              :from [packages provided]
              :where (and (= name package) (notnull join))
@@ -58,7 +58,7 @@
 :ID:       287c7fda-8210-4590-b5c1-42d746348cf9
 :END:
 #+name: provided-drop
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Reason"),*this*)
   (epkg-sql [:select [name class feature drop]
              :from [packages provided]
              :where (and (= name package) (notnull drop))
@@ -84,7 +84,7 @@
 :ID:       17fd0158-6dd9-42f2-8c71-5839839c30dd
 :END:
 #+name: required-drop
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Reason"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Reason"),*this*)
   (epkg-sql [:select [name class feature drop]
              :from [packages required]
              :where (and (= name package) (notnull drop))
@@ -226,7 +226,7 @@
 :ID:       c76cd7ab-1ba6-4256-96f8-05a147bd58ac
 :END:
 #+name: patched
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
   (epkg-sql [:select [name class]
              :from packages
              :where (= patched 't)
@@ -281,7 +281,7 @@ Still hoping/expecting these will be merged:
 :ID:       d5907eab-b5e3-436d-9637-c0f3ad581bdc
 :END:
 #+name: filtered-minority
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Modified" "M" "Url"))
+#+begin_src emacs-lisp :post addheader('("Package" "Modified" "M" "Url"),*this*)
   (mapcar (pcase-lambda (`(,name ,args ,url))
             (list name
                   (with-emir-repository (epkg name)
@@ -321,7 +321,7 @@ Still hoping/expecting these will be merged:
 :ID:       b747ad33-ce62-48f8-9b91-852470cee627
 :END:
 #+name: filtered-subtree
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Modified" "M" "Url"))
+#+begin_src emacs-lisp :post addheader('("Package" "Modified" "M" "Url"),*this*)
   (mapcar (pcase-lambda (`(,name ,args ,url))
             (list name
                   (with-emir-repository (epkg name)
@@ -361,7 +361,7 @@ Still hoping/expecting these will be merged:
 :ID:       43de71ec-d382-4b53-acdf-562cca94ef62
 :END:
 #+name: no-mainlib
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "M" "Library"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "M" "Library"),*this*)
   (seq-keep (pcase-lambda (`(,name ,type ,library))
               (and (not (eq type 'core))
                    (list name type
@@ -382,7 +382,7 @@ Still hoping/expecting these will be merged:
 :ID:       143977ed-3e79-4a30-ab35-f2b2123addf1
 :END:
 #+name: set-branch
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Branch" "Class" "Repo"))
+#+begin_src emacs-lisp :post addheader('("Package" "Branch" "Class" "Repo"),*this*)
   (mapcar (pcase-lambda (`(,name ,branch ,class))
             (list name branch class
                   (epkg-org-link name)))

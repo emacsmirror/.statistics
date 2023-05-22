@@ -6,7 +6,7 @@
   (require 'emir)
 #+end_src
 #+name: addheader
-#+header: :var rows="" :var header=""
+#+header: :var header="" :var rows=""
 #+begin_src elisp :hlines yes :results none
   (epkg-add-org-header rows header)
 #+end_src
@@ -17,7 +17,7 @@
 :ID:       e4c34285-f734-4953-b929-acfc1a9c0730
 :END:
 #+name: conflict
-#+begin_src emacs-lisp :post addheader(*this*,'("Feature" "Package" "Shelved"))
+#+begin_src emacs-lisp :post addheader('("Feature" "Package" "Shelved"),*this*)
   (let (alist)
     (dolist (name (epkgs 'name))
       (dolist (feature (epkg-sql [:select feature :from provided
@@ -45,7 +45,7 @@
 :ID:       df7b903f-ebf1-4803-aa97-1a4eac38b08f
 :END:
 #+name: unsatisfied
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "Feature" "Provider"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Provider"),*this*)
   (mapcan
    (pcase-lambda (`(,name ,class))
      (let (alist)
@@ -78,7 +78,7 @@
 :ID:       1fa0f49e-3f96-446a-a9ad-048591c91dd0
 :END:
 #+name: missing-summary
-#+begin_src emacs-lisp :post addheader(*this*,'("Package" "Class" "M"))
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "M"),*this*)
   (mapcar (pcase-lambda (`(,name ,class))
             (list name class
                   (and (epkg-get-recipe 'melpa name) "✓")))
