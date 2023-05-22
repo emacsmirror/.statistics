@@ -39,12 +39,6 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (1) | Package | Shelved |
-|-------------+---------+---------|
-| hmac-sha1   | flim    |         |
-| hmac-sha1   | oauth   |         |
-
-- hmac-sha1: https://github.com/melpa/melpa/pull/8512#issuecomment-1529114018
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
