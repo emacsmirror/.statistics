@@ -112,10 +112,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5248 |   5248 |       |       |      164 |         161 |  4694 |
+| github      | 5252 |   5252 |       |       |      164 |         161 |  4700 |
 | gitlab      |  178 |    178 |       |       |       18 |          13 |   159 |
 | codeberg    |   83 |     83 |       |       |        1 |          30 |    70 |
-| sourcehut   |   88 |     88 |       |       |       35 |           4 |    50 |
+| sourcehut   |   89 |     89 |       |       |       35 |           4 |    51 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -135,7 +135,7 @@
 | secondary   |      |        |       |       |          |             |   237 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8709 |   6700 |  1516 |   482 |      405 |         212 |  5466 |
+| total       | 8714 |   6705 |  1516 |   482 |      405 |         212 |  5473 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -456,8 +456,7 @@
             (epkg-sql [:select [name class url]
                        :from melpa-recipes
                        :where (isnull epkg-package)
-                       :order-by [(asc url)
-                                  (asc name)]]))
+                       :order-by [(asc name)]]))
 #+end_src
 #+results: melpa-new
 
