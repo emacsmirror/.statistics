@@ -67,11 +67,6 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (1) | Class  | Feature | Provider |
-|-------------+--------+---------+----------|
-| autobuild   | github | selcand |          |
-
-- autobuild: https://github.com/erjoalgo/autobuild/commit/42a24e09c3a5
 
 * Missing library summary
 :PROPERTIES:
