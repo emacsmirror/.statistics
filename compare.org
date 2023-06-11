@@ -115,7 +115,7 @@
 | github      | 5260 |   5260 |       |       |      164 |         161 |  4711 |
 | gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
 | codeberg    |   83 |     83 |       |       |        1 |          30 |    70 |
-| sourcehut   |   92 |     92 |       |       |       38 |           4 |    51 |
+| sourcehut   |   92 |     92 |       |       |       39 |           4 |    51 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -135,7 +135,7 @@
 | secondary   |      |        |       |       |          |             |   237 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8727 |   6718 |  1516 |   482 |      408 |         212 |  5485 |
+| total       | 8727 |   6718 |  1516 |   482 |      409 |         212 |  5485 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -234,6 +234,9 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-new
+| Package (1)    | Class     | Url                                        |
+|----------------+-----------+--------------------------------------------|
+| emacs-gc-stats | sourcehut | https://git.sr.ht/~yantar92/emacs-gc-stats |
 
 ** Delayed
 :PROPERTIES:
@@ -803,6 +806,9 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (1) | Mirror |                   | Melpa  |                  |
+|-------------+--------+-------------------+--------+------------------|
+| ox-tufte    | github | [[https://github.com/ox-tufte/ox-tufte][ox-tufte/ox-tufte]] | github | [[https://github.com/dakrone/ox-tufte][dakrone/ox-tufte]] |
 
 ** Diverging branches
 :PROPERTIES:
