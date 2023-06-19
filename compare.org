@@ -112,14 +112,14 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5260 |   5260 |       |       |      164 |         161 |  4709 |
+| github      | 5266 |   5266 |       |       |      164 |         161 |  4717 |
 | gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
-| codeberg    |   90 |     90 |       |       |        1 |          30 |    77 |
+| codeberg    |   91 |     91 |       |       |        1 |          30 |    78 |
 | sourcehut   |   93 |     93 |       |       |       39 |           4 |    51 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  114 |    114 |       |       |       17 |           4 |    99 |
+| git         |  113 |    113 |       |       |       17 |           4 |    98 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -132,10 +132,10 @@
 | shelved     | 1516 |        |  1516 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   237 |
+| secondary   |      |        |       |       |          |             |   239 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8734 |   6725 |  1516 |   482 |      409 |         212 |  5490 |
+| total       | 8740 |   6731 |  1516 |   482 |      409 |         212 |  5500 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -552,7 +552,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (135)   | Secondary package               | Class     |
+| Primary package (136)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -587,6 +587,8 @@
 | codesearch              | projectile-codesearch           | github    |
 | colorless-themes        | lavenderless-theme              | sourcehut |
 | colorless-themes        | nordless-theme                  | sourcehut |
+| compile-multi           | compile-multi-all-the-icons     | github    |
+| compile-multi           | consult-compile-multi           | github    |
 | copyit                  | copyit-pandoc                   | github    |
 | crystal-mode            | flycheck-crystal                | github    |
 | ctl-mode                | gs-mode                         | github    |
