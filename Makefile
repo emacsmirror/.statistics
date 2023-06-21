@@ -1,4 +1,4 @@
-## Configuration #####################################################
+## Configuration
 
 DOMAIN         ?= emacsmirror.net
 PUBLIC         ?= https://$(DOMAIN)
@@ -46,7 +46,7 @@ DEPS  += with-editor/lisp
 LOAD_PATH = $(addprefix -L $(SITE_LISP),$(DEPS))
 BATCH     = $(EMACS) -Q --batch $(LOAD_PATH)
 
-## Usage #############################################################
+## Usage
 
 help:
 	$(info )
@@ -59,7 +59,7 @@ help:
 	$(info Publish: $(PUBLISH_S3_URL))
 	@echo
 
-## Targets ###########################################################
+## Targets
 
 babel: $(BABEL)
 html:  $(HTML)
