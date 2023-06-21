@@ -592,46 +592,38 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | monorepo-zenitani            | [[https://github.com/zenitani/elisp][zenitani/elisp]]                          | A monorepo containing unrelated packages                               |
 | csp-mode                     | [[https://github.com/zonix/csp-mode][zonix/csp-mode]]                          | Major mode for editing CSP specification in Emacs                      |
 
-** Gitlab
+** Other Git
 :PROPERTIES:
 :ID:       1b55899d-76c8-48a1-9a39-94adc009695e
 :END:
-#+name: missing-gitlab
+#+name: missing
 #+begin_src emacs-lisp :post addheader('("Package" "Link"),*this*)
-  (--keep (and (not (epkg-get-recipe 'melpa it))
-               (not (epkg-get-recipe 'gnu it))
-               (not (epkg-get-recipe 'nongnu it))
-               (list it (epkg-org-link it)))
-          (epkgs 'name [gitlab]))
+  (seq-keep (pcase-lambda (`(,name ,type))
+              (and (not (epkg-get-recipe 'melpa  name))
+                   (not (epkg-get-recipe 'gnu    name))
+                   (not (epkg-get-recipe 'nongnu name))
+                   (list name type (epkg-org-link name))))
+            (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
-#+results: missing-gitlab
-| Package (2)                | Link                                  |
-|----------------------------+---------------------------------------|
-| org-attach-embedded-images | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]  |
-| swift-playground-mode      | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]] |
-
-** Git
-:PROPERTIES:
-:ID:       853ade07-5577-43ff-a220-3ae8232ffada
-:END:
-#+name: missing-git
-#+begin_src emacs-lisp :post addheader('("Package" "Link"),*this*)
-  (--keep (and (not (epkg-get-recipe 'melpa it))
-               (not (epkg-get-recipe 'gnu it))
-               (not (epkg-get-recipe 'nongnu it))
-               (list it (epkg-org-link it)))
-          (epkgs 'name [git]))
-#+end_src
-#+results: missing-git
-| Package (9)   | Link                                       |
-|---------------+--------------------------------------------|
-| ebuild-mode   |                                            |
-| elpa-admin    |                                            |
-| goldendict    | [[https://repo.or.cz/goldendict.el.git]]       |
-| mailscripts   |                                            |
-| ob-sclang     | [[https://repo.or.cz/ob-sclang.git]]           |
-| org-link-edit | [[https://git.kyleam.com/org-link-edit/about]] |
-| piem          | [[https://git.kyleam.com/piem/about]]          |
-| python-pep8   |                                            |
-| python-pylint |                                            |
-
+#+results: missing
+| Package (19)               | Link      |                                             |
+|----------------------------+-----------+---------------------------------------------|
+| ebuild-mode                | git       |                                             |
+| ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
+| elpa-admin                 | git       |                                             |
+| geo                        | sourcehut |                                             |
+| goldendict                 | git       | [[https://repo.or.cz/goldendict.el.git]]        |
+| gpicker                    | nongnu    | [[https://savannah.nongnu.org/projects/gpicker][nongnu:gpicker]]                              |
+| gradle                     | sourcehut | [[https://git.sr.ht/~vhallac/gradle-el][vhallac/gradle-el]]                           |
+| lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]] |
+| lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                |
+| mailscripts                | git       |                                             |
+| ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
+| org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
+| org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]  |
+| piem                       | git       | [[https://git.kyleam.com/piem/about]]           |
+| python-pep8                | git       |                                             |
+| python-pylint              | git       |                                             |
+| rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                |
+| riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                |
+| swift-playground-mode      | gitlab    | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]]       |
