@@ -805,6 +805,9 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (1) | Mirror |              | Melpa  |               |
+|-------------+--------+--------------+--------+---------------|
+| khoj        | github | [[https://github.com/khoj-ai/khoj][khoj-ai/khoj]] | github | [[https://github.com/debanjum/khoj][debanjum/khoj]] |
 
 ** Diverging branches
 :PROPERTIES:

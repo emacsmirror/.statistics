@@ -67,6 +67,11 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
+| Package (1)  | Class  | Feature | Provider |
+|--------------+--------+---------+----------|
+| flex-compile | github | slite   |          |
+
+- https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 
 * Missing library summary
 :PROPERTIES:
