@@ -112,8 +112,8 @@
 | gnu-elpa    |  144 |    144 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5266 |   5266 |       |       |      164 |         161 |  4717 |
-| gitlab      |  180 |    180 |       |       |       18 |          13 |   161 |
+| github      | 5268 |   5268 |       |       |      164 |         161 |  4719 |
+| gitlab      |  181 |    181 |       |       |       18 |          13 |   162 |
 | codeberg    |   91 |     91 |       |       |        1 |          30 |    78 |
 | sourcehut   |   93 |     93 |       |       |       39 |           4 |    51 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
@@ -132,10 +132,10 @@
 | shelved     | 1516 |        |  1516 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   239 |
+| secondary   |      |        |       |       |          |             |   240 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8740 |   6731 |  1516 |   482 |      409 |         212 |  5500 |
+| total       | 8743 |   6734 |  1516 |   482 |      409 |         212 |  5504 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -670,6 +670,7 @@
 | jump                    | inflections                     | github    |
 | kaesar                  | kaesar-file                     | github    |
 | kaesar                  | kaesar-mode                     | github    |
+| kaesar                  | kaesar-pbkdf2                   | github    |
 | kaleidoscope            | kaleidoscope-evil-state-flash   | git       |
 | keg                     | flycheck-keg                    | github    |
 | keg                     | keg-mode                        | github    |
@@ -805,9 +806,6 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (1) | Mirror |              | Melpa  |               |
-|-------------+--------+--------------+--------+---------------|
-| khoj        | github | [[https://github.com/khoj-ai/khoj][khoj-ai/khoj]] | github | [[https://github.com/debanjum/khoj][debanjum/khoj]] |
 
 ** Diverging branches
 :PROPERTIES:
