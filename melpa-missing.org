@@ -606,7 +606,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (19)               | Link      |                                             |
+| Package (20)               | Link      |                                             |
 |----------------------------+-----------+---------------------------------------------|
 | ebuild-mode                | git       |                                             |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
@@ -627,3 +627,4 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                |
 | riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                |
 | swift-playground-mode      | gitlab    | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]]       |
+| swsw                       | sourcehut | [[https://git.sr.ht/~dsemy/swsw][dsemy/swsw]]                                  |
