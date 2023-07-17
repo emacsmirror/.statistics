@@ -112,7 +112,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5283 |   5283 |       |       |      164 |         161 |  4733 |
+| github      | 5284 |   5284 |       |       |      164 |         161 |  4734 |
 | gitlab      |  182 |    182 |       |       |       18 |          13 |   163 |
 | codeberg    |   92 |     92 |       |       |        1 |          30 |    79 |
 | sourcehut   |   97 |     97 |       |       |       41 |           3 |    53 |
@@ -132,10 +132,10 @@
 | shelved     | 1515 |        |  1515 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   240 |
+| secondary   |      |        |       |       |          |             |   241 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8765 |   6757 |  1515 |   482 |      412 |         211 |  5523 |
+| total       | 8766 |   6758 |  1515 |   482 |      412 |         211 |  5525 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -553,7 +553,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (136)   | Secondary package               | Class     |
+| Primary package (137)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -782,6 +782,7 @@
 | wgrep                   | wgrep-deadgrep                  | github    |
 | wgrep                   | wgrep-helm                      | github    |
 | wgrep                   | wgrep-pt                        | github    |
+| wildcharm-theme         | wildcharm-light-theme           | github    |
 | window-jump             | spaces                          | github    |
 | window-jump             | splitter                        | github    |
 | xwwp                    | xwwp-follow-link-helm           | github    |
