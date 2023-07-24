@@ -112,10 +112,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5284 |   5284 |       |       |      164 |         161 |  4734 |
+| github      | 5281 |   5281 |       |       |      164 |         161 |  4736 |
 | gitlab      |  182 |    182 |       |       |       18 |          13 |   163 |
 | codeberg    |   92 |     92 |       |       |        1 |          30 |    79 |
-| sourcehut   |   97 |     97 |       |       |       41 |           3 |    53 |
+| sourcehut   |   98 |     98 |       |       |       41 |           3 |    54 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -129,13 +129,13 @@
 | file        |   53 |     53 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  142 |    142 |       |       |          |             |   108 |
-| shelved     | 1515 |        |  1515 |       |          |             |    18 |
+| shelved     | 1521 |        |  1521 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   241 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8766 |   6758 |  1515 |   482 |      412 |         211 |  5525 |
+| total       | 8770 |   6756 |  1521 |   482 |      412 |         211 |  5528 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -496,7 +496,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (37)                | Url                                                                         |
+| Package (42)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -523,11 +523,16 @@
 | lsp-python-ms               | https://github.com/emacs-lsp/lsp-python-ms                                  |
 | magit-gh-pulls              | https://github.com/sigma/magit-gh-pulls                                     |
 | mic-paren                   | http://www.gnuvola.org/software/j/mic-paren/mic-paren.el                    |
+| nndiscourse                 | https://github.com/dickmao/nndiscourse                                      |
+| nnhackernews                | https://github.com/dickmao/nnhackernews                                     |
+| nnreddit                    | https://github.com/dickmao/nnreddit                                         |
+| nntwitter                   | https://github.com/dickmao/nntwitter                                        |
 | org-doing                   | https://github.com/rudolfolah/org-doing                                     |
 | org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
 | org-pivotal                 | https://github.com/org-pivotal/org-pivotal                                  |
 | org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
+| peep-dired                  | https://github.com/asok/peep-dired                                          |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
 | redprl                      | https://github.com/RedPRL/sml-redprl                                        |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
