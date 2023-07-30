@@ -112,14 +112,14 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5281 |   5281 |       |       |      164 |         161 |  4736 |
+| github      | 5285 |   5285 |       |       |      164 |         161 |  4740 |
 | gitlab      |  182 |    182 |       |       |       18 |          13 |   163 |
 | codeberg    |   92 |     92 |       |       |        1 |          30 |    79 |
 | sourcehut   |   98 |     98 |       |       |       41 |           3 |    54 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  114 |    114 |       |       |       17 |           4 |    99 |
+| git         |  113 |    113 |       |       |       18 |           4 |    98 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   21 |     21 |       |       |          |             |       |
@@ -132,10 +132,10 @@
 | shelved     | 1521 |        |  1521 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   241 |
-| unreleased  |      |        |       |       |        7 |           0 |       |
+| secondary   |      |        |       |       |          |             |   242 |
+| unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8770 |   6756 |  1521 |   482 |      412 |         211 |  5528 |
+| total       | 8773 |   6759 |  1521 |   482 |      412 |         211 |  5532 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -762,6 +762,7 @@
 | stan-mode               | eldoc-stan                      | github    |
 | stan-mode               | flycheck-stan                   | github    |
 | stan-mode               | stan-snippets                   | github    |
+| term-manager            | term-project                    | github    |
 | term-manager            | term-projectile                 | github    |
 | tern                    | tern-auto-complete              | github    |
 | transient-extras        | transient-extras-a2ps           | github    |
