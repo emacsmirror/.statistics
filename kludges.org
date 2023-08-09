@@ -65,19 +65,20 @@
              :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (10)     | Class  | Feature              | Reason                |
-|------------------+--------+----------------------+-----------------------|
-| rgb              | gitlab | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| rgb              | gitlab | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| cider            | github | integration-tests    | conflicting test file |
-| fsharp-mode      | github | integration-tests    | conflicting test file |
-| org              | gnu    | org-test             | conflicting test file |
-| org-gcal         | github | org-test             | conflicting test file |
-| font-lock-studio | github | tabulated-list       | harmless in test file |
-| gumshoe          | github | targets/install-deps | conflicting test file |
-| ivy              | github | targets/install-deps | conflicting test file |
-| clojure-mode     | github | test-helper          | conflicting test file |
-| elixir-mode      | github | test-helper          | conflicting test file |
+| Package (11)     | Class   | Feature              | Reason                |
+|------------------+---------+----------------------+-----------------------|
+| rgb              | gitlab  | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| rgb              | gitlab  | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| cider            | github  | integration-tests    | conflicting test file |
+| fsharp-mode      | github  | integration-tests    | conflicting test file |
+| org              | gnu     | org-test             | conflicting test file |
+| org-gcal         | github  | org-test             | conflicting test file |
+| font-lock-studio | github  | tabulated-list       | harmless in test file |
+| gumshoe          | github  | targets/install-deps | conflicting test file |
+| ivy              | github  | targets/install-deps | conflicting test file |
+| clojure-mode     | github  | test-helper          | conflicting test file |
+| elixir-mode      | github  | test-helper          | conflicting test file |
+| diffscuss-mode   | subtree | test-simple          | bundled test utility  |
 
 * Drop required features
 :PROPERTIES:
@@ -274,47 +275,7 @@
 - spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/199
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 
-* Filtered (minority) repositories
-:PROPERTIES:
-:ID:       d5907eab-b5e3-436d-9637-c0f3ad581bdc
-:END:
-#+name: filtered-minority
-#+begin_src emacs-lisp :post addheader('("Package" "Modified" "M" "Url"),*this*)
-  (mapcar (pcase-lambda (`(,name ,args ,url))
-            (list name
-                  (with-emir-repository (epkg name)
-                    (magit-git-string
-                     "log" "-1" "--format=%cd" "--date=short"))
-                  ;; (emir--config name :minority)
-                  ;; (emir--config name :suspended)
-                  ;; (mapconcat #'identity args " ")
-                  (and (epkg-get-recipe 'melpa name) "✓")
-                  url))
-          (cl-sort (epkgs [name upstream-tree url] [minority])
-                   #'string< :key #'car))
-#+end_src
-#+results: filtered-minority
-| Package (8)    |   Modified | M | Url                                          |
-|----------------+------------+---+----------------------------------------------|
-| clang-format   | 2019-11-06 | ✓ | git@github.com:llvm/llvm-project.git         |
-| cmake-mode     | 2023-04-21 | ✓ | https://gitlab.kitware.com/cmake/cmake.git   |
-| diffscuss-mode | 2014-10-14 | ✓ | git@github.com:tomheon/diffscuss.git         |
-| google-c-style | 2022-02-10 | ✓ | git@github.com:google/styleguide.git         |
-| nemerle        | 2016-10-28 | ✓ | git@github.com:rsdn/nemerle.git              |
-| ninja-mode     | 2023-03-28 | ✓ | git@github.com:ninja-build/ninja.git         |
-| po-mode        | 2023-03-10 | ✓ | https://git.savannah.gnu.org/git/gettext.git |
-| thrift         | 2014-03-12 | ✓ | git@github.com:apache/thrift.git             |
-
-- clang-format: https://github.com/llvm/llvm-project/issues/58902
-- cmake-mode: I have no account on this gitlab instance, not contacted
-- diffscuss-mode: https://github.com/tomheon/diffscuss/issues/43
-- google-c-style: https://github.com/google/styleguide/issues/726
-- nemerle: https://github.com/rsdn/nemerle/issues/13359
-- ninja-mode: https://github.com/ninja-build/ninja/issues/2213
-- po-mode: mailing list, not contacted
-- thrift: issues disabled, not contacted
-
-* Filtered (subtree) repositories
+* Filtered repositories
 :PROPERTIES:
 :ID:       b747ad33-ce62-48f8-9b91-852470cee627
 :END:
@@ -330,11 +291,13 @@
           (epkgs [name upstream-tree url] [subtree]))
 #+end_src
 #+results: filtered-subtree
-| Package (21)   |   Modified | M | Url                                              |
+| Package (25)   |   Modified | M | Url                                              |
 |----------------+------------+---+--------------------------------------------------|
-| agda2-mode     | 2023-03-27 |   | https://github.com/agda/agda                     |
+| agda2-mode     | 2023-07-21 |   | https://github.com/agda/agda                     |
 | cg             | 2022-09-30 | ✓ | git@github.com:GrammarSoft/cg3.git               |
+| cmake-mode     | 2023-07-13 | ✓ | https://gitlab.kitware.com/cmake/cmake           |
 | cubicle-mode   | 2017-10-09 | ✓ | git@github.com:cubicle-model-checker/cubicle.git |
+| diffscuss-mode | 2014-10-14 | ✓ | https://github.com/tomheon/diffscuss             |
 | dune           | 2019-10-16 | ✓ | git@github.com:ocaml/dune.git                    |
 | egison-mode    | 2020-01-08 | ✓ | git@github.com:egison/egison.git                 |
 | fuel           | 2023-02-26 | ✓ | git@github.com:factor/factor.git                 |
@@ -342,17 +305,30 @@
 | govc           | 2022-05-06 | ✓ | git@github.com:vmware/govmomi.git                |
 | gvpr-mode      | 2018-10-17 | ✓ | git@github.com:rodw/gvpr-lib.git                 |
 | kivy-mode      | 2021-03-18 | ✓ | git@github.com:kivy/kivy.git                     |
-| lambdapi-mode  | 2023-05-13 | ✓ | git@github.com:Deducteam/lambdapi.git            |
+| lambdapi-mode  | 2023-07-28 | ✓ | git@github.com:Deducteam/lambdapi.git            |
 | lfe-mode       | 2021-06-03 | ✓ | git@github.com:rvirding/lfe.git                  |
 | mandoku        | 2018-04-03 | ✓ | git@github.com:mandoku/mandoku.git               |
-| merlin         | 2023-05-10 | ✓ | git@github.com:the-lambda-church/merlin.git      |
+| merlin         | 2023-07-25 | ✓ | git@github.com:the-lambda-church/merlin.git      |
 | mozart         | 2017-11-11 |   | git@github.com:mozart/mozart2.git                |
-| mozc           | 2023-05-05 | ✓ | git@github.com:google/mozc.git                   |
+| mozc           | 2023-08-08 | ✓ | git@github.com:google/mozc.git                   |
 | password-store | 2023-05-03 | ✓ | https://git.zx2c4.com/password-store             |
+| po-mode        | 2023-06-17 | ✓ | https://git.savannah.gnu.org/git/gettext         |
 | protobuf-mode  | 2022-03-18 | ✓ | git@github.com:google/protobuf.git               |
 | rcodetools     | 2016-09-15 |   | git@github.com:rcodetools/rcodetools.git         |
 | stumpwm-mode   | 2018-06-29 | ✓ | git@github.com:stumpwm/stumpwm-contrib.git       |
-| utop           | 2023-04-19 | ✓ | git@github.com:diml/utop.git                     |
+| thrift         | 2023-07-08 | ✓ | https://github.com/apache/thrift                 |
+| utop           | 2023-07-07 | ✓ | git@github.com:diml/utop.git                     |
+
+- cmake-mode: I have no account on this gitlab instance, not contacted
+- diffscuss-mode: https://github.com/tomheon/diffscuss/issues/43
+- po-mode: mailing list, not contacted
+- thrift: issues disabled, not contacted
+
+Other repositories that should be filtered (or better yet, split up by upstream):
+- clang-format: https://github.com/llvm/llvm-project/issues/58902
+- google-c-style: https://github.com/google/styleguide/issues/726
+- nemerle: https://github.com/rsdn/nemerle/issues/13359
+- ninja-mode: https://github.com/ninja-build/ninja/issues/2213
 
 * Set main library
 :PROPERTIES:
