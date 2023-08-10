@@ -19,7 +19,7 @@
 #+name: summary
 #+begin_src emacs-lisp
   (require 'finder-inf)
-  (let* ((builtin 482)
+  (let* ((builtin 498)
          ;; This is costly and noisy, and mostly constant.
          ;; (builtin (length (emir--builtin-packages-alist)))
          ;; This does not include "org", "tramp" and "transient".
@@ -106,11 +106,11 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  493 |        |       |   482 |       18 |             |       |
+| builtin     |  495 |        |       |   498 |       18 |             |       |
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5296 |   5296 |       |       |      164 |         161 |  4748 |
+| github      | 5296 |   5296 |       |       |      164 |         162 |  4748 |
 | gitlab      |  182 |    182 |       |       |       18 |          13 |   163 |
 | codeberg    |   93 |     93 |       |       |        1 |          30 |    80 |
 | sourcehut   |   98 |     98 |       |       |       41 |           3 |    55 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   242 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8782 |   6768 |  1521 |   482 |      412 |         211 |  5542 |
+| total       | 8784 |   6768 |  1521 |   498 |      412 |         212 |  5542 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
