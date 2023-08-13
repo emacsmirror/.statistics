@@ -48,7 +48,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (542)                | Link                                    | Summary                                                                |
+| Package (545)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -337,9 +337,12 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | weather                      | [[https://github.com/mad/weather.el][mad/weather.el]]                          | Retrieve weather                                                       |
 | libgit                       | [[https://github.com/magit/libegit2][magit/libegit2]]                          | Thin bindings to libgit2                                               |
 | awesome-tab                  | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]              | Provide an out of box configuration to use tab in Emacs                |
+| blink-search                 | [[https://github.com/manateelazycat/blink-search][manateelazycat/blink-search]]             | Blink search                                                           |
 | color-rg                     | [[https://github.com/manateelazycat/color-rg][manateelazycat/color-rg]]                 | Search and refacotry code with rg                                      |
+| holo-layer                   | [[https://github.com/manateelazycat/holo-layer][manateelazycat/holo-layer]]               | Holo Layer                                                             |
 | lsp-bridge                   | [[https://github.com/manateelazycat/lsp-bridge][manateelazycat/lsp-bridge]]               | LSP bridge                                                             |
 | snails                       | [[https://github.com/manateelazycat/snails][manateelazycat/snails]]                   | A modern, easy-to-expand fuzzy search framework                        |
+| sort-tab                     | [[https://github.com/manateelazycat/sort-tab][manateelazycat/sort-tab]]                 | Smarter tab solution for Emacs, it sort tab with using frequency       |
 | mplayer-mode                 | [[https://github.com/markhepburn/mplayer-mode][markhepburn/mplayer-mode]]                | Control mplayer, facilitating transcription and note-taking            |
 | tags-view                    | [[https://github.com/markhepburn/tags-view][markhepburn/tags-view]]                   | Display and navigate tags browsing history                             |
 | git-find-file                | [[https://github.com/marktriggs/git-find-file.el][marktriggs/git-find-file.el]]             | Incremental search for files in a git repo                             |
