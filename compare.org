@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5301 |   5301 |       |       |      164 |         162 |  4749 |
+| github      | 5301 |   5301 |       |       |      164 |         162 |  4750 |
 | gitlab      |  183 |    183 |       |       |       18 |          13 |   164 |
 | codeberg    |   93 |     93 |       |       |        1 |          30 |    80 |
 | sourcehut   |   98 |     98 |       |       |       41 |           3 |    55 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   242 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8790 |   6774 |  1521 |   498 |      413 |         212 |  5544 |
+| total       | 8790 |   6774 |  1521 |   498 |      413 |         212 |  5545 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -554,7 +554,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (137)   | Secondary package               | Class     |
+| Primary package (136)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -710,8 +710,6 @@
 | opener                  | evil-opener                     | github    |
 | org-multi-wiki          | helm-org-multi-wiki             | github    |
 | org-pdftools            | org-noter-pdftools              | github    |
-| org-projectile          | org-category-capture            | github    |
-| org-projectile          | org-projectile-helm             | github    |
 | org-ql                  | helm-org-ql                     | github    |
 | org-recent-headings     | helm-org-recent-headings        | github    |
 | org-starter             | org-starter-swiper              | github    |

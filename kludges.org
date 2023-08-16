@@ -234,7 +234,7 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (27)           | Class     |
+| Package (26)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | auctex                 | gnu       |
@@ -249,7 +249,6 @@
 | lookup                 | github    |
 | majapahit-themes       | gitlab    |
 | monorepo-zenitani      | github    |
-| muse                   | github    |
 | nav                    | github    |
 | navorski               | github    |
 | ne2wm                  | github    |
@@ -267,7 +266,6 @@
 - emacspeak: https://github.com/tvraman/emacspeak/issues/54
 - emux: https://github.com/re5et/emux/pull/4
 - ert-runner: https://github.com/rejeep/ert-runner.el/pull/16
-- muse: https://github.com/alexott/muse/issues/13
 - navorski: https://github.com/roman/navorski.el/issues/11
 - ne2wm: https://github.com/tkf/ne2wm/pull/3
 - omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
