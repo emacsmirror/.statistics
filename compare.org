@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5301 |   5301 |       |       |      164 |         162 |  4750 |
+| github      | 5309 |   5309 |       |       |      165 |         162 |  4758 |
 | gitlab      |  183 |    183 |       |       |       18 |          13 |   164 |
 | codeberg    |   93 |     93 |       |       |        1 |          30 |    80 |
 | sourcehut   |   98 |     98 |       |       |       41 |           3 |    55 |
@@ -128,10 +128,10 @@
 | shelved     | 1521 |        |  1521 |       |          |             |    18 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   242 |
+| secondary   |      |        |       |       |          |             |   243 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8790 |   6774 |  1521 |   498 |      413 |         212 |  5545 |
+| total       | 8798 |   6782 |  1521 |   498 |      414 |         212 |  5554 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -554,7 +554,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (136)   | Secondary package               | Class     |
+| Primary package (138)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -710,6 +710,8 @@
 | opener                  | evil-opener                     | github    |
 | org-multi-wiki          | helm-org-multi-wiki             | github    |
 | org-pdftools            | org-noter-pdftools              | github    |
+| org-project-capture     | org-category-capture            | github    |
+| org-project-capture     | org-projectile-helm             | github    |
 | org-ql                  | helm-org-ql                     | github    |
 | org-recent-headings     | helm-org-recent-headings        | github    |
 | org-starter             | org-starter-swiper              | github    |
@@ -776,6 +778,7 @@
 | vdm-mode                | flycheck-vdm                    | github    |
 | vdm-mode                | vdm-comint                      | github    |
 | vdm-mode                | vdm-snippets                    | github    |
+| verilog-ext             | verilog-ts-mode                 | github    |
 | w3m                     | shimbun                         | github    |
 | wgrep                   | wgrep-ack                       | github    |
 | wgrep                   | wgrep-ag                        | github    |
