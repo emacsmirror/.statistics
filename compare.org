@@ -124,14 +124,14 @@
 | wiki        |  586 |    586 |       |       |          |             |       |
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  142 |    142 |       |       |          |             |   108 |
-| shelved     | 1521 |        |  1521 |       |          |             |    18 |
+| orphaned    |  141 |    141 |       |       |          |             |   107 |
+| shelved     | 1522 |        |  1522 |       |          |             |    19 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   243 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8799 |   6783 |  1521 |   498 |      414 |         212 |  5555 |
+| total       | 8799 |   6782 |  1522 |   498 |      414 |         212 |  5555 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -492,7 +492,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (42)                | Url                                                                         |
+| Package (43)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -500,6 +500,7 @@
 | color-theme                 | https://github.com/emacsorphanage/color-theme                               |
 | company-go                  | https://github.com/nsf/gocode                                               |
 | company-racer               | https://github.com/emacsorphanage/company-racer                             |
+| dic-lookup-w3m              | https://github.com/emacsorphanage/dic-lookup-w3m                            |
 | django-mode                 | https://github.com/unrelentingtech/django-mode                              |
 | drawille                    | https://github.com/josuah/drawille-el                                       |
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
@@ -870,12 +871,13 @@
              :where (like url '"\"https://github.com/emacsattic%")])
 #+end_src
 #+results: melpa-from-attic
-| Package (18)        | Url                                               |
+| Package (19)        | Url                                               |
 |---------------------+---------------------------------------------------|
 | angular-mode        | https://github.com/emacsattic/angular-mode        |
 | color-theme         | https://github.com/emacsattic/color-theme         |
 | company-go          | https://github.com/emacsattic/company-go          |
 | company-racer       | https://github.com/emacsattic/company-racer       |
+| dic-lookup-w3m      | https://github.com/emacsattic/dic-lookup-w3m      |
 | drawille            | https://github.com/emacsattic/drawille            |
 | e2wm-R              | https://github.com/emacsattic/e2wm-R              |
 | edit-at-point       | https://github.com/emacsattic/edit-at-point       |

@@ -100,7 +100,7 @@ the orphanage to fix these issues.
   (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
 #+end_src
 #+results: unresponsive
-| Package (12)       | E | M |
+| Package (13)       | E | M |
 |--------------------+---+---|
 | edb                | ✔ |   |
 | elisp-depend       | ✔ | ✔ |
@@ -109,6 +109,7 @@ the orphanage to fix these issues.
 | hyperspec          | ✔ |   |
 | macrostep          | ✔ | ✔ |
 | oberon             | ✔ | ✔ |
+| ox-pandoc          | ✔ | ✔ |
 | read-char-spec     | ✔ |   |
 | setnu              | ✔ |   |
 | tablist            | ✔ | ✔ |
@@ -277,39 +278,6 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | undohist             | ✔ | ✔ |
 | yascroll             | ✔ | ✔ |
 | zoom-window          | ✔ | ✔ |
-
-* Revived using the orphanage
-:PROPERTIES:
-:ID:       427d95e3-212d-49ae-bc6b-1a704fb217c0
-:END:
-
-The upstream has become unresponsive and a volunteer now maintains a
-fork under the umbrella of the orphanage.  I believe there are a few
-more packages in this category than listed below, but for a long time
-we did not track this as a separate reason for a package to be in the
-orphanage.
-
-#+name: revived
-#+begin_src emacs-lisp
-  (emir--list-orphans "revived using fork")
-#+end_src
-#+results: revived
-| Package (1) | E | M |
-|-------------+---+---|
-| ox-pandoc   | ✔ | ✔ |
-
-* Other
-:PROPERTIES:
-:ID:       9de7e052-bde3-443b-a2f7-00d52c68cc59
-:END:
-#+name: rip
-#+begin_src emacs-lisp
-  (emir--list-orphans "maintainer is dead" "last subversion")
-#+end_src
-#+results: rip
-| Package (1)    | E | M |
-|----------------+---+---|
-| dic-lookup-w3m | ✔ | ✔ |
 
 * New
 :PROPERTIES:
