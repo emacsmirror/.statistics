@@ -42,143 +42,11 @@
 #+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
-* Upstream has disappeared but there are dependents
-:PROPERTIES:
-:ID:       5428bc8d-7949-40ff-bcca-d21fcbf4849e
-:END:
+* Legend
 
-The upstream repository or file download for these packages has
-disappeared.
-
-Or at least it wasn't available for a long time; in some cases the
-upstream might be available again.  I do not check to make sure this
-is not the case.  If you find such a package, then please let me know.
-
-Of course there are many more packages whose upstream has disappeared,
-then those listed here, many of which can be found on the Emacsattic.
-
-Those unmaintained packages that made it into the orphanage instead of
-just the attic, did so because other mirrored packages depend on them,
-and/or because they are available from Melpa (I mirror all packages
-that are available from there).
-
-#+name: disappeared
-#+begin_src emacs-lisp
-  (emir--list-orphans "upstream disappeared")
-#+end_src
-#+results: disappeared
-| Package (10) | E | M |
-|--------------+---+---|
-| dedicated    | ✔ | ✔ |
-| ecasound     | ✔ |   |
-| image+       | ✔ | ✔ |
-| keydef       | ✔ | ✔ |
-| miniedit     | ✔ | ✔ |
-| osd          | ✔ |   |
-| pager        | ✔ | ✔ |
-| smarty-mode  | ✔ | ✔ |
-| tail         | ✔ |   |
-| vm           | ✔ |   |
-
-* Upstream is unresponsive but there are issues
-:PROPERTIES:
-:ID:       f8703683-84ea-4a2c-9774-83bb3703aac8
-:END:
-
-The upstream repositories for these packages still existed (or at
-least they still existed when the packages were added here), but the
-packages have issues that have to be fixed and the maintainers did not
-respond when I contacted them.  I have patched these packages here in
-the orphanage to fix these issues.
-
-- Multiple packages bundle ~hyperspec~ but none of them is the
-  authoritive upstream.  Attempts to get the various non-upstreams
-  talking have failed so far.
-
-#+name: unresponsive
-#+begin_src emacs-lisp
-  (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
-#+end_src
-#+results: unresponsive
-| Package (13)       | E | M |
-|--------------------+---+---|
-| edb                | ✔ |   |
-| elisp-depend       | ✔ | ✔ |
-| evil-escape        | ✔ | ✔ |
-| helm-gitignore     | ✔ | ✔ |
-| hyperspec          | ✔ |   |
-| macrostep          | ✔ | ✔ |
-| oberon             | ✔ | ✔ |
-| ox-pandoc          | ✔ | ✔ |
-| read-char-spec     | ✔ |   |
-| setnu              | ✔ |   |
-| tablist            | ✔ | ✔ |
-| which-key-posframe | ✔ | ✔ |
-| yafolding          | ✔ | ✔ |
-
-* Wiki packages needed by non-wiki packages
-:PROPERTIES:
-:ID:       09e75274-9792-4670-8847-507cd2b28776
-:END:
-
-These packages are being distributed on the Emacswiki and other
-packages that are not distributed on the Emacswiki depend on them.
-
-Anyone can edit packages on the Emacswiki, which is a big security
-risk, so we "mirror" a frozen copy from the orphanage instead of
-the world-writable copy from the wiki.
-
-Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
-
-#+name: required-by-nonwiki
-#+begin_src emacs-lisp
-  (emir--list-orphans "wiki needed by non-wiki")
-#+end_src
-#+results: required-by-nonwiki
-| Package (27)       | E | M |
-|--------------------+---+---|
-| cygwin-mount       | ✔ |   |
-| dirtree            | ✔ | ✔ |
-| el-expectations    | ✔ |   |
-| ert-expectations   | ✔ | ✔ |
-| extract-text       | ✔ |   |
-| findr              | ✔ | ✔ |
-| highline           | ✔ |   |
-| http-post-simple   | ✔ | ✔ |
-| imdb               | ✔ |   |
-| key-chord          | ✔ | ✔ |
-| keyword-arg-macros | ✔ |   |
-| later-do           | ✔ |   |
-| levenshtein        | ✔ | ✔ |
-| oddmuse            | ✔ |   |
-| org-json           | ✔ |   |
-| policy-switch      | ✔ |   |
-| run-assoc          | ✔ |   |
-| screenshot         | ✔ |   |
-| shell-history      | ✔ | ✔ |
-| showtip            | ✔ | ✔ |
-| sr-speedbar        | ✔ | ✔ |
-| transpose-frame    | ✔ | ✔ |
-| tree-mode          | ✔ | ✔ |
-| unit-test          | ✔ |   |
-| w32-browser        | ✔ | ✔ |
-| windata            | ✔ | ✔ |
-| yaoddmuse          | ✔ |   |
-
-* Imported from tarball
-:PROPERTIES:
-:ID:       e8589487-88f3-46c8-8c97-ab2972a1a5e4
-:END:
-#+name: tarball
-#+begin_src emacs-lisp
-  (emir--list-orphans "manual tarball import")
-#+end_src
-#+results: tarball
-| Package (3)  | E | M |
-|--------------+---+---|
-| picolisp     | ✔ |   |
-| session      | ✔ | ✔ |
-| sml-modeline | ✔ | ✔ |
+In the below tables, a ✔ in the /E/ column means that a package is
+mirrored on the Emacsmirror, while a ✔ in the /M/ column means that
+a package is available from Melpa.
 
 * Dropped of by maintainer
 :PROPERTIES:
@@ -278,6 +146,148 @@ Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/is
 | undohist             | ✔ | ✔ |
 | yascroll             | ✔ | ✔ |
 | zoom-window          | ✔ | ✔ |
+
+* Upstream has disappeared but there are dependents
+:PROPERTIES:
+:ID:       5428bc8d-7949-40ff-bcca-d21fcbf4849e
+:END:
+
+The upstream repository or file download for these packages has
+disappeared.
+
+Or at least it wasn't available for a long time; in some cases the
+upstream might be available again.  I do not check to make sure this
+is not the case.  If you find such a package, then please let me know.
+
+Of course there are many more packages whose upstream has disappeared,
+then those listed here, many of which can be found on the Emacsattic.
+
+Those unmaintained packages that made it into the orphanage instead of
+just the attic, did so because other mirrored packages depend on them,
+and/or because they are available from Melpa (I mirror all packages
+that are available from there).
+
+#+name: disappeared
+#+begin_src emacs-lisp
+  (emir--list-orphans "upstream disappeared")
+#+end_src
+#+results: disappeared
+| Package (10) | E | M |
+|--------------+---+---|
+| dedicated    | ✔ | ✔ |
+| ecasound     | ✔ |   |
+| image+       | ✔ | ✔ |
+| keydef       | ✔ | ✔ |
+| miniedit     | ✔ | ✔ |
+| osd          | ✔ |   |
+| pager        | ✔ | ✔ |
+| smarty-mode  | ✔ | ✔ |
+| tail         | ✔ |   |
+| vm           | ✔ |   |
+
+* Upstream is unresponsive but there are issues
+:PROPERTIES:
+:ID:       f8703683-84ea-4a2c-9774-83bb3703aac8
+:END:
+
+The upstream repositories for these packages still existed (or at
+least they still existed when the packages were added here), but the
+packages have issues that have to be fixed and the maintainers did not
+respond when I contacted them.  I have patched these packages here in
+the orphanage to fix these issues.
+
+- Multiple packages bundle ~hyperspec~ but none of them is the
+  authoritive upstream.  Attempts to get the various non-upstreams
+  talking have failed so far.
+
+#+name: unresponsive
+#+begin_src emacs-lisp
+  (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
+#+end_src
+#+results: unresponsive
+| Package (13)       | E | M |
+|--------------------+---+---|
+| edb                | ✔ |   |
+| elisp-depend       | ✔ | ✔ |
+| evil-escape        | ✔ | ✔ |
+| helm-gitignore     | ✔ | ✔ |
+| hyperspec          | ✔ |   |
+| macrostep          | ✔ | ✔ |
+| oberon             | ✔ | ✔ |
+| ox-pandoc          | ✔ | ✔ |
+| read-char-spec     | ✔ |   |
+| setnu              | ✔ |   |
+| tablist            | ✔ | ✔ |
+| which-key-posframe | ✔ | ✔ |
+| yafolding          | ✔ | ✔ |
+
+* Wiki packages needed by non-wiki packages
+:PROPERTIES:
+:ID:       09e75274-9792-4670-8847-507cd2b28776
+:END:
+
+These packages are being distributed on the Emacswiki and other
+packages that are not distributed on the Emacswiki depend on them.
+
+Anyone can edit packages on the Emacswiki, which is a big security
+risk, so the Emacsmirror mirrors a frozen copy from the orphanage
+instead of the world-writable copy from the wiki.
+
+Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
+
+We should occationally review updates to these packages and to make
+new versions available to the Emacsmirror and Melpa, but at present
+we don't do that.
+
+#+name: required-by-nonwiki
+#+begin_src emacs-lisp
+  (emir--list-orphans "wiki needed by non-wiki")
+#+end_src
+#+results: required-by-nonwiki
+| Package (27)       | E | M |
+|--------------------+---+---|
+| cygwin-mount       | ✔ |   |
+| dirtree            | ✔ | ✔ |
+| el-expectations    | ✔ |   |
+| ert-expectations   | ✔ | ✔ |
+| extract-text       | ✔ |   |
+| findr              | ✔ | ✔ |
+| highline           | ✔ |   |
+| http-post-simple   | ✔ | ✔ |
+| imdb               | ✔ |   |
+| key-chord          | ✔ | ✔ |
+| keyword-arg-macros | ✔ |   |
+| later-do           | ✔ |   |
+| levenshtein        | ✔ | ✔ |
+| oddmuse            | ✔ |   |
+| org-json           | ✔ |   |
+| policy-switch      | ✔ |   |
+| run-assoc          | ✔ |   |
+| screenshot         | ✔ |   |
+| shell-history      | ✔ | ✔ |
+| showtip            | ✔ | ✔ |
+| sr-speedbar        | ✔ | ✔ |
+| transpose-frame    | ✔ | ✔ |
+| tree-mode          | ✔ | ✔ |
+| unit-test          | ✔ |   |
+| w32-browser        | ✔ | ✔ |
+| windata            | ✔ | ✔ |
+| yaoddmuse          | ✔ |   |
+
+* Imported from tarball
+:PROPERTIES:
+:ID:       e8589487-88f3-46c8-8c97-ab2972a1a5e4
+:END:
+#+name: tarball
+#+begin_src emacs-lisp
+  (emir--list-orphans "manual tarball import")
+#+end_src
+#+results: tarball
+| Package (3)  | E | M |
+|--------------+---+---|
+| picolisp     | ✔ |   |
+| session      | ✔ | ✔ |
+| sml-modeline | ✔ | ✔ |
 
 * New
 :PROPERTIES:
