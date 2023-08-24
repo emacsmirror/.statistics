@@ -235,9 +235,9 @@ instead of the world-writable copy from the wiki.
 
 Melpa also uses the frozen copies, see issue [[https://github.com/melpa/melpa/issues/2342][#2342]].
 
-We should occationally review updates to these packages and to make
-new versions available to the Emacsmirror and Melpa, but at present
-we don't do that.
+We should occationally review updates to these packages to make new
+versions available to the Emacsmirror and Melpa, but at present we
+don't do that.
 
 #+name: required-by-nonwiki
 #+begin_src emacs-lisp
@@ -273,21 +273,6 @@ we don't do that.
 | w32-browser        | ✔ | ✔ |
 | windata            | ✔ | ✔ |
 | yaoddmuse          | ✔ |   |
-
-* Imported from tarball
-:PROPERTIES:
-:ID:       e8589487-88f3-46c8-8c97-ab2972a1a5e4
-:END:
-#+name: tarball
-#+begin_src emacs-lisp
-  (emir--list-orphans "manual tarball import")
-#+end_src
-#+results: tarball
-| Package (3)  | E | M |
-|--------------+---+---|
-| picolisp     | ✔ |   |
-| session      | ✔ | ✔ |
-| sml-modeline | ✔ | ✔ |
 
 * New
 :PROPERTIES:

@@ -233,7 +233,7 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (26)           | Class     |
+| Package (27)           | Class     |
 |------------------------+-----------|
 | apel                   | github    |
 | auctex                 | gnu       |
@@ -253,6 +253,7 @@
 | ne2wm                  | github    |
 | omtose-phellack-theme  | github    |
 | org-contrib            | sourcehut |
+| picolisp               | github    |
 | projectile-trailblazer | github    |
 | projmake-mode          | github    |
 | semi                   | github    |
