@@ -91,7 +91,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (87)                    | Class     | Feature                  | Reason                                            |
+| Package (88)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -100,7 +100,9 @@
 | auto-complete-nxml              | github    | anything-project         | anything                                          |
 | bbdb                            | nongnu    | vm-autoloads             | generated external file                           |
 | borg                            | github    | loaddefs-gen             | forward compatibility                             |
+| bts                             | github    | el-expectations          | deprecated testing framework                      |
 | bts                             | github    | pophint-config           | pending [[https://github.com/aki2o/emacs-bts/pull/17][#17]]                                       |
+| caskxy                          | github    | el-expectations          | deprecated testing framework                      |
 | centered-window                 | github    | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                        |
 | citeproc                        | github    | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                         |
 | color-moccur                    | github    | moccur-edit              | shelved soft                                      |
@@ -226,42 +228,45 @@
 :ID:       c76cd7ab-1ba6-4256-96f8-05a147bd58ac
 :END:
 #+name: patched
-#+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
-  (epkg-sql [:select [name class]
-             :from packages
-             :where (= patched 't)
-             :order-by [(asc name)]])
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Commits"),*this*)
+  (mapcar (pcase-lambda (`(,name ,class))
+            (let ((pkg (epkg name)))
+              (list name class
+                    (with-emir-repository pkg
+                      (car (magit-rev-diff-count
+                            "master" "master@{upstream}"))))))
+          (epkg-sql [:select [name class]
+                     :from packages
+                     :where (= patched 't)
+                     :order-by [(asc name)]]))
 #+end_src
 #+results: patched
-| Package (27)           | Class     |
-|------------------------+-----------|
-| apel                   | github    |
-| auctex                 | gnu       |
-| auctex-latexmk         | github    |
-| emacspeak              | github    |
-| emux                   | github    |
-| ert-runner             | github    |
-| flim                   | github    |
-| go                     | github    |
-| icons-in-terminal      | github    |
-| karma                  | github    |
-| lookup                 | github    |
-| majapahit-themes       | gitlab    |
-| monorepo-zenitani      | github    |
-| nav                    | github    |
-| navorski               | github    |
-| ne2wm                  | github    |
-| omtose-phellack-theme  | github    |
-| org-contrib            | sourcehut |
-| picolisp               | github    |
-| projectile-trailblazer | github    |
-| projmake-mode          | github    |
-| semi                   | github    |
-| slime                  | github    |
-| spacemacs-theme        | github    |
-| tenv                   | github    |
-| twittering-mode        | github    |
-| wanderlust             | github    |
+| Package (24)          | Class     | Commits |
+|-----------------------+-----------+---------|
+| apel                  | github    |       3 |
+| auctex                | gnu       |       1 |
+| auctex-latexmk        | github    |       1 |
+| emacspeak             | github    |       3 |
+| emux                  | github    |       1 |
+| ert-runner            | github    |       1 |
+| flim                  | github    |       4 |
+| go                    | github    |       1 |
+| icons-in-terminal     | github    |       1 |
+| karma                 | github    |       1 |
+| lookup                | github    |       1 |
+| majapahit-themes      | gitlab    |       1 |
+| monorepo-zenitani     | github    |       1 |
+| nav                   | github    |       1 |
+| navorski              | github    |       1 |
+| ne2wm                 | github    |       1 |
+| omtose-phellack-theme | github    |       1 |
+| org-contrib           | sourcehut |       1 |
+| projmake-mode         | github    |       1 |
+| semi                  | github    |       2 |
+| slime                 | github    |       1 |
+| tenv                  | github    |       1 |
+| twittering-mode       | github    |       2 |
+| wanderlust            | github    |       2 |
 
 - emacspeak: https://github.com/tvraman/emacspeak/issues/54
 - emux: https://github.com/re5et/emux/pull/4
@@ -269,8 +274,6 @@
 - navorski: https://github.com/roman/navorski.el/issues/11
 - ne2wm: https://github.com/tkf/ne2wm/pull/3
 - omtose-phellack-theme: https://github.com/franksn/omtose-phellack-theme/pull/5
-- projectile-trailblazer: https://github.com/micdahl/projectile-trailblazer/issues/3
-- spacemacs-theme: https://github.com/nashamri/spacemacs-theme/pull/199
 - twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
 
 * Filtered repositories

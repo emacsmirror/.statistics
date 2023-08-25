@@ -244,35 +244,31 @@ don't do that.
   (emir--list-orphans "wiki needed by non-wiki")
 #+end_src
 #+results: required-by-nonwiki
-| Package (27)       | E | M |
-|--------------------+---+---|
-| cygwin-mount       | ✔ |   |
-| dirtree            | ✔ | ✔ |
-| el-expectations    | ✔ |   |
-| ert-expectations   | ✔ | ✔ |
-| extract-text       | ✔ |   |
-| findr              | ✔ | ✔ |
-| highline           | ✔ |   |
-| http-post-simple   | ✔ | ✔ |
-| imdb               | ✔ |   |
-| key-chord          | ✔ | ✔ |
-| keyword-arg-macros | ✔ |   |
-| later-do           | ✔ |   |
-| levenshtein        | ✔ | ✔ |
-| oddmuse            | ✔ |   |
-| org-json           | ✔ |   |
-| policy-switch      | ✔ |   |
-| run-assoc          | ✔ |   |
-| screenshot         | ✔ |   |
-| shell-history      | ✔ | ✔ |
-| showtip            | ✔ | ✔ |
-| sr-speedbar        | ✔ | ✔ |
-| transpose-frame    | ✔ | ✔ |
-| tree-mode          | ✔ | ✔ |
-| unit-test          | ✔ |   |
-| w32-browser        | ✔ | ✔ |
-| windata            | ✔ | ✔ |
-| yaoddmuse          | ✔ |   |
+| Package (23)     | E | M |
+|------------------+---+---|
+| cygwin-mount     | ✔ |   |
+| dirtree          | ✔ | ✔ |
+| ert-expectations | ✔ | ✔ |
+| findr            | ✔ | ✔ |
+| highline         | ✔ |   |
+| http-post-simple | ✔ | ✔ |
+| key-chord        | ✔ | ✔ |
+| later-do         | ✔ |   |
+| levenshtein      | ✔ | ✔ |
+| oddmuse          | ✔ |   |
+| org-json         | ✔ |   |
+| policy-switch    | ✔ |   |
+| run-assoc        | ✔ |   |
+| screenshot       | ✔ |   |
+| shell-history    | ✔ | ✔ |
+| showtip          | ✔ | ✔ |
+| sr-speedbar      | ✔ | ✔ |
+| transpose-frame  | ✔ | ✔ |
+| tree-mode        | ✔ | ✔ |
+| unit-test        | ✔ |   |
+| w32-browser      | ✔ | ✔ |
+| windata          | ✔ | ✔ |
+| yaoddmuse        | ✔ |   |
 
 * New
 :PROPERTIES:
