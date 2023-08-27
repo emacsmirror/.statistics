@@ -110,15 +110,15 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5316 |   5316 |       |       |      165 |         162 |  4759 |
+| github      | 5322 |   5322 |       |       |      165 |         163 |  4765 |
 | gitlab      |  183 |    183 |       |       |       18 |          13 |   164 |
 | codeberg    |   93 |     93 |       |       |        1 |          30 |    80 |
-| sourcehut   |   98 |     98 |       |       |       41 |           3 |    55 |
+| sourcehut   |  100 |    100 |       |       |       42 |           3 |    56 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | git         |  113 |    113 |       |       |       18 |           4 |    98 |
-| hg          |   16 |     16 |       |       |        1 |           0 |    14 |
+| hg          |   17 |     17 |       |       |        1 |           0 |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
 | wiki        |  586 |    586 |       |       |          |             |       |
@@ -128,10 +128,10 @@
 | shelved     | 1525 |        |  1525 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   243 |
+| secondary   |      |        |       |       |          |             |   245 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8801 |   6781 |  1525 |   498 |      414 |         212 |  5555 |
+| total       | 8810 |   6790 |  1525 |   498 |      415 |         213 |  5565 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -557,7 +557,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (138)   | Secondary package               | Class     |
+| Primary package (140)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -717,6 +717,7 @@
 | org-project-capture     | org-projectile-helm             | github    |
 | org-ql                  | helm-org-ql                     | github    |
 | org-recent-headings     | helm-org-recent-headings        | github    |
+| org-roam-ql             | org-roam-ql-ql                  | github    |
 | org-starter             | org-starter-swiper              | github    |
 | org2blog                | metaweblog                      | github    |
 | ox-twiki                | ox-tiddly                       | github    |
@@ -782,6 +783,7 @@
 | vdm-mode                | vdm-comint                      | github    |
 | vdm-mode                | vdm-snippets                    | github    |
 | verilog-ext             | verilog-ts-mode                 | github    |
+| vhdl-ext                | vhdl-ts-mode                    | github    |
 | w3m                     | shimbun                         | github    |
 | wgrep                   | wgrep-ack                       | github    |
 | wgrep                   | wgrep-ag                        | github    |
