@@ -14,26 +14,30 @@
                                      :auth 'emir)
                            #'string< :key (lambda (it) (cdr (assq 'name it))))))
 
-  (defun emir--list-orphans (&rest only)
-    (epkg-add-org-header
-     (--keep
-      (let* ((name (cdr (assq 'name it)))
-             (name (if (equal name "image-plus") "image+" name))
-             (pkg  (epkg name))
-             (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
-             (rcp  (epkg-get-recipe 'melpa name))
-             (reason (emir--config name :orphanage)))
-        (and (or (not only)
-                 (member reason only))
-             (list name
-                   (if pkg (if (eq type 'orphaned) "✔" type) "")
-                   (if rcp
-                       (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
-                           "✔"
-                         (closql--abbrev-class (eieio-object-class rcp)))
-                     ""))))
-      emir--orphans-cache)
-     '("Package" "E" "M")))
+  (defun emir--list-orphans (&optional only columns-fn sort-column)
+    (let ((table
+           (--keep
+            (let* ((name (cdr (assq 'name it)))
+                   (name (if (equal name "image-plus") "image+" name))
+                   (pkg  (epkg name))
+                   (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
+                   (rcp  (epkg-get-recipe 'melpa name))
+                   (reason (emir--config name :orphanage)))
+              (and (or (not only)
+                       (member reason only))
+                   `(,name
+                     ,(if pkg (if (eq type 'orphaned) "✔" type) "")
+                     ,(if rcp
+                          (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
+                              "✔"
+                            (closql--abbrev-class (eieio-object-class rcp)))
+                        "")
+                     ,@(and columns-fn (funcall columns-fn name)))))
+            emir--orphans-cache)))
+      (when sort-column
+        (setq table (cl-sort table #'string<
+                             :key (apply-partially #'nth sort-column))))
+      (epkg-add-org-header table '("Package" "E" "M"))))
 #+end_src
 #+name: addheader
 #+header: :var header="" :var rows=""
@@ -54,7 +58,7 @@ a package is available from Melpa.
 :END:
 #+name: dropped
 #+begin_src emacs-lisp
-  (emir--list-orphans "dropped by maintainer")
+  (emir--list-orphans (list "dropped by maintainer"))
 #+end_src
 #+results: dropped
 | Package (87)         | E | M |
@@ -169,7 +173,7 @@ that are available from there).
 
 #+name: disappeared
 #+begin_src emacs-lisp
-  (emir--list-orphans "upstream disappeared")
+  (emir--list-orphans (list "upstream disappeared"))
 #+end_src
 #+results: disappeared
 | Package (10) | E | M |
@@ -202,7 +206,7 @@ the orphanage to fix these issues.
 
 #+name: unresponsive
 #+begin_src emacs-lisp
-  (emir--list-orphans "upstream unresponsive" "multiple non-upstreams")
+  (emir--list-orphans (list "upstream unresponsive" "multiple non-upstreams"))
 #+end_src
 #+results: unresponsive
 | Package (13)       | E | M |
@@ -241,7 +245,21 @@ don't do that.
 
 #+name: required-by-nonwiki
 #+begin_src emacs-lisp
-  (emir--list-orphans "wiki needed by non-wiki")
+  (emir--list-orphans
+   (list "wiki needed by non-wiki")
+   ;; (lambda (name)
+   ;;   (let ((pkg (epkg name)))
+   ;;     (list (oref pkg updated)
+   ;;           (format "%s" (car (oref pkg maintainers)))
+   ;;           (mapconcat (pcase-lambda (`(,dependant ,_))
+   ;;                        (format "%s (%s)" dependant
+   ;;                                (ignore-errors
+   ;;                                  (closql--abbrev-class
+   ;;                                   (eieio-object-class (epkg dependant))))))
+   ;;                      (epkg-reverse-dependencies name)
+   ;;                      ", "))))
+   ;; 3
+   )
 #+end_src
 #+results: required-by-nonwiki
 | Package (23)     | E | M |
@@ -276,7 +294,7 @@ don't do that.
 :END:
 #+name: new
 #+begin_src emacs-lisp
-  (emir--list-orphans nil)
+  (emir--list-orphans (list nil))
 #+end_src
 #+results: new
 
