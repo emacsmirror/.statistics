@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5322 |   5322 |       |       |      165 |         163 |  4765 |
+| github      | 5329 |   5329 |       |       |      165 |         164 |  4774 |
 | gitlab      |  183 |    183 |       |       |       18 |          13 |   164 |
-| codeberg    |   93 |     93 |       |       |        1 |          30 |    80 |
-| sourcehut   |  100 |    100 |       |       |       42 |           3 |    56 |
+| codeberg    |   93 |     93 |       |       |        1 |          31 |    80 |
+| sourcehut   |  100 |    100 |       |       |       42 |           4 |    56 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,10 +128,10 @@
 | shelved     | 1525 |        |  1525 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   245 |
+| secondary   |      |        |       |       |          |             |   246 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8810 |   6790 |  1525 |   498 |      415 |         213 |  5565 |
+| total       | 8817 |   6797 |  1525 |   498 |      415 |         216 |  5575 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -593,6 +593,7 @@
 | colorless-themes        | lavenderless-theme              | sourcehut |
 | colorless-themes        | nordless-theme                  | sourcehut |
 | compile-multi           | compile-multi-all-the-icons     | github    |
+| compile-multi           | compile-multi-embark            | github    |
 | compile-multi           | consult-compile-multi           | github    |
 | copyit                  | copyit-pandoc                   | github    |
 | crystal-mode            | flycheck-crystal                | github    |

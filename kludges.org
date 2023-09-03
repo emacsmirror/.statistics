@@ -241,8 +241,8 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: patched
-| Package (24)          | Class     | Commits |
-|-----------------------+-----------+---------|
+| Package (23)          | Class  | Commits |
+|-----------------------+--------+---------|
 | apel                  | github    |       3 |
 | auctex                | gnu       |       1 |
 | auctex-latexmk        | github    |       1 |
@@ -260,7 +260,6 @@
 | navorski              | github    |       1 |
 | ne2wm                 | github    |       1 |
 | omtose-phellack-theme | github    |       1 |
-| org-contrib           | sourcehut |       1 |
 | projmake-mode         | github    |       1 |
 | semi                  | github    |       2 |
 | slime                 | github    |       1 |
