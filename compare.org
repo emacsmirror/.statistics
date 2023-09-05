@@ -110,14 +110,14 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5329 |   5329 |       |       |      165 |         164 |  4774 |
+| github      | 5329 |   5329 |       |       |      166 |         168 |  4774 |
 | gitlab      |  183 |    183 |       |       |       18 |          13 |   164 |
-| codeberg    |   93 |     93 |       |       |        1 |          31 |    80 |
+| codeberg    |   94 |     94 |       |       |        1 |          31 |    81 |
 | sourcehut   |  100 |    100 |       |       |       42 |           4 |    56 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  113 |    113 |       |       |       18 |           4 |    98 |
+| git         |  114 |    114 |       |       |       18 |           5 |    98 |
 | hg          |   17 |     17 |       |       |        1 |           0 |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   246 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8817 |   6797 |  1525 |   498 |      415 |         216 |  5575 |
+| total       | 8819 |   6799 |  1525 |   498 |      416 |         221 |  5576 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -492,7 +492,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (45)                | Url                                                                         |
+| Package (46)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -500,6 +500,7 @@
 | color-theme                 | https://github.com/emacsorphanage/color-theme                               |
 | company-go                  | https://github.com/nsf/gocode                                               |
 | company-racer               | https://github.com/emacsorphanage/company-racer                             |
+| conventional-changelog      | https://github.com/liuyinz/emacs-conventional-changelog                     |
 | dic-lookup-w3m              | https://github.com/emacsorphanage/dic-lookup-w3m                            |
 | django-mode                 | https://github.com/unrelentingtech/django-mode                              |
 | drawille                    | https://github.com/josuah/drawille-el                                       |

@@ -75,9 +75,9 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4639 |      68 |
+| GPL-3.0-or-later  |  4642 |      68 |
 | GPL-2.0-or-later  |  1166 |      17 |
-| MIT               |   389 |       6 |
+| MIT               |   388 |       6 |
 | GPL-3.0-only      |   173 |       3 |
 | BSD-2-Clause      |    84 |       1 |
 | BSD-3-Clause      |    71 |       1 |
@@ -109,9 +109,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6013 |      88 |
+| total GNU         |  6016 |      88 |
 |-------------------+-------+---------|
-| total             |  6797 |     100 |
+| total             |  6799 |     100 |
 
 ** Packages with unknown licenses
 :PROPERTIES:
@@ -152,8 +152,8 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |   842 |      55 |
-| GPL-3.0-or-later  |   407 |      27 |
-| GPL-2.0-only      |    62 |       4 |
+| GPL-3.0-or-later  |   408 |      27 |
+| GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    39 |       3 |
 | GPL-3.0-only      |    29 |       2 |
@@ -223,7 +223,7 @@
   (emir--insert-attic-packages-using-licenses "GPL" "GPL-2.0-only" "EPL")
 #+end_src
 #+results: attic-problematic
-| Package (106)       | License      |
+| Package (105)       | License      |
 |---------------------+--------------|
 | align-regexp        | GPL          |
 | amigo               | GPL-2.0-only |
@@ -231,7 +231,6 @@
 | axcess              | GPL          |
 | bibtex-mode         | GPL          |
 | blip                | GPL-2.0-only |
-| breadcrumb          | GPL-2.0-only |
 | buffer-thumbnail    | GPL          |
 | byrd-biff           | GPL          |
 | cdt                 | GPL          |
