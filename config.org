@@ -35,15 +35,13 @@
 #+NAME: table--delayed
 | Package                           | Reason                                               |
 |-----------------------------------+------------------------------------------------------|
+| bind-chord                        | Don't add; part of legacy repository but not Emacs   |
 | connection                        | Don't add; part of upstream dictionary but not Emacs |
 | django-snippets                   | Don't add; part of shelved django-mode               |
 | link                              | Don't add; part of upstream dictionary but not Emacs |
-| bind-chord                        | Don't add until moved to a separate repository       |
 | pcmpl-git                         | Don't add; lib by same name part of Emacs' pcomplete |
-| use-package-chords                | Don't add; part of bind-chord                        |
-| use-package-ensure-system-package | Don't add; part of legacy upstream but not Emacs     |
-| beframe                           | Being renamed to reframe                             |
-| ob-lurk                           | TODO investigate                                     |
+| use-package-chords                | Don't add; part of bind-chord, see above             |
+| use-package-ensure-system-package | Don't add; part of Emacs' use-package                |
 
 * Diverging                                                           :stats:
 :PROPERTIES:

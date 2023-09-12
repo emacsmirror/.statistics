@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5332 |   5332 |       |       |      167 |         169 |  4777 |
+| github      | 5334 |   5334 |       |       |      167 |         169 |  4772 |
 | gitlab      |  183 |    183 |       |       |       18 |          13 |   164 |
 | codeberg    |   94 |     94 |       |       |        1 |          31 |    81 |
-| sourcehut   |  100 |    100 |       |       |       42 |           4 |    56 |
+| sourcehut   |  101 |    101 |       |       |       42 |           4 |    57 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,10 +128,10 @@
 | shelved     | 1525 |        |  1525 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   246 |
+| secondary   |      |        |       |       |          |             |   251 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8822 |   6802 |  1525 |   498 |      417 |         222 |  5579 |
+| total       | 8825 |   6805 |  1525 |   498 |      417 |         222 |  5580 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -472,11 +472,15 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: melpa-delayed
-| Package (3)     | Melpa  | Reason                                               |
-|-----------------+--------+------------------------------------------------------|
-| connection      | github | Don't add; part of upstream dictionary but not Emacs |
-| django-snippets | github | Don't add; part of shelved django-mode               |
-| link            | github | Don't add; part of upstream dictionary but not Emacs |
+| Package (7)                       | Melpa  | Reason                                               |
+|-----------------------------------+--------+------------------------------------------------------|
+| bind-chord                        | github | Don't add; part of legacy repository but not Emacs   |
+| connection                        | github | Don't add; part of upstream dictionary but not Emacs |
+| django-snippets                   | github | Don't add; part of shelved django-mode               |
+| link                              | github | Don't add; part of upstream dictionary but not Emacs |
+| pcmpl-git                         | github | Don't add; lib by same name part of Emacs' pcomplete |
+| use-package-chords                | github | Don't add; part of bind-chord, see above             |
+| use-package-ensure-system-package | github | Don't add; part of Emacs' use-package                |
 
 ** Shelved
 :PROPERTIES:
@@ -558,17 +562,20 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (140)   | Secondary package               | Class     |
+| Primary package (141)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
 | ac-php                  | company-php                     | github    |
+| agda2-mode              | annotation                      | subtree   |
+| agda2-mode              | eri                             | subtree   |
 | ameba                   | flycheck-ameba                  | github    |
 | axiom-environment       | company-axiom                   | git       |
 | axiom-environment       | ob-axiom                        | git       |
 | biblio                  | biblio-core                     | github    |
 | bibtex-completion       | helm-bibtex                     | github    |
 | bibtex-completion       | ivy-bibtex                      | github    |
+| boa-ide                 | boa-mode                        | github    |
 | bufler                  | helm-bufler                     | github    |
 | button-lock             | wiki-nav                        | github    |
 | calfw                   | calfw-cal                       | github    |
@@ -584,6 +591,7 @@
 | chatgpt-shell           | dall-e-shell                    | github    |
 | chatgpt-shell           | ob-chatgpt-shell                | github    |
 | chatgpt-shell           | ob-dall-e-shell                 | github    |
+| chatgpt-shell           | shell-maker                     | github    |
 | chronometrist           | chronometrist-key-values        | codeberg  |
 | chronometrist           | chronometrist-spark             | codeberg  |
 | circe                   | tracking                        | github    |
@@ -615,6 +623,7 @@
 | dired-hacks             | dired-ranger                    | github    |
 | dired-hacks             | dired-subtree                   | github    |
 | dired-rsync             | dired-rsync-transient           | github    |
+| distel-completion-lib   | auto-complete-distel            | github    |
 | distel-completion-lib   | company-distel                  | github    |
 | dix                     | dix-evil                        | github    |
 | dogears                 | helm-dogears                    | github    |
@@ -688,12 +697,13 @@
 | lean-mode               | helm-lean                       | github    |
 | load-theme-buffer-local | color-theme-buffer-local        | github    |
 | loopy                   | loopy-dash                      | github    |
-| lurk-mode               | ob-lurk                         | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon               | github    |
 | magit                   | git-commit                      | github    |
 | magit                   | magit-section                   | github    |
 | major-mode-hydra        | pretty-hydra                    | github    |
 | maxima                  | company-maxima                  | gitlab    |
+| media-progress          | media-progress-dired            | github    |
+| media-progress          | media-progress-dirvish          | github    |
 | merlin                  | merlin-ac                       | subtree   |
 | merlin                  | merlin-company                  | subtree   |
 | merlin                  | merlin-iedit                    | subtree   |
@@ -703,6 +713,7 @@
 | monorepo-cadadr         | org-variable-pitch              | github    |
 | monorepo-cadadr         | paper-theme                     | github    |
 | monorepo-zenitani       | smart-compile                   | github    |
+| musicbrainz             | listenbrainz                    | github    |
 | nameframe               | nameframe-perspective           | github    |
 | nameframe               | nameframe-project               | github    |
 | nameframe               | nameframe-projectile            | github    |
@@ -716,6 +727,7 @@
 | org-multi-wiki          | helm-org-multi-wiki             | github    |
 | org-pdftools            | org-noter-pdftools              | github    |
 | org-project-capture     | org-category-capture            | github    |
+| org-project-capture     | org-projectile                  | github    |
 | org-project-capture     | org-projectile-helm             | github    |
 | org-ql                  | helm-org-ql                     | github    |
 | org-recent-headings     | helm-org-recent-headings        | github    |
@@ -767,6 +779,7 @@
 | term-manager            | term-project                    | github    |
 | term-manager            | term-projectile                 | github    |
 | tern                    | tern-auto-complete              | github    |
+| tmsu                    | ol-tmsu                         | github    |
 | transient-extras        | transient-extras-a2ps           | github    |
 | transient-extras        | transient-extras-lp             | github    |
 | tree-edit               | evil-tree-edit                  | github    |
@@ -779,13 +792,9 @@
 | treemacs                | treemacs-perspective            | github    |
 | treemacs                | treemacs-projectile             | github    |
 | treemacs                | treemacs-tab-bar                | github    |
-| use-package             | bind-key                        | builtin   |
-| use-package             | use-package-chords              | builtin   |
 | vdm-mode                | flycheck-vdm                    | github    |
 | vdm-mode                | vdm-comint                      | github    |
 | vdm-mode                | vdm-snippets                    | github    |
-| verilog-ext             | verilog-ts-mode                 | github    |
-| vhdl-ext                | vhdl-ts-mode                    | github    |
 | w3m                     | shimbun                         | github    |
 | wgrep                   | wgrep-ack                       | github    |
 | wgrep                   | wgrep-ag                        | github    |
