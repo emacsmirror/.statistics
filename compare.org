@@ -928,6 +928,11 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
+| Package (1) | Repository       |  Melpa | Dependants           |
+|-------------+------------------+--------+----------------------|
+| dart-mode   | [[https://github.com/bradyt/dart-mode][bradyt/dart-mode]] | 125037 | frontside-javascript |
+
+- dart-mode: https://github.com/melpa/melpa/pull/5832#issuecomment-1722462158
 
 ** Removed repositories
 :PROPERTIES:

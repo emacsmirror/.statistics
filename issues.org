@@ -39,14 +39,6 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2)     | Package         | Shelved |
-|-----------------+-----------------+---------|
-| verilog-ts-mode | verilog-ext     |         |
-| verilog-ts-mode | verilog-ts-mode |         |
-| vhdl-ts-mode    | vhdl-ext        |         |
-| vhdl-ts-mode    | vhdl-ts-mode    |         |
-
-- verilog-ts-mode, vhdl-ts-mode: https://github.com/melpa/melpa/pull/8729
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
