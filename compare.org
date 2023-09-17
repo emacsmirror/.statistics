@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5334 |   5334 |       |       |      167 |         169 |  4772 |
-| gitlab      |  183 |    183 |       |       |       18 |          13 |   164 |
+| github      | 5340 |   5340 |       |       |      168 |         169 |  4777 |
+| gitlab      |  182 |    182 |       |       |       18 |          13 |   163 |
 | codeberg    |   94 |     94 |       |       |        1 |          31 |    81 |
-| sourcehut   |  101 |    101 |       |       |       42 |           4 |    57 |
+| sourcehut   |  104 |    104 |       |       |       42 |           4 |    60 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -124,14 +124,14 @@
 | wiki        |  586 |    586 |       |       |          |             |       |
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  134 |    134 |       |       |          |             |   105 |
+| orphaned    |  135 |    135 |       |       |          |             |   106 |
 | shelved     | 1525 |        |  1525 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   251 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8825 |   6805 |  1525 |   498 |      417 |         222 |  5580 |
+| total       | 8834 |   6814 |  1525 |   498 |      418 |         222 |  5588 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -342,7 +342,7 @@
 | Package (19)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
-| org-edna            | bzr::https://bzr.savannah.gnu.org/r/org-edna-el   |
+| org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
 | auto-overlays       | http://www.dr-qubit.org/git/predictive.git        |
 | dict-tree           | http://www.dr-qubit.org/git/predictive.git        |
 | heap                | http://www.dr-qubit.org/git/predictive.git        |
@@ -928,11 +928,6 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (1) | Repository       |  Melpa | Dependants           |
-|-------------+------------------+--------+----------------------|
-| dart-mode   | [[https://github.com/bradyt/dart-mode][bradyt/dart-mode]] | 125037 | frontside-javascript |
-
-- dart-mode: https://github.com/melpa/melpa/pull/5832#issuecomment-1722462158
 
 ** Removed repositories
 :PROPERTIES:
