@@ -110,14 +110,14 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5342 |   5342 |       |       |      168 |         169 |  4779 |
+| github      | 5344 |   5344 |       |       |      169 |         169 |  4780 |
 | gitlab      |  182 |    182 |       |       |       18 |          13 |   163 |
 | codeberg    |   94 |     94 |       |       |        1 |          31 |    81 |
 | sourcehut   |  104 |    104 |       |       |       42 |           4 |    60 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  114 |    114 |       |       |       18 |           5 |    98 |
+| git         |  115 |    115 |       |       |       19 |           5 |    98 |
 | hg          |   17 |     17 |       |       |        1 |           0 |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1525 |        |  1525 |       |          |             |    21 |
+| shelved     | 1526 |        |  1526 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   251 |
+| secondary   |      |        |       |       |          |             |   252 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8832 |   6816 |  1525 |   498 |      418 |         222 |  5590 |
+| total       | 8836 |   6819 |  1526 |   498 |      420 |         222 |  5592 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -562,7 +562,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (141)   | Secondary package               | Class     |
+| Primary package (142)   | Secondary package               | Class     |
 |-------------------------+---------------------------------+-----------|
 | 750words                | ox-750words                     | github    |
 | ac-php                  | ac-php-core                     | github    |
@@ -792,6 +792,7 @@
 | treemacs                | treemacs-perspective            | github    |
 | treemacs                | treemacs-projectile             | github    |
 | treemacs                | treemacs-tab-bar                | github    |
+| universal-sidecar       | universal-sidecar-elfeed-score  | sourcehut |
 | vdm-mode                | flycheck-vdm                    | github    |
 | vdm-mode                | vdm-comint                      | github    |
 | vdm-mode                | vdm-snippets                    | github    |
