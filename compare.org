@@ -110,9 +110,9 @@
 | gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5358 |   5358 |       |       |      169 |         170 |  4793 |
-| gitlab      |  185 |    185 |       |       |       18 |          13 |   166 |
-| sourcehut   |  103 |    103 |       |       |       42 |           4 |    59 |
+| github      | 5367 |   5367 |       |       |      170 |         172 |  4801 |
+| gitlab      |  186 |    186 |       |       |       18 |          13 |   167 |
+| sourcehut   |  104 |    104 |       |       |       42 |           4 |    59 |
 | codeberg    |   95 |     95 |       |       |        1 |          31 |    82 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -128,10 +128,10 @@
 | shelved     | 1529 |        |  1529 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   253 |
+| secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8859 |   6839 |  1529 |   498 |      420 |         223 |  5612 |
+| total       | 8870 |   6850 |  1529 |   498 |      421 |         225 |  5623 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -750,6 +750,7 @@
 | prescient               | vertico-prescient                | github    |
 | processing-mode         | processing-snippets              | github    |
 | projection              | projection-multi                 | github    |
+| projection              | projection-multi-embark          | github    |
 | prosjekt                | dirtree-prosjekt                 | github    |
 | prosjekt                | helm-prosjekt                    | github    |
 | psalm                   | flycheck-psalm                   | github    |
@@ -794,6 +795,7 @@
 | treemacs                | treemacs-tab-bar                 | github    |
 | universal-sidecar       | universal-sidecar-elfeed-related | sourcehut |
 | universal-sidecar       | universal-sidecar-elfeed-score   | sourcehut |
+| universal-sidecar       | universal-sidecar-roam           | sourcehut |
 | vdm-mode                | flycheck-vdm                     | github    |
 | vdm-mode                | vdm-comint                       | github    |
 | vdm-mode                | vdm-snippets                     | github    |

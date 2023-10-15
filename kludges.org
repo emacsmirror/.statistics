@@ -65,19 +65,20 @@
              :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (10)     | Class   | Feature              | Reason                |
-|------------------+---------+----------------------+-----------------------|
-| rgb              | gitlab  | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| rgb              | gitlab  | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| fsharp-mode      | github  | integration-tests    | conflicting test file |
-| org              | gnu     | org-test             | conflicting test file |
-| org-gcal         | github  | org-test             | conflicting test file |
-| font-lock-studio | github  | tabulated-list       | harmless in test file |
-| gumshoe          | github  | targets/install-deps | conflicting test file |
-| ivy              | github  | targets/install-deps | conflicting test file |
-| clojure-mode     | github  | test-helper          | conflicting test file |
-| elixir-mode      | github  | test-helper          | conflicting test file |
-| diffscuss-mode   | subtree | test-simple          | bundled test utility  |
+| Package (11)     | Class     | Feature              | Reason                |
+|------------------+-----------+----------------------+-----------------------|
+| rgb              | gitlab    | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| rgb              | gitlab    | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| fsharp-mode      | github    | integration-tests    | conflicting test file |
+| org-contrib      | sourcehut | ob-asymptote         | becoming independent  |
+| org              | gnu       | org-test             | conflicting test file |
+| org-gcal         | github    | org-test             | conflicting test file |
+| font-lock-studio | github    | tabulated-list       | harmless in test file |
+| gumshoe          | github    | targets/install-deps | conflicting test file |
+| ivy              | github    | targets/install-deps | conflicting test file |
+| clojure-mode     | github    | test-helper          | conflicting test file |
+| elixir-mode      | github    | test-helper          | conflicting test file |
+| diffscuss-mode   | subtree   | test-simple          | bundled test utility  |
 
 * Drop required features
 :PROPERTIES:
