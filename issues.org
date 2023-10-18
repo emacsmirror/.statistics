@@ -97,3 +97,7 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: missing-summary
+
+* Failing updates
+
+- ligo-mode: https://github.com/melpa/melpa/commit/c8a86d223f5e764419aaf964d69a30350f74f904
