@@ -107,17 +107,17 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  491 |        |       |   498 |       18 |             |       |
-| gnu-elpa    |  145 |    145 |       |       |      133 |             |       |
+| gnu-elpa    |  145 |    145 |       |       |      138 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5367 |   5367 |       |       |      170 |         172 |  4801 |
-| gitlab      |  186 |    186 |       |       |       18 |          13 |   167 |
+| github      | 5368 |   5368 |       |       |      169 |         172 |  4802 |
+| gitlab      |  186 |    186 |       |       |       18 |          13 |   166 |
 | sourcehut   |  104 |    104 |       |       |       42 |           4 |    59 |
 | codeberg    |   95 |     95 |       |       |        1 |          31 |    82 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  118 |    118 |       |       |       19 |           5 |   101 |
+| git         |  118 |    118 |       |       |       14 |           5 |   101 |
 | hg          |   17 |     17 |       |       |        1 |           0 |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
@@ -129,9 +129,9 @@
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   255 |
-| unreleased  |      |        |       |       |        7 |           0 |       |
+| unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8870 |   6850 |  1529 |   498 |      421 |         225 |  5623 |
+| total       | 8871 |   6851 |  1529 |   498 |      419 |         225 |  5623 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -339,16 +339,11 @@
                         [gnu-elpa])))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (19)        | :url                                              |
+| Package (14)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
 | auto-overlays       | http://www.dr-qubit.org/git/predictive.git        |
-| dict-tree           | http://www.dr-qubit.org/git/predictive.git        |
-| heap                | http://www.dr-qubit.org/git/predictive.git        |
-| queue               | http://www.dr-qubit.org/git/predictive.git        |
-| tNFA                | http://www.dr-qubit.org/git/predictive.git        |
-| trie                | http://www.dr-qubit.org/git/predictive.git        |
 | buildbot            | https://g.ypei.me/buildbot.el.git                 |
 | vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
 | setup               | https://git.sr.ht/~pkal/setup                     |
@@ -947,3 +942,13 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-removed
+| Package (6)     | Repository            |  Melpa | Dependants                          |
+|-----------------+-----------------------+--------+-------------------------------------|
+| erc-track-score | [[https://github.com/jd/erc-track-score.el][jd/erc-track-score.el]] |   1517 |                                     |
+| google-contacts | [[https://github.com/jd/google-contacts.el][jd/google-contacts.el]] |   5896 | gnus helm-google-contacts hyperbole |
+| google-maps     | [[https://github.com/jd/google-maps.el][jd/google-maps.el]]     |  14448 | calfw juick                         |
+| muse-blog       | [[https://github.com/jd/muse-blog.el][jd/muse-blog.el]]       |        |                                     |
+| naquadah-theme  | [[https://github.com/jd/naquadah-theme][jd/naquadah-theme]]     | 126649 |                                     |
+| offlineimap     | [[https://github.com/jd/offlineimap.el][jd/offlineimap.el]]     |   4495 |                                     |
+
+- Julien Danjou: contacted by mail
