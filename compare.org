@@ -107,17 +107,17 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  491 |        |       |   498 |       18 |             |       |
-| gnu-elpa    |  145 |    145 |       |       |      138 |             |       |
+| gnu-elpa    |  145 |    145 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5368 |   5368 |       |       |      169 |         172 |  4802 |
-| gitlab      |  186 |    186 |       |       |       18 |          13 |   166 |
+| github      | 5371 |   5371 |       |       |      169 |         172 |  4805 |
+| gitlab      |  185 |    185 |       |       |       18 |          13 |   166 |
 | sourcehut   |  104 |    104 |       |       |       42 |           4 |    59 |
 | codeberg    |   95 |     95 |       |       |        1 |          31 |    82 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  118 |    118 |       |       |       14 |           5 |   101 |
+| git         |  118 |    118 |       |       |       13 |           5 |   101 |
 | hg          |   17 |     17 |       |       |        1 |           0 |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1529 |        |  1529 |       |          |             |    21 |
+| shelved     | 1530 |        |  1530 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8871 |   6851 |  1529 |   498 |      419 |         225 |  5623 |
+| total       | 8874 |   6853 |  1530 |   498 |      419 |         225 |  5626 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -339,11 +339,10 @@
                         [gnu-elpa])))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (14)        | :url                                              |
+| Package (13)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
-| auto-overlays       | http://www.dr-qubit.org/git/predictive.git        |
 | buildbot            | https://g.ypei.me/buildbot.el.git                 |
 | vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
 | setup               | https://git.sr.ht/~pkal/setup                     |
