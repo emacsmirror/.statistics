@@ -110,9 +110,9 @@
 | gnu-elpa    |  145 |    145 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5371 |   5371 |       |       |      169 |         172 |  4805 |
+| github      | 5378 |   5378 |       |       |      169 |         172 |  4812 |
 | gitlab      |  185 |    185 |       |       |       18 |          13 |   166 |
-| sourcehut   |  104 |    104 |       |       |       42 |           4 |    59 |
+| sourcehut   |  105 |    105 |       |       |       42 |           4 |    60 |
 | codeberg    |   95 |     95 |       |       |        1 |          31 |    82 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8874 |   6853 |  1530 |   498 |      419 |         225 |  5626 |
+| total       | 8882 |   6861 |  1530 |   498 |      419 |         225 |  5634 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -825,6 +825,11 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (1)  | Mirror |                          | Melpa  |                          |
+|--------------+--------+--------------------------+--------+--------------------------|
+| tab-jump-out | github | [[https://github.com/victorteokw/tab-jump-out][victorteokw/tab-jump-out]] | github | [[https://github.com/mkleehammer/tab-jump-out][mkleehammer/tab-jump-out]] |
+
+tab-jump-out: https://github.com/melpa/melpa/pull/8800
 
 ** Diverging branches
 :PROPERTIES:
