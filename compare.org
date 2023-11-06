@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5380 |   5380 |       |       |      172 |         172 |  4812 |
+| github      | 5385 |   5385 |       |       |      173 |         172 |  4816 |
 | gitlab      |  185 |    185 |       |       |       18 |          13 |   166 |
 | sourcehut   |  105 |    105 |       |       |       42 |           4 |    60 |
-| codeberg    |   95 |     95 |       |       |        1 |          31 |    82 |
+| codeberg    |   95 |     95 |       |       |        2 |          31 |    82 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8884 |   6863 |  1530 |   498 |      421 |         225 |  5634 |
+| total       | 8889 |   6868 |  1530 |   498 |      423 |         225 |  5638 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -928,11 +928,11 @@
 #+results: github-archived
 | Package (5)          | Repository                    |  Melpa | Dependants     |
 |----------------------+-------------------------------+--------+----------------|
-| ejc-sql              | [[https://github.com/kostafey/ejc-sql][kostafey/ejc-sql]]              |   8151 |                |
-| organic-green-theme  | [[https://github.com/kostafey/organic-green-theme][kostafey/organic-green-theme]]  | 148566 |                |
-| popup-switcher       | [[https://github.com/kostafey/popup-switcher][kostafey/popup-switcher]]       |   4582 | window-purpose |
-| sphinx-frontend      | [[https://github.com/kostafey/sphinx-frontend][kostafey/sphinx-frontend]]      |   2817 |                |
-| temporary-persistent | [[https://github.com/kostafey/temporary-persistent][kostafey/temporary-persistent]] |    561 |                |
+| ejc-sql              | [[https://github.com/kostafey/ejc-sql][kostafey/ejc-sql]]              |   8426 |                |
+| organic-green-theme  | [[https://github.com/kostafey/organic-green-theme][kostafey/organic-green-theme]]  | 149345 |                |
+| popup-switcher       | [[https://github.com/kostafey/popup-switcher][kostafey/popup-switcher]]       |   4590 | window-purpose |
+| sphinx-frontend      | [[https://github.com/kostafey/sphinx-frontend][kostafey/sphinx-frontend]]      |   2825 |                |
+| temporary-persistent | [[https://github.com/kostafey/temporary-persistent][kostafey/temporary-persistent]] |    564 |                |
 
 - kostafey: https://github.com/melpa/melpa/issues/8807
 
