@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5408 |   5408 |       |       |      175 |         173 |  4836 |
+| github      | 5409 |   5409 |       |       |      175 |         173 |  4836 |
 | gitlab      |  184 |    184 |       |       |       18 |          13 |   165 |
 | sourcehut   |  109 |    109 |       |       |       43 |           4 |    63 |
 | codeberg    |   95 |     95 |       |       |        2 |          31 |    82 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8915 |   6894 |  1530 |   498 |      426 |         226 |  5660 |
+| total       | 8916 |   6895 |  1530 |   498 |      426 |         226 |  5660 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -926,8 +926,9 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (5)          | Repository                    |  Melpa | Dependants     |
+| Package (6)          | Repository                    |  Melpa | Dependants     |
 |----------------------+-------------------------------+--------+----------------|
+| bitbucket            | [[https://github.com/tjaartvdwalt/bitbucket.el][tjaartvdwalt/bitbucket.el]]     |   1202 |                |
 | ejc-sql              | [[https://github.com/kostafey/ejc-sql][kostafey/ejc-sql]]              |   8426 |                |
 | organic-green-theme  | [[https://github.com/kostafey/organic-green-theme][kostafey/organic-green-theme]]  | 149345 |                |
 | popup-switcher       | [[https://github.com/kostafey/popup-switcher][kostafey/popup-switcher]]       |   4590 | window-purpose |

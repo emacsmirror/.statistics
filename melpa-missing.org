@@ -48,7 +48,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (551)                | Link                                    | Summary                                                                |
+| Package (552)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -93,6 +93,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | org-passwords                | [[https://github.com/alfaromurillo/org-passwords.el][alfaromurillo/org-passwords.el]]          | Org derived mode for managing passwords                                |
 | org-daypage                  | [[https://github.com/almost/org-daypage][almost/org-daypage]]                      | Org-Mode Day Page                                                      |
 | frame-bufs                   | [[https://github.com/alpaker/frame-bufs][alpaker/frame-bufs]]                      | A minor mode for frame-relative buffer lists                           |
+| makem                        | [[https://github.com/alphapapa/makem.sh][alphapapa/makem.sh]]                      | Tools for using makem.sh in Emacs                                      |
 | erc-highlight-nicknames      | [[https://github.com/amalloy/erc-highlight-nick][amalloy/erc-highlight-nick]]              | Highlights nicknames                                                   |
 | activator                    | [[https://github.com/apg/activator-el][apg/activator-el]]                        | An init.d style config manager                                         |
 | kibit-mode                   | [[https://github.com/aredington/kibit-mode][aredington/kibit-mode]]                   | Enhance clojure-mode with Kibit analysis                               |
@@ -233,10 +234,10 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | vimvars                      | [[https://github.com/jamesyoungman/vimvars][jamesyoungman/vimvars]]                   | Emacs support for VI modelines                                         |
 | includeme                    | [[https://github.com/jart/includeme][jart/includeme]]                          | Auto C/C++ '#include' and 'using' in Emacs                             |
 | flx-rs                       | [[https://github.com/jcs-elpa/flx-rs][jcs-elpa/flx-rs]]                         | Flx in Rust using dynamic module                                       |
-| fuz-bin                      | [[https://github.com/jcs-elpa/fuz-bin][jcs-elpa/fuz-bin]]                        | Fast and precise fuzzy scoring/matching utils                          |
 | github-tags                  | [[https://github.com/jcs-elpa/github-tags][jcs-elpa/github-tags]]                    | Retrieve tags information through GitHub API                           |
-| sublime-fuzzy                | [[https://github.com/jcs-elpa/sublime-fuzzy][jcs-elpa/sublime-fuzzy]]                  | Fuzzy matching algorithm like Sublime Text's string search             |
 | flxy                         | [[https://github.com/jcs-legacy/flxy][jcs-legacy/flxy]]                         | Fast, character-based search library in Rust                           |
+| fuz-bin                      | [[https://github.com/jcs-legacy/fuz-bin][jcs-legacy/fuz-bin]]                      | Fast and precise fuzzy scoring/matching utils                          |
+| sublime-fuzzy                | [[https://github.com/jcs-legacy/sublime-fuzzy][jcs-legacy/sublime-fuzzy]]                | Fuzzy matching algorithm like Sublime Text's string search             |
 | muse-blog                    | [[https://github.com/jd/muse-blog.el][jd/muse-blog.el]]                         | Keep and publish a blog                                                |
 | qooxdoo                      | [[https://github.com/jdodds/qooxdoo.el][jdodds/qooxdoo.el]]                       | Helper functions for working with qooxdoo                              |
 | trelloel                     | [[https://github.com/jdodds/trelloel][jdodds/trelloel]]                         | Communication layer for the Trello API                                 |
