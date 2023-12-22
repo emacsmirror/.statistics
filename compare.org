@@ -110,9 +110,9 @@
 | gnu-elpa    |  145 |    145 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5409 |   5409 |       |       |      175 |         173 |  4836 |
+| github      | 5410 |   5410 |       |       |      176 |         173 |  4837 |
 | gitlab      |  184 |    184 |       |       |       18 |          13 |   165 |
-| sourcehut   |  109 |    109 |       |       |       43 |           4 |    63 |
+| sourcehut   |  110 |    110 |       |       |       43 |           4 |    65 |
 | codeberg    |   95 |     95 |       |       |        2 |          31 |    82 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8916 |   6895 |  1530 |   498 |      426 |         226 |  5660 |
+| total       | 8918 |   6897 |  1530 |   498 |      427 |         226 |  5663 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -926,10 +926,11 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (6)          | Repository                    |  Melpa | Dependants     |
+| Package (7)          | Repository                    |  Melpa | Dependants     |
 |----------------------+-------------------------------+--------+----------------|
 | bitbucket            | [[https://github.com/tjaartvdwalt/bitbucket.el][tjaartvdwalt/bitbucket.el]]     |   1202 |                |
 | ejc-sql              | [[https://github.com/kostafey/ejc-sql][kostafey/ejc-sql]]              |   8426 |                |
+| memento-mori         | [[https://github.com/lassik/emacs-memento-mori][lassik/emacs-memento-mori]]     |    606 |                |
 | organic-green-theme  | [[https://github.com/kostafey/organic-green-theme][kostafey/organic-green-theme]]  | 149345 |                |
 | popup-switcher       | [[https://github.com/kostafey/popup-switcher][kostafey/popup-switcher]]       |   4590 | window-purpose |
 | sphinx-frontend      | [[https://github.com/kostafey/sphinx-frontend][kostafey/sphinx-frontend]]      |   2825 |                |
