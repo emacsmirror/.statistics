@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1530 |        |  1530 |       |          |             |    21 |
+| shelved     | 1531 |        |  1531 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8918 |   6897 |  1530 |   498 |      427 |         226 |  5663 |
+| total       | 8919 |   6897 |  1531 |   498 |      427 |         226 |  5663 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -926,11 +926,10 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (7)          | Repository                    |  Melpa | Dependants     |
+| Package (6)          | Repository                    |  Melpa | Dependants     |
 |----------------------+-------------------------------+--------+----------------|
 | bitbucket            | [[https://github.com/tjaartvdwalt/bitbucket.el][tjaartvdwalt/bitbucket.el]]     |   1202 |                |
 | ejc-sql              | [[https://github.com/kostafey/ejc-sql][kostafey/ejc-sql]]              |   8426 |                |
-| memento-mori         | [[https://github.com/lassik/emacs-memento-mori][lassik/emacs-memento-mori]]     |    606 |                |
 | organic-green-theme  | [[https://github.com/kostafey/organic-green-theme][kostafey/organic-green-theme]]  | 149345 |                |
 | popup-switcher       | [[https://github.com/kostafey/popup-switcher][kostafey/popup-switcher]]       |   4590 | window-purpose |
 | sphinx-frontend      | [[https://github.com/kostafey/sphinx-frontend][kostafey/sphinx-frontend]]      |   2825 |                |
