@@ -73,13 +73,15 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (2)     | Class  | Feature              | Provider |
+| Package (3)     | Class  | Feature              | Provider |
 |-----------------+--------+----------------------+----------|
 | flex-compile    | github | slite                |          |
+| ob-base64       | github | inf-base64           |          |
 | syntactic-close | github | ar-sexp              |          |
 | syntactic-close | github | thing-at-point-utils |          |
 
 - flex-compile: https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
+- ob-base64: https://github.com/melpa/melpa/pull/8833#issuecomment-1873562861
 - syntactic-close: https://github.com/emacs-berlin/syntactic-close/commit/395f3cf5f37b85bf7d7ce88fd58a0d0632414792
 
 * Missing library summary
