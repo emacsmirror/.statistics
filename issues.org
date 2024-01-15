@@ -73,9 +73,10 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (2)     | Class  | Feature              | Provider |
+| Package (3)     | Class  | Feature              | Provider |
 |-----------------+--------+----------------------+----------|
 | flex-compile    | github | slite                |          |
+| jirascope       | github | jirascope-dyn        |          |
 | syntactic-close | github | ar-sexp              |          |
 | syntactic-close | github | thing-at-point-utils |          |
 

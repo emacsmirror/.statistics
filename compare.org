@@ -107,12 +107,12 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  491 |        |       |   498 |       18 |             |       |
-| gnu-elpa    |  145 |    145 |       |       |      139 |             |       |
+| gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5410 |   5410 |       |       |      176 |         174 |  4839 |
-| gitlab      |  189 |    189 |       |       |       18 |          13 |   170 |
-| sourcehut   |  111 |    111 |       |       |       43 |           4 |    66 |
+| github      | 5410 |   5410 |       |       |      193 |         174 |  4842 |
+| gitlab      |  189 |    189 |       |       |       17 |          13 |   170 |
+| sourcehut   |  111 |    111 |       |       |       26 |           4 |    65 |
 | codeberg    |   96 |     96 |       |       |        2 |          31 |    83 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1534 |        |  1534 |       |          |             |    21 |
+| shelved     | 1538 |        |  1538 |       |          |             |    21 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   255 |
+| secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8927 |   6902 |  1534 |   498 |      427 |         227 |  5670 |
+| total       | 8931 |   6902 |  1538 |   498 |      427 |         227 |  5675 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -339,7 +339,7 @@
                         [gnu-elpa])))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (13)        | :url                                              |
+| Package (12)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
@@ -352,7 +352,6 @@
 | chess               | https://github.com/jwiegley/emacs-chess.git       |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
 | ediprolog           | https://github.com/triska/ediprolog               |
-| persist             | https://gitlab.com/phillord/persist               |
 | bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |
 
 * NonGNU Elpa
@@ -490,7 +489,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (48)                | Url                                                                         |
+| Package (52)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
@@ -512,6 +511,7 @@
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
 | fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
+| gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
@@ -536,10 +536,13 @@
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | session                     | https://github.com/emacsorphanage/session                                   |
 | sml-modeline                | https://github.com/emacsorphanage/sml-modeline                              |
+| srefactor                   | https://github.com/tuhdo/semantic-refactor                                  |
+| stickyfunc-enhance          | https://github.com/tuhdo/semantic-stickyfunc-enhance                        |
 | twtxt                       | https://github.com/deadblackclover/twtxt-el                                 |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |
 | weechat                     | https://github.com/the-kenny/weechat.el                                     |
 | weechat-alert               | https://github.com/Kungi/weechat-alert                                      |
+| xwidgete                    | https://github.com/tuhdo/xwidgete                                           |
 
 ** Shared repositories
 :PROPERTIES:
@@ -558,7 +561,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (142)   | Secondary package                | Class     |
+| Primary package (144)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -693,6 +696,7 @@
 | lean-mode               | helm-lean                        | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
 | loopy                   | loopy-dash                       | github    |
+| lurk-mode               | ob-lurk                          | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                | github    |
 | magit                   | git-commit                       | github    |
 | magit                   | magit-section                    | github    |
@@ -720,6 +724,7 @@
 | nixos-options           | helm-nixos-options               | github    |
 | nixos-options           | nix-sandbox                      | github    |
 | opener                  | evil-opener                      | github    |
+| org-agenda-files-track  | org-agenda-files-track-ql        | sourcehut |
 | org-multi-wiki          | helm-org-multi-wiki              | github    |
 | org-pdftools            | org-noter-pdftools               | github    |
 | org-project-capture     | org-category-capture             | github    |
@@ -789,6 +794,7 @@
 | treemacs                | treemacs-perspective             | github    |
 | treemacs                | treemacs-projectile              | github    |
 | treemacs                | treemacs-tab-bar                 | github    |
+| universal-sidecar       | org-cite-sidecar                 | sourcehut |
 | universal-sidecar       | universal-sidecar-elfeed-related | sourcehut |
 | universal-sidecar       | universal-sidecar-elfeed-score   | sourcehut |
 | universal-sidecar       | universal-sidecar-roam           | sourcehut |
