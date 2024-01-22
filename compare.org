@@ -110,9 +110,9 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5410 |   5410 |       |       |      193 |         174 |  4842 |
-| gitlab      |  189 |    189 |       |       |       17 |          13 |   170 |
-| sourcehut   |  111 |    111 |       |       |       26 |           4 |    65 |
+| github      | 5414 |   5414 |       |       |      194 |         174 |  4842 |
+| gitlab      |  190 |    190 |       |       |       17 |          13 |   172 |
+| sourcehut   |  112 |    112 |       |       |       27 |           4 |    65 |
 | codeberg    |   96 |     96 |       |       |        2 |          31 |    83 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1538 |        |  1538 |       |          |             |    21 |
+| shelved     | 1538 |        |  1538 |       |          |             |    24 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   258 |
+| secondary   |      |        |       |       |          |             |   260 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8931 |   6902 |  1538 |   498 |      427 |         227 |  5675 |
+| total       | 8937 |   6908 |  1538 |   498 |      429 |         227 |  5682 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -794,7 +794,9 @@
 | treemacs                | treemacs-perspective             | github    |
 | treemacs                | treemacs-projectile              | github    |
 | treemacs                | treemacs-tab-bar                 | github    |
+| universal-sidecar       | ebdb-mua-sidecar                 | sourcehut |
 | universal-sidecar       | org-cite-sidecar                 | sourcehut |
+| universal-sidecar       | universal-sidecar-citeproc       | sourcehut |
 | universal-sidecar       | universal-sidecar-elfeed-related | sourcehut |
 | universal-sidecar       | universal-sidecar-elfeed-score   | sourcehut |
 | universal-sidecar       | universal-sidecar-roam           | sourcehut |
@@ -889,32 +891,36 @@
 #+name: melpa-from-attic
 #+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
   (epkg-sql [:select [name url] :from melpa-recipes
-             :where (like url '"\"https://github.com/emacsattic%")])
+             :where (like url '"\"https://github.com/emacsattic%")
+             :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (21)        | Url                                               |
-|---------------------+---------------------------------------------------|
-| angular-mode        | https://github.com/emacsattic/angular-mode        |
-| color-theme         | https://github.com/emacsattic/color-theme         |
-| company-go          | https://github.com/emacsattic/company-go          |
-| company-racer       | https://github.com/emacsattic/company-racer       |
-| dic-lookup-w3m      | https://github.com/emacsattic/dic-lookup-w3m      |
-| drawille            | https://github.com/emacsattic/drawille            |
-| e2wm-R              | https://github.com/emacsattic/e2wm-R              |
-| edit-at-point       | https://github.com/emacsattic/edit-at-point       |
-| eno                 | https://github.com/emacsattic/eno                 |
-| fold-dwim           | https://github.com/emacsattic/fold-dwim           |
-| go-autocomplete     | https://github.com/emacsattic/go-autocomplete     |
-| ido-migemo          | https://github.com/emacsattic/ido-migemo          |
-| inlineR             | https://github.com/emacsattic/inlineR             |
-| mic-paren           | https://github.com/emacsattic/mic-paren           |
-| org-doing           | https://github.com/emacsattic/org-doing           |
-| org-multiple-keymap | https://github.com/emacsattic/org-multiple-keymap |
-| org-wunderlist      | https://github.com/emacsattic/org-wunderlist      |
-| quick-preview       | https://github.com/emacsattic/quick-preview       |
-| redshank            | https://github.com/emacsattic/redshank            |
-| session             | https://github.com/emacsattic/session             |
-| sml-modeline        | https://github.com/emacsattic/sml-modeline        |
+| Package (24)        | Url                                                       |
+|---------------------+-----------------------------------------------------------|
+| angular-mode        | https://github.com/emacsattic/angular-mode                |
+| color-theme         | https://github.com/emacsattic/color-theme                 |
+| company-go          | https://github.com/emacsattic/company-go                  |
+| company-racer       | https://github.com/emacsattic/company-racer               |
+| dic-lookup-w3m      | https://github.com/emacsattic/dic-lookup-w3m              |
+| drawille            | https://github.com/emacsattic/drawille                    |
+| e2wm-R              | https://github.com/emacsattic/e2wm-R                      |
+| edit-at-point       | https://github.com/emacsattic/edit-at-point               |
+| eno                 | https://github.com/emacsattic/eno                         |
+| fold-dwim           | https://github.com/emacsattic/fold-dwim                   |
+| go-autocomplete     | https://github.com/emacsattic/go-autocomplete             |
+| ido-migemo          | https://github.com/emacsattic/ido-migemo                  |
+| inlineR             | https://github.com/emacsattic/inlineR                     |
+| mic-paren           | https://github.com/emacsattic/mic-paren                   |
+| org-doing           | https://github.com/emacsattic/org-doing                   |
+| org-multiple-keymap | https://github.com/emacsattic/org-multiple-keymap         |
+| org-wunderlist      | https://github.com/emacsattic/org-wunderlist              |
+| quick-preview       | https://github.com/emacsattic/quick-preview               |
+| redshank            | https://github.com/emacsattic/redshank                    |
+| session             | https://github.com/emacsattic/session                     |
+| sml-modeline        | https://github.com/emacsattic/sml-modeline                |
+| srefactor           | https://github.com/emacsattic/semantic-refactor           |
+| stickyfunc-enhance  | https://github.com/emacsattic/semantic-stickyfunc-enhance |
+| xwidgete            | https://github.com/emacsattic/xwidgete                    |
 
 * Github                                                           :noexport:
 :PROPERTIES:
