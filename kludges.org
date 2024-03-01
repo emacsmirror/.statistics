@@ -93,7 +93,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (88)                    | Class     | Feature                  | Reason                                            |
+| Package (87)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -109,7 +109,6 @@
 | citeproc                        | github    | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                         |
 | color-moccur                    | github    | moccur-edit              | shelved soft                                      |
 | color-theme-sanityinc-solarized | github    | color-theme              | backward compatibility                            |
-| color-theme-sanityinc-tomorrow  | github    | color-theme              | backward compatibility                            |
 | company                         | github    | semantic-idle            | backward compatibility                            |
 | company-fuzzy                   | github    | flex                     | wiki soft                                         |
 | dic-lookup-w3m                  | shelved   | text-translator          | broken and optional                               |

@@ -39,15 +39,14 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2) | Package       | Shelved |
-|-------------+---------------+---------|
-| derl        | derl          |         |
-| derl        | distel        |         |
-| flymake     | chatgpt-shell |         |
-| flymake     | flymake       |         |
+| Feature (2) | Package         | Shelved |
+|-------------+-----------------+---------|
+| derl        | derl            |         |
+| derl        | distel          |         |
+| test-helper | blackjack       |         |
+| test-helper | clojure-ts-mode |         |
 
-- derl: https://github.com/melpa/melpa/pull/8769
-- flymake: https://github.com/xenodium/chatgpt-shell/pull/195
+- 2023-10-09 derl: https://github.com/melpa/melpa/pull/8769
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -76,8 +75,9 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (3)     | Class  | Feature              | Provider |
+| Package (4)     | Class  | Feature              | Provider |
 |-----------------+--------+----------------------+----------|
+| company-eask    | github | company-elisp        |          |
 | flex-compile    | github | slite                |          |
 | jirascope       | github | jirascope-dyn        |          |
 | syntactic-close | github | ar-sexp              |          |

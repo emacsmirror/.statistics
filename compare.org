@@ -110,14 +110,14 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5424 |   5424 |       |       |      195 |         174 |  4852 |
+| github      | 5425 |   5425 |       |       |      200 |         175 |  4852 |
 | gitlab      |  190 |    190 |       |       |       19 |          15 |   171 |
-| sourcehut   |  110 |    110 |       |       |       27 |           4 |    63 |
-| codeberg    |  104 |    104 |       |       |        5 |          31 |    88 |
+| sourcehut   |  109 |    109 |       |       |       27 |           4 |    63 |
+| codeberg    |  106 |    106 |       |       |        5 |          31 |    90 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  119 |    119 |       |       |       12 |           5 |   102 |
+| git         |  119 |    119 |       |       |       12 |           5 |   101 |
 | hg          |   15 |     15 |       |       |        1 |           0 |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   263 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8955 |   6925 |  1539 |   498 |      435 |         229 |  5696 |
+| total       | 8957 |   6927 |  1539 |   498 |      440 |         230 |  5697 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -945,7 +945,8 @@
 | readline-complete | [[https://github.com/monsanto/readline-complete.el][monsanto/readline-complete.el]] |  4720 | e2wm-term  |
 | req-package       | [[https://github.com/edvorg/req-package][edvorg/req-package]]            | 13244 |            |
 
-- https://github.com/melpa/melpa/issues/8895
+- 2024-03-01 readline-complete: https://github.com/melpa/melpa/issues/8945
+- 2024-01-25 req-package: https://github.com/melpa/melpa/issues/8895
 
 ** Removed repositories
 :PROPERTIES:
