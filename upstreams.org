@@ -134,6 +134,7 @@
 - aes https://github.com/Sauermann/emacs-aes
 - affe https://github.com/minad/affe
 - after-save-commands please consult a search engine
+- afterglow https://github.com/ernstvanderlinden/emacs-afterglow
 - afternoon-theme https://github.com/ozanmakes/emacs-afternoon-theme
 - ag https://github.com/Wilfred/ag.el
 - agchat https://splode.com/~friedman/software/emacs-lisp/src/agchat.el
@@ -1552,7 +1553,7 @@
 - demap https://gitlab.com/sawyerjgardner/demap.el
 - demo-it https://github.com/howardabrams/demo-it
 - deno-fmt https://github.com/rclarey/deno-emacs
-- deno-ts-mode https://git.sr.ht/~mgmarlow/deno-ts-mode
+- deno-ts-mode https://github.com/mgmarlow/deno-ts-mode
 - denote https://git.sr.ht/~protesilaos/denote
 - denote-explore https://github.com/pprevos/denote-explore
 - denote-menu https://github.com/namilus/denote-menu
@@ -2214,6 +2215,7 @@
 - emms-mode-line-cycle https://github.com/momomo5717/emms-mode-line-cycle
 - emms-player-mpv-jp-radios https://github.com/momomo5717/emms-player-mpv-jp-radios
 - emms-player-simple-mpv https://github.com/momomo5717/emms-player-simple-mpv
+- emms-player-spotify https://github.com/sarg/emms-spotify
 - emms-player-streaming-fix https://github.com/emacsmirror/emacswiki.org
 - emms-seek-minor-mode https://github.com/emacsmirror/emacswiki.org
 - emms-soundcloud https://github.com/ozanmakes/emms-soundcloud
@@ -2452,7 +2454,7 @@
 - evil-ledger https://github.com/atheriel/evil-ledger
 - evil-lion https://github.com/edkolev/evil-lion
 - evil-lisp-state https://github.com/syl20bnr/evil-lisp-state
-- evil-lispy https://github.com/sp3ctum/evil-lispy
+- evil-lispy https://github.com/mikavilpas/evil-lispy
 - evil-magit https://github.com/emacs-evil/evil-magit
 - evil-mark-replace https://github.com/redguardtoo/evil-mark-replace
 - evil-matchit https://github.com/redguardtoo/evil-matchit
@@ -2879,7 +2881,7 @@
 - flymake https://git.savannah.gnu.org/git/emacs.git
 - flymake-actionlint https://github.com/ROCKTAKEY/flymake-actionlint
 - flymake-cc https://git.savannah.gnu.org/git/emacs.git
-- flymake-clippy https://git.sr.ht/~mgmarlow/flymake-clippy
+- flymake-clippy https://github.com/mgmarlow/flymake-clippy
 - flymake-codespell https://github.com/skangas/flymake-codespell
 - flymake-coffee https://github.com/purcell/flymake-coffee
 - flymake-collection https://github.com/mohkale/flymake-collection
@@ -2896,7 +2898,7 @@
 - flymake-elixir https://github.com/syl20bnr/flymake-elixir
 - flymake-eslint https://github.com/orzechowskid/flymake-eslint
 - flymake-extension https://github.com/emacsmirror/emacswiki.org
-- flymake-fennel https://git.sr.ht/~mgmarlow/flymake-fennel
+- flymake-fennel https://github.com/mgmarlow/flymake-fennel
 - flymake-flycheck https://github.com/purcell/flymake-flycheck
 - flymake-for-csharp https://github.com/emacsmirror/emacswiki.org
 - flymake-gjshint https://github.com/yasuyk/flymake-gjshint-el
@@ -2962,6 +2964,7 @@
 - fm http://www.damtp.cam.ac.uk/user/sje30/emacs/fm.el
 - fm-bookmarks https://github.com/kuanyui/fm-bookmarks.el
 - fmailutils https://splode.com/~friedman/software/emacs-lisp/src/fmailutils.el
+- fmo-mode https://github.com/xeechou/fmo-mode.el
 - fn https://github.com/troyp/fn.el
 - focus https://github.com/larstvei/Focus
 - focus-autosave-mode https://github.com/vifon/focus-autosave-mode.el
@@ -4867,6 +4870,7 @@
 - magit-gerrit https://github.com/emacsorphanage/magit-gerrit
 - magit-gh-pulls https://github.com/sigma/magit-gh-pulls
 - magit-gitflow https://github.com/jtatarik/magit-gitflow
+- magit-gptcommit https://github.com/douo/magit-gptcommit
 - magit-identities https://github.com/renard/magit-identities
 - magit-imerge https://github.com/magit/magit-imerge
 - magit-lfs https://github.com/Ailrun/magit-lfs
@@ -5244,6 +5248,7 @@
 - mpcel https://github.com/emacsmirror/emacswiki.org
 - mpdel https://github.com/mpdel/mpdel
 - mpdel-embark https://github.com/mpdel/mpdel-embark
+- mpdired https://ledu-giraud.fr/mpdired.git
 - mpdmacs https://github.com/sp1ff/mpdmacs
 - mplayer-mode https://github.com/markhepburn/mplayer-mode
 - mpmc-queue https://github.com/smizoe/mpmc-queue
@@ -5776,6 +5781,7 @@
 - org-chinese-utils https://github.com/tumashu/org-chinese-utils
 - org-cite-overlay https://git.sr.ht/~swflint/org-cite-overlay
 - org-cliplink https://github.com/rexim/org-cliplink
+- org-clock-agenda-daytime-mode https://github.com/ArneBab/emacs-org-clock-daytime
 - org-clock-convenience https://github.com/dfeich/org-clock-convenience
 - org-clock-csv https://github.com/atheriel/org-clock-csv
 - org-clock-reminder https://github.com/inickey/org-clock-reminder
@@ -5977,7 +5983,7 @@
 - org-trello https://github.com/org-trello/org-trello
 - org-unique-id https://github.com/Phundrak/org-unique-id
 - org-upcoming-modeline https://github.com/unhammer/org-upcoming-modeline
-- org-vcard https://github.com/flexibeast/org-vcard
+- org-vcard https://github.com/pinoaffe/org-vcard
 - org-velocity https://github.com/ruricolist/org-velocity
 - org-view-mode https://github.com/amno1/org-view-mode
 - org-visibility https://github.com/nullman/emacs-org-visibility
