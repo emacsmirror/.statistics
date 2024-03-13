@@ -111,13 +111,13 @@
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | github      | 5435 |   5435 |       |       |      200 |         176 |  4862 |
-| gitlab      |  190 |    190 |       |       |       19 |          15 |   171 |
+| gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  106 |    106 |       |       |       27 |           4 |    60 |
 | codeberg    |  106 |    106 |       |       |        5 |          31 |    90 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  120 |    120 |       |       |       13 |           5 |   101 |
+| git         |  118 |    118 |       |       |       13 |           5 |    99 |
 | hg          |   15 |     15 |       |       |        1 |           0 |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1541 |        |  1541 |       |          |             |    24 |
+| shelved     | 1544 |        |  1544 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   263 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8967 |   6935 |  1541 |   498 |      441 |         231 |  5706 |
+| total       | 8967 |   6932 |  1544 |   498 |      441 |         231 |  5706 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -489,7 +489,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (53)                | Url                                                                         |
+| Package (56)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -506,9 +506,11 @@
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
 | elein                       | https://github.com/remvee/elein                                             |
 | eno                         | https://github.com/enoson/eno.el                                            |
+| eshell-outline              | https://git.jamzattack.xyz/eshell-outline                                   |
 | flow-js2-mode               | https://github.com/Fuco1/flow-js2-mode                                      |
 | flycheck-gometalinter       | https://github.com/favadi/flycheck-gometalinter.git                         |
 | flycheck-julia              | https://github.com/gdkrmr/flycheck-julia                                    |
+| flymake-golangci            | https://gitlab.com/shackra/flymake-golangci                                 |
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
 | fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
@@ -533,6 +535,7 @@
 | ox-impress-js               | https://github.com/takumikinjo/org-impress-js.el                            |
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
+| protobuf-ts-mode            | https://git.ookami.one/cgit/protobuf-ts-mode                                |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
 | redprl                      | https://github.com/RedPRL/sml-redprl                                        |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
@@ -899,7 +902,7 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (24)         | Url                                                |
+| Package (27)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -911,6 +914,8 @@
 | e2wm-R               | https://github.com/emacsattic/e2wm-R               |
 | edit-at-point        | https://github.com/emacsattic/edit-at-point        |
 | eno                  | https://github.com/emacsattic/eno                  |
+| eshell-outline       | https://github.com/emacsattic/eshell-outline       |
+| flymake-golangci     | https://github.com/emacsattic/flymake-golangci     |
 | fold-dwim            | https://github.com/emacsattic/fold-dwim            |
 | go-autocomplete      | https://github.com/emacsattic/go-autocomplete      |
 | ido-migemo           | https://github.com/emacsattic/ido-migemo           |
@@ -920,6 +925,7 @@
 | org-multiple-keymap  | https://github.com/emacsattic/org-multiple-keymap  |
 | org-wunderlist       | https://github.com/emacsattic/org-wunderlist       |
 | ox-impress-js        | https://github.com/emacsattic/org-impress-js       |
+| protobuf-ts-mode     | https://github.com/emacsattic/protobuf-ts-mode     |
 | quick-preview        | https://github.com/emacsattic/quick-preview        |
 | redshank             | https://github.com/emacsattic/redshank             |
 | session              | https://github.com/emacsattic/session              |
