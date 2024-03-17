@@ -61,9 +61,8 @@ a package is available from Melpa.
   (emir--list-orphans (list "dropped by maintainer"))
 #+end_src
 #+results: dropped
-| Package (88)         | E | M |
+| Package (87)         | E | M |
 |----------------------+---+---|
-| 4clojure             | ✔ | ✔ |
 | ac-alchemist         | ✔ | ✔ |
 | ac-capf              | ✔ | ✔ |
 | ac-emoji             | ✔ | ✔ |
