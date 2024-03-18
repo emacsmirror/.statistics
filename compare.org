@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5435 |   5435 |       |       |      200 |         176 |  4862 |
+| github      | 5441 |   5441 |       |       |      200 |         176 |  4868 |
 | gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  106 |    106 |       |       |       27 |           4 |    60 |
 | codeberg    |  106 |    106 |       |       |        5 |          31 |    90 |
@@ -128,10 +128,10 @@
 | shelved     | 1545 |        |  1545 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   263 |
+| secondary   |      |        |       |       |          |             |   262 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8967 |   6931 |  1545 |   498 |      441 |         231 |  5705 |
+| total       | 8973 |   6937 |  1545 |   498 |      441 |         231 |  5710 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -802,7 +802,6 @@
 | treemacs                | treemacs-tab-bar                 | github    |
 | universal-sidecar       | ebdb-mua-sidecar                 | sourcehut |
 | universal-sidecar       | ebib-sidecar                     | sourcehut |
-| universal-sidecar       | org-cite-sidecar                 | sourcehut |
 | universal-sidecar       | universal-sidecar-citeproc       | sourcehut |
 | universal-sidecar       | universal-sidecar-elfeed-related | sourcehut |
 | universal-sidecar       | universal-sidecar-elfeed-score   | sourcehut |
