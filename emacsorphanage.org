@@ -61,7 +61,7 @@ a package is available from Melpa.
   (emir--list-orphans (list "dropped by maintainer"))
 #+end_src
 #+results: dropped
-| Package (87)         | E | M |
+| Package (88)         | E | M |
 |----------------------+---+---|
 | ac-alchemist         | ✔ | ✔ |
 | ac-capf              | ✔ | ✔ |
@@ -138,6 +138,7 @@ a package is available from Melpa.
 | pylint               | ✔ | ✔ |
 | qt-pro-mode          | ✔ | ✔ |
 | quickrun             | ✔ | ✔ |
+| req-package          | ✔ | ✔ |
 | reverse-theme        | ✔ | ✔ |
 | smeargle             | ✔ | ✔ |
 | sound-wav            | ✔ | ✔ |
