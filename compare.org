@@ -110,11 +110,11 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5440 |   5440 |       |       |      200 |         176 |  4867 |
+| github      | 5444 |   5444 |       |       |      200 |         176 |  4871 |
 | gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  106 |    106 |       |       |       27 |           4 |    60 |
 | codeberg    |  106 |    106 |       |       |        5 |          31 |    90 |
-| gnu         |   10 |     10 |       |       |        9 |           0 |     2 |
+| gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | git         |  118 |    118 |       |       |       13 |           5 |    99 |
@@ -128,10 +128,10 @@
 | shelved     | 1545 |        |  1545 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   262 |
+| secondary   |      |        |       |       |          |             |   263 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8973 |   6937 |  1545 |   498 |      441 |         231 |  5710 |
+| total       | 8977 |   6941 |  1545 |   498 |      441 |         231 |  5716 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -565,7 +565,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (146)   | Secondary package                | Class     |
+| Primary package (147)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -607,6 +607,7 @@
 | compile-multi           | compile-multi-all-the-icons      | github    |
 | compile-multi           | compile-multi-embark             | github    |
 | compile-multi           | consult-compile-multi            | github    |
+| consult-eglot           | consult-eglot-embark             | github    |
 | copyit                  | copyit-pandoc                    | github    |
 | crystal-mode            | flycheck-crystal                 | github    |
 | ctl-mode                | gs-mode                          | github    |
