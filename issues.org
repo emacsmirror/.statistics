@@ -39,14 +39,16 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2) | Package         | Shelved |
+| Feature (3) | Package         | Shelved |
 |-------------+-----------------+---------|
 | derl        | derl            |         |
 | derl        | distel          |         |
+| oauth2-auto | oauth2-auto     |         |
+| oauth2-auto | org-gcal        |         |
 | test-helper | blackjack       |         |
 | test-helper | clojure-ts-mode |         |
 
-- 2023-10-09 derl: https://github.com/melpa/melpa/pull/8769
+- 2023-10-09 derl https://github.com/melpa/melpa/pull/8769
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -75,17 +77,13 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (5)     | Class     | Feature              | Provider |
-|-----------------+-----------+----------------------+----------|
-| company-eask    | github    | company-elisp        |          |
-| flex-compile    | github    | slite                |          |
-| jirascope       | github    | jirascope-dyn        |          |
-| lua-ts-mode     | sourcehut | ert-font-lock        |          |
-| syntactic-close | github    | ar-sexp              |          |
-| syntactic-close | github    | thing-at-point-utils |          |
+| Package (2)  | Class     | Feature       | Provider |
+|--------------+-----------+---------------+----------|
+| flex-compile | github    | slite         |          |
+| lua-ts-mode  | sourcehut | ert-font-lock |          |
 
-- flex-compile: https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
-- syntactic-close: https://github.com/emacs-berlin/syntactic-close/commit/395f3cf5f37b85bf7d7ce88fd58a0d0632414792
+- 2024-03-29 company-eask https://github.com/emacs-eask/company-eask/commit/9f929524e9fccbc10008cbdf582b7ff7566ae4be
+- 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 
 * Missing library summary
 :PROPERTIES:

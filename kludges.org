@@ -24,7 +24,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-join
-| Package (18)           | Class     | Feature                     | Reason                                    |
+| Package (19)           | Class     | Feature                     | Reason                                    |
 |------------------------+-----------+-----------------------------+-------------------------------------------|
 | edb                    | orphaned  | edbcore                     | generated                                 |
 | emacs                  | builtin   | cus-load                    | generated                                 |
@@ -45,6 +45,7 @@
 | fzf-native             | github    | fzf-native-module           | provided by module                        |
 | geo                    | sourcehut | geocode-emacs               | provided by module                        |
 | hotfuzz                | github    | hotfuzz-module              | provided by module                        |
+| jirascope              | github    | jirascope-dyn               | provided by module                        |
 | liberime               | github    | liberime-core               | provided by module                        |
 | pq                     | github    | pq-core                     | provided by module                        |
 | sqlite3                | github    | sqlite3-api                 | provided by module                        |

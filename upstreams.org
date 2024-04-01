@@ -681,7 +681,7 @@
 - bpath https://github.com/emacsmirror/emacswiki.org
 - bpe https://github.com/yuutayamada/bpe
 - bpftrace-mode https://gitlab.com/jgkamat/bpftrace-mode
-- bpr https://github.com/ilya-babanov/emacs-bpr
+- bpr https://github.com/iliabv/emacs-bpr
 - bqn-mode https://github.com/museoa/bqn-mode
 - bracketed-paste https://github.com/hchbaw/bracketed-paste.el
 - bracketphobia https://github.com/emacsmirror/emacswiki.org
@@ -837,7 +837,7 @@
 - cask-mode https://github.com/Wilfred/cask-mode
 - cask-package-toolset https://github.com/AdrieanKhisbe/cask-package-toolset.el
 - caskxy https://github.com/aki2o/caskxy
-- casual https://github.com/kickingvegas/casual
+- casual https://github.com/kickingvegas/Casual
 - cat-safe https://github.com/skeeto/cat-safe
 - catmacs https://bitbucket.org/pymaximus/catmacs
 - catppuccin-theme https://github.com/catppuccin/emacs
@@ -985,6 +985,7 @@
 - clang-format+ https://github.com/SavchenkoValeriy/emacs-clang-format-plus
 - clang-lookup https://github.com/sheijk/clang-lookup
 - clasker https://github.com/clasker/clasker
+- claude-shell https://github.com/arminfriedl/claude-shell
 - clause https://codeberg.org/martianh/clause.el
 - clay https://github.com/scicloj/clay.el
 - clay-mode hg::ssh://hg@bitbucket.org/prafulla/clay-mode
@@ -1142,7 +1143,7 @@
 - company-eask https://github.com/emacs-eask/company-eask
 - company-ebdb https://git.savannah.gnu.org/git/emacs/elpa.git
 - company-edbi https://github.com/proofit404/company-edbi
-- company-emoji https://github.com/dunn/company-emoji
+- company-emoji https://codeberg.org/egirl/company-emoji
 - company-emojify https://github.com/jcs-elpa/company-emojify
 - company-erlang https://github.com/s-kostyaev/company-erlang
 - company-ess https://github.com/Lompik/company-ess
@@ -2002,6 +2003,7 @@
 - eglot https://git.savannah.gnu.org/git/emacs.git
 - eglot-java https://github.com/yveszoundi/eglot-java
 - eglot-jl https://github.com/non-Jedi/eglot-jl
+- eglot-luau https://github.com/kennethloeffler/eglot-luau
 - eglot-signature-eldoc-talkative https://codeberg.org/mekeor/emacs-eglot-signature-eldoc-talkative
 - eglot-tempel https://github.com/fejfighter/eglot-tempel
 - ego https://github.com/emacs-china/EGO
@@ -2354,6 +2356,7 @@
 - esh-help https://github.com/tom-tan/esh-help
 - esheet please consult a search engine
 - eshell https://git.savannah.gnu.org/git/emacs.git
+- eshell-atuin https://github.com/SqrtMinusOne/eshell-atuin
 - eshell-autojump https://github.com/coldnew/eshell-autojump
 - eshell-bookmark https://github.com/Fuco1/eshell-bookmark
 - eshell-did-you-mean https://github.com/xuchunyang/eshell-did-you-mean
@@ -3407,7 +3410,7 @@
 - grabbox http://www.xsteve.at/prg/emacs/grabbox.el
 - grade please consult a search engine
 - gradle https://git.sr.ht/~vhallac/gradle-el
-- gradle-mode https://github.com/jacobono/emacs-gradle-mode
+- gradle-mode https://github.com/scubacabra/emacs-gradle-mode
 - grail please consult a search engine
 - grails https://github.com/lifeisfoo/emacs-grails
 - grails-projectile-mode https://github.com/yveszoundi/grails-projectile-mode
@@ -4580,6 +4583,7 @@
 - layout-restore https://github.com/emacsmirror/emacswiki.org
 - lazarus https://github.com/ajvargo/Lazarus
 - lazy-desktop http://homepages.cs.ncl.ac.uk/phillip.lord/download/emacs/lazy-desktop.el
+- lazy-ruff https://github.com/christophermadsen/emacs-lazy-ruff
 - lazy-search https://github.com/vapniks/lazy-search
 - lbdb https://github.com/davep/lbdb.el
 - lcb-mode https://github.com/peter-b/lcb-mode
@@ -5583,6 +5587,7 @@
 - o-journal https://github.com/fravashi/o-journal
 - oauth https://gitlab.com/fvdbeek/emacs-oauth
 - oauth2 https://git.savannah.gnu.org/git/emacs/elpa.git
+- oauth2-auto https://github.com/telotortium/emacs-oauth2-auto
 - oauth2-request https://github.com/conao3/oauth2-request.el
 - ob-ada-spark https://github.com/rocher/ob-ada-spark
 - ob-ammonite https://github.com/zwild/ob-ammonite
@@ -5703,7 +5708,7 @@
 - olivetti https://github.com/rnkn/olivetti
 - om-mode https://github.com/danielsz/om-mode
 - omake hg::ssh://hg@bitbucket.org/dmcooke/omake-mode
-- omn-mode https://git.savannah.gnu.org/git/emacs/elpa.git
+- omn-mode https://github.com/phillord/omn-mode
 - omni-kill https://github.com/AdrieanKhisbe/omni-kill.el
 - omni-log https://github.com/AdrieanKhisbe/omni-log.el
 - omni-quotes https://github.com/AdrieanKhisbe/omni-quotes.el
@@ -5859,6 +5864,7 @@
 - org-kanban https://github.com/gizmomogwai/org-kanban
 - org-kindle https://repo.or.cz/org-kindle.git
 - org-latex-impatient https://github.com/yangsheng6810/org-latex-impatient
+- org-linenote https://github.com/seokbeomKim/org-linenote
 - org-link-beautify https://repo.or.cz/org-link-beautify.git
 - org-link-edit https://git.kyleam.com/org-link-edit
 - org-link-minor-mode https://github.com/seanohalpin/org-link-minor-mode
