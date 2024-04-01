@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5449 |   5449 |       |       |      201 |         176 |  4875 |
+| github      | 5448 |   5448 |       |       |      201 |         176 |  4874 |
 | gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  106 |    106 |       |       |       27 |           4 |    60 |
 | codeberg    |  107 |    107 |       |       |        5 |          31 |    91 |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1546 |        |  1546 |       |          |             |    27 |
+| shelved     | 1547 |        |  1547 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8983 |   6946 |  1546 |   498 |      441 |         231 |  5723 |
+| total       | 8983 |   6945 |  1547 |   498 |      441 |         231 |  5722 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -952,14 +952,12 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (3)       | Repository               | Melpa | Dependants |
+| Package (2)       | Repository               | Melpa | Dependants |
 |-------------------+--------------------------+-------+------------|
 | helm-etags-plus   | [[https://github.com/jixiuf/helm-etags-plus][jixiuf/helm-etags-plus]]   |  1297 |            |
-| homebrew-mode     | [[https://github.com/dunn/homebrew-mode][dunn/homebrew-mode]]       |  1984 |            |
 | ivy-dired-history | [[https://github.com/jixiuf/ivy-dired-history][jixiuf/ivy-dired-history]] |  7098 |            |
 
 - 2024-04-01 jixiuf https://github.com/melpa/melpa/issues/8981
-- 2024-04-01 homebrew-mode https://github.com/melpa/melpa/issues/8982
 
 ** Removed repositories
 :PROPERTIES:

@@ -75,7 +75,7 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4763 |      69 |
+| GPL-3.0-or-later  |  4762 |      69 |
 | GPL-2.0-or-later  |  1164 |      17 |
 | MIT               |   405 |       6 |
 | GPL-3.0-only      |   175 |       3 |
@@ -109,9 +109,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6140 |      88 |
+| total GNU         |  6139 |      88 |
 |-------------------+-------+---------|
-| total             |  6946 |     100 |
+| total             |  6945 |     100 |
 
 ** Packages with unknown licenses
 :PROPERTIES:
@@ -151,8 +151,8 @@
 #+results: attic-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-2.0-or-later  |   843 |      55 |
-| GPL-3.0-or-later  |   425 |      27 |
+| GPL-2.0-or-later  |   843 |      54 |
+| GPL-3.0-or-later  |   426 |      28 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    39 |       3 |
@@ -181,9 +181,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1426 |      92 |
+| total GNU         |  1427 |      92 |
 |-------------------+-------+---------|
-| total             |  1546 |     100 |
+| total             |  1547 |     100 |
 
 ** Packages with unknown/custom licenses
 :PROPERTIES:
