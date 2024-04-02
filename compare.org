@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5448 |   5448 |       |       |      201 |         176 |  4874 |
+| github      | 5445 |   5445 |       |       |      201 |         176 |  4871 |
 | gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  106 |    106 |       |       |       27 |           4 |    60 |
 | codeberg    |  107 |    107 |       |       |        5 |          31 |    91 |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1547 |        |  1547 |       |          |             |    27 |
+| shelved     | 1550 |        |  1550 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8983 |   6945 |  1547 |   498 |      441 |         231 |  5722 |
+| total       | 8983 |   6942 |  1550 |   498 |      441 |         231 |  5719 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -952,12 +952,6 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (2)       | Repository               | Melpa | Dependants |
-|-------------------+--------------------------+-------+------------|
-| helm-etags-plus   | [[https://github.com/jixiuf/helm-etags-plus][jixiuf/helm-etags-plus]]   |  1297 |            |
-| ivy-dired-history | [[https://github.com/jixiuf/ivy-dired-history][jixiuf/ivy-dired-history]] |  7098 |            |
-
-- 2024-04-01 jixiuf https://github.com/melpa/melpa/issues/8981
 
 ** Removed repositories
 :PROPERTIES:
