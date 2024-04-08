@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5445 |   5445 |       |       |      201 |         176 |  4871 |
+| github      | 5448 |   5448 |       |       |      201 |         176 |  4874 |
 | gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  106 |    106 |       |       |       27 |           4 |    60 |
 | codeberg    |  107 |    107 |       |       |        5 |          31 |    91 |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1550 |        |  1550 |       |          |             |    27 |
+| shelved     | 1552 |        |  1552 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8983 |   6942 |  1550 |   498 |      441 |         231 |  5719 |
+| total       | 8988 |   6945 |  1552 |   498 |      441 |         231 |  5722 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -967,10 +967,3 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-removed
-| Package (3)    | Repository               | Melpa | Dependants |
-|----------------+--------------------------+-------+------------|
-| dired-hist     | [[https://github.com/Anoncheg1/dired-hist][Anoncheg1/dired-hist]]     |       |            |
-| firstly-search | [[https://github.com/Anoncheg1/firstly-search][Anoncheg1/firstly-search]] |       |            |
-| pinyin-isearch | [[https://github.com/Anoncheg1/pinyin-isearch][Anoncheg1/pinyin-isearch]] |       |            |
-
--2024-03-26 @Anoncheg1 https://github.com/melpa/melpa/issues/8970
