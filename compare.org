@@ -106,7 +106,7 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  491 |        |       |   498 |       18 |             |       |
+| builtin     |  491 |        |       |   498 |       19 |             |       |
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8995 |   6951 |  1553 |   498 |      441 |         231 |  5729 |
+| total       | 8995 |   6951 |  1553 |   498 |      442 |         231 |  5729 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -230,6 +230,9 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-new
+| Package (1)   | Class | Url |
+|---------------+-------+-----|
+| track-changes | core  |     |
 
 ** Delayed
 :PROPERTIES:
@@ -952,6 +955,11 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
+| Package (1) | Repository           |  Melpa | Dependants                                                       |
+|-------------+----------------------+--------+------------------------------------------------------------------|
+| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 261952 | company-restclient evil-collection ob-restclient restclient-test |
+
+- 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
 ** Removed repositories
 :PROPERTIES:
