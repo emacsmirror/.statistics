@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5453 |   5453 |       |       |      201 |         176 |  4879 |
+| github      | 5460 |   5460 |       |       |      203 |         176 |  4884 |
 | gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  107 |    107 |       |       |       27 |           4 |    62 |
 | codeberg    |  107 |    107 |       |       |        5 |          31 |    91 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 8995 |   6951 |  1553 |   498 |      442 |         231 |  5729 |
+| total       | 9002 |   6958 |  1553 |   498 |      444 |         231 |  5734 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -230,9 +230,6 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-new
-| Package (1)   | Class | Url |
-|---------------+-------+-----|
-| track-changes | core  |     |
 
 ** Delayed
 :PROPERTIES:
@@ -249,6 +246,9 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-delayed
+| Package (1)   | Elpa | Reason                 |
+|---------------+------+------------------------|
+| track-changes | core | Later; new in Emacs 30 |
 
 ** Unreleased
 :PROPERTIES:
@@ -295,7 +295,7 @@
                      :order-by [(asc packages:name)]]))
 #+end_src
 #+results: gnu-elpa-prefer-builtin
-| Package (23)        | Elpa     | Reason              |
+| Package (24)        | Elpa     | Reason              |
 |---------------------+----------+---------------------|
 | bind-key            | core     |                     |
 | cl-generic          | internal | backport of builtin |
@@ -306,6 +306,7 @@
 | erc                 | core     |                     |
 | external-completion | core     |                     |
 | flymake             | core     |                     |
+| idlwave             | github   |                     |
 | jsonrpc             | core     |                     |
 | let-alist           | core     |                     |
 | map                 | core     |                     |
