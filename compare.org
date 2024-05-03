@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5460 |   5460 |       |       |      203 |         176 |  4884 |
+| github      | 5460 |   5460 |       |       |      205 |         177 |  4882 |
 | gitlab      |  189 |    189 |       |       |       19 |          15 |   170 |
 | sourcehut   |  107 |    107 |       |       |       27 |           4 |    62 |
 | codeberg    |  107 |    107 |       |       |        5 |          31 |    91 |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   106 |
-| shelved     | 1553 |        |  1553 |       |          |             |    27 |
+| shelved     | 1556 |        |  1556 |       |          |             |    29 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   265 |
-| unreleased  |      |        |       |       |        6 |           0 |       |
+| unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9002 |   6958 |  1553 |   498 |      444 |         231 |  5734 |
+| total       | 9005 |   6958 |  1556 |   498 |      446 |         233 |  5734 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -493,16 +493,18 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (56)                | Url                                                                         |
+| Package (59)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
+| call-graph                  | https://github.com/beacoder/call-graph                                      |
 | cfml-mode                   | https://github.com/amyers634/cfml-mode                                      |
 | color-theme                 | https://github.com/emacsorphanage/color-theme                               |
 | company-go                  | https://github.com/nsf/gocode                                               |
 | company-racer               | https://github.com/emacsorphanage/company-racer                             |
 | conventional-changelog      | https://github.com/liuyinz/emacs-conventional-changelog                     |
+| cybercafe-theme             | https://github.com/gboncoffee/cybercafe-emacs-theme                         |
 | dic-lookup-w3m              | https://github.com/emacsorphanage/dic-lookup-w3m                            |
 | django-mode                 | https://github.com/unrelentingtech/django-mode                              |
 | drawille                    | https://github.com/josuah/drawille-el                                       |
@@ -531,6 +533,7 @@
 | nnhackernews                | https://github.com/dickmao/nnhackernews                                     |
 | nnreddit                    | https://github.com/dickmao/nnreddit                                         |
 | nntwitter                   | https://github.com/dickmao/nntwitter                                        |
+| number                      | https://github.com/chrisdone/number                                         |
 | org-doing                   | https://github.com/rudolfolah/org-doing                                     |
 | org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
 | org-pivotal                 | https://github.com/org-pivotal/org-pivotal                                  |
@@ -908,10 +911,11 @@
              :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (27)         | Url                                                |
+| Package (29)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
+| call-graph           | https://github.com/emacsattic/call-graph           |
 | color-theme          | https://github.com/emacsattic/color-theme          |
 | company-go           | https://github.com/emacsattic/company-go           |
 | company-racer        | https://github.com/emacsattic/company-racer        |
@@ -927,6 +931,7 @@
 | ido-migemo           | https://github.com/emacsattic/ido-migemo           |
 | inlineR              | https://github.com/emacsattic/inlineR              |
 | mic-paren            | https://github.com/emacsattic/mic-paren            |
+| number               | https://github.com/emacsattic/number               |
 | org-doing            | https://github.com/emacsattic/org-doing            |
 | org-multiple-keymap  | https://github.com/emacsattic/org-multiple-keymap  |
 | org-wunderlist       | https://github.com/emacsattic/org-wunderlist       |
