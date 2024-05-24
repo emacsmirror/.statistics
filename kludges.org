@@ -94,7 +94,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (87)                    | Class     | Feature                  | Reason                                            |
+| Package (86)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -127,9 +127,6 @@
 | emms-player-mpv-jp-radios       | github    | anything                 | anything                                          |
 | erlang                          | github    | tags                     | backward compatibility                            |
 | es-lib                          | github    | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]             |
-| evil-collection                 | github    | emoji                    | forward compatibility                             |
-| evil-collection                 | github    | image+                   | shelved soft [[https://github.com/emacs-evil/evil-collection/issues/399][#399]]                                 |
-| evil-collection                 | github    | shortdoc                 | forward compatibility (Emacs 28)                  |
 | extend-dnd                      | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
 | folding                         | github    | mode-motion              | XEmacs compatibility                              |
 | frontside-javascript            | github    | company-lsp              | pending [[https://github.com/melpa/melpa/pull/7403][#7403]]                                     |

@@ -106,7 +106,7 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  491 |        |       |   498 |       19 |             |       |
+| builtin     |  491 |        |       |   498 |       20 |             |       |
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9019 |   6971 |  1557 |   498 |      447 |         233 |  5746 |
+| total       | 9019 |   6971 |  1557 |   498 |      448 |         233 |  5746 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -246,9 +246,10 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-delayed
-| Package (1)   | Elpa | Reason                 |
-|---------------+------+------------------------|
-| track-changes | core | Later; new in Emacs 30 |
+| Package (2)     | Elpa | Reason                 |
+|-----------------+------+------------------------|
+| track-changes   | core | Later; new in Emacs 30 |
+| window-tool-bar | core | Later; new in Emacs 30 |
 
 ** Unreleased
 :PROPERTIES:
@@ -961,9 +962,9 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (1) | Repository           |  Melpa | Dependants                                                       |
-|-------------+----------------------+--------+------------------------------------------------------------------|
-| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 261952 | company-restclient evil-collection ob-restclient restclient-test |
+| Package (1) | Repository           |  Melpa | Dependants                                       |
+|-------------+----------------------+--------+--------------------------------------------------|
+| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 261952 | company-restclient ob-restclient restclient-test |
 
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
