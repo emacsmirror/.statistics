@@ -48,7 +48,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (552)                | Link                                    | Summary                                                                |
+| Package (554)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -179,6 +179,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | pgsrc                        | [[https://github.com/dimitri/pgsrc-el][dimitri/pgsrc-el]]                        | Source Code Editing Facilities for PostgreSQL                          |
 | mu4e                         | [[https://github.com/djcb/mu][djcb/mu]]                                 | Mu4e, the mu mail user agent                                           |
 | org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     | Manage org files in a given directory                                  |
+| ampl-mode                    | [[https://github.com/dpo/ampl-mode][dpo/ampl-mode]]                           | Ampl mode for the Emacs editor                                         |
 | masquerade-mode              | [[https://github.com/dsevilla/masquerade-mode-el][dsevilla/masquerade-mode-el]]             | Minor mode to add templating capabilities to any mode                  |
 | gplus-mode                   | [[https://github.com/ellencubed/gplus-mode][ellencubed/gplus-mode]]                   | Major mode for Google Plus                                             |
 | eaf-airshare                 | [[https://github.com/emacs-eaf/eaf-airshare][emacs-eaf/eaf-airshare]]                  | Airshare plugins                                                       |
@@ -564,6 +565,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | keyword-arg-macros           | [[https://github.com/vapniks/keyword-arg-macros][vapniks/keyword-arg-macros]]              | Some macros for extracting keyword args from lists                     |
 | lazy-search                  | [[https://github.com/vapniks/lazy-search][vapniks/lazy-search]]                     | Lazy Search                                                            |
 | one-key                      | [[https://github.com/vapniks/one-key][vapniks/one-key]]                         | Easy access configurable popup menus to display keybindings and other  |
+| org-table-jb-extras          | [[https://github.com/vapniks/org-table-jb-extras][vapniks/org-table-jb-extras]]             | Extra commands & functions for working with org-tables                 |
 | show-marks                   | [[https://github.com/vapniks/show-marks][vapniks/show-marks]]                      | Navigate and visualize the mark-ring                                   |
 | spss                         | [[https://github.com/vapniks/spss-mode][vapniks/spss-mode]]                       | Major-mode for editing SPSS program files                              |
 | i3                           | [[https://github.com/vava/i3-emacs][vava/i3-emacs]]                           | Bindings for i3 WM IPC                                                 |

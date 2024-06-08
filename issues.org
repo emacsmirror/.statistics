@@ -39,12 +39,14 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (5)      | Package          | Shelved |
+| Feature (6)      | Package          | Shelved |
 |------------------+------------------+---------|
 | derl             | derl             |         |
 | derl             | distel           |         |
 | oauth2-auto      | oauth2-auto      |         |
 | oauth2-auto      | org-gcal         |         |
+| peg              | peg              |         |
+| peg              | pg               |         |
 | plz-event-source | llm              |         |
 | plz-event-source | plz-event-source |         |
 | plz-media-type   | llm              |         |
@@ -55,6 +57,7 @@
 - 2023-10-09 derl https://github.com/melpa/melpa/pull/8769
 - 2024-05-18 llm "It is temporarily vendored within the llm library."
   (from library header)
+- 2024-06-08 pg https://github.com/emarsden/pg-el/issues/5
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -90,9 +93,9 @@
 | lua-ts-mode        | sourcehut | ert-font-lock |          |
 | parinfer-rust-mode | github    | track-changes |          |
 
+- ert-font-lock: New in Emacs 30
 - touch-screen: New in Emacs 30
 - track-changes: New in Emacs 30
-- 2024-03-29 company-eask https://github.com/emacs-eask/company-eask/commit/9f929524e9fccbc10008cbdf582b7ff7566ae4be
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 
 * Missing library summary
