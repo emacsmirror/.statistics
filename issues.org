@@ -84,20 +84,14 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (7)              | Class     | Feature       | Provider    |
-|--------------------------+-----------+---------------+-------------|
-| cnfonts                  | github    | touch-screen  |             |
-| evil-textobj-tree-sitter | github    | tree-sitter   | tree-sitter |
-| flex-compile             | github    | slite         |             |
-| lua-ts-mode              | sourcehut | ert-font-lock |             |
-| parinfer-rust-mode       | github    | track-changes |             |
-| scopeline                | github    | tree-sitter   | tree-sitter |
-| symex                    | github    | tree-sitter   | tree-sitter |
-| symex                    | github    | tsc           | tree-sitter |
+| Package (4)              | Class  | Feature     | Provider    |
+|--------------------------+--------+-------------+-------------|
+| evil-textobj-tree-sitter | github | tree-sitter | tree-sitter |
+| flex-compile             | github | slite       |             |
+| scopeline                | github | tree-sitter | tree-sitter |
+| symex                    | github | tree-sitter | tree-sitter |
+| symex                    | github | tsc         | tree-sitter |
 
-- ert-font-lock: New in Emacs 30
-- touch-screen: New in Emacs 30
-- track-changes: New in Emacs 30
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
 

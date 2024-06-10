@@ -106,13 +106,13 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  491 |        |       |   498 |       20 |             |       |
-| gnu-elpa    |  144 |    144 |       |       |      138 |             |       |
+| builtin     |  501 |        |       |   498 |       20 |             |       |
+| gnu-elpa    |  143 |    143 |       |       |      138 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5483 |   5483 |       |       |      211 |         177 |  4906 |
+| github      | 5481 |   5481 |       |       |      211 |         177 |  4906 |
 | gitlab      |  190 |    190 |       |       |       19 |          15 |   171 |
-| sourcehut   |  107 |    107 |       |       |       28 |           4 |    64 |
+| sourcehut   |  106 |    106 |       |       |       28 |           4 |    64 |
 | codeberg    |  108 |    108 |       |       |        6 |          32 |    92 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9047 |   6985 |  1571 |   498 |      454 |         234 |  5763 |
+| total       | 9053 |   6981 |  1571 |   498 |      454 |         234 |  5763 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -203,8 +203,9 @@
             [builtin gnu-elpa core])
 #+end_src
 #+results: builtin-prefer-upstream
-| Package (3) | Class  |
+| Package (4) | Class  |
 |-------------+--------|
+| compat      | github |
 | org         | gnu    |
 | tramp       | gnu    |
 | transient   | github |
@@ -296,7 +297,7 @@
                      :order-by [(asc packages:name)]]))
 #+end_src
 #+results: gnu-elpa-prefer-builtin
-| Package (24)        | Elpa     | Reason              |
+| Package (27)        | Elpa     | Reason              |
 |---------------------+----------+---------------------|
 | bind-key            | core     |                     |
 | cl-generic          | internal | backport of builtin |
@@ -313,14 +314,17 @@
 | map                 | core     |                     |
 | nadvice             | internal | backport of builtin |
 | ntlm                | core     |                     |
+| peg                 | internal |                     |
 | project             | core     |                     |
 | python              | core     |                     |
 | seq                 | internal | backport of builtin |
 | so-long             | core     |                     |
 | soap-client         | core     |                     |
 | svg                 | core     |                     |
+| track-changes       | core     |                     |
 | use-package         | core     |                     |
 | verilog-mode        | core     |                     |
+| window-tool-bar     | core     |                     |
 | xref                | core     |                     |
 
 ** Prefer Elpa despite :url

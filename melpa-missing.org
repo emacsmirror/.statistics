@@ -619,7 +619,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (20)               | Link      |                                             |
+| Package (19)               | Link      |                                             |
 |----------------------------+-----------+---------------------------------------------|
 | ebuild-mode                | git       |                                             |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
@@ -630,7 +630,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | gradle                     | sourcehut | [[https://git.sr.ht/~vhallac/gradle-el][vhallac/gradle-el]]                           |
 | lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]] |
 | lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                |
-| lua-ts-mode                | sourcehut | [[https://git.sr.ht/~johnmuhl/lua-ts-mode][johnmuhl/lua-ts-mode]]                        |
 | mailscripts                | git       |                                             |
 | ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
 | org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
