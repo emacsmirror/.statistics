@@ -110,10 +110,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      138 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5491 |   5491 |       |       |      212 |         177 |  4907 |
+| github      | 5483 |   5483 |       |       |      211 |         177 |  4906 |
 | gitlab      |  190 |    190 |       |       |       19 |          15 |   171 |
-| sourcehut   |  108 |    108 |       |       |       28 |           4 |    64 |
-| codeberg    |  109 |    109 |       |       |        5 |          32 |    92 |
+| sourcehut   |  107 |    107 |       |       |       28 |           4 |    64 |
+| codeberg    |  108 |    108 |       |       |        6 |          32 |    92 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   105 |
-| shelved     | 1561 |        |  1561 |       |          |             |    29 |
+| shelved     | 1571 |        |  1571 |       |          |             |    29 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9047 |   6995 |  1561 |   498 |      454 |         234 |  5764 |
+| total       | 9047 |   6985 |  1571 |   498 |      454 |         234 |  5763 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -470,13 +470,12 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: melpa-delayed
-| Package (7)                       | Melpa  | Reason                                               |
+| Package (6)                       | Melpa  | Reason                                               |
 |-----------------------------------+--------+------------------------------------------------------|
 | bind-chord                        | github | Don't add; part of legacy repository but not Emacs   |
 | connection                        | github | Don't add; part of upstream dictionary but not Emacs |
 | django-snippets                   | github | Don't add; part of shelved django-mode               |
 | link                              | github | Don't add; part of upstream dictionary but not Emacs |
-| pcmpl-git                         | github | Don't add; lib by same name part of Emacs' pcomplete |
 | use-package-chords                | github | Don't add; part of bind-chord, see above             |
 | use-package-ensure-system-package | github | Don't add; part of Emacs' use-package                |
 
@@ -494,7 +493,7 @@
             [shelved])
 #+end_src
 #+results: melpa-shelved
-| Package (61)                | Url                                                                         |
+| Package (71)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -512,6 +511,7 @@
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
 | elein                       | https://github.com/remvee/elein                                             |
+| elnode                      | https://github.com/jcaw/elnode                                              |
 | eno                         | https://github.com/enoson/eno.el                                            |
 | eshell-outline              | https://git.jamzattack.xyz/eshell-outline                                   |
 | flow-js2-mode               | https://github.com/Fuco1/flow-js2-mode                                      |
@@ -523,6 +523,7 @@
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
+| helm-tree-sitter            | https://github.com/Giedriusj1/helm-tree-sitter                              |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
@@ -539,19 +540,28 @@
 | org-doing                   | https://github.com/rudolfolah/org-doing                                     |
 | org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
 | org-pivotal                 | https://github.com/org-pivotal/org-pivotal                                  |
+| org-present-remote          | https://git.sr.ht/~duncan-bayne/org-present-remote                          |
 | org-recur                   | https://github.com/mrcnski/org-recur                                        |
 | org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
 | ox-impress-js               | https://github.com/takumikinjo/org-impress-js.el                            |
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
+| peek-mode                   | https://github.com/erikriverson/peek-mode                                   |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
 | ph                          | https://github.com/gromnitsky/ph                                            |
 | protobuf-ts-mode            | https://git.ookami.one/cgit/protobuf-ts-mode                                |
+| pygn-mode                   | https://github.com/dwcoates/pygn-mode                                       |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
 | redprl                      | https://github.com/RedPRL/sml-redprl                                        |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | session                     | https://github.com/emacsorphanage/session                                   |
 | sml-modeline                | https://github.com/emacsorphanage/sml-modeline                              |
 | tbx2org                     | https://github.com/istib/tbx2org                                            |
+| tree-sitter                 | https://github.com/emacs-tree-sitter/elisp-tree-sitter                      |
+| tree-sitter                 | https://github.com/emacs-tree-sitter/elisp-tree-sitter                      |
+| tree-sitter-ess-r           | https://github.com/ShuguangSun/tree-sitter-ess-r                            |
+| tree-sitter-indent          | https://codeberg.org/FelipeLema/tree-sitter-indent.el                       |
+| tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
+| tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
 | twtxt                       | https://github.com/deadblackclover/twtxt-el                                 |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |
 | use-package-el-get          | https://github.com/edvorg/use-package-el-get                                |
@@ -803,7 +813,7 @@
 | transient-extras        | transient-extras-a2ps            | github    |
 | transient-extras        | transient-extras-lp              | github    |
 | tree-edit               | evil-tree-edit                   | github    |
-| tree-sitter             | tsc                              | github    |
+| tree-sitter             | tsc                              | shelved   |
 | treemacs                | treemacs-all-the-icons           | github    |
 | treemacs                | treemacs-evil                    | github    |
 | treemacs                | treemacs-icons-dired             | github    |
@@ -866,16 +876,11 @@
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (4)       | Used   | Forced | Melpa   | Class  | Fetcher | Repo                                |
-|-------------------+--------+--------+---------+--------+---------+-------------------------------------|
-| elnode            | master |        | melpa   | github | github  | [[https://github.com/jcaw/elnode][jcaw/elnode]]                         |
-| prettier          | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                 |
-| tree-sitter       | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/elisp-tree-sitter][emacs-tree-sitter/elisp-tree-sitter]] |
-| tree-sitter-langs | master |        | release | github | github  | [[https://github.com/emacs-tree-sitter/tree-sitter-langs][emacs-tree-sitter/tree-sitter-langs]] |
+| Package (1) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
+|-------------+--------+--------+---------+--------+---------+---------------------|
+| prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
 
-- elnode: https://github.com/jcaw/elnode/issues/1
-- prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-651687425
-- tree-sitter*: https://github.com/emacs-tree-sitter/elisp-tree-sitter/issues/237
+- prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
 
 ** From Emacsmirror
 :PROPERTIES:
