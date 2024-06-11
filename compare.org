@@ -110,7 +110,7 @@
 | gnu-elpa    |  143 |    143 |       |       |      138 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5481 |   5481 |       |       |      211 |         177 |  4906 |
+| github      | 5482 |   5482 |       |       |      211 |         177 |  4907 |
 | gitlab      |  190 |    190 |       |       |       19 |          15 |   171 |
 | sourcehut   |  106 |    106 |       |       |       28 |           4 |    64 |
 | codeberg    |  108 |    108 |       |       |        6 |          32 |    92 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9053 |   6981 |  1571 |   498 |      454 |         234 |  5763 |
+| total       | 9054 |   6982 |  1571 |   498 |      454 |         234 |  5764 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -247,10 +247,6 @@
                        :order-by [(asc name)]]))
 #+end_src
 #+results: gnu-elpa-delayed
-| Package (2)     | Elpa | Reason                 |
-|-----------------+------+------------------------|
-| track-changes   | core | Later; new in Emacs 30 |
-| window-tool-bar | core | Later; new in Emacs 30 |
 
 ** Unreleased
 :PROPERTIES:
