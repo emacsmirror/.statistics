@@ -94,7 +94,7 @@
              :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (86)                    | Class     | Feature                  | Reason                                            |
+| Package (85)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -123,7 +123,6 @@
 | ecb                             | github    | thing                    | XEmacs compatibility                              |
 | ee                              | gnu       | bbdb-autoloads           | generated external file                           |
 | el-autoyas                      | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
-| elisp-benchmarks                | gnu-elpa  | comp                     | only when using Emacs' native-comp branch         |
 | emms-player-mpv-jp-radios       | github    | anything                 | anything                                          |
 | erlang                          | github    | tags                     | backward compatibility                            |
 | es-lib                          | github    | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]             |
