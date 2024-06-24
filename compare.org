@@ -106,7 +106,7 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  501 |        |       |   498 |       20 |             |       |
+| builtin     |  502 |        |       |   498 |       20 |             |       |
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9066 |   6994 |  1571 |   498 |      455 |         236 |  5775 |
+| total       | 9067 |   6994 |  1571 |   498 |      455 |         236 |  5775 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -203,12 +203,14 @@
             [builtin gnu-elpa core])
 #+end_src
 #+results: builtin-prefer-upstream
-| Package (4) | Class  |
-|-------------+--------|
-| compat      | github |
-| org         | gnu    |
-| tramp       | gnu    |
-| transient   | github |
+| Package (6)  | Class  |
+|--------------+--------|
+| compat       | github |
+| editorconfig | github |
+| org          | gnu    |
+| tramp        | gnu    |
+| transient    | github |
+| which-key    | github |
 
 * GNU Elpa
 :PROPERTIES:
