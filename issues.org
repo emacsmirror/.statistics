@@ -51,11 +51,13 @@
 | plz-media-type   | plz-media-type   |         |
 | test-helper      | blackjack        |         |
 | test-helper      | clojure-ts-mode  |         |
+| test-helper      | rustic           |         |
 
+- 2017 test-helper https://github.com/rejeep/ert-runner.el/issues/38
 - 2023-10-09 derl https://github.com/melpa/melpa/pull/8769
 - 2024-05-18 llm "It is temporarily vendored within the llm library."
   (from library header)
-- 2024-06-08 pg https://github.com/emarsden/pg-el/issues/5
+- 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
@@ -84,16 +86,18 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (4)              | Class  | Feature     | Provider    |
+| Package (5)              | Class  | Feature     | Provider    |
 |--------------------------+--------+-------------+-------------|
 | evil-textobj-tree-sitter | github | tree-sitter | tree-sitter |
 | flex-compile             | github | slite       |             |
 | scopeline                | github | tree-sitter | tree-sitter |
 | symex                    | github | tree-sitter | tree-sitter |
 | symex                    | github | tsc         | tree-sitter |
+| template-dumper          | github | emacs       |             |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
+- 2024-07-01 template-dumper https://github.com/natelastname/template-dumper/issues/1
 
 * Missing library summary
 :PROPERTIES:

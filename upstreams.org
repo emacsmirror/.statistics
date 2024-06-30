@@ -235,7 +235,7 @@
 - ansi https://github.com/rejeep/ansi.el
 - ansi-color https://git.savannah.gnu.org/git/emacs.git
 - ansi-osc https://git.savannah.gnu.org/git/emacs.git
-- ansible https://github.com/k1LoW/emacs-ansible
+- ansible https://gitlab.com/emacs-ansible/emacs-ansible
 - ansible-doc https://github.com/emacsorphanage/ansible-doc
 - ansible-vault https://github.com/zellio/ansible-vault-mode
 - ansilove https://gitlab.com/xgqt/emacs-ansilove
@@ -849,6 +849,7 @@
 - casual-info https://github.com/kickingvegas/casual-info
 - casual-isearch https://github.com/kickingvegas/casual-isearch
 - casual-lib https://github.com/kickingvegas/casual-lib
+- casual-suite https://github.com/kickingvegas/casual-suite
 - cat-safe https://github.com/skeeto/cat-safe
 - catmacs https://bitbucket.org/pymaximus/catmacs
 - catppuccin-theme https://github.com/catppuccin/emacs
@@ -1848,6 +1849,7 @@
 - dropdown-list https://github.com/emacsmirror/emacswiki.org
 - drupal-mode https://github.com/arnested/drupal-mode
 - drupal-spell https://github.com/arnested/drupal-spell
+- dslide https://github.com/positron-solutions/dslide
 - dsvn https://svn.apache.org/repos/asf/subversion/trunk/contrib/client-side/emacs/dsvn.el
 - dtb-mode https://github.com/schspa/dtb-mode
 - dtext-mode https://github.com/JohnDevlopment/dtext-mode.el
@@ -2024,7 +2026,7 @@
 - eglot-java https://github.com/yveszoundi/eglot-java
 - eglot-jl https://github.com/non-Jedi/eglot-jl
 - eglot-luau https://github.com/kennethloeffler/eglot-luau
-- eglot-signature-eldoc-talkative https://codeberg.org/mekeor/emacs-eglot-signature-eldoc-talkative
+- eglot-signature-eldoc-talkative https://codeberg.org/mekeor/eglot-signature-eldoc-talkative
 - eglot-tempel https://github.com/fejfighter/eglot-tempel
 - ego https://github.com/emacs-china/EGO
 - egocentric please consult a search engine
@@ -5291,6 +5293,7 @@
 - move-text https://github.com/emacsfodder/move-text
 - movie https://github.com/larsmagne/movie.el
 - mowedline https://github.com/retroj/mowedline
+- mowie https://codeberg.org/mekeor/mowie
 - moz https://github.com/bard/mozrepl
 - moz-controller https://github.com/RenWenshan/emacs-moz-controller
 - mozart git@github.com:mozart/mozart2.git
@@ -6782,6 +6785,7 @@
 - python-view-data https://github.com/ShuguangSun/python-view-data
 - python-x https://gitlab.com/wavexx/python-x.el
 - pythonic https://github.com/pythonic-emacs/pythonic
+- pythontest https://github.com/erickgnavar/pythontest.el
 - pyvenv https://github.com/jorgenschaefer/pyvenv
 - pyvenv-auto https://github.com/ryotaro612/pyvenv-auto
 - q-mode https://github.com/psaris/q-mode
@@ -7195,7 +7199,7 @@
 - rust-playground https://github.com/grafov/rust-playground
 - rust-ts-mode https://git.savannah.gnu.org/git/emacs.git
 - rustfmt https://github.com/fbergroth/emacs-rustfmt
-- rustic https://github.com/brotzeit/rustic
+- rustic https://github.com/emacs-rustic/rustic
 - rutils https://github.com/ShuguangSun/rutils.el
 - rvm https://github.com/senny/rvm.el
 - rw-acronyms please consult a search engine
@@ -8047,6 +8051,7 @@
 - tempel-collection https://github.com/Crandel/tempel-collection
 - templ-ts-mode https://github.com/danderson/templ-ts-mode
 - template http://emacs-template.sourceforge.net
+- template-dumper https://github.com/natelastname/template-dumper
 - template-overlays https://github.com/mmontone/template-overlays
 - template-simple https://github.com/emacsmirror/emacswiki.org
 - templatel https://github.com/clarete/templatel
@@ -8169,6 +8174,7 @@
 - timecard please consult a search engine
 - timeclock https://git.savannah.gnu.org/git/emacs.git
 - timeclock-x https://github.com/emacsmirror/emacswiki.org
+- timeout https://github.com/karthink/timeout
 - timer+ https://github.com/emacsmirror/emacswiki.org
 - timer-revert https://github.com/yyr/timer-revert
 - timerfunctions https://git.savannah.gnu.org/git/emacs/elpa.git
@@ -8312,6 +8318,7 @@
 - trelloel https://github.com/jdodds/trelloel
 - trident-mode https://github.com/johnmastro/trident-mode.el
 - trie https://git.savannah.gnu.org/git/emacs/elpa.git
+- trimspace-mode https://git.sr.ht/~bkhl/trimspace-mode
 - trinary https://github.com/emacs-elsa/trinary-logic
 - trindle https://github.com/daichirata/trindle
 - triples https://github.com/ahyatt/triples
@@ -8729,11 +8736,12 @@
 - wget please consult a search engine
 - wgrep https://github.com/mhayashi1120/Emacs-wgrep
 - wgsl-mode https://github.com/acowley/wgsl-mode
+- whaler https://github.com/SalOrak/whaler.el
 - what-domain https://splode.com/~friedman/software/emacs-lisp/src/what-domain.el
 - what-the-commit https://github.com/danbarbarito/what-the-commit.el
 - which please consult a search engine
 - which-func https://git.savannah.gnu.org/git/emacs.git
-- which-key https://github.com/justbur/emacs-which-key
+- which-key https://git.savannah.gnu.org/git/emacs.git
 - which-key-posframe https://github.com/emacsorphanage/which-key-posframe
 - whiley-mode https://github.com/Whiley/WhileyEmacsMode
 - whine please consult a search engine
