@@ -12,6 +12,31 @@
 #+end_src
 [[https://emacsmirror.net/stats][up]]
 :END:
+* Melpa built-in
+
+#+name: built-in
+#+begin_src emacs-lisp :post addheader('(1 "Package" "Repository"),*this*)
+  (seq-keep (lambda (name)
+              (and-let* ((rcp (epkg-get-recipe 'melpa name)))
+                (list name (melpa-org-link name))))
+            (epkgs 'name [builtin]))
+#+end_src
+#+results: built-in
+| Package (12)   | Repository                 |
+|----------------+----------------------------|
+| hierarchy      | [[https://github.com/DamienCassou/hierarchy][DamienCassou/hierarchy]]     |
+| faceup         | [[https://github.com/Lindydancer/faceup][Lindydancer/faceup]]         |
+| csharp-mode    | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]   |
+| wallpaper      | [[https://github.com/farlado/emacs-wallpaper][farlado/emacs-wallpaper]]    |
+| which-key      | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]    |
+| bind-key       | [[https://github.com/jwiegley/use-package][jwiegley/use-package]]       |
+| use-package    | [[https://github.com/jwiegley/use-package][jwiegley/use-package]]       |
+| dictionary     | [[https://github.com/myrkr/dictionary-el][myrkr/dictionary-el]]        |
+| less-css-mode  | [[https://github.com/purcell/less-css-mode][purcell/less-css-mode]]      |
+| elixir-ts-mode | [[https://github.com/wkirschbaum/elixir-ts-mode][wkirschbaum/elixir-ts-mode]] |
+| heex-ts-mode   | [[https://github.com/wkirschbaum/heex-ts-mode][wkirschbaum/heex-ts-mode]]   |
+| sqlite         | [[https://gitlab.com/cnngimenez/sqlite.el][cnngimenez/sqlite.el]]       |
+
 * Missing from Melpa
 :PROPERTIES:
 :ID:       7d6ef98f-8f71-4f28-8e89-532d5b48d61a
