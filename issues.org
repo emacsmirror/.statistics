@@ -82,13 +82,16 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (4)              | Class  | Feature     | Provider    |
-|--------------------------+--------+-------------+-------------|
-| evil-textobj-tree-sitter | github | tree-sitter | tree-sitter |
-| flex-compile             | github | slite       |             |
-| scopeline                | github | tree-sitter | tree-sitter |
-| symex                    | github | tree-sitter | tree-sitter |
-| symex                    | github | tsc         | tree-sitter |
+| Package (5)              | Class  | Feature            | Provider           |
+|--------------------------+--------+--------------------+--------------------|
+| evil-textobj-tree-sitter | github | tree-sitter        | tree-sitter        |
+| flex-compile             | github | slite              |                    |
+| scopeline                | github | tree-sitter        | tree-sitter        |
+| sdml-mode                | github | tree-sitter        | tree-sitter        |
+| sdml-mode                | github | tree-sitter-hl     | tree-sitter        |
+| sdml-mode                | github | tree-sitter-indent | tree-sitter-indent |
+| symex                    | github | tree-sitter        | tree-sitter        |
+| symex                    | github | tsc                | tree-sitter        |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
