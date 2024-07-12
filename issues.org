@@ -82,8 +82,9 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (5)              | Class  | Feature            | Provider           |
+| Package (6)              | Class  | Feature            | Provider           |
 |--------------------------+--------+--------------------+--------------------|
+| eev                      | github | eev-lean4          |                    |
 | evil-textobj-tree-sitter | github | tree-sitter        | tree-sitter        |
 | flex-compile             | github | slite              |                    |
 | scopeline                | github | tree-sitter        | tree-sitter        |
