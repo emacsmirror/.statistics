@@ -110,10 +110,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5498 |   5498 |       |       |      211 |         181 |  4924 |
+| github      | 5499 |   5499 |       |       |      211 |         181 |  4925 |
 | gitlab      |  192 |    192 |       |       |       19 |          16 |   174 |
 | sourcehut   |  108 |    108 |       |       |       28 |           5 |    66 |
-| codeberg    |  115 |    115 |       |       |        6 |          32 |    99 |
+| codeberg    |  116 |    116 |       |       |        6 |          32 |   100 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,10 +128,10 @@
 | shelved     | 1571 |        |  1571 |       |          |             |    29 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   265 |
+| secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9084 |   7010 |  1571 |   498 |      455 |         239 |  5793 |
+| total       | 9086 |   7012 |  1571 |   498 |      455 |         239 |  5796 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -587,7 +587,7 @@
                         (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (147)   | Secondary package                | Class     |
+| Primary package (148)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -660,6 +660,7 @@
 | el-secretario           | el-secretario-mu4e               | sourcehut |
 | el-secretario           | el-secretario-notmuch            | sourcehut |
 | el-secretario           | el-secretario-org                | sourcehut |
+| elcute                  | slurpbarf                        | codeberg  |
 | elfeed                  | elfeed-web                       | github    |
 | elfeed-tube             | elfeed-tube-mpv                  | github    |
 | emacsql                 | emacsql-mysql                    | github    |
