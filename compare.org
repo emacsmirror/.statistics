@@ -106,13 +106,13 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  503 |        |       |   498 |       20 |             |       |
-| gnu-elpa    |  144 |    144 |       |       |      139 |             |       |
+| builtin     |  503 |        |       |   498 |       21 |             |       |
+| gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5499 |   5499 |       |       |      211 |         181 |  4925 |
+| github      | 5501 |   5501 |       |       |      211 |         181 |  4927 |
 | gitlab      |  192 |    192 |       |       |       19 |          16 |   174 |
-| sourcehut   |  108 |    108 |       |       |       28 |           5 |    66 |
+| sourcehut   |  109 |    109 |       |       |       28 |           5 |    67 |
 | codeberg    |  116 |    116 |       |       |        6 |          32 |   100 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9086 |   7012 |  1571 |   498 |      455 |         239 |  5796 |
+| total       | 9090 |   7016 |  1571 |   498 |      457 |         239 |  5799 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -321,7 +321,7 @@
 | track-changes       | core     |                     |
 | use-package         | core     |                     |
 | verilog-mode        | core     |                     |
-| which-key           | github   |                     |
+| which-key           | core     |                     |
 | window-tool-bar     | core     |                     |
 | xref                | core     |                     |
 
