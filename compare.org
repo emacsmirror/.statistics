@@ -110,8 +110,8 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5501 |   5501 |       |       |      211 |         181 |  4927 |
-| gitlab      |  192 |    192 |       |       |       19 |          16 |   174 |
+| github      | 5502 |   5502 |       |       |      211 |         181 |  4928 |
+| gitlab      |  191 |    191 |       |       |       19 |          16 |   173 |
 | sourcehut   |  109 |    109 |       |       |       28 |           5 |    67 |
 | codeberg    |  116 |    116 |       |       |        6 |          32 |   100 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
@@ -974,7 +974,7 @@
 #+results: github-archived
 | Package (1) | Repository           |  Melpa | Dependants                                       |
 |-------------+----------------------+--------+--------------------------------------------------|
-| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 261952 | company-restclient ob-restclient restclient-test |
+| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 282567 | company-restclient ob-restclient restclient-test |
 
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
