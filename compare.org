@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5503 |   5503 |       |       |      211 |         181 |  4929 |
+| github      | 5501 |   5501 |       |       |      211 |         181 |  4927 |
 | gitlab      |  191 |    191 |       |       |       19 |          16 |   173 |
 | sourcehut   |  109 |    109 |       |       |       28 |           5 |    67 |
-| codeberg    |  116 |    116 |       |       |        6 |          32 |   100 |
+| codeberg    |  118 |    118 |       |       |        6 |          32 |   102 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   105 |
-| shelved     | 1571 |        |  1571 |       |          |             |    29 |
+| shelved     | 1575 |        |  1575 |       |          |             |    29 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9091 |   7017 |  1571 |   498 |      457 |         239 |  5800 |
+| total       | 9095 |   7017 |  1575 |   498 |      457 |         239 |  5800 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -514,6 +514,7 @@
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
 | elein                       | https://github.com/remvee/elein                                             |
 | elnode                      | https://github.com/jcaw/elnode                                              |
+| elscreen-mew                | https://github.com/masutaka/elscreen-mew                                    |
 | eno                         | https://github.com/enoson/eno.el                                            |
 | eshell-outline              | https://git.jamzattack.xyz/eshell-outline                                   |
 | flow-js2-mode               | https://github.com/Fuco1/flow-js2-mode                                      |
@@ -564,7 +565,6 @@
 | tree-sitter-indent          | https://codeberg.org/FelipeLema/tree-sitter-indent.el                       |
 | tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
 | tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
-| twtxt                       | https://github.com/deadblackclover/twtxt-el                                 |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |
 | use-package-el-get          | https://github.com/edvorg/use-package-el-get                                |
 | weechat                     | https://github.com/the-kenny/weechat.el                                     |
@@ -992,3 +992,10 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-removed
+| Package (3)         | Repository                         | Melpa | Dependants |
+|---------------------+------------------------------------+-------+------------|
+| github-modern-theme | [[https://github.com/tx46/GitHub-Modern-Theme-for-Emacs][tx46/GitHub-Modern-Theme-for-Emacs]] |  3876 |            |
+| github-theme        | [[https://github.com/tx46/GitHub-Theme-for-Emacs][tx46/GitHub-Theme-for-Emacs]]        |  6296 |            |
+| zweilight-theme     | [[https://github.com/tx46/Zweilight-Theme-for-Emacs][tx46/Zweilight-Theme-for-Emacs]]     |  2497 |            |
+
+- 2024-07-31 tx46: https://github.com/melpa/melpa/pull/4805
