@@ -22,7 +22,7 @@
             (epkgs 'name [builtin]))
 #+end_src
 #+results: built-in
-| Package (12)   | Repository                 |
+| Package (11)   | Repository                 |
 |----------------+----------------------------|
 | hierarchy      | [[https://github.com/DamienCassou/hierarchy][DamienCassou/hierarchy]]     |
 | faceup         | [[https://github.com/Lindydancer/faceup][Lindydancer/faceup]]         |
@@ -35,7 +35,6 @@
 | less-css-mode  | [[https://github.com/purcell/less-css-mode][purcell/less-css-mode]]      |
 | elixir-ts-mode | [[https://github.com/wkirschbaum/elixir-ts-mode][wkirschbaum/elixir-ts-mode]] |
 | heex-ts-mode   | [[https://github.com/wkirschbaum/heex-ts-mode][wkirschbaum/heex-ts-mode]]   |
-| sqlite         | [[https://gitlab.com/cnngimenez/sqlite.el][cnngimenez/sqlite.el]]       |
 
 * Missing from Melpa
 :PROPERTIES:
