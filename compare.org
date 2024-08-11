@@ -110,9 +110,9 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5504 |   5504 |       |       |      211 |         181 |  4930 |
+| github      | 5506 |   5506 |       |       |      211 |         181 |  4932 |
 | gitlab      |  191 |    191 |       |       |       19 |          16 |   172 |
-| sourcehut   |  105 |    105 |       |       |       28 |           5 |    63 |
+| sourcehut   |  104 |    104 |       |       |       29 |           5 |    61 |
 | codeberg    |  118 |    118 |       |       |        6 |          32 |   102 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9097 |   7016 |  1578 |   498 |      457 |         239 |  5798 |
+| total       | 9098 |   7017 |  1578 |   498 |      458 |         239 |  5798 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -972,10 +972,14 @@
                      :order-by [(asc name)]]))
 #+end_src
 #+results: github-archived
-| Package (1) | Repository           |  Melpa | Dependants                                       |
-|-------------+----------------------+--------+--------------------------------------------------|
-| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 282567 | company-restclient ob-restclient restclient-test |
+| Package (3)   | Repository               |  Melpa | Dependants                                       |
+|---------------+--------------------------+--------+--------------------------------------------------|
+| apparmor-mode | [[https://github.com/alexmurray/apparmor-mode][alexmurray/apparmor-mode]] |    726 |                                                  |
+| lean-mode     | [[https://github.com/leanprover/lean3-mode][leanprover/lean3-mode]]    |   6384 | yasnippet-lean                                   |
+| restclient    | [[https://github.com/pashky/restclient.el][pashky/restclient.el]]     | 282567 | company-restclient ob-restclient restclient-test |
 
+- 2024-08-11 apparmor-mode https://github.com/melpa/melpa/pull/9122
+- 2024-08-11 lead-mode https://github.com/melpa/melpa/pull/8106#issuecomment-1208063446
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
 ** Removed repositories
