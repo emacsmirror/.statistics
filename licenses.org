@@ -75,7 +75,7 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4823 |      69 |
+| GPL-3.0-or-later  |  4824 |      69 |
 | GPL-2.0-or-later  |  1168 |      17 |
 | MIT               |   407 |       6 |
 | GPL-3.0-only      |   175 |       2 |
@@ -109,9 +109,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6205 |      88 |
+| total GNU         |  6206 |      88 |
 |-------------------+-------+---------|
-| total             |  7017 |     100 |
+| total             |  7018 |     100 |
 
 ** Packages with unknown licenses
 :PROPERTIES:
@@ -124,7 +124,8 @@
                   (and (epkg-get-recipe 'melpa name) "✓")))
           (epkg-sql [:select [name class license] :from packages
                      :where (and (not (= class 'shelved))
-                                 (not (in license $v1)))
+                                 (or (not (in license $v1))
+                                     (isnull license)))
                      :order-by [(asc name)]]
                     (vconcat ["as-is" "public-domain"]
                              elx-spdx-license-identifiers)))
