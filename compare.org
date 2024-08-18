@@ -180,12 +180,13 @@
 :END:
 #+name: builtin-prefer-elpa
 #+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
-  (epkg-sql [:select :distinct [packages:name packages:class]
-             :from [packages builtin-libraries]
-             :where (= packages:name builtin-libraries:package)
-             :and packages:class :in $v1
-             :order-by [(asc packages:name)]]
-            [gnu-elpa core])
+  (epkg-sql
+   [:select :distinct [packages:name packages:class]
+    :from [packages builtin-libraries]
+    :where (= packages:name builtin-libraries:package)
+    :and packages:class :in $v1
+    :order-by [(asc packages:name)]]
+   [gnu-elpa core])
 #+end_src
 #+results: builtin-prefer-elpa
 
@@ -195,12 +196,13 @@
 :END:
 #+name: builtin-prefer-upstream
 #+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
-  (epkg-sql [:select :distinct [packages:name packages:class]
-             :from [packages builtin-libraries]
-             :where (and (= packages:name builtin-libraries:package)
-                         (not (in packages:class $v1)))
-             :order-by [(asc packages:name)]]
-            [builtin gnu-elpa core])
+  (epkg-sql
+   [:select :distinct [packages:name packages:class]
+    :from [packages builtin-libraries]
+    :where (and (= packages:name builtin-libraries:package)
+                (not (in packages:class $v1)))
+    :order-by [(asc packages:name)]]
+   [builtin gnu-elpa core])
 #+end_src
 #+results: builtin-prefer-upstream
 | Package (5)  | Class  |
@@ -221,15 +223,15 @@
 :END:
 #+name: gnu-elpa-new
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Url"),*this*)
-  (mapcan (pcase-lambda (`(,name ,class ,url))
-            (and (not (emir--config name :delayed))
-                 (not (emir--config name :secondary))
-                 (not (emir--config name :builtin-preferred))
-                 (list (list name class (if (eq class 'core) "" url)))))
-          (epkg-sql [:select [name class url]
-                     :from gnu-elpa-recipes
-                     :where (isnull epkg-package)
-                     :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (and (not (emir--config name :delayed))
+        (not (emir--config name :secondary))
+        (not (emir--config name :builtin-preferred))
+        (list (list name class (if (eq class 'core) "" url))))
+   [:select [name class url]
+    :from gnu-elpa-recipes
+    :where (isnull epkg-package)
+    :order-by [(asc name)]])
 #+end_src
 #+results: gnu-elpa-new
 
@@ -239,13 +241,13 @@
 :END:
 #+name: gnu-elpa-delayed
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
-  (seq-keep (pcase-lambda (`(,name ,class))
-              (and-let* ((reason (emir--config name :delayed)))
-                (list name class reason)))
-            (epkg-sql [:select [name class]
-                       :from gnu-elpa-recipes
-                       :where (isnull epkg-package)
-                       :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (and-let* ((reason (emir--config name :delayed)))
+     (list name class reason))
+   [:select [name class]
+    :from gnu-elpa-recipes
+    :where (isnull epkg-package)
+    :order-by [(asc name)]])
 #+end_src
 #+results: gnu-elpa-delayed
 
@@ -255,12 +257,13 @@
 :END:
 #+name: gnu-elpa-unreleased
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
-  (epkg-sql [:select [name class]
-             :from gnu-elpa-recipes
-             :where (and (in class $v1)
-                         (isnull released))
-             :order-by [(asc name)]]
-            [subtree external])
+  (epkg-sql
+   [:select [name class]
+    :from gnu-elpa-recipes
+    :where (and (in class $v1)
+                (isnull released))
+    :order-by [(asc name)]]
+   [subtree external])
 #+end_src
 #+results: gnu-elpa-unreleased
 
@@ -270,11 +273,12 @@
 :END:
 #+name: gnu-elpa-shelved
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
-  (epkg-sql [:select :distinct [packages:name gnu-elpa-recipes:class]
-             :from [packages gnu-elpa-recipes]
-             :where (= packages:name gnu-elpa-recipes:name)
-             :and (= packages:class 'shelved)
-             :order-by [(asc packages:name)]])
+  (epkg-sql
+   [:select :distinct [packages:name gnu-elpa-recipes:class]
+    :from [packages gnu-elpa-recipes]
+    :where (= packages:name gnu-elpa-recipes:name)
+    :and (= packages:class 'shelved)
+    :order-by [(asc packages:name)]])
 #+end_src
 #+results: gnu-elpa-shelved
 
@@ -284,14 +288,15 @@
 :END:
 #+name: gnu-elpa-prefer-builtin
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
-  (mapcar (pcase-lambda (`(,name ,class))
-            (list name class
-                  (or (emir--config name :builtin-preferred) "")))
-          (epkg-sql [:select :distinct [packages:name gnu-elpa-recipes:class]
-                     :from [packages gnu-elpa-recipes]
-                     :where (= packages:name gnu-elpa-recipes:name)
-                     :and (= packages:class 'builtin)
-                     :order-by [(asc packages:name)]]))
+  (epkg--sql-keep
+   (list p:name r:class
+         (or (emir--config p:name :builtin-preferred) ""))
+   [:select :distinct [p:name r:class]
+    :from [(as packages p)
+           (as gnu-elpa-recipes r)]
+    :where (= p:name r:name)
+    :and (= p:class 'builtin)
+    :order-by [(asc p:name)]])
 #+end_src
 #+results: gnu-elpa-prefer-builtin
 | Package (28)        | Elpa     | Reason              |
@@ -332,18 +337,17 @@
 #+name: gnu-elpa-prefer-elpa
 #+begin_src emacs-lisp :post addheader('("Package" ":url"),*this*)
   (let ((alist (emir-gelpa--recipes-alist emir-gnu-elpa-repository)))
-    (seq-keep (pcase-lambda (`(,name ,_class ,_elpa))
-                (and-let* ((url (plist-get (cdr (assoc name alist)) :url)))
-                  (list name url)))
-              (epkg-sql [:select :distinct [packages:name
-                                            packages:class
-                                            gnu-elpa-recipes:class]
-                         :from [packages gnu-elpa-recipes]
-                         :where (= packages:name gnu-elpa-recipes:epkg-package)
-                         :and packages:class :in $v1
-                         :order-by [(asc gnu-elpa-recipes:url)
-                                    (asc packages:name)]]
-                        [gnu-elpa])))
+    (epkg--sql-keep
+     (and-let* ((url (plist-get (cdr (assoc p:name alist)) :url)))
+       (list p:name url))
+     [:select :distinct [p:name p:class r:class]
+      :from [(as packages p)
+             (as gnu-elpa-recipes r)]
+      :where (= p:name r:epkg-package)
+      :and p:class :in $v1
+      :order-by [(asc r:url)
+                 (asc p:name)]]
+     [gnu-elpa]))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
 | Package (12)        | :url                                              |
@@ -371,15 +375,15 @@
 :END:
 #+name: nongnu-elpa-new
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Url"),*this*)
-  (mapcan (pcase-lambda (`(,name ,class ,url))
-            (and (not (emir--config name :delayed))
-                 (not (emir--config name :secondary))
-                 (not (emir--config name :builtin-preferred))
-                 (list (list name class (if (eq class 'core) "" url)))))
-          (epkg-sql [:select [name class url]
-                     :from nongnu-elpa-recipes
-                     :where (isnull epkg-package)
-                     :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (and (not (emir--config name :delayed))
+        (not (emir--config name :secondary))
+        (not (emir--config name :builtin-preferred))
+        (list (list name class (if (eq class 'core) "" url))))
+   [:select [name class url]
+    :from nongnu-elpa-recipes
+    :where (isnull epkg-package)
+    :order-by [(asc name)]])
 #+end_src
 #+results: nongnu-elpa-new
 
@@ -389,13 +393,13 @@
 :END:
 #+name: nongnu-elpa-delayed
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
-  (seq-keep (pcase-lambda (`(,name ,class))
-              (and-let* ((reason (emir--config name :delayed)))
-                (list name class reason)))
-            (epkg-sql [:select [name class]
-                       :from nongnu-elpa-recipes
-                       :where (isnull epkg-package)
-                       :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (and-let* ((reason (emir--config name :delayed)))
+     (list name class reason))
+   [:select [name class]
+    :from nongnu-elpa-recipes
+    :where (isnull epkg-package)
+    :order-by [(asc name)]])
 #+end_src
 #+results: nongnu-elpa-delayed
 
@@ -405,12 +409,13 @@
 :END:
 #+name: nongnu-elpa-unreleased
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
-  (epkg-sql [:select [name class]
-             :from nongnu-elpa-recipes
-             :where (and (in class $v1)
-                         (isnull released))
-             :order-by [(asc name)]]
-            [subtree external])
+  (epkg-sql
+   [:select [name class]
+    :from nongnu-elpa-recipes
+    :where (and (in class $v1)
+                (isnull released))
+    :order-by [(asc name)]]
+   [subtree external])
 #+end_src
 #+results: nongnu-elpa-unreleased
 
@@ -420,11 +425,12 @@
 :END:
 #+name: nongnu-elpa-shelved
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
-  (epkg-sql [:select :distinct [packages:name nongnu-elpa-recipes:class]
-             :from [packages nongnu-elpa-recipes]
-             :where (= packages:name nongnu-elpa-recipes:name)
-             :and (= packages:class 'shelved)
-             :order-by [(asc packages:name)]])
+  (epkg-sql
+   [:select :distinct [packages:name nongnu-elpa-recipes:class]
+    :from [packages nongnu-elpa-recipes]
+    :where (= packages:name nongnu-elpa-recipes:name)
+    :and (= packages:class 'shelved)
+    :order-by [(asc packages:name)]])
 #+end_src
 #+results: nongnu-elpa-shelved
 | Package (1)  | Elpa   |
@@ -441,19 +447,19 @@
 :END:
 #+name: melpa-new
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Melpa" "Link"),*this*)
-  (seq-keep (pcase-lambda (`(,name ,fetcher ,url))
-              (and (not (or (emir--lookup-url url)
-                            (emir--config name :delayed)
-                            (emir--config name :secondary)))
-                   (list name
-                         (and-let* ((class (emir--url-to-class url)))
-                           (closql--abbrev-class class))
-                         fetcher
-                         (melpa-org-link name))))
-            (epkg-sql [:select [name class url]
-                       :from melpa-recipes
-                       :where (isnull epkg-package)
-                       :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (and (not (or (emir--lookup-url url)
+                 (emir--config name :delayed)
+                 (emir--config name :secondary)))
+        (list name
+              (and-let* ((class (emir--url-to-class url)))
+                (closql--abbrev-class class))
+              fetcher
+              (melpa-org-link name)))
+   [:select [name class url]
+    :from melpa-recipes
+    :where (isnull epkg-package)
+    :order-by [(asc name)]])
 #+end_src
 #+results: melpa-new
 
@@ -463,13 +469,13 @@
 :END:
 #+name: melpa-delayed
 #+begin_src emacs-lisp :post addheader('("Package" "Melpa" "Reason"),*this*)
-  (seq-keep (pcase-lambda (`(,name ,class))
-              (and-let* ((reason (emir--config name :delayed)))
-                (list name class reason)))
-            (epkg-sql [:select [name class]
-                       :from melpa-recipes
-                       :where (isnull epkg-package)
-                       :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (and-let* ((reason (emir--config name :delayed)))
+     (list name class reason))
+   [:select [name class]
+    :from melpa-recipes
+    :where (isnull epkg-package)
+    :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
 | Package (6)                       | Melpa  | Reason                                               |
@@ -487,12 +493,12 @@
 :END:
 #+name: melpa-shelved
 #+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
-  (epkg-sql [:select [packages:name packages:url]
-             :from [packages melpa-recipes]
-             :where (and (= melpa-recipes:epkg-package packages:name)
-                         (in packages:class $v1))
-             :order-by [(asc packages:name)]]
-            [shelved])
+  (epkg-sql
+   [:select [packages:name packages:url]
+    :from [packages melpa-recipes]
+    :where (and (= melpa-recipes:epkg-package packages:name)
+                (= packages:class 'shelved))
+    :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
 | Package (71)                | Url                                                                         |
@@ -576,15 +582,16 @@
 :END:
 #+name: secondary-packages
 #+begin_src emacs-lisp :post addheader('("Primary package" "Secondary package" "Class"),*this*)
-  (epkg-sql [:select :distinct [packages:name
-                                melpa-recipes:name
-                                packages:class]
-             :from [packages melpa-recipes]
-             :where (and (= packages:name melpa-recipes:epkg-package)
-                         (not (= melpa-recipes:epkg-package
-                                 melpa-recipes:name)))
-             :order-by [(asc packages:name)
-                        (asc melpa-recipes:name)]])
+  (epkg-sql
+   [:select :distinct [packages:name
+                       melpa-recipes:name
+                       packages:class]
+    :from [packages melpa-recipes]
+    :where (and (= packages:name melpa-recipes:epkg-package)
+                (not (= melpa-recipes:epkg-package
+                        melpa-recipes:name)))
+    :order-by [(asc packages:name)
+               (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
 | Primary package (148)   | Secondary package                | Class     |
@@ -898,9 +905,10 @@
 :END:
 #+name: melpa-from-mirror
 #+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
-  (epkg-sql [:select [name url] :from melpa-recipes
-             :where (like url '"\"https://github.com/emacsmirror%")
-             :order-by [(asc name)]])
+  (epkg-sql
+   [:select [name url] :from melpa-recipes
+    :where (like url '"\"https://github.com/emacsmirror%")
+    :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
 | Package (12)          | Url                                                  |
@@ -924,9 +932,10 @@
 :END:
 #+name: melpa-from-attic
 #+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
-  (epkg-sql [:select [name url] :from melpa-recipes
-             :where (like url '"\"https://github.com/emacsattic%")
-             :order-by [(asc name)]])
+  (epkg-sql
+   [:select [name url] :from melpa-recipes
+    :where (like url '"\"https://github.com/emacsattic%")
+    :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
 | Package (29)         | Url                                                |
@@ -971,12 +980,12 @@
 :END:
 #+name: github-archived
 #+begin_src emacs-lisp :post addheader('("Package" "Repository" "Melpa" "Dependants"),*this*)
-  (mapcar (pcase-lambda (`(,name ,downloads))
-            (list name (epkg-org-link name) downloads
-                  (mapconcat #'car (epkg-reverse-dependencies name) " ")))
-          (epkg-sql [:select [name downloads] :from packages
-                     :where (= upstream-state 'archived)
-                     :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (list name (epkg-org-link name) downloads
+         (mapconcat #'car (epkg-reverse-dependencies name) " "))
+   [:select [name downloads] :from packages
+    :where (= upstream-state 'archived)
+    :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
 | Package (3)   | Repository               |  Melpa | Dependants                                       |
@@ -995,11 +1004,11 @@
 :END:
 #+name: github-removed
 #+begin_src emacs-lisp :post addheader('("Package" "Repository" "Melpa" "Dependants"),*this*)
-  (mapcar (pcase-lambda (`(,name ,downloads))
-            (list name (epkg-org-link name) downloads
-                  (mapconcat #'car (epkg-reverse-dependencies name) " ")))
-          (epkg-sql [:select [name downloads] :from packages
-                     :where (= upstream-state 'removed)
-                     :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (list name (epkg-org-link name) downloads
+         (mapconcat #'car (epkg-reverse-dependencies name) " "))
+   [:select [name downloads] :from packages
+    :where (= upstream-state 'removed)
+    :order-by [(asc name)]])
 #+end_src
 #+results: github-removed

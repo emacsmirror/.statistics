@@ -103,16 +103,16 @@
 :END:
 #+name: missing-summary
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "M"),*this*)
-  (mapcar (pcase-lambda (`(,name ,class))
-            (list name class
-                  (and (epkg-get-recipe 'melpa name) "✓")))
-          (epkg-sql [:select [name class]
-                     :from packages
-                     ;;:where (isnull commentary)
-                     :where (and (isnull summary)
-                                 (not (= class 'builtin))
-                                 (not (= class 'shelved)))
-                     :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (list name class
+         (and (epkg-get-recipe 'melpa name) "✓"))
+   [:select [name class]
+    :from packages
+    ;;:where (isnull commentary)
+    :where (and (isnull summary)
+                (not (= class 'builtin))
+                (not (= class 'shelved)))
+    :order-by [(asc name)]])
 #+end_src
 #+results: missing-summary
 

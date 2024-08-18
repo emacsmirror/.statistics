@@ -119,16 +119,16 @@
 :END:
 #+name: mirror-unknown
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "License" "M"),*this*)
-  (mapcar (pcase-lambda (`(,name ,class ,license))
-            (list name class license
-                  (and (epkg-get-recipe 'melpa name) "✓")))
-          (epkg-sql [:select [name class license] :from packages
-                     :where (and (not (= class 'shelved))
-                                 (or (not (in license $v1))
-                                     (isnull license)))
-                     :order-by [(asc name)]]
-                    (vconcat ["as-is" "public-domain"]
-                             elx-spdx-license-identifiers)))
+  (epkg--sql-keep
+   (list name class license
+         (and (epkg-get-recipe 'melpa name) "✓"))
+   [:select [name class license] :from packages
+    :where (and (not (= class 'shelved))
+                (or (not (in license $v1))
+                    (isnull license)))
+    :order-by [(asc name)]]
+   (vconcat ["as-is" "public-domain"]
+            elx-spdx-license-identifiers))
 #+end_src
 #+results: mirror-unknown
 
@@ -193,16 +193,16 @@
 :END:
 #+name: attic-unknown
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "License" "M"),*this*)
-  (mapcar (pcase-lambda (`(,name ,class ,license))
-            (list name class license
-                  (and (epkg-get-recipe 'melpa name) "✓")))
-          (epkg-sql [:select [name class license] :from packages
-                     :where (and (= class 'shelved)
-                                 (not (in license $v1)))
-                     :order-by [(asc name)]]
-                    (vconcat ["as-is" "public-domain"
-                              "GPL" "GPL-2.1-or-later" "BSD" "EPL"]
-                             elx-spdx-license-identifiers)))
+  (epkg--sql-keep
+   (list name class license
+         (and (epkg-get-recipe 'melpa name) "✓"))
+   [:select [name class license] :from packages
+    :where (and (= class 'shelved)
+                (not (in license $v1)))
+    :order-by [(asc name)]]
+   (vconcat ["as-is" "public-domain"
+             "GPL" "GPL-2.1-or-later" "BSD" "EPL"]
+            elx-spdx-license-identifiers))
 #+end_src
 #+results: attic-unknown
 | Package (9) | Class   | License | M |

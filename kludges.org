@@ -18,10 +18,11 @@
 :END:
 #+name: provided-join
 #+begin_src emacs-lisp :post addheader('(3 "Package" "Class" "Feature" "Reason"),*this*)
-  (epkg-sql [:select [name class feature join]
-             :from [packages provided]
-             :where (and (= name package) (notnull join))
-             :order-by [(asc package) (asc feature)]])
+  (epkg-sql
+   [:select [name class feature join]
+    :from [packages provided]
+    :where (and (= name package) (notnull join))
+    :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: provided-join
 | Package (19)           | Class     | Feature                     | Reason                                    |
@@ -60,10 +61,11 @@
 :END:
 #+name: provided-drop
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Reason"),*this*)
-  (epkg-sql [:select [name class feature drop]
-             :from [packages provided]
-             :where (and (= name package) (notnull drop))
-             :order-by [(asc feature) (asc package)]])
+  (epkg-sql
+   [:select [name class feature drop]
+    :from [packages provided]
+    :where (and (= name package) (notnull drop))
+    :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
 | Package (12)     | Class   | Feature              | Reason                |
@@ -88,10 +90,11 @@
 :END:
 #+name: required-drop
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Reason"),*this*)
-  (epkg-sql [:select [name class feature drop]
-             :from [packages required]
-             :where (and (= name package) (notnull drop))
-             :order-by [(asc package) (asc feature)]])
+  (epkg-sql
+   [:select [name class feature drop]
+    :from [packages required]
+    :where (and (= name package) (notnull drop))
+    :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
 | Package (85)                    | Class     | Feature                  | Reason                                            |
@@ -227,16 +230,16 @@
 :END:
 #+name: patched
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Commits"),*this*)
-  (mapcar (pcase-lambda (`(,name ,class))
-            (let ((pkg (epkg name)))
-              (list name class
-                    (with-emir-repository pkg
-                      (car (magit-rev-diff-count
-                            "master" "master@{upstream}"))))))
-          (epkg-sql [:select [name class]
-                     :from packages
-                     :where (= patched 't)
-                     :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (let ((pkg (epkg name)))
+     (list name class
+           (with-emir-repository pkg
+             (car (magit-rev-diff-count
+                   "master" "master@{upstream}")))))
+   [:select [name class]
+    :from packages
+    :where (= patched 't)
+    :order-by [(asc name)]])
 #+end_src
 #+results: patched
 | Package (22)          | Class  | Commits |
@@ -333,18 +336,18 @@ Other repositories that should be filtered (or better yet, split up by upstream)
 :END:
 #+name: no-mainlib
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "M" "Library"),*this*)
-  (seq-keep (pcase-lambda (`(,name ,type ,library))
-              (and (not (eq type 'core))
-                   (list name type
-                         (and (epkg-get-recipe 'melpa name) "✓")
-                         library
-                         ;; (emir--config name :library)
-                         )))
-            (epkg-sql [:select [name class library] :from packages
-                       :where (notnull library)
-                       :and class :in $v1
-                       :order-by [(asc name)]]
-                      (closql-where-class-in [mirrored*] (epkg-db))))
+  (epkg--sql-keep
+   (and (not (eq type 'core))
+        (list name type
+              (and (epkg-get-recipe 'melpa name) "✓")
+              library
+              ;; (emir--config name :library)
+              ))
+   [:select [name class library] :from packages
+    :where (notnull library)
+    :and class :in $v1
+    :order-by [(asc name)]]
+   (closql-where-class-in [mirrored*] (epkg-db)))
 #+end_src
 #+results: no-mainlib
 
@@ -354,13 +357,13 @@ Other repositories that should be filtered (or better yet, split up by upstream)
 :END:
 #+name: set-branch
 #+begin_src emacs-lisp :post addheader('("Package" "Branch" "Class" "Repo"),*this*)
-  (mapcar (pcase-lambda (`(,name ,branch ,class))
-            (list name branch class
-                  (epkg-org-link name)))
-          (epkg-sql [:select [name upstream-branch class]
-                     :from packages
-                     :where (notnull upstream-branch)
-                     :order-by [(asc name)]]))
+  (epkg--sql-keep
+   (list name upstream-branch class
+         (epkg-org-link name))
+   [:select [name upstream-branch class]
+    :from packages
+    :where (notnull upstream-branch)
+    :order-by [(asc name)]])
 #+end_src
 #+results: set-branch
 | Package (6)        | Branch                     | Class    | Repo                                      |
