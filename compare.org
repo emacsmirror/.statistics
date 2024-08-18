@@ -110,14 +110,14 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5506 |   5506 |       |       |      211 |         181 |  4932 |
+| github      | 5504 |   5504 |       |       |      211 |         181 |  4930 |
 | gitlab      |  191 |    191 |       |       |       19 |          16 |   172 |
 | sourcehut   |  104 |    104 |       |       |       29 |           5 |    61 |
 | codeberg    |  119 |    119 |       |       |        6 |          32 |   103 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  120 |    120 |       |       |       13 |           5 |   101 |
+| git         |  120 |    120 |       |       |       13 |           6 |   101 |
 | hg          |   15 |     15 |       |       |        1 |           0 |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   25 |     25 |       |       |          |             |       |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   105 |
-| shelved     | 1578 |        |  1578 |       |          |             |    29 |
+| shelved     | 1580 |        |  1580 |       |          |             |    29 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9099 |   7018 |  1578 |   498 |      458 |         239 |  5799 |
+| total       | 9099 |   7016 |  1580 |   498 |      458 |         240 |  5797 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -879,9 +879,16 @@
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (1) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
-|-------------+--------+--------+---------+--------+---------+---------------------|
-| prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
+| Package (8) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                 |
+|-------------+--------+--------+---------+--------+---------+----------------------|
+| borg        | main   |        | melpa   | github | github  | [[https://github.com/emacscollective/borg][emacscollective/borg]] |
+| epkg        | main   |        | melpa   | github | github  | [[https://github.com/emacscollective/epkg][emacscollective/epkg]] |
+| forge       | main   |        | melpa   | github | github  | [[https://github.com/magit/forge][magit/forge]]          |
+| ghub        | main   |        | melpa   | github | github  | [[https://github.com/magit/ghub][magit/ghub]]           |
+| magit       | main   |        | melpa   | github | github  | [[https://github.com/magit/magit][magit/magit]]          |
+| prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]  |
+| transient   | main   |        | melpa   | github | github  | [[https://github.com/magit/transient][magit/transient]]      |
+| with-editor | main   |        | melpa   | github | github  | [[https://github.com/magit/with-editor][magit/with-editor]]    |
 
 - prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
 
