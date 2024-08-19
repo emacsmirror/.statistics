@@ -110,9 +110,9 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5504 |   5504 |       |       |      211 |         181 |  4930 |
+| github      | 5507 |   5507 |       |       |      211 |         181 |  4933 |
 | gitlab      |  191 |    191 |       |       |       19 |          16 |   172 |
-| sourcehut   |  104 |    104 |       |       |       29 |           5 |    61 |
+| sourcehut   |  105 |    105 |       |       |       29 |           5 |    62 |
 | codeberg    |  119 |    119 |       |       |        6 |          32 |   103 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9099 |   7016 |  1580 |   498 |      458 |         240 |  5797 |
+| total       | 9103 |   7020 |  1580 |   498 |      458 |         240 |  5801 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -454,7 +454,7 @@
         (list name
               (and-let* ((class (emir--url-to-class url)))
                 (closql--abbrev-class class))
-              fetcher
+              class
               (melpa-org-link name)))
    [:select [name class url]
     :from melpa-recipes
