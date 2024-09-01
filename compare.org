@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5508 |   5508 |       |       |      213 |         181 |  4936 |
+| github      | 5512 |   5512 |       |       |      213 |         180 |  4941 |
 | gitlab      |  193 |    193 |       |       |       19 |          16 |   174 |
 | sourcehut   |  105 |    105 |       |       |       29 |           5 |    62 |
 | codeberg    |  119 |    119 |       |       |        6 |          32 |   103 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9107 |   7023 |  1581 |   498 |      459 |         240 |  5806 |
+| total       | 9111 |   7027 |  1581 |   498 |      459 |         239 |  5811 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -478,11 +478,12 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
-| Package (6)                       | Melpa  | Reason                                               |
+| Package (7)                       | Melpa  | Reason                                               |
 |-----------------------------------+--------+------------------------------------------------------|
 | bind-chord                        | github | Don't add; part of legacy repository but not Emacs   |
 | connection                        | github | Don't add; part of upstream dictionary but not Emacs |
 | django-snippets                   | github | Don't add; part of shelved django-mode               |
+| evangelion-theme                  | github | pending [[https://github.com/melpa/melpa/pull/9153][melpa#9153]]                                   |
 | link                              | github | Don't add; part of upstream dictionary but not Emacs |
 | use-package-chords                | github | Don't add; part of bind-chord, see above             |
 | use-package-ensure-system-package | github | Don't add; part of Emacs' use-package                |
@@ -886,11 +887,13 @@
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (1) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
+| Package (2) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
 |-------------+--------+--------+---------+--------+---------+---------------------|
+| org-node    | main   |        | melpa   | github | github  | [[https://github.com/meedstrom/org-node][meedstrom/org-node]]  |
 | prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
 
-- prettier: https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
+- 2024-09-02 org-node https://github.com/melpa/melpa/pull/9132#issuecomment-2297371280
+- 2022-08-21 prettier https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
 
 ** From Emacsmirror
 :PROPERTIES:
