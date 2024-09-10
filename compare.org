@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5512 |   5512 |       |       |      213 |         180 |  4941 |
+| github      | 5514 |   5514 |       |       |      214 |         180 |  4942 |
 | gitlab      |  193 |    193 |       |       |       19 |          16 |   174 |
 | sourcehut   |  105 |    105 |       |       |       29 |           5 |    62 |
-| codeberg    |  119 |    119 |       |       |        6 |          32 |   103 |
+| codeberg    |  120 |    120 |       |       |        6 |          33 |   103 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   266 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9111 |   7027 |  1581 |   498 |      459 |         239 |  5811 |
+| total       | 9114 |   7030 |  1581 |   498 |      460 |         240 |  5812 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -227,7 +227,7 @@
    (and (not (emir--config name :delayed))
         (not (emir--config name :secondary))
         (not (emir--config name :builtin-preferred))
-        (list (list name class (if (eq class 'core) "" url))))
+        (list name class (if (eq class 'core) "" url)))
    [:select [name class url]
     :from gnu-elpa-recipes
     :where (isnull epkg-package)
@@ -379,7 +379,7 @@
    (and (not (emir--config name :delayed))
         (not (emir--config name :secondary))
         (not (emir--config name :builtin-preferred))
-        (list (list name class (if (eq class 'core) "" url))))
+        (list name class (if (eq class 'core) "" url)))
    [:select [name class url]
     :from nongnu-elpa-recipes
     :where (isnull epkg-package)
