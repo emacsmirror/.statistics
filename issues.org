@@ -39,16 +39,18 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (4)      | Package          | Shelved |
-|------------------+------------------+---------|
-| derl             | derl             |         |
-| derl             | distel           |         |
-| oauth2-auto      | oauth2-auto      |         |
-| oauth2-auto      | org-gcal         |         |
-| plz-event-source | llm              |         |
-| plz-event-source | plz-event-source |         |
-| plz-media-type   | llm              |         |
-| plz-media-type   | plz-media-type   |         |
+| Feature (5)       | Package           | Shelved |
+|-------------------+-------------------+---------|
+| derl              | derl              |         |
+| derl              | distel            |         |
+| oauth2-auto       | oauth2-auto       |         |
+| oauth2-auto       | org-gcal          |         |
+| org-node-fakeroam | org-node          |         |
+| org-node-fakeroam | org-node-fakeroam |         |
+| plz-event-source  | llm               |         |
+| plz-event-source  | plz-event-source  |         |
+| plz-media-type    | llm               |         |
+| plz-media-type    | plz-media-type    |         |
 
 - 2023-10-09 derl https://github.com/melpa/melpa/pull/8769
 - 2024-05-18 llm "It is temporarily vendored within the llm library."
