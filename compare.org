@@ -110,8 +110,8 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5522 |   5522 |       |       |      214 |         180 |  4949 |
-| gitlab      |  194 |    194 |       |       |       19 |          16 |   175 |
+| github      | 5530 |   5530 |       |       |      215 |         180 |  4954 |
+| gitlab      |  195 |    195 |       |       |       19 |          16 |   176 |
 | sourcehut   |  105 |    105 |       |       |       29 |           5 |    62 |
 | codeberg    |  120 |    120 |       |       |        6 |          33 |   103 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
@@ -125,13 +125,13 @@
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  135 |    135 |       |       |          |             |   105 |
-| shelved     | 1581 |        |  1581 |       |          |             |    29 |
+| shelved     | 1581 |        |  1581 |       |          |             |    28 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   266 |
+| secondary   |      |        |       |       |          |             |   267 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9123 |   7039 |  1581 |   498 |      460 |         240 |  5820 |
+| total       | 9132 |   7048 |  1581 |   498 |      461 |         240 |  5826 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -502,7 +502,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (71)                | Url                                                                         |
+| Package (68)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -549,11 +549,9 @@
 | number                      | https://github.com/chrisdone/number                                         |
 | org-doing                   | https://github.com/rudolfolah/org-doing                                     |
 | org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
-| org-pivotal                 | https://github.com/org-pivotal/org-pivotal                                  |
 | org-present-remote          | https://git.sr.ht/~duncan-bayne/org-present-remote                          |
 | org-recur                   | https://github.com/mrcnski/org-recur                                        |
 | org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
-| ox-impress-js               | https://github.com/takumikinjo/org-impress-js.el                            |
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
 | peek-mode                   | https://github.com/erikriverson/peek-mode                                   |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
@@ -573,7 +571,6 @@
 | tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
 | tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |
-| use-package-el-get          | https://github.com/edvorg/use-package-el-get                                |
 | weechat                     | https://github.com/the-kenny/weechat.el                                     |
 | weechat-alert               | https://github.com/Kungi/weechat-alert                                      |
 
@@ -636,6 +633,7 @@
 | colorless-themes        | nordless-theme                   | sourcehut |
 | compile-multi           | compile-multi-all-the-icons      | github    |
 | compile-multi           | compile-multi-embark             | github    |
+| compile-multi           | compile-multi-nerd-icons         | github    |
 | compile-multi           | consult-compile-multi            | github    |
 | consult-eglot           | consult-eglot-embark             | github    |
 | copyit                  | copyit-pandoc                    | github    |
@@ -887,13 +885,10 @@
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (3)       | Used   | Forced | Melpa   | Class  | Fetcher | Repo                        |
-|-------------------+--------+--------+---------+--------+---------+-----------------------------|
-| org-node          | main   |        | melpa   | github | github  | [[https://github.com/meedstrom/org-node][meedstrom/org-node]]          |
-| org-node-fakeroam | main   |        | melpa   | github | github  | [[https://github.com/meedstrom/org-node-fakeroam][meedstrom/org-node-fakeroam]] |
-| prettier          | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]         |
+| Package (1) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
+|-------------+--------+--------+---------+--------+---------+---------------------|
+| prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
 
-- 2024-09-02 org-node https://github.com/melpa/melpa/pull/9132#issuecomment-2297371280
 - 2022-08-21 prettier https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
 
 ** From Emacsmirror
@@ -935,7 +930,7 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (29)         | Url                                                |
+| Package (28)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -959,7 +954,6 @@
 | org-doing            | https://github.com/emacsattic/org-doing            |
 | org-multiple-keymap  | https://github.com/emacsattic/org-multiple-keymap  |
 | org-wunderlist       | https://github.com/emacsattic/org-wunderlist       |
-| ox-impress-js        | https://github.com/emacsattic/org-impress-js       |
 | protobuf-ts-mode     | https://github.com/emacsattic/protobuf-ts-mode     |
 | quick-preview        | https://github.com/emacsattic/quick-preview        |
 | redshank             | https://github.com/emacsattic/redshank             |

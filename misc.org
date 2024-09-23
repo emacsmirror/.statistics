@@ -43,16 +43,20 @@
     (list (list 'zero  zero (/ (* 100 zero) all))
           (list 'one   one  (/ (* 100 one)  all))
           (list 'more  more (/ (* 100 more) all))
-          (list 'odd   odd  (/ (* 100 odd)  all))
+          'hline
           (list 'none  none (/ (* 100 none) all))
+          (list 'odd   odd  (/ (* 100 odd)  all))
+          'hline
           (list 'total all  (/ (* 100 all)  all))))
 #+end_src
 #+results: highest-version
 | (6)   |    # |   % |
 |-------+------+-----|
-| zero  | 1441 |  24 |
-| one   |  776 |  13 |
-| more  |  448 |   7 |
+| zero  | 1770 |  25 |
+| one   | 1047 |  14 |
+| more  |  554 |   7 |
+|-------+------+-----|
+| none  | 3647 |  51 |
 | odd   |   30 |   0 |
-| none  | 3152 |  53 |
-| total | 5847 | 100 |
+|-------+------+-----|
+| total | 7048 | 100 |
