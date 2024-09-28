@@ -210,21 +210,22 @@ the orphanage to fix these issues.
   (emir--list-orphans (list "upstream unresponsive" "multiple non-upstreams"))
 #+end_src
 #+results: unresponsive
-| Package (13)       | E | M |
-|--------------------+---+---|
-| edb                | ✔ |   |
-| elisp-depend       | ✔ | ✔ |
-| evil-escape        | ✔ | ✔ |
-| helm-gitignore     | ✔ | ✔ |
-| hyperspec          | ✔ |   |
-| macrostep          | ✔ | ✔ |
-| oberon             | ✔ | ✔ |
-| ox-pandoc          | ✔ | ✔ |
-| read-char-spec     | ✔ |   |
-| setnu              | ✔ |   |
-| tablist            | ✔ | ✔ |
-| which-key-posframe | ✔ | ✔ |
-| yafolding          | ✔ | ✔ |
+| Package (14)           | E | M |
+|------------------------+---+---|
+| edb                    | ✔ |   |
+| elisp-depend           | ✔ | ✔ |
+| evil-escape            | ✔ | ✔ |
+| helm-gitignore         | ✔ | ✔ |
+| hyperspec              | ✔ |   |
+| macrostep              | ✔ | ✔ |
+| oberon                 | ✔ | ✔ |
+| omtose-phellack-themes | ✔ | ✔ |
+| ox-pandoc              | ✔ | ✔ |
+| read-char-spec         | ✔ |   |
+| setnu                  | ✔ |   |
+| tablist                | ✔ | ✔ |
+| which-key-posframe     | ✔ | ✔ |
+| yafolding              | ✔ | ✔ |
 
 * Wiki packages needed by non-wiki packages
 :PROPERTIES:

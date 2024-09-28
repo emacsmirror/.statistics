@@ -242,30 +242,29 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (22)          | Class  | Commits |
-|-----------------------+--------+---------|
-| apel                  | github |       3 |
-| auctex-latexmk        | github |       1 |
-| emacspeak             | github |       1 |
-| emux                  | github |       1 |
-| ert-runner            | github |       1 |
-| flim                  | github |       4 |
-| go                    | github |       1 |
-| icons-in-terminal     | github |       1 |
-| karma                 | github |       1 |
-| lookup                | github |       1 |
-| majapahit-themes      | gitlab |       1 |
-| monorepo-zenitani     | github |       1 |
-| nav                   | github |       1 |
-| navorski              | github |       1 |
-| ne2wm                 | github |       1 |
-| omtose-phellack-theme | github |       1 |
-| projmake-mode         | github |       1 |
-| semi                  | github |       2 |
-| slime                 | github |       1 |
-| tenv                  | github |       1 |
-| twittering-mode       | github |       2 |
-| wanderlust            | github |       2 |
+| Package (21)      | Class  | Commits |
+|-------------------+--------+---------|
+| apel              | github |       3 |
+| auctex-latexmk    | github |       1 |
+| emacspeak         | github |       1 |
+| emux              | github |       1 |
+| ert-runner        | github |       1 |
+| flim              | github |       4 |
+| go                | github |       1 |
+| icons-in-terminal | github |       1 |
+| karma             | github |       1 |
+| lookup            | github |       1 |
+| majapahit-themes  | gitlab |       1 |
+| monorepo-zenitani | github |       1 |
+| nav               | github |       1 |
+| navorski          | github |       1 |
+| ne2wm             | github |       1 |
+| projmake-mode     | github |       1 |
+| semi              | github |       2 |
+| slime             | github |       1 |
+| tenv              | github |       1 |
+| twittering-mode   | github |       2 |
+| wanderlust        | github |       2 |
 
 - emacspeak: https://github.com/tvraman/emacspeak/issues/54
 - emux: https://github.com/re5et/emux/pull/4

@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5530 |   5530 |       |       |      215 |         180 |  4954 |
+| github      | 5529 |   5529 |       |       |      215 |         180 |  4954 |
 | gitlab      |  195 |    195 |       |       |       19 |          16 |   176 |
-| sourcehut   |  105 |    105 |       |       |       29 |           5 |    62 |
-| codeberg    |  120 |    120 |       |       |        6 |          33 |   103 |
+| sourcehut   |  106 |    106 |       |       |       29 |           6 |    62 |
+| codeberg    |  121 |    121 |       |       |        6 |          33 |   104 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -124,14 +124,14 @@
 | wiki        |  586 |    586 |       |       |          |             |       |
 | file        |   54 |     54 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  135 |    135 |       |       |          |             |   105 |
+| orphaned    |  136 |    136 |       |       |          |             |   106 |
 | shelved     | 1581 |        |  1581 |       |          |             |    28 |
-| mirror      |      |        |       |       |          |             |    12 |
+| mirror      |      |        |       |       |          |             |    11 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   267 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9132 |   7048 |  1581 |   498 |      461 |         240 |  5826 |
+| total       | 9134 |   7050 |  1581 |   498 |      461 |         241 |  5827 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -903,20 +903,19 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
-| Package (12)          | Url                                                  |
-|-----------------------+------------------------------------------------------|
-| auctex-latexmk        | https://github.com/emacsmirror/auctex-latexmk        |
-| clang-format          | https://github.com/emacsmirror/clang-format          |
-| darcsum               | https://github.com/emacsmirror/darcsum               |
-| dsvn                  | https://github.com/emacsmirror/dsvn                  |
-| edit-list             | https://github.com/emacsmirror/edit-list             |
-| helm-ls-svn           | https://github.com/emacsmirror/helm-ls-svn           |
-| highlight             | https://github.com/emacsmirror/highlight             |
-| majapahit-themes      | https://github.com/emacsmirror/majapahit-themes      |
-| omtose-phellack-theme | https://github.com/emacsmirror/omtose-phellack-theme |
-| po-mode               | https://github.com/emacsmirror/po-mode               |
-| quack                 | https://github.com/emacsmirror/quack                 |
-| tex-smart-umlauts     | https://github.com/emacsmirror/tex-smart-umlauts     |
+| Package (11)      | Url                                              |
+|-------------------+--------------------------------------------------|
+| auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
+| clang-format      | https://github.com/emacsmirror/clang-format      |
+| darcsum           | https://github.com/emacsmirror/darcsum           |
+| dsvn              | https://github.com/emacsmirror/dsvn              |
+| edit-list         | https://github.com/emacsmirror/edit-list         |
+| helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
+| highlight         | https://github.com/emacsmirror/highlight         |
+| majapahit-themes  | https://github.com/emacsmirror/majapahit-themes  |
+| po-mode           | https://github.com/emacsmirror/po-mode           |
+| quack             | https://github.com/emacsmirror/quack             |
+| tex-smart-umlauts | https://github.com/emacsmirror/tex-smart-umlauts |
 
 ** From Emacsattic
 :PROPERTIES:

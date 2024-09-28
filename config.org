@@ -138,151 +138,152 @@
   (emir--store-table 'var-orphanage value)
 #+END_SRC
 #+NAME: table--orphaned
-| Package              | Reason                  |
-|----------------------+-------------------------|
-| 4clojure             | dropped by maintainer   |
-| ac-alchemist         | dropped by maintainer   |
-| ac-capf              | dropped by maintainer   |
-| ac-emoji             | dropped by maintainer   |
-| ac-etags             | dropped by maintainer   |
-| ac-ispell            | dropped by maintainer   |
-| ac-racer             | dropped by maintainer   |
-| adoc-mode            | upstream unresponsive   |
-| ansible-doc          | dropped by maintainer   |
-| anzu                 | dropped by maintainer   |
-| applescript-mode     | dropped by maintainer   |
-| codic                | dropped by maintainer   |
-| company-jedi         | dropped by maintainer   |
-| cpp-auto-include     | dropped by maintainer   |
-| cpp-auto-include     | upstream unresponsive   |
-| cygwin-mount         | wiki needed by non-wiki |
-| dart-mode            | dropped by maintainer   |
-| dedicated            | upstream disappeared    |
-| dired-k              | dropped by maintainer   |
-| direx                | dropped by maintainer   |
-| dirtree              | wiki needed by non-wiki |
-| docean               | dropped by maintainer   |
-| easy-highlight       | dropped by maintainer   |
-| ecasound             | upstream disappeared    |
-| edb                  | upstream unresponsive   |
-| elisp-depend         | upstream unresponsive   |
-| emamux               | dropped by maintainer   |
-| emamux-ruby-test     | dropped by maintainer   |
-| ert-expectations     | wiki needed by non-wiki |
-| evil-anzu            | dropped by maintainer   |
-| evil-escape          | upstream unresponsive   |
-| evil-textobj-line    | dropped by maintainer   |
-| fancy-battery        | dropped by maintainer   |
-| farmhouse-themes     | dropped by maintainer   |
-| findr                | wiki needed by non-wiki |
-| fontawesome          | dropped by maintainer   |
-| gh-md                | dropped by maintainer   |
-| git-gutter           | dropped by maintainer   |
-| git-gutter-fringe    | dropped by maintainer   |
-| git-messenger        | dropped by maintainer   |
-| gnuplot              | dropped by maintainer   |
-| go-add-tags          | dropped by maintainer   |
-| go-direx             | dropped by maintainer   |
-| go-eldoc             | dropped by maintainer   |
-| go-impl              | dropped by maintainer   |
-| god-mode             | dropped by maintainer   |
-| gom-mode             | dropped by maintainer   |
-| haxe-mode            | dropped by maintainer   |
-| helm-ack             | dropped by maintainer   |
-| helm-ag              | dropped by maintainer   |
-| helm-css-scss        | dropped by maintainer   |
-| helm-github-issues   | dropped by maintainer   |
-| helm-gitignore       | upstream unresponsive   |
-| helm-gtags           | dropped by maintainer   |
-| helm-haskell-import  | dropped by maintainer   |
-| helm-ispell          | dropped by maintainer   |
-| helm-open-github     | dropped by maintainer   |
-| helm-package         | dropped by maintainer   |
-| helm-perldoc         | dropped by maintainer   |
-| helm-pydoc           | dropped by maintainer   |
-| helm-robe            | dropped by maintainer   |
-| helm-swoop           | dropped by maintainer   |
-| helm-themes          | dropped by maintainer   |
-| help-find-org-mode   | dropped by maintainer   |
-| highline             | wiki needed by non-wiki |
-| http-post-simple     | wiki needed by non-wiki |
-| hyperspec            | multiple non-upstreams  |
-| image+               | upstream disappeared    |
-| import-popwin        | dropped by maintainer   |
-| jedi-eldoc           | dropped by maintainer   |
-| key-chord            | wiki needed by non-wiki |
-| keydef               | upstream disappeared    |
-| konoha-mode          | dropped by maintainer   |
-| later-do             | wiki needed by non-wiki |
-| levenshtein          | wiki needed by non-wiki |
-| libegit2             | dropped by maintainer   |
-| linkd                | wiki multiple files     |
-| literate-coffee-mode | dropped by maintainer   |
-| ltsv                 | dropped by maintainer   |
-| macrostep            | upstream unresponsive   |
-| magit-gerrit         | dropped by maintainer   |
-| magit-p4             | dropped by maintainer   |
-| magit-stgit          | dropped by maintainer   |
-| magit-svn            | dropped by maintainer   |
-| manage-minor-mode    | dropped by maintainer   |
-| miniedit             | upstream disappeared    |
-| mongo                | dropped by maintainer   |
-| oberon               | upstream unresponsive   |
-| octicons             | dropped by maintainer   |
-| oddmuse              | wiki needed by non-wiki |
-| opam                 | dropped by maintainer   |
-| org-grep             | maintainer is dead      |
-| org-json             | wiki needed by non-wiki |
-| org-page             | dropped by maintainer   |
-| org-redmine          | dropped by maintainer   |
-| osd                  | upstream disappeared    |
-| osx-trash            | dropped by maintainer   |
-| ov                   | dropped by maintainer   |
-| ox-pandoc            | upstream unresponsive   |
-| packed               | dropped by maintainer   |
-| pager                | upstream disappeared    |
-| perl-utils           | dropped by maintainer   |
-| pkg-info             | dropped by maintainer   |
-| policy-switch        | wiki needed by non-wiki |
-| popup-complete       | dropped by maintainer   |
-| popwin               | dropped by maintainer   |
-| pyimpsort            | dropped by maintainer   |
-| pylint               | dropped by maintainer   |
-| qt-pro-mode          | dropped by maintainer   |
-| quickrun             | dropped by maintainer   |
-| read-char-spec       | upstream unresponsive   |
-| req-package          | dropped by maintainer   |
-| reverse-theme        | dropped by maintainer   |
-| run-assoc            | wiki needed by non-wiki |
-| screenshot           | wiki needed by non-wiki |
-| setnu                | upstream unresponsive   |
-| shell-history        | wiki needed by non-wiki |
-| showtip              | wiki needed by non-wiki |
-| smarty-mode          | upstream disappeared    |
-| smeargle             | dropped by maintainer   |
-| sound-wav            | dropped by maintainer   |
-| sourcemap            | dropped by maintainer   |
-| splitjoin            | dropped by maintainer   |
-| sr-speedbar          | wiki needed by non-wiki |
-| swoop                | dropped by maintainer   |
-| tablist              | upstream unresponsive   |
-| tail                 | upstream disappeared    |
-| test-more            | dropped by maintainer   |
-| thingopt             | dropped by maintainer   |
-| tora-mode            | dropped by maintainer   |
-| transpose-frame      | wiki needed by non-wiki |
-| tree-mode            | wiki needed by non-wiki |
-| undohist             | dropped by maintainer   |
-| unit-test            | wiki needed by non-wiki |
-| vline                | wiki needed by non-wiki |
-| vm                   | upstream disappeared    |
-| w32-browser          | wiki needed by non-wiki |
-| which-key-posframe   | upstream unresponsive   |
-| windata              | wiki needed by non-wiki |
-| yafolding            | upstream unresponsive   |
-| yaoddmuse            | wiki needed by non-wiki |
-| yascroll             | dropped by maintainer   |
-| zoom-window          | dropped by maintainer   |
+| Package                | Reason                  |
+|------------------------+-------------------------|
+| 4clojure               | dropped by maintainer   |
+| ac-alchemist           | dropped by maintainer   |
+| ac-capf                | dropped by maintainer   |
+| ac-emoji               | dropped by maintainer   |
+| ac-etags               | dropped by maintainer   |
+| ac-ispell              | dropped by maintainer   |
+| ac-racer               | dropped by maintainer   |
+| adoc-mode              | upstream unresponsive   |
+| ansible-doc            | dropped by maintainer   |
+| anzu                   | dropped by maintainer   |
+| applescript-mode       | dropped by maintainer   |
+| codic                  | dropped by maintainer   |
+| company-jedi           | dropped by maintainer   |
+| cpp-auto-include       | dropped by maintainer   |
+| cpp-auto-include       | upstream unresponsive   |
+| cygwin-mount           | wiki needed by non-wiki |
+| dart-mode              | dropped by maintainer   |
+| dedicated              | upstream disappeared    |
+| dired-k                | dropped by maintainer   |
+| direx                  | dropped by maintainer   |
+| dirtree                | wiki needed by non-wiki |
+| docean                 | dropped by maintainer   |
+| easy-highlight         | dropped by maintainer   |
+| ecasound               | upstream disappeared    |
+| edb                    | upstream unresponsive   |
+| elisp-depend           | upstream unresponsive   |
+| emamux                 | dropped by maintainer   |
+| emamux-ruby-test       | dropped by maintainer   |
+| ert-expectations       | wiki needed by non-wiki |
+| evil-anzu              | dropped by maintainer   |
+| evil-escape            | upstream unresponsive   |
+| evil-textobj-line      | dropped by maintainer   |
+| fancy-battery          | dropped by maintainer   |
+| farmhouse-themes       | dropped by maintainer   |
+| findr                  | wiki needed by non-wiki |
+| fontawesome            | dropped by maintainer   |
+| gh-md                  | dropped by maintainer   |
+| git-gutter             | dropped by maintainer   |
+| git-gutter-fringe      | dropped by maintainer   |
+| git-messenger          | dropped by maintainer   |
+| gnuplot                | dropped by maintainer   |
+| go-add-tags            | dropped by maintainer   |
+| go-direx               | dropped by maintainer   |
+| go-eldoc               | dropped by maintainer   |
+| go-impl                | dropped by maintainer   |
+| god-mode               | dropped by maintainer   |
+| gom-mode               | dropped by maintainer   |
+| haxe-mode              | dropped by maintainer   |
+| helm-ack               | dropped by maintainer   |
+| helm-ag                | dropped by maintainer   |
+| helm-css-scss          | dropped by maintainer   |
+| helm-github-issues     | dropped by maintainer   |
+| helm-gitignore         | upstream unresponsive   |
+| helm-gtags             | dropped by maintainer   |
+| helm-haskell-import    | dropped by maintainer   |
+| helm-ispell            | dropped by maintainer   |
+| helm-open-github       | dropped by maintainer   |
+| helm-package           | dropped by maintainer   |
+| helm-perldoc           | dropped by maintainer   |
+| helm-pydoc             | dropped by maintainer   |
+| helm-robe              | dropped by maintainer   |
+| helm-swoop             | dropped by maintainer   |
+| helm-themes            | dropped by maintainer   |
+| help-find-org-mode     | dropped by maintainer   |
+| highline               | wiki needed by non-wiki |
+| http-post-simple       | wiki needed by non-wiki |
+| hyperspec              | multiple non-upstreams  |
+| image+                 | upstream disappeared    |
+| import-popwin          | dropped by maintainer   |
+| jedi-eldoc             | dropped by maintainer   |
+| key-chord              | wiki needed by non-wiki |
+| keydef                 | upstream disappeared    |
+| konoha-mode            | dropped by maintainer   |
+| later-do               | wiki needed by non-wiki |
+| levenshtein            | wiki needed by non-wiki |
+| libegit2               | dropped by maintainer   |
+| linkd                  | wiki multiple files     |
+| literate-coffee-mode   | dropped by maintainer   |
+| ltsv                   | dropped by maintainer   |
+| macrostep              | upstream unresponsive   |
+| magit-gerrit           | dropped by maintainer   |
+| magit-p4               | dropped by maintainer   |
+| magit-stgit            | dropped by maintainer   |
+| magit-svn              | dropped by maintainer   |
+| manage-minor-mode      | dropped by maintainer   |
+| miniedit               | upstream disappeared    |
+| mongo                  | dropped by maintainer   |
+| oberon                 | upstream unresponsive   |
+| octicons               | dropped by maintainer   |
+| oddmuse                | wiki needed by non-wiki |
+| omtose-phellack-themes | upstream unresponsive   |
+| opam                   | dropped by maintainer   |
+| org-grep               | maintainer is dead      |
+| org-json               | wiki needed by non-wiki |
+| org-page               | dropped by maintainer   |
+| org-redmine            | dropped by maintainer   |
+| osd                    | upstream disappeared    |
+| osx-trash              | dropped by maintainer   |
+| ov                     | dropped by maintainer   |
+| ox-pandoc              | upstream unresponsive   |
+| packed                 | dropped by maintainer   |
+| pager                  | upstream disappeared    |
+| perl-utils             | dropped by maintainer   |
+| pkg-info               | dropped by maintainer   |
+| policy-switch          | wiki needed by non-wiki |
+| popup-complete         | dropped by maintainer   |
+| popwin                 | dropped by maintainer   |
+| pyimpsort              | dropped by maintainer   |
+| pylint                 | dropped by maintainer   |
+| qt-pro-mode            | dropped by maintainer   |
+| quickrun               | dropped by maintainer   |
+| read-char-spec         | upstream unresponsive   |
+| req-package            | dropped by maintainer   |
+| reverse-theme          | dropped by maintainer   |
+| run-assoc              | wiki needed by non-wiki |
+| screenshot             | wiki needed by non-wiki |
+| setnu                  | upstream unresponsive   |
+| shell-history          | wiki needed by non-wiki |
+| showtip                | wiki needed by non-wiki |
+| smarty-mode            | upstream disappeared    |
+| smeargle               | dropped by maintainer   |
+| sound-wav              | dropped by maintainer   |
+| sourcemap              | dropped by maintainer   |
+| splitjoin              | dropped by maintainer   |
+| sr-speedbar            | wiki needed by non-wiki |
+| swoop                  | dropped by maintainer   |
+| tablist                | upstream unresponsive   |
+| tail                   | upstream disappeared    |
+| test-more              | dropped by maintainer   |
+| thingopt               | dropped by maintainer   |
+| tora-mode              | dropped by maintainer   |
+| transpose-frame        | wiki needed by non-wiki |
+| tree-mode              | wiki needed by non-wiki |
+| undohist               | dropped by maintainer   |
+| unit-test              | wiki needed by non-wiki |
+| vline                  | wiki needed by non-wiki |
+| vm                     | upstream disappeared    |
+| w32-browser            | wiki needed by non-wiki |
+| which-key-posframe     | upstream unresponsive   |
+| windata                | wiki needed by non-wiki |
+| yafolding              | upstream unresponsive   |
+| yaoddmuse              | wiki needed by non-wiki |
+| yascroll               | dropped by maintainer   |
+| zoom-window            | dropped by maintainer   |
 
 * Preserved
 :PROPERTIES:
