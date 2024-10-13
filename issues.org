@@ -39,20 +39,14 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (4)      | Package          | Shelved |
-|------------------+------------------+---------|
-| derl             | derl             |         |
-| derl             | distel           |         |
-| oauth2-auto      | oauth2-auto      |         |
-| oauth2-auto      | org-gcal         |         |
-| plz-event-source | llm              |         |
-| plz-event-source | plz-event-source |         |
-| plz-media-type   | llm              |         |
-| plz-media-type   | plz-media-type   |         |
+| Feature (2) | Package     | Shelved |
+|-------------+-------------+---------|
+| derl        | derl        |         |
+| derl        | distel      |         |
+| oauth2-auto | oauth2-auto |         |
+| oauth2-auto | org-gcal    |         |
 
 - 2023-10-09 derl https://github.com/melpa/melpa/pull/8769
-- 2024-05-18 llm "It is temporarily vendored within the llm library."
-  (from library header)
 - 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
 
 * Packages with unsatisfied dependencies
