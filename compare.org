@@ -110,28 +110,28 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5540 |   5540 |       |       |      215 |         180 |  4964 |
+| github      | 5541 |   5541 |       |       |      215 |         180 |  4964 |
 | gitlab      |  195 |    195 |       |       |       19 |          16 |   176 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    62 |
-| codeberg    |  121 |    121 |       |       |        6 |          33 |   104 |
+| codeberg    |  123 |    123 |       |       |        6 |          34 |   104 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  121 |    121 |       |       |       13 |           6 |   102 |
+| git         |  120 |    120 |       |       |       13 |           6 |   102 |
 | hg          |   15 |     15 |       |       |        1 |           0 |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
 | wiki        |  586 |    586 |       |       |          |             |       |
-| file        |   54 |     54 |       |       |          |             |       |
+| file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
-| shelved     | 1582 |        |  1582 |       |          |             |    28 |
+| shelved     | 1585 |        |  1585 |       |          |             |    28 |
 | mirror      |      |        |       |       |          |             |    11 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   269 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9146 |   7061 |  1582 |   498 |      461 |         241 |  5840 |
+| total       | 9147 |   7059 |  1585 |   498 |      461 |         242 |  5840 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -744,10 +744,10 @@
 | merlin                  | merlin-company                   | subtree   |
 | merlin                  | merlin-iedit                     | subtree   |
 | metal-archives          | metal-archives-shopping-list     | github    |
-| monorepo-cadadr         | bibliothek                       | github    |
-| monorepo-cadadr         | forecast                         | github    |
-| monorepo-cadadr         | org-variable-pitch               | github    |
-| monorepo-cadadr         | paper-theme                      | github    |
+| monorepo-cadadr         | bibliothek                       | codeberg  |
+| monorepo-cadadr         | forecast                         | codeberg  |
+| monorepo-cadadr         | org-variable-pitch               | codeberg  |
+| monorepo-cadadr         | paper-theme                      | codeberg  |
 | monorepo-zenitani       | smart-compile                    | github    |
 | musicbrainz             | listenbrainz                     | github    |
 | nameframe               | nameframe-perspective            | github    |
@@ -875,6 +875,11 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (1) | Mirror |                             | Melpa |                                            |
+|-------------+--------+-----------------------------+-------+--------------------------------------------|
+| matlab-mode | github | [[https://github.com/mathworks/Emacs-MATLAB-Mode][mathworks/Emacs-MATLAB-Mode]] | git   | https://git.code.sf.net/p/matlab-emacs/src |
+
+- 2024-10-11 matlab-mode https://github.com/melpa/melpa/pull/9208
 
 ** Diverging branches
 :PROPERTIES:

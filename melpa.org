@@ -72,7 +72,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (552)                | Link                                    | Summary                                                                |
+| Package (551)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -134,7 +134,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | speechd                      | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     | Library for accessing Speech Dispatcher                                |
 | octopress-tentacle           | [[https://github.com/brighid/octopress-tentacle][brighid/octopress-tentacle]]              | Tools for Octopress/Jekyll blogs                                       |
 | im-notification              | [[https://github.com/bvtrach/emacs-im-notification][bvtrach/emacs-im-notification]]           | Emacs input method notification via D-Bus                              |
-| monorepo-cadadr              | [[https://github.com/cadadr/elisp][cadadr/elisp]]                            | A monorepo containing unrelated packages                               |
 | ecco                         | [[https://github.com/capitaomorte/ecco][joaotavora/ecco]]                         | A port of docco                                                        |
 | edice                        | [[https://github.com/capitaomorte/edice][joaotavora/edice]]                        | Really, why would you want to roll dice in Emacs?                      |
 | ebm                          | [[https://github.com/carrl/ebm][carrl/ebm]]                               | Emacs Bookmarks                                                        |
@@ -641,7 +640,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (19)               | Link      |                                             |
+| Package (20)               | Link      |                                             |
 |----------------------------+-----------+---------------------------------------------|
 | ebuild-mode                | git       |                                             |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
@@ -653,6 +652,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]] |
 | lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                |
 | mailscripts                | git       |                                             |
+| monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                           |
 | ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
 | org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
 | org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]  |

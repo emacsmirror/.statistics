@@ -97,7 +97,7 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (85)                    | Class     | Feature                  | Reason                                            |
+| Package (84)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -148,9 +148,6 @@
 | lispy                           | github    | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                         |
 | load-theme-buffer-local         | github    | color-theme              | backward compatibility                            |
 | markchars                       | gnu-elpa  | idn                      | shelved soft                                      |
-| matlab-mode                     | git       | semantic-dep             | backward compatibility                            |
-| matlab-mode                     | git       | semantic-format          | backward compatibility                            |
-| matlab-mode                     | git       | semanticdb               | backward compatibility                            |
 | menu-bar+                       | wiki      | help+20                  | backward compatibility                            |
 | menu-bar+                       | wiki      | info+20                  | backward compatibility                            |
 | mew                             | github    | mw32script               | Meadow Emacs compatibility                        |

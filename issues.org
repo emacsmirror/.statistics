@@ -76,13 +76,15 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (8)              | Class  | Feature            | Provider           |
+| Package (9)              | Class  | Feature            | Provider           |
 |--------------------------+--------+--------------------+--------------------|
 | eev                      | github | lean4-mode         |                    |
 | evil-textobj-tree-sitter | github | tree-sitter        | tree-sitter        |
 | flex-compile             | github | slite              |                    |
 | gleam-ts-mode            | github | tree-sitter        | tree-sitter        |
 | gleam-ts-mode            | github | tree-sitter-indent | tree-sitter-indent |
+| matlab-mode              | github | matlab-autoload    |                    |
+| matlab-mode              | github | semantic-matlab    |                    |
 | org-node                 | github | org-super-links    |                    |
 | scopeline                | github | tree-sitter        | tree-sitter        |
 | sdml-mode                | github | tree-sitter        | tree-sitter        |
