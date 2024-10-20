@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5541 |   5541 |       |       |      215 |         180 |  4964 |
+| github      | 5539 |   5539 |       |       |      215 |         180 |  4962 |
 | gitlab      |  195 |    195 |       |       |       19 |          16 |   176 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    62 |
 | codeberg    |  123 |    123 |       |       |        6 |          34 |   104 |
@@ -125,13 +125,13 @@
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
-| shelved     | 1585 |        |  1585 |       |          |             |    28 |
+| shelved     | 1587 |        |  1587 |       |          |             |    28 |
 | mirror      |      |        |       |       |          |             |    11 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   269 |
+| secondary   |      |        |       |       |          |             |   267 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9147 |   7059 |  1585 |   498 |      461 |         242 |  5840 |
+| total       | 9147 |   7057 |  1587 |   498 |      461 |         242 |  5836 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -592,7 +592,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (149)   | Secondary package                | Class     |
+| Primary package (148)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -728,8 +728,6 @@
 | kubel                   | kubel-evil                       | github    |
 | kubernetes              | kubernetes-evil                  | github    |
 | langtool                | langtool-popup                   | github    |
-| lean-mode               | company-lean                     | github    |
-| lean-mode               | helm-lean                        | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
 | loopy                   | loopy-dash                       | github    |
 | lurk-mode               | ob-lurk                          | github    |
@@ -985,12 +983,10 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
-| Package (2) | Repository            |  Melpa | Dependants                                       |
-|-------------+-----------------------+--------+--------------------------------------------------|
-| lean-mode   | [[https://github.com/leanprover/lean3-mode][leanprover/lean3-mode]] |   6384 | yasnippet-lean                                   |
-| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]]  | 282567 | company-restclient ob-restclient restclient-test |
+| Package (1) | Repository           |  Melpa | Dependants                                       |
+|-------------+----------------------+--------+--------------------------------------------------|
+| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 282567 | company-restclient ob-restclient restclient-test |
 
-- 2024-08-11 lead-mode https://github.com/melpa/melpa/pull/8106#issuecomment-1208063446
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
 ** Removed repositories
