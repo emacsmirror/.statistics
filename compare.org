@@ -110,14 +110,14 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5539 |   5539 |       |       |      215 |         180 |  4962 |
+| github      | 5540 |   5540 |       |       |      215 |         180 |  4964 |
 | gitlab      |  195 |    195 |       |       |       19 |          16 |   176 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    62 |
-| codeberg    |  123 |    123 |       |       |        6 |          34 |   104 |
+| codeberg    |  123 |    123 |       |       |        6 |          34 |   105 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  120 |    120 |       |       |       13 |           6 |   102 |
+| git         |  120 |    120 |       |       |       13 |           6 |   101 |
 | hg          |   15 |     15 |       |       |        1 |           0 |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   267 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9147 |   7057 |  1587 |   498 |      461 |         242 |  5836 |
+| total       | 9148 |   7058 |  1587 |   498 |      461 |         242 |  5838 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -873,11 +873,6 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (1) | Mirror |                             | Melpa |                                            |
-|-------------+--------+-----------------------------+-------+--------------------------------------------|
-| matlab-mode | github | [[https://github.com/mathworks/Emacs-MATLAB-Mode][mathworks/Emacs-MATLAB-Mode]] | git   | https://git.code.sf.net/p/matlab-emacs/src |
-
-- 2024-10-11 matlab-mode https://github.com/melpa/melpa/pull/9208
 
 ** Diverging branches
 :PROPERTIES:
