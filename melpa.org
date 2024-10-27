@@ -22,9 +22,8 @@
             (epkgs 'name [builtin]))
 #+end_src
 #+results: built-in
-| Package (11)   | Repository                 |
+| Package (10)   | Repository                 |
 |----------------+----------------------------|
-| hierarchy      | [[https://github.com/DamienCassou/hierarchy][DamienCassou/hierarchy]]     |
 | faceup         | [[https://github.com/Lindydancer/faceup][Lindydancer/faceup]]         |
 | csharp-mode    | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]   |
 | wallpaper      | [[https://github.com/farlado/emacs-wallpaper][farlado/emacs-wallpaper]]    |
@@ -72,7 +71,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (552)                | Link                                    | Summary                                                                |
+| Package (551)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -318,7 +317,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | wiki                         | [[https://github.com/kensanata/wiki][kensanata/wiki]]                          | Hypertext authoring the WikiWay                                        |
 | cppref                       | [[https://github.com/kentaro/emacs-cppref][kentaro/emacs-cppref]]                    | A Simple C++ Reference Viewer                                          |
 | ditz                         | [[https://github.com/kentaro/emacs-ditz][kentaro/emacs-ditz]]                      | Emacs interface to Ditz issue tracking system                          |
-| casual                       | [[https://github.com/kickingvegas/casual][kickingvegas/casual]]                     | Transient user interfaces for various modes                            |
 | org-protocol-github-lines    | [[https://github.com/kidd/org-protocol-github-lines][kidd/org-protocol-github-lines]]          | Open files and lines in emacs from your browser (when on github)       |
 | inertial-scroll              | [[https://github.com/kiwanami/emacs-inertial-scroll][kiwanami/emacs-inertial-scroll]]          | Global minor mode for inertial scrolling                               |
 | bookem                       | [[https://github.com/kjfletch/bookem-el][kjfletch/bookem-el]]                      | Bookmark system organising bookmarks into groups                       |
