@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5533 |   5533 |       |       |      216 |         180 |  4955 |
-| gitlab      |  195 |    195 |       |       |       19 |          16 |   176 |
+| github      | 5537 |   5537 |       |       |      216 |         180 |  4958 |
+| gitlab      |  195 |    195 |       |       |       18 |          16 |   176 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
-| codeberg    |  123 |    123 |       |       |        6 |          34 |   105 |
+| codeberg    |  123 |    123 |       |       |        7 |          34 |   105 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   267 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9141 |   7051 |  1587 |   498 |      462 |         242 |  5830 |
+| total       | 9145 |   7055 |  1587 |   498 |      462 |         242 |  5833 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -354,6 +354,7 @@
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
+| bluetooth           | https://codeberg.org/rstocker/emacs-bluetooth     |
 | buildbot            | https://g.ypei.me/buildbot.el.git                 |
 | vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
 | setup               | https://git.sr.ht/~pkal/setup                     |
@@ -363,7 +364,6 @@
 | chess               | https://github.com/jwiegley/emacs-chess.git       |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
 | ediprolog           | https://github.com/triska/ediprolog               |
-| bluetooth           | https://gitlab.com/rstocker/emacs-bluetooth       |
 
 * NonGNU Elpa
 :PROPERTIES:

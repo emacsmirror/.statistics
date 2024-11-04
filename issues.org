@@ -39,10 +39,36 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (1) | Package     | Shelved |
-|-------------+-------------+---------|
-| oauth2-auto | oauth2-auto |         |
-| oauth2-auto | org-gcal    |         |
+| Feature (14)                               | Package         | Shelved |
+|--------------------------------------------+-----------------+---------|
+| clojure-mode-convert-collection-test       | clojure-mode    |         |
+| clojure-mode-convert-collection-test       | clojure-ts-mode |         |
+| clojure-mode-cycling-test                  | clojure-mode    |         |
+| clojure-mode-cycling-test                  | clojure-ts-mode |         |
+| clojure-mode-external-interaction-test     | clojure-mode    |         |
+| clojure-mode-external-interaction-test     | clojure-ts-mode |         |
+| clojure-mode-font-lock-test                | clojure-mode    |         |
+| clojure-mode-font-lock-test                | clojure-ts-mode |         |
+| clojure-mode-indentation-test              | clojure-mode    |         |
+| clojure-mode-indentation-test              | clojure-ts-mode |         |
+| clojure-mode-refactor-add-arity-test       | clojure-mode    |         |
+| clojure-mode-refactor-add-arity-test       | clojure-ts-mode |         |
+| clojure-mode-refactor-let-test             | clojure-mode    |         |
+| clojure-mode-refactor-let-test             | clojure-ts-mode |         |
+| clojure-mode-refactor-rename-ns-alias-test | clojure-mode    |         |
+| clojure-mode-refactor-rename-ns-alias-test | clojure-ts-mode |         |
+| clojure-mode-refactor-threading-test       | clojure-mode    |         |
+| clojure-mode-refactor-threading-test       | clojure-ts-mode |         |
+| clojure-mode-safe-eval-test                | clojure-mode    |         |
+| clojure-mode-safe-eval-test                | clojure-ts-mode |         |
+| clojure-mode-sexp-test                     | clojure-mode    |         |
+| clojure-mode-sexp-test                     | clojure-ts-mode |         |
+| clojure-mode-syntax-test                   | clojure-mode    |         |
+| clojure-mode-syntax-test                   | clojure-ts-mode |         |
+| clojure-mode-util-test                     | clojure-mode    |         |
+| clojure-mode-util-test                     | clojure-ts-mode |         |
+| oauth2-auto                                | oauth2-auto     |         |
+| oauth2-auto                                | org-gcal        |         |
 
 - 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
 
