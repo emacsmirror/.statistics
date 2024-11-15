@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5540 |   5540 |       |       |      215 |         180 |  4961 |
+| github      | 5545 |   5545 |       |       |      216 |         180 |  4962 |
 | gitlab      |  195 |    195 |       |       |       18 |          16 |   176 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
-| codeberg    |  123 |    123 |       |       |        7 |          34 |   105 |
+| codeberg    |  124 |    124 |       |       |        7 |          34 |   106 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,10 +128,10 @@
 | shelved     | 1587 |        |  1587 |       |          |             |    28 |
 | mirror      |      |        |       |       |          |             |    11 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   267 |
-| unreleased  |      |        |       |       |        6 |           0 |       |
+| secondary   |      |        |       |       |          |             |   257 |
+| unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9148 |   7058 |  1587 |   498 |      462 |         242 |  5836 |
+| total       | 9154 |   7064 |  1587 |   498 |      462 |         242 |  5828 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -478,15 +478,12 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
-| Package (7)                       | Melpa  | Reason                                               |
-|-----------------------------------+--------+------------------------------------------------------|
-| bind-chord                        | github | Don't add; part of legacy repository but not Emacs   |
-| connection                        | github | Don't add; part of upstream dictionary but not Emacs |
-| django-snippets                   | github | Don't add; part of shelved django-mode               |
-| evangelion-theme                  | github | pending [[https://github.com/melpa/melpa/pull/9153][melpa#9153]]                                   |
-| link                              | github | Don't add; part of upstream dictionary but not Emacs |
-| use-package-chords                | github | Don't add; part of bind-chord, see above             |
-| use-package-ensure-system-package | github | Don't add; part of Emacs' use-package                |
+| Package (4)      | Melpa  | Reason                                               |
+|------------------+--------+------------------------------------------------------|
+| connection       | github | Don't add; part of upstream dictionary but not Emacs |
+| django-snippets  | github | Don't add; part of shelved django-mode               |
+| evangelion-theme | github | pending [[https://github.com/melpa/melpa/pull/9153][melpa#9153]]                                   |
+| link             | github | Don't add; part of upstream dictionary but not Emacs |
 
 ** Shelved
 :PROPERTIES:
@@ -592,7 +589,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (148)   | Secondary package                | Class     |
+| Primary package (146)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -618,10 +615,6 @@
 | cardano-tx              | ouroboros                        | github    |
 | cardano-tx              | readable-numbers                 | github    |
 | cfn-mode                | flycheck-cfn                     | gitlab    |
-| chatgpt-shell           | dall-e-shell                     | github    |
-| chatgpt-shell           | ob-chatgpt-shell                 | github    |
-| chatgpt-shell           | ob-dall-e-shell                  | github    |
-| chatgpt-shell           | shell-maker                      | github    |
 | chronometrist           | chronometrist-key-values         | codeberg  |
 | chronometrist           | chronometrist-spark              | codeberg  |
 | circe                   | tracking                         | github    |
@@ -671,12 +664,6 @@
 | elcute                  | slurpbarf                        | codeberg  |
 | elfeed                  | elfeed-web                       | github    |
 | elfeed-tube             | elfeed-tube-mpv                  | github    |
-| emacsql                 | emacsql-mysql                    | github    |
-| emacsql                 | emacsql-pg                       | github    |
-| emacsql                 | emacsql-psql                     | github    |
-| emacsql                 | emacsql-sqlite                   | github    |
-| emacsql                 | emacsql-sqlite-builtin           | github    |
-| emacsql                 | emacsql-sqlite-module            | github    |
 | embark                  | avy-embark-collect               | github    |
 | embark                  | embark-consult                   | github    |
 | espotify                | consult-spotify                  | codeberg  |
