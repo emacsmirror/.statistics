@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5545 |   5545 |       |       |      216 |         180 |  4962 |
+| github      | 5552 |   5552 |       |       |      216 |         180 |  4968 |
 | gitlab      |  195 |    195 |       |       |       18 |          16 |   176 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
 | codeberg    |  124 |    124 |       |       |        7 |          34 |   106 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   257 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9154 |   7064 |  1587 |   498 |      462 |         242 |  5828 |
+| total       | 9161 |   7071 |  1587 |   498 |      462 |         242 |  5834 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -478,12 +478,11 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
-| Package (4)      | Melpa  | Reason                                               |
-|------------------+--------+------------------------------------------------------|
-| connection       | github | Don't add; part of upstream dictionary but not Emacs |
-| django-snippets  | github | Don't add; part of shelved django-mode               |
-| evangelion-theme | github | pending [[https://github.com/melpa/melpa/pull/9153][melpa#9153]]                                   |
-| link             | github | Don't add; part of upstream dictionary but not Emacs |
+| Package (3)     | Melpa  | Reason                                               |
+|-----------------+--------+------------------------------------------------------|
+| connection      | github | Don't add; part of upstream dictionary but not Emacs |
+| django-snippets | github | Don't add; part of shelved django-mode               |
+| link            | github | Don't add; part of upstream dictionary but not Emacs |
 
 ** Shelved
 :PROPERTIES:

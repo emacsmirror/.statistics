@@ -33,12 +33,11 @@
   (emir--store-table 'var-delayed value)
 #+END_SRC
 #+NAME: table--delayed
-| Package          | Reason                                               |
-|------------------+------------------------------------------------------|
-| connection       | Don't add; part of upstream dictionary but not Emacs |
-| django-snippets  | Don't add; part of shelved django-mode               |
-| evangelion-theme | pending [[https://github.com/melpa/melpa/pull/9153][melpa#9153]]                                   |
-| link             | Don't add; part of upstream dictionary but not Emacs |
+| Package         | Reason                                               |
+|-----------------+------------------------------------------------------|
+| connection      | Don't add; part of upstream dictionary but not Emacs |
+| django-snippets | Don't add; part of shelved django-mode               |
+| link            | Don't add; part of upstream dictionary but not Emacs |
 
 * Diverging                                                           :stats:
 :PROPERTIES:

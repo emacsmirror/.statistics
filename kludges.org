@@ -97,7 +97,7 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (84)                    | Class     | Feature                  | Reason                                            |
+| Package (83)                    | Class     | Feature                  | Reason                                            |
 |---------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                       | github    | octave-inf               | backward compatibility                            |
 | achievements                    | gitlab    | command-frequency        | shelved soft                                      |
@@ -196,7 +196,6 @@
 | stickies                        | github    | anything                 | anything                                          |
 | straight                        | github    | comp                     | forward compatibility (Emacs 28)                  |
 | string-utils                    | github    | obarray-fns              | shelved soft                                      |
-| tangotango-theme                | github    | color-theme              | backward compatibility                            |
 | tramp                           | gnu       | tramp-loaddefs           | generated internal file                           |
 | tree-sitter-indent              | shelved   | csharp-tree-sitter       | for tests only                                    |
 | tss                             | github    | anything                 | anything                                          |
