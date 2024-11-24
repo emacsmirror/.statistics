@@ -238,10 +238,11 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (21)      | Class  | Commits |
+| Package (22)      | Class  | Commits |
 |-------------------+--------+---------|
 | apel              | github |       3 |
 | auctex-latexmk    | github |       1 |
+| edts              | github |       3 |
 | emacspeak         | github |       1 |
 | emux              | github |       1 |
 | ert-runner        | github |       1 |

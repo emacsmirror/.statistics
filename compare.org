@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5552 |   5552 |       |       |      216 |         180 |  4968 |
+| github      | 5552 |   5552 |       |       |      216 |         180 |  4963 |
 | gitlab      |  195 |    195 |       |       |       18 |          16 |   175 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
 | codeberg    |  126 |    126 |       |       |        7 |          34 |   108 |
@@ -126,7 +126,7 @@
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
 | shelved     | 1587 |        |  1587 |       |          |             |    28 |
-| mirror      |      |        |       |       |          |             |    11 |
+| mirror      |      |        |       |       |          |             |    16 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   257 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
@@ -889,19 +889,24 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
-| Package (11)      | Url                                              |
+| Package (16)      | Url                                              |
 |-------------------+--------------------------------------------------|
+| apel              | https://github.com/emacsmirror/apel              |
 | auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
 | clang-format      | https://github.com/emacsmirror/clang-format      |
 | darcsum           | https://github.com/emacsmirror/darcsum           |
 | dsvn              | https://github.com/emacsmirror/dsvn              |
 | edit-list         | https://github.com/emacsmirror/edit-list         |
+| edts              | https://github.com/emacsmirror/edts              |
+| flim              | https://github.com/emacsmirror/flim              |
 | helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
 | highlight         | https://github.com/emacsmirror/highlight         |
 | majapahit-themes  | https://github.com/emacsmirror/majapahit-themes  |
 | po-mode           | https://github.com/emacsmirror/po-mode           |
 | quack             | https://github.com/emacsmirror/quack             |
+| semi              | https://github.com/emacsmirror/semi              |
 | tex-smart-umlauts | https://github.com/emacsmirror/tex-smart-umlauts |
+| wanderlust        | https://github.com/emacsmirror/wanderlust        |
 
 ** From Emacsattic
 :PROPERTIES:
