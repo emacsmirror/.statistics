@@ -68,21 +68,23 @@
     :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (12)     | Class   | Feature              | Reason                |
-|------------------+---------+----------------------+-----------------------|
-| rgb              | gitlab  | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| rgb              | gitlab  | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| fsharp-mode      | github  | integration-tests    | conflicting test file |
-| emacspeak        | github  | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
-| org              | gnu     | org-test             | conflicting test file |
-| org-gcal         | github  | org-test             | conflicting test file |
-| font-lock-studio | github  | tabulated-list       | harmless in test file |
-| gumshoe          | github  | targets/install-deps | conflicting test file |
-| ivy              | github  | targets/install-deps | conflicting test file |
-| clojure-mode     | github  | test-helper          | conflicting test file |
-| elixir-mode      | github  | test-helper          | conflicting test file |
-| diffscuss-mode   | subtree | test-simple          | bundled test utility  |
-| emacspeak        | github  | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
+| Package (13)     | Class   | Feature              | Reason                  |
+|------------------+---------+----------------------+-------------------------|
+| rgb              | gitlab  | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]              |
+| rgb              | gitlab  | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]              |
+| fsharp-mode      | github  | integration-tests    | conflicting test file   |
+| emacspeak        | github  | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]             |
+| riece            | nongnu  | luna                 | from uncooperative flim |
+| riece            | nongnu  | lunit                | from uncooperative flim |
+| org              | gnu     | org-test             | conflicting test file   |
+| org-gcal         | github  | org-test             | conflicting test file   |
+| font-lock-studio | github  | tabulated-list       | harmless in test file   |
+| gumshoe          | github  | targets/install-deps | conflicting test file   |
+| ivy              | github  | targets/install-deps | conflicting test file   |
+| clojure-mode     | github  | test-helper          | conflicting test file   |
+| elixir-mode      | github  | test-helper          | conflicting test file   |
+| diffscuss-mode   | subtree | test-simple          | bundled test utility    |
+| emacspeak        | github  | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]             |
 
 * Drop required features
 :PROPERTIES:
@@ -246,7 +248,7 @@
 | emacspeak         | github |       1 |
 | emux              | github |       1 |
 | ert-runner        | github |       1 |
-| flim              | github |       4 |
+| flim              | github |       3 |
 | go                | github |       1 |
 | icons-in-terminal | github |       1 |
 | karma             | github |       1 |
