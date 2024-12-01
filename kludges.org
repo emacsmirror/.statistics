@@ -99,128 +99,127 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (83)                    | Class     | Feature                  | Reason                                            |
-|---------------------------------+-----------+--------------------------+---------------------------------------------------|
-| ac-octave                       | github    | octave-inf               | backward compatibility                            |
-| achievements                    | gitlab    | command-frequency        | shelved soft                                      |
-| aozora-view                     | github    | ivs-aj1                  | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                        |
-| auto-complete                   | github    | semantic-ia              | backward compatibility                            |
-| auto-complete-nxml              | github    | anything-project         | anything                                          |
-| bbdb                            | nongnu    | vm-autoloads             | generated external file                           |
-| borg                            | github    | loaddefs-gen             | forward compatibility                             |
-| bts                             | github    | el-expectations          | deprecated testing framework                      |
-| bts                             | github    | pophint-config           | pending [[https://github.com/aki2o/emacs-bts/pull/17][#17]]                                       |
-| caskxy                          | github    | el-expectations          | deprecated testing framework                      |
-| centered-window                 | github    | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                        |
-| citeproc                        | github    | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                         |
-| color-moccur                    | github    | moccur-edit              | shelved soft                                      |
-| color-theme-sanityinc-solarized | github    | color-theme              | backward compatibility                            |
-| company                         | github    | semantic-idle            | backward compatibility                            |
-| company-fuzzy                   | github    | flex                     | wiki soft                                         |
-| dic-lookup-w3m                  | shelved   | text-translator          | broken and optional                               |
-| dired+                          | wiki      | help+20                  | backward compatibility                            |
-| dired+                          | wiki      | subr-21                  | backward compatibility                            |
-| doremi-cmd                      | wiki      | color-theme              | backward compatibility                            |
-| eaf                             | github    | org-docview              | backward compatibility                            |
-| ecb                             | github    | escreen                  | shelved soft                                      |
-| ecb                             | github    | semantic-analyze         | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                       |
-| ecb                             | github    | semantic-ctxt            | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                       |
-| ecb                             | github    | thing                    | XEmacs compatibility                              |
-| ee                              | gnu       | bbdb-autoloads           | generated external file                           |
-| el-autoyas                      | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
-| emms-player-mpv-jp-radios       | github    | anything                 | anything                                          |
-| erlang                          | github    | tags                     | backward compatibility                            |
-| es-lib                          | github    | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]             |
-| extend-dnd                      | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
-| folding                         | github    | mode-motion              | XEmacs compatibility                              |
-| frontside-javascript            | github    | company-lsp              | pending [[https://github.com/melpa/melpa/pull/7403][#7403]]                                     |
-| fstar-mode                      | github    | replace                  | replace.el doesn't provide feature in Emacs < 26  |
-| gradle                          | sourcehut | project-root             | shelved soft                                      |
-| help+                           | wiki      | info+20                  | backward compatibility                            |
-| hyperbole                       | gnu       | efs                      | XEmacs compatibility                              |
-| hyperbole                       | gnu       | kotl-autoloads           | generated external file                           |
-| icicles                         | wiki      | anything                 | anything                                          |
-| icicles                         | wiki      | color-theme              | backward compatibility                            |
-| jda                             | github    | anything                 | anything                                          |
-| jdee                            | github    | working                  | stand-alone cedet compatibility                   |
-| lacarte                         | wiki      | subr-21                  | backward compatibility                            |
-| latex-extra                     | github    | tex-buf                  | backward compatibility                            |
-| lilypond                        | gnu       | ilisp                    | only required by a single undocumented command    |
-| lispxmp                         | github    | newxmp                   | pending: newxmp has not been released yet (email) |
-| lispy                           | github    | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                         |
-| load-theme-buffer-local         | github    | color-theme              | backward compatibility                            |
-| markchars                       | gnu-elpa  | idn                      | shelved soft                                      |
-| menu-bar+                       | wiki      | help+20                  | backward compatibility                            |
-| menu-bar+                       | wiki      | info+20                  | backward compatibility                            |
-| mew                             | github    | mw32script               | Meadow Emacs compatibility                        |
-| mew                             | github    | un-define                | XEmacs compatibility                              |
-| mhc                             | github    | bitmap                   | XEmacs compatibility                              |
-| mhc                             | github    | mhc-bm                   | Mule compatibility                                |
-| mhc                             | github    | mhc-xmas                 | XEmacs compatibility                              |
-| mhc                             | github    | pcustom                  | Mule compatibility                                |
-| mhc                             | github    | poe                      | Mule compatibility                                |
-| mic                             | github    | feat1                    | for tests only                                    |
-| mic                             | github    | feat2                    | for tests only                                    |
-| mic                             | github    | feat3                    | for tests only                                    |
-| mic                             | github    | feat4                    | for tests only                                    |
-| molokai-theme                   | github    | color-theme              | backward compatibility                            |
-| mu4e-views                      | github    | mu4e-utils               | backward compatibility                            |
-| mu4e-views                      | github    | mu4e-view-gnus           | backward compatibility                            |
-| mu4e-views                      | github    | mu4e-view-old            | backward compatibility                            |
-| navi2ch                         | github    | bitmap                   | XEmacs compatibility                              |
-| navi2ch                         | github    | spamfilter               | shelved soft                                      |
-| org                             | gnu       | nnselect                 | forward compatibility                             |
-| org                             | gnu       | org-remember             | backward compatibility                            |
-| org-readme                      | github    | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                       |
-| org-redmine                     | orphaned  | anything                 | anything                                          |
-| org-ref                         | github    | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                       |
-| org-roam                        | github    | emacsql-libsqlite3       | backward compatibility                            |
-| org-roam                        | github    | emacsql-sqlite3          | optional legacy backend                           |
-| org-toodledo                    | github    | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                          |
-| osa                             | github    | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]] |
-| ox-hugo                         | github    | org-info                 | backward compatibility                            |
-| ox-latex-subfigure              | github    | org-loaddefs             | generated external file                           |
-| pinot                           | github    | anything-config          | anything                                          |
-| plsense                         | github    | perl-completion          | anything                                          |
-| project-explorer                | github    | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]            |
-| prosjekt                        | github    | anything                 | anything                                          |
-| python-mode                     | gitlab    | org-loaddefs             | generated external file                           |
-| python-mode                     | gitlab    | py-bug-numbered-tests    | testing only                                      |
-| python-mode                     | gitlab    | pymacs                   | it's complicated (email)                          |
-| python-mode                     | gitlab    | setup-ert-tests          | testing only                                      |
-| r-autoyas                       | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
-| rcodetools                      | subtree   | anything                 | anything                                          |
-| rcodetools                      | subtree   | anything-show-completion | anything                                          |
-| rpm-spec-mode                   | github    | shindent                 | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                       |
-| show-marks                      | github    | fm                       | shelved soft                                      |
-| simple-call-tree                | github    | fm                       | shelved soft                                      |
-| snapshot-timemachine-rsnapshot  | github    | seq-25                   | backward compatibility                            |
-| stickies                        | github    | anything                 | anything                                          |
-| straight                        | github    | comp                     | forward compatibility (Emacs 28)                  |
-| string-utils                    | github    | obarray-fns              | shelved soft                                      |
-| tramp                           | gnu       | tramp-loaddefs           | generated internal file                           |
-| tree-sitter-indent              | shelved   | csharp-tree-sitter       | for tests only                                    |
-| tss                             | github    | anything                 | anything                                          |
-| tss                             | github    | moz                      | shelved soft                                      |
-| twittering-mode                 | github    | alpaca                   | only required if epa isn't available              |
-| twittering-mode                 | github    | revive                   | false-positive                                    |
-| twittering-mode                 | github    | un-define                | XEmacs compatibility                              |
-| twittering-mode                 | github    | unicode                  | backward compatibility                            |
-| ucs-utils                       | github    | ucs-utils-6.0-delta      | backward compatibility                            |
-| vbasense                        | github    | anything-project         | anything                                          |
-| vm                              | orphaned  | atomic-extents           | XEmacs compatibility                              |
-| vm                              | orphaned  | highlight-headers        | XEmacs compatibility                              |
-| vm                              | orphaned  | timer-funcs              | XEmacs compatibility                              |
-| vm                              | orphaned  | vm-autoloads             | generated internal file                           |
-| w3                              | gnu-elpa  | dtk-css-speech           | used to be part of emacspeak, not needed          |
-| w3                              | gnu-elpa  | dtk-voices               | used to be part of emacspeak, not needed          |
-| w3                              | gnu-elpa  | w3-site-init             | leftover noise                                    |
-| w3                              | gnu-elpa  | x-font-menu              | XEmacs compatibility                              |
-| w3                              | gnu-elpa  | xbm-button               | XEmacs compatibility                              |
-| w3                              | gnu-elpa  | xpm-button               | XEmacs compatibility                              |
-| wanderlust                      | github    | spamfilter               | shelved soft                                      |
-| xenops                          | github    | tex-buf                  | backward compatibility                            |
-| yatex                           | hg        | hilit19                  | backward compatibility                            |
+| Package (82)                   | Class     | Feature                  | Reason                                            |
+|--------------------------------+-----------+--------------------------+---------------------------------------------------|
+| ac-octave                      | github    | octave-inf               | backward compatibility                            |
+| achievements                   | gitlab    | command-frequency        | shelved soft                                      |
+| aozora-view                    | github    | ivs-aj1                  | pending [[https://github.com/kawabata/aozora-view/issues/3][#3]]                                        |
+| auto-complete                  | github    | semantic-ia              | backward compatibility                            |
+| auto-complete-nxml             | github    | anything-project         | anything                                          |
+| bbdb                           | nongnu    | vm-autoloads             | generated external file                           |
+| borg                           | github    | loaddefs-gen             | forward compatibility                             |
+| bts                            | github    | el-expectations          | deprecated testing framework                      |
+| bts                            | github    | pophint-config           | pending [[https://github.com/aki2o/emacs-bts/pull/17][#17]]                                       |
+| caskxy                         | github    | el-expectations          | deprecated testing framework                      |
+| centered-window                | github    | mac-win                  | Mac-port compatibility [[https://github.com/anler/centered-window-mode/issues/28][#28]]                        |
+| citeproc                       | github    | org-bibtex               | backward compatibility [[https://github.com/andras-simonyi/citeproc-el/issues/7][#7]]                         |
+| color-moccur                   | github    | moccur-edit              | shelved soft                                      |
+| company                        | github    | semantic-idle            | backward compatibility                            |
+| company-fuzzy                  | github    | flex                     | wiki soft                                         |
+| dic-lookup-w3m                 | shelved   | text-translator          | broken and optional                               |
+| dired+                         | wiki      | help+20                  | backward compatibility                            |
+| dired+                         | wiki      | subr-21                  | backward compatibility                            |
+| doremi-cmd                     | wiki      | color-theme              | backward compatibility                            |
+| eaf                            | github    | org-docview              | backward compatibility                            |
+| ecb                            | github    | escreen                  | shelved soft                                      |
+| ecb                            | github    | semantic-analyze         | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                       |
+| ecb                            | github    | semantic-ctxt            | backward compatibility: [[https://github.com/ecb-home/ecb/issues/24][#24]]                       |
+| ecb                            | github    | thing                    | XEmacs compatibility                              |
+| ee                             | gnu       | bbdb-autoloads           | generated external file                           |
+| el-autoyas                     | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
+| emms-player-mpv-jp-radios      | github    | anything                 | anything                                          |
+| erlang                         | github    | tags                     | backward compatibility                            |
+| es-lib                         | github    | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/es-lib/issues/3][#3]]             |
+| extend-dnd                     | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
+| folding                        | github    | mode-motion              | XEmacs compatibility                              |
+| frontside-javascript           | github    | company-lsp              | pending [[https://github.com/melpa/melpa/pull/7403][#7403]]                                     |
+| fstar-mode                     | github    | replace                  | replace.el doesn't provide feature in Emacs < 26  |
+| gradle                         | sourcehut | project-root             | shelved soft                                      |
+| help+                          | wiki      | info+20                  | backward compatibility                            |
+| hyperbole                      | gnu       | efs                      | XEmacs compatibility                              |
+| hyperbole                      | gnu       | kotl-autoloads           | generated external file                           |
+| icicles                        | wiki      | anything                 | anything                                          |
+| icicles                        | wiki      | color-theme              | backward compatibility                            |
+| jda                            | github    | anything                 | anything                                          |
+| jdee                           | github    | working                  | stand-alone cedet compatibility                   |
+| lacarte                        | wiki      | subr-21                  | backward compatibility                            |
+| latex-extra                    | github    | tex-buf                  | backward compatibility                            |
+| lilypond                       | gnu       | ilisp                    | only required by a single undocumented command    |
+| lispxmp                        | github    | newxmp                   | pending: newxmp has not been released yet (email) |
+| lispy                          | github    | mash-python              | pending [[https://github.com/abo-abo/lispy/issues/377][#377]] (unreleased)                         |
+| load-theme-buffer-local        | github    | color-theme              | backward compatibility                            |
+| markchars                      | gnu-elpa  | idn                      | shelved soft                                      |
+| menu-bar+                      | wiki      | help+20                  | backward compatibility                            |
+| menu-bar+                      | wiki      | info+20                  | backward compatibility                            |
+| mew                            | github    | mw32script               | Meadow Emacs compatibility                        |
+| mew                            | github    | un-define                | XEmacs compatibility                              |
+| mhc                            | github    | bitmap                   | XEmacs compatibility                              |
+| mhc                            | github    | mhc-bm                   | Mule compatibility                                |
+| mhc                            | github    | mhc-xmas                 | XEmacs compatibility                              |
+| mhc                            | github    | pcustom                  | Mule compatibility                                |
+| mhc                            | github    | poe                      | Mule compatibility                                |
+| mic                            | github    | feat1                    | for tests only                                    |
+| mic                            | github    | feat2                    | for tests only                                    |
+| mic                            | github    | feat3                    | for tests only                                    |
+| mic                            | github    | feat4                    | for tests only                                    |
+| molokai-theme                  | github    | color-theme              | backward compatibility                            |
+| mu4e-views                     | github    | mu4e-utils               | backward compatibility                            |
+| mu4e-views                     | github    | mu4e-view-gnus           | backward compatibility                            |
+| mu4e-views                     | github    | mu4e-view-old            | backward compatibility                            |
+| navi2ch                        | github    | bitmap                   | XEmacs compatibility                              |
+| navi2ch                        | github    | spamfilter               | shelved soft                                      |
+| org                            | gnu       | nnselect                 | forward compatibility                             |
+| org                            | gnu       | org-remember             | backward compatibility                            |
+| org-readme                     | github    | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                       |
+| org-redmine                    | orphaned  | anything                 | anything                                          |
+| org-ref                        | github    | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                       |
+| org-roam                       | github    | emacsql-libsqlite3       | backward compatibility                            |
+| org-roam                       | github    | emacsql-sqlite3          | optional legacy backend                           |
+| org-toodledo                   | github    | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                          |
+| osa                            | github    | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]] |
+| ox-hugo                        | github    | org-info                 | backward compatibility                            |
+| ox-latex-subfigure             | github    | org-loaddefs             | generated external file                           |
+| pinot                          | github    | anything-config          | anything                                          |
+| plsense                        | github    | perl-completion          | anything                                          |
+| project-explorer               | github    | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]            |
+| prosjekt                       | github    | anything                 | anything                                          |
+| python-mode                    | gitlab    | org-loaddefs             | generated external file                           |
+| python-mode                    | gitlab    | py-bug-numbered-tests    | testing only                                      |
+| python-mode                    | gitlab    | pymacs                   | it's complicated (email)                          |
+| python-mode                    | gitlab    | setup-ert-tests          | testing only                                      |
+| r-autoyas                      | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
+| rcodetools                     | subtree   | anything                 | anything                                          |
+| rcodetools                     | subtree   | anything-show-completion | anything                                          |
+| rpm-spec-mode                  | github    | shindent                 | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                       |
+| show-marks                     | github    | fm                       | shelved soft                                      |
+| simple-call-tree               | github    | fm                       | shelved soft                                      |
+| snapshot-timemachine-rsnapshot | github    | seq-25                   | backward compatibility                            |
+| stickies                       | github    | anything                 | anything                                          |
+| straight                       | github    | comp                     | forward compatibility (Emacs 28)                  |
+| string-utils                   | github    | obarray-fns              | shelved soft                                      |
+| tramp                          | gnu       | tramp-loaddefs           | generated internal file                           |
+| tree-sitter-indent             | shelved   | csharp-tree-sitter       | for tests only                                    |
+| tss                            | github    | anything                 | anything                                          |
+| tss                            | github    | moz                      | shelved soft                                      |
+| twittering-mode                | github    | alpaca                   | only required if epa isn't available              |
+| twittering-mode                | github    | revive                   | false-positive                                    |
+| twittering-mode                | github    | un-define                | XEmacs compatibility                              |
+| twittering-mode                | github    | unicode                  | backward compatibility                            |
+| ucs-utils                      | github    | ucs-utils-6.0-delta      | backward compatibility                            |
+| vbasense                       | github    | anything-project         | anything                                          |
+| vm                             | orphaned  | atomic-extents           | XEmacs compatibility                              |
+| vm                             | orphaned  | highlight-headers        | XEmacs compatibility                              |
+| vm                             | orphaned  | timer-funcs              | XEmacs compatibility                              |
+| vm                             | orphaned  | vm-autoloads             | generated internal file                           |
+| w3                             | gnu-elpa  | dtk-css-speech           | used to be part of emacspeak, not needed          |
+| w3                             | gnu-elpa  | dtk-voices               | used to be part of emacspeak, not needed          |
+| w3                             | gnu-elpa  | w3-site-init             | leftover noise                                    |
+| w3                             | gnu-elpa  | x-font-menu              | XEmacs compatibility                              |
+| w3                             | gnu-elpa  | xbm-button               | XEmacs compatibility                              |
+| w3                             | gnu-elpa  | xpm-button               | XEmacs compatibility                              |
+| wanderlust                     | github    | spamfilter               | shelved soft                                      |
+| xenops                         | github    | tex-buf                  | backward compatibility                            |
+| yatex                          | hg        | hilit19                  | backward compatibility                            |
 
 * Patched packages
 :PROPERTIES:
@@ -240,11 +239,10 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (22)      | Class  | Commits |
+| Package (21)      | Class  | Commits |
 |-------------------+--------+---------|
 | apel              | github |       3 |
 | auctex-latexmk    | github |       1 |
-| edts              | github |       3 |
 | emacspeak         | github |       1 |
 | emux              | github |       1 |
 | ert-runner        | github |       1 |

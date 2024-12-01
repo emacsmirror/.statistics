@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5551 |   5551 |       |       |      216 |         180 |  4962 |
+| github      | 5550 |   5550 |       |       |      217 |         181 |  4962 |
 | gitlab      |  195 |    195 |       |       |       18 |          16 |   175 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
 | codeberg    |  126 |    126 |       |       |        7 |          34 |   108 |
@@ -125,13 +125,13 @@
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
-| shelved     | 1588 |        |  1588 |       |          |             |    28 |
-| mirror      |      |        |       |       |          |             |    16 |
+| shelved     | 1589 |        |  1589 |       |          |             |    28 |
+| mirror      |      |        |       |       |          |             |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   257 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9163 |   7072 |  1588 |   498 |      462 |         242 |  5834 |
+| total       | 9163 |   7071 |  1589 |   498 |      463 |         243 |  5833 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -889,7 +889,7 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
-| Package (16)      | Url                                              |
+| Package (15)      | Url                                              |
 |-------------------+--------------------------------------------------|
 | apel              | https://github.com/emacsmirror/apel              |
 | auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
@@ -897,7 +897,6 @@
 | darcsum           | https://github.com/emacsmirror/darcsum           |
 | dsvn              | https://github.com/emacsmirror/dsvn              |
 | edit-list         | https://github.com/emacsmirror/edit-list         |
-| edts              | https://github.com/emacsmirror/edts              |
 | flim              | https://github.com/emacsmirror/flim              |
 | helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
 | highlight         | https://github.com/emacsmirror/highlight         |
