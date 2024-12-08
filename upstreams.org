@@ -744,6 +744,7 @@
 - buffer-ring https://github.com/emacsmirror/emacswiki.org
 - buffer-sets https://git.sr.ht/~swflint/buffer-sets
 - buffer-stack https://github.com/emacsmirror/emacswiki.org
+- buffer-terminator https://github.com/jamescherti/buffer-terminator.el
 - buffer-thumbnail please consult a search engine
 - buffer-time-stamp please consult a search engine
 - buffer-timer https://github.com/hardaker/elisp-buffer-timer
@@ -1697,7 +1698,6 @@
 - dired-efap https://github.com/juan-leon/dired-efap
 - dired-explorer https://github.com/jidaikobo-shibata/dired-explorer
 - dired-extension https://github.com/emacsmirror/emacswiki.org
-- dired-fdclone https://github.com/knu/dired-fdclone.el
 - dired-filetype-face https://github.com/jixiuf/dired-filetype-face
 - dired-git https://github.com/conao3/dired-git.el
 - dired-git-info https://github.com/clemera/dired-git-info
@@ -1731,6 +1731,7 @@
 - dired-view-data https://github.com/ShuguangSun/dired-view-data
 - dired-xattr https://github.com/renard/dired-xattr
 - diredc https://github.com/Boruch-Baum/emacs-diredc
+- diredfd https://github.com/knu/diredfd.el
 - diredfl https://github.com/purcell/diredfl
 - diredful https://github.com/thamer/diredful
 - direnv https://github.com/wbolster/emacs-direnv
@@ -2043,6 +2044,7 @@
 - egison-mode git@github.com:egison/egison.git
 - egit https://github.com/jimhourihan/egit
 - eglot https://git.savannah.gnu.org/git/emacs.git
+- eglot-inactive-regions https://github.com/fargiolas/eglot-inactive-regions
 - eglot-java https://github.com/yveszoundi/eglot-java
 - eglot-jl https://github.com/non-Jedi/eglot-jl
 - eglot-luau https://github.com/kennethloeffler/eglot-luau
@@ -2648,6 +2650,7 @@
 - fancy-compilation https://codeberg.org/ideasman42/emacs-fancy-compilation
 - fancy-dabbrev https://github.com/jrosdahl/fancy-dabbrev
 - fancy-narrow https://github.com/Malabarba/fancy-narrow
+- fancy-urls-menu https://codeberg.org/kakafarm/emacs-fancy-urls-menu
 - fantom-mode https://github.com/thechampagne/fantom-mode
 - fantom-theme https://github.com/adsva/fantom-emacs-theme
 - fanyi https://github.com/condy0919/fanyi.el
@@ -3452,6 +3455,7 @@
 - gosh https://github.com/emacsmirror/emacswiki.org
 - gosh-mode https://github.com/mhayashi1120/Emacs-gosh-mode
 - gotest https://github.com/nlamirault/gotest.el
+- gotest-ts https://github.com/chmouel/gotest-ts.el
 - gotham-theme https://depp.brause.cc/gotham-theme.git
 - goto-addr https://git.savannah.gnu.org/git/emacs.git
 - goto-char-other-window http://www.cb1.com/~john/computing/emacs/lisp/editing
@@ -3594,6 +3598,7 @@
 - haproxy-mode https://github.com/port19x/haproxy-mode
 - hardcore-mode https://github.com/magnars/hardcore-mode.el
 - hardhat https://github.com/rolandwalker/hardhat
+- hardtime https://github.com/ichernyshovvv/hardtime.el
 - harpoon https://github.com/otavioschwanck/harpoon.el
 - harvest https://github.com/kostajh/harvest.el
 - hashcash https://git.savannah.gnu.org/git/emacs.git
@@ -5560,6 +5565,7 @@
 - ngircd https://github.com/nicferrier/emacs-ngircd
 - ngn https://github.com/davep/ngn.el
 - nhexl-mode https://git.savannah.gnu.org/git/emacs/elpa.git
+- nice-org-html https://github.com/ewantown/nice-org-html
 - niceify-info https://github.com/aaron-em/niceify-info.el
 - nickel-mode https://github.com/nickel-lang/nickel-mode
 - niconama https://github.com/NOBUTOKA/niconama.el
@@ -7781,6 +7787,7 @@
 - speedbar-git-respect https://github.com/ukari/speedbar-git-respect
 - speeddating https://github.com/xuchunyang/emacs-speeddating
 - speedread please consult a search engine
+- speedrect https://github.com/jdtsmith/speedrect
 - spell-fu https://codeberg.org/ideasman42/emacs-spell-fu
 - spell-number https://github.com/emacsmirror/emacswiki.org
 - sphinx-doc https://github.com/naiquevin/sphinx-doc.el
@@ -7879,6 +7886,7 @@
 - stgit https://github.com/stacked-git/stgit
 - stickies https://github.com/tkosaka/emacs-lisp-stickies
 - sticky https://github.com/rubikitch/sticky
+- sticky-scroll-mode https://github.com/jclasley/sticky-scroll-mode
 - sticky-shell https://github.com/andrewdea/sticky-shell
 - stickyfunc-enhance https://github.com/tuhdo/semantic-stickyfunc-enhance
 - stimmung-themes https://github.com/motform/stimmung-themes
@@ -8363,6 +8371,7 @@
 - transcript https://github.com/natfarleydev/transcript-el
 - transducers https://github.com/fosskers/transducers.el
 - transfer-sh https://gitlab.com/tuedachu/transfer-sh.el
+- transform-symbol-at-point https://github.com/waymondo/transform-symbol-at-point
 - transient https://github.com/magit/transient
 - transient-cycles https://git.savannah.gnu.org/git/emacs/elpa.git
 - transient-dwim https://github.com/conao3/transient-dwim.el
