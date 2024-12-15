@@ -69,7 +69,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
   ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
-| Package (552)                | Link                                    | Summary                                                                |
+| Package (555)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -152,7 +152,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | linum-ace                    | [[https://github.com/coldnew/linum-ace][coldnew/linum-ace]]                       | Display line number as character like ace-jump-line-mode               |
 | stack-mode                   | [[https://github.com/commercialhaskell/stack-ide][commercialhaskell/stack-ide]]             | A minor mode enabling various features based on stack-ide              |
 | bing-api                     | [[https://github.com/coordinate/bingapiel][coordinate/bingapiel]]                    | Use bing api                                                           |
-| copilot                      | [[https://github.com/copilot-emacs/copilot.el][copilot-emacs/copilot.el]]                | An unofficial Copilot plugin for Emacs                                 |
+| copilot                      | [[https://github.com/copilot-emacs/copilot.el][copilot-emacs/copilot.el]]                | An unofficial Copilot plugin                                           |
 | eimap                        | [[https://github.com/corecode/eimap][corecode/eimap]]                          | Imap processing using a streaming data model                           |
 | emacs-android                | [[https://github.com/cpc26/emacs-android][cpc26/emacs-android]]                     | Android Development with GNU/Emacs                                     |
 | worklog                      | [[https://github.com/credmp/worklog][credmp/worklog]]                          | The Emacs timetracker                                                  |
@@ -427,6 +427,8 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | rcirc-robots                 | [[https://github.com/nicferrier/rcirc-robots][nicferrier/rcirc-robots]]                 | Robots based on rcirc irc                                              |
 | skinny                       | [[https://github.com/nicferrier/skinny][nicferrier/skinny]]                       | A blog engine with elnode                                              |
 | btc-ticker                   | [[https://github.com/niedbalski/emacs-btc-ticker][niedbalski/emacs-btc-ticker]]             | Shows latest bitcoin price                                             |
+| git-gutter-fringe+           | [[https://github.com/nonsequitur/git-gutter-fringe-plus][nonsequitur/git-gutter-fringe-plus]]      | Fringe version of git-gutter+.el                                       |
+| git-gutter+                  | [[https://github.com/nonsequitur/git-gutter-plus][nonsequitur/git-gutter-plus]]             | Manage Git hunks straight from the buffer                              |
 | ssl-mode                     | [[https://github.com/npc3/ssl-mode][npc3/ssl-mode]]                           | Emacs Major mode for S/SL files                                        |
 | async-eval                   | [[https://github.com/nschum/async-eval.el][nschum/async-eval.el]]                    | Execute Emacs lisp in a separate process                               |
 | compile-bookmarks            | [[https://github.com/nschum/compile-bookmarks.el][nschum/compile-bookmarks.el]]             | Bookmarks for compilation commands                                     |
@@ -589,6 +591,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | show-marks                   | [[https://github.com/vapniks/show-marks][vapniks/show-marks]]                      | Navigate and visualize the mark-ring                                   |
 | spss                         | [[https://github.com/vapniks/spss-mode][vapniks/spss-mode]]                       | Major-mode for editing SPSS program files                              |
 | i3                           | [[https://github.com/vava/i3-emacs][vava/i3-emacs]]                           | Bindings for i3 WM IPC                                                 |
+| magithub                     | [[https://github.com/vermiculus/magithub][vermiculus/magithub]]                     | Magit interfaces for GitHub                                            |
 | package-demo                 | [[https://github.com/vermiculus/package-demo][vermiculus/package-demo]]                 | Scripted emacs sessions                                                |
 | ido-better-flex              | [[https://github.com/vic/ido-better-flex][vic/ido-better-flex]]                     | A better flex (fuzzy) algorithm for Ido                                |
 | mvc                          | [[https://github.com/wachikun/mvc][wachikun/mvc]]                            | M(eta;ulti;enu) Version Control Interface                              |
@@ -638,7 +641,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (20)               | Link      |                                             |
+| Package (21)               | Link      |                                             |
 |----------------------------+-----------+---------------------------------------------|
 | ebuild-mode                | git       |                                             |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
@@ -651,6 +654,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                |
 | mailscripts                | git       |                                             |
 | monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                           |
+| no-clown-fiesta-theme      | codeberg  | [[https://codeberg.org/ranmaru22/no-clown-fiesta-theme.el][ranmaru22/no-clown-fiesta-theme.el]]          |
 | ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
 | org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
 | org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]  |

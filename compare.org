@@ -110,10 +110,10 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5561 |   5561 |       |       |      219 |         182 |  4971 |
+| github      | 5567 |   5567 |       |       |      219 |         183 |  4974 |
 | gitlab      |  197 |    197 |       |       |       18 |          16 |   177 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
-| codeberg    |  127 |    127 |       |       |        7 |          34 |   109 |
+| codeberg    |  127 |    127 |       |       |        7 |          34 |   108 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -125,13 +125,13 @@
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
-| shelved     | 1589 |        |  1589 |       |          |             |    28 |
+| shelved     | 1590 |        |  1590 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   257 |
+| secondary   |      |        |       |       |          |             |   256 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9175 |   7083 |  1589 |   498 |      465 |         244 |  5843 |
+| total       | 9182 |   7089 |  1590 |   498 |      465 |         245 |  5843 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -718,7 +718,6 @@
 | loopy                   | loopy-dash                       | github    |
 | lurk-mode               | ob-lurk                          | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                | github    |
-| magit                   | git-commit                       | github    |
 | magit                   | magit-section                    | github    |
 | major-mode-hydra        | pretty-hydra                     | github    |
 | maxima                  | company-maxima                   | gitlab    |
@@ -919,11 +918,10 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (28)         | Url                                                |
+| Package (27)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
-| call-graph           | https://github.com/emacsattic/call-graph           |
 | color-theme          | https://github.com/emacsattic/color-theme          |
 | company-go           | https://github.com/emacsattic/company-go           |
 | company-racer        | https://github.com/emacsattic/company-racer        |

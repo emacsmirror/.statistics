@@ -99,7 +99,7 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (82)                   | Class     | Feature                  | Reason                                            |
+| Package (81)                   | Class     | Feature                  | Reason                                            |
 |--------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                      | github    | octave-inf               | backward compatibility                            |
 | achievements                   | gitlab    | command-frequency        | shelved soft                                      |
@@ -190,7 +190,6 @@
 | r-autoyas                      | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
 | rcodetools                     | subtree   | anything                 | anything                                          |
 | rcodetools                     | subtree   | anything-show-completion | anything                                          |
-| rpm-spec-mode                  | github    | shindent                 | pending [[https://github.com/stigbjorlykke/rpm-spec-mode/pull/11][#11]]                                       |
 | show-marks                     | github    | fm                       | shelved soft                                      |
 | simple-call-tree               | github    | fm                       | shelved soft                                      |
 | snapshot-timemachine-rsnapshot | github    | seq-25                   | backward compatibility                            |
