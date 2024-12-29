@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5571 |   5571 |       |       |      220 |         183 |  4979 |
+| github      | 5573 |   5573 |       |       |      220 |         183 |  4981 |
 | gitlab      |  197 |    197 |       |       |       18 |          16 |   177 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
 | codeberg    |  129 |    129 |       |       |        7 |          34 |   110 |
@@ -128,10 +128,10 @@
 | shelved     | 1594 |        |  1594 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   256 |
+| secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9192 |   7095 |  1594 |   498 |      466 |         245 |  5850 |
+| total       | 9194 |   7097 |  1594 |   498 |      466 |         245 |  5851 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -588,7 +588,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (146)   | Secondary package                | Class     |
+| Primary package (145)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -661,7 +661,6 @@
 | el-secretario           | el-secretario-notmuch            | sourcehut |
 | el-secretario           | el-secretario-org                | sourcehut |
 | elcute                  | slurpbarf                        | codeberg  |
-| elfeed                  | elfeed-web                       | github    |
 | elfeed-tube             | elfeed-tube-mpv                  | github    |
 | embark                  | avy-embark-collect               | github    |
 | embark                  | embark-consult                   | github    |
