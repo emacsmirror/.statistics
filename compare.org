@@ -110,7 +110,7 @@
 | gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5573 |   5573 |       |       |      220 |         183 |  4981 |
+| github      | 5574 |   5574 |       |       |      220 |         183 |  4978 |
 | gitlab      |  197 |    197 |       |       |       18 |          16 |   177 |
 | sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
 | codeberg    |  129 |    129 |       |       |        7 |          34 |   110 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9194 |   7097 |  1594 |   498 |      466 |         245 |  5851 |
+| total       | 9195 |   7098 |  1594 |   498 |      466 |         245 |  5848 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -498,7 +498,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (68)                | Url                                                                         |
+| Package (65)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -551,7 +551,6 @@
 | paradox                     | https://github.com/Malabarba/paradox.git                                    |
 | peek-mode                   | https://github.com/erikriverson/peek-mode                                   |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
-| ph                          | https://github.com/gromnitsky/ph                                            |
 | protobuf-ts-mode            | https://git.ookami.one/cgit/protobuf-ts-mode                                |
 | pygn-mode                   | https://github.com/dwcoates/pygn-mode                                       |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
@@ -567,8 +566,6 @@
 | tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
 | tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |
-| weechat                     | https://github.com/the-kenny/weechat.el                                     |
-| weechat-alert               | https://github.com/Kungi/weechat-alert                                      |
 
 ** Shared repositories
 :PROPERTIES:
