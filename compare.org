@@ -33,8 +33,8 @@
                   hline
                   (github       0  0 "" ""  0  0  0)
                   (gitlab       0  0 "" ""  0  0  0)
-                  (sourcehut    0  0 "" ""  0  0  0)
                   (codeberg     0  0 "" ""  0  0  0)
+                  (sourcehut    0  0 "" ""  0  0  0)
                   (gnu          0  0 "" ""  0  0  0)
                   (nongnu       0  0 "" ""  0  0  0)
                   hline
@@ -107,13 +107,13 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       21 |             |       |
-| gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
+| gnu-elpa    |  144 |    144 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5574 |   5574 |       |       |      220 |         183 |  4978 |
+| github      | 5572 |   5572 |       |       |      220 |         183 |  4977 |
 | gitlab      |  197 |    197 |       |       |       18 |          16 |   177 |
-| sourcehut   |  106 |    106 |       |       |       29 |           6 |    63 |
-| codeberg    |  129 |    129 |       |       |        7 |          34 |   110 |
+| codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
+| sourcehut   |   97 |     97 |       |       |       18 |           6 |    63 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -125,13 +125,13 @@
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
-| shelved     | 1594 |        |  1594 |       |          |             |    27 |
+| shelved     | 1593 |        |  1593 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   255 |
+| secondary   |      |        |       |       |          |             |   254 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9195 |   7098 |  1594 |   498 |      466 |         245 |  5848 |
+| total       | 9196 |   7100 |  1593 |   498 |      466 |         245 |  5849 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -350,14 +350,13 @@
      [gnu-elpa]))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (12)        | :url                                              |
+| Package (11)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
 | bluetooth           | https://codeberg.org/rstocker/emacs-bluetooth     |
 | buildbot            | https://g.ypei.me/buildbot.el.git                 |
 | vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
-| setup               | https://git.sr.ht/~pkal/setup                     |
 | phps-mode           | https://github.com/cjohansson/emacs-phps-mode     |
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
 | ebdb                | https://github.com/girzel/ebdb.git                |
@@ -585,7 +584,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (145)   | Secondary package                | Class     |
+| Primary package (144)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -711,7 +710,6 @@
 | kubernetes              | kubernetes-evil                  | github    |
 | langtool                | langtool-popup                   | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
-| loopy                   | loopy-dash                       | github    |
 | lurk-mode               | ob-lurk                          | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                | github    |
 | magit                   | magit-section                    | github    |
@@ -854,6 +852,11 @@
           (emir-melpa--migrated-packages))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (1) | Mirror   |              | Melpa  |                       |
+|-------------+----------+--------------+--------+-----------------------|
+| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
+
+- 2024-01-06 typo: Maintainers contacted by mail.
 
 ** Diverging branches
 :PROPERTIES:

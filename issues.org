@@ -39,7 +39,7 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (14)                               | Package         | Shelved |
+| Feature (15)                               | Package         | Shelved |
 |--------------------------------------------+-----------------+---------|
 | clojure-mode-convert-collection-test       | clojure-mode    |         |
 | clojure-mode-convert-collection-test       | clojure-ts-mode |         |
@@ -67,6 +67,8 @@
 | clojure-mode-syntax-test                   | clojure-ts-mode |         |
 | clojure-mode-util-test                     | clojure-mode    |         |
 | clojure-mode-util-test                     | clojure-ts-mode |         |
+| loopy-dash                                 | loopy           |         |
+| loopy-dash                                 | loopy-dash      |         |
 | oauth2-auto                                | oauth2-auto     |         |
 | oauth2-auto                                | org-gcal        |         |
 
