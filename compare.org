@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5572 |   5572 |       |       |      220 |         183 |  4977 |
+| github      | 5571 |   5571 |       |       |      220 |         184 |  4975 |
 | gitlab      |  197 |    197 |       |       |       18 |          16 |   177 |
 | codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
 | sourcehut   |   97 |     97 |       |       |       18 |           6 |    63 |
@@ -125,13 +125,13 @@
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
-| shelved     | 1593 |        |  1593 |       |          |             |    27 |
+| shelved     | 1594 |        |  1594 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   254 |
+| secondary   |      |        |       |       |          |             |   253 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9196 |   7100 |  1593 |   498 |      466 |         245 |  5849 |
+| total       | 9196 |   7099 |  1594 |   498 |      466 |         246 |  5846 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -605,7 +605,6 @@
 | calfw                   | calfw-ical                       | github    |
 | calfw                   | calfw-org                        | github    |
 | cardano-tx              | bech32                           | github    |
-| cardano-tx              | cardano-wallet                   | github    |
 | cardano-tx              | cbor                             | github    |
 | cardano-tx              | ouroboros                        | github    |
 | cardano-tx              | readable-numbers                 | github    |
