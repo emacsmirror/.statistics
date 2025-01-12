@@ -68,23 +68,14 @@
     :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (13)     | Class   | Feature              | Reason                  |
-|------------------+---------+----------------------+-------------------------|
-| rgb              | gitlab  | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]              |
-| rgb              | gitlab  | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]              |
-| fsharp-mode      | github  | integration-tests    | conflicting test file   |
-| emacspeak        | github  | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]             |
-| riece            | nongnu  | luna                 | from uncooperative flim |
-| riece            | nongnu  | lunit                | from uncooperative flim |
-| org              | gnu     | org-test             | conflicting test file   |
-| org-gcal         | github  | org-test             | conflicting test file   |
-| font-lock-studio | github  | tabulated-list       | harmless in test file   |
-| gumshoe          | github  | targets/install-deps | conflicting test file   |
-| ivy              | github  | targets/install-deps | conflicting test file   |
-| clojure-mode     | github  | test-helper          | conflicting test file   |
-| elixir-mode      | github  | test-helper          | conflicting test file   |
-| diffscuss-mode   | subtree | test-simple          | bundled test utility    |
-| emacspeak        | github  | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]             |
+| Package (5) | Class  | Feature              | Reason                |
+|-------------+--------+----------------------+-----------------------|
+| rgb         | gitlab | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| rgb         | gitlab | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| emacspeak   | github | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
+| gumshoe     | github | targets/install-deps | conflicting test file |
+| ivy         | github | targets/install-deps | conflicting test file |
+| emacspeak   | github | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
 
 * Drop required features
 :PROPERTIES:
@@ -99,7 +90,7 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (81)                   | Class     | Feature                  | Reason                                            |
+| Package (80)                   | Class     | Feature                  | Reason                                            |
 |--------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                      | github    | octave-inf               | backward compatibility                            |
 | achievements                   | gitlab    | command-frequency        | shelved soft                                      |
@@ -158,10 +149,6 @@
 | mhc                            | github    | mhc-xmas                 | XEmacs compatibility                              |
 | mhc                            | github    | pcustom                  | Mule compatibility                                |
 | mhc                            | github    | poe                      | Mule compatibility                                |
-| mic                            | github    | feat1                    | for tests only                                    |
-| mic                            | github    | feat2                    | for tests only                                    |
-| mic                            | github    | feat3                    | for tests only                                    |
-| mic                            | github    | feat4                    | for tests only                                    |
 | molokai-theme                  | github    | color-theme              | backward compatibility                            |
 | mu4e-views                     | github    | mu4e-utils               | backward compatibility                            |
 | mu4e-views                     | github    | mu4e-view-gnus           | backward compatibility                            |
@@ -184,9 +171,7 @@
 | project-explorer               | github    | ack-and-a-half           | removed due to license violations: [[https://github.com/sabof/project-explorer/issues/47][#47]]            |
 | prosjekt                       | github    | anything                 | anything                                          |
 | python-mode                    | gitlab    | org-loaddefs             | generated external file                           |
-| python-mode                    | gitlab    | py-bug-numbered-tests    | testing only                                      |
 | python-mode                    | gitlab    | pymacs                   | it's complicated (email)                          |
-| python-mode                    | gitlab    | setup-ert-tests          | testing only                                      |
 | r-autoyas                      | github    | yasnippet-bundle         | backward compatibility: [[https://github.com/mattfidler/el-autoyas.el/issues/4][#4]]                        |
 | rcodetools                     | subtree   | anything                 | anything                                          |
 | rcodetools                     | subtree   | anything-show-completion | anything                                          |

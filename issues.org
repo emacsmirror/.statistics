@@ -39,40 +39,14 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (16)                               | Package         | Shelved |
-|--------------------------------------------+-----------------+---------|
-| clojure-mode-convert-collection-test       | clojure-mode    |         |
-| clojure-mode-convert-collection-test       | clojure-ts-mode |         |
-| clojure-mode-cycling-test                  | clojure-mode    |         |
-| clojure-mode-cycling-test                  | clojure-ts-mode |         |
-| clojure-mode-external-interaction-test     | clojure-mode    |         |
-| clojure-mode-external-interaction-test     | clojure-ts-mode |         |
-| clojure-mode-font-lock-test                | clojure-mode    |         |
-| clojure-mode-font-lock-test                | clojure-ts-mode |         |
-| clojure-mode-indentation-test              | clojure-mode    |         |
-| clojure-mode-indentation-test              | clojure-ts-mode |         |
-| clojure-mode-refactor-add-arity-test       | clojure-mode    |         |
-| clojure-mode-refactor-add-arity-test       | clojure-ts-mode |         |
-| clojure-mode-refactor-let-test             | clojure-mode    |         |
-| clojure-mode-refactor-let-test             | clojure-ts-mode |         |
-| clojure-mode-refactor-rename-ns-alias-test | clojure-mode    |         |
-| clojure-mode-refactor-rename-ns-alias-test | clojure-ts-mode |         |
-| clojure-mode-refactor-threading-test       | clojure-mode    |         |
-| clojure-mode-refactor-threading-test       | clojure-ts-mode |         |
-| clojure-mode-safe-eval-test                | clojure-mode    |         |
-| clojure-mode-safe-eval-test                | clojure-ts-mode |         |
-| clojure-mode-sexp-test                     | clojure-mode    |         |
-| clojure-mode-sexp-test                     | clojure-ts-mode |         |
-| clojure-mode-syntax-test                   | clojure-mode    |         |
-| clojure-mode-syntax-test                   | clojure-ts-mode |         |
-| clojure-mode-util-test                     | clojure-mode    |         |
-| clojure-mode-util-test                     | clojure-ts-mode |         |
-| loopy-dash                                 | loopy           |         |
-| loopy-dash                                 | loopy-dash      |         |
-| oauth2-auto                                | oauth2-auto     |         |
-| oauth2-auto                                | org-gcal        |         |
-| org-plot                                   | org             |         |
-| org-plot                                   | org-web-track   |         |
+| Feature (3) | Package       | Shelved |
+|-------------+---------------+---------|
+| loopy-dash  | loopy         |         |
+| loopy-dash  | loopy-dash    |         |
+| oauth2-auto | oauth2-auto   |         |
+| oauth2-auto | org-gcal      |         |
+| org-plot    | org           |         |
+| org-plot    | org-web-track |         |
 
 - 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
 - 2025-01-12 loopy https://github.com/melpa/melpa/pull/9309
@@ -106,7 +80,7 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (9)              | Class  | Feature            | Provider           |
+| Package (10)             | Class  | Feature            | Provider           |
 |--------------------------+--------+--------------------+--------------------|
 | eev                      | github | lean4-mode         |                    |
 | evil-textobj-tree-sitter | github | tree-sitter        | tree-sitter        |
@@ -117,6 +91,7 @@
 | matlab-mode              | github | semantic-format    |                    |
 | matlab-mode              | github | semanticdb         |                    |
 | org-node                 | github | org-super-links    |                    |
+| ox-textile               | github | org-test           |                    |
 | scopeline                | github | tree-sitter        | tree-sitter        |
 | sdml-mode                | github | tree-sitter        | tree-sitter        |
 | sdml-mode                | github | tree-sitter-hl     | tree-sitter        |
