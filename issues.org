@@ -39,18 +39,12 @@
                     (cl-sort alist #'string< :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (3) | Package       | Shelved |
-|-------------+---------------+---------|
-| loopy-dash  | loopy         |         |
-| loopy-dash  | loopy-dash    |         |
-| oauth2-auto | oauth2-auto   |         |
-| oauth2-auto | org-gcal      |         |
-| org-plot    | org           |         |
-| org-plot    | org-web-track |         |
+| Feature (1) | Package     | Shelved |
+|-------------+-------------+---------|
+| oauth2-auto | oauth2-auto |         |
+| oauth2-auto | org-gcal    |         |
 
 - 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
-- 2025-01-12 loopy https://github.com/melpa/melpa/pull/9309
-- 2025-01-12 org-web-track https://github.com/p-snow/org-web-track/pull/1
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
