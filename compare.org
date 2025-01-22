@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5578 |   5578 |       |       |      220 |         184 |  4982 |
+| github      | 5579 |   5579 |       |       |      220 |         184 |  4982 |
 | gitlab      |  198 |    198 |       |       |       18 |          16 |   178 |
 | codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
 | sourcehut   |   97 |     97 |       |       |       18 |           6 |    63 |
@@ -121,7 +121,7 @@
 | hg          |   15 |     15 |       |       |        1 |           0 |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
-| wiki        |  584 |    584 |       |       |          |             |       |
+| wiki        |  583 |    583 |       |       |          |             |       |
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   106 |
@@ -848,7 +848,7 @@
 #+begin_src emacs-lisp :post addheader('("Package" "Mirror" "" "Melpa" ""),*this*)
   (mapcar (pcase-lambda (`(,name ,type ,url ,fetcher ,murl))
             (list name type (epkg-org-link name) fetcher (melpa-org-link name)))
-          (emir-melpa--migrated-packages))
+          (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
 | Package (1) | Mirror   |              | Melpa  |                       |
@@ -856,6 +856,27 @@
 | typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
 
 - 2024-01-06 typo: Maintainers contacted by mail.
+
+Notes on builtin packages, which are not listed above by default.
+- csharp-mode: "this repo will continue being available from (M)ELPA
+  for some time for backwards compatibility."
+- dictionary:
+- elixir-ts-mode: "This package is a backport from Emacs core for the
+  use with Emacs 29.1. Please report bugs or submit patches to the
+  Emacs directly"
+- faceup:
+- heex-ts-mode: "This package is a backport from Emacs core for the
+  use with Emacs 29.1. Please report bugs or submit patches to the
+  Emacs directly"
+- less-css-mode: "Deprecation notice: this package is now included in
+  Emacs core, so users of recent Emacs versions will not need to
+  install it separately. This standalone version will not be
+  maintained separately."
+- wallpaper:
+- which-key: "which-key is now included in the master branch of Emacs
+  and will likely be released with Emacs v30. Bug reports and
+  contributions to which-key will now be considered through standard
+  Emacs channels, and this repository is being archived."
 
 ** Diverging branches
 :PROPERTIES:
