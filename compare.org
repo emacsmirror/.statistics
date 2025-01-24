@@ -110,7 +110,7 @@
 | gnu-elpa    |  144 |    144 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5579 |   5579 |       |       |      220 |         184 |  4982 |
+| github      | 5579 |   5579 |       |       |      220 |         184 |  4981 |
 | gitlab      |  198 |    198 |       |       |       18 |          16 |   178 |
 | codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
 | sourcehut   |   97 |     97 |       |       |       18 |           6 |    63 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   253 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9204 |   7105 |  1596 |   498 |      466 |         246 |  5854 |
+| total       | 9204 |   7105 |  1596 |   498 |      466 |         246 |  5853 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -497,7 +497,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (65)                | Url                                                                         |
+| Package (64)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -507,7 +507,6 @@
 | color-theme                 | https://github.com/emacsorphanage/color-theme                               |
 | company-go                  | https://github.com/nsf/gocode                                               |
 | company-racer               | https://github.com/emacsorphanage/company-racer                             |
-| conventional-changelog      | https://github.com/liuyinz/emacs-conventional-changelog                     |
 | cybercafe-theme             | https://github.com/gboncoffee/cybercafe-emacs-theme                         |
 | dic-lookup-w3m              | https://github.com/emacsorphanage/dic-lookup-w3m                            |
 | django-mode                 | https://github.com/unrelentingtech/django-mode                              |
@@ -1005,3 +1004,11 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
+| Package (4)       | Repository              |  Melpa | Dependants |
+|-------------------+-------------------------+--------+------------|
+| helm-aws          | [[https://github.com/istib/helm-aws][istib/helm-aws]]          |   2646 |            |
+| helm-mode-manager | [[https://github.com/istib/helm-mode-manager][istib/helm-mode-manager]] | 827024 |            |
+| rainbow-blocks    | [[https://github.com/istib/rainbow-blocks][istib/rainbow-blocks]]    |   9985 |            |
+| wordsmith-mode    | [[https://github.com/istib/wordsmith-mode][istib/wordsmith-mode]]    |   1812 |            |
+
+- 2025-01-24 istib https://github.com/melpa/melpa/issues/9335
