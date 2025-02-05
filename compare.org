@@ -110,10 +110,10 @@
 | gnu-elpa    |  144 |    144 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5585 |   5585 |       |       |      220 |         189 |  4987 |
+| github      | 5583 |   5583 |       |       |      220 |         190 |  4985 |
 | gitlab      |  199 |    199 |       |       |       18 |          16 |   179 |
 | codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
-| sourcehut   |   98 |     98 |       |       |       19 |           6 |    63 |
+| sourcehut   |  100 |    100 |       |       |       19 |           6 |    65 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   253 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9212 |   7113 |  1596 |   498 |      467 |         251 |  5860 |
+| total       | 9212 |   7113 |  1596 |   498 |      467 |         252 |  5860 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -1004,13 +1004,11 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
-| Package (5)             | Repository              |  Melpa | Dependants |
-|-------------------------+-------------------------+--------+------------|
-| helm-aws                | [[https://github.com/istib/helm-aws][istib/helm-aws]]          |   2646 |            |
-| helm-mode-manager       | [[https://github.com/istib/helm-mode-manager][istib/helm-mode-manager]] | 827024 |            |
-| phoenix-dark-mono-theme | [[https://github.com/j0ni/phoenix-dark-mono][j0ni/phoenix-dark-mono]]  | 122306 |            |
-| rainbow-blocks          | [[https://github.com/istib/rainbow-blocks][istib/rainbow-blocks]]    |   9985 |            |
-| wordsmith-mode          | [[https://github.com/istib/wordsmith-mode][istib/wordsmith-mode]]    |   1812 |            |
+| Package (4)       | Repository              |  Melpa | Dependants |
+|-------------------+-------------------------+--------+------------|
+| helm-aws          | [[https://github.com/istib/helm-aws][istib/helm-aws]]          |   2646 |            |
+| helm-mode-manager | [[https://github.com/istib/helm-mode-manager][istib/helm-mode-manager]] | 827024 |            |
+| rainbow-blocks    | [[https://github.com/istib/rainbow-blocks][istib/rainbow-blocks]]    |   9985 |            |
+| wordsmith-mode    | [[https://github.com/istib/wordsmith-mode][istib/wordsmith-mode]]    |   1812 |            |
 
 - 2025-01-24 istib https://github.com/melpa/melpa/issues/9335
-- 2025-02-04 phoenix*theme https://github.com/melpa/melpa/pull/508
