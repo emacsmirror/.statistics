@@ -52,7 +52,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 :END:
 #+name: missing-github
 #+begin_src emacs-lisp :post addheader('(1 "Package" "Link" "Summary"),*this*)
-  ;; (cl-sort
   (seq-keep (pcase-lambda (`(,name ,summary))
               (and (not (epkg-get-recipe 'melpa name))
                    (not (epkg-get-recipe 'gnu name))
@@ -66,7 +65,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
                          (and summary (truncate-string-to-width
                                        (string-replace "|" ";" summary) 70)))))
             (epkgs [name summary] [github]))
-  ;; #'string> :key #'cadr)
 #+end_src
 #+results: missing-github
 | Package (555)                | Link                                    | Summary                                                                |

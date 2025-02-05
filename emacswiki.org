@@ -76,13 +76,13 @@
 
 #+name: all-wiki
 #+begin_src emacs-lisp :post addheader('("Author" "Package"),*this*)
-  (cl-sort (mapcar (lambda (pkg)
-                     (list (or (caar (oref pkg maintainers))
-                               (caar (oref pkg authors))
-                               "")
-                           (oref pkg name)))
-                   (epkgs nil [wiki]))
-           #'string< :key #'car)
+  (sort (mapcar (lambda (pkg)
+                  (list (or (caar (oref pkg maintainers))
+                            (caar (oref pkg authors))
+                            "")
+                        (oref pkg name)))
+                (epkgs nil [wiki]))
+        :key #'car)
 #+end_src
 #+results: all-wiki
 | Author (198)                                    | Package                        |

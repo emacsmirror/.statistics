@@ -6,37 +6,36 @@
   (require 'emir)
 
   (defconst emir--orphans-cache
-    (cl-delete-if (lambda (it)
-                    (member (cdr (assq 'name it))
-                            '(".github" "p")))
-                  (cl-sort (ghub-get "/orgs/emacsorphanage/repos" nil
-                                     :unpaginate t
-                                     :auth 'emir)
-                           #'string< :key (lambda (it) (cdr (assq 'name it))))))
+    (cl-delete-if (##member (cdr (assq 'name %))
+                            '(".github" "p"))
+                  (sort (ghub-get "/orgs/emacsorphanage/repos" nil
+                                  :unpaginate t
+                                  :auth 'emir)
+                        :key (##cdr (assq 'name %)))))
 
   (defun emir--list-orphans (&optional only columns-fn sort-column)
     (let ((table
-           (--keep
-            (let* ((name (cdr (assq 'name it)))
-                   (name (if (equal name "image-plus") "image+" name))
-                   (pkg  (epkg name))
-                   (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
-                   (rcp  (epkg-get-recipe 'melpa name))
-                   (reason (emir--config name :orphanage)))
-              (and (or (not only)
-                       (member reason only))
-                   `(,name
-                     ,(if pkg (if (eq type 'orphaned) "✔" type) "")
-                     ,(if rcp
-                          (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
-                              "✔"
-                            (closql--abbrev-class (eieio-object-class rcp)))
-                        "")
-                     ,@(and columns-fn (funcall columns-fn name)))))
+           (seq-keep
+            (lambda (elt)
+              (let* ((name (cdr (assq 'name elt)))
+                     (name (if (equal name "image-plus") "image+" name))
+                     (pkg  (epkg name))
+                     (type (and pkg (closql--abbrev-class (eieio-object-class pkg))))
+                     (rcp  (epkg-get-recipe 'melpa name))
+                     (reason (emir--config name :orphanage)))
+                (and (or (not only)
+                         (member reason only))
+                     `(,name
+                       ,(if pkg (if (eq type 'orphaned) "✔" type) "")
+                       ,(if rcp
+                            (if (string-prefix-p "emacsorphanage/" (oref rcp repo))
+                                "✔"
+                              (closql--abbrev-class (eieio-object-class rcp)))
+                          "")
+                       ,@(and columns-fn (funcall columns-fn name))))))
             emir--orphans-cache)))
       (when sort-column
-        (setq table (cl-sort table #'string<
-                             :key (apply-partially #'nth sort-column))))
+        (setq table (sort table :key (##nth sort-column %))))
       (epkg-add-org-header table '("Package" "E" "M"))))
 #+end_src
 #+name: addheader

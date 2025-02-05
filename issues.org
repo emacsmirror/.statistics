@@ -36,7 +36,7 @@
                            (list (list feature providers))
                            (mapcar (lambda (elt) (list feature elt))
                                    (sort providers #'string<))))
-                    (cl-sort alist #'string< :key #'car))))
+                    (sort alist :key #'car))))
 #+end_src
 #+results: conflict
 | Feature (1) | Package     | Shelved |
@@ -69,7 +69,7 @@
            (push (list feature nil) alist)))
        (mapcar (pcase-lambda (`(,feature ,provider))
                  (list name class feature provider))
-               (cl-sort alist #'string< :key #'car))))
+               (sort alist :key #'car))))
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied

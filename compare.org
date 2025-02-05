@@ -97,10 +97,10 @@
                                     (+ (if (numberp a) a 0)
                                        (if (numberp b) b 0)))
                                   acc elt))
-                     (--keep (and (listp it)
-                                  (symbolp (car it))
-                                  (cdr it))
-                             table)
+                     (seq-keep (##and (listp %)
+                                      (symbolp (car %))
+                                      (cdr %))
+                               table)
                      '(0 0 0 0 0 0 0)))))
 #+end_src
 #+results: summary
