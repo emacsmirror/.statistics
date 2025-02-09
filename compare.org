@@ -107,11 +107,11 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       21 |             |       |
-| gnu-elpa    |  144 |    144 |       |       |      140 |             |       |
+| gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5583 |   5583 |       |       |      220 |         190 |  4985 |
-| gitlab      |  199 |    199 |       |       |       18 |          16 |   179 |
+| github      | 5582 |   5582 |       |       |      221 |         190 |  4983 |
+| gitlab      |  200 |    200 |       |       |       19 |          16 |   179 |
 | codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
 | sourcehut   |  100 |    100 |       |       |       19 |           6 |    65 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
@@ -124,14 +124,14 @@
 | wiki        |  583 |    583 |       |       |          |             |       |
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  136 |    136 |       |       |          |             |   106 |
+| orphaned    |  137 |    137 |       |       |          |             |   107 |
 | shelved     | 1596 |        |  1596 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    15 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   253 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9212 |   7113 |  1596 |   498 |      467 |         252 |  5860 |
+| total       | 9214 |   7115 |  1596 |   498 |      469 |         252 |  5859 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -350,7 +350,7 @@
      [gnu-elpa]))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (11)        | :url                                              |
+| Package (12)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
@@ -361,6 +361,7 @@
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
 | ebdb                | https://github.com/girzel/ebdb.git                |
 | chess               | https://github.com/jwiegley/emacs-chess.git       |
+| vlf                 | https://github.com/m00natic/vlfi                  |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
 | ediprolog           | https://github.com/triska/ediprolog               |
 
