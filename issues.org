@@ -73,14 +73,12 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (11)             | Class  | Feature            | Provider           |
+| Package (10)             | Class  | Feature            | Provider           |
 |--------------------------+--------+--------------------+--------------------|
 | citar-denote             | github | denote-silos-extra |                    |
 | eev                      | github | lean4-mode         |                    |
 | evil-textobj-tree-sitter | github | tree-sitter        | tree-sitter        |
 | flex-compile             | github | slite              |                    |
-| gleam-ts-mode            | github | tree-sitter        | tree-sitter        |
-| gleam-ts-mode            | github | tree-sitter-indent | tree-sitter-indent |
 | matlab-mode              | github | semantic-dep       |                    |
 | matlab-mode              | github | semantic-format    |                    |
 | matlab-mode              | github | semanticdb         |                    |
@@ -95,7 +93,6 @@
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
-- 2025-01-24 movie https://github.com/larsmagne/movie.el/commit/c7965d7f86743d0a4270c998052c69587a7ee3a8
 
 * Missing library summary
 :PROPERTIES:

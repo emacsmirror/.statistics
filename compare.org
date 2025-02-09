@@ -113,7 +113,7 @@
 | github      | 5582 |   5582 |       |       |      221 |         190 |  4983 |
 | gitlab      |  200 |    200 |       |       |       19 |          16 |   179 |
 | codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
-| sourcehut   |  100 |    100 |       |       |       19 |           6 |    65 |
+| sourcehut   |  100 |    100 |       |       |       19 |           6 |    66 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   253 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9214 |   7115 |  1596 |   498 |      469 |         252 |  5859 |
+| total       | 9214 |   7115 |  1596 |   498 |      469 |         252 |  5860 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -462,6 +462,9 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-new
+| Package (1) | Class  | Melpa  | Link                   |
+|-------------+--------+--------+------------------------|
+| erlang-ts   | github | github | [[https://github.com/erlang/emacs-erlang-ts][erlang/emacs-erlang-ts]] |
 
 ** Delayed
 :PROPERTIES:
@@ -851,9 +854,10 @@
           (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (1) | Mirror   |              | Melpa  |                       |
-|-------------+----------+--------------+--------+-----------------------|
-| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
+| Package (2)  | Mirror   |                    | Melpa     |                       |
+|--------------+----------+--------------------+-----------+-----------------------|
+| kixtart-mode | github   | [[https://github.com/ryrun/kixtart-mode][ryrun/kixtart-mode]] | sourcehut | [[https://git.sr.ht/~mew/kixtart-mode][mew/kixtart-mode]]      |
+| typo         | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]]       | github    | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
 
 - 2024-01-06 typo: Maintainers contacted by mail.
 
