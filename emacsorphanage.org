@@ -209,7 +209,7 @@ the orphanage to fix these issues.
   (emir--list-orphans (list "upstream unresponsive" "multiple non-upstreams"))
 #+end_src
 #+results: unresponsive
-| Package (15)           | E | M |
+| Package (16)           | E | M |
 |------------------------+---+---|
 | edb                    | ✔ |   |
 | elisp-depend           | ✔ | ✔ |
@@ -217,6 +217,7 @@ the orphanage to fix these issues.
 | helm-gitignore         | ✔ | ✔ |
 | hyperspec              | ✔ |   |
 | macrostep              | ✔ | ✔ |
+| nav                    | ✔ | ✔ |
 | oberon                 | ✔ | ✔ |
 | omtose-phellack-themes | ✔ | ✔ |
 | ox-pandoc              | ✔ | ✔ |

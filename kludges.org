@@ -185,10 +185,7 @@
 | tree-sitter-indent             | shelved   | csharp-tree-sitter       | for tests only                                    |
 | tss                            | github    | anything                 | anything                                          |
 | tss                            | github    | moz                      | shelved soft                                      |
-| twittering-mode                | github    | alpaca                   | only required if epa isn't available              |
-| twittering-mode                | github    | revive                   | false-positive                                    |
-| twittering-mode                | github    | un-define                | XEmacs compatibility                              |
-| twittering-mode                | github    | unicode                  | backward compatibility                            |
+| twittering-mode                | shelved   | revive                   | false-positive                                    |
 | ucs-utils                      | github    | ucs-utils-6.0-delta      | backward compatibility                            |
 | vbasense                       | github    | anything-project         | anything                                          |
 | vm                             | orphaned  | atomic-extents           | XEmacs compatibility                              |
@@ -223,37 +220,38 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (21)      | Class  | Commits |
+| Package (15)      | Class  | Commits |
 |-------------------+--------+---------|
 | apel              | github |       3 |
 | auctex-latexmk    | github |       1 |
 | emacspeak         | github |       1 |
-| emux              | github |       1 |
 | ert-runner        | github |       1 |
 | flim              | github |       3 |
 | go                | github |       1 |
 | icons-in-terminal | github |       1 |
 | karma             | github |       1 |
 | lookup            | github |       1 |
-| majapahit-themes  | gitlab |       1 |
 | monorepo-zenitani | github |       1 |
-| nav               | github |       1 |
-| navorski          | github |       1 |
-| ne2wm             | github |       1 |
 | projmake-mode     | github |       1 |
 | semi              | github |       2 |
 | slime             | github |       1 |
 | tenv              | github |       1 |
-| twittering-mode   | github |       2 |
 | wanderlust        | github |       2 |
 
-- apel, flim, semi, wanderlust: https://github.com/wanderlust/semi/issues/30
+- apel, flim, semi, wanderlust:
+  https://github.com/wanderlust/semi/issues/30
+  https://github.com/melpa/melpa-team-discuss/discussions/18
+- auctex-latexmk: https://github.com/tom-tan/auctex-latexmk/issues/44
 - emacspeak: https://github.com/tvraman/emacspeak/issues/54
-- emux: https://github.com/re5et/emux/pull/4
 - ert-runner: https://github.com/rejeep/ert-runner.el/pull/16
-- navorski: https://github.com/roman/navorski.el/issues/11
-- ne2wm: https://github.com/tkf/ne2wm/pull/3
-- twittering-mode: https://github.com/hayamiz/twittering-mode/pull/129
+- go: https://github.com/eschulte/el-go/pull/3
+- icons-in-terminal: https://github.com/sebastiencs/icons-in-terminal/pull/40
+- karma: https://github.com/tonini/karma.el/pull/7
+- lookup: https://github.com/lookup2/lookup2/pull/14
+- monorepo-zenitani: Bundles third-party libraries.
+- projmake-mode: https://github.com/ericbmerritt/projmake-mode/pull/17
+- slime: Provides ~cl-indent~ which is also provided by Emacs.
+- tenv: Bundles third-party ~el-expectations.el~.
 
 * Filtered repositories
 :PROPERTIES:

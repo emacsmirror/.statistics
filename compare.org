@@ -107,31 +107,31 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       21 |             |       |
-| gnu-elpa    |  145 |    145 |       |       |      140 |             |       |
+| gnu-elpa    |  146 |    146 |       |       |      141 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5582 |   5582 |       |       |      221 |         190 |  4983 |
-| gitlab      |  200 |    200 |       |       |       19 |          16 |   179 |
-| codeberg    |  143 |    143 |       |       |       18 |          34 |   113 |
-| sourcehut   |  100 |    100 |       |       |       19 |           6 |    66 |
+| github      | 5575 |   5575 |       |       |      220 |         190 |  4979 |
+| gitlab      |  199 |    199 |       |       |       18 |          16 |   179 |
+| codeberg    |  143 |    143 |       |       |       19 |          34 |   113 |
+| sourcehut   |  101 |    101 |       |       |       19 |           6 |    66 |
 | gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
 | nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  118 |    118 |       |       |       13 |           6 |    99 |
+| git         |  118 |    118 |       |       |       14 |           6 |    99 |
 | hg          |   15 |     15 |       |       |        1 |           0 |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
 | wiki        |  583 |    583 |       |       |          |             |       |
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  137 |    137 |       |       |          |             |   107 |
-| shelved     | 1596 |        |  1596 |       |          |             |    27 |
-| mirror      |      |        |       |       |          |             |    15 |
+| orphaned    |  138 |    138 |       |       |          |             |   108 |
+| shelved     | 1603 |        |  1603 |       |          |             |    27 |
+| mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   253 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9214 |   7115 |  1596 |   498 |      469 |         252 |  5860 |
+| total       | 9216 |   7110 |  1603 |   498 |      470 |         252 |  5856 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -357,11 +357,11 @@
 | bluetooth           | https://codeberg.org/rstocker/emacs-bluetooth     |
 | buildbot            | https://g.ypei.me/buildbot.el.git                 |
 | vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
+| org-gnosis          | https://git.thanosapollo.org/org-gnosis           |
 | phps-mode           | https://github.com/cjohansson/emacs-phps-mode     |
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
 | ebdb                | https://github.com/girzel/ebdb.git                |
 | chess               | https://github.com/jwiegley/emacs-chess.git       |
-| vlf                 | https://github.com/m00natic/vlfi                  |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
 | ediprolog           | https://github.com/triska/ediprolog               |
 
@@ -462,9 +462,6 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-new
-| Package (1) | Class  | Melpa  | Link                   |
-|-------------+--------+--------+------------------------|
-| erlang-ts   | github | github | [[https://github.com/erlang/emacs-erlang-ts][erlang/emacs-erlang-ts]] |
 
 ** Delayed
 :PROPERTIES:
@@ -854,10 +851,9 @@
           (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (2)  | Mirror   |                    | Melpa     |                       |
-|--------------+----------+--------------------+-----------+-----------------------|
-| kixtart-mode | github   | [[https://github.com/ryrun/kixtart-mode][ryrun/kixtart-mode]] | sourcehut | [[https://git.sr.ht/~mew/kixtart-mode][mew/kixtart-mode]]      |
-| typo         | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]]       | github    | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
+| Package (1) | Mirror   |              | Melpa  |                       |
+|-------------+----------+--------------+--------+-----------------------|
+| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
 
 - 2024-01-06 typo: Maintainers contacted by mail.
 
@@ -911,7 +907,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
-| Package (15)      | Url                                              |
+| Package (14)      | Url                                              |
 |-------------------+--------------------------------------------------|
 | apel              | https://github.com/emacsmirror/apel              |
 | auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
@@ -922,7 +918,6 @@ Notes on builtin packages, which are not listed above by default.
 | flim              | https://github.com/emacsmirror/flim              |
 | helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
 | highlight         | https://github.com/emacsmirror/highlight         |
-| majapahit-themes  | https://github.com/emacsmirror/majapahit-themes  |
 | po-mode           | https://github.com/emacsmirror/po-mode           |
 | quack             | https://github.com/emacsmirror/quack             |
 | semi              | https://github.com/emacsmirror/semi              |

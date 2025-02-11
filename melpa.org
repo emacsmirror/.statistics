@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (555)                | Link                                    | Summary                                                                |
+| Package (552)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -291,7 +291,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | multiple-line-edit           | [[https://github.com/k-talo/multiple-line-edit.el][k-talo/multiple-line-edit.el]]            | Edit multiple line at a time                                           |
 | old-fashioned-undo           | [[https://github.com/k-talo/old-fashioned-undo.el][k-talo/old-fashioned-undo.el]]            | Undo/Redo in very simple, and old fashioned way                        |
 | networkmanager               | [[https://github.com/k-ten/networkmanager-el][k-ten/networkmanager-el]]                 | Define hooks which run after changing a status of network              |
-| twittering-dframe            | [[https://github.com/k-ten/twittering-dframe][k-ten/twittering-dframe]]                 | Dedicate frame for twittering-mode                                     |
 | w3m-https-everywhere         | [[https://github.com/k-ten/w3m-https-everywhere][k-ten/w3m-https-everywhere]]              | Encrypting your communications with a number of major websites         |
 | drill-instructor             | [[https://github.com/k1LoW/emacs-drill-instructor][k1LoW/emacs-drill-instructor]]            | Enforce key-bind of Emacs                                              |
 | key-cast                     | [[https://github.com/k1LoW/emacs-key-cast][k1LoW/emacs-key-cast]]                    | Key comannd casting interface                                          |
@@ -467,7 +466,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | tumblr-mode                  | [[https://github.com/qxj/tumblr-mode][qxj/tumblr-mode]]                         | Major mode for Tumblr                                                  |
 | dumbparens                   | [[https://github.com/radian-software/dumbparens][radian-software/dumbparens]]              | Simple paren-matching solution                                         |
 | straight                     | [[https://github.com/radian-software/straight.el][radian-software/straight.el]]             | Next-generation package manager                                        |
-| emux                         | [[https://github.com/re5et/emux][re5et/emux]]                              | Emacs Lisp Behaviour-Driven Development framework                      |
 | keats                        | [[https://github.com/rejeep/keats][rejeep/keats]]                            | Keybinding Cheats                                                      |
 | auto-mounter                 | [[https://github.com/renard/auto-mount-el][renard/auto-mount-el]]                    | Manage automounts using dbus                                           |
 | darken-text                  | [[https://github.com/renard/darken-text][renard/darken-text]]                      | Darken font-faced text in emacs                                        |
@@ -552,7 +550,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | wmctrl                       | [[https://github.com/tkf/emacs-wmctrl][tkf/emacs-wmctrl]]                        | Control X Window Manager from Emacs                                    |
 | helm-build-command           | [[https://github.com/tkf/helm-build-command][tkf/helm-build-command]]                  | Helm/anything interface for build commands                             |
 | hide-url                     | [[https://github.com/tkf/hide-url.el][tkf/hide-url.el]]                         | Hide annoyingly long URLs                                              |
-| ne2wm                        | [[https://github.com/tkf/ne2wm][tkf/ne2wm]]                               | TODO Describe what this package does                                   |
 | ant-mode                     | [[https://github.com/tkg/ant-mode][tkg/ant-mode]]                            | Mode for Ant build files                                               |
 | stickies                     | [[https://github.com/tkosaka/emacs-lisp-stickies][tkosaka/emacs-lisp-stickies]]             | Stickies                                                               |
 | pickel                       | [[https://github.com/tlh/pickel.el][tlh/pickel.el]]                           | Elisp object serialization                                             |
