@@ -90,7 +90,7 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (80)                   | Class     | Feature                  | Reason                                            |
+| Package (79)                   | Class     | Feature                  | Reason                                            |
 |--------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                      | github    | octave-inf               | backward compatibility                            |
 | achievements                   | gitlab    | command-frequency        | shelved soft                                      |
@@ -160,8 +160,6 @@
 | org-readme                     | github    | org-html                 | backward compatibility: [[https://github.com/mattfidler/org-readme/issues/19][#19]]                       |
 | org-redmine                    | orphaned  | anything                 | anything                                          |
 | org-ref                        | github    | org-bibtex               | backward compatibility [[https://github.com/jkitchin/org-ref/issues/649][#649]]                       |
-| org-roam                       | github    | emacsql-libsqlite3       | backward compatibility                            |
-| org-roam                       | github    | emacsql-sqlite3          | optional legacy backend                           |
 | org-toodledo                   | github    | org-toodledo-test        | fixme [[https://github.com/myuhe/org-toodledo/pull/6][#6]]                                          |
 | osa                            | github    | mac                      | provided by Mitsuharu Yamamoto's Emacs Mac Port [[https://github.com/melpa/melpa/pull/6894][?]] |
 | ox-hugo                        | github    | org-info                 | backward compatibility                            |

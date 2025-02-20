@@ -39,12 +39,10 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (3) | Package     | Shelved |
+| Feature (2) | Package     | Shelved |
 |-------------+-------------+---------|
 | oauth2-auto | oauth2-auto |         |
 | oauth2-auto | org-gcal    |         |
-| package-x   | package     |         |
-| package-x   | package-x   |         |
 | vcard       | vcard       |         |
 | vcard       | vm          |         |
 
