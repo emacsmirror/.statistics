@@ -176,18 +176,17 @@ that are available from there).
   (emir--list-orphans (list "upstream disappeared"))
 #+end_src
 #+results: disappeared
-| Package (10) | E | M |
-|--------------+---+---|
-| dedicated    | ✔ | ✔ |
-| ecasound     | ✔ |   |
-| image+       | ✔ | ✔ |
-| keydef       | ✔ | ✔ |
-| miniedit     | ✔ | ✔ |
-| osd          | ✔ |   |
-| pager        | ✔ | ✔ |
-| smarty-mode  | ✔ | ✔ |
-| tail         | ✔ |   |
-| vm           | ✔ |   |
+| Package (9) | E | M |
+|-------------+---+---|
+| dedicated   | ✔ | ✔ |
+| ecasound    | ✔ |   |
+| image+      | ✔ | ✔ |
+| keydef      | ✔ | ✔ |
+| miniedit    | ✔ | ✔ |
+| osd         | ✔ |   |
+| pager       | ✔ | ✔ |
+| smarty-mode | ✔ | ✔ |
+| tail        | ✔ |   |
 
 * Upstream is unresponsive but there are issues
 :PROPERTIES:

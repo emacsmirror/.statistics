@@ -108,23 +108,23 @@
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       21 |             |       |
 | gnu-elpa    |  147 |    147 |       |       |      142 |             |       |
-| nongnu-elpa |    0 |      0 |       |       |          |           0 |       |
+| nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5578 |   5578 |       |       |      220 |         192 |  4981 |
-| gitlab      |  199 |    199 |       |       |       18 |          16 |   179 |
-| codeberg    |  145 |    145 |       |       |       19 |          35 |   114 |
-| sourcehut   |  101 |    101 |       |       |       19 |           6 |    66 |
-| gnu         |   10 |     10 |       |       |        9 |           0 |     3 |
-| nongnu      |    8 |      8 |       |       |        3 |           0 |     2 |
+| github      | 5595 |   5595 |       |       |      219 |         191 |  4981 |
+| gitlab      |  197 |    197 |       |       |       18 |          16 |   179 |
+| codeberg    |  146 |    146 |       |       |       20 |          35 |   114 |
+| sourcehut   |   87 |     87 |       |       |       19 |           6 |    66 |
+| gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
+| nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  118 |    118 |       |       |       14 |           6 |    99 |
+| git         |  121 |    121 |       |       |       14 |           6 |    99 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
-| wiki        |  583 |    583 |       |       |          |             |       |
+| wiki        |  582 |    582 |       |       |          |             |       |
 | file        |   50 |     50 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  138 |    138 |       |       |          |             |   108 |
+| orphaned    |  137 |    137 |       |       |          |             |   108 |
 | shelved     | 1602 |        |  1602 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -282,6 +282,13 @@
 #+end_src
 #+results: gnu-elpa-shelved
 
+** Diverging repositories
+#+name: gnu-elpa-diverging-repositories
+#+begin_src emacs-lisp :post addheader('("Package" "Mirror" "" "Elpa" ""),*this*)
+  (emir-gnu-elpa--migrated-packages)
+#+end_src
+#+results: gnu-elpa-diverging-repositories
+
 ** Prefer builtin
 :PROPERTIES:
 :ID:       7a20ccb7-7e22-4110-aaae-02cdc725398f
@@ -436,6 +443,18 @@
 | Package (1)  | Elpa   |
 |--------------+--------|
 | xah-fly-keys | github |
+
+** Diverging repositories
+#+name: nongnu-elpa-diverging-repositories
+#+begin_src emacs-lisp :post addheader('("Package" "Mirror" "" "Elpa" ""),*this*)
+  (emir-nongnu-elpa--migrated-packages)
+#+end_src
+#+results: nongnu-elpa-diverging-repositories
+| Package (1) | Mirror   |                                           | Elpa   |                                    |
+|-------------+----------+-------------------------------------------+--------+------------------------------------|
+| tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist |
+
+- 2024-02-20 tablist: orphanage should probably be preferred
 
 * Melpa
 :PROPERTIES:

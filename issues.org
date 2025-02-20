@@ -39,13 +39,16 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2) | Package     | Shelved |
+| Feature (3) | Package     | Shelved |
 |-------------+-------------+---------|
 | oauth2-auto | oauth2-auto |         |
 | oauth2-auto | org-gcal    |         |
 | package-x   | package     |         |
 | package-x   | package-x   |         |
+| vcard       | vcard       |         |
+| vcard       | vm          |         |
 
+- 2012-09-21 (sic) vm https://gitlab.com/emacs-vm/vm/-/issues/312
 - 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
 
 * Packages with unsatisfied dependencies

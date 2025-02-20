@@ -188,10 +188,10 @@
 | twittering-mode                | shelved   | revive                   | false-positive                                    |
 | ucs-utils                      | github    | ucs-utils-6.0-delta      | backward compatibility                            |
 | vbasense                       | github    | anything-project         | anything                                          |
-| vm                             | orphaned  | atomic-extents           | XEmacs compatibility                              |
-| vm                             | orphaned  | highlight-headers        | XEmacs compatibility                              |
-| vm                             | orphaned  | timer-funcs              | XEmacs compatibility                              |
-| vm                             | orphaned  | vm-autoloads             | generated internal file                           |
+| vm                             | gitlab    | atomic-extents           | XEmacs compatibility                              |
+| vm                             | gitlab    | highlight-headers        | XEmacs compatibility                              |
+| vm                             | gitlab    | timer-funcs              | XEmacs compatibility                              |
+| vm                             | gitlab    | vm-autoloads             | generated internal file                           |
 | w3                             | gnu-elpa  | dtk-css-speech           | used to be part of emacspeak, not needed          |
 | w3                             | gnu-elpa  | dtk-voices               | used to be part of emacspeak, not needed          |
 | w3                             | gnu-elpa  | w3-site-init             | leftover noise                                    |
