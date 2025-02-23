@@ -110,10 +110,10 @@
 | gnu-elpa    |  147 |    147 |       |       |      142 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5595 |   5595 |       |       |      219 |         191 |  4981 |
+| github      | 5599 |   5599 |       |       |      219 |         191 |  4985 |
 | gitlab      |  197 |    197 |       |       |       18 |          16 |   179 |
-| codeberg    |  145 |    145 |       |       |       20 |          35 |   114 |
-| sourcehut   |   87 |     87 |       |       |       19 |           6 |    66 |
+| codeberg    |  146 |    146 |       |       |       20 |          35 |   115 |
+| sourcehut   |   88 |     88 |       |       |       19 |           6 |    65 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,10 +128,10 @@
 | shelved     | 1645 |        |  1645 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   253 |
+| secondary   |      |        |       |       |          |             |   255 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9222 |   7074 |  1645 |   498 |      471 |         255 |  5860 |
+| total       | 9228 |   7080 |  1645 |   498 |      471 |         255 |  5866 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -497,11 +497,12 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
-| Package (3)     | Melpa  | Reason                                               |
+| Package (4)     | Melpa  | Reason                                               |
 |-----------------+--------+------------------------------------------------------|
 | connection      | github | Don't add; part of upstream dictionary but not Emacs |
 | django-snippets | github | Don't add; part of shelved django-mode               |
 | link            | github | Don't add; part of upstream dictionary but not Emacs |
+| ob-lurk         | github | FIXME false-positive                                 |
 
 ** Shelved
 :PROPERTIES:
@@ -603,7 +604,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (144)   | Secondary package                | Class     |
+| Primary package (146)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -616,6 +617,7 @@
 | biblio                  | biblio-core                      | github    |
 | bibtex-completion       | helm-bibtex                      | github    |
 | bibtex-completion       | ivy-bibtex                       | github    |
+| bind-chord              | use-package-chords               | github    |
 | boa-ide                 | boa-mode                         | github    |
 | bufler                  | helm-bufler                      | github    |
 | button-lock             | wiki-nav                         | github    |
@@ -652,6 +654,7 @@
 | ddskk                   | ccc                              | github    |
 | ddskk                   | cdb                              | github    |
 | deferred                | concurrent                       | github    |
+| denote-sections         | denote-citar-sections            | sourcehut |
 | dired-hacks             | dired-avfs                       | github    |
 | dired-hacks             | dired-collapse                   | github    |
 | dired-hacks             | dired-filter                     | github    |
@@ -728,7 +731,6 @@
 | kubernetes              | kubernetes-evil                  | github    |
 | langtool                | langtool-popup                   | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
-| lurk-mode               | ob-lurk                          | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                | github    |
 | magit                   | magit-section                    | github    |
 | major-mode-hydra        | pretty-hydra                     | github    |
@@ -791,6 +793,7 @@
 | request                 | request-deferred                 | github    |
 | restclient              | restclient-helm                  | github    |
 | restclient              | restclient-jq                    | github    |
+| retraction-viewer       | retraction-viewer-section        | sourcehut |
 | rinari                  | ruby-compilation                 | github    |
 | ripgrep                 | projectile-ripgrep               | github    |
 | rtags                   | ac-rtags                         | github    |
