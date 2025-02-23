@@ -636,7 +636,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (21)               | Link      |                                             |
+| Package (20)               | Link      |                                             |
 |----------------------------+-----------+---------------------------------------------|
 | ebuild-mode                | git       |                                             |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
@@ -649,7 +649,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                |
 | mailscripts                | git       |                                             |
 | monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                           |
-| no-clown-fiesta-theme      | codeberg  | [[https://codeberg.org/ranmaru22/no-clown-fiesta-theme.el][ranmaru22/no-clown-fiesta-theme.el]]          |
 | ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
 | org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
 | org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]  |

@@ -75,10 +75,10 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4898 |      69 |
-| GPL-2.0-or-later  |  1167 |      16 |
+| GPL-3.0-or-later  |  4877 |      69 |
+| GPL-2.0-or-later  |  1146 |      16 |
 | MIT               |   418 |       6 |
-| GPL-3.0-only      |   177 |       2 |
+| GPL-3.0-only      |   177 |       3 |
 | BSD-2-Clause      |    84 |       1 |
 | BSD-3-Clause      |    74 |       1 |
 | Apache-2.0        |    66 |       1 |
@@ -87,7 +87,7 @@
 | public-domain     |    32 |       0 |
 | ISC               |    26 |       0 |
 | AGPL-3.0-or-later |    24 |       0 |
-| as-is             |    23 |       0 |
+| as-is             |    22 |       0 |
 | LGPL-3.0-or-later |     9 |       0 |
 | CC0-1.0           |     7 |       0 |
 | GPL-3.0           |     5 |       0 |
@@ -109,9 +109,9 @@
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6289 |      88 |
+| total GNU         |  6247 |      88 |
 |-------------------+-------+---------|
-| total             |  7117 |     100 |
+| total             |  7074 |     100 |
 
 ** Packages with unknown licenses
 :PROPERTIES:
@@ -152,8 +152,8 @@
 #+results: attic-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-2.0-or-later  |   851 |      53 |
-| GPL-3.0-or-later  |   464 |      29 |
+| GPL-2.0-or-later  |   872 |      53 |
+| GPL-3.0-or-later  |   485 |      29 |
 | GPL-2.0-only      |    61 |       4 |
 | GPL               |    43 |       3 |
 | public-domain     |    39 |       2 |
@@ -161,9 +161,9 @@
 | MIT               |    27 |       2 |
 | GPL-1.0-or-later  |    14 |       1 |
 | Unlicense         |     9 |       1 |
+| as-is             |     9 |       1 |
 | ((custom))        |     9 |       1 |
 | WTFPL             |     8 |       0 |
-| as-is             |     8 |       0 |
 | BSD-2-Clause      |     7 |       0 |
 | BSD-3-Clause      |     7 |       0 |
 | Apache-2.0        |     5 |       0 |
@@ -184,9 +184,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1472 |      92 |
+| total GNU         |  1514 |      92 |
 |-------------------+-------+---------|
-| total             |  1602 |     100 |
+| total             |  1645 |     100 |
 
 ** Packages with unknown/custom licenses
 :PROPERTIES:
