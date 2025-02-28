@@ -1006,9 +1006,12 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
-| Package (1) | Repository           |  Melpa | Dependants                                       |
-|-------------+----------------------+--------+--------------------------------------------------|
-| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 296599 | company-restclient ob-restclient restclient-test |
+| Package (4)         | Repository                     |  Melpa | Dependants                                       |
+|---------------------+--------------------------------+--------+--------------------------------------------------|
+| js-auto-format-mode | [[https://github.com/ybiquitous/js-auto-format-mode][ybiquitous/js-auto-format-mode]] |   2479 |                                                  |
+| restclient          | [[https://github.com/pashky/restclient.el][pashky/restclient.el]]           | 296599 | company-restclient ob-restclient restclient-test |
+| show-css            | [[https://github.com/8cylinder/showcss-mode][8cylinder/showcss-mode]]         |   2786 |                                                  |
+| sql-clickhouse      | [[https://github.com/rschwarz/sql-clickhouse][rschwarz/sql-clickhouse]]        |    530 |                                                  |
 
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
