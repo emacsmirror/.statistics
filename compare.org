@@ -107,13 +107,13 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       21 |             |       |
-| gnu-elpa    |  147 |    147 |       |       |      142 |             |       |
+| gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5599 |   5599 |       |       |      219 |         191 |  4985 |
+| github      | 5602 |   5602 |       |       |      219 |         191 |  4987 |
 | gitlab      |  197 |    197 |       |       |       18 |          16 |   179 |
 | codeberg    |  146 |    146 |       |       |       20 |          35 |   115 |
-| sourcehut   |   88 |     88 |       |       |       19 |           6 |    65 |
+| sourcehut   |   89 |     89 |       |       |       19 |           6 |    66 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,10 +128,10 @@
 | shelved     | 2062 |        |  2062 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   255 |
+| secondary   |      |        |       |       |          |             |   256 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9228 |   6663 |  2062 |   498 |      471 |         255 |  5866 |
+| total       | 9232 |   6667 |  2062 |   498 |      472 |         255 |  5870 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -646,6 +646,7 @@
 | consult-eglot           | consult-eglot-embark             | github    |
 | consult-gh              | consult-gh-embark                | github    |
 | consult-gh              | consult-gh-forge                 | github    |
+| consult-gh              | consult-gh-with-pr-review        | github    |
 | copyit                  | copyit-pandoc                    | github    |
 | crystal-mode            | flycheck-crystal                 | github    |
 | ctl-mode                | gs-mode                          | github    |
