@@ -75,13 +75,13 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4785 |      72 |
+| GPL-3.0-or-later  |  4791 |      72 |
 | GPL-2.0-or-later  |   841 |      13 |
-| MIT               |   415 |       6 |
-| GPL-3.0-only      |   176 |       3 |
+| MIT               |   416 |       6 |
+| GPL-3.0-only      |   177 |       3 |
 | BSD-2-Clause      |    83 |       1 |
 | BSD-3-Clause      |    73 |       1 |
-| Apache-2.0        |    66 |       1 |
+| Apache-2.0        |    67 |       1 |
 | Unlicense         |    39 |       1 |
 | WTFPL             |    36 |       1 |
 | public-domain     |    31 |       0 |
@@ -103,14 +103,15 @@
 | AGPL-3.0-only     |     1 |       0 |
 | Artistic-2.0      |     1 |       0 |
 | Beerware          |     1 |       0 |
+| GPL-2.0-only      |     1 |       0 |
 | MIT-0             |     1 |       0 |
 | MPL-1.1           |     1 |       0 |
 | Ruby              |     1 |       0 |
 | Unicode-TOU       |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5849 |      88 |
+| total GNU         |  5857 |      88 |
 |-------------------+-------+---------|
-| total             |  6667 |     100 |
+| total             |  6677 |     100 |
 
 ** Packages with unknown licenses
 :PROPERTIES:
@@ -152,11 +153,11 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |  1177 |      57 |
-| GPL-3.0-or-later  |   586 |      28 |
+| GPL-3.0-or-later  |   587 |      28 |
 | GPL-2.0-only      |    61 |       3 |
 | GPL               |    43 |       2 |
 | public-domain     |    41 |       2 |
-| MIT               |    30 |       1 |
+| MIT               |    31 |       2 |
 | GPL-3.0-only      |    28 |       1 |
 | GPL-1.0-or-later  |    14 |       1 |
 | as-is             |    11 |       1 |
@@ -183,9 +184,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1921 |      93 |
+| total GNU         |  1922 |      93 |
 |-------------------+-------+---------|
-| total             |  2062 |     100 |
+| total             |  2064 |     100 |
 
 ** Packages with unknown/custom licenses
 :PROPERTIES:

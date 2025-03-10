@@ -106,14 +106,14 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  503 |        |       |   498 |       21 |             |       |
+| builtin     |  503 |        |       |   498 |       22 |             |       |
 | gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5602 |   5602 |       |       |      219 |         191 |  4987 |
-| gitlab      |  197 |    197 |       |       |       18 |          16 |   179 |
-| codeberg    |  146 |    146 |       |       |       20 |          35 |   115 |
-| sourcehut   |   89 |     89 |       |       |       19 |           6 |    66 |
+| github      | 5608 |   5608 |       |       |      220 |         191 |  4999 |
+| gitlab      |  198 |    198 |       |       |       19 |          16 |   179 |
+| codeberg    |  147 |    147 |       |       |       20 |          35 |   116 |
+| sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2062 |        |  2062 |       |          |             |    27 |
+| shelved     | 2064 |        |  2064 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   256 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9232 |   6667 |  2062 |   498 |      472 |         255 |  5870 |
+| total       | 9244 |   6677 |  2064 |   498 |      475 |         255 |  5885 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -250,6 +250,9 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: gnu-elpa-delayed
+| Package (1) | Elpa | Reason      |
+|-------------+------+-------------|
+| cond-star   | core | TODO mirror |
 
 ** Unreleased
 :PROPERTIES:
@@ -518,7 +521,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (64)                | Url                                                                         |
+| Package (65)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -545,6 +548,7 @@
 | flymake-golangci            | https://gitlab.com/shackra/flymake-golangci                                 |
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
 | fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
+| gnome-calendar              | https://github.com/NicolasPetton/gnome-calendar.el                          |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
