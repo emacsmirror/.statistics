@@ -110,14 +110,14 @@
 | gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5608 |   5608 |       |       |      220 |         191 |  4999 |
+| github      | 5613 |   5613 |       |       |      225 |         191 |  4999 |
 | gitlab      |  198 |    198 |       |       |       19 |          16 |   179 |
-| codeberg    |  147 |    147 |       |       |       20 |          35 |   116 |
+| codeberg    |  148 |    148 |       |       |       21 |          35 |   116 |
 | sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  121 |    121 |       |       |       14 |           6 |    99 |
+| git         |  120 |    120 |       |       |       14 |           6 |    98 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2064 |        |  2064 |       |          |             |    27 |
+| shelved     | 2065 |        |  2065 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   256 |
+| secondary   |      |        |       |       |          |             |   254 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9244 |   6677 |  2064 |   498 |      475 |         255 |  5885 |
+| total       | 9250 |   6682 |  2065 |   498 |      481 |         255 |  5882 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -608,7 +608,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (146)   | Secondary package                | Class     |
+| Primary package (145)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -616,8 +616,6 @@
 | agda2-mode              | annotation                       | subtree   |
 | agda2-mode              | eri                              | subtree   |
 | ameba                   | flycheck-ameba                   | github    |
-| axiom-environment       | company-axiom                    | git       |
-| axiom-environment       | ob-axiom                         | git       |
 | biblio                  | biblio-core                      | github    |
 | bibtex-completion       | helm-bibtex                      | github    |
 | bibtex-completion       | ivy-bibtex                       | github    |
@@ -1011,8 +1009,15 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
-| Package (4)         | Repository                     |  Melpa | Dependants                                       |
+| Package (11)        | Repository                     |  Melpa | Dependants                                       |
 |---------------------+--------------------------------+--------+--------------------------------------------------|
+| cloud-to-butt-erc   | [[https://github.com/leathekd/cloud-to-butt-erc][leathekd/cloud-to-butt-erc]]     |   1043 |                                                  |
+| eros-inspector      | [[https://github.com/port19x/eros-inspector][port19x/eros-inspector]]         |     56 |                                                  |
+| geiser-overlay      | [[https://github.com/port19x/geiser-overlay][port19x/geiser-overlay]]         |     68 |                                                  |
+| grapnel             | [[https://github.com/leathekd/grapnel][leathekd/grapnel]]               |   3910 | ix pushbullet                                    |
+| grr                 | [[https://github.com/leathekd/grr.el][leathekd/grr.el]]                |        |                                                  |
+| haproxy-mode        | [[https://github.com/port19x/haproxy-mode][port19x/haproxy-mode]]           |    111 |                                                  |
+| immutant-server     | [[https://github.com/leathekd/immutant-server.el][leathekd/immutant-server.el]]    |    904 |                                                  |
 | js-auto-format-mode | [[https://github.com/ybiquitous/js-auto-format-mode][ybiquitous/js-auto-format-mode]] |   2479 |                                                  |
 | restclient          | [[https://github.com/pashky/restclient.el][pashky/restclient.el]]           | 296599 | company-restclient ob-restclient restclient-test |
 | show-css            | [[https://github.com/8cylinder/showcss-mode][8cylinder/showcss-mode]]         |   2786 |                                                  |
