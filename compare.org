@@ -110,10 +110,10 @@
 | gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5613 |   5613 |       |       |      225 |         191 |  4999 |
+| github      | 5619 |   5619 |       |       |      225 |         192 |  5005 |
 | gitlab      |  198 |    198 |       |       |       19 |          16 |   179 |
-| codeberg    |  148 |    148 |       |       |       21 |          35 |   116 |
-| sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
+| codeberg    |  149 |    149 |       |       |       21 |          35 |   117 |
+| sourcehut   |   90 |     90 |       |       |       19 |           6 |    67 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2065 |        |  2065 |       |          |             |    27 |
+| shelved     | 2064 |        |  2064 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   254 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9250 |   6682 |  2065 |   498 |      481 |         255 |  5882 |
+| total       | 9255 |   6688 |  2064 |   498 |      481 |         256 |  5888 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -880,7 +880,7 @@
 |-------------+----------+--------------+--------+-----------------------|
 | typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
 
-- 2024-01-06 typo: Maintainers contacted by mail.
+- 2025-01-06 typo: Maintainers contacted by mail.
 
 Notes on builtin packages, which are not listed above by default.
 - csharp-mode: "this repo will continue being available from (M)ELPA
@@ -1024,6 +1024,8 @@ Notes on builtin packages, which are not listed above by default.
 | sql-clickhouse      | [[https://github.com/rschwarz/sql-clickhouse][rschwarz/sql-clickhouse]]        |    530 |                                                  |
 
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
+- 2025-03-26 leathekd https://github.com/melpa/melpa/issues/9413
+- 2025-03-26 port19x https://github.com/melpa/melpa/issues/9412
 
 ** Removed repositories
 :PROPERTIES:
