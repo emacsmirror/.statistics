@@ -110,9 +110,9 @@
 | gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5619 |   5619 |       |       |      225 |         192 |  5005 |
+| github      | 5618 |   5618 |       |       |      227 |         192 |  5004 |
 | gitlab      |  198 |    198 |       |       |       19 |          16 |   179 |
-| codeberg    |  149 |    149 |       |       |       21 |          35 |   117 |
+| codeberg    |  150 |    150 |       |       |       22 |          35 |   117 |
 | sourcehut   |   90 |     90 |       |       |       19 |           6 |    67 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2064 |        |  2064 |       |          |             |    27 |
+| shelved     | 2066 |        |  2066 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   254 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9255 |   6688 |  2064 |   498 |      481 |         256 |  5888 |
+| total       | 9257 |   6688 |  2066 |   498 |      484 |         256 |  5887 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -291,6 +291,11 @@
   (emir-gnu-elpa--migrated-packages)
 #+end_src
 #+results: gnu-elpa-diverging-repositories
+| Package (1)    | Mirror |                                            | Elpa   |                                                |
+|----------------+--------+--------------------------------------------+--------+------------------------------------------------|
+| flymake-clippy | github | https://github.com/mgmarlow/flymake-clippy | github | https://github.com/mak-kirkland/flymake-clippy |
+
+- 2025-03-23 flymake-clippy [[notmuch-tree:thread:0000000000019d07 and (flymake-clippy)][mail]]
 
 ** Prefer builtin
 :PROPERTIES:
@@ -1009,23 +1014,14 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
-| Package (11)        | Repository                     |  Melpa | Dependants                                       |
+| Package (4)         | Repository                     |  Melpa | Dependants                                       |
 |---------------------+--------------------------------+--------+--------------------------------------------------|
-| cloud-to-butt-erc   | [[https://github.com/leathekd/cloud-to-butt-erc][leathekd/cloud-to-butt-erc]]     |   1043 |                                                  |
-| eros-inspector      | [[https://github.com/port19x/eros-inspector][port19x/eros-inspector]]         |     56 |                                                  |
-| geiser-overlay      | [[https://github.com/port19x/geiser-overlay][port19x/geiser-overlay]]         |     68 |                                                  |
-| grapnel             | [[https://github.com/leathekd/grapnel][leathekd/grapnel]]               |   3910 | ix pushbullet                                    |
-| grr                 | [[https://github.com/leathekd/grr.el][leathekd/grr.el]]                |        |                                                  |
-| haproxy-mode        | [[https://github.com/port19x/haproxy-mode][port19x/haproxy-mode]]           |    111 |                                                  |
-| immutant-server     | [[https://github.com/leathekd/immutant-server.el][leathekd/immutant-server.el]]    |    904 |                                                  |
 | js-auto-format-mode | [[https://github.com/ybiquitous/js-auto-format-mode][ybiquitous/js-auto-format-mode]] |   2479 |                                                  |
 | restclient          | [[https://github.com/pashky/restclient.el][pashky/restclient.el]]           | 296599 | company-restclient ob-restclient restclient-test |
 | show-css            | [[https://github.com/8cylinder/showcss-mode][8cylinder/showcss-mode]]         |   2786 |                                                  |
 | sql-clickhouse      | [[https://github.com/rschwarz/sql-clickhouse][rschwarz/sql-clickhouse]]        |    530 |                                                  |
 
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
-- 2025-03-26 leathekd https://github.com/melpa/melpa/issues/9413
-- 2025-03-26 port19x https://github.com/melpa/melpa/issues/9412
 
 ** Removed repositories
 :PROPERTIES:
