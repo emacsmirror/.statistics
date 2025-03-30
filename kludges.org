@@ -68,13 +68,12 @@
     :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (5) | Class  | Feature              | Reason                |
+| Package (4) | Class  | Feature              | Reason                |
 |-------------+--------+----------------------+-----------------------|
 | rgb         | gitlab | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
 | rgb         | gitlab | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
 | emacspeak   | github | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
 | gumshoe     | github | targets/install-deps | conflicting test file |
-| ivy         | github | targets/install-deps | conflicting test file |
 | emacspeak   | github | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
 
 * Drop required features

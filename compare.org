@@ -108,13 +108,13 @@
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       22 |             |       |
 | gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
-| nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
+| nongnu-elpa |    1 |      1 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5618 |   5618 |       |       |      227 |         192 |  5004 |
-| gitlab      |  198 |    198 |       |       |       19 |          16 |   179 |
-| codeberg    |  150 |    150 |       |       |       22 |          35 |   117 |
-| sourcehut   |   90 |     90 |       |       |       19 |           6 |    67 |
-| gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
+| github      | 5619 |   5619 |       |       |      227 |         193 |  5005 |
+| gitlab      |  199 |    199 |       |       |       19 |          16 |   180 |
+| codeberg    |  152 |    152 |       |       |       22 |          35 |   119 |
+| sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
+| gnu         |    8 |      8 |       |       |        9 |           0 |     4 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | git         |  120 |    120 |       |       |       14 |           6 |    98 |
@@ -124,14 +124,14 @@
 | wiki        |  165 |    165 |       |       |          |             |       |
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  137 |    137 |       |       |          |             |   108 |
+| orphaned    |  138 |    138 |       |       |          |             |   109 |
 | shelved     | 2066 |        |  2066 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   254 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9257 |   6688 |  2066 |   498 |      484 |         256 |  5887 |
+| total       | 9264 |   6695 |  2066 |   498 |      484 |         257 |  5894 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -881,11 +881,13 @@
           (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (1) | Mirror   |              | Melpa  |                       |
-|-------------+----------+--------------+--------+-----------------------|
-| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
+| Package (2)   | Mirror   |                           | Melpa  |                            |
+|---------------+----------+---------------------------+--------+----------------------------|
+| ansible-vault | github   | [[https://github.com/zellio/ansible-vault-mode][zellio/ansible-vault-mode]] | github | [[https://github.com/freehck/ansible-vault-mode][freehck/ansible-vault-mode]] |
+| typo          | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]]              | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]]      |
 
 - 2025-01-06 typo: Maintainers contacted by mail.
+- 2025-03-30 ansible-vault https://github.com/zellio/ansible-vault-mode/issues/35
 
 Notes on builtin packages, which are not listed above by default.
 - csharp-mode: "this repo will continue being available from (M)ELPA
@@ -919,11 +921,13 @@ Notes on builtin packages, which are not listed above by default.
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (1) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
-|-------------+--------+--------+---------+--------+---------+---------------------|
-| prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
+| Package (2) | Used           | Forced | Melpa          | Class       | Fetcher | Repo                                                                     |
+|-------------+----------------+--------+----------------+-------------+---------+--------------------------------------------------------------------------|
+| prettier    | master         |        | release        | github      | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                                                      |
+| ws-butler   | elpa/ws-butler |        | elpa/ws-butler | nongnu-elpa | git     | [[https://git.savannah.gnu.org/cgit/emacs/nongnu.git/log/?h=elpa/ws-butler]] |
 
 - 2022-08-21 prettier https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
+- 2024-03-30 ws-butler https://github.com/melpa/melpa/pull/9366#issuecomment-2764728664
 
 ** From Emacsmirror
 :PROPERTIES:

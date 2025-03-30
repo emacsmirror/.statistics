@@ -60,7 +60,7 @@ a package is available from Melpa.
   (emir--list-orphans (list "dropped by maintainer"))
 #+end_src
 #+results: dropped
-| Package (88)         | E | M |
+| Package (89)         | E | M |
 |----------------------+---+---|
 | ac-alchemist         | ✔ | ✔ |
 | ac-capf              | ✔ | ✔ |
@@ -119,6 +119,7 @@ a package is available from Melpa.
 | literate-coffee-mode | ✔ | ✔ |
 | ltsv                 | ✔ |   |
 | magit-gerrit         | ✔ | ✔ |
+| magit-ido            | ✔ | ✔ |
 | magit-p4             | ✔ | ✔ |
 | magit-svn            | ✔ | ✔ |
 | manage-minor-mode    | ✔ | ✔ |

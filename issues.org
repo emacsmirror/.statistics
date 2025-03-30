@@ -39,15 +39,19 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2) | Package     | Shelved |
-|-------------+-------------+---------|
-| oauth2-auto | oauth2-auto |         |
-| oauth2-auto | org-gcal    |         |
-| vcard       | vcard       |         |
-| vcard       | vm          |         |
+| Feature (3)   | Package     | Shelved |
+|---------------+-------------+---------|
+| oauth2-auto   | oauth2-auto |         |
+| oauth2-auto   | org-gcal    |         |
+| readme_update | bray        |         |
+| readme_update | repeat-fu   |         |
+| vcard         | vcard       |         |
+| vcard         | vm          |         |
 
 - 2012-09-21 (sic) vm https://gitlab.com/emacs-vm/vm/-/issues/312
 - 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
+- 2025-03-30 bray https://codeberg.org/ideasman42/emacs-bray/pulls/2
+- 2025-03-30 repeat-fu https://codeberg.org/ideasman42/emacs-repeat-fu/pulls/1
 
 * Packages with unsatisfied dependencies
 :PROPERTIES:
