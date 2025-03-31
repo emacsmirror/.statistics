@@ -341,9 +341,8 @@ Other repositories that should be filtered (or better yet, split up by upstream)
     :order-by [(asc name)]])
 #+end_src
 #+results: set-branch
-| Package (6)        | Branch                     | Class    | Repo                                      |
+| Package (5)        | Branch                     | Class    | Repo                                      |
 |--------------------+----------------------------+----------+-------------------------------------------|
-| ansible-vault      | master                     | github   | [[https://github.com/zellio/ansible-vault-mode][zellio/ansible-vault-mode]]                 |
 | async-backup       | development                | codeberg | [[https://codeberg.org/contrapunctus/async-backup][contrapunctus/async-backup]]                |
 | elpa-admin         | elpa-admin                 | git      |                                           |
 | sxiv               | dev                        | codeberg | [[https://codeberg.org/contrapunctus/sxiv.el][contrapunctus/sxiv.el]]                     |

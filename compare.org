@@ -881,13 +881,11 @@
           (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (2)   | Mirror   |                           | Melpa  |                            |
-|---------------+----------+---------------------------+--------+----------------------------|
-| ansible-vault | github   | [[https://github.com/zellio/ansible-vault-mode][zellio/ansible-vault-mode]] | github | [[https://github.com/freehck/ansible-vault-mode][freehck/ansible-vault-mode]] |
-| typo          | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]]              | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]]      |
+| Package (1) | Mirror   |              | Melpa  |                       |
+|-------------+----------+--------------+--------+-----------------------|
+| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
 
 - 2025-01-06 typo: Maintainers contacted by mail.
-- 2025-03-30 ansible-vault https://github.com/zellio/ansible-vault-mode/issues/35
 
 Notes on builtin packages, which are not listed above by default.
 - csharp-mode: "this repo will continue being available from (M)ELPA
