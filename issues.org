@@ -76,28 +76,30 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (11)             | Class  | Feature            | Provider           |
-|--------------------------+--------+--------------------+--------------------|
-| citar-denote             | github | denote-silos-extra |                    |
-| eev                      | github | lean4-mode         |                    |
-| evil-textobj-tree-sitter | github | tree-sitter        | tree-sitter        |
-| flex-compile             | github | slite              |                    |
-| matlab-mode              | github | semantic-dep       |                    |
-| matlab-mode              | github | semantic-format    |                    |
-| matlab-mode              | github | semanticdb         |                    |
-| org-gnome                | github | gnome-calendar     | gnome-calendar     |
-| org-node                 | github | org-super-links    |                    |
-| ox-textile               | github | org-test           |                    |
-| scopeline                | github | tree-sitter        | tree-sitter        |
-| sdml-mode                | github | tree-sitter        | tree-sitter        |
-| sdml-mode                | github | tree-sitter-hl     | tree-sitter        |
-| sdml-mode                | github | tree-sitter-indent | tree-sitter-indent |
-| symex                    | github | tree-sitter        | tree-sitter        |
-| symex                    | github | tsc                | tree-sitter        |
+| Package (12)             | Class     | Feature            | Provider           |
+|--------------------------+-----------+--------------------+--------------------|
+| citar-denote             | github    | denote-silos-extra |                    |
+| eev                      | github    | lean4-mode         |                    |
+| evil-textobj-tree-sitter | github    | tree-sitter        | tree-sitter        |
+| flex-compile             | github    | slite              |                    |
+| gradle                   | sourcehut | eclim              | eclim              |
+| matlab-mode              | github    | semantic-dep       |                    |
+| matlab-mode              | github    | semantic-format    |                    |
+| matlab-mode              | github    | semanticdb         |                    |
+| org-gnome                | github    | gnome-calendar     | gnome-calendar     |
+| org-node                 | github    | org-super-links    |                    |
+| ox-textile               | github    | org-test           |                    |
+| scopeline                | github    | tree-sitter        | tree-sitter        |
+| sdml-mode                | github    | tree-sitter        | tree-sitter        |
+| sdml-mode                | github    | tree-sitter-hl     | tree-sitter        |
+| sdml-mode                | github    | tree-sitter-indent | tree-sitter-indent |
+| symex                    | github    | tree-sitter        | tree-sitter        |
+| symex                    | github    | tsc                | tree-sitter        |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
 - 2025-03-10 org-gnome https://github.com/NicolasPetton/org-gnome.el/issues/4
+- 2025-04-03 gradle WONTFIX https://github.com/emacs-eclim/emacs-eclim/pull/106
 
 * Missing library summary
 :PROPERTIES:

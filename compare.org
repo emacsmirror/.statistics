@@ -107,10 +107,10 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       22 |             |       |
-| gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
+| gnu-elpa    |  148 |    148 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5622 |   5622 |       |       |      228 |         193 |  5012 |
+| github      | 5620 |   5620 |       |       |      228 |         193 |  5010 |
 | gitlab      |  197 |    197 |       |       |       19 |          16 |   178 |
 | codeberg    |  154 |    154 |       |       |       22 |          35 |   121 |
 | sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2070 |        |  2070 |       |          |             |    27 |
+| shelved     | 2071 |        |  2071 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   254 |
+| secondary   |      |        |       |       |          |             |   252 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9270 |   6697 |  2070 |   498 |      485 |         257 |  5901 |
+| total       | 9270 |   6696 |  2071 |   498 |      485 |         257 |  5897 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -617,7 +617,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (145)   | Secondary package                | Class     |
+| Primary package (144)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -683,8 +683,6 @@
 | dix                     | dix-evil                         | github    |
 | dogears                 | helm-dogears                     | github    |
 | dylan                   | dime                             | github    |
-| eclim                   | ac-emacs-eclim                   | github    |
-| eclim                   | company-emacs-eclim              | github    |
 | el-secretario           | el-secretario-elfeed             | sourcehut |
 | el-secretario           | el-secretario-mu4e               | sourcehut |
 | el-secretario           | el-secretario-notmuch            | sourcehut |
@@ -1039,12 +1037,11 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
-| Package (6)       | Repository                           |  Melpa | Dependants |
+| Package (5)       | Repository                           |  Melpa | Dependants |
 |-------------------+--------------------------------------+--------+------------|
 | helm-aws          | [[https://github.com/istib/helm-aws][istib/helm-aws]]                       |   2692 |            |
 | helm-mode-manager | [[https://github.com/istib/helm-mode-manager][istib/helm-mode-manager]]              | 854527 |            |
 | interaction-log   | [[https://github.com/michael-heerdegen/interaction-log.el][michael-heerdegen/interaction-log.el]] |   3455 | hyperbole  |
-| on-screen         | [[https://github.com/michael-heerdegen/on-screen.el][michael-heerdegen/on-screen.el]]       |   4132 |            |
 | rainbow-blocks    | [[https://github.com/istib/rainbow-blocks][istib/rainbow-blocks]]                 |  10234 |            |
 | wordsmith-mode    | [[https://github.com/istib/wordsmith-mode][istib/wordsmith-mode]]                 |   1842 |            |
 
