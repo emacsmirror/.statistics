@@ -108,11 +108,11 @@
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       22 |             |       |
 | gnu-elpa    |  147 |    147 |       |       |      143 |             |       |
-| nongnu-elpa |    1 |      1 |       |       |          |           1 |       |
+| nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5619 |   5619 |       |       |      227 |         193 |  5005 |
-| gitlab      |  199 |    199 |       |       |       19 |          16 |   180 |
-| codeberg    |  152 |    152 |       |       |       22 |          35 |   119 |
+| github      | 5622 |   5622 |       |       |      228 |         193 |  5012 |
+| gitlab      |  197 |    197 |       |       |       19 |          16 |   178 |
+| codeberg    |  154 |    154 |       |       |       22 |          35 |   121 |
 | sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     4 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2066 |        |  2066 |       |          |             |    27 |
+| shelved     | 2070 |        |  2070 |       |          |             |    27 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   254 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9264 |   6695 |  2066 |   498 |      484 |         257 |  5894 |
+| total       | 9270 |   6697 |  2070 |   498 |      485 |         257 |  5901 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -526,7 +526,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (65)                | Url                                                                         |
+| Package (69)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -547,6 +547,7 @@
 | elscreen-mew                | https://github.com/masutaka/elscreen-mew                                    |
 | eno                         | https://github.com/enoson/eno.el                                            |
 | eshell-outline              | https://git.jamzattack.xyz/eshell-outline                                   |
+| ess-smart-underscore        | https://github.com/mattfidler/ess-smart-underscore.el                       |
 | flow-js2-mode               | https://github.com/Fuco1/flow-js2-mode                                      |
 | flycheck-gometalinter       | https://github.com/favadi/flycheck-gometalinter.git                         |
 | flycheck-julia              | https://github.com/gdkrmr/flycheck-julia                                    |
@@ -561,6 +562,7 @@
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
+| js-auto-format-mode         | https://github.com/ybiquitous/js-auto-format-mode                           |
 | kolon-mode                  | https://github.com/samvtran/kolon-mode                                      |
 | lsp-python-ms               | https://github.com/emacs-lsp/lsp-python-ms                                  |
 | magit-gh-pulls              | https://github.com/sigma/magit-gh-pulls                                     |
@@ -585,7 +587,9 @@
 | redprl                      | https://github.com/RedPRL/sml-redprl                                        |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | session                     | https://github.com/emacsorphanage/session                                   |
+| show-css                    | https://github.com/8cylinder/showcss-mode                                   |
 | sml-modeline                | https://github.com/emacsorphanage/sml-modeline                              |
+| sql-clickhouse              | https://github.com/rschwarz/sql-clickhouse                                  |
 | tbx2org                     | https://github.com/istib/tbx2org                                            |
 | tree-sitter                 | https://github.com/emacs-tree-sitter/elisp-tree-sitter                      |
 | tree-sitter                 | https://github.com/emacs-tree-sitter/elisp-tree-sitter                      |
@@ -919,10 +923,9 @@ Notes on builtin packages, which are not listed above by default.
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (2) | Used           | Forced | Melpa          | Class       | Fetcher | Repo                                                                     |
-|-------------+----------------+--------+----------------+-------------+---------+--------------------------------------------------------------------------|
-| prettier    | master         |        | release        | github      | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]]                                                      |
-| ws-butler   | elpa/ws-butler |        | elpa/ws-butler | nongnu-elpa | git     | [[https://git.savannah.gnu.org/cgit/emacs/nongnu.git/log/?h=elpa/ws-butler]] |
+| Package (1) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
+|-------------+--------+--------+---------+--------+---------+---------------------|
+| prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
 
 - 2022-08-21 prettier https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
 - 2024-03-30 ws-butler https://github.com/melpa/melpa/pull/9366#issuecomment-2764728664
@@ -1016,12 +1019,9 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
-| Package (4)         | Repository                     |  Melpa | Dependants                                       |
-|---------------------+--------------------------------+--------+--------------------------------------------------|
-| js-auto-format-mode | [[https://github.com/ybiquitous/js-auto-format-mode][ybiquitous/js-auto-format-mode]] |   2479 |                                                  |
-| restclient          | [[https://github.com/pashky/restclient.el][pashky/restclient.el]]           | 296599 | company-restclient ob-restclient restclient-test |
-| show-css            | [[https://github.com/8cylinder/showcss-mode][8cylinder/showcss-mode]]         |   2786 |                                                  |
-| sql-clickhouse      | [[https://github.com/rschwarz/sql-clickhouse][rschwarz/sql-clickhouse]]        |    530 |                                                  |
+| Package (1) | Repository           |  Melpa | Dependants                                       |
+|-------------+----------------------+--------+--------------------------------------------------|
+| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 296599 | company-restclient ob-restclient restclient-test |
 
 - 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
