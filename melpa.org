@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (552)                | Link                                    | Summary                                                                |
+| Package (547)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -195,7 +195,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | mailq                        | [[https://github.com/dimitri/mailq-el][dimitri/mailq-el]]                        | A major mode for `mailq' interaction                                   |
 | pgsql-linum-format           | [[https://github.com/dimitri/pgsql-linum-format][dimitri/pgsql-linum-format]]              | Dimitri Fontaine                                                       |
 | pgsrc                        | [[https://github.com/dimitri/pgsrc-el][dimitri/pgsrc-el]]                        | Source Code Editing Facilities for PostgreSQL                          |
-| mu4e                         | [[https://github.com/djcb/mu][djcb/mu]]                                 | Mu4e, the mu mail user agent                                           |
+| mu4e                         | [[https://github.com/djcb/mu][djcb/mu]]                                 | Mu-based mua for emacs                                                 |
 | org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     | Manage org files in a given directory                                  |
 | ampl-mode                    | [[https://github.com/dpo/ampl-mode][dpo/ampl-mode]]                           | Ampl mode for the Emacs editor                                         |
 | masquerade-mode              | [[https://github.com/dsevilla/masquerade-mode-el][dsevilla/masquerade-mode-el]]             | Minor mode to add templating capabilities to any mode                  |
@@ -349,11 +349,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | theme-helper                 | [[https://github.com/lewang/theme-helper][lewang/theme-helper]]                     | Create color themes faster                                             |
 | try-code                     | [[https://github.com/lewang/try-code][lewang/try-code]]                         | Try out a new idea by commenting out old code                          |
 | unique-window-buffers        | [[https://github.com/lewang/unique-window-buffers][lewang/unique-window-buffers]]            | Try to avoid showing same buffer in two windows on the same frame      |
-| cygstart                     | [[https://github.com/lieutar/cygstart.el][lieutar/cygstart.el]]                     | Run Windows application associated with a file                         |
-| find-git                     | [[https://github.com/lieutar/find-git.el][lieutar/find-git.el]]                     | Git working tree browser                                               |
-| framov                       | [[https://github.com/lieutar/framov.el][lieutar/framov.el]]                       | Minor mode and any commands for Emacsen on X-Window System             |
-| simo                         | [[https://github.com/lieutar/simo.el][lieutar/simo.el]]                         | Simple image manuplation object                                        |
-| yatest                       | [[https://github.com/lieutar/yatest.el][lieutar/yatest.el]]                       | Simple test framework                                                  |
 | metapost-mode+               | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                 | Drawing with metapost interactively in Emacs                           |
 | lookup                       | [[https://github.com/lookup2/lookup2][lookup2/lookup2]]                         | Search interface to electronic dictionaries                            |
 | weather                      | [[https://github.com/mad/weather.el][mad/weather.el]]                          | Retrieve weather                                                       |
@@ -486,13 +481,13 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | mark-forward-sexp            | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]               | Mark regions sematically inside balanced expressions                   |
 | insert-time                  | [[https://github.com/rmm5t/insert-time.el][rmm5t/insert-time.el]]                    | Insert time and date stamps at point                                   |
 | utf8islove                   | [[https://github.com/robsimmons/utf8islove][robsimmons/utf8islove]]                   | Quail package for TeX integration                                      |
+| inform-mode                  | [[https://github.com/rrthomas/inform-mode][rrthomas/inform-mode]]                    | Major mode for Inform 6 interactive fiction code                       |
 | infix                        | [[https://github.com/rspeele/infix-dot-el][rspeele/infix.el]]                        | Infix operators for Emacs Lisp                                         |
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     | Major mode providing a pcb mode hook for Emacs                         |
 | auto-document                | [[https://github.com/rubikitch/auto-document][rubikitch/auto-document]]                 | Automatic document generator of Emacs Lisp                             |
 | codepad                      | [[https://github.com/ruediger/emacs-codepad][ruediger/emacs-codepad]]                  | Emacs integration for codepad.org                                      |
 | firefox-remote               | [[https://github.com/ruediger/emacs-firefox-remote][ruediger/emacs-firefox-remote]]           | Support for Firefox' remote debugging protocol ;;                      |
 | osm-mode                     | [[https://github.com/ruediger/osm-mode][ruediger/osm-mode]]                       | OpenStreetMap (OSM) support for Emacs                                  |
-| inform-mode                  | [[https://github.com/rupertl/inform-mode][rupertl/inform-mode]]                     | Major mode for Inform 6 interactive fiction code                       |
 | numwin                       | [[https://github.com/ruricolist/numwin][ruricolist/numwin]]                       | Generalized window numbering for Emacs                                 |
 | org-velocity                 | [[https://github.com/ruricolist/org-velocity][ruricolist/org-velocity]]                 | Something like Notational Velocity for Org                             |
 | elisp-slime-expand           | [[https://github.com/russell/elisp-slime-expand][russell/elisp-slime-expand]]              | A SLIME inspired expander for macros                                   |
