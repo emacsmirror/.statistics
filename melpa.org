@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (548)                | Link                                    | Summary                                                                |
+| Package (547)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -481,7 +481,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | mark-forward-sexp            | [[https://github.com/rlister/mark-forward-sexp][rlister/mark-forward-sexp]]               | Mark regions sematically inside balanced expressions                   |
 | insert-time                  | [[https://github.com/rmm5t/insert-time.el][rmm5t/insert-time.el]]                    | Insert time and date stamps at point                                   |
 | utf8islove                   | [[https://github.com/robsimmons/utf8islove][robsimmons/utf8islove]]                   | Quail package for TeX integration                                      |
-| inform-mode                  | [[https://github.com/rrthomas/inform-mode][rrthomas/inform-mode]]                    | Major mode for Inform 6 interactive fiction code                       |
 | infix                        | [[https://github.com/rspeele/infix-dot-el][rspeele/infix.el]]                        | Infix operators for Emacs Lisp                                         |
 | pcb-mode                     | [[https://github.com/rswarbrick/pcb-mode][rswarbrick/pcb-mode]]                     | Major mode providing a pcb mode hook for Emacs                         |
 | auto-document                | [[https://github.com/rubikitch/auto-document][rubikitch/auto-document]]                 | Automatic document generator of Emacs Lisp                             |
