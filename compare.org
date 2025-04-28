@@ -110,9 +110,9 @@
 | gnu-elpa    |  148 |    148 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5626 |   5626 |       |       |      229 |         193 |  5021 |
+| github      | 5630 |   5630 |       |       |      229 |         193 |  5024 |
 | gitlab      |  198 |    198 |       |       |       20 |          16 |   178 |
-| codeberg    |  154 |    154 |       |       |       22 |          35 |   121 |
+| codeberg    |  154 |    154 |       |       |       22 |          35 |   122 |
 | sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     4 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   252 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9282 |   6703 |  2076 |   498 |      487 |         257 |  5908 |
+| total       | 9286 |   6707 |  2076 |   498 |      487 |         257 |  5912 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -883,9 +883,10 @@
           (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (1) | Mirror   |              | Melpa  |                       |
-|-------------+----------+--------------+--------+-----------------------|
-| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
+| Package (2) | Mirror   |              | Melpa    |                       |
+|-------------+----------+--------------+----------+-----------------------|
+| elein       | shelved  | [[https://github.com/remvee/elein][remvee/elein]] | codeberg | [[https://codeberg.org/rwv/elein][rwv/elein]]             |
+| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github   | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
 
 - 2025-01-06 typo: Maintainers contacted by mail.
 
