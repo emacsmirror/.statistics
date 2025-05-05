@@ -110,7 +110,7 @@
 | gnu-elpa    |  148 |    148 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5630 |   5630 |       |       |      229 |         193 |  5024 |
+| github      | 5633 |   5633 |       |       |      229 |         193 |  5027 |
 | gitlab      |  198 |    198 |       |       |       20 |          16 |   178 |
 | codeberg    |  154 |    154 |       |       |       22 |          35 |   122 |
 | sourcehut   |   91 |     91 |       |       |       19 |           6 |    68 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   252 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9286 |   6707 |  2076 |   498 |      487 |         257 |  5912 |
+| total       | 9289 |   6710 |  2076 |   498 |      487 |         257 |  5915 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -1038,13 +1038,16 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
-| Package (5)       | Repository                           |  Melpa | Dependants |
+| Package (7)       | Repository                           |  Melpa | Dependants |
 |-------------------+--------------------------------------+--------+------------|
 | helm-aws          | [[https://github.com/istib/helm-aws][istib/helm-aws]]                       |   2692 |            |
 | helm-mode-manager | [[https://github.com/istib/helm-mode-manager][istib/helm-mode-manager]]              | 854527 |            |
 | interaction-log   | [[https://github.com/michael-heerdegen/interaction-log.el][michael-heerdegen/interaction-log.el]] |   3455 | hyperbole  |
+| parser-generator  | [[https://github.com/cjohansson/emacs-parser-generator][cjohansson/emacs-parser-generator]]    |        | phps-mode  |
 | rainbow-blocks    | [[https://github.com/istib/rainbow-blocks][istib/rainbow-blocks]]                 |  10234 |            |
+| ssh-deploy        | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]          |  12657 |            |
 | wordsmith-mode    | [[https://github.com/istib/wordsmith-mode][istib/wordsmith-mode]]                 |   1842 |            |
 
 - 2025-01-24 istib https://github.com/melpa/melpa/issues/9335
 - 2025-02-23 michael-heerdegen https://github.com/melpa/melpa/issues/9369
+- 2025-05-05 cjohansson: account gone
