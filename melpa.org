@@ -631,7 +631,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (20)               | Link      |                                             |
+| Package (21)               | Link      |                                             |
 |----------------------------+-----------+---------------------------------------------|
 | ebuild-mode                | git       |                                             |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
@@ -647,6 +647,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
 | org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
 | org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]  |
+| org-mathsheet              | gitlab    | [[https://gitlab.com/ianxm/org-mathsheet][ianxm/org-mathsheet]]                         |
 | piem                       | git       | [[https://git.kyleam.com/piem/about]]           |
 | python-pep8                | git       |                                             |
 | python-pylint              | git       |                                             |
