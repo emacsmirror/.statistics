@@ -68,13 +68,19 @@
     :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (4) | Class  | Feature              | Reason                |
+| Package (5) | Class  | Feature              | Reason                |
 |-------------+--------+----------------------+-----------------------|
 | rgb         | gitlab | el-mock              | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
 | rgb         | gitlab | ert-expectations     | pending [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
 | emacspeak   | github | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
+| flim        | github | sasl                 | stubborn              |
+| flim        | github | sasl-anonymous       | stubborn              |
+| flim        | github | sasl-login           | stubborn              |
+| flim        | github | sasl-plain           | stubborn              |
 | gumshoe     | github | targets/install-deps | conflicting test file |
 | emacspeak   | github | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
+
+- flim https://github.com/emacsmirror/flim/commit/e5063bd46d861f9521660009e3e0ce0e9b7183ec
 
 * Drop required features
 :PROPERTIES:
@@ -223,7 +229,7 @@
 | auctex-latexmk    | github |       1 |
 | emacspeak         | github |       1 |
 | ert-runner        | github |       1 |
-| flim              | github |       3 |
+| flim              | github |       4 |
 | go                | github |       1 |
 | icons-in-terminal | github |       1 |
 | karma             | github |       1 |
