@@ -39,8 +39,10 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (3) | Package     | Shelved |
+| Feature (4) | Package     | Shelved |
 |-------------+-------------+---------|
+| mcp         | mcp         |         |
+| mcp         | rmoo        | t       |
 | oauth2-auto | oauth2-auto |         |
 | oauth2-auto | org-gcal    |         |
 | rfc2368     | emacs       |         |
@@ -78,13 +80,11 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (12)             | Class     | Feature            | Provider           |
+| Package (10)             | Class     | Feature            | Provider           |
 |--------------------------+-----------+--------------------+--------------------|
-| citar-denote             | github    | denote-silos-extra |                    |
 | eev                      | github    | lean4-mode         |                    |
 | evil-textobj-tree-sitter | github    | tree-sitter        | tree-sitter        |
 | flex-compile             | github    | slite              |                    |
-| gptel                    | github    | mcp-hub            |                    |
 | gradle                   | sourcehut | eclim              | eclim              |
 | matlab-mode              | github    | semantic-dep       |                    |
 | matlab-mode              | github    | semantic-format    |                    |
