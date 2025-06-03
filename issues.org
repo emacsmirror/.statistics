@@ -80,12 +80,13 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (10)             | Class     | Feature            | Provider           |
+| Package (11)             | Class     | Feature            | Provider           |
 |--------------------------+-----------+--------------------+--------------------|
 | eev                      | github    | lean4-mode         |                    |
 | evil-textobj-tree-sitter | github    | tree-sitter        | tree-sitter        |
 | flex-compile             | github    | slite              |                    |
 | gradle                   | sourcehut | eclim              | eclim              |
+| hyperbole                | gnu       | interaction-log    | interaction-log    |
 | matlab-mode              | github    | semantic-dep       |                    |
 | matlab-mode              | github    | semantic-format    |                    |
 | matlab-mode              | github    | semanticdb         |                    |

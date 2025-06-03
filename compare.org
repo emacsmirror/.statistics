@@ -107,17 +107,17 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       22 |             |       |
-| gnu-elpa    |  148 |    148 |       |       |      146 |             |       |
+| gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5649 |   5649 |       |       |      227 |         193 |  5036 |
+| github      | 5643 |   5643 |       |       |      227 |         193 |  5030 |
 | gitlab      |  199 |    199 |       |       |       20 |          16 |   178 |
 | codeberg    |  156 |    156 |       |       |       22 |          35 |   124 |
 | sourcehut   |   92 |     92 |       |       |       19 |           6 |    69 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  120 |    120 |       |       |       14 |           6 |    99 |
+| git         |  119 |    119 |       |       |       14 |           6 |    98 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2079 |        |  2079 |       |          |             |    27 |
+| shelved     | 2084 |        |  2084 |       |          |             |    32 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9312 |   6730 |  2079 |   498 |      488 |         257 |  5933 |
+| total       | 9312 |   6725 |  2084 |   498 |      488 |         257 |  5931 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -526,7 +526,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (69)                | Url                                                                         |
+| Package (73)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -542,7 +542,6 @@
 | drawille                    | https://github.com/josuah/drawille-el                                       |
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
-| elein                       | https://github.com/remvee/elein                                             |
 | elnode                      | https://github.com/jcaw/elnode                                              |
 | elscreen-mew                | https://github.com/masutaka/elscreen-mew                                    |
 | eno                         | https://github.com/enoson/eno.el                                            |
@@ -557,10 +556,13 @@
 | gnome-calendar              | https://github.com/NicolasPetton/gnome-calendar.el                          |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
+| helm-aws                    | https://github.com/istib/helm-aws                                           |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
+| helm-mode-manager           | https://github.com/istib/helm-mode-manager                                  |
 | helm-tree-sitter            | https://github.com/Giedriusj1/helm-tree-sitter                              |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
+| interaction-log             | https://github.com/michael-heerdegen/interaction-log.el                     |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
 | js-auto-format-mode         | https://github.com/ybiquitous/js-auto-format-mode                           |
 | kolon-mode                  | https://github.com/samvtran/kolon-mode                                      |
@@ -584,6 +586,7 @@
 | protobuf-ts-mode            | https://git.ookami.one/cgit/protobuf-ts-mode                                |
 | pygn-mode                   | https://github.com/dwcoates/pygn-mode                                       |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
+| rainbow-blocks              | https://github.com/istib/rainbow-blocks                                     |
 | redprl                      | https://github.com/RedPRL/sml-redprl                                        |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | session                     | https://github.com/emacsorphanage/session                                   |
@@ -598,6 +601,7 @@
 | tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
 | tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch.git                       |
+| wordsmith-mode              | https://github.com/istib/wordsmith-mode                                     |
 
 ** Shared repositories
 :PROPERTIES:
@@ -889,12 +893,6 @@
           (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
-| Package (2) | Mirror   |              | Melpa    |                       |
-|-------------+----------+--------------+----------+-----------------------|
-| elein       | shelved  | [[https://github.com/remvee/elein][remvee/elein]] | codeberg | [[https://codeberg.org/rwv/elein][rwv/elein]]             |
-| typo        | codeberg | [[https://codeberg.org/pkal/typo.el][pkal/typo.el]] | github   | [[https://github.com/jorgenschaefer/typoel][jorgenschaefer/typoel]] |
-
-- 2025-01-06 typo: Maintainers contacted by mail.
 
 Notes on builtin packages, which are not listed above by default.
 - csharp-mode: "this repo will continue being available from (M)ELPA
@@ -976,7 +974,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (27)         | Url                                                |
+| Package (32)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -992,8 +990,11 @@ Notes on builtin packages, which are not listed above by default.
 | flymake-golangci     | https://github.com/emacsattic/flymake-golangci     |
 | fold-dwim            | https://github.com/emacsattic/fold-dwim            |
 | go-autocomplete      | https://github.com/emacsattic/go-autocomplete      |
+| helm-aws             | https://github.com/emacsattic/helm-aws             |
+| helm-mode-manager    | https://github.com/emacsattic/helm-mode-manager    |
 | ido-migemo           | https://github.com/emacsattic/ido-migemo           |
 | inlineR              | https://github.com/emacsattic/inlineR              |
+| interaction-log      | https://github.com/emacsattic/interaction-log      |
 | mic-paren            | https://github.com/emacsattic/mic-paren            |
 | number               | https://github.com/emacsattic/number               |
 | org-doing            | https://github.com/emacsattic/org-doing            |
@@ -1001,10 +1002,12 @@ Notes on builtin packages, which are not listed above by default.
 | org-wunderlist       | https://github.com/emacsattic/org-wunderlist       |
 | protobuf-ts-mode     | https://github.com/emacsattic/protobuf-ts-mode     |
 | quick-preview        | https://github.com/emacsattic/quick-preview        |
+| rainbow-blocks       | https://github.com/emacsattic/rainbow-blocks       |
 | redshank             | https://github.com/emacsattic/redshank             |
 | session              | https://github.com/emacsattic/session              |
 | sml-modeline         | https://github.com/emacsattic/sml-modeline         |
 | tbx2org              | https://github.com/emacsattic/tbx2org              |
+| wordsmith-mode       | https://github.com/emacsattic/wordsmith-mode       |
 
 * Github                                                           :noexport:
 :PROPERTIES:
@@ -1044,16 +1047,3 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
-| Package (7)       | Repository                           |  Melpa | Dependants |
-|-------------------+--------------------------------------+--------+------------|
-| helm-aws          | [[https://github.com/istib/helm-aws][istib/helm-aws]]                       |   2692 |            |
-| helm-mode-manager | [[https://github.com/istib/helm-mode-manager][istib/helm-mode-manager]]              | 854527 |            |
-| interaction-log   | [[https://github.com/michael-heerdegen/interaction-log.el][michael-heerdegen/interaction-log.el]] |   3455 | hyperbole  |
-| parser-generator  | [[https://github.com/cjohansson/emacs-parser-generator][cjohansson/emacs-parser-generator]]    |        | phps-mode  |
-| rainbow-blocks    | [[https://github.com/istib/rainbow-blocks][istib/rainbow-blocks]]                 |  10234 |            |
-| ssh-deploy        | [[https://github.com/cjohansson/emacs-ssh-deploy][cjohansson/emacs-ssh-deploy]]          |  12657 |            |
-| wordsmith-mode    | [[https://github.com/istib/wordsmith-mode][istib/wordsmith-mode]]                 |   1842 |            |
-
-- 2025-01-24 istib https://github.com/melpa/melpa/issues/9335
-- 2025-02-23 michael-heerdegen https://github.com/melpa/melpa/issues/9369
-- 2025-05-05 cjohansson: account gone
