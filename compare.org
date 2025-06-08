@@ -110,7 +110,7 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5643 |   5643 |       |       |      227 |         193 |  5030 |
+| github      | 5648 |   5648 |       |       |      227 |         193 |  5035 |
 | gitlab      |  199 |    199 |       |       |       20 |          16 |   178 |
 | codeberg    |  156 |    156 |       |       |       22 |          35 |   124 |
 | sourcehut   |   92 |     92 |       |       |       19 |           6 |    69 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9312 |   6725 |  2084 |   498 |      488 |         257 |  5931 |
+| total       | 9317 |   6730 |  2084 |   498 |      488 |         257 |  5936 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -416,6 +416,9 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: nongnu-elpa-delayed
+| Package (1) | Elpa     | Reason                                     |
+|-------------+----------+--------------------------------------------|
+| ws-butler   | internal | FIXME mirroring from nongnu elpa is broken |
 
 ** Unreleased
 :PROPERTIES:
