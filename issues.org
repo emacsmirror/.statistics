@@ -58,7 +58,7 @@
 :ID:       df7b903f-ebf1-4803-aa97-1a4eac38b08f
 :END:
 #+name: unsatisfied
-#+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Provider"),*this*)
+#+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Shelved Provider"),*this*)
   (mapcan
    (pcase-lambda (`(,name ,class))
      (let (alist)
@@ -80,13 +80,16 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (11)             | Class     | Feature            | Provider           |
+| Package (14)             | Class     | Feature            | Shelved Provider   |
 |--------------------------+-----------+--------------------+--------------------|
 | eev                      | github    | lean4-mode         |                    |
 | evil-textobj-tree-sitter | github    | tree-sitter        | tree-sitter        |
 | flex-compile             | github    | slite              |                    |
+| git-commit-insert-issue  | gitlab    | glab               | glab               |
+| gitlab-pipeline          | github    | glab               | glab               |
 | gradle                   | sourcehut | eclim              | eclim              |
 | hyperbole                | gnu       | interaction-log    | interaction-log    |
+| magit-gitlab             | gitlab    | glab               | glab               |
 | matlab-mode              | github    | semantic-dep       |                    |
 | matlab-mode              | github    | semantic-format    |                    |
 | matlab-mode              | github    | semanticdb         |                    |
@@ -103,6 +106,10 @@
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
 - 2025-03-10 org-gnome https://github.com/NicolasPetton/org-gnome.el/issues/4
 - 2025-04-03 gradle WONTFIX https://github.com/emacs-eclim/emacs-eclim/pull/106
+- 2025-06-20 glab
+  - git-commit-insert-issue https://gitlab.com/emacs-stuff/git-commit-insert-issue/-/issues/24
+  - gitlab-pipeline https://github.com/TxGVNN/gitlab-pipeline/issues/8
+  - magit-gitlab  https://gitlab.com/arvidnl/magit-gitlab/-/issues/8
 
 * Missing library summary
 :PROPERTIES:
