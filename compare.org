@@ -110,9 +110,9 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5653 |   5653 |       |       |      227 |         193 |  5040 |
+| github      | 5662 |   5662 |       |       |      227 |         193 |  5051 |
 | gitlab      |  199 |    199 |       |       |       20 |          16 |   178 |
-| codeberg    |  157 |    157 |       |       |       22 |          35 |   125 |
+| codeberg    |  158 |    158 |       |       |       22 |          35 |   126 |
 | sourcehut   |   92 |     92 |       |       |       19 |           6 |    69 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -124,14 +124,14 @@
 | wiki        |  165 |    165 |       |       |          |             |       |
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2088 |        |  2088 |       |          |             |    36 |
+| orphaned    |  139 |    139 |       |       |          |             |   110 |
+| shelved     | 2089 |        |  2089 |       |          |             |    36 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9327 |   6736 |  2088 |   498 |      488 |         257 |  5946 |
+| total       | 9339 |   6747 |  2089 |   498 |      488 |         257 |  5959 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -507,12 +507,13 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
-| Package (5)     | Melpa  | Reason                                               |
+| Package (6)     | Melpa  | Reason                                               |
 |-----------------+--------+------------------------------------------------------|
 | connection      | github | Don't add; part of upstream dictionary but not Emacs |
 | django-snippets | github | Don't add; part of shelved django-mode               |
 | link            | github | Don't add; part of upstream dictionary but not Emacs |
 | ob-lurk         | github | FIXME false-positive                                 |
+| wilson-ng-theme | github | pending [[https://github.com/melpa/melpa/pull/9501][9501]]                                         |
 | ws-butler       | git    | FIXME mirroring from nongnu elpa is broken           |
 
 ** Shelved
@@ -529,7 +530,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (77)                | Url                                                                         |
+| Package (78)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -565,6 +566,7 @@
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
 | helm-aws                    | https://github.com/istib/helm-aws                                           |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
+| helm-directory              | https://github.com/masasam/emacs-helm-directory                             |
 | helm-mode-manager           | https://github.com/istib/helm-mode-manager                                  |
 | helm-tree-sitter            | https://github.com/Giedriusj1/helm-tree-sitter                              |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
@@ -818,8 +820,8 @@
 | prosjekt                | helm-prosjekt                    | github    |
 | psalm                   | flycheck-psalm                   | github    |
 | request                 | request-deferred                 | github    |
-| restclient              | restclient-helm                  | github    |
-| restclient              | restclient-jq                    | github    |
+| restclient              | restclient-helm                  | orphaned  |
+| restclient              | restclient-jq                    | orphaned  |
 | retraction-viewer       | retraction-viewer-section        | sourcehut |
 | rinari                  | ruby-compilation                 | github    |
 | ripgrep                 | projectile-ripgrep               | github    |
@@ -1038,11 +1040,6 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
-| Package (1) | Repository           |  Melpa | Dependants                                       |
-|-------------+----------------------+--------+--------------------------------------------------|
-| restclient  | [[https://github.com/pashky/restclient.el][pashky/restclient.el]] | 296599 | company-restclient ob-restclient restclient-test |
-
-- 2024-04-22 restclient https://github.com/melpa/melpa/issues/9004
 
 ** Removed repositories
 :PROPERTIES:

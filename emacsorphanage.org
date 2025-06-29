@@ -209,7 +209,7 @@ the orphanage to fix these issues.
   (emir--list-orphans (list "upstream unresponsive" "multiple non-upstreams"))
 #+end_src
 #+results: unresponsive
-| Package (16)           | E | M |
+| Package (17)           | E | M |
 |------------------------+---+---|
 | edb                    | ✔ |   |
 | elisp-depend           | ✔ | ✔ |
@@ -222,6 +222,7 @@ the orphanage to fix these issues.
 | omtose-phellack-themes | ✔ | ✔ |
 | ox-pandoc              | ✔ | ✔ |
 | read-char-spec         | ✔ |   |
+| restclient             | ✔ | ✔ |
 | setnu                  | ✔ |   |
 | tablist                | ✔ | ✔ |
 | transient-posframe     | ✔ | ✔ |
