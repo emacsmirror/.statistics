@@ -110,28 +110,28 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5661 |   5661 |       |       |      227 |         193 |  5050 |
+| github      | 5661 |   5661 |       |       |      227 |         193 |  5038 |
 | gitlab      |  199 |    199 |       |       |       20 |          16 |   178 |
-| codeberg    |  158 |    158 |       |       |       22 |          35 |   126 |
+| codeberg    |  159 |    159 |       |       |       22 |          35 |   127 |
 | sourcehut   |   92 |     92 |       |       |       19 |           6 |    69 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  119 |    119 |       |       |       14 |           6 |    98 |
+| git         |  119 |    119 |       |       |       14 |           6 |    97 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
 | wiki        |  165 |    165 |       |       |          |             |       |
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| orphaned    |  140 |    140 |       |       |          |             |   111 |
-| shelved     | 2089 |        |  2089 |       |          |             |    36 |
+| orphaned    |  136 |    136 |       |       |          |             |   107 |
+| shelved     | 2097 |        |  2097 |       |          |             |    36 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9339 |   6747 |  2089 |   498 |      488 |         257 |  5959 |
+| total       | 9344 |   6744 |  2097 |   498 |      488 |         257 |  5943 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -530,7 +530,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (78)                | Url                                                                         |
+| Package (77)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -566,7 +566,6 @@
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
 | helm-aws                    | https://github.com/istib/helm-aws                                           |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
-| helm-directory              | https://github.com/masasam/emacs-helm-directory                             |
 | helm-mode-manager           | https://github.com/istib/helm-mode-manager                                  |
 | helm-tree-sitter            | https://github.com/Giedriusj1/helm-tree-sitter                              |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |

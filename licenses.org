@@ -75,16 +75,16 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  4848 |      72 |
-| GPL-2.0-or-later  |   843 |      12 |
+| GPL-3.0-or-later  |  4843 |      72 |
+| GPL-2.0-or-later  |   842 |      12 |
 | MIT               |   417 |       6 |
 | GPL-3.0-only      |   179 |       3 |
 | BSD-2-Clause      |    82 |       1 |
 | BSD-3-Clause      |    73 |       1 |
-| Apache-2.0        |    70 |       1 |
+| Apache-2.0        |    72 |       1 |
 | Unlicense         |    39 |       1 |
 | WTFPL             |    36 |       1 |
-| public-domain     |    33 |       0 |
+| public-domain     |    34 |       1 |
 | ISC               |    26 |       0 |
 | AGPL-3.0-or-later |    25 |       0 |
 | as-is             |    20 |       0 |
@@ -111,9 +111,9 @@
 | Unicode-TOU       |     1 |       0 |
 | Vim               |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  5919 |      88 |
+| total GNU         |  5913 |      88 |
 |-------------------+-------+---------|
-| total             |  6747 |     100 |
+| total             |  6744 |     100 |
 
 ** Packages with unknown licenses
 :PROPERTIES:
@@ -161,7 +161,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |  1179 |      56 |
-| GPL-3.0-or-later  |   608 |      29 |
+| GPL-3.0-or-later  |   616 |      29 |
 | GPL-2.0-only      |    61 |       3 |
 | GPL               |    43 |       2 |
 | public-domain     |    41 |       2 |
@@ -192,9 +192,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  1945 |      93 |
+| total GNU         |  1953 |      93 |
 |-------------------+-------+---------|
-| total             |  2089 |     100 |
+| total             |  2097 |     100 |
 
 ** Packages with unknown/custom licenses
 :PROPERTIES:

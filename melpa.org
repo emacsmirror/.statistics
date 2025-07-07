@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (547)                | Link                                    | Summary                                                                |
+| Package (558)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -115,6 +115,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | frame-bufs                   | [[https://github.com/alpaker/frame-bufs][alpaker/frame-bufs]]                      | A minor mode for frame-relative buffer lists                           |
 | makem                        | [[https://github.com/alphapapa/makem.sh][alphapapa/makem.sh]]                      | Tools for using makem.sh in Emacs                                      |
 | erc-highlight-nicknames      | [[https://github.com/amalloy/erc-highlight-nick][amalloy/erc-highlight-nick]]              | Highlights nicknames                                                   |
+| helm-shell-history           | [[https://github.com/anoopemacs/helm-shell-history][anoopemacs/helm-shell-history]]           | Find shell history from helm                                           |
 | activator                    | [[https://github.com/apg/activator-el][apg/activator-el]]                        | An init.d style config manager                                         |
 | kibit-mode                   | [[https://github.com/aredington/kibit-mode][aredington/kibit-mode]]                   | Enhance clojure-mode with Kibit analysis                               |
 | flymake-csslint              | [[https://github.com/arnested/flymake-csslint][arnested/flymake-csslint]]                | Making flymake work with CSSLint                                       |
@@ -127,6 +128,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | nazna                        | [[https://github.com/baron/nazna.el][baron/nazna.el]]                          | Mental arithmetic for emacs                                            |
 | binmove                      | [[https://github.com/beketa/binmove][beketa/binmove]]                          | Minor mode to move cursor up / down like binary search                 |
 | screensend                   | [[https://github.com/benwbooth/screensend.el][benwbooth/screensend.el]]                 | Send blocks of text from emacs to screen or tmux sessions              |
+| helm-unicode                 | [[https://github.com/bomgar/helm-unicode][bomgar/helm-unicode]]                     | Helm command for unicode characters                                    |
 | speechd                      | [[https://github.com/brailcom/speechd-el][brailcom/speechd-el]]                     | Library for accessing Speech Dispatcher                                |
 | octopress-tentacle           | [[https://github.com/brighid/octopress-tentacle][brighid/octopress-tentacle]]              | Tools for Octopress/Jekyll blogs                                       |
 | im-notification              | [[https://github.com/bvtrach/emacs-im-notification][bvtrach/emacs-im-notification]]           | Emacs input method notification via D-Bus                              |
@@ -137,6 +139,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | backups-mode                 | [[https://github.com/chadbraunduin/backups-mode][chadbraunduin/backups-mode]]              | Major mode for autosaving files and listing, viewing, and reverting Em |
 | css-format                   | [[https://github.com/chalmagean/css-format.el][chalmagean/css-format.el]]                | Toggle CSS inline/multiline block format                               |
 | current-story                | [[https://github.com/charlietanksley/current-story][charlietanksley/current-story]]           | Track and insert current Pivotal Tracker                               |
+| helm-frame                   | [[https://github.com/chee/helm-frame][chee/helm-frame]]                         | Open helm buffers in a dedicated frame                                 |
 | dictem                       | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          | DICT protocol client (rfc-2229) for [X]Emacs                           |
 | gitsum                       | [[https://github.com/chneukirchen/gitsum][leahneukirchen/gitsum]]                   | Basic darcsum feelalike for Git                                        |
 | twiki                        | [[https://github.com/christopherjwhite/emacs-twiki-mode][christopherjwhite/emacs-twiki-mode]]      | Mode for editing Twiki wiki files for emacs                            |
@@ -208,6 +211,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | eaf                          | [[https://github.com/emacs-eaf/emacs-application-framework][emacs-eaf/emacs-application-framework]]   | Emacs application framework                                            |
 | ess-stata-mode               | [[https://github.com/emacs-ess/ess-stata-mode][emacs-ess/ess-stata-mode]]                | Stata customization                                                    |
 | ajc-java-complete            | [[https://github.com/emacs-java/auto-java-complete][emacs-java/auto-java-complete]]           | Auto Java Completion for GNU Emacs                                     |
+| helm-migemo                  | [[https://github.com/emacs-jp/helm-migemo][emacs-jp/helm-migemo]]                    | Migemo plug-in for helm                                                |
 | emir                         | [[https://github.com/emacscollective/emir][emacscollective/emir]]                    | Maintain the Emacsmirror                                               |
 | sinasi                       | [[https://github.com/emk/sinasi][emk/sinasi]]                              | Sinasi Is Not A SproutCore IDE                                         |
 | test-framework               | [[https://github.com/epsil/test-framework.el][epsil/test-framework.el]]                 | Framework for unit testing                                             |
@@ -226,6 +230,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | textsnip                     | [[https://github.com/functionreturnfunction/textsnip.el][functionreturnfunction/textsnip.el]]      | Posts text to textsnip for sharing                                     |
 | expectations-mode            | [[https://github.com/gar3thjon3s/expectations-mode][clojure-expectations/expectations-mode]]  | Minor mode for expectations tests                                      |
 | smart-quotes                 | [[https://github.com/gareth-rees/smart-quotes][gareth-rees/smart-quotes]]                | Smart Quotes minor mode for GNU Emacs                                  |
+| helm-filesets                | [[https://github.com/gcla/helm-filesets][gcla/helm-filesets]]                      | A helm source for emacs filesets                                       |
 | uzumaki                      | [[https://github.com/geyslan/uzumaki][geyslan/uzumaki]]                         | A simple buffer cycler                                                 |
 | review                       | [[https://github.com/gigamonkey/review][gigamonkey/review]]                       | Commands for inserting review comments                                 |
 | org-nan                      | [[https://github.com/gkappler/org-nan][gkappler/org-nan]]                        | Narrowing to multiple subtrees for Org-mode entries                    |
@@ -392,6 +397,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | sync-scroll                  | [[https://github.com/mori-dev/sync-scroll][mori-dev/sync-scroll]]                    | Scroll Up and Scroll Down 2 window                                     |
 | sysuplist-mode               | [[https://github.com/mrBliss/sysuplist-mode][mrBliss/sysuplist-mode]]                  | Emacs Major mode for Yaourt's update selection                         |
 | ert-extras                   | [[https://github.com/mrc/ert-extras][mrc/ert-extras]]                          | Some extensions to ert                                                 |
+| helm-c-moccur                | [[https://github.com/myuhe/helm-c-moccur.el][myuhe/helm-c-moccur.el]]                  | Helm source for color-moccur.el                                        |
 | noob-arrows-mode             | [[https://github.com/n3mo/noob-arrows-mode.el][n3mo/noob-arrows-mode.el]]                | Noob arrows minor mode                                                 |
 | mark-select                  | [[https://github.com/namikister/mark-select][namikister/mark-select]]                  | Mark and select interface                                              |
 | transcript                   | [[https://github.com/natfarleydev/transcript-el][natfarleydev/transcript-el]]              | Edit transcripts of sound recordings                                   |
@@ -453,6 +459,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | elpaca                       | [[https://github.com/progfolio/elpaca][progfolio/elpaca]]                        | An elisp package manager                                               |
 | helm-words                   | [[https://github.com/pronobis/helm-words][pronobis/helm-words]]                     | Helm extension for looking up words in dictionaries and thesauri       |
 | git-code-review              | [[https://github.com/psanford/git-code-review-el][psanford/git-code-review-el]]             | Code review tool for Emacs                                             |
+| helm-pt                      | [[https://github.com/punassuming/helm-pt][punassuming/helm-pt]]                     | Platinum searcher helm interface                                       |
 | h2o                          | [[https://github.com/punchagan/h2o][punchagan/h2o]]                           | Orgmode-formatted READMEs for your ELisp                               |
 | org-hyde                     | [[https://github.com/punchagan/org-hyde][punchagan/org-hyde]]                      | Export hyde-ready posts from org-mode entries                          |
 | pymacs                       | [[https://github.com/pymacs2/Pymacs][pymacs2/Pymacs]]                          | Interface between Emacs Lisp and Python                                |
@@ -562,6 +569,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | ob-mathematica               | [[https://github.com/tririver/ob-mathematica][tririver/ob-mathematica]]                 | Org-babel functions for Mathematica evaluation                         |
 | git-emacs                    | [[https://github.com/tsgates/git-emacs][tsgates/git-emacs]]                       | Yet another git emacs mode for newbies                                 |
 | pylookup                     | [[https://github.com/tsgates/pylookup][tsgates/pylookup]]                        | Look up python documents (reference) in Emacs                          |
+| helm-posframe                | [[https://github.com/tumashu/helm-posframe][tumashu/helm-posframe]]                   | Using posframe to show helm window                                     |
 | emacspeak                    | [[https://github.com/tvraman/emacspeak][tvraman/emacspeak]]                       | The Complete Audio Desktop                                             |
 | quickfix-mode                | [[https://github.com/ulises/quickfix-mode][ulises/quickfix-mode]]                    | A mode for quickfixing common programming errors                       |
 | doc-view-follow-mode         | [[https://github.com/ultronozm/doc-view-follow.el][ultronozm/doc-view-follow.el]]            | Synchronize windows showing the same document                          |
@@ -571,6 +579,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | erc-babel                    | [[https://github.com/vapniks/erc-babel][vapniks/erc-babel]]                       | Communicate with ERC in different languages using online translation s |
 | eviews                       | [[https://github.com/vapniks/eviews-mode][vapniks/eviews-mode]]                     | Major-mode for editing eviews program files                            |
 | extract-text                 | [[https://github.com/vapniks/extract-text][vapniks/extract-text]]                    | Functions for extracting/scraping text from buffers                    |
+| helm-helm-commands           | [[https://github.com/vapniks/helm-helm-commands][vapniks/helm-helm-commands]]              | List all helm commands with helm                                       |
 | ido-choose-function          | [[https://github.com/vapniks/ido-choose-function][vapniks/ido-choose-function]]             | Use ido to select functions and (partially) apply arguments            |
 | jb-misc-functions            | [[https://github.com/vapniks/jb-misc-functions][vapniks/jb-misc-functions]]               | Miscellaneous functions for keymaps & other things                     |
 | keyword-arg-macros           | [[https://github.com/vapniks/keyword-arg-macros][vapniks/keyword-arg-macros]]              | Some macros for extracting keyword args from lists                     |
@@ -606,12 +615,14 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | accelerate                   | [[https://github.com/yagunov/accelerate.el][yagunov/accelerate.el]]                   | Pump numeric arg for auto-repeated interactive commands                |
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                         | Major mode for editing Igor Pro procedure files                        |
 | manued                       | [[https://github.com/yamauchih/manued][yamauchih/manued]]                        | A minor mode of manued proofreading method                             |
+| helm-git-grep                | [[https://github.com/yasuyk/helm-git-grep][yasuyk/helm-git-grep]]                    | Helm for git grep, an incremental git-grep(1)                          |
 | go-svg                       | [[https://github.com/yhvh/go-svg-mode][yhvh/go-svg-mode]]                        | A go gtp interface with svg image support                              |
 | terrible-template            | [[https://github.com/yonkeltron/terrible-template][yonkeltron/terrible-template]]            | Templates that don't suck, just terrible                               |
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                        | Major mode for editing Text::MicroTemplate syntax                      |
 | tx-mode                      | [[https://github.com/yoshiki/tx-mode][yoshiki/tx-mode]]                         | Major mode for editing Text::Xslate syntax                             |
 | helm-google-contacts         | [[https://github.com/yuutayamada/helm-google-contacts][yuutayamada/helm-google-contacts]]        | Search google contacts list by helm                                    |
 | node-console                 | [[https://github.com/yuutayamada/node-console][yuutayamada/node-console]]                | Execute javascript by node.js from Emacs                               |
+| helm-icons                   | [[https://github.com/yyoncho/helm-icons][yyoncho/helm-icons]]                      | Helm icons                                                             |
 | door-gnus                    | [[https://github.com/yyr/door-gnus][yyr/door-gnus]]                           | Hack to enter, bury, unbury gnus                                       |
 | namelist-mode                | [[https://github.com/yyr/namelist-mode][yyr/namelist-mode]]                       | Major Mode for editing f90 namelist files                              |
 | monorepo-zenitani            | [[https://github.com/zenitani/elisp][zenitani/elisp]]                          | A monorepo containing unrelated packages                               |
@@ -631,26 +642,27 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (21)               | Link      |                                             |
-|----------------------------+-----------+---------------------------------------------|
-| ebuild-mode                | git       |                                             |
-| ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
-| elpa-admin                 | git       |                                             |
-| geo                        | sourcehut |                                             |
-| goldendict                 | git       | [[https://repo.or.cz/goldendict.el.git]]        |
-| gpicker                    | nongnu    | [[https://savannah.nongnu.org/projects/gpicker][nongnu:gpicker]]                              |
-| gradle                     | sourcehut | [[https://git.sr.ht/~vhallac/gradle-el][vhallac/gradle-el]]                           |
-| lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]] |
-| lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                |
-| mailscripts                | git       |                                             |
-| monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                           |
-| ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
-| org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
-| org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]  |
-| org-mathsheet              | gitlab    | [[https://gitlab.com/ianxm/org-mathsheet][ianxm/org-mathsheet]]                         |
-| piem                       | git       | [[https://git.kyleam.com/piem/about]]           |
-| python-pep8                | git       |                                             |
-| python-pylint              | git       |                                             |
-| rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                |
-| riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                |
-| swift-playground-mode      | gitlab    | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]]       |
+| Package (22)               | Link      |                                                |
+|----------------------------+-----------+------------------------------------------------|
+| ebuild-mode                | git       |                                                |
+| ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                         |
+| elpa-admin                 | git       |                                                |
+| geo                        | sourcehut |                                                |
+| goldendict                 | git       | [[https://repo.or.cz/goldendict.el.git]]           |
+| gpicker                    | nongnu    | [[https://savannah.nongnu.org/projects/gpicker][nongnu:gpicker]]                                 |
+| gradle                     | sourcehut | [[https://git.sr.ht/~vhallac/gradle-el][vhallac/gradle-el]]                              |
+| helm-google                | git       | [[https://framagit.org/steckerhalter/helm-google]] |
+| lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]]    |
+| lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                   |
+| mailscripts                | git       |                                                |
+| monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                              |
+| ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]               |
+| org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]           |
+| org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]     |
+| org-mathsheet              | gitlab    | [[https://gitlab.com/ianxm/org-mathsheet][ianxm/org-mathsheet]]                            |
+| piem                       | git       | [[https://git.kyleam.com/piem/about]]              |
+| python-pep8                | git       |                                                |
+| python-pylint              | git       |                                                |
+| rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                   |
+| riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                   |
+| swift-playground-mode      | gitlab    | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]]          |

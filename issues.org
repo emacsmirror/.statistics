@@ -78,14 +78,19 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (14)             | Class     | Feature            | Shelved Provider   |
+| Package (22)             | Class     | Feature            | Shelved Provider   |
 |--------------------------+-----------+--------------------+--------------------|
+| easy-hugo                | github    | helm-ag            | helm-ag            |
+| easy-jekyll              | github    | helm-ag            | helm-ag            |
+| eca                      | github    | whisper            |                    |
 | eev                      | github    | lean4-mode         |                    |
+| euslisp-mode             | github    | helm-ag            | helm-ag            |
 | evil-textobj-tree-sitter | github    | tree-sitter        | tree-sitter        |
 | flex-compile             | github    | slite              |                    |
 | git-commit-insert-issue  | gitlab    | glab               | glab               |
 | gitlab-pipeline          | github    | glab               | glab               |
 | gradle                   | sourcehut | eclim              | eclim              |
+| helm-projectile          | github    | helm-ag            | helm-ag            |
 | hyperbole                | gnu       | interaction-log    | interaction-log    |
 | magit-gitlab             | gitlab    | glab               | glab               |
 | matlab-mode              | github    | semantic-dep       |                    |
@@ -93,12 +98,15 @@
 | matlab-mode              | github    | semanticdb         |                    |
 | org-gnome                | github    | gnome-calendar     | gnome-calendar     |
 | ox-textile               | github    | org-test           |                    |
+| rustic                   | github    | helm-ag            | helm-ag            |
 | scopeline                | github    | tree-sitter        | tree-sitter        |
 | sdml-mode                | github    | tree-sitter        | tree-sitter        |
 | sdml-mode                | github    | tree-sitter-hl     | tree-sitter        |
 | sdml-mode                | github    | tree-sitter-indent | tree-sitter-indent |
+| symbol-navigation-hydra  | github    | helm-ag            | helm-ag            |
 | symex                    | github    | tree-sitter        | tree-sitter        |
 | symex                    | github    | tsc                | tree-sitter        |
+| zim-wiki-mode            | github    | helm-ag            | helm-ag            |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6

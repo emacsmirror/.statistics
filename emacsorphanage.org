@@ -60,7 +60,7 @@ a package is available from Melpa.
   (emir--list-orphans (list "dropped by maintainer"))
 #+end_src
 #+results: dropped
-| Package (90)         | E | M |
+| Package (86)         | E | M |
 |----------------------+---+---|
 | ac-alchemist         | ✔ | ✔ |
 | ac-capf              | ✔ | ✔ |
@@ -97,8 +97,6 @@ a package is available from Melpa.
 | god-mode             | ✔ | ✔ |
 | gom-mode             | ✔ | ✔ |
 | haxe-mode            | ✔ | ✔ |
-| helm-ack             | ✔ | ✔ |
-| helm-ag              | ✔ | ✔ |
 | helm-css-scss        | ✔ | ✔ |
 | helm-github-issues   | ✔ |   |
 | helm-gtags           | ✔ | ✔ |
@@ -109,8 +107,6 @@ a package is available from Melpa.
 | helm-perldoc         | ✔ | ✔ |
 | helm-pydoc           | ✔ | ✔ |
 | helm-robe            | ✔ | ✔ |
-| helm-swoop           | ✔ | ✔ |
-| helm-themes          | ✔ | ✔ |
 | help-find-org-mode   | ✔ | ✔ |
 | htmlize              | ✔ | ✔ |
 | import-popwin        | ✔ | ✔ |
