@@ -110,10 +110,10 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5667 |   5667 |       |       |      227 |         193 |  5044 |
+| github      | 5673 |   5673 |       |       |      228 |         194 |  5051 |
 | gitlab      |  199 |    199 |       |       |       20 |          16 |   178 |
 | codeberg    |  159 |    159 |       |       |       22 |          35 |   127 |
-| sourcehut   |   92 |     92 |       |       |       19 |           6 |    69 |
+| sourcehut   |   93 |     93 |       |       |       19 |           6 |    70 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   107 |
-| shelved     | 2097 |        |  2097 |       |          |             |    36 |
+| shelved     | 2099 |        |  2099 |       |          |             |    36 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9350 |   6750 |  2097 |   498 |      488 |         257 |  5949 |
+| total       | 9359 |   6757 |  2099 |   498 |      489 |         258 |  5957 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -284,6 +284,11 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: gnu-elpa-shelved
+| Package (1) | Elpa   |
+|-------------+--------|
+| wconf       | github |
+
+- wconf: Declared obsolete [[https://github.com/ilohmar/wconf][by upstream]] but not removed yet.
 
 ** Diverging repositories
 #+name: gnu-elpa-diverging-repositories

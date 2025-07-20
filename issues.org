@@ -78,7 +78,7 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (22)             | Class     | Feature            | Shelved Provider   |
+| Package (21)             | Class     | Feature            | Shelved Provider   |
 |--------------------------+-----------+--------------------+--------------------|
 | easy-hugo                | github    | helm-ag            | helm-ag            |
 | easy-jekyll              | github    | helm-ag            | helm-ag            |
@@ -90,7 +90,6 @@
 | git-commit-insert-issue  | gitlab    | glab               | glab               |
 | gitlab-pipeline          | github    | glab               | glab               |
 | gradle                   | sourcehut | eclim              | eclim              |
-| helm-projectile          | github    | helm-ag            | helm-ag            |
 | hyperbole                | gnu       | interaction-log    | interaction-log    |
 | magit-gitlab             | gitlab    | glab               | glab               |
 | matlab-mode              | github    | semantic-dep       |                    |
