@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (558)                | Link                                    | Summary                                                                |
+| Package (557)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -355,7 +355,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | unique-window-buffers        | [[https://github.com/lewang/unique-window-buffers][lewang/unique-window-buffers]]            | Try to avoid showing same buffer in two windows on the same frame      |
 | metapost-mode+               | [[https://github.com/liyu1981/metapost-mode-][liyu1981/metapost-mode-]]                 | Drawing with metapost interactively in Emacs                           |
 | lookup                       | [[https://github.com/lookup2/lookup2][lookup2/lookup2]]                         | Search interface to electronic dictionaries                            |
-| gt                           | [[https://github.com/lorniu/gt.el][lorniu/gt.el]]                            | Translation framework, configurable and scalable                       |
 | weather                      | [[https://github.com/mad/weather.el][mad/weather.el]]                          | Retrieve weather                                                       |
 | awesome-tab                  | [[https://github.com/manateelazycat/awesome-tab][manateelazycat/awesome-tab]]              | Provide an out of box configuration to use tab in Emacs                |
 | blink-search                 | [[https://github.com/manateelazycat/blink-search][manateelazycat/blink-search]]             | Blink search                                                           |

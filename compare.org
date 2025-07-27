@@ -110,10 +110,10 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5673 |   5673 |       |       |      228 |         194 |  5051 |
+| github      | 5677 |   5677 |       |       |      228 |         194 |  5054 |
 | gitlab      |  199 |    199 |       |       |       20 |          16 |   178 |
-| codeberg    |  159 |    159 |       |       |       22 |          35 |   127 |
-| sourcehut   |   93 |     93 |       |       |       19 |           6 |    70 |
+| codeberg    |  160 |    160 |       |       |       22 |          35 |   128 |
+| sourcehut   |   94 |     94 |       |       |       19 |           6 |    71 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9359 |   6757 |  2099 |   498 |      489 |         258 |  5957 |
+| total       | 9365 |   6763 |  2099 |   498 |      489 |         258 |  5962 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -512,13 +512,12 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
-| Package (6)     | Melpa  | Reason                                               |
+| Package (5)     | Melpa  | Reason                                               |
 |-----------------+--------+------------------------------------------------------|
 | connection      | github | Don't add; part of upstream dictionary but not Emacs |
 | django-snippets | github | Don't add; part of shelved django-mode               |
 | link            | github | Don't add; part of upstream dictionary but not Emacs |
 | ob-lurk         | github | FIXME false-positive                                 |
-| wilson-ng-theme | github | pending [[https://github.com/melpa/melpa/pull/9501][9501]]                                         |
 | ws-butler       | git    | FIXME mirroring from nongnu elpa is broken           |
 
 ** Shelved

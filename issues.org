@@ -39,8 +39,10 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (3) | Package    | Shelved |
+| Feature (4) | Package    | Shelved |
 |-------------+------------+---------|
+| libinput    | bookiez    |         |
+| libinput    | touchgrid  |         |
 | mcp         | mcp        |         |
 | mcp         | rmoo       | t       |
 | rfc2368     | emacs      |         |
@@ -155,7 +157,7 @@
 | darcsum           |  55028 |                 | https://hub.darcs.net/simon/darcsum/raw/darcsum.el                                                |
 | dsvn              |  62036 | (e2wm)          | https://svn.apache.org/repos/asf/subversion/trunk/contrib/client-side/emacs/dsvn.el               |
 | edit-list         |   3160 |                 | https://mwolson.org/static/dist/elisp/edit-list.el                                                |
-| helm-ls-svn       |   2027 |                 | https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el         |
+| helm-ls-svn       |   2027 | (helm)          | https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el         |
 | quack             |  16048 |                 | https://www.neilvandyke.org/quack/quack.el                                                        |
 | taggit            |        | (mingus)        | https://raw.githubusercontent.com/pft/elisp-assorted/master/taggit.el                             |
 | tex-smart-umlauts |   2118 |                 | https://hub.darcs.net/lyro/tex-smart-umlauts/raw/tex-smart-umlauts.el                             |
