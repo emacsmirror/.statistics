@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (557)                | Link                                    | Summary                                                                |
+| Package (568)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -522,6 +522,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | xrc                          | [[https://github.com/spacebat/xrc][spacebat/xrc]]                            | Syntax sugar and other goodies for working with xml-rpc.el             |
 | recipe-mode                  | [[https://github.com/sshelagh/recipe-mode][sshelagh/recipe-mode]]                    | A mode to make writing, finding recipes easy                           |
 | remind-conf-mode             | [[https://github.com/sshelagh/remind-conf-mode][sshelagh/remind-conf-mode]]               | A mode to help configure remind                                        |
+| efrit                        | [[https://github.com/steveyegge/efrit][steveyegge/efrit]]                        | LLM conversational assistant for Emacs                                 |
 | sclang                       | [[https://github.com/supercollider/scel][supercollider/scel]]                      | IDE for working with the SuperCollider language                        |
 | fs-mode                      | [[https://github.com/suzp1984/fs-mode][suzp1984/fs-mode]]                        | Linux file system menagement                                           |
 | pulseaudio                   | [[https://github.com/suzp1984/pulseaudio-mode][suzp1984/pulseaudio-mode]]                | Pulseaudio control panel                                               |
@@ -616,6 +617,16 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | manued                       | [[https://github.com/yamauchih/manued][yamauchih/manued]]                        | A minor mode of manued proofreading method                             |
 | helm-git-grep                | [[https://github.com/yasuyk/helm-git-grep][yasuyk/helm-git-grep]]                    | Helm for git grep, an incremental git-grep(1)                          |
 | go-svg                       | [[https://github.com/yhvh/go-svg-mode][yhvh/go-svg-mode]]                        | A go gtp interface with svg image support                              |
+| float-narrow-indirect        | [[https://github.com/yibie/float-narrow-indirect][yibie/float-narrow-indirect]]             | Floating window support for narrow-indirect                            |
+| org-embed                    | [[https://github.com/yibie/org-embed][yibie/org-embed]]                         | Embed various content in org-mode                                      |
+| org-headline-card            | [[https://github.com/yibie/org-headline-card][yibie/org-headline-card]]                 | Convert org headlines to preview cards                                 |
+| org-include-inline           | [[https://github.com/yibie/org-include-inline][yibie/org-include-inline]]                | Display #+INCLUDE contents inline in Org mode buffers                  |
+| org-luhmann                  | [[https://github.com/yibie/org-luhmann][yibie/org-luhmann]]                       | Luhmann numbering system for org-mode                                  |
+| org-numbering                | [[https://github.com/yibie/org-numbering][yibie/org-numbering]]                     | Flexible numbering system for org-mode                                 |
+| org-supertag                 | [[https://github.com/yibie/org-supertag][yibie/org-supertag]]                      | SuperTag plugin for Org mode                                           |
+| org-workbench                | [[https://github.com/yibie/org-workbench][yibie/org-workbench]]                     | Digital card workbench for org-mode                                    |
+| org-zettel-ref-mode          | [[https://github.com/yibie/org-zettel-ref-mode][yibie/org-zettel-ref-mode]]               | Zettelsken-style Reference Note in Org mode                            |
+| pos-tag-highlight            | [[https://github.com/yibie/pos-tag-highlight][yibie/pos-tag-highlight]]                 | Highlight prepositions and verbs using POS tagging                     |
 | terrible-template            | [[https://github.com/yonkeltron/terrible-template][yonkeltron/terrible-template]]            | Templates that don't suck, just terrible                               |
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                        | Major mode for editing Text::MicroTemplate syntax                      |
 | tx-mode                      | [[https://github.com/yoshiki/tx-mode][yoshiki/tx-mode]]                         | Major mode for editing Text::Xslate syntax                             |
