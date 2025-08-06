@@ -75,7 +75,7 @@ force:
 	(org-babel-execute-buffer)\
 	(save-buffer))" 2>&1 | (grep -v -e "((" || true)
 
-%.html: %.org
+%.html: force
 	@echo "Generating $@..."
 	@$(BATCH) $(subst html,org,$@) --eval "(progn\
 	(require 'org)\
