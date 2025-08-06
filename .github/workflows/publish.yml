@@ -1,32 +1,12 @@
-name: publish
+name: Publish
 on:
   workflow_dispatch:
   push:
-    branches: master
+    branches: main
 jobs:
-  manual:
-    name: "Generate and distribute statistics"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Configure
-        uses: magit/actions/config@main
-      - name: Install Emacs
-        uses: magit/actions/install-emacs@main
-      - name: Install Texlive
-        uses: magit/actions/install-texlive@main
-      - name: Install Org
-        uses: magit/actions/install-org@main
-      - name: Checkout statistics
-        uses: actions/checkout@v2
-        with:
-          path: self
-          fetch-depth: 0
-      - name: Generate statistics
-        run: make babel html
-        shell: bash
-        working-directory: self
-      - name: Publish statistics
-        uses: magit/actions/manual-publish@main
-        with:
-          key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  publish:
+    name: Publish
+    uses: emacscollective/workflows/.github/workflows/publish.yml@main
+    secrets:
+      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

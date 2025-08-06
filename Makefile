@@ -43,8 +43,8 @@ DEPS  += transient/lisp
 DEPS  += treepy
 DEPS  += with-editor/lisp
 
-LOAD_PATH = $(addprefix -L $(SITE_LISP),$(DEPS))
-BATCH     = $(EMACS) -Q --batch $(LOAD_PATH)
+LOAD_PATH ?= $(addprefix -L $(SITE_LISP),$(DEPS))
+BATCH      = $(EMACS) -Q --batch $(LOAD_PATH)
 
 ## Usage
 
