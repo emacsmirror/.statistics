@@ -110,9 +110,9 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5692 |   5692 |       |       |      228 |         195 |  5056 |
+| github      | 5687 |   5687 |       |       |      228 |         195 |  5053 |
 | gitlab      |  199 |    199 |       |       |       20 |          16 |   178 |
-| codeberg    |  157 |    157 |       |       |       18 |          35 |   128 |
+| codeberg    |  160 |    160 |       |       |       18 |          35 |   131 |
 | sourcehut   |   94 |     94 |       |       |       19 |           6 |    71 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   107 |
-| shelved     | 2103 |        |  2103 |       |          |             |    36 |
+| shelved     | 2108 |        |  2108 |       |          |             |    36 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   258 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9381 |   6775 |  2103 |   498 |      485 |         259 |  5964 |
+| total       | 9384 |   6773 |  2108 |   498 |      485 |         259 |  5964 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -534,10 +534,11 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (77)                | Url                                                                         |
+| Package (79)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
+| bazel                       | https://github.com/bazelbuild/emacs-bazel-mode                              |
 | buck                        | https://github.com/magit/buck                                               |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation.git              |
 | call-graph                  | https://github.com/beacoder/call-graph                                      |
@@ -575,6 +576,7 @@
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | interaction-log             | https://github.com/michael-heerdegen/interaction-log.el                     |
+| irony-eldoc                 | https://github.com/ikirill/irony-eldoc                                      |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
 | js-auto-format-mode         | https://github.com/ybiquitous/js-auto-format-mode                           |
 | kolon-mode                  | https://github.com/samvtran/kolon-mode                                      |

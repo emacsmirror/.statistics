@@ -25,6 +25,7 @@ HTML  = $(BABEL:.org=.html)
 DEPS   = borg
 DEPS  += closql
 DEPS  += compat
+DEPS  += cond-let
 DEPS  += dash
 DEPS  += elx
 DEPS  += emir
