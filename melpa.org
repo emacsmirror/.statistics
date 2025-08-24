@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (569)                | Link                                    | Summary                                                                |
+| Package (568)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -139,7 +139,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | backups-mode                 | [[https://github.com/chadbraunduin/backups-mode][chadbraunduin/backups-mode]]              | Major mode for autosaving files and listing, viewing, and reverting Em |
 | css-format                   | [[https://github.com/chalmagean/css-format.el][chalmagean/css-format.el]]                | Toggle CSS inline/multiline block format                               |
 | current-story                | [[https://github.com/charlietanksley/current-story][charlietanksley/current-story]]           | Track and insert current Pivotal Tracker                               |
-| helm-frame                   | [[https://github.com/chee/helm-frame][chee/helm-frame]]                         | Open helm buffers in a dedicated frame                                 |
 | dictem                       | [[https://github.com/cheusov/dictem][cheusov/dictem]]                          | DICT protocol client (rfc-2229) for [X]Emacs                           |
 | gitsum                       | [[https://github.com/chneukirchen/gitsum][leahneukirchen/gitsum]]                   | Basic darcsum feelalike for Git                                        |
 | twiki                        | [[https://github.com/christopherjwhite/emacs-twiki-mode][christopherjwhite/emacs-twiki-mode]]      | Mode for editing Twiki wiki files for emacs                            |
