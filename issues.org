@@ -106,8 +106,8 @@
 | sdml-mode                | github    | tree-sitter-hl     | tree-sitter        |
 | sdml-mode                | github    | tree-sitter-indent | tree-sitter-indent |
 | symbol-navigation-hydra  | github    | helm-ag            | helm-ag            |
-| symex                    | github    | tree-sitter        | tree-sitter        |
-| symex                    | github    | tsc                | tree-sitter        |
+| symex                    | github    | chimera            |                    |
+| symex                    | github    | rigpa              |                    |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
@@ -153,12 +153,12 @@
 #+results: plain-file
 | Package (8)       |   Down | Dependants      | Url                                                                                               |
 |-------------------+--------+-----------------+---------------------------------------------------------------------------------------------------|
-| clang-format      | 566091 | (clang-format+) | https://raw.githubusercontent.com/llvm/llvm-project/main/clang/tools/clang-format/clang-format.el |
+| clang-format      | 566757 | (clang-format+) | https://raw.githubusercontent.com/llvm/llvm-project/main/clang/tools/clang-format/clang-format.el |
 | darcsum           |  55062 |                 | https://hub.darcs.net/simon/darcsum/raw/darcsum.el                                                |
-| dsvn              |  62200 | (e2wm)          | https://svn.apache.org/repos/asf/subversion/trunk/contrib/client-side/emacs/dsvn.el               |
+| dsvn              |  62201 | (e2wm)          | https://svn.apache.org/repos/asf/subversion/trunk/contrib/client-side/emacs/dsvn.el               |
 | edit-list         |   3215 |                 | https://mwolson.org/static/dist/elisp/edit-list.el                                                |
-| helm-ls-svn       |   2039 | (helm)          | https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el         |
-| quack             |  16157 |                 | https://www.neilvandyke.org/quack/quack.el                                                        |
+| helm-ls-svn       |   2040 | (helm)          | https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el         |
+| quack             |  16160 |                 | https://www.neilvandyke.org/quack/quack.el                                                        |
 | taggit            |        | (mingus)        | https://raw.githubusercontent.com/pft/elisp-assorted/master/taggit.el                             |
 | tex-smart-umlauts |   2124 |                 | https://hub.darcs.net/lyro/tex-smart-umlauts/raw/tex-smart-umlauts.el                             |
 * Still imported from the wiki
