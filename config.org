@@ -42,6 +42,16 @@
 | ob-lurk         | FIXME false-positive                                 |
 | ws-butler       | FIXME mirroring from nongnu elpa is broken           |
 
+* Ignored Repositories
+#+NAME: store--delayed
+#+BEGIN_SRC emacs-lisp :var value=table--ignored-repos
+  (emir--store-table 'var-ignored-repos value)
+#+END_SRC
+#+NAME: table--ignored-repos
+| Repository                                               | Reason         |
+|----------------------------------------------------------+----------------|
+| https://github.com/madara123pain/unique-emacs-theme-pack | limited appeal |
+
 * Diverging                                                           :stats:
 :PROPERTIES:
 :ID:       48066c6f-35e6-406c-a646-01644fa003c9
