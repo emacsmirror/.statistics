@@ -39,8 +39,10 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (5) | Package     | Shelved |
+| Feature (6) | Package     | Shelved |
 |-------------+-------------+---------|
+| ci-deps     | dynaring    |         |
+| ci-deps     | symex       |         |
 | libinput    | bookiez     |         |
 | libinput    | touchgrid   |         |
 | mcp         | mcp         |         |

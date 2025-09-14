@@ -110,9 +110,9 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5698 |   5698 |       |       |      230 |         196 |  5064 |
+| github      | 5703 |   5703 |       |       |      230 |         196 |  5069 |
 | gitlab      |  197 |    197 |       |       |       20 |          16 |   176 |
-| codeberg    |  163 |    163 |       |       |       18 |          35 |   134 |
+| codeberg    |  165 |    165 |       |       |       18 |          35 |   136 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -125,13 +125,13 @@
 | file        |    8 |      8 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  136 |    136 |       |       |          |             |   107 |
-| shelved     | 2110 |        |  2110 |       |          |             |    36 |
+| shelved     | 2109 |        |  2109 |       |          |             |    36 |
 | mirror      |      |        |       |       |          |             |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   260 |
+| secondary   |      |        |       |       |          |             |   261 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9401 |   6788 |  2110 |   498 |      488 |         260 |  5980 |
+| total       | 9407 |   6795 |  2109 |   498 |      488 |         260 |  5988 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -681,6 +681,7 @@
 | consult-eglot           | consult-eglot-embark             | github    |
 | consult-gh              | consult-gh-embark                | github    |
 | consult-gh              | consult-gh-forge                 | github    |
+| consult-gh              | consult-gh-nerd-icons            | github    |
 | consult-gh              | consult-gh-with-pr-review        | github    |
 | copyit                  | copyit-pandoc                    | github    |
 | crystal-mode            | flycheck-crystal                 | github    |
