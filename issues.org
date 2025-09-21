@@ -39,10 +39,8 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (6) | Package     | Shelved |
+| Feature (5) | Package     | Shelved |
 |-------------+-------------+---------|
-| ci-deps     | dynaring    |         |
-| ci-deps     | symex       |         |
 | libinput    | bookiez     |         |
 | libinput    | touchgrid   |         |
 | mcp         | mcp         |         |
@@ -84,7 +82,7 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (19)             | Class     | Feature            | Shelved Provider   |
+| Package (21)             | Class     | Feature            | Shelved Provider   |
 |--------------------------+-----------+--------------------+--------------------|
 | easy-hugo                | github    | helm-ag            | helm-ag            |
 | easy-jekyll              | github    | helm-ag            | helm-ag            |
@@ -96,11 +94,13 @@
 | gitlab-pipeline          | github    | glab               | glab               |
 | gradle                   | sourcehut | eclim              | eclim              |
 | hyperbole                | gnu       | interaction-log    | interaction-log    |
+| imdb                     | github    | open-web           |                    |
 | magit-gitlab             | gitlab    | glab               | glab               |
 | matlab-mode              | github    | semantic-dep       |                    |
 | matlab-mode              | github    | semantic-format    |                    |
 | matlab-mode              | github    | semanticdb         |                    |
 | org-gnome                | github    | gnome-calendar     | gnome-calendar     |
+| org-link-beautify        | git       | org-media-note     |                    |
 | ox-textile               | github    | org-test           |                    |
 | rustic                   | github    | helm-ag            | helm-ag            |
 | scopeline                | github    | tree-sitter        | tree-sitter        |

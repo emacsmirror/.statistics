@@ -110,9 +110,9 @@
 | gnu-elpa    |  150 |    150 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5704 |   5704 |       |       |      230 |         197 |  5069 |
-| gitlab      |  197 |    197 |       |       |       20 |          16 |   176 |
-| codeberg    |  165 |    165 |       |       |       18 |          35 |   136 |
+| github      | 5710 |   5710 |       |       |      230 |         197 |  5075 |
+| gitlab      |  195 |    195 |       |       |       20 |          16 |   175 |
+| codeberg    |  166 |    166 |       |       |       18 |          35 |   137 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   261 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9408 |   6796 |  2109 |   498 |      488 |         261 |  5988 |
+| total       | 9413 |   6801 |  2109 |   498 |      488 |         261 |  5994 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -1063,3 +1063,11 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
+| Package (4)         | Repository                 |  Melpa | Dependants |
+|---------------------+----------------------------+--------+------------|
+| centered-window     | [[https://github.com/anler/centered-window-mode][anler/centered-window-mode]] |   7474 |            |
+| minimal-theme       | [[https://github.com/anler/minimal-theme][anler/minimal-theme]]        | 137806 |            |
+| remember-last-theme | [[https://github.com/anler/remember-last-theme][anler/remember-last-theme]]  |   3134 |            |
+| white-theme         | [[https://github.com/anler/white-theme.el][anler/white-theme.el]]       |   2368 |            |
+
+- 2025-09-21 anler: Contacted by email

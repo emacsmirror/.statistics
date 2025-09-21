@@ -38,7 +38,7 @@
    (epkgs nil [wiki]))
 #+end_src
 #+results: required-by-nonwiki
-| Dependee (13) | M | Author       | Depender                      | M | Type | Author                |
+| Dependee (12) | M | Author       | Depender                      | M | Type | Author                |
 |---------------+---+--------------+-------------------------------+---+------+-----------------------|
 | bookmark+     |   | Drew Adams   | one-key                       |   | hard | Andy Stewart          |
 | filesets+     |   | Drew Adams   | helm-filesets                 |   | soft | Graham Clark          |
@@ -63,7 +63,6 @@
 | isearch-prop  |   | Drew Adams   | zones                         |   | soft | Drew Adams            |
 | misc-fns      |   | Drew Adams   | frontside-javascript          | ✓ | soft | Frontside Engineering |
 | strings       |   | Drew Adams   | frontside-javascript          | ✓ | soft | Frontside Engineering |
-| zoom-frm      |   | Drew Adams   | hyperbole                     | ✓ | soft | Robert Weiner         |
 
 * Wiki packages
 :PROPERTIES:
