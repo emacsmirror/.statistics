@@ -39,7 +39,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (5) | Package     | Shelved |
+| Feature (4) | Package     | Shelved |
 |-------------+-------------+---------|
 | libinput    | bookiez     |         |
 | libinput    | touchgrid   |         |
@@ -49,8 +49,6 @@
 | ob-csharp   | org-contrib |         |
 | rfc2368     | emacs       |         |
 | rfc2368     | wanderlust  |         |
-| vcard       | vcard       |         |
-| vcard       | vm          |         |
 
 - 2012-09-21 (sic) vm https://gitlab.com/emacs-vm/vm/-/issues/312
 - 2024-07-01 org-gcal https://github.com/kidd/org-gcal.el/issues/250
@@ -185,3 +183,8 @@
             (epkgs nil [wiki]))
 #+end_src
 #+results: wiki-file
+
+* Various update errors
+
+- 2025-10-12 cacao-theme https://github.com/Michael-Garibaldi/cacao-theme/issues/2
+- 2025-10-12 tok-theme https://github.com/topikettunen/tok-theme/pull/3
