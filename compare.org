@@ -110,10 +110,10 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5722 |   5722 |       |       |      234 |         197 |  5084 |
+| github      | 5727 |   5727 |       |       |      234 |         197 |  5089 |
 | gitlab      |  195 |    195 |       |       |       21 |          16 |   175 |
-| codeberg    |  167 |    167 |       |       |       18 |          35 |   138 |
-| sourcehut   |   99 |     99 |       |       |       20 |           6 |    75 |
+| codeberg    |  171 |    171 |       |       |       18 |          35 |   142 |
+| sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -122,16 +122,16 @@
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
 | wiki        |  165 |    165 |       |       |          |             |       |
-| file        |    8 |      8 |       |       |          |             |       |
+| file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2112 |        |  2112 |       |          |             |    36 |
-| mirror      |      |        |       |       |          |             |    14 |
+| shelved     | 2113 |        |  2113 |       |          |             |    37 |
+| mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   261 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9432 |   6817 |  2112 |   498 |      492 |         261 |  6007 |
+| total       | 9439 |   6823 |  2113 |   498 |      492 |         261 |  6014 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -535,7 +535,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (79)                | Url                                                                         |
+| Package (80)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -553,6 +553,7 @@
 | drawille                    | https://github.com/josuah/drawille-el                                       |
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
+| edit-list                   | https://mwolson.org/static/dist/elisp/edit-list.el                          |
 | elnode                      | https://github.com/jcaw/elnode                                              |
 | elscreen-mew                | https://github.com/masutaka/elscreen-mew                                    |
 | eno                         | https://github.com/enoson/eno.el                                            |
@@ -963,14 +964,13 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
-| Package (14)      | Url                                              |
+| Package (13)      | Url                                              |
 |-------------------+--------------------------------------------------|
 | apel              | https://github.com/emacsmirror/apel              |
 | auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
 | clang-format      | https://github.com/emacsmirror/clang-format      |
 | darcsum           | https://github.com/emacsmirror/darcsum           |
 | dsvn              | https://github.com/emacsmirror/dsvn              |
-| edit-list         | https://github.com/emacsmirror/edit-list         |
 | flim              | https://github.com/emacsmirror/flim              |
 | helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
 | highlight         | https://github.com/emacsmirror/highlight         |
@@ -992,7 +992,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (36)         | Url                                                |
+| Package (37)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -1004,6 +1004,7 @@ Notes on builtin packages, which are not listed above by default.
 | drawille             | https://github.com/emacsattic/drawille             |
 | e2wm-R               | https://github.com/emacsattic/e2wm-R               |
 | edit-at-point        | https://github.com/emacsattic/edit-at-point        |
+| edit-list            | https://github.com/emacsattic/edit-list            |
 | eno                  | https://github.com/emacsattic/eno                  |
 | eshell-outline       | https://github.com/emacsattic/eshell-outline       |
 | flymake-golangci     | https://github.com/emacsattic/flymake-golangci     |

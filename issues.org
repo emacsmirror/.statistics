@@ -151,16 +151,15 @@
             (epkgs nil [file]))
 #+end_src
 #+results: plain-file
-| Package (8)       |   Down | Dependants      | Url                                                                                               |
+| Package (7)       |   Down | Dependants      | Url                                                                                               |
 |-------------------+--------+-----------------+---------------------------------------------------------------------------------------------------|
-| clang-format      | 566757 | (clang-format+) | https://raw.githubusercontent.com/llvm/llvm-project/main/clang/tools/clang-format/clang-format.el |
-| darcsum           |  55062 |                 | https://hub.darcs.net/simon/darcsum/raw/darcsum.el                                                |
-| dsvn              |  62201 | (e2wm)          | https://svn.apache.org/repos/asf/subversion/trunk/contrib/client-side/emacs/dsvn.el               |
-| edit-list         |   3215 |                 | https://mwolson.org/static/dist/elisp/edit-list.el                                                |
-| helm-ls-svn       |   2040 | (helm)          | https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el         |
-| quack             |  16160 |                 | https://www.neilvandyke.org/quack/quack.el                                                        |
+| clang-format      | 574826 | (clang-format+) | https://raw.githubusercontent.com/llvm/llvm-project/main/clang/tools/clang-format/clang-format.el |
+| darcsum           |  55078 |                 | https://hub.darcs.net/simon/darcsum/raw/darcsum.el                                                |
+| dsvn              |  62277 | (e2wm)          | https://svn.apache.org/repos/asf/subversion/trunk/contrib/client-side/emacs/dsvn.el               |
+| helm-ls-svn       |   2055 | (helm)          | https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el         |
+| quack             |  16224 |                 | https://www.neilvandyke.org/quack/quack.el                                                        |
 | taggit            |        | (mingus)        | https://raw.githubusercontent.com/pft/elisp-assorted/master/taggit.el                             |
-| tex-smart-umlauts |   2124 |                 | https://hub.darcs.net/lyro/tex-smart-umlauts/raw/tex-smart-umlauts.el                             |
+| tex-smart-umlauts |   2129 |                 | https://hub.darcs.net/lyro/tex-smart-umlauts/raw/tex-smart-umlauts.el                             |
 * Still imported from the wiki
 #+name: wiki-file
 #+begin_src emacs-lisp :post addheader('("Package" "Date" "Down" "D" "Dependants"),*this*)
