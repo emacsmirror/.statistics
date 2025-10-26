@@ -110,14 +110,14 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5727 |   5727 |       |       |      234 |         197 |  5089 |
+| github      | 5732 |   5732 |       |       |      234 |         197 |  5094 |
 | gitlab      |  195 |    195 |       |       |       21 |          16 |   175 |
-| codeberg    |  171 |    171 |       |       |       18 |          35 |   142 |
-| sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
+| codeberg    |  173 |    173 |       |       |       18 |          35 |   144 |
+| sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  119 |    119 |       |       |       14 |           6 |    97 |
+| git         |  118 |    118 |       |       |       14 |           6 |    96 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
@@ -125,13 +125,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2113 |        |  2113 |       |          |             |    37 |
+| shelved     | 2117 |        |  2117 |       |          |             |    37 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   261 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9439 |   6823 |  2113 |   498 |      492 |         261 |  6014 |
+| total       | 9450 |   6830 |  2117 |   498 |      492 |         261 |  6021 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -466,11 +466,13 @@
   (emir-nongnu-elpa--migrated-packages)
 #+end_src
 #+results: nongnu-elpa-diverging-repositories
-| Package (1) | Mirror   |                                           | Elpa   |                                    |
-|-------------+----------+-------------------------------------------+--------+------------------------------------|
-| tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist |
+| Package (2) | Mirror   |                                           | Elpa   |                                              |
+|-------------+----------+-------------------------------------------+--------+----------------------------------------------|
+| paredit     | git      | https://paredit.org/cgit/paredit.git      | git    | https://mumble.net/~campbell/git/paredit.git |
+| tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist           |
 
-- 2024-02-20 tablist: orphanage should probably be preferred
+- 2025-10-27 paredit: https://github.com/melpa/melpa/pull/9646#issuecomment-3449005786
+- 2024-02-20 tablist: Melpa also gets it from orphanage
 
 * Melpa
 :PROPERTIES:
