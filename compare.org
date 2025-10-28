@@ -110,8 +110,8 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5732 |   5732 |       |       |      234 |         197 |  5094 |
-| gitlab      |  195 |    195 |       |       |       21 |          16 |   175 |
+| github      | 5735 |   5735 |       |       |      234 |         197 |  5097 |
+| gitlab      |  192 |    192 |       |       |       21 |          16 |   172 |
 | codeberg    |  173 |    173 |       |       |       18 |          35 |   144 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
@@ -468,7 +468,7 @@
 #+results: nongnu-elpa-diverging-repositories
 | Package (2) | Mirror   |                                           | Elpa   |                                              |
 |-------------+----------+-------------------------------------------+--------+----------------------------------------------|
-| paredit     | git      | https://paredit.org/cgit/paredit.git      | git    | https://mumble.net/~campbell/git/paredit.git |
+| paredit     | git      | https://paredit.org/paredit.git           | git    | https://mumble.net/~campbell/git/paredit.git |
 | tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist           |
 
 - 2025-10-27 paredit: https://github.com/melpa/melpa/pull/9646#issuecomment-3449005786
