@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (568)                | Link                                    | Summary                                                                |
+| Package (567)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -301,7 +301,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                       | Search mail with HyperEstraier                                         |
 | jaunte                       | [[https://github.com/kawaguchi/jaunte][kawaguchi/jaunte]]                        | Cursor teleportation                                                   |
 | goby                         | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
-| 1000-words                   | [[https://github.com/kensanata/1000-words][kensanata/1000-words]]                    | Limit yourself to the most common words while writing                  |
 | bidi                         | [[https://github.com/kensanata/emacs-bidi][kensanata/emacs-bidi]]                    | Bidi support for Emacs                                                 |
 | erobot                       | [[https://github.com/kensanata/erobot][kensanata/erobot]]                        | Game with elisp functions trying to survive                            |
 | eval-sexp-in-comments        | [[https://github.com/kensanata/eval-sexp-in-comments][kensanata/eval-sexp-in-comments]]         | Evaluate sexps in comments                                             |

@@ -110,7 +110,7 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5735 |   5735 |       |       |      234 |         197 |  5097 |
+| github      | 5737 |   5737 |       |       |      234 |         198 |  5099 |
 | gitlab      |  192 |    192 |       |       |       21 |          16 |   172 |
 | codeberg    |  173 |    173 |       |       |       18 |          35 |   144 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
@@ -125,13 +125,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2117 |        |  2117 |       |          |             |    37 |
+| shelved     | 2119 |        |  2119 |       |          |             |    38 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   261 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9450 |   6830 |  2117 |   498 |      492 |         261 |  6021 |
+| total       | 9454 |   6832 |  2119 |   498 |      492 |         262 |  6024 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -466,12 +466,10 @@
   (emir-nongnu-elpa--migrated-packages)
 #+end_src
 #+results: nongnu-elpa-diverging-repositories
-| Package (2) | Mirror   |                                           | Elpa   |                                              |
-|-------------+----------+-------------------------------------------+--------+----------------------------------------------|
-| paredit     | git      | https://paredit.org/paredit.git           | git    | https://mumble.net/~campbell/git/paredit.git |
-| tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist           |
+| Package (1) | Mirror   |                                           | Elpa   |                                    |
+|-------------+----------+-------------------------------------------+--------+------------------------------------|
+| tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist |
 
-- 2025-10-27 paredit: https://github.com/melpa/melpa/pull/9646#issuecomment-3449005786
 - 2024-02-20 tablist: Melpa also gets it from orphanage
 
 * Melpa
@@ -537,7 +535,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (80)                | Url                                                                         |
+| Package (81)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -581,6 +579,7 @@
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | interaction-log             | https://github.com/michael-heerdegen/interaction-log.el                     |
 | irony-eldoc                 | https://github.com/ikirill/irony-eldoc                                      |
+| ivy-yasnippet               | https://github.com/mkcms/ivy-yasnippet                                      |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
 | js-auto-format-mode         | https://github.com/ybiquitous/js-auto-format-mode                           |
 | kolon-mode                  | https://github.com/samvtran/kolon-mode                                      |
@@ -994,7 +993,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (37)         | Url                                                |
+| Package (38)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -1020,6 +1019,7 @@ Notes on builtin packages, which are not listed above by default.
 | ido-migemo           | https://github.com/emacsattic/ido-migemo           |
 | inlineR              | https://github.com/emacsattic/inlineR              |
 | interaction-log      | https://github.com/emacsattic/interaction-log      |
+| ivy-yasnippet        | https://github.com/emacsattic/ivy-yasnippet        |
 | mic-paren            | https://github.com/emacsattic/mic-paren            |
 | number               | https://github.com/emacsattic/number               |
 | org-doing            | https://github.com/emacsattic/org-doing            |
