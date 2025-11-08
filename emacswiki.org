@@ -38,10 +38,9 @@
    (epkgs nil [wiki]))
 #+end_src
 #+results: required-by-nonwiki
-| Dependee (12) | M | Author       | Depender                      | M | Type | Author                |
+| Dependee (11) | M | Author       | Depender                      | M | Type | Author                |
 |---------------+---+--------------+-------------------------------+---+------+-----------------------|
 | bookmark+     |   | Drew Adams   | one-key                       |   | hard | Andy Stewart          |
-| filesets+     |   | Drew Adams   | helm-filesets                 |   | soft | Graham Clark          |
 | font-lock+    |   | Drew Adams   | icons-in-terminal             |   | hard | Sebastien Chapuis     |
 | font-lock+    |   | Drew Adams   | jemdoc-mode                   | ✓ | soft | Dimitar Dimitrov      |
 | frame-cmds    |   | Drew Adams   | frame-ctr                     |   | hard | Takaaki ISHIKAWA      |
