@@ -110,10 +110,10 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5726 |   5726 |       |       |      234 |         198 |  5099 |
+| github      | 5728 |   5728 |       |       |      234 |         198 |  5101 |
 | gitlab      |  192 |    192 |       |       |       21 |          16 |   172 |
-| codeberg    |  173 |    173 |       |       |       18 |          35 |   144 |
-| sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
+| codeberg    |  175 |    175 |       |       |       18 |          35 |   146 |
+| sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
@@ -128,10 +128,10 @@
 | shelved     | 2131 |        |  2131 |       |          |             |    38 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   261 |
+| secondary   |      |        |       |       |          |             |   262 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9454 |   6820 |  2131 |   498 |      492 |         262 |  6024 |
+| total       | 9457 |   6823 |  2131 |   498 |      492 |         262 |  6028 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -638,7 +638,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (146)   | Secondary package                | Class     |
+| Primary package (147)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -749,6 +749,7 @@
 | helm                    | helm-core                        | github    |
 | historian               | ivy-historian                    | github    |
 | hydra                   | lv                               | github    |
+| ical-form               | maccalfw                         | github    |
 | indent-lint             | flycheck-indent                  | github    |
 | islisp-mode             | inferior-islisp                  | gitlab    |
 | ivy                     | counsel                          | github    |
