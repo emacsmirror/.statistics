@@ -1,23 +1,8 @@
 ## Configuration
 
-DOMAIN         ?= emacsmirror.net
-PUBLIC         ?= https://$(DOMAIN)
-CFRONT_DIST    ?= E1IXJGPIOM4EUW
-PUBLISH_BUCKET ?= s3://$(DOMAIN)
-S3_ZONE        ?= s3-website.eu-central-1
-PUBLISH_S3_URL ?= http://$(DOMAIN).$(S3_ZONE).amazonaws.com
-
 EMACS           ?= emacs
 SITE_LISP       ?= ~/.config/emacs/lib/
 EPKG_REPOSITORY ?= ~/src/emacs/epkgs/
-
-SRC   = .
-DST   = /stats
-SYNC  = --exclude "*"
-SYNC += --include "*.html"
-SYNC += --exclude "index.html"
-SYNC += --exclude "borg/*"
-SYNC += --exclude "epkg/*"
 
 BABEL = $(filter-out config.org misc.org, $(wildcard *.org))
 HTML  = $(BABEL:.org=.html)
@@ -46,6 +31,11 @@ DEPS  += with-editor/lisp
 
 LOAD_PATH ?= $(addprefix -L $(SITE_LISP),$(DEPS))
 BATCH      = $(EMACS) -Q --batch $(LOAD_PATH)
+
+DOMAIN      ?= stats.emacsmirror.org
+TARGET       = $(subst .,_,$(DOMAIN)):mirror
+RCLONE      ?= rclone
+RCLONE_ARGS ?= -v
 
 ## Usage
 
@@ -85,11 +75,8 @@ force:
 	@rm -f $@~
 
 publish:
-	@echo "Uploading to $(PUBLISH_BUCKET)..."
-	@aws s3 sync $(SRC) $(PUBLISH_BUCKET)$(DST) --delete $(SYNC)
-	@echo "Performing CDN invalidation"
-	@aws cloudfront create-invalidation \
-	--distribution-id $(CFRONT_DIST) --paths "/stats/*" > /dev/null
+	@echo "Publishing to $(DOMAIN)..."
+	$(RCLONE) sync --include "*.html" $(RCLONE_ARGS) . $(TARGET)
 
 clean:
 	@echo "Cleaning..."
