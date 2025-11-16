@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (556)                | Link                                    | Summary                                                                |
+| Package (551)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -296,15 +296,10 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                       | Search mail with HyperEstraier                                         |
 | jaunte                       | [[https://github.com/kawaguchi/jaunte][kawaguchi/jaunte]]                        | Cursor teleportation                                                   |
 | goby                         | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
-| bidi                         | [[https://github.com/kensanata/emacs-bidi][kensanata/emacs-bidi]]                    | Bidi support for Emacs                                                 |
-| erobot                       | [[https://github.com/kensanata/erobot][kensanata/erobot]]                        | Game with elisp functions trying to survive                            |
 | eval-sexp-in-comments        | [[https://github.com/kensanata/eval-sexp-in-comments][kensanata/eval-sexp-in-comments]]         | Evaluate sexps in comments                                             |
-| htmlr                        | [[https://github.com/kensanata/htmlr][kensanata/htmlr]]                         | HTML rendering in Elisp                                                |
 | idle-scroll                  | [[https://github.com/kensanata/idle-scroll][kensanata/idle-scroll]]                   | Scroll down a line when Emacs is idle                                  |
 | kdic                         | [[https://github.com/kensanata/kdic][kensanata/kdic]]                          | Practice your Kanji using a dictionary                                 |
 | loops                        | [[https://github.com/kensanata/loops][kensanata/loops]]                         | Detect loops in lists                                                  |
-| mu                           | [[https://github.com/kensanata/mu][kensanata/mu]]                            | Play on a MUSH or MUD within Emacs                                     |
-| really-simple-wiki           | [[https://github.com/kensanata/really-simple-wiki][kensanata/really-simple-wiki]]            | Edit local raw wiki pages                                              |
 | sql-transform                | [[https://github.com/kensanata/sql-transform][kensanata/sql-transform]]                 | Transform SQL statements                                               |
 | toolbox                      | [[https://github.com/kensanata/toolbox][kensanata/toolbox]]                       | Create simple menus in buffers                                         |
 | unparen                      | [[https://github.com/kensanata/unparen][kensanata/unparen]]                       | Show elisp code without parenthesis'                                   |
@@ -640,25 +635,30 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (20)               | Link      |                                             |
-|----------------------------+-----------+---------------------------------------------|
-| ebuild-mode                | git       |                                             |
-| ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                      |
-| elpa-admin                 | git       |                                             |
-| geo                        | sourcehut |                                             |
-| goldendict                 | git       | [[https://repo.or.cz/goldendict.el.git]]        |
-| gpicker                    | nongnu    | [[https://savannah.nongnu.org/projects/gpicker][nongnu:gpicker]]                              |
-| gradle                     | sourcehut | [[https://git.sr.ht/~vhallac/gradle-el][vhallac/gradle-el]]                           |
-| lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]] |
-| lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                |
-| mailscripts                | git       |                                             |
-| monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                           |
-| ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]            |
-| org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]        |
-| org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]  |
-| piem                       | git       | [[https://git.kyleam.com/piem/about]]           |
-| python-pep8                | git       |                                             |
-| python-pylint              | git       |                                             |
-| rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                |
-| riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                |
-| swift-playground-mode      | gitlab    | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]]       |
+| Package (25)               | Link      |                                                        |
+|----------------------------+-----------+--------------------------------------------------------|
+| bidi                       | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?CategoryBiDi]]  |
+| ebuild-mode                | git       |                                                        |
+| ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                                 |
+| elpa-admin                 | git       |                                                        |
+| erobot                     | git       | [[http://www.geocities.com/kensanata/emacs.html]]          |
+| geo                        | sourcehut |                                                        |
+| goldendict                 | git       | [[https://repo.or.cz/goldendict.el.git]]                   |
+| gpicker                    | nongnu    | [[https://savannah.nongnu.org/projects/gpicker][nongnu:gpicker]]                                         |
+| gradle                     | sourcehut | [[https://git.sr.ht/~vhallac/gradle-el][vhallac/gradle-el]]                                      |
+| htmlr                      | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?HtmlRendering]] |
+| lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]]            |
+| lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                           |
+| mailscripts                | git       |                                                        |
+| monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                                      |
+| mu                         | git       |                                                        |
+| ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]                       |
+| org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]                   |
+| org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]             |
+| piem                       | git       | [[https://git.kyleam.com/piem/about]]                      |
+| python-pep8                | git       |                                                        |
+| python-pylint              | git       |                                                        |
+| rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                           |
+| really-simple-wiki         | git       | [[https://www.emacswiki.org/emacs/ReallySimpleWikiMode]]   |
+| riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                           |
+| swift-playground-mode      | gitlab    | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]]                  |
