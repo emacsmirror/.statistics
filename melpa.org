@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (551)                | Link                                    | Summary                                                                |
+| Package (549)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -296,11 +296,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | gnus-est                     | [[https://github.com/kawabata/gnus-est][kawabata/gnus-est]]                       | Search mail with HyperEstraier                                         |
 | jaunte                       | [[https://github.com/kawaguchi/jaunte][kawaguchi/jaunte]]                        | Cursor teleportation                                                   |
 | goby                         | [[https://github.com/kazu-yamamoto/Goby][kazu-yamamoto/Goby]]                      | WYSIWYG presentation tool                                              |
-| eval-sexp-in-comments        | [[https://github.com/kensanata/eval-sexp-in-comments][kensanata/eval-sexp-in-comments]]         | Evaluate sexps in comments                                             |
 | idle-scroll                  | [[https://github.com/kensanata/idle-scroll][kensanata/idle-scroll]]                   | Scroll down a line when Emacs is idle                                  |
 | kdic                         | [[https://github.com/kensanata/kdic][kensanata/kdic]]                          | Practice your Kanji using a dictionary                                 |
 | loops                        | [[https://github.com/kensanata/loops][kensanata/loops]]                         | Detect loops in lists                                                  |
-| sql-transform                | [[https://github.com/kensanata/sql-transform][kensanata/sql-transform]]                 | Transform SQL statements                                               |
 | toolbox                      | [[https://github.com/kensanata/toolbox][kensanata/toolbox]]                       | Create simple menus in buffers                                         |
 | unparen                      | [[https://github.com/kensanata/unparen][kensanata/unparen]]                       | Show elisp code without parenthesis'                                   |
 | wiki                         | [[https://github.com/kensanata/wiki][kensanata/wiki]]                          | Hypertext authoring the WikiWay                                        |
