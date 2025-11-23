@@ -110,8 +110,8 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5724 |   5724 |       |       |      234 |         199 |  5104 |
-| gitlab      |  192 |    192 |       |       |       21 |          16 |   172 |
+| github      | 5727 |   5727 |       |       |      234 |         199 |  5107 |
+| gitlab      |  193 |    193 |       |       |       21 |          16 |   173 |
 | codeberg    |  175 |    175 |       |       |       18 |          38 |   146 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
@@ -131,7 +131,7 @@
 | secondary   |      |        |       |       |          |             |   262 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9461 |   6825 |  2133 |   498 |      492 |         266 |  6032 |
+| total       | 9465 |   6829 |  2133 |   498 |      492 |         266 |  6036 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -1068,3 +1068,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
+| Package (2) | Repository     | Melpa | Dependants |
+|-------------+----------------+-------+------------|
+| disk        | [[https://github.com/kensanata/disk][kensanata/disk]] |  1740 |            |
+| doom        | [[https://github.com/kensanata/doom][kensanata/doom]] |  5678 | show-css   |
