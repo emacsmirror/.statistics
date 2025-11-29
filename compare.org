@@ -110,9 +110,9 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5727 |   5727 |       |       |      234 |         199 |  5107 |
+| github      | 5731 |   5731 |       |       |      234 |         198 |  5111 |
 | gitlab      |  193 |    193 |       |       |       21 |          16 |   173 |
-| codeberg    |  175 |    175 |       |       |       18 |          38 |   146 |
+| codeberg    |  176 |    176 |       |       |       18 |          39 |   147 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
@@ -125,13 +125,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2133 |        |  2133 |       |          |             |    38 |
+| shelved     | 2134 |        |  2134 |       |          |             |    39 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   262 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9465 |   6829 |  2133 |   498 |      492 |         266 |  6036 |
+| total       | 9471 |   6834 |  2134 |   498 |      492 |         266 |  6042 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -535,7 +535,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (81)                | Url                                                                         |
+| Package (82)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -565,6 +565,7 @@
 | flymake-golangci            | https://gitlab.com/shackra/flymake-golangci                                 |
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
 | fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
+| github-browse-file          | https://github.com/ozanmakes/github-browse-file                             |
 | glab                        | https://github.com/magit/glab                                               |
 | gnome-calendar              | https://github.com/NicolasPetton/gnome-calendar.el                          |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
@@ -994,7 +995,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (38)         | Url                                                |
+| Package (39)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -1011,6 +1012,7 @@ Notes on builtin packages, which are not listed above by default.
 | eshell-outline       | https://github.com/emacsattic/eshell-outline       |
 | flymake-golangci     | https://github.com/emacsattic/flymake-golangci     |
 | fold-dwim            | https://github.com/emacsattic/fold-dwim            |
+| github-browse-file   | https://github.com/emacsattic/github-browse-file   |
 | glab                 | https://github.com/emacsattic/glab                 |
 | go-autocomplete      | https://github.com/emacsattic/go-autocomplete      |
 | gogs                 | https://github.com/emacsattic/gogs                 |
