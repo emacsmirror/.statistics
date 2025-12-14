@@ -1,6 +1,5 @@
 ## Configuration
 
-EMACS           ?= emacs
 SITE_LISP       ?= ~/.config/emacs/lib/
 EPKG_REPOSITORY ?= ~/src/emacs/epkgs/
 
@@ -30,10 +29,15 @@ DEPS  += treepy
 DEPS  += with-editor/lisp
 
 LOAD_PATH ?= $(addprefix -L $(SITE_LISP),$(DEPS))
-BATCH      = $(EMACS) -Q --batch $(LOAD_PATH)
+
+EMACS       ?= emacs
+EMACS_ARGS  ?=
+EMACS_Q_ARG ?= -Q
+EMACS_BATCH ?= $(EMACS) $(EMACS_Q_ARG) --batch $(EMACS_ARGS) $(LOAD_PATH)
 
 DOMAIN      ?= stats.emacsmirror.org
 TARGET       = $(subst .,_,$(DOMAIN)):mirror
+
 RCLONE      ?= rclone
 RCLONE_ARGS ?= -v
 
@@ -58,7 +62,7 @@ force:
 
 %.org: force
 	@echo "Updating $@..."
-	@$(BATCH) $@ --eval "(progn\
+	@$(EMACS_BATCH) $@ --eval "(progn\
 	(require 'org)\
 	(setq epkg-repository \"$(EPKG_REPOSITORY)\")\
 	(setq org-confirm-babel-evaluate nil)\
@@ -68,7 +72,7 @@ force:
 
 %.html: force
 	@echo "Generating $@..."
-	@$(BATCH) $(subst html,org,$@) --eval "(progn\
+	@$(EMACS_BATCH) $(subst html,org,$@) --eval "(progn\
 	(require 'org)\
 	(defun org-babel-check-evaluate (_) nil)\
 	(org-html-export-to-html))"
