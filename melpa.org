@@ -67,7 +67,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (549)                | Link                                    | Summary                                                                |
+| Package (547)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -410,8 +410,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | rcirc-robots                 | [[https://github.com/nicferrier/rcirc-robots][nicferrier/rcirc-robots]]                 | Robots based on rcirc irc                                              |
 | skinny                       | [[https://github.com/nicferrier/skinny][nicferrier/skinny]]                       | A blog engine with elnode                                              |
 | btc-ticker                   | [[https://github.com/niedbalski/emacs-btc-ticker][niedbalski/emacs-btc-ticker]]             | Shows latest bitcoin price                                             |
-| git-gutter-fringe+           | [[https://github.com/nonsequitur/git-gutter-fringe-plus][nonsequitur/git-gutter-fringe-plus]]      | Fringe version of git-gutter+.el                                       |
-| git-gutter+                  | [[https://github.com/nonsequitur/git-gutter-plus][nonsequitur/git-gutter-plus]]             | Manage Git hunks straight from the buffer                              |
 | ssl-mode                     | [[https://github.com/npc3/ssl-mode][npc3/ssl-mode]]                           | Emacs Major mode for S/SL files                                        |
 | async-eval                   | [[https://github.com/nschum/async-eval.el][nschum/async-eval.el]]                    | Execute Emacs lisp in a separate process                               |
 | compile-bookmarks            | [[https://github.com/nschum/compile-bookmarks.el][nschum/compile-bookmarks.el]]             | Bookmarks for compilation commands                                     |
