@@ -110,7 +110,7 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5730 |   5730 |       |       |      235 |         198 |  5111 |
+| github      | 5733 |   5733 |       |       |      235 |         198 |  5114 |
 | gitlab      |  193 |    193 |       |       |       21 |          16 |   173 |
 | codeberg    |  176 |    176 |       |       |       18 |          39 |   147 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
@@ -128,10 +128,10 @@
 | shelved     | 2136 |        |  2136 |       |          |             |    39 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   262 |
+| secondary   |      |        |       |       |          |             |   263 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9472 |   6833 |  2136 |   498 |      493 |         266 |  6042 |
+| total       | 9475 |   6836 |  2136 |   498 |      493 |         266 |  6046 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -901,6 +901,7 @@
 | zetteldesk              | zetteldesk-kb                    | github    |
 | zetteldesk              | zetteldesk-ref                   | github    |
 | zetteldesk              | zetteldesk-remark                | github    |
+| zk                      | zk-consult                       | github    |
 | zk                      | zk-desktop                       | github    |
 | zk                      | zk-index                         | github    |
 
