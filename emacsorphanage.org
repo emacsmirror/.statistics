@@ -52,9 +52,6 @@ mirrored on the Emacsmirror, while a ✔ in the /M/ column means that
 a package is available from Melpa.
 
 * Dropped of by maintainer
-:PROPERTIES:
-:ID:       c3c2ed97-b25b-4826-9501-b1020ee035f2
-:END:
 #+name: dropped
 #+begin_src emacs-lisp
   (emir--list-orphans (list "dropped by maintainer"))
@@ -151,9 +148,6 @@ a package is available from Melpa.
 | zoom-window          | ✔ | ✔ |
 
 * Upstream has disappeared but there are dependents
-:PROPERTIES:
-:ID:       5428bc8d-7949-40ff-bcca-d21fcbf4849e
-:END:
 
 The upstream repository or file download for these packages has
 disappeared.
@@ -188,9 +182,6 @@ that are available from there).
 | tail        | ✔ |   |
 
 * Upstream is unresponsive but there are issues
-:PROPERTIES:
-:ID:       f8703683-84ea-4a2c-9774-83bb3703aac8
-:END:
 
 The upstream repositories for these packages still existed (or at
 least they still existed when the packages were added here), but the
@@ -228,9 +219,6 @@ the orphanage to fix these issues.
 | yafolding              | ✔ | ✔ |
 
 * Wiki packages needed by non-wiki packages
-:PROPERTIES:
-:ID:       09e75274-9792-4670-8847-507cd2b28776
-:END:
 
 These packages are being distributed on the Emacswiki and other
 packages that are not distributed on the Emacswiki depend on them.
@@ -291,9 +279,6 @@ don't do that.
 | yaoddmuse        | ✔ |   |
 
 * New
-:PROPERTIES:
-:ID:       facb6c4a-6c45-487b-b099-54f8677cccd6
-:END:
 #+name: new
 #+begin_src emacs-lisp
   (emir--list-orphans (list nil))

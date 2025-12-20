@@ -34,9 +34,6 @@
 | heex-ts-mode   | [[https://github.com/wkirschbaum/heex-ts-mode][wkirschbaum/heex-ts-mode]]   |
 
 * Missing from Melpa
-:PROPERTIES:
-:ID:       7d6ef98f-8f71-4f28-8e89-532d5b48d61a
-:END:
 
 The below packages, which are available from the Emacsmirror, are
 missing from Melpa.  Not all of those packages should be added to
@@ -47,9 +44,6 @@ minimal requirements.
 Also see https://github.com/melpa/melpa/issues/7892.
 
 ** Github
-:PROPERTIES:
-:ID:       6a667542-10c1-4c12-a4f3-839be669c2f2
-:END:
 #+name: missing-github
 #+begin_src emacs-lisp :post addheader('(1 "Package" "Link" "Summary"),*this*)
   (seq-keep (pcase-lambda (`(,name ,summary))
@@ -618,9 +612,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | csp-mode                     | [[https://github.com/zonix/csp-mode][zonix/csp-mode]]                          | Major mode for editing CSP specification in Emacs                      |
 
 ** Other Git
-:PROPERTIES:
-:ID:       1b55899d-76c8-48a1-9a39-94adc009695e
-:END:
 #+name: missing
 #+begin_src emacs-lisp :post addheader('("Package" "Link"),*this*)
   (seq-keep (pcase-lambda (`(,name ,type))

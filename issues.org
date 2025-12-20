@@ -13,9 +13,6 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Features provided by multiple packages
-:PROPERTIES:
-:ID:       e4c34285-f734-4953-b929-acfc1a9c0730
-:END:
 #+name: conflict
 #+begin_src emacs-lisp :post addheader('("Feature" "Package" "Shelved"),*this*)
   (let (alist)
@@ -50,9 +47,6 @@
 - 2025-12-20 ob-csharp is part of org now but hasn't made it into release yet
 
 * Packages with unsatisfied dependencies
-:PROPERTIES:
-:ID:       df7b903f-ebf1-4803-aa97-1a4eac38b08f
-:END:
 #+name: unsatisfied
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Shelved Provider"),*this*)
   (mapcan
@@ -114,9 +108,6 @@
   - magit-gitlab  https://gitlab.com/arvidnl/magit-gitlab/-/issues/8
 
 * Missing library summary
-:PROPERTIES:
-:ID:       1fa0f49e-3f96-446a-a9ad-048591c91dd0
-:END:
 #+name: missing-summary
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "M"),*this*)
   (epkg--sql-keep

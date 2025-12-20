@@ -13,9 +13,6 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Add provided features
-:PROPERTIES:
-:ID:       e4844f48-a3c2-4e4c-86fd-a2e5104938e6
-:END:
 #+name: provided-join
 #+begin_src emacs-lisp :post addheader('(3 "Package" "Class" "Feature" "Reason"),*this*)
   (epkg-sql
@@ -56,9 +53,6 @@
 | xeft                   | sourcehut | xapian-lite                 | provided by module                        |
 
 * Drop provided features
-:PROPERTIES:
-:ID:       287c7fda-8210-4590-b5c1-42d746348cf9
-:END:
 #+name: provided-drop
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Reason"),*this*)
   (epkg-sql
@@ -87,9 +81,6 @@
 - 2025-12-20 claude-code-ide https://github.com/manzaltu/claude-code-ide.el/pull/144
 
 * Drop required features
-:PROPERTIES:
-:ID:       17fd0158-6dd9-42f2-8c71-5839839c30dd
-:END:
 #+name: required-drop
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Reason"),*this*)
   (epkg-sql
@@ -209,9 +200,6 @@
 | yatex                          | hg        | hilit19                  | backward compatibility                            |
 
 * Patched packages
-:PROPERTIES:
-:ID:       c76cd7ab-1ba6-4256-96f8-05a147bd58ac
-:END:
 #+name: patched
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Commits"),*this*)
   (epkg--sql-keep
@@ -261,9 +249,6 @@
 - tenv: Bundles third-party ~el-expectations.el~.
 
 * Filtered repositories
-:PROPERTIES:
-:ID:       b747ad33-ce62-48f8-9b91-852470cee627
-:END:
 #+name: filtered-subtree
 #+begin_src emacs-lisp :post addheader('("Package" "Modified" "M" "Url"),*this*)
   (mapcar (pcase-lambda (`(,name ,args ,url))
@@ -315,9 +300,6 @@ Other repositories that should be filtered (or better yet, split up by upstream)
 - ninja-mode: https://github.com/ninja-build/ninja/issues/2213
 
 * Set main library
-:PROPERTIES:
-:ID:       43de71ec-d382-4b53-acdf-562cca94ef62
-:END:
 #+name: no-mainlib
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "M" "Library"),*this*)
   (epkg--sql-keep
@@ -336,9 +318,6 @@ Other repositories that should be filtered (or better yet, split up by upstream)
 #+results: no-mainlib
 
 * Set tracked branch
-:PROPERTIES:
-:ID:       143977ed-3e79-4a30-ab35-f2b2123addf1
-:END:
 #+name: set-branch
 #+begin_src emacs-lisp :post addheader('("Package" "Branch" "Class" "Repo"),*this*)
   (epkg--sql-keep

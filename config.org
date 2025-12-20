@@ -9,9 +9,6 @@
 #+END_SRC
 :END:
 * Builtin-Preferred
-:PROPERTIES:
-:ID:       e284225e-7f88-4e5f-8dc8-2c88a5ed088d
-:END:
 #+NAME: store--builtin-preferred
 #+BEGIN_SRC emacs-lisp :var value=table--builtin-preferred
   (emir--store-table 'var-builtin-preferred value)
@@ -25,9 +22,6 @@
 | seq        | backport of builtin |
 
 * Delayed                                                            :config:
-:PROPERTIES:
-:ID:       26d97031-fe4d-4790-b0c3-b4d5b3288837
-:END:
 #+NAME: store--delayed
 #+BEGIN_SRC emacs-lisp :var value=table--delayed
   (emir--store-table 'var-delayed value)
@@ -53,9 +47,6 @@
 | https://github.com/madara123pain/unique-emacs-theme-pack | limited appeal |
 
 * Diverging                                                           :stats:
-:PROPERTIES:
-:ID:       48066c6f-35e6-406c-a646-01644fa003c9
-:END:
 #+NAME: store--diverging
 #+BEGIN_SRC emacs-lisp :var value=table--diverging
   (emir--store-table 'var-diverging value)
@@ -89,9 +80,6 @@
 | rsense                       | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 | scpaste                      | pending [[https://github.com/melpa/melpa/issues/7225][#7225]]       |
 * Library                                                             :stats:
-:PROPERTIES:
-:ID:       9c3ef85e-16c3-43f2-a89b-428fd7e22a80
-:END:
 #+NAME: store--library
 #+BEGIN_SRC emacs-lisp :var value=table--library
   (emir--store-table 'var-library value)
@@ -101,9 +89,6 @@
 |---------+--------|
 
 * Minority                                                            :stats:
-:PROPERTIES:
-:ID:       43f64ee1-bfc5-4d64-a011-21c2eb57fe45
-:END:
 #+NAME: store--minority
 #+BEGIN_SRC emacs-lisp :var value=table--minority
   (emir--store-table 'var-minority value)
@@ -139,9 +124,6 @@
 | wn-org              | all-in-one repo  |
 
 * Orphaned                                                            :stats:
-:PROPERTIES:
-:ID:       854d92b5-3aa6-48ee-a369-1f46f1a17896
-:END:
 #+NAME: store--orphaned
 #+BEGIN_SRC emacs-lisp :var value=table--orphaned
   (emir--store-table 'var-orphanage value)
@@ -300,9 +282,6 @@
 | zoom-window            | dropped by maintainer   |
 
 * Preserved
-:PROPERTIES:
-:ID:       2af61a61-a748-4cbe-9fe3-6ca219f0a1bc
-:END:
 #+NAME: store--preserved
 #+BEGIN_SRC emacs-lisp :var value=table--preserved
   (emir--store-table 'var-preserved value)
@@ -313,9 +292,6 @@
 | flycheck-julia | still on melpa |
 
 * Repo-Sharing
-:PROPERTIES:
-:ID:       a9b3b633-f049-4bad-b203-0e3dcc8a508d
-:END:
 #+NAME: store--repo-sharing
 #+BEGIN_SRC emacs-lisp :var value=table--repo-sharing
   (emir--store-table 'var-sharing-repo value)
@@ -333,9 +309,6 @@
 | toggle             | all-in-one  by zenspider |
 
 * Secondary                                                          :kludge:
-:PROPERTIES:
-:ID:       90b8b3e1-3482-46ab-a802-31097677d88e
-:END:
 #+NAME: store--secondary
 #+BEGIN_SRC emacs-lisp :var value=table--secondary
   (emir--store-table 'var-secondary value)
@@ -355,9 +328,6 @@
 | shimbun        | w3m         |
 
 * Suspended                                                          :config:
-:PROPERTIES:
-:ID:       0948f7f1-d699-4a78-bea7-ebae620f65b5
-:END:
 #+NAME: store--suspended
 #+BEGIN_SRC emacs-lisp :var value=table--suspended
   (emir--store-table 'var-suspended value)
@@ -367,9 +337,6 @@
 |-----------------+--------------|
 
 * Homepage                                                            :input:
-:PROPERTIES:
-:ID:       997b9d87-c098-4d99-996c-3135c40ee6c3
-:END:
 #+NAME: store--homepage
 #+BEGIN_SRC emacs-lisp :var value=table--homepage
   (emir--store-table 'var-homepage value)
@@ -696,9 +663,6 @@
 | ysq-modeline              | http://www.splode.com/~friedman/software/emacs-lisp                          |
 
 * Wikipage                                                            :input:
-:PROPERTIES:
-:ID:       f1c6f145-e050-417c-98fd-e3107821813a
-:END:
 #+NAME: store--wikipage
 #+BEGIN_SRC emacs-lisp :var value=table--wikipage
   (emir--store-table 'var-wikipage value)
@@ -781,9 +745,6 @@
 | xray                | XrayPackage                          |
 
 * _
-:PROPERTIES:
-:ID:       a257fa2c-f6d4-4b85-846d-3ff314b5b4ad
-:END:
 # Local Variables:
 # indent-tabs-mode: nil
 # End:

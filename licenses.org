@@ -55,13 +55,7 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Emacsmirror
-:PROPERTIES:
-:ID:       e77d8cb8-2196-4010-a9c9-c2409af0a262
-:END:
 ** Overview
-:PROPERTIES:
-:ID:       76972dd6-699a-4e6a-a02a-4fcedc9bcde4
-:END:
 #+name: mirror-overview
 #+begin_src emacs-lisp
   (emir--format-license-table
@@ -116,9 +110,6 @@
 | total             |  6847 |     100 |
 
 ** Packages with unknown licenses
-:PROPERTIES:
-:ID:       8c2b349e-1106-4788-98a2-19eca4d3646b
-:END:
 #+name: mirror-unknown
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "License" "M"),*this*)
   (epkg--sql-keep
@@ -140,13 +131,7 @@
 | sweeprolog        | github |         |   |
 
 * Emacsattic
-:PROPERTIES:
-:ID:       57d831e0-a4c8-4a22-b325-05fd9c93920b
-:END:
 ** Overview
-:PROPERTIES:
-:ID:       e7cfe01f-8c1c-4f99-80f1-ef5019edc66c
-:END:
 #+name: attic-overview
 #+begin_src emacs-lisp
   (emir--format-license-table
@@ -196,9 +181,6 @@
 | total             |  2137 |     100 |
 
 ** Packages with unknown/custom licenses
-:PROPERTIES:
-:ID:       500171ea-ae3f-4c35-a746-4e04a690258e
-:END:
 #+name: attic-unknown
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "License" "M"),*this*)
   (epkg--sql-keep
@@ -226,9 +208,6 @@
 | youwill     | shelved | custom  |   |
 
 ** Problematic licenses
-:PROPERTIES:
-:ID:       516d7442-6e8f-49db-823e-0f02fe3b533e
-:END:
 #+name: attic-problematic
 #+begin_src emacs-lisp
   (emir--insert-attic-packages-using-licenses "GPL" "GPL-2.0-only" "EPL")

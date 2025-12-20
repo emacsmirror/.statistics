@@ -13,9 +13,6 @@
 [[https://emacsmirror.net/stats][up]]
 :END:
 * Summary
-:PROPERTIES:
-:ID:       023e4161-8c52-44e7-8f26-dfddbfc016f4
-:END:
 #+name: summary
 #+begin_src emacs-lisp
   (require 'finder-inf)
@@ -171,13 +168,7 @@
   row and listed in the "Shared repository" table below.
 
 * Emacs
-:PROPERTIES:
-:ID:       d33670d0-33bd-4db5-93d7-57357ac25678
-:END:
 ** Prefer elpa
-:PROPERTIES:
-:ID:       0d5482d5-f620-4ae4-92ab-dcc4cb096e08
-:END:
 #+name: builtin-prefer-elpa
 #+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
   (epkg-sql
@@ -191,9 +182,6 @@
 #+results: builtin-prefer-elpa
 
 ** Prefer upstream
-:PROPERTIES:
-:ID:       43da9d6f-fffb-420f-af20-96f069324cce
-:END:
 #+name: builtin-prefer-upstream
 #+begin_src emacs-lisp :post addheader('("Package" "Class"),*this*)
   (epkg-sql
@@ -214,13 +202,7 @@
 | transient    | github |
 
 * GNU Elpa
-:PROPERTIES:
-:ID:       6aff2bdd-72bd-4902-80ce-56a8d1c911f2
-:END:
 ** New
-:PROPERTIES:
-:ID:       de3995d6-9c4e-4014-8233-fd4e0e0c4440
-:END:
 #+name: gnu-elpa-new
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Url"),*this*)
   (epkg--sql-keep
@@ -236,9 +218,6 @@
 #+results: gnu-elpa-new
 
 ** Delayed
-:PROPERTIES:
-:ID:       d846eae7-e7a9-4b3b-be50-655f9736d770
-:END:
 #+name: gnu-elpa-delayed
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
   (epkg--sql-keep
@@ -255,9 +234,6 @@
 | cond-star   | core | TODO mirror |
 
 ** Unreleased
-:PROPERTIES:
-:ID:       abd15ba1-082f-411d-a557-7f5ff0e0200a
-:END:
 #+name: gnu-elpa-unreleased
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql
@@ -271,9 +247,6 @@
 #+results: gnu-elpa-unreleased
 
 ** Shelved
-:PROPERTIES:
-:ID:       b17f6889-621c-45ec-bbbd-f433ba1ab06c
-:END:
 #+name: gnu-elpa-shelved
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql
@@ -303,9 +276,6 @@
 - 2025-03-23 flymake-clippy [[notmuch-tree:thread:0000000000019d07 and (flymake-clippy)][mail]]
 
 ** Prefer builtin
-:PROPERTIES:
-:ID:       7a20ccb7-7e22-4110-aaae-02cdc725398f
-:END:
 #+name: gnu-elpa-prefer-builtin
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
   (epkg--sql-keep
@@ -351,9 +321,6 @@
 | xref                | core     |                     |
 
 ** Prefer Elpa despite :url
-:PROPERTIES:
-:ID:       14eaeffa-20a4-4e4e-a3ec-cb0711b0c08d
-:END:
 #+name: gnu-elpa-prefer-elpa
 #+begin_src emacs-lisp :post addheader('("Package" ":url"),*this*)
   (let ((alist (emir-gelpa--recipes-alist emir-gnu-elpa-repository)))
@@ -386,13 +353,7 @@
 | oauth2              | https://gitlab.com/manphiz/oauth2                 |
 
 * NonGNU Elpa
-:PROPERTIES:
-:ID:       85ff91e5-4565-433f-9e01-58cb9ff1bf03
-:END:
 ** New
-:PROPERTIES:
-:ID:       0e3e300d-2683-4600-829a-024f4c1bd34e
-:END:
 #+name: nongnu-elpa-new
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Url"),*this*)
   (epkg--sql-keep
@@ -408,9 +369,6 @@
 #+results: nongnu-elpa-new
 
 ** Delayed
-:PROPERTIES:
-:ID:       bb885ac5-e755-4cac-9766-3a40b9075926
-:END:
 #+name: nongnu-elpa-delayed
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
   (epkg--sql-keep
@@ -427,9 +385,6 @@
 | ws-butler   | internal | FIXME mirroring from nongnu elpa is broken |
 
 ** Unreleased
-:PROPERTIES:
-:ID:       20acb40f-27db-4c8f-8a10-cf5a7c84bae7
-:END:
 #+name: nongnu-elpa-unreleased
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql
@@ -443,9 +398,6 @@
 #+results: nongnu-elpa-unreleased
 
 ** Shelved
-:PROPERTIES:
-:ID:       1e805a02-8c5b-4d8d-92c0-94c38135582c
-:END:
 #+name: nongnu-elpa-shelved
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa"),*this*)
   (epkg-sql
@@ -473,13 +425,7 @@
 - 2024-02-20 tablist: Melpa also gets it from orphanage
 
 * Melpa
-:PROPERTIES:
-:ID:       eff92541-4709-4bcf-bff1-2be1120ccfbd
-:END:
 ** New
-:PROPERTIES:
-:ID:       80bbc73b-c1ad-4dc1-b86c-39e8f7b3bb70
-:END:
 #+name: melpa-new
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Melpa" "Link"),*this*)
   (epkg--sql-keep
@@ -499,9 +445,6 @@
 #+results: melpa-new
 
 ** Delayed
-:PROPERTIES:
-:ID:       5f94df6a-24e1-4e74-a16a-0649c669a526
-:END:
 #+name: melpa-delayed
 #+begin_src emacs-lisp :post addheader('("Package" "Melpa" "Reason"),*this*)
   (epkg--sql-keep
@@ -522,9 +465,6 @@
 | ws-butler       | git    | FIXME mirroring from nongnu elpa is broken           |
 
 ** Shelved
-:PROPERTIES:
-:ID:       ad356942-4584-4cef-8292-1cdba76e5845
-:END:
 #+name: melpa-shelved
 #+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
   (epkg-sql
@@ -622,9 +562,6 @@
 | wordsmith-mode              | https://github.com/istib/wordsmith-mode                                     |
 
 ** Shared repositories
-:PROPERTIES:
-:ID:       cb112869-6eb7-4a10-9d20-6868d2885461
-:END:
 #+name: secondary-packages
 #+begin_src emacs-lisp :post addheader('("Primary package" "Secondary package" "Class"),*this*)
   (epkg-sql
@@ -906,9 +843,6 @@
 | zk                      | zk-index                         | github    |
 
 ** Diverging repositories
-:PROPERTIES:
-:ID:       493d7e47-cfad-4cbe-b8fb-643a63306fe5
-:END:
 #+name: melpa-diverging-repositories
 #+begin_src emacs-lisp :post addheader('("Package" "Mirror" "" "Melpa" ""),*this*)
   (mapcar (pcase-lambda (`(,name ,type ,url ,fetcher ,murl))
@@ -939,9 +873,6 @@ Notes on builtin packages, which are not listed above by default.
   Emacs channels, and this repository is being archived."
 
 ** Diverging branches
-:PROPERTIES:
-:ID:       4739083e-ce34-4e33-84e5-f9bfd77b218f
-:END:
 #+name: melpa-diverging-branches
 #+begin_src emacs-lisp :post addheader('("Package" "Used" "Forced" "Melpa" "Class" "Fetcher" "Repo"),*this*)
   (mapcar (pcase-lambda (`(,name . ,rest))
@@ -957,9 +888,6 @@ Notes on builtin packages, which are not listed above by default.
 - 2024-03-30 ws-butler https://github.com/melpa/melpa/pull/9366#issuecomment-2764728664
 
 ** From Emacsmirror
-:PROPERTIES:
-:ID:       df84d811-660f-4800-9cad-5e34c7b6ae9b
-:END:
 #+name: melpa-from-mirror
 #+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
   (epkg-sql
@@ -985,9 +913,6 @@ Notes on builtin packages, which are not listed above by default.
 | wanderlust        | https://github.com/emacsmirror/wanderlust        |
 
 ** From Emacsattic
-:PROPERTIES:
-:ID:       0b98c697-7373-40b2-8096-f71c9457cf55
-:END:
 #+name: melpa-from-attic
 #+begin_src emacs-lisp :post addheader('("Package" "Url"),*this*)
   (epkg-sql
@@ -1039,13 +964,7 @@ Notes on builtin packages, which are not listed above by default.
 | wordsmith-mode       | https://github.com/emacsattic/wordsmith-mode       |
 
 * Github                                                           :noexport:
-:PROPERTIES:
-:ID:       402d9d91-94f5-4412-b57d-1dd0ae9adc55
-:END:
 ** Archived repositories
-:PROPERTIES:
-:ID:       a621dd5e-a206-4dad-b03f-deb33c0960db
-:END:
 #+name: github-archived
 #+begin_src emacs-lisp :post addheader('("Package" "Repository" "Melpa" "Dependants"),*this*)
   (epkg--sql-keep
@@ -1058,9 +977,6 @@ Notes on builtin packages, which are not listed above by default.
 #+results: github-archived
 
 ** Removed repositories
-:PROPERTIES:
-:ID:       c9985064-5573-4119-acd0-5b8bf08902ae
-:END:
 #+name: github-removed
 #+begin_src emacs-lisp :post addheader('("Package" "Repository" "Melpa" "Dependants"),*this*)
   (epkg--sql-keep
