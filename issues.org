@@ -80,11 +80,10 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (21)             | Class     | Feature                 | Shelved Provider   |
+| Package (20)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
 | easy-jekyll              | github    | helm-ag                 | helm-ag            |
-| eca                      | github    | whisper                 |                    |
 | eev                      | github    | lean4-mode              |                    |
 | evil-textobj-tree-sitter | github    | tree-sitter             | tree-sitter        |
 | flex-compile             | github    | slite                   |                    |

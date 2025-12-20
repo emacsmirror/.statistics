@@ -471,7 +471,7 @@
 - autopair https://github.com/joaotavora/autopair
 - autorevert https://git.savannah.gnu.org/git/emacs.git
 - autorevert-tail-truncate https://github.com/shipmints/autorevert-tail-truncate.el
-- autoscratch https://github.com/TLINDEN/autoscratch
+- autoscratch https://codeberg.org/scip/autoscratch
 - autosmiley https://github.com/emacsmirror/emacswiki.org
 - autotetris-mode https://github.com/skeeto/autotetris-mode
 - autothemer https://github.com/jasonm23/autothemer
@@ -1286,7 +1286,7 @@
 - conda https://github.com/necaris/conda.el
 - conda-project https://github.com/gilbertwong96/conda-project.el
 - conf-mode https://git.savannah.gnu.org/git/emacs.git
-- config-general-mode https://github.com/TLINDEN/config-general-mode
+- config-general-mode https://codeberg.org/scip/config-general-mode
 - config-parser https://github.com/lujun9972/el-config-parser
 - confluence https://github.com/emacsorphanage/confluence
 - conjecture-mode http://emacswiki.org/cgi-bin/wiki/ConjectureMode
@@ -2757,6 +2757,7 @@
 - fasd https://framagit.org/steckerhalter/emacs-fasd.git
 - fasm-mode https://github.com/Fanael/fasm-mode
 - fast-scroll https://github.com/ahungry/fast-scroll
+- fastbuild-bff-mode https://github.com/cyberkm/fastbuild-bff-mode
 - fastdef https://github.com/redguardtoo/fastdef
 - fastfuzz https://www.eskimo.com/~seldon/fastfuzz.el
 - fastnav https://github.com/gleber/fastnav.el
@@ -3158,6 +3159,7 @@
 - folio https://github.com/dto/folio
 - follow https://git.savannah.gnu.org/git/emacs.git
 - follow-mouse https://github.com/emacsmirror/emacswiki.org
+- followcursor-mode https://codeberg.org/scip/followcursor-mode
 - font-lock+ https://github.com/emacsmirror/emacswiki.org
 - font-lock-cl https://github.com/font-lock-cl/font-lock-cl
 - font-lock-ext https://github.com/sensorflo/font-lock-ext
@@ -3596,6 +3598,7 @@
 - gptel-aibo https://github.com/dolmens/gptel-aibo
 - gptel-commit https://github.com/lakkiy/gptel-commit
 - gptel-fn-complete https://github.com/mwolson/gptel-fn-complete
+- gptel-forge-prs https://github.com/ArthurHeymans/gptel-forge-prs
 - gptel-magit https://github.com/ragnard/gptel-magit
 - gpx https://github.com/mkcms/gpx-mode
 - grab-and-drag https://github.com/emacsmirror/emacswiki.org
@@ -4657,6 +4660,7 @@
 - k8s-mode https://github.com/TxGVNN/emacs-k8s-mode
 - kaesar https://github.com/mhayashi1120/Emacs-kaesar
 - kag-mode please consult a search engine
+- kage-mode https://codeberg.org/scip/kage-mode
 - kagi https://codeberg.org/bram85/kagi.el
 - kakapo-mode https://github.com/listx/kakapo-mode
 - kakoune https://github.com/jmorag/kakoune.el
@@ -5230,6 +5234,7 @@
 - maplev http://www.k-online.com/~joer/maplev/maplev.html
 - marcopolo https://github.com/nlamirault/marcopolo
 - marginalia https://github.com/minad/marginalia
+- mark-copy-yank-things-mode https://codeberg.org/scip/mark-copy-yank-things-mode
 - mark-forward-sexp https://github.com/rlister/mark-forward-sexp
 - mark-lines https://github.com/emacsmirror/emacswiki.org
 - mark-multiple https://github.com/magnars/mark-multiple.el
@@ -5240,6 +5245,7 @@
 - markchars https://git.savannah.gnu.org/git/emacs/elpa.git
 - markdown-changelog https://github.com/plandes/markdown-changelog
 - markdown-edit-indirect https://github.com/emacs-pe/markdown-edit-indirect.el
+- markdown-mermaid https://github.com/pasunboneleve/markdown-mermaid
 - markdown-mode https://github.com/jrblevin/markdown-mode
 - markdown-mode+ https://github.com/milkypostman/markdown-mode-plus
 - markdown-preview-eww https://github.com/niku/markdown-preview-eww
@@ -5655,6 +5661,7 @@
 - mz-comment-fix https://github.com/emacsmirror/emacswiki.org
 - n4js https://github.com/tmtxt/n4js.el
 - nadvice https://git.savannah.gnu.org/git/emacs.git
+- nael https://codeberg.org/mekeor/nael
 - naga-theme https://github.com/kenranunderscore/emacs-naga-theme
 - naked https://github.com/emacsmirror/emacswiki.org
 - name-this-color https://github.com/knl/name-this-color.el
@@ -5824,6 +5831,7 @@
 - notmuch-unread please consult a search engine
 - nov https://depp.brause.cc/nov.el.git
 - nova-theme https://github.com/muirdm/emacs-nova-theme
+- novel-mode https://codeberg.org/scip/novel-mode
 - novice https://git.savannah.gnu.org/git/emacs.git
 - novice+ https://github.com/emacsmirror/emacswiki.org
 - noweb http://www.loveshack.ukfsn.org/emacs/noweb.el
@@ -5908,6 +5916,7 @@
 - ob-diagrams https://github.com/bergey/org-babel-diagrams
 - ob-drawtiming https://github.com/perfab71/ob-drawtiming
 - ob-dsq https://github.com/fritzgrabo/ob-dsq
+- ob-duckdb https://github.com/gggion/ob-duckdb
 - ob-elixir https://github.com/zweifisch/ob-elixir
 - ob-elm https://github.com/BonfaceKilz/ob-elm
 - ob-elvish https://github.com/zzamboni/ob-elvish
@@ -7466,6 +7475,7 @@
 - rotate https://github.com/daichirata/emacs-rotate
 - rotate-text https://github.com/nschum/rotate-text.el
 - roy-mode https://github.com/folone/roy-mode
+- royal-hemlock-theme https://github.com/vs-123/royal-hemlock-theme
 - rpm please consult a search engine
 - rpm-spec-mode https://github.com/Thaodan/rpm-spec-mode
 - rpn-calc https://github.com/zk-phi/rpn-calc
@@ -8967,7 +8977,7 @@
 - viewer https://github.com/rubikitch/viewer
 - viewtex https://splode.com/~friedman/software/emacs-lisp/src/viewtex.el
 - vigenere https://git.savannah.gnu.org/git/emacs/elpa.git
-- viking-mode https://github.com/TLINDEN/viking-mode
+- viking-mode https://codeberg.org/scip/viking-mode
 - vim-elscreen http://www.emacswiki.org/cgi-bin/wiki/download/vim-elscreen.el
 - vim-empty-lines-mode https://github.com/jmickelin/vim-empty-lines-mode
 - vim-mode http://www.emacswiki.org/emacs/VimMode 
@@ -9139,6 +9149,7 @@
 - which-key-posframe https://github.com/emacsorphanage/which-key-posframe
 - whiley-mode https://github.com/Whiley/WhileyEmacsMode
 - whine please consult a search engine
+- whisper https://github.com/emacselements/whisper
 - whitaker https://github.com/Fuco1/whitaker
 - white-sand-theme https://github.com/mswift42/white-sand-theme
 - white-theme https://github.com/nullvec/white-theme.el
@@ -9170,6 +9181,7 @@
 - wikipediafs please consult a search engine
 - wikirel https://github.com/emacsmirror/emacswiki.org
 - wikitext-mode https://github.com/emacsmirror/emacswiki.org
+- wiktionary-bro https://github.com/agzam/wiktionary-bro.el
 - wiktionary-swadesh please consult a search engine
 - wildcharm-theme https://github.com/habamax/wildcharm-theme
 - wilt https://github.com/sixty-north/emacs-wilt
