@@ -62,21 +62,18 @@
     :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (8)     | Class  | Feature              | Reason                |
-|-----------------+--------+----------------------+-----------------------|
-| rgb             | gitlab | el-mock              | noreply [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| rgb             | gitlab | ert-expectations     | noreply [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
-| claude-code-ide | github | flycheck             | fake provide in test  |
-| emacspeak       | github | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
-| wanderlust      | github | rfc2368              | wontfix               |
-| flim            | github | sasl                 | wontfix               |
-| flim            | github | sasl-anonymous       | wontfix               |
-| flim            | github | sasl-login           | wontfix               |
-| flim            | github | sasl-plain           | wontfix               |
-| gumshoe         | github | targets/install-deps | conflicting test file |
-| emacspeak       | github | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
-| claude-code-ide | github | vterm                | fake provide in test  |
-| claude-code-ide | github | websocket            | fake provide in test  |
+| Package (6) | Class  | Feature              | Reason                |
+|-------------+--------+----------------------+-----------------------|
+| rgb         | gitlab | el-mock              | noreply [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| rgb         | gitlab | ert-expectations     | noreply [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| emacspeak   | github | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
+| wanderlust  | github | rfc2368              | wontfix               |
+| flim        | github | sasl                 | wontfix               |
+| flim        | github | sasl-anonymous       | wontfix               |
+| flim        | github | sasl-login           | wontfix               |
+| flim        | github | sasl-plain           | wontfix               |
+| gumshoe     | github | targets/install-deps | conflicting test file |
+| emacspeak   | github | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
 
 - 2025-12-20 claude-code-ide https://github.com/manzaltu/claude-code-ide.el/pull/144
 

@@ -36,12 +36,14 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2) | Package     | Shelved |
+| Feature (3) | Package     | Shelved |
 |-------------+-------------+---------|
 | libinput    | bookiez     |         |
 | libinput    | touchgrid   |         |
 | ob-csharp   | org         |         |
 | ob-csharp   | org-contrib |         |
+| setup       | macher      |         |
+| setup       | setup       |         |
 
 - 2025-12-20 libinput https://github.com/larsmagne/bookiez.el/issues/5
 - 2025-12-20 ob-csharp is part of org now but hasn't made it into release yet
@@ -122,6 +124,9 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: missing-summary
+| Package (1) | Class  | M |
+|-------------+--------+---|
+| imbot       | github | ✓ |
 
 * Still imported from plain file
 #+name: plain-file

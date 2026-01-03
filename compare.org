@@ -107,7 +107,7 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5745 |   5745 |       |       |      236 |         199 |  5126 |
+| github      | 5757 |   5757 |       |       |      236 |         200 |  5138 |
 | gitlab      |  193 |    193 |       |       |       21 |          16 |   173 |
 | codeberg    |  184 |    184 |       |       |       18 |          39 |   151 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
@@ -125,10 +125,10 @@
 | shelved     | 2137 |        |  2137 |       |          |             |    39 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   263 |
+| secondary   |      |        |       |       |          |             |   264 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9496 |   6856 |  2137 |   498 |      494 |         267 |  6062 |
+| total       | 9508 |   6868 |  2137 |   498 |      494 |         268 |  6075 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -576,7 +576,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (147)   | Secondary package                | Class     |
+| Primary package (148)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -724,6 +724,7 @@
 | monorepo-cadadr         | paper-theme                      | codeberg  |
 | monorepo-zenitani       | smart-compile                    | github    |
 | musicbrainz             | listenbrainz                     | github    |
+| nael                    | nael-lsp                         | codeberg  |
 | nameframe               | nameframe-perspective            | github    |
 | nameframe               | nameframe-project                | github    |
 | nameframe               | nameframe-projectile             | github    |
@@ -975,6 +976,11 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
+| Package (3)                          | Repository                                 | Melpa | Dependants |
+|--------------------------------------+--------------------------------------------+-------+------------|
+| ede-php-autoload-composer-installers | [[https://github.com/xendk/ede-php-autoload-composer-installers][xendk/ede-php-autoload-composer-installers]] |   370 |            |
+| ede-php-autoload-drupal              | [[https://github.com/xendk/ede-php-autoload-drupal][xendk/ede-php-autoload-drupal]]              |   271 |            |
+| ynab                                 | [[https://github.com/thoreinstein/ynab.el][thoreinstein/ynab.el]]                       |   179 |            |
 
 ** Removed repositories
 #+name: github-removed
@@ -987,7 +993,8 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
-| Package (2) | Repository     | Melpa | Dependants |
-|-------------+----------------+-------+------------|
-| disk        | [[https://github.com/kensanata/disk][kensanata/disk]] |  1740 |            |
-| doom        | [[https://github.com/kensanata/doom][kensanata/doom]] |  5678 | show-css   |
+| Package (3)       | Repository                  | Melpa | Dependants |
+|-------------------+-----------------------------+-------+------------|
+| disk              | [[https://github.com/kensanata/disk][kensanata/disk]]              |  1740 |            |
+| doom              | [[https://github.com/kensanata/doom][kensanata/doom]]              |  5678 | show-css   |
+| helm-rubygems-org | [[https://github.com/neomantic/helm-rubygems-org][neomantic/helm-rubygems-org]] |  1748 |            |
