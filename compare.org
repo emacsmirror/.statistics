@@ -107,14 +107,14 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5757 |   5757 |       |       |      236 |         200 |  5138 |
+| github      | 5753 |   5753 |       |       |      236 |         200 |  5135 |
 | gitlab      |  193 |    193 |       |       |       21 |          16 |   173 |
-| codeberg    |  184 |    184 |       |       |       18 |          39 |   151 |
+| codeberg    |  186 |    186 |       |       |       18 |          39 |   153 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  123 |    123 |       |       |       14 |           6 |    97 |
+| git         |  124 |    124 |       |       |       14 |           6 |    98 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2137 |        |  2137 |       |          |             |    39 |
+| shelved     | 2143 |        |  2143 |       |          |             |    39 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   264 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9508 |   6868 |  2137 |   498 |      494 |         268 |  6075 |
+| total       | 9513 |   6867 |  2143 |   498 |      494 |         268 |  6075 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -475,7 +475,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (82)                | Url                                                                         |
+| Package (83)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -517,6 +517,7 @@
 | helm-mode-manager           | https://github.com/istib/helm-mode-manager                                  |
 | helm-tree-sitter            | https://github.com/Giedriusj1/helm-tree-sitter                              |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
+| imbot                       | https://github.com/QiangF/imbot                                             |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | interaction-log             | https://github.com/michael-heerdegen/interaction-log.el                     |
 | irony-eldoc                 | https://github.com/ikirill/irony-eldoc                                      |
@@ -976,11 +977,6 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-archived
-| Package (3)                          | Repository                                 | Melpa | Dependants |
-|--------------------------------------+--------------------------------------------+-------+------------|
-| ede-php-autoload-composer-installers | [[https://github.com/xendk/ede-php-autoload-composer-installers][xendk/ede-php-autoload-composer-installers]] |   370 |            |
-| ede-php-autoload-drupal              | [[https://github.com/xendk/ede-php-autoload-drupal][xendk/ede-php-autoload-drupal]]              |   271 |            |
-| ynab                                 | [[https://github.com/thoreinstein/ynab.el][thoreinstein/ynab.el]]                       |   179 |            |
 
 ** Removed repositories
 #+name: github-removed
@@ -993,8 +989,3 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
-| Package (3)       | Repository                  | Melpa | Dependants |
-|-------------------+-----------------------------+-------+------------|
-| disk              | [[https://github.com/kensanata/disk][kensanata/disk]]              |  1740 |            |
-| doom              | [[https://github.com/kensanata/doom][kensanata/doom]]              |  5678 | show-css   |
-| helm-rubygems-org | [[https://github.com/neomantic/helm-rubygems-org][neomantic/helm-rubygems-org]] |  1748 |            |
