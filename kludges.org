@@ -76,8 +76,6 @@
 | gumshoe     | github | targets/install-deps | conflicting test file |
 | emacspeak   | github | tetris               | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
 
-- 2025-12-20 claude-code-ide https://github.com/manzaltu/claude-code-ide.el/pull/144
-
 * Drop required features
 #+name: required-drop
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "Feature" "Reason"),*this*)
