@@ -36,8 +36,10 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2) | Package     | Shelved |
+| Feature (3) | Package     | Shelved |
 |-------------+-------------+---------|
+| context     | auctex      |         |
+| context     | gumshoe     |         |
 | libinput    | bookiez     |         |
 | libinput    | touchgrid   |         |
 | ob-csharp   | org         |         |
@@ -70,7 +72,7 @@
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (20)             | Class     | Feature                 | Shelved Provider   |
+| Package (21)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
 | easy-jekyll              | github    | helm-ag                 | helm-ag            |
@@ -79,6 +81,7 @@
 | flex-compile             | github    | slite                   |                    |
 | git-commit-insert-issue  | gitlab    | glab                    | glab               |
 | gradle                   | sourcehut | eclim                   | eclim              |
+| gumshoe                  | github    | completionist           |                    |
 | hyperbole                | gnu       | interaction-log         | interaction-log    |
 | imdb                     | github    | open-web                |                    |
 | magit-gitlab             | gitlab    | glab                    | glab               |

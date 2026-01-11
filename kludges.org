@@ -184,7 +184,6 @@
 | vm                             | gitlab    | atomic-extents           | XEmacs compatibility                              |
 | vm                             | gitlab    | highlight-headers        | XEmacs compatibility                              |
 | vm                             | gitlab    | timer-funcs              | XEmacs compatibility                              |
-| vm                             | gitlab    | vm-autoloads             | generated internal file                           |
 | w3                             | gnu-elpa  | dtk-css-speech           | used to be part of emacspeak, not needed          |
 | w3                             | gnu-elpa  | dtk-voices               | used to be part of emacspeak, not needed          |
 | w3                             | gnu-elpa  | w3-site-init             | leftover noise                                    |
@@ -259,30 +258,30 @@
 #+results: filtered-subtree
 | Package (24)   |   Modified | M | Url                                              |
 |----------------+------------+---+--------------------------------------------------|
-| agda2-mode     | 2023-10-06 |   | https://github.com/agda/agda                     |
-| cg             | 2022-09-30 | ✓ | git@github.com:GrammarSoft/cg3.git               |
-| cmake-mode     | 2023-10-02 | ✓ | https://gitlab.kitware.com/cmake/cmake           |
+| agda2-mode     | 2025-12-16 |   | https://github.com/agda/agda                     |
+| cg             | 2025-04-30 | ✓ | git@github.com:GrammarSoft/cg3.git               |
+| cmake-mode     | 2025-10-31 | ✓ | https://gitlab.kitware.com/cmake/cmake           |
 | cubicle-mode   | 2017-10-09 | ✓ | git@github.com:cubicle-model-checker/cubicle.git |
 | diffscuss-mode | 2014-10-14 | ✓ | https://github.com/tomheon/diffscuss             |
-| dune           | 2019-10-16 | ✓ | git@github.com:ocaml/dune.git                    |
+| dune           | 2024-04-27 | ✓ | git@github.com:ocaml/dune.git                    |
 | egison-mode    | 2020-01-08 | ✓ | git@github.com:egison/egison.git                 |
 | golint         | 2018-02-21 | ✓ | git@github.com:golang/lint.git                   |
-| govc           | 2022-05-06 | ✓ | git@github.com:vmware/govmomi.git                |
-| gvpr-mode      | 2018-10-17 | ✓ | git@github.com:rodw/gvpr-lib.git                 |
-| kivy-mode      | 2021-03-18 | ✓ | git@github.com:kivy/kivy.git                     |
-| lambdapi-mode  | 2023-07-28 | ✓ | git@github.com:Deducteam/lambdapi.git            |
-| lfe-mode       | 2021-06-03 | ✓ | git@github.com:rvirding/lfe.git                  |
+| govc           | 2025-07-01 | ✓ | git@github.com:vmware/govmomi.git                |
+| gvpr-mode      | 2023-01-26 | ✓ | git@github.com:rodw/gvpr-lib.git                 |
+| kivy-mode      | 2025-05-28 | ✓ | git@github.com:kivy/kivy.git                     |
+| lambdapi-mode  | 2025-10-24 | ✓ | git@github.com:Deducteam/lambdapi.git            |
+| lfe-mode       | 2025-07-02 | ✓ | git@github.com:rvirding/lfe.git                  |
 | mandoku        | 2018-04-03 | ✓ | git@github.com:mandoku/mandoku.git               |
 | merlin         | 2023-09-19 | ✓ | https://github.com/ocaml/merlin                  |
 | mozart         | 2017-11-11 |   | git@github.com:mozart/mozart2.git                |
-| mozc           | 2023-09-01 | ✓ | git@github.com:google/mozc.git                   |
-| password-store | 2023-05-03 | ✓ | https://git.zx2c4.com/password-store             |
-| po-mode        | 2023-10-06 | ✓ | https://git.savannah.gnu.org/git/gettext         |
-| protobuf-mode  | 2022-03-18 | ✓ | git@github.com:google/protobuf.git               |
+| mozc           | 2025-03-05 | ✓ | git@github.com:google/mozc.git                   |
+| password-store | 2025-06-18 | ✓ | https://git.zx2c4.com/password-store             |
+| po-mode        | 2026-01-02 | ✓ | https://git.savannah.gnu.org/git/gettext         |
+| protobuf-mode  | 2025-10-10 | ✓ | git@github.com:google/protobuf.git               |
 | rcodetools     | 2016-09-15 |   | git@github.com:rcodetools/rcodetools.git         |
 | stumpwm-mode   | 2018-06-29 | ✓ | git@github.com:stumpwm/stumpwm-contrib.git       |
-| thrift         | 2023-07-08 | ✓ | https://github.com/apache/thrift                 |
-| utop           | 2023-07-07 | ✓ | git@github.com:diml/utop.git                     |
+| thrift         | 2025-12-01 | ✓ | https://github.com/apache/thrift                 |
+| utop           | 2025-04-03 | ✓ | git@github.com:diml/utop.git                     |
 
 - cmake-mode: I have no account on this gitlab instance, not contacted
 - diffscuss-mode: https://github.com/tomheon/diffscuss/issues/43

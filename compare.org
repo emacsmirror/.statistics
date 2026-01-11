@@ -107,14 +107,14 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5753 |   5753 |       |       |      236 |         200 |  5135 |
+| github      | 5756 |   5756 |       |       |      236 |         200 |  5139 |
 | gitlab      |  193 |    193 |       |       |       21 |          16 |   173 |
-| codeberg    |  186 |    186 |       |       |       18 |          39 |   153 |
+| codeberg    |  189 |    189 |       |       |       19 |          39 |   156 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
-| gnu         |    8 |      8 |       |       |        9 |           0 |     3 |
+| gnu         |    8 |      8 |       |       |        9 |           0 |     2 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  124 |    124 |       |       |       14 |           6 |    98 |
+| git         |  124 |    124 |       |       |       14 |           6 |    99 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  137 |    137 |       |       |          |             |   108 |
-| shelved     | 2143 |        |  2143 |       |          |             |    39 |
+| shelved     | 2146 |        |  2146 |       |          |             |    39 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   264 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9513 |   6867 |  2143 |   498 |      494 |         268 |  6075 |
+| total       | 9522 |   6873 |  2146 |   498 |      495 |         268 |  6082 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -475,7 +475,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (83)                | Url                                                                         |
+| Package (84)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -499,6 +499,7 @@
 | eno                         | https://github.com/enoson/eno.el                                            |
 | eshell-outline              | https://git.jamzattack.xyz/eshell-outline                                   |
 | ess-smart-underscore        | https://github.com/mattfidler/ess-smart-underscore.el                       |
+| evil-lispy                  | https://github.com/mikavilpas/evil-lispy                                    |
 | flow-js2-mode               | https://github.com/Fuco1/flow-js2-mode                                      |
 | flycheck-gometalinter       | https://github.com/favadi/flycheck-gometalinter.git                         |
 | flycheck-julia              | https://github.com/gdkrmr/flycheck-julia                                    |
