@@ -107,7 +107,7 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5757 |   5757 |       |       |      236 |         201 |  5140 |
+| github      | 5762 |   5762 |       |       |      237 |         202 |  5145 |
 | gitlab      |  194 |    194 |       |       |       21 |          16 |   174 |
 | codeberg    |  190 |    190 |       |       |       19 |          39 |   157 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   264 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9525 |   6876 |  2146 |   498 |      495 |         270 |  6085 |
+| total       | 9530 |   6881 |  2146 |   498 |      496 |         271 |  6090 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -422,7 +422,8 @@
 |-------------+----------+-------------------------------------------+--------+------------------------------------|
 | tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist |
 
-- 2024-02-20 tablist: Melpa also gets it from orphanage
+- 2024-02-20 tablist: Melpa also gets it from orphanage, see [[https://github.com/politza/tablist/pull/21#issuecomment-1202422303][#21]]
+
 
 * Melpa
 ** New
