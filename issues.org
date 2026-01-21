@@ -36,16 +36,13 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (3) | Package     | Shelved |
+| Feature (2) | Package     | Shelved |
 |-------------+-------------+---------|
 | context     | auctex      |         |
 | context     | gumshoe     |         |
-| libinput    | bookiez     |         |
-| libinput    | touchgrid   |         |
 | ob-csharp   | org         |         |
 | ob-csharp   | org-contrib |         |
 
-- 2025-12-20 libinput https://github.com/larsmagne/bookiez.el/issues/5
 - 2025-12-20 ob-csharp is part of org now but hasn't made it into release yet
 
 * Packages with unsatisfied dependencies

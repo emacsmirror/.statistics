@@ -107,7 +107,7 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5762 |   5762 |       |       |      237 |         202 |  5145 |
+| github      | 5763 |   5763 |       |       |      237 |         202 |  5145 |
 | gitlab      |  194 |    194 |       |       |       21 |          16 |   174 |
 | codeberg    |  190 |    190 |       |       |       19 |          39 |   157 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   264 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9530 |   6881 |  2146 |   498 |      496 |         271 |  6090 |
+| total       | 9531 |   6882 |  2146 |   498 |      496 |         271 |  6090 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -991,3 +991,8 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: github-removed
+| Package (1) | Repository      | Melpa | Dependants |
+|-------------+-----------------+-------+------------|
+| flymake-x   | [[https://github.com/mkcms/flymake-x][mkcms/flymake-x]] |    11 |            |
+
+- 2026-01-21 flymake-x https://github.com/melpa/melpa/pull/9634#issuecomment-3771952285
