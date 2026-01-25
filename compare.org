@@ -107,14 +107,14 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5763 |   5763 |       |       |      237 |         202 |  5145 |
+| github      | 5771 |   5771 |       |       |      237 |         202 |  5151 |
 | gitlab      |  194 |    194 |       |       |       21 |          16 |   174 |
-| codeberg    |  190 |    190 |       |       |       19 |          39 |   157 |
+| codeberg    |  191 |    191 |       |       |       20 |          39 |   157 |
 | sourcehut   |   97 |     97 |       |       |       20 |           6 |    73 |
 | gnu         |    8 |      8 |       |       |        9 |           0 |     2 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  124 |    124 |       |       |       14 |           7 |    99 |
+| git         |  125 |    125 |       |       |       14 |           7 |    99 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   24 |     24 |       |       |          |             |       |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2145 |        |  2145 |       |          |             |    39 |
+| shelved     | 2144 |        |  2144 |       |          |             |    39 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   264 |
+| secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        5 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9531 |   6883 |  2145 |   498 |      496 |         271 |  6091 |
+| total       | 9540 |   6893 |  2144 |   498 |      497 |         271 |  6098 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -229,9 +229,6 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: gnu-elpa-delayed
-| Package (1) | Elpa | Reason      |
-|-------------+------+-------------|
-| cond-star   | core | TODO mirror |
 
 ** Unreleased
 #+name: gnu-elpa-unreleased
@@ -261,7 +258,7 @@
 |-------------+--------|
 | wconf       | github |
 
-- wconf: Declared obsolete [[https://github.com/ilohmar/wconf][by upstream]] but not removed yet.
+- 2025-07-20 wconf: Declared obsolete [[https://github.com/ilohmar/wconf][by upstream]] but not removed yet
 
 ** Diverging repositories
 #+name: gnu-elpa-diverging-repositories
@@ -273,7 +270,7 @@
 |----------------+--------+--------------------------------------------+--------+------------------------------------------------|
 | flymake-clippy | github | https://github.com/mgmarlow/flymake-clippy | github | https://github.com/mak-kirkland/flymake-clippy |
 
-- 2025-03-23 flymake-clippy [[notmuch-tree:thread:0000000000019d07 and (flymake-clippy)][mail]]
+- 2025-03-23 flymake-clippy https://lists.gnu.org/archive/html/emacs-devel/2025-03/msg01448.html
 
 ** Prefer builtin
 #+name: gnu-elpa-prefer-builtin
@@ -380,9 +377,6 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: nongnu-elpa-delayed
-| Package (1) | Elpa     | Reason                                     |
-|-------------+----------+--------------------------------------------|
-| ws-butler   | internal | FIXME mirroring from nongnu elpa is broken |
 
 ** Unreleased
 #+name: nongnu-elpa-unreleased
@@ -408,9 +402,6 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: nongnu-elpa-shelved
-| Package (1)  | Elpa   |
-|--------------+--------|
-| xah-fly-keys | github |
 
 ** Diverging repositories
 #+name: nongnu-elpa-diverging-repositories
@@ -423,7 +414,6 @@
 | tablist     | orphaned | https://github.com/emacsorphanage/tablist | github | https://github.com/politza/tablist |
 
 - 2024-02-20 tablist: Melpa also gets it from orphanage, see [[https://github.com/politza/tablist/pull/21#issuecomment-1202422303][#21]]
-
 
 * Melpa
 ** New
@@ -457,13 +447,11 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-delayed
-| Package (5)     | Melpa  | Reason                                               |
+| Package (3)     | Melpa  | Reason                                               |
 |-----------------+--------+------------------------------------------------------|
 | connection      | github | Don't add; part of upstream dictionary but not Emacs |
 | django-snippets | github | Don't add; part of shelved django-mode               |
 | link            | github | Don't add; part of upstream dictionary but not Emacs |
-| ob-lurk         | github | FIXME false-positive                                 |
-| ws-butler       | git    | FIXME mirroring from nongnu elpa is broken           |
 
 ** Shelved
 #+name: melpa-shelved
@@ -579,7 +567,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (148)   | Secondary package                | Class     |
+| Primary package (149)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -711,6 +699,7 @@
 | kubernetes              | kubernetes-evil                  | github    |
 | langtool                | langtool-popup                   | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
+| lurk-mode               | ob-lurk                          | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                | github    |
 | magit                   | magit-section                    | github    |
 | major-mode-hydra        | pretty-hydra                     | github    |
@@ -889,7 +878,6 @@ Notes on builtin packages, which are not listed above by default.
 | prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
 
 - 2022-08-21 prettier https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
-- 2024-03-30 ws-butler https://github.com/melpa/melpa/pull/9366#issuecomment-2764728664
 
 ** From Emacsmirror
 #+name: melpa-from-mirror
