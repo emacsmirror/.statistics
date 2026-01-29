@@ -283,6 +283,12 @@
 | thrift         | 2025-12-01 | ✓ | https://github.com/apache/thrift                 |
 | utop           | 2025-04-03 | ✓ | https://github.com/diml/utop                     |
 
+Filtering most of these packages takes 5 minutes each, or less.
+But agda2-mode takes 17 and cmake-mode takes 50; so I no longer
+update these two.  Actually I plan to explicitly update these
+two once or twice a year (but that depends on my randomly
+running into this note).  Last update was on 2026-01-29.
+
 - cmake-mode: I have no account on this gitlab instance, not contacted
 - diffscuss-mode: https://github.com/tomheon/diffscuss/issues/43
 - po-mode: mailing list, not contacted
