@@ -61,7 +61,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (548)                | Link                                    | Summary                                                                |
+| Package (549)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -373,6 +373,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | mini-popup                   | [[https://github.com/minad/mini-popup][minad/mini-popup]]                        | Show the minibuffer in a popup                                         |
 | polyp                        | [[https://github.com/minad/polyp][minad/polyp]]                             | Nested transient menus                                                 |
 | uchronia                     | [[https://github.com/minad/uchronia][minad/uchronia]]                          | Uchronia mode                                                          |
+| phscroll                     | [[https://github.com/misohena/phscroll][misohena/phscroll]]                       | Partial horizontal scroll                                              |
 | lilypond-hook                | [[https://github.com/mjago/lilypond-hook][mjago/lilypond-hook]]                     | Automatically display and play lilypond Score                          |
 | epydoc                       | [[https://github.com/mooz/epydoc][mooz/epydoc]]                             | Pydoc interface for emacs                                              |
 | cn-outline                   | [[https://github.com/mori-dev/cn-outline][mori-dev/cn-outline]]                     | Minor mode for column-number-base line folding                         |
