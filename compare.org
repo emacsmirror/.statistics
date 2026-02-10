@@ -107,7 +107,7 @@
 | gnu-elpa    |  150 |    150 |       |       |      145 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5789 |   5789 |       |       |      238 |         202 |  5168 |
+| github      | 5786 |   5786 |       |       |      238 |         202 |  5165 |
 | gitlab      |  194 |    194 |       |       |       21 |          16 |   174 |
 | codeberg    |  193 |    193 |       |       |       20 |          39 |   158 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2144 |        |  2144 |       |          |             |    39 |
+| shelved     | 2147 |        |  2147 |       |          |             |    42 |
 | mirror      |      |        |       |       |          |             |    13 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9561 |   6914 |  2144 |   498 |      499 |         271 |  6117 |
+| total       | 9561 |   6911 |  2147 |   498 |      499 |         271 |  6117 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -464,7 +464,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (84)                | Url                                                                         |
+| Package (87)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -479,6 +479,7 @@
 | cybercafe-theme             | https://github.com/gboncoffee/cybercafe-emacs-theme                         |
 | dic-lookup-w3m              | https://github.com/emacsorphanage/dic-lookup-w3m                            |
 | django-mode                 | https://github.com/unrelentingtech/django-mode                              |
+| dollaro                     | https://github.com/laynor/dollaro                                           |
 | drawille                    | https://github.com/josuah/drawille-el                                       |
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
 | edit-at-point               | https://github.com/enoson/edit-at-point.el                                  |
@@ -532,6 +533,7 @@
 | paradox                     | https://github.com/Malabarba/paradox                                        |
 | peek-mode                   | https://github.com/erikriverson/peek-mode                                   |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
+| projmake-mode               | https://github.com/ericbmerritt/projmake-mode                               |
 | protobuf-ts-mode            | https://git.ookami.one/cgit/protobuf-ts-mode                                |
 | pygn-mode                   | https://github.com/dwcoates/pygn-mode                                       |
 | quick-preview               | https://github.com/myuhe/quick-preview.el                                   |
@@ -549,6 +551,7 @@
 | tree-sitter-indent          | https://codeberg.org/FelipeLema/tree-sitter-indent.el                       |
 | tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
 | tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
+| ttl-mode                    | https://github.com/nxg/ttl-mode                                             |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch                           |
 | wordsmith-mode              | https://github.com/istib/wordsmith-mode                                     |
 
@@ -913,7 +916,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (39)         | Url                                                |
+| Package (42)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -922,6 +925,7 @@ Notes on builtin packages, which are not listed above by default.
 | company-go           | https://github.com/emacsattic/company-go           |
 | company-racer        | https://github.com/emacsattic/company-racer        |
 | dic-lookup-w3m       | https://github.com/emacsattic/dic-lookup-w3m       |
+| dollaro              | https://github.com/emacsattic/dollaro              |
 | drawille             | https://github.com/emacsattic/drawille             |
 | e2wm-R               | https://github.com/emacsattic/e2wm-R               |
 | edit-at-point        | https://github.com/emacsattic/edit-at-point        |
@@ -946,6 +950,7 @@ Notes on builtin packages, which are not listed above by default.
 | org-doing            | https://github.com/emacsattic/org-doing            |
 | org-multiple-keymap  | https://github.com/emacsattic/org-multiple-keymap  |
 | org-wunderlist       | https://github.com/emacsattic/org-wunderlist       |
+| projmake-mode        | https://github.com/emacsattic/projmake-mode        |
 | protobuf-ts-mode     | https://github.com/emacsattic/protobuf-ts-mode     |
 | quick-preview        | https://github.com/emacsattic/quick-preview        |
 | rainbow-blocks       | https://github.com/emacsattic/rainbow-blocks       |
@@ -953,6 +958,7 @@ Notes on builtin packages, which are not listed above by default.
 | session              | https://github.com/emacsattic/session              |
 | sml-modeline         | https://github.com/emacsattic/sml-modeline         |
 | tbx2org              | https://github.com/emacsattic/tbx2org              |
+| ttl-mode             | https://github.com/emacsattic/ttl-mode             |
 | wordsmith-mode       | https://github.com/emacsattic/wordsmith-mode       |
 
 * Github                                                           :noexport:

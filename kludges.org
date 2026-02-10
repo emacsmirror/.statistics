@@ -209,7 +209,7 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: patched
-| Package (15)      | Class  | Commits |
+| Package (14)      | Class  | Commits |
 |-------------------+--------+---------|
 | apel              | github |       3 |
 | auctex-latexmk    | github |       1 |
@@ -221,7 +221,6 @@
 | karma             | github |       1 |
 | lookup            | github |       1 |
 | monorepo-zenitani | github |       1 |
-| projmake-mode     | github |       1 |
 | semi              | github |       2 |
 | slime             | github |       1 |
 | tenv              | github |       1 |
