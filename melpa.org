@@ -61,7 +61,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (549)                | Link                                    | Summary                                                                |
+| Package (550)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -608,6 +608,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | mail-bug                     | [[https://github.com/yphil-dev/mail-bug][yphil-dev/mail-bug]]                      | A purely IMAP based email client for EMACS                             |
 | helm-google-contacts         | [[https://github.com/yuutayamada/helm-google-contacts][yuutayamada/helm-google-contacts]]        | Search google contacts list by helm                                    |
 | node-console                 | [[https://github.com/yuutayamada/node-console][yuutayamada/node-console]]                | Execute javascript by node.js from Emacs                               |
+| rimero-theme                 | [[https://github.com/yveszoundi/emacs-rimero-theme][yveszoundi/emacs-rimero-theme]]           | Theme with a dark background suitable for UI and terminal usage        |
 | door-gnus                    | [[https://github.com/yyr/door-gnus][yyr/door-gnus]]                           | Hack to enter, bury, unbury gnus                                       |
 | namelist-mode                | [[https://github.com/yyr/namelist-mode][yyr/namelist-mode]]                       | Major Mode for editing f90 namelist files                              |
 | monorepo-zenitani            | [[https://github.com/zenitani/elisp][zenitani/elisp]]                          | A monorepo containing unrelated packages                               |
