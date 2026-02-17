@@ -255,7 +255,7 @@
           (epkgs [name upstream-tree url] [subtree]))
 #+end_src
 #+results: filtered-subtree
-| Package (24)   |   Modified | M | Url                                              |
+| Package (23)   |   Modified | M | Url                                              |
 |----------------+------------+---+--------------------------------------------------|
 | agda2-mode     | 2026-01-22 |   | https://github.com/agda/agda                     |
 | cg             | 2025-04-30 | ✓ | https://github.com/GrammarSoft/cg3               |
@@ -275,7 +275,6 @@
 | mozart         | 2017-11-11 |   | https://github.com/mozart/mozart2                |
 | mozc           | 2025-03-05 | ✓ | https://github.com/google/mozc                   |
 | password-store | 2025-06-18 | ✓ | https://git.zx2c4.com/password-store             |
-| po-mode        | 2026-01-27 | ✓ | https://git.savannah.gnu.org/git/gettext         |
 | protobuf-mode  | 2025-10-10 | ✓ | https://github.com/google/protobuf               |
 | rcodetools     | 2016-09-15 |   | https://github.com/rcodetools/rcodetools         |
 | stumpwm-mode   | 2018-06-29 | ✓ | https://github.com/stumpwm/stumpwm-contrib       |
