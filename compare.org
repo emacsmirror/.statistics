@@ -107,11 +107,11 @@
 | gnu-elpa    |  151 |    151 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5791 |   5791 |       |       |      238 |         202 |  5169 |
+| github      | 5791 |   5791 |       |       |      237 |         203 |  5169 |
 | gitlab      |  194 |    194 |       |       |       21 |          16 |   174 |
 | codeberg    |  198 |    198 |       |       |       20 |          39 |   163 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
-| gnu         |    9 |      9 |       |       |        9 |           0 |     2 |
+| gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | git         |  126 |    126 |       |       |       14 |           7 |   100 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2148 |        |  2148 |       |          |             |    42 |
-| mirror      |      |        |       |       |          |             |    13 |
+| shelved     | 2149 |        |  2149 |       |          |             |    42 |
+| mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   265 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9574 |   6923 |  2148 |   498 |      500 |         271 |  6127 |
+| total       | 9575 |   6923 |  2149 |   498 |      500 |         272 |  6127 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -465,7 +465,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (87)                | Url                                                                         |
+| Package (88)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -514,6 +514,7 @@
 | interaction-log             | https://github.com/michael-heerdegen/interaction-log.el                     |
 | irony-eldoc                 | https://github.com/ikirill/irony-eldoc                                      |
 | ivy-yasnippet               | https://github.com/mkcms/ivy-yasnippet                                      |
+| java-snippets               | https://github.com/nekop/yasnippet-java-mode                                |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
 | js-auto-format-mode         | https://github.com/ybiquitous/js-auto-format-mode                           |
 | kolon-mode                  | https://github.com/samvtran/kolon-mode                                      |
@@ -892,7 +893,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-mirror
-| Package (13)      | Url                                              |
+| Package (12)      | Url                                              |
 |-------------------+--------------------------------------------------|
 | apel              | https://github.com/emacsmirror/apel              |
 | auctex-latexmk    | https://github.com/emacsmirror/auctex-latexmk    |
@@ -902,7 +903,6 @@ Notes on builtin packages, which are not listed above by default.
 | flim              | https://github.com/emacsmirror/flim              |
 | helm-ls-svn       | https://github.com/emacsmirror/helm-ls-svn       |
 | highlight         | https://github.com/emacsmirror/highlight         |
-| po-mode           | https://github.com/emacsmirror/po-mode           |
 | quack             | https://github.com/emacsmirror/quack             |
 | semi              | https://github.com/emacsmirror/semi              |
 | tex-smart-umlauts | https://github.com/emacsmirror/tex-smart-umlauts |

@@ -36,10 +36,8 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2) | Package     | Shelved |
+| Feature (1) | Package     | Shelved |
 |-------------+-------------+---------|
-| context     | auctex      |         |
-| context     | gumshoe     |         |
 | ob-csharp   | org         |         |
 | ob-csharp   | org-contrib |         |
 
@@ -78,7 +76,9 @@
 | flex-compile             | github    | slite                   |                    |
 | git-commit-insert-issue  | gitlab    | glab                    | glab               |
 | gradle                   | sourcehut | eclim                   | eclim              |
-| gumshoe                  | github    | completionist           |                    |
+| gumshoe                  | github    | gumshoe-completionist   |                    |
+| gumshoe                  | github    | gumshoe-consult         |                    |
+| gumshoe                  | github    | gumshoe-persp           |                    |
 | hyperbole                | gnu       | interaction-log         | interaction-log    |
 | imdb                     | github    | open-web                |                    |
 | magit-gitlab             | gitlab    | glab                    | glab               |
