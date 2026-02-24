@@ -154,6 +154,7 @@
 - aggressive-fill-paragraph https://github.com/davidshepherd7/aggressive-fill-paragraph-mode
 - aggressive-indent https://github.com/Malabarba/aggressive-indent-mode
 - agitate https://github.com/protesilaos/agitate
+- agitjo https://codeberg.org/halvin/agitjo
 - agtags https://github.com/vietor/agtags
 - ah https://github.com/takaxp/ah
 - ahg https://bitbucket.org/agriggio/ahg
@@ -334,6 +335,7 @@
 - ascii-display http://web.verbum.org/~walters
 - ascii-table https://github.com/lassik/emacs-ascii-table
 - asciidoc https://github.com/metaperl/asciidoc-el
+- asciidoc-mode https://github.com/bbatsov/asciidoc-mode
 - asdf-vm https://github.com/zellio/emacs-asdf-vm
 - asilea https://github.com/Fanael/asilea
 - asm-blox https://github.com/zkry/asm-blox
@@ -1120,7 +1122,6 @@
 - cocol https://raw.githubusercontent.com/zevlg/emacs-stuff/master/cocol.el
 - codcut https://github.com/codcut/codcut-emacs
 - code-archive https://github.com/mschuldt/code-archive
-- code-awareness https://github.com/CodeAwareness/kawa.emacs
 - code-cells https://github.com/astoff/code-cells.el
 - code-compass https://github.com/ag91/code-compass
 - code-imports https://github.com/ahyatt/code-imports
@@ -2108,7 +2109,7 @@
 - edit-indirect https://github.com/Fanael/edit-indirect
 - edit-indirect-region-latex https://github.com/niitsuma/edit-indirect-region-latex
 - edit-list https://mwolson.org/static/dist/elisp/edit-list.el
-- edit-metadata https://gitlab.epfl.ch/michael.piotrowski/edit-metadata.git
+- edit-metadata https://codeberg.org/mxpi/edit-metadata
 - edit-server https://github.com/stsquad/emacs_chrome
 - edit-server-htmlize https://github.com/frobtech/edit-server-htmlize
 - edit-thing https://github.com/deactivated/edit-thing-el
@@ -2243,6 +2244,7 @@
 - elfeed-org https://github.com/remyhonig/elfeed-org
 - elfeed-protocol https://github.com/fasheng/elfeed-protocol
 - elfeed-score https://github.com/sp1ff/elfeed-score
+- elfeed-summarize https://github.com/fritzgrabo/elfeed-summarize
 - elfeed-summary https://github.com/SqrtMinusOne/elfeed-summary
 - elfeed-tube https://github.com/karthink/elfeed-tube
 - elfeed-webkit https://github.com/fritzgrabo/elfeed-webkit
@@ -2519,6 +2521,7 @@
 - esa https://github.com/nabinno/esa.el
 - esb https://github.com/0xhenrique/esb
 - escreen https://splode.com/~friedman/software/emacs-lisp/src/escreen.el
+- eselect-news https://gitlab.com/cestrand/emacs-eselect-news
 - esense please consult a search engine
 - esh-autosuggest https://github.com/dieggsy/esh-autosuggest
 - esh-buf-stack https://github.com/tom-tan/esh-buf-stack
@@ -4714,6 +4717,7 @@
 - kapacitor https://github.com/manojm321/kapacitor-el
 - kappa https://github.com/rhz/kappa-emacs
 - karma https://github.com/tonini/karma.el
+- kawacode https://github.com/CodeAwareness/kawa.emacs
 - kbd-fns https://splode.com/~friedman/software/emacs-lisp/src/kbd-fns.el
 - kbdraw http://www.neilvandyke.org/kbdraw
 - kconfig-mode https://github.com/delaanthonio/kconfig-mode
@@ -4985,6 +4989,7 @@
 - lisp-local https://github.com/lispunion/emacs-lisp-local
 - lisp-mnt https://git.savannah.gnu.org/git/emacs.git
 - lisp-re please consult a search engine
+- lisp-semantic-hl https://github.com/calsys456/lisp-semantic-hl.el
 - lisp-skels please consult a search engine
 - lisppaste http://purl.org/NET/wence/lisppaste.el
 - lispxmp https://github.com/rubikitch/lispxmp
@@ -5216,6 +5221,7 @@
 - magithub https://github.com/vermiculus/magithub
 - magma-mode https://github.com/ThibautVerron/magma-mode
 - magnatune https://github.com/eikek/magnatune.el
+- magnus https://github.com/hrishikeshs/magnus
 - magpie https://github.com/emacsmirror/emacswiki.org
 - magrant https://github.com/p3r7/magrant
 - mail-bug https://github.com/yphil-dev/mail-bug
@@ -5285,6 +5291,7 @@
 - marginalia https://github.com/minad/marginalia
 - mark-copy-yank-things-mode https://codeberg.org/scip/mark-copy-yank-things-mode
 - mark-forward-sexp https://github.com/rlister/mark-forward-sexp
+- mark-graf https://github.com/hyperZphere/mark-graf
 - mark-lines https://github.com/emacsmirror/emacswiki.org
 - mark-multiple https://github.com/magnars/mark-multiple.el
 - mark-select https://github.com/namikister/mark-select
@@ -5977,6 +5984,7 @@
 - ob-ffuf https://github.com/daniel-ts/ob-ffuf
 - ob-fsharp https://github.com/juergenhoetzel/ob-fsharp
 - ob-git-permalink https://github.com/kijimad/ob-git-permalink
+- ob-gleam https://github.com/takeokunn/ob-gleam
 - ob-go https://github.com/pope/ob-go
 - ob-graphql https://github.com/jdormit/ob-graphql
 - ob-haxe https://github.com/ianxm/ob-haxe.el
@@ -6376,6 +6384,7 @@
 - org-tagged https://github.com/gizmomogwai/org-tagged
 - org-tanglesync https://gitlab.com/mtekman/org-tanglesync.el
 - org-taskforecast https://github.com/HKey/org-taskforecast
+- org-tempus https://github.com/rul/org-tempus
 - org-tfl https://github.com/storax/org-tfl
 - org-themis https://github.com/zellio/org-themis
 - org-tidy https://github.com/jxq0/org-tidy
@@ -6711,7 +6720,7 @@
 - perlmonks https://github.com/metaperl/emacs-perlmonks
 - perltidy https://github.com/emacsmirror/emacswiki.org
 - persist https://https.git.savannah.gnu.org/git/elpa/gnu.git
-- persist-state https://codeberg.org/bram85/emacs-persist-state
+- persist-state https://codeberg.org/meedstrom/emacs-persist-state
 - persist-text-scale https://github.com/jamescherti/persist-text-scale.el
 - persistent-overlays https://github.com/mneilly/Emacs-Persistent-Overlays
 - persistent-scratch https://github.com/Fanael/persistent-scratch
@@ -8784,6 +8793,7 @@
 - tron-legacy-theme https://github.com/ianyepan/tron-legacy-emacs-theme
 - trope-mode https://github.com/TriAttack238/trope-mode
 - trr https://github.com/kawabata/emacs-trr
+- truename-cache https://github.com/meedstrom/truename-cache
 - truthy https://github.com/rolandwalker/truthy
 - try https://github.com/larstvei/Try
 - try-code https://github.com/lewang/try-code
@@ -9299,6 +9309,7 @@
 - winnow https://github.com/dgtized/winnow.el
 - winpath https://github.com/lieutar/winpath.el
 - winpoint https://github.com/jorgenschaefer/winpoint
+- winpulse https://github.com/xenodium/winpulse
 - winring https://gitlab.com/warsaw/winring
 - winum https://github.com/deb0ch/emacs-winum
 - wipe https://github.com/didierverna/wipe

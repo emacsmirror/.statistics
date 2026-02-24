@@ -61,7 +61,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (550)                | Link                                    | Summary                                                                |
+| Package (549)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -600,7 +600,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | org-numbering                | [[https://github.com/yibie/org-numbering][yibie/org-numbering]]                     | Flexible numbering system for org-mode                                 |
 | org-supertag                 | [[https://github.com/yibie/org-supertag][yibie/org-supertag]]                      | SuperTag plugin for Org mode                                           |
 | org-workbench                | [[https://github.com/yibie/org-workbench][yibie/org-workbench]]                     | Digital card workbench for org-mode                                    |
-| org-zettel-ref-mode          | [[https://github.com/yibie/org-zettel-ref-mode][yibie/org-zettel-ref-mode]]               | Zettelsken-style Reference Note in Org mode                            |
 | pos-tag-highlight            | [[https://github.com/yibie/pos-tag-highlight][yibie/pos-tag-highlight]]                 | Highlight prepositions and verbs using POS tagging                     |
 | terrible-template            | [[https://github.com/yonkeltron/terrible-template][yonkeltron/terrible-template]]            | Templates that don't suck, just terrible                               |
 | tmt-mode                     | [[https://github.com/yoshiki/tmt-mode][yoshiki/tmt-mode]]                        | Major mode for editing Text::MicroTemplate syntax                      |
@@ -625,8 +624,9 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (29)               | Link      |                                                        |
+| Package (30)               | Link      |                                                        |
 |----------------------------+-----------+--------------------------------------------------------|
+| agitjo                     | codeberg  | [[https://codeberg.org/halvin/agitjo][halvin/agitjo]]                                          |
 | bidi                       | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?CategoryBiDi]]  |
 | ebuild-mode                | git       |                                                        |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                                 |
