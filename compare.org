@@ -104,10 +104,10 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       22 |             |       |
-| gnu-elpa    |  151 |    151 |       |       |      146 |             |       |
+| gnu-elpa    |  152 |    152 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5798 |   5798 |       |       |      237 |         203 |  5177 |
+| github      | 5798 |   5798 |       |       |      239 |         203 |  5177 |
 | gitlab      |  195 |    195 |       |       |       21 |          16 |   175 |
 | codeberg    |  200 |    200 |       |       |       20 |          39 |   164 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
@@ -126,9 +126,9 @@
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   267 |
-| unreleased  |      |        |       |       |        6 |           0 |       |
+| unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9586 |   6932 |  2151 |   498 |      501 |         272 |  6138 |
+| total       | 9587 |   6933 |  2151 |   498 |      504 |         272 |  6138 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -334,13 +334,14 @@
      [gnu-elpa]))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (12)        | :url                                              |
+| Package (13)        | :url                                              |
 |---------------------+---------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
 | bluetooth           | https://codeberg.org/rstocker/emacs-bluetooth     |
 | buildbot            | https://g.ypei.me/buildbot.el.git                 |
 | vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
+| emacs-lisp-intro-es | https://git.savannah.nongnu.org:/git/elisp-es.git |
 | org-gnosis          | https://git.thanosapollo.org/org-gnosis           |
 | clipboard-collector | https://github.com/clemera/clipboard-collector    |
 | ebdb                | https://github.com/girzel/ebdb.git                |
@@ -409,10 +410,11 @@
   (emir-nongnu-elpa--migrated-packages)
 #+end_src
 #+results: nongnu-elpa-diverging-repositories
-| Package (2)     | Mirror   |                                            | Elpa   |                                          |
-|-----------------+----------+--------------------------------------------+--------+------------------------------------------|
-| subatomic-theme | codeberg | https://codeberg.org/cryon/subatomic-theme | github | https://github.com/cryon/subatomic-theme |
-| tablist         | orphaned | https://github.com/emacsorphanage/tablist  | github | https://github.com/politza/tablist       |
+| Package (3)     | Mirror   |                                                  | Elpa   |                                                    |
+|-----------------+----------+--------------------------------------------------+--------+----------------------------------------------------|
+| afternoon-theme | github   | https://github.com/ozanvos/emacs-afternoon-theme | github | https://github.com/ozanmakes/emacs-afternoon-theme |
+| subatomic-theme | codeberg | https://codeberg.org/cryon/subatomic-theme       | github | https://github.com/cryon/subatomic-theme           |
+| tablist         | orphaned | https://github.com/emacsorphanage/tablist        | github | https://github.com/politza/tablist                 |
 
 - 2024-02-20 tablist: Melpa also gets it from orphanage, see [[https://github.com/politza/tablist/pull/21#issuecomment-1202422303][#21]]
 

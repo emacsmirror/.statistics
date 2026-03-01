@@ -85,10 +85,10 @@
 | LGPL-3.0-or-later |     9 |       0 |
 | CC0-1.0           |     7 |       0 |
 | GPL-3.0           |     6 |       0 |
+| nil               |     4 |       0 |
 | LGPL-3.0-only     |     4 |       0 |
 | MPL-2.0           |     4 |       0 |
 | Zlib              |     4 |       0 |
-| nil               |     3 |       0 |
 | 0BSD              |     3 |       0 |
 | GPL-1.0-or-later  |     3 |       0 |
 | CECILL-2.1        |     2 |       0 |
@@ -109,7 +109,7 @@
 |-------------------+-------+---------|
 | total GNU         |  6067 |      88 |
 |-------------------+-------+---------|
-| total             |  6932 |     100 |
+| total             |  6933 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -126,11 +126,12 @@
             elx-spdx-license-identifiers))
 #+end_src
 #+results: mirror-unknown
-| Package (3)       | Class  | License | M |
-|-------------------+--------+---------+---|
-| org-embed         | github |         |   |
-| pos-tag-highlight | github |         |   |
-| sweeprolog        | github |         |   |
+| Package (4)         | Class    | License | M |
+|---------------------+----------+---------+---|
+| emacs-lisp-intro-es | gnu-elpa |         |   |
+| org-embed           | github   |         |   |
+| pos-tag-highlight   | github   |         |   |
+| sweeprolog          | github   |         |   |
 
 * Emacsattic
 ** Overview
