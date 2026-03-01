@@ -107,14 +107,14 @@
 | gnu-elpa    |  152 |    152 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5798 |   5798 |       |       |      239 |         203 |  5177 |
-| gitlab      |  195 |    195 |       |       |       21 |          16 |   175 |
-| codeberg    |  200 |    200 |       |       |       20 |          39 |   164 |
+| github      | 5801 |   5801 |       |       |      239 |         204 |  5180 |
+| gitlab      |  192 |    192 |       |       |       18 |          16 |   175 |
+| codeberg    |  204 |    204 |       |       |       23 |          39 |   165 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  125 |    125 |       |       |       15 |           7 |    99 |
+| git         |  126 |    126 |       |       |       15 |           7 |   100 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   23 |     23 |       |       |          |             |       |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   267 |
 | unreleased  |      |        |       |       |        7 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9587 |   6933 |  2151 |   498 |      504 |         272 |  6138 |
+| total       | 9592 |   6938 |  2151 |   498 |      504 |         273 |  6143 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -266,11 +266,6 @@
   (emir-gnu-elpa--migrated-packages)
 #+end_src
 #+results: gnu-elpa-diverging-repositories
-| Package (1)    | Mirror |                                            | Elpa   |                                                |
-|----------------+--------+--------------------------------------------+--------+------------------------------------------------|
-| flymake-clippy | github | https://github.com/mgmarlow/flymake-clippy | github | https://github.com/mak-kirkland/flymake-clippy |
-
-- 2025-03-23 flymake-clippy https://lists.gnu.org/archive/html/emacs-devel/2025-03/msg01448.html
 
 ** Prefer builtin
 #+name: gnu-elpa-prefer-builtin
