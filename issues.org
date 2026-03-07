@@ -36,14 +36,10 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (2)  | Package      | Shelved |
+| Feature (1)  | Package      | Shelved |
 |--------------+--------------+---------|
 | copilot-chat | copilot      |         |
 | copilot-chat | copilot-chat |         |
-| ob-csharp    | org          |         |
-| ob-csharp    | org-contrib  |         |
-
-- 2025-12-20 ob-csharp is part of org now but hasn't made it into release yet
 
 * Packages with unsatisfied dependencies
 #+name: unsatisfied

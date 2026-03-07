@@ -107,14 +107,14 @@
 | gnu-elpa    |  152 |    152 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5801 |   5801 |       |       |      239 |         204 |  5180 |
+| github      | 5804 |   5804 |       |       |      240 |         204 |  5182 |
 | gitlab      |  192 |    192 |       |       |       18 |          16 |   175 |
 | codeberg    |  204 |    204 |       |       |       23 |          39 |   165 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
-| nongnu      |    7 |      7 |       |       |        3 |           0 |     2 |
+| nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  126 |    126 |       |       |       15 |           7 |   100 |
+| git         |  126 |    126 |       |       |       15 |           6 |   100 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   23 |     23 |       |       |          |             |       |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2151 |        |  2151 |       |          |             |    42 |
+| shelved     | 2152 |        |  2152 |       |          |             |    42 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   267 |
-| unreleased  |      |        |       |       |        7 |           0 |       |
+| unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9592 |   6938 |  2151 |   498 |      504 |         273 |  6143 |
+| total       | 9596 |   6941 |  2152 |   498 |      505 |         272 |  6145 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -462,7 +462,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (88)                | Url                                                                         |
+| Package (89)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -550,6 +550,7 @@
 | tree-sitter-indent          | https://codeberg.org/FelipeLema/tree-sitter-indent.el                       |
 | tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
 | tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
+| trimspace-mode              | https://github.com/bkhl/trimspace-mode                                      |
 | ttl-mode                    | https://github.com/nxg/ttl-mode                                             |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch                           |
 | wordsmith-mode              | https://github.com/istib/wordsmith-mode                                     |
