@@ -36,10 +36,16 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (1)  | Package      | Shelved |
-|--------------+--------------+---------|
-| copilot-chat | copilot      |         |
-| copilot-chat | copilot-chat |         |
+| Feature (2)  | Package         | Shelved |
+|--------------+-----------------+---------|
+| copilot-chat | copilot         |         |
+| copilot-chat | copilot-chat    |         |
+| md-ts-mode   | md-ts-mode      |         |
+| md-ts-mode   | pi-coding-agent |         |
+
+There are always a few conflicts caused by AI-coded AI tools.  I am
+not reporting these issues upstream because the AI is producing (and
+sometimes also fixing) these issues quicker than I can report them.
 
 * Packages with unsatisfied dependencies
 #+name: unsatisfied
