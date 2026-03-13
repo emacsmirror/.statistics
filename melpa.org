@@ -61,7 +61,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (550)                | Link                                    | Summary                                                                |
+| Package (551)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -437,6 +437,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | etest                        | [[https://github.com/philjackson/etest][philjackson/etest]]                       | Run tests and get back a hierarchical set of results                   |
 | mythryl-mode                 | [[https://github.com/phr/mythryl-mode][phr/mythryl-mode]]                        | Major mode for editing Mythryl code                                    |
 | pmd                          | [[https://github.com/pmd/pmd-emacs][pmd/pmd-emacs]]                           | Major mode for plugging PMD into Emacs                                 |
+| erk                          | [[https://github.com/positron-solutions/elisp-repo-kit][positron-solutions/elisp-repo-kit]]       | Elisp (GitHub) Repository Kit                                          |
 | elpaca                       | [[https://github.com/progfolio/elpaca][progfolio/elpaca]]                        | An elisp package manager                                               |
 | helm-words                   | [[https://github.com/pronobis/helm-words][pronobis/helm-words]]                     | Helm extension for looking up words in dictionaries and thesauri       |
 | git-code-review              | [[https://github.com/psanford/git-code-review-el][psanford/git-code-review-el]]             | Code review tool for Emacs                                             |

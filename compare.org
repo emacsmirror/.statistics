@@ -104,17 +104,17 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  503 |        |       |   498 |       22 |             |       |
-| gnu-elpa    |  152 |    152 |       |       |      146 |             |       |
+| gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5815 |   5815 |       |       |      240 |         204 |  5193 |
+| github      | 5815 |   5815 |       |       |      240 |         205 |  5192 |
 | gitlab      |  192 |    192 |       |       |       18 |          16 |   175 |
 | codeberg    |  204 |    204 |       |       |       23 |          39 |   165 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  127 |    127 |       |       |       15 |           6 |   101 |
+| git         |  127 |    127 |       |       |       18 |           6 |   101 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   23 |     23 |       |       |          |             |       |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   267 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9608 |   6953 |  2152 |   498 |      505 |         272 |  6157 |
+| total       | 9608 |   6953 |  2152 |   498 |      505 |         273 |  6156 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -329,21 +329,24 @@
      [gnu-elpa]))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (13)        | :url                                              |
-|---------------------+---------------------------------------------------|
-| paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk |
-| org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el |
-| bluetooth           | https://codeberg.org/rstocker/emacs-bluetooth     |
-| buildbot            | https://g.ypei.me/buildbot.el.git                 |
-| vcl-mode            | https://git.gnu.org.ua/vcl-mode.git               |
-| emacs-lisp-intro-es | https://git.savannah.nongnu.org:/git/elisp-es.git |
-| org-gnosis          | https://git.thanosapollo.org/org-gnosis           |
-| clipboard-collector | https://github.com/clemera/clipboard-collector    |
-| ebdb                | https://github.com/girzel/ebdb.git                |
-| chess               | https://github.com/jwiegley/emacs-chess.git       |
-| ioccur              | https://github.com/thierryvolpiatto/ioccur.git    |
-| ediprolog           | https://github.com/triska/ediprolog               |
-| oauth2              | https://gitlab.com/manphiz/oauth2                 |
+| Package (16)        | :url                                                     |
+|---------------------+----------------------------------------------------------|
+| paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk        |
+| org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el        |
+| bluetooth           | https://codeberg.org/rstocker/emacs-bluetooth            |
+| parser-generator    | https://forgejo.cvj.se/cjohansson/emacs-parser-generator |
+| phps-mode           | https://forgejo.cvj.se/cjohansson/emacs-phps-mode        |
+| ssh-deploy          | https://forgejo.cvj.se/cjohansson/emacs-ssh-deploy       |
+| buildbot            | https://g.ypei.me/buildbot.el.git                        |
+| vcl-mode            | https://git.gnu.org.ua/vcl-mode.git                      |
+| emacs-lisp-intro-es | https://git.savannah.nongnu.org:/git/elisp-es.git        |
+| org-gnosis          | https://git.thanosapollo.org/org-gnosis                  |
+| clipboard-collector | https://github.com/clemera/clipboard-collector           |
+| ebdb                | https://github.com/girzel/ebdb.git                       |
+| chess               | https://github.com/jwiegley/emacs-chess.git              |
+| ioccur              | https://github.com/thierryvolpiatto/ioccur.git           |
+| ediprolog           | https://github.com/triska/ediprolog                      |
+| oauth2              | https://gitlab.com/manphiz/oauth2                        |
 
 * NonGNU Elpa
 ** New
