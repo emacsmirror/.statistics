@@ -40,8 +40,8 @@
 |--------------+-----------------+---------|
 | copilot-chat | copilot         |         |
 | copilot-chat | copilot-chat    |         |
-| md-ts-mode   | md-ts-mode      |         |
-| md-ts-mode   | pi-coding-agent |         |
+| install-deps | claude-code     |         |
+| install-deps | pi-coding-agent |         |
 
 There are always a few conflicts caused by AI-coded AI tools.  I am
 not reporting these issues upstream because the AI is producing (and
@@ -71,10 +71,11 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (21)             | Class     | Feature                 | Shelved Provider   |
+| Package (22)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
 | easy-jekyll              | github    | helm-ag                 | helm-ag            |
+| eca                      | github    | whisper                 | whisper            |
 | eev                      | github    | lean4-mode              |                    |
 | evil-textobj-tree-sitter | github    | tree-sitter             | tree-sitter        |
 | flex-compile             | github    | slite                   |                    |
