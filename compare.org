@@ -107,7 +107,7 @@
 | gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5816 |   5816 |       |       |      240 |         205 |  5193 |
+| github      | 5815 |   5815 |       |       |      240 |         205 |  5193 |
 | gitlab      |  192 |    192 |       |       |       18 |          16 |   175 |
 | codeberg    |  204 |    204 |       |       |       23 |          39 |   165 |
 | sourcehut   |   98 |     98 |       |       |       20 |           6 |    74 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2154 |        |  2154 |       |          |             |    42 |
+| shelved     | 2155 |        |  2155 |       |          |             |    42 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   269 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9611 |   6954 |  2154 |   498 |      505 |         273 |  6159 |
+| total       | 9611 |   6953 |  2155 |   498 |      505 |         273 |  6159 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -465,7 +465,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (89)                | Url                                                                         |
+| Package (90)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -517,6 +517,7 @@
 | java-snippets               | https://github.com/nekop/yasnippet-java-mode                                |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
 | js-auto-format-mode         | https://github.com/ybiquitous/js-auto-format-mode                           |
+| jss                         | https://github.com/segv/jss                                                 |
 | kolon-mode                  | https://github.com/samvtran/kolon-mode                                      |
 | lsp-python-ms               | https://github.com/emacs-lsp/lsp-python-ms                                  |
 | magit-gh-pulls              | https://github.com/sigma/magit-gh-pulls                                     |
