@@ -83,8 +83,9 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (22)             | Class     | Feature                 | Shelved Provider   |
+| Package (23)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
+| ai-code                  | github    | whisper                 | whisper            |
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
 | easy-jekyll              | github    | helm-ag                 | helm-ag            |
 | eca                      | github    | whisper                 | whisper            |

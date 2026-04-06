@@ -107,14 +107,14 @@
 | gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5828 |   5828 |       |       |      238 |         206 |  5207 |
+| github      | 5835 |   5835 |       |       |      238 |         206 |  5215 |
 | gitlab      |  192 |    192 |       |       |       18 |          16 |   175 |
-| codeberg    |  204 |    204 |       |       |       23 |          40 |   165 |
+| codeberg    |  205 |    205 |       |       |       23 |          40 |   165 |
 | sourcehut   |   99 |     99 |       |       |       21 |           6 |    74 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  130 |    130 |       |       |       19 |           6 |   103 |
+| git         |  131 |    131 |       |       |       19 |           7 |   104 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   23 |     23 |       |       |          |             |       |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   269 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9628 |   6970 |  2155 |   498 |      505 |         275 |  6175 |
+| total       | 9637 |   6979 |  2155 |   498 |      505 |         276 |  6184 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -408,13 +408,15 @@
   (emir-nongnu-elpa--migrated-packages)
 #+end_src
 #+results: nongnu-elpa-diverging-repositories
-| Package (2)              | Mirror   |                                                        | Elpa   |                                                       |
+| Package (3)              | Mirror   |                                                        | Elpa   |                                                       |
 |--------------------------+----------+--------------------------------------------------------+--------+-------------------------------------------------------|
+| jabber                   | codeberg | https://codeberg.org/emacs-jabber/emacs-jabber         | git    | https://git.thanosapollo.org/emacs-jabber             |
 | selected-window-contrast | codeberg | https://codeberg.org/Anoncheg/selected-window-contrast | github | https://github.com/Anoncheg1/selected-window-contrast |
 | tablist                  | orphaned | https://github.com/emacsorphanage/tablist              | github | https://github.com/politza/tablist                    |
 
 - 2024-02-20 tablist: Melpa also gets it from orphanage, see [[https://github.com/politza/tablist/pull/21#issuecomment-1202422303][#21]]
 - 2026-03-29 selected-window-contrast: Unclear which is preferred
+- 2026-04-03 jabber: Let's wait for the dust to settle
 
 * Melpa
 ** New
