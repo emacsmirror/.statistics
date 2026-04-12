@@ -107,9 +107,9 @@
 | gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5835 |   5835 |       |       |      238 |         206 |  5215 |
+| github      | 5837 |   5837 |       |       |      237 |         206 |  5219 |
 | gitlab      |  192 |    192 |       |       |       18 |          16 |   175 |
-| codeberg    |  205 |    205 |       |       |       23 |          40 |   165 |
+| codeberg    |  207 |    207 |       |       |       24 |          40 |   167 |
 | sourcehut   |   99 |     99 |       |       |       21 |           6 |    74 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2155 |        |  2155 |       |          |             |    42 |
+| shelved     | 2154 |        |  2154 |       |          |             |    40 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   269 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9637 |   6979 |  2155 |   498 |      505 |         276 |  6184 |
+| total       | 9640 |   6983 |  2154 |   498 |      505 |         276 |  6188 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -467,12 +467,11 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (90)                | Url                                                                         |
+| Package (89)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
 | bazel                       | https://github.com/bazelbuild/emacs-bazel-mode                              |
-| buck                        | https://github.com/magit/buck                                               |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation                  |
 | call-graph                  | https://github.com/beacoder/call-graph                                      |
 | cfml-mode                   | https://github.com/amyers634/cfml-mode                                      |
@@ -504,7 +503,6 @@
 | gnome-calendar              | https://github.com/NicolasPetton/gnome-calendar.el                          |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
 | gogs                        | https://github.com/magit/gogs                                               |
-| gtea                        | https://github.com/magit/gtea                                               |
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
 | helm-aws                    | https://github.com/istib/helm-aws                                           |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |
@@ -538,6 +536,7 @@
 | paradox                     | https://github.com/Malabarba/paradox                                        |
 | peek-mode                   | https://github.com/erikriverson/peek-mode                                   |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
+| powerline-evil              | https://github.com/johnson-christopher/powerline-evil                       |
 | projmake-mode               | https://github.com/ericbmerritt/projmake-mode                               |
 | protobuf-ts-mode            | https://git.ookami.one/cgit/protobuf-ts-mode                                |
 | pygn-mode                   | https://github.com/dwcoates/pygn-mode                                       |
@@ -925,11 +924,10 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (42)         | Url                                                |
+| Package (40)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
-| buck                 | https://github.com/emacsattic/buck                 |
 | color-theme          | https://github.com/emacsattic/color-theme          |
 | company-go           | https://github.com/emacsattic/company-go           |
 | company-racer        | https://github.com/emacsattic/company-racer        |
@@ -947,7 +945,6 @@ Notes on builtin packages, which are not listed above by default.
 | glab                 | https://github.com/emacsattic/glab                 |
 | go-autocomplete      | https://github.com/emacsattic/go-autocomplete      |
 | gogs                 | https://github.com/emacsattic/gogs                 |
-| gtea                 | https://github.com/emacsattic/gtea                 |
 | helm-aws             | https://github.com/emacsattic/helm-aws             |
 | helm-mode-manager    | https://github.com/emacsattic/helm-mode-manager    |
 | ido-migemo           | https://github.com/emacsattic/ido-migemo           |

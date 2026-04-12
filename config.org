@@ -332,12 +332,13 @@
   (emir--store-table 'var-suspended value)
 #+END_SRC
 #+NAME: table--suspended
-| Package    | Reason                     |
-|------------+----------------------------|
-| agda2-mode | takes 17 minutes to filter |
-| cmake-mode | takes 50 minutes to filter |
-| erk        | todo                       |
-| kubernetes | repository compromised     |
+| Package     | Reason                     |
+|-------------+----------------------------|
+| agda2-mode  | takes 17 minutes to filter |
+| citar-typst | fetching hangs             |
+| cmake-mode  | takes 50 minutes to filter |
+| erk         | todo                       |
+| kubernetes  | repository compromised     |
 
 * Homepage                                                            :input:
 #+NAME: store--homepage

@@ -167,7 +167,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | fscroll                      | [[https://github.com/davep/fscroll.el][davep/fscroll.el]]                        | Make scroll-{up,down} go all the way                                   |
 | icmp-info                    | [[https://github.com/davep/icmp-info.el][davep/icmp-info.el]]                      | ICMP information tool                                                  |
 | ngn                          | [[https://github.com/davep/ngn.el][davep/ngn.el]]                            | Quickly insert a newsgroup name                                        |
-| nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                       | Nuke and reevaluate an elisp buffer                                    |
+| nukneval                     | [[https://github.com/davep/nukneval.el][davep/nukneval.el]]                       | Nuke and reevaluate an Emacs Lisp buffer                               |
 | smartsig                     | [[https://github.com/davep/smartsig.el][davep/smartsig.el]]                       | Smart signature selection based on message content                     |
 | unbind                       | [[https://github.com/davep/unbind.el][davep/unbind.el]]                         | Commands for unbinding things                                          |
 | aml-mode                     | [[https://github.com/david-christiansen/aml-mode][david-christiansen/aml-mode]]             | An Emacs major mode for AML                                            |
@@ -625,9 +625,8 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (30)               | Link      |                                                        |
+| Package (29)               | Link      |                                                        |
 |----------------------------+-----------+--------------------------------------------------------|
-| agitjo                     | codeberg  | [[https://codeberg.org/halvin/agitjo][halvin/agitjo]]                                          |
 | bidi                       | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?CategoryBiDi]]  |
 | ebuild-mode                | git       |                                                        |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                                 |

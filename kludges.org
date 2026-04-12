@@ -62,10 +62,11 @@
     :order-by [(asc feature) (asc package)]])
 #+end_src
 #+results: provided-drop
-| Package (7) | Class  | Feature              | Reason                |
+| Package (8) | Class  | Feature              | Reason                |
 |-------------+--------+----------------------+-----------------------|
 | rgb         | gitlab | el-mock              | noreply [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
 | rgb         | gitlab | ert-expectations     | noreply [[https://gitlab.com/cwpitts/rgb.el/-/issues/1][#1]]            |
+| telega      | github | external-completion  | conditional vendoring |
 | emacspeak   | github | light                | wontfix [[https://github.com/tvraman/emacspeak/issues/73][#73]]           |
 | wanderlust  | github | rfc2368              | wontfix               |
 | flim        | github | sasl                 | wontfix               |
@@ -272,13 +273,13 @@
 | mandoku        | 2018-04-03 | ✓ | https://github.com/mandoku/mandoku               |
 | merlin         | 2024-09-24 | ✓ | https://github.com/ocaml/merlin                  |
 | mozart         | 2017-11-11 |   | https://github.com/mozart/mozart2                |
-| mozc           | 2025-03-05 | ✓ | https://github.com/google/mozc                   |
+| mozc           | 2026-03-27 | ✓ | https://github.com/google/mozc                   |
 | password-store | 2025-06-18 | ✓ | https://git.zx2c4.com/password-store             |
 | protobuf-mode  | 2025-10-10 | ✓ | https://github.com/google/protobuf               |
 | rcodetools     | 2016-09-15 |   | https://github.com/rcodetools/rcodetools         |
 | stumpwm-mode   | 2018-06-29 | ✓ | https://github.com/stumpwm/stumpwm-contrib       |
-| thrift         | 2026-03-05 | ✓ | https://github.com/apache/thrift                 |
-| utop           | 2025-04-03 | ✓ | https://github.com/diml/utop                     |
+| thrift         | 2026-04-08 | ✓ | https://github.com/apache/thrift                 |
+| utop           | 2026-03-06 | ✓ | https://github.com/diml/utop                     |
 
 Filtering most of these packages takes 5 minutes each, or less.
 But agda2-mode takes 17 and cmake-mode takes 50; so I no longer
