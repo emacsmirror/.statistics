@@ -29,8 +29,8 @@
                   (nongnu-elpa  0  0 "" "" ""  0 "")
                   hline
                   (github       0  0 "" ""  0  0  0)
-                  (gitlab       0  0 "" ""  0  0  0)
                   (codeberg     0  0 "" ""  0  0  0)
+                  (gitlab       0  0 "" ""  0  0  0)
                   (sourcehut    0  0 "" ""  0  0  0)
                   (gnu          0  0 "" ""  0  0  0)
                   (nongnu       0  0 "" ""  0  0  0)
@@ -107,14 +107,14 @@
 | gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5847 |   5847 |       |       |      237 |         206 |  5229 |
+| github      | 5847 |   5847 |       |       |      238 |         206 |  5229 |
+| codeberg    |  211 |    211 |       |       |       24 |          40 |   171 |
 | gitlab      |  192 |    192 |       |       |       18 |          16 |   175 |
-| codeberg    |  209 |    209 |       |       |       24 |          40 |   168 |
-| sourcehut   |   99 |     99 |       |       |       21 |           6 |    74 |
+| sourcehut   |  100 |    100 |       |       |       22 |           6 |    75 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  132 |    132 |       |       |       19 |           7 |   106 |
+| git         |  132 |    132 |       |       |       19 |           7 |   105 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   23 |     23 |       |       |          |             |       |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2154 |        |  2154 |       |          |             |    40 |
+| shelved     | 2157 |        |  2157 |       |          |             |    40 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   269 |
+| secondary   |      |        |       |       |          |             |   270 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9653 |   6996 |  2154 |   498 |      505 |         276 |  6201 |
+| total       | 9659 |   6999 |  2157 |   498 |      507 |         276 |  6205 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -467,7 +467,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (89)                | Url                                                                         |
+| Package (90)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -544,6 +544,8 @@
 | rainbow-blocks              | https://github.com/istib/rainbow-blocks                                     |
 | redprl                      | https://github.com/RedPRL/sml-redprl                                        |
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
+| ripgrep                     | https://github.com/nlamirault/ripgrep.el                                    |
+| ripgrep                     | https://github.com/nlamirault/ripgrep.el                                    |
 | session                     | https://github.com/emacsorphanage/session                                   |
 | show-css                    | https://github.com/8cylinder/showcss-mode                                   |
 | sml-modeline                | https://github.com/emacsorphanage/sml-modeline                              |
@@ -575,7 +577,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (151)   | Secondary package                | Class     |
+| Primary package (152)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -677,6 +679,7 @@
 | frimacs                 | ob-fricas                        | github    |
 | fsharp-mode             | eglot-fsharp                     | github    |
 | fuz                     | helm-fuz                         | github    |
+| ghostel                 | evil-ghostel                     | github    |
 | git-emacs               | git-blamed                       | github    |
 | gitlab                  | helm-gitlab                      | github    |
 | gitlab                  | ivy-gitlab                       | github    |
@@ -779,7 +782,7 @@
 | restclient              | restclient-jq                    | orphaned  |
 | retraction-viewer       | retraction-viewer-section        | sourcehut |
 | rinari                  | ruby-compilation                 | github    |
-| ripgrep                 | projectile-ripgrep               | github    |
+| ripgrep                 | projectile-ripgrep               | shelved   |
 | rtags                   | ac-rtags                         | github    |
 | rtags                   | company-rtags                    | github    |
 | rtags                   | flycheck-rtags                   | github    |
