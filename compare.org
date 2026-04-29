@@ -107,7 +107,7 @@
 | gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5847 |   5847 |       |       |      238 |         207 |  5229 |
+| github      | 5846 |   5846 |       |       |      238 |         207 |  5229 |
 | codeberg    |  221 |    221 |       |       |       27 |          48 |   179 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  100 |    100 |       |       |       22 |           6 |    75 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  138 |    138 |       |       |          |             |   109 |
-| shelved     | 2157 |        |  2157 |       |          |             |    40 |
+| shelved     | 2158 |        |  2158 |       |          |             |    40 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   270 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9661 |   7001 |  2157 |   498 |      510 |         277 |  6205 |
+| total       | 9661 |   7000 |  2158 |   498 |      510 |         277 |  6205 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -467,7 +467,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (90)                | Url                                                                         |
+| Package (91)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -510,6 +510,7 @@
 | helm-tree-sitter            | https://github.com/Giedriusj1/helm-tree-sitter                              |
 | ido-migemo                  | https://github.com/myuhe/ido-migemo.el                                      |
 | imbot                       | https://github.com/QiangF/imbot                                             |
+| indium                      | https://github.com/NicolasPetton/Indium                                     |
 | inlineR                     | https://github.com/myuhe/inlineR.el                                         |
 | interaction-log             | https://github.com/michael-heerdegen/interaction-log.el                     |
 | irony-eldoc                 | https://github.com/ikirill/irony-eldoc                                      |

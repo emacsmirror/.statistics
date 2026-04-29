@@ -83,7 +83,7 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (25)             | Class     | Feature                 | Shelved Provider   |
+| Package (26)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | ai-code                  | github    | whisper                 | whisper            |
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
@@ -99,6 +99,7 @@ sometimes also fixing) these issues quicker than I can report them.
 | gumshoe                  | github    | gumshoe-persp           |                    |
 | hyperbole                | gnu       | interaction-log         | interaction-log    |
 | imdb                     | github    | open-web                |                    |
+| lispy                    | github    | indium                  | indium             |
 | magit-gitlab             | gitlab    | glab                    | glab               |
 | matlab-mode              | github    | semantic-dep            |                    |
 | matlab-mode              | github    | semantic-format         |                    |
@@ -190,4 +191,4 @@ sometimes also fixing) these issues quicker than I can report them.
 
 * Various update errors
 
-- 2025-10-12 tok-theme https://github.com/topikettunen/tok-theme/pull/3
+- 2026-04-29 faff-theme https://github.com/WJCFerguson/emacs-faff-theme/issues/6
