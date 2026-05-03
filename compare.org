@@ -107,8 +107,8 @@
 | gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5847 |   5847 |       |       |      238 |         207 |  5230 |
-| codeberg    |  221 |    221 |       |       |       27 |          48 |   179 |
+| github      | 5852 |   5852 |       |       |      238 |         210 |  5235 |
+| codeberg    |  223 |    223 |       |       |       27 |          48 |   181 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  100 |    100 |       |       |       22 |           6 |    75 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   270 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9662 |   7001 |  2158 |   498 |      510 |         277 |  6206 |
+| total       | 9669 |   7008 |  2158 |   498 |      510 |         280 |  6213 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -467,7 +467,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (91)                | Url                                                                         |
+| Package (90)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -537,7 +537,6 @@
 | paradox                     | https://github.com/Malabarba/paradox                                        |
 | peek-mode                   | https://github.com/erikriverson/peek-mode                                   |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
-| powerline-evil              | https://github.com/johnson-christopher/powerline-evil                       |
 | projmake-mode               | https://github.com/ericbmerritt/projmake-mode                               |
 | protobuf-ts-mode            | https://git.ookami.one/cgit/protobuf-ts-mode                                |
 | pygn-mode                   | https://github.com/dwcoates/pygn-mode                                       |

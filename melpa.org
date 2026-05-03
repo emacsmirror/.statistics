@@ -61,7 +61,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (550)                | Link                                    | Summary                                                                |
+| Package (549)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -232,7 +232,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | switch-files                 | [[https://github.com/hardaker/elisp-switch-files][hardaker/elisp-switch-files]]             | Switch between matched pairs of files and follow include directives    |
 | cl-merge                     | [[https://github.com/haxney/cl-merge][haxney/cl-merge]]                         | Add a `cl-merge-struct' function                                       |
 | ezbl                         | [[https://github.com/haxney/ezbl][haxney/ezbl]]                             | Emacs interface for Uzbl (uzbl.org)                                    |
-| mysql                        | [[https://github.com/haxney/mysql][haxney/mysql]]                            | Mysql front-end                                                        |
 | ca2+                         | [[https://github.com/hjanetzek/ca2][hjanetzek/ca2]]                           | An improved fork of `company-mode'                                     |
 | highrise                     | [[https://github.com/hober/37emacs][hober/37emacs]]                           | Client for 37Signals' Highrise API                                     |
 | foursquare                   | [[https://github.com/hober/foursquare-el][hober/foursquare-el]]                     | Foursquare client for Emacs                                            |
