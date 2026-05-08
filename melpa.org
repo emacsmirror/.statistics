@@ -21,16 +21,20 @@
             (epkgs 'name [builtin]))
 #+end_src
 #+results: built-in
-| Package (8)    | Repository                 |
-|----------------+----------------------------|
-| faceup         | [[https://github.com/Lindydancer/faceup][Lindydancer/faceup]]         |
-| csharp-mode    | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]   |
-| wallpaper      | [[https://github.com/farlado/emacs-wallpaper][farlado/emacs-wallpaper]]    |
-| which-key      | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]    |
-| dictionary     | [[https://github.com/myrkr/dictionary-el][myrkr/dictionary-el]]        |
-| less-css-mode  | [[https://github.com/purcell/less-css-mode][purcell/less-css-mode]]      |
-| elixir-ts-mode | [[https://github.com/wkirschbaum/elixir-ts-mode][wkirschbaum/elixir-ts-mode]] |
-| heex-ts-mode   | [[https://github.com/wkirschbaum/heex-ts-mode][wkirschbaum/heex-ts-mode]]   |
+| Package (12)     | Repository                      |
+|------------------+---------------------------------|
+| faceup           | [[https://github.com/Lindydancer/faceup][Lindydancer/faceup]]              |
+| markdown-ts-mode | [[https://github.com/LionyxML/markdown-ts-mode][LionyxML/markdown-ts-mode]]       |
+| editorconfig     | [[https://github.com/editorconfig/editorconfig-emacs][editorconfig/editorconfig-emacs]] |
+| csharp-mode      | [[https://github.com/emacs-csharp/csharp-mode][emacs-csharp/csharp-mode]]        |
+| wallpaper        | [[https://github.com/farlado/emacs-wallpaper][farlado/emacs-wallpaper]]         |
+| lua-mode         | [[https://github.com/immerrr/lua-mode][immerrr/lua-mode]]                |
+| which-key        | [[https://github.com/justbur/emacs-which-key][justbur/emacs-which-key]]         |
+| timeout          | [[https://github.com/karthink/timeout][karthink/timeout]]                |
+| dictionary       | [[https://github.com/myrkr/dictionary-el][myrkr/dictionary-el]]             |
+| less-css-mode    | [[https://github.com/purcell/less-css-mode][purcell/less-css-mode]]           |
+| elixir-ts-mode   | [[https://github.com/wkirschbaum/elixir-ts-mode][wkirschbaum/elixir-ts-mode]]      |
+| heex-ts-mode     | [[https://github.com/wkirschbaum/heex-ts-mode][wkirschbaum/heex-ts-mode]]        |
 
 * Missing from Melpa
 

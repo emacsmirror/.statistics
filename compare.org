@@ -16,7 +16,7 @@
 #+name: summary
 #+begin_src emacs-lisp
   (require 'finder-inf)
-  (let* ((builtin 498)
+  (let* ((builtin 512)
          ;; This is costly and noisy, and mostly constant.
          ;; (builtin (length (emir--builtin-packages-alist)))
          ;; This does not include "org", "tramp" and "transient".
@@ -103,11 +103,11 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  503 |        |       |   498 |       22 |             |       |
-| gnu-elpa    |  152 |    152 |       |       |      143 |             |       |
+| builtin     |  508 |        |       |   512 |       22 |             |       |
+| gnu-elpa    |  154 |    154 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5851 |   5851 |       |       |      238 |         210 |  5235 |
+| github      | 5847 |   5847 |       |       |      237 |         210 |  5235 |
 | codeberg    |  223 |    223 |       |       |       27 |          48 |   181 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  100 |    100 |       |       |       22 |           6 |    75 |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   270 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9668 |   7007 |  2158 |   498 |      510 |         280 |  6213 |
+| total       | 9671 |   7005 |  2158 |   512 |      510 |         280 |  6213 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -193,13 +193,12 @@
    [builtin gnu-elpa core])
 #+end_src
 #+results: builtin-prefer-upstream
-| Package (5)  | Class  |
-|--------------+--------|
-| compat       | github |
-| editorconfig | github |
-| org          | gnu    |
-| tramp        | gnu    |
-| transient    | github |
+| Package (4) | Class  |
+|-------------+--------|
+| compat      | github |
+| org         | gnu    |
+| tramp       | gnu    |
+| transient   | github |
 
 * GNU Elpa
 ** New
@@ -254,11 +253,6 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: gnu-elpa-shelved
-| Package (1) | Elpa   |
-|-------------+--------|
-| wconf       | github |
-
-- 2025-07-20 wconf: Declared obsolete [[https://github.com/ilohmar/wconf][by upstream]] but not removed yet
 
 ** Diverging repositories
 #+name: gnu-elpa-diverging-repositories
@@ -281,18 +275,18 @@
     :order-by [(asc p:name)]])
 #+end_src
 #+results: gnu-elpa-prefer-builtin
-| Package (28)        | Elpa     | Reason              |
+| Package (29)        | Elpa     | Reason              |
 |---------------------+----------+---------------------|
 | bind-key            | core     |                     |
 | cl-generic          | internal | backport of builtin |
 | cl-lib              | internal | backport of builtin |
+| cond-star           | core     | backport of builtin |
 | csharp-mode         | github   |                     |
 | eglot               | core     |                     |
 | eldoc               | core     |                     |
 | erc                 | core     |                     |
 | external-completion | core     |                     |
 | flymake             | core     |                     |
-| idlwave             | github   |                     |
 | jsonrpc             | core     |                     |
 | let-alist           | core     |                     |
 | map                 | core     |                     |
@@ -305,6 +299,7 @@
 | so-long             | core     |                     |
 | soap-client         | core     |                     |
 | svg                 | core     |                     |
+| timeout             | github   |                     |
 | track-changes       | core     |                     |
 | use-package         | core     |                     |
 | verilog-mode        | core     |                     |
@@ -329,7 +324,7 @@
      [gnu-elpa]))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (16)        | :url                                                     |
+| Package (17)        | :url                                                     |
 |---------------------+----------------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk        |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el        |
@@ -343,6 +338,7 @@
 | org-gnosis          | https://git.thanosapollo.org/org-gnosis                  |
 | clipboard-collector | https://github.com/clemera/clipboard-collector           |
 | ebdb                | https://github.com/girzel/ebdb.git                       |
+| idlwave             | https://github.com/jdtsmith/idlwave                      |
 | chess               | https://github.com/jwiegley/emacs-chess.git              |
 | ioccur              | https://github.com/thierryvolpiatto/ioccur.git           |
 | ediprolog           | https://github.com/triska/ediprolog                      |
@@ -467,7 +463,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (90)                | Url                                                                         |
+| Package (91)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -503,6 +499,7 @@
 | gnome-calendar              | https://github.com/NicolasPetton/gnome-calendar.el                          |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
 | gogs                        | https://github.com/magit/gogs                                               |
+| greek-polytonic             | https://github.com/jhanschoo/greek-polytonic                                |
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
 | helm-aws                    | https://github.com/istib/helm-aws                                           |
 | helm-ctest                  | https://github.com/danlamanna/helm-ctest                                    |

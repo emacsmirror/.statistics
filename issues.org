@@ -36,7 +36,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (8)               | Package                 | Shelved |
+| Feature (9)               | Package                 | Shelved |
 |---------------------------+-------------------------+---------|
 | byte-compile-local        | eglot-python-preset     |         |
 | byte-compile-local        | eglot-typescript-preset |         |
@@ -46,6 +46,8 @@
 | checkdoc-local            | eglot-typescript-preset |         |
 | copilot-chat              | copilot                 |         |
 | copilot-chat              | copilot-chat            |         |
+| greek-polytonic           | emacs                   |         |
+| greek-polytonic           | greek-polytonic         | t       |
 | install-deps              | claude-code             |         |
 | install-deps              | pi-coding-agent         |         |
 | llm-test                  | llm                     |         |
@@ -54,6 +56,9 @@
 | melpa-build-install-check | eglot-typescript-preset |         |
 | package-lint-local        | eglot-python-preset     |         |
 | package-lint-local        | eglot-typescript-preset |         |
+
+- casualdocs: https://github.com/kickingvegas/casual/issues/457
+- greek-polytonic: debbugs
 
 There are always a few conflicts caused by AI-coded AI tools.  I am
 not reporting these issues upstream because the AI is producing (and
@@ -83,7 +88,7 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (26)             | Class     | Feature                 | Shelved Provider   |
+| Package (27)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | ai-code                  | github    | whisper                 | whisper            |
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
@@ -98,6 +103,7 @@ sometimes also fixing) these issues quicker than I can report them.
 | gumshoe                  | github    | gumshoe-consult         |                    |
 | gumshoe                  | github    | gumshoe-persp           |                    |
 | hyperbole                | gnu       | interaction-log         | interaction-log    |
+| icicles                  | wiki      | yow                     |                    |
 | imdb                     | github    | open-web                |                    |
 | lispy                    | github    | indium                  | indium             |
 | magit-gitlab             | gitlab    | glab                    | glab               |
