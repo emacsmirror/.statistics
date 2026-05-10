@@ -69,12 +69,12 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  5041 |      72 |
+| GPL-3.0-or-later  |  5048 |      72 |
 | GPL-2.0-or-later  |   844 |      12 |
 | MIT               |   446 |       6 |
 | GPL-3.0-only      |   184 |       3 |
-| BSD-2-Clause      |    81 |       1 |
-| Apache-2.0        |    76 |       1 |
+| BSD-2-Clause      |    82 |       1 |
+| Apache-2.0        |    77 |       1 |
 | BSD-3-Clause      |    76 |       1 |
 | Unlicense         |    41 |       1 |
 | WTFPL             |    36 |       1 |
@@ -85,11 +85,11 @@
 | LGPL-3.0-or-later |     9 |       0 |
 | CC0-1.0           |     7 |       0 |
 | GPL-3.0           |     6 |       0 |
-| nil               |     4 |       0 |
 | 0BSD              |     4 |       0 |
 | LGPL-3.0-only     |     4 |       0 |
 | MPL-2.0           |     4 |       0 |
 | Zlib              |     4 |       0 |
+| nil               |     3 |       0 |
 | GPL-1.0-or-later  |     3 |       0 |
 | CECILL-2.1        |     2 |       0 |
 | CECILL-B          |     2 |       0 |
@@ -107,9 +107,9 @@
 | Unicode-TOU       |     1 |       0 |
 | Vim               |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6128 |      87 |
+| total GNU         |  6135 |      87 |
 |-------------------+-------+---------|
-| total             |  7005 |     100 |
+| total             |  7013 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -126,12 +126,11 @@
             elx-spdx-license-identifiers))
 #+end_src
 #+results: mirror-unknown
-| Package (4)         | Class    | License | M |
+| Package (3)         | Class    | License | M |
 |---------------------+----------+---------+---|
 | emacs-lisp-intro-es | gnu-elpa |         |   |
 | org-embed           | github   |         |   |
 | pos-tag-highlight   | github   |         |   |
-| sweeprolog          | github   |         |   |
 
 * Emacsattic
 ** Overview

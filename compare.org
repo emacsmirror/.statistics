@@ -107,7 +107,7 @@
 | gnu-elpa    |  154 |    154 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5847 |   5847 |       |       |      237 |         210 |  5235 |
+| github      | 5855 |   5855 |       |       |      237 |         210 |  5243 |
 | codeberg    |  223 |    223 |       |       |       27 |          48 |   181 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  100 |    100 |       |       |       22 |           6 |    75 |
@@ -125,10 +125,10 @@
 | shelved     | 2158 |        |  2158 |       |          |             |    40 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   270 |
+| secondary   |      |        |       |       |          |             |   271 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9671 |   7005 |  2158 |   512 |      510 |         280 |  6213 |
+| total       | 9679 |   7013 |  2158 |   512 |      510 |         280 |  6222 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -574,7 +574,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (152)   | Secondary package                | Class     |
+| Primary package (153)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -825,6 +825,7 @@
 | vdm-mode                | flycheck-vdm                     | github    |
 | vdm-mode                | vdm-comint                       | github    |
 | vdm-mode                | vdm-snippets                     | github    |
+| verdict                 | verdict-dart                     | github    |
 | w3m                     | shimbun                          | github    |
 | wgrep                   | wgrep-ack                        | github    |
 | wgrep                   | wgrep-ag                         | github    |
