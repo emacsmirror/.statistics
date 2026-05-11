@@ -36,7 +36,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (9)               | Package                 | Shelved |
+| Feature (10)              | Package                 | Shelved |
 |---------------------------+-------------------------+---------|
 | byte-compile-local        | eglot-python-preset     |         |
 | byte-compile-local        | eglot-typescript-preset |         |
@@ -52,6 +52,8 @@
 | install-deps              | pi-coding-agent         |         |
 | llm-test                  | llm                     |         |
 | llm-test                  | llm-test                |         |
+| lsp-tailwindcss           | lsp-mode                |         |
+| lsp-tailwindcss           | lsp-tailwindcss         |         |
 | melpa-build-install-check | eglot-python-preset     |         |
 | melpa-build-install-check | eglot-typescript-preset |         |
 | package-lint-local        | eglot-python-preset     |         |

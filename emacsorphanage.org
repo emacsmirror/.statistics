@@ -57,7 +57,7 @@ a package is available from Melpa.
   (emir--list-orphans (list "dropped by maintainer"))
 #+end_src
 #+results: dropped
-| Package (88)         | E | M |
+| Package (89)         | E | M |
 |----------------------+---+---|
 | ac-alchemist         | ✔ | ✔ |
 | ac-capf              | ✔ | ✔ |
@@ -121,6 +121,7 @@ a package is available from Melpa.
 | mongo                | ✔ | ✔ |
 | octicons             | ✔ | ✔ |
 | opam                 | ✔ | ✔ |
+| org-elisp-help       | ✔ | ✔ |
 | org-page             | ✔ | ✔ |
 | org-redmine          | ✔ | ✔ |
 | org-wild-notifier    | ✔ | ✔ |
