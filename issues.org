@@ -36,12 +36,10 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (10)              | Package                 | Shelved |
+| Feature (9)               | Package                 | Shelved |
 |---------------------------+-------------------------+---------|
 | byte-compile-local        | eglot-python-preset     |         |
 | byte-compile-local        | eglot-typescript-preset |         |
-| casualdocs                | anju                    |         |
-| casualdocs                | casual                  |         |
 | checkdoc-local            | eglot-python-preset     |         |
 | checkdoc-local            | eglot-typescript-preset |         |
 | copilot-chat              | copilot                 |         |
@@ -53,14 +51,13 @@
 | llm-test                  | llm                     |         |
 | llm-test                  | llm-test                |         |
 | lsp-tailwindcss           | lsp-mode                |         |
-| lsp-tailwindcss           | lsp-tailwindcss         |         |
+| lsp-tailwindcss           | lsp-tailwindcss         | t       |
 | melpa-build-install-check | eglot-python-preset     |         |
 | melpa-build-install-check | eglot-typescript-preset |         |
 | package-lint-local        | eglot-python-preset     |         |
 | package-lint-local        | eglot-typescript-preset |         |
 
-- casualdocs: https://github.com/kickingvegas/casual/issues/457
-- greek-polytonic: debbugs
+- greek-polytonic: debbugs, wontfix
 
 There are always a few conflicts caused by AI-coded AI tools.  I am
 not reporting these issues upstream because the AI is producing (and

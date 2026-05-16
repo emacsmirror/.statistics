@@ -64,7 +64,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (549)                | Link                                    | Summary                                                                |
+| Package (547)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -425,8 +425,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | math-delimiters              | [[https://github.com/oantolin/math-delimiters][oantolin/math-delimiters]]                | Insert math delimiters in TeX, LaTeX and Org buffers                   |
 | placeholder                  | [[https://github.com/oantolin/placeholder][oantolin/placeholder]]                    | Easy insertion and filling of placeholders in text                     |
 | restricto                    | [[https://github.com/oantolin/restricto][oantolin/restricto]]                      | Restrict to current minibuffer completion candidates                   |
-| rubyinterpol                 | [[https://github.com/ober/rubyinterpol][ober/rubyinterpol]]                       | Ruby-like String Interpolation for format                              |
-| zone-matrix                  | [[https://github.com/ober/zone-matrix][ober/zone-matrix]]                        | The matrix screen saver on Emacs                                       |
 | antlr-runtime                | [[https://github.com/olabini/antlr-elisp][olabini/antlr-elisp]]                     | Antlr runtime                                                          |
 | symbols-mode                 | [[https://github.com/orontee/symbols-mode][orontee/symbols-mode]]                    | List symbols of object files                                           |
 | inf-ruby-bond                | [[https://github.com/pd/inf-ruby-bond][pd/inf-ruby-bond]]                        | Bond autocompletion support for inf-ruby                               |
