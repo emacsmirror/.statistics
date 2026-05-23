@@ -69,19 +69,19 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  5044 |      72 |
+| GPL-3.0-or-later  |  5043 |      72 |
 | GPL-2.0-or-later  |   844 |      12 |
 | MIT               |   446 |       6 |
 | GPL-3.0-only      |   185 |       3 |
 | BSD-2-Clause      |    82 |       1 |
-| Apache-2.0        |    77 |       1 |
+| Apache-2.0        |    76 |       1 |
 | BSD-3-Clause      |    76 |       1 |
 | Unlicense         |    41 |       1 |
 | WTFPL             |    36 |       1 |
 | public-domain     |    35 |       0 |
 | AGPL-3.0-or-later |    33 |       0 |
 | ISC               |    28 |       0 |
-| as-is             |    20 |       0 |
+| as-is             |    19 |       0 |
 | LGPL-3.0-or-later |     9 |       0 |
 | CC0-1.0           |     7 |       0 |
 | GPL-3.0           |     6 |       0 |
@@ -107,9 +107,9 @@
 | Unicode-TOU       |     1 |       0 |
 | Vim               |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6132 |      87 |
+| total GNU         |  6131 |      87 |
 |-------------------+-------+---------|
-| total             |  7010 |     100 |
+| total             |  7007 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -147,7 +147,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |  1183 |      55 |
-| GPL-3.0-or-later  |   671 |      31 |
+| GPL-3.0-or-later  |   674 |      31 |
 | GPL-2.0-only      |    61 |       3 |
 | GPL               |    43 |       2 |
 | public-domain     |    41 |       2 |
@@ -158,9 +158,9 @@
 | BSD-2-Clause      |     9 |       0 |
 | Unlicense         |     9 |       0 |
 | ((custom))        |     9 |       0 |
+| Apache-2.0        |     8 |       0 |
 | BSD-3-Clause      |     8 |       0 |
 | WTFPL             |     8 |       0 |
-| Apache-2.0        |     7 |       0 |
 | AGPL-3.0-or-later |     3 |       0 |
 | LGPL-3.0-only     |     3 |       0 |
 | MS-PL             |     3 |       0 |
@@ -178,9 +178,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  2013 |      93 |
+| total GNU         |  2016 |      93 |
 |-------------------+-------+---------|
-| total             |  2162 |     100 |
+| total             |  2166 |     100 |
 
 ** Packages with unknown/custom licenses
 #+name: attic-unknown

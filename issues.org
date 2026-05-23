@@ -87,7 +87,7 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (27)             | Class     | Feature                 | Shelved Provider   |
+| Package (28)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | ai-code                  | github    | whisper                 | whisper            |
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
@@ -104,6 +104,7 @@ sometimes also fixing) these issues quicker than I can report them.
 | hyperbole                | gnu       | interaction-log         | interaction-log    |
 | icicles                  | wiki      | yow                     |                    |
 | imdb                     | github    | open-web                |                    |
+| jabber                   | codeberg  | jabber-omemo-core       |                    |
 | lispy                    | github    | indium                  | indium             |
 | magit-gitlab             | gitlab    | glab                    | glab               |
 | matlab-mode              | github    | semantic-dep            |                    |

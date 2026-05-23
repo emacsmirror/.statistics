@@ -104,17 +104,17 @@
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | builtin     |  508 |        |       |   512 |       22 |             |       |
-| gnu-elpa    |  154 |    154 |       |       |      144 |             |       |
+| gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5850 |   5850 |       |       |      237 |         210 |  5240 |
+| github      | 5846 |   5846 |       |       |      237 |         210 |  5236 |
 | codeberg    |  224 |    224 |       |       |       27 |          48 |   182 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  100 |    100 |       |       |       22 |           6 |    75 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  132 |    132 |       |       |       19 |           7 |   105 |
+| git         |  132 |    132 |       |       |       20 |           7 |   105 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   23 |     23 |       |       |          |             |       |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2162 |        |  2162 |       |          |             |    40 |
+| shelved     | 2166 |        |  2166 |       |          |             |    40 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   271 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9680 |   7010 |  2162 |   512 |      510 |         280 |  6221 |
+| total       | 9681 |   7007 |  2166 |   512 |      511 |         280 |  6217 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -324,7 +324,7 @@
      [gnu-elpa]))
 #+end_src
 #+results: gnu-elpa-prefer-elpa
-| Package (17)        | :url                                                     |
+| Package (18)        | :url                                                     |
 |---------------------+----------------------------------------------------------|
 | paced               | bzr::bzr://bzr.savannah.nongnu.org/paced-el/trunk        |
 | org-edna            | bzr::https://bzr.savannah.gnu.org/git/org-edna-el        |
@@ -334,6 +334,7 @@
 | ssh-deploy          | https://forgejo.cvj.se/cjohansson/emacs-ssh-deploy       |
 | buildbot            | https://g.ypei.me/buildbot.el.git                        |
 | vcl-mode            | https://git.gnu.org.ua/vcl-mode.git                      |
+| ffs                 | https://git.kelar.org/~bandali/ffs                       |
 | emacs-lisp-intro-es | https://git.savannah.nongnu.org:/git/elisp-es.git        |
 | org-gnosis          | https://git.thanosapollo.org/org-gnosis                  |
 | clipboard-collector | https://github.com/clemera/clipboard-collector           |
