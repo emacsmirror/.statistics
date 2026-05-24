@@ -625,13 +625,22 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (29)               | Link      |                                                        |
+| Package (50)               | Link      |                                                        |
 |----------------------------+-----------+--------------------------------------------------------|
+| atomizer                   | sourcehut | [[https://git.sr.ht/~flandrew/atomizer][flandrew/atomizer]]                                      |
+| awhile                     | sourcehut | [[https://git.sr.ht/~flandrew/awhile][flandrew/awhile]]                                        |
 | bidi                       | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?CategoryBiDi]]  |
+| cfrac                      | sourcehut | [[https://git.sr.ht/~flandrew/cfrac][flandrew/cfrac]]                                         |
+| democratize                | sourcehut | [[https://git.sr.ht/~flandrew/democratize][flandrew/democratize]]                                   |
 | ebuild-mode                | git       |                                                        |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                                 |
 | elpa-admin                 | git       |                                                        |
 | erobot                     | git       | [[http://www.geocities.com/kensanata/emacs.html]]          |
+| exemplify-align            | sourcehut | [[https://git.sr.ht/~flandrew/exemplify-align][flandrew/exemplify-align]]                               |
+| exemplify-ert              | sourcehut | [[https://git.sr.ht/~flandrew/exemplify-ert][flandrew/exemplify-ert]]                                 |
+| exemplify-eval             | sourcehut | [[https://git.sr.ht/~flandrew/exemplify-eval][flandrew/exemplify-eval]]                                |
+| fancy-joiner               | sourcehut | [[https://git.sr.ht/~flandrew/fancy-joiner][flandrew/fancy-joiner]]                                  |
+| fold-and-focus             | sourcehut | [[https://git.sr.ht/~flandrew/fold-and-focus][flandrew/fold-and-focus]]                                |
 | followcursor-mode          | codeberg  | [[https://codeberg.org/scip/followcursor-mode][scip/followcursor-mode]]                                 |
 | geo                        | sourcehut |                                                        |
 | goldendict                 | git       | [[https://repo.or.cz/goldendict.el.git]]                   |
@@ -643,16 +652,28 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | lilypond                   | gnu       | [[https://savannah.gnu.org/projects/lilypond][gnu:lilypond]]                                           |
 | mailscripts                | git       |                                                        |
 | mark-copy-yank-things-mode | codeberg  | [[https://codeberg.org/scip/mark-copy-yank-things-mode][scip/mark-copy-yank-things-mode]]                        |
+| mondo                      | sourcehut | [[https://git.sr.ht/~flandrew/mondo][flandrew/mondo]]                                         |
 | monorepo-cadadr            | codeberg  | [[https://codeberg.org/kutuptiyini/elisp][kutuptiyini/elisp]]                                      |
 | mu                         | git       |                                                        |
 | novel-mode                 | codeberg  | [[https://codeberg.org/scip/novel-mode][scip/novel-mode]]                                        |
 | ob-sclang                  | git       | [[https://repo.or.cz/ob-sclang.git]]                       |
 | org-attach-embedded-images | gitlab    | [[https://gitlab.com/marcowahl/org-attach-embedded-images][marcowahl/org-attach-embedded-images]]                   |
+| org-b64                    | sourcehut | [[https://git.sr.ht/~flandrew/org-b64][flandrew/org-b64]]                                       |
 | org-link-edit              | git       | [[https://git.kyleam.com/org-link-edit/about]]             |
+| org-reflect                | sourcehut | [[https://git.sr.ht/~flandrew/org-reflect][flandrew/org-reflect]]                                   |
+| orgreadme-fy               | sourcehut | [[https://git.sr.ht/~flandrew/orgreadme-fy][flandrew/orgreadme-fy]]                                  |
 | piem                       | git       | [[https://git.kyleam.com/piem/about]]                      |
 | python-pep8                | git       |                                                        |
 | python-pylint              | git       |                                                        |
 | rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                           |
 | really-simple-wiki         | git       | [[https://www.emacswiki.org/emacs/ReallySimpleWikiMode]]   |
 | riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                           |
+| slug                       | sourcehut | [[https://git.sr.ht/~flandrew/slug][flandrew/slug]]                                          |
+| sparkly                    | sourcehut | [[https://git.sr.ht/~flandrew/sparkly][flandrew/sparkly]]                                       |
+| sparkly-stats              | sourcehut | [[https://git.sr.ht/~flandrew/sparkly-stats][flandrew/sparkly-stats]]                                 |
+| splurge                    | sourcehut | [[https://git.sr.ht/~flandrew/splurge][flandrew/splurge]]                                       |
 | swift-playground-mode      | gitlab    | [[https://gitlab.com/michael.sanders/swift-playground-mode][michael.sanders/swift-playground-mode]]                  |
+| symtable                   | sourcehut | [[https://git.sr.ht/~flandrew/symtable][flandrew/symtable]]                                      |
+| symtree                    | sourcehut | [[https://git.sr.ht/~flandrew/symtree][flandrew/symtree]]                                       |
+| vexil                      | sourcehut | [[https://git.sr.ht/~flandrew/vexil][flandrew/vexil]]                                         |
+| xht                        | sourcehut | [[https://git.sr.ht/~flandrew/xht][flandrew/xht]]                                           |
