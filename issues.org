@@ -89,17 +89,22 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (28)             | Class     | Feature                 | Shelved Provider   |
+| Package (38)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | ai-code                  | github    | whisper                 | whisper            |
+| build-farm               | github    | magit-popup             | magit-popup        |
+| djangonaut               | github    | magit-popup             | magit-popup        |
 | easy-hugo                | github    | helm-ag                 | helm-ag            |
 | easy-jekyll              | github    | helm-ag                 | helm-ag            |
 | eca                      | github    | whisper                 | whisper            |
 | eev                      | github    | lean4-mode              |                    |
+| emidje                   | github    | magit-popup             | magit-popup        |
 | evil-textobj-tree-sitter | github    | tree-sitter             | tree-sitter        |
 | flex-compile             | github    | slite                   |                    |
 | git-commit-insert-issue  | gitlab    | glab                    | glab               |
+| govc                     | subtree   | magit-popup             | magit-popup        |
 | gradle                   | sourcehut | eclim                   | eclim              |
+| guix                     | codeberg  | magit-popup             | magit-popup        |
 | gumshoe                  | github    | gumshoe-completionist   |                    |
 | gumshoe                  | github    | gumshoe-consult         |                    |
 | gumshoe                  | github    | gumshoe-persp           |                    |
@@ -107,7 +112,11 @@ sometimes also fixing) these issues quicker than I can report them.
 | icicles                  | wiki      | yow                     |                    |
 | imdb                     | github    | open-web                |                    |
 | jabber                   | codeberg  | jabber-omemo-core       |                    |
+| jest                     | github    | magit-popup             | magit-popup        |
+| kapacitor                | github    | magit-popup             | magit-popup        |
+| kubernetes               | github    | magit-popup             | magit-popup        |
 | lispy                    | github    | indium                  | indium             |
+| magit-gitflow            | github    | magit-popup             | magit-popup        |
 | magit-gitlab             | gitlab    | glab                    | glab               |
 | matlab-mode              | github    | semantic-dep            |                    |
 | matlab-mode              | github    | semantic-format         |                    |
@@ -124,6 +133,7 @@ sometimes also fixing) these issues quicker than I can report them.
 | symbol-navigation-hydra  | github    | helm-ag                 | helm-ag            |
 | symex                    | github    | chimera                 |                    |
 | symex                    | github    | rigpa                   |                    |
+| tblui                    | github    | magit-popup             | magit-popup        |
 | verilog-ext              | github    | ripgrep                 | ripgrep            |
 | vhdl-ext                 | github    | ripgrep                 | ripgrep            |
 

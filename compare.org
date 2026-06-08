@@ -107,7 +107,7 @@
 | gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5850 |   5850 |       |       |      237 |         211 |  5240 |
+| github      | 5849 |   5849 |       |       |      237 |         211 |  5239 |
 | codeberg    |  228 |    228 |       |       |       27 |          48 |   186 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  126 |    126 |       |       |       22 |           6 |    80 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2166 |        |  2166 |       |          |             |    40 |
+| shelved     | 2167 |        |  2167 |       |          |             |    41 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   271 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9716 |   7042 |  2166 |   512 |      511 |         281 |  6231 |
+| total       | 9716 |   7041 |  2167 |   512 |      511 |         281 |  6231 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -235,12 +235,28 @@
   (epkg-sql
    [:select [name class]
     :from gnu-elpa-recipes
-    :where (and (in class $v1)
-                (isnull released))
-    :order-by [(asc name)]]
-   [subtree external])
+    :where (isnull released)
+    :order-by [(asc name)]])
 #+end_src
 #+results: gnu-elpa-unreleased
+| Package (6)         | Elpa     |
+|---------------------+----------|
+| agitate             | github   |
+| emacs-lisp-intro-nl | codeberg |
+| prefixed-core       | internal |
+| shell-quasiquote    | internal |
+| sql-smie            | internal |
+| systemd             | internal |
+
+- 2022-09-28 agitate
+- 2026-01-29 emacs-lisp-intro-nl
+- 2020-12-14
+  ee03829f90d25f62c2d36c5fef6f7b5eafb1040d
+  "Finalize the new master branch"
+  - prefixed-core
+  - shell-quasiquote
+  - sql-smie
+  - systemd
 
 ** Shelved
 #+name: gnu-elpa-shelved
@@ -464,7 +480,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (91)                | Url                                                                         |
+| Package (92)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -520,6 +536,7 @@
 | kolon-mode                  | https://github.com/samvtran/kolon-mode                                      |
 | lsp-python-ms               | https://github.com/emacs-lsp/lsp-python-ms                                  |
 | magit-gh-pulls              | https://github.com/sigma/magit-gh-pulls                                     |
+| magit-popup                 | https://github.com/magit/magit-popup                                        |
 | mic-paren                   | http://www.gnuvola.org/software/j/mic-paren/mic-paren.el                    |
 | nimbus-theme                | https://github.com/mrcnski/nimbus-theme                                     |
 | nndiscourse                 | https://github.com/dickmao/nndiscourse                                      |
@@ -926,7 +943,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (40)         | Url                                                |
+| Package (41)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -953,6 +970,7 @@ Notes on builtin packages, which are not listed above by default.
 | inlineR              | https://github.com/emacsattic/inlineR              |
 | interaction-log      | https://github.com/emacsattic/interaction-log      |
 | ivy-yasnippet        | https://github.com/emacsattic/ivy-yasnippet        |
+| magit-popup          | https://github.com/emacsattic/magit-popup          |
 | mic-paren            | https://github.com/emacsattic/mic-paren            |
 | number               | https://github.com/emacsattic/number               |
 | org-doing            | https://github.com/emacsattic/org-doing            |
