@@ -107,7 +107,7 @@
 | gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5847 |   5847 |       |       |      237 |         211 |  5237 |
+| github      | 5850 |   5850 |       |       |      237 |         211 |  5240 |
 | codeberg    |  228 |    228 |       |       |       27 |          48 |   186 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  126 |    126 |       |       |       22 |           6 |    80 |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   271 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9713 |   7039 |  2166 |   512 |      511 |         281 |  6228 |
+| total       | 9716 |   7042 |  2166 |   512 |      511 |         281 |  6231 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -413,7 +413,7 @@
 
 - 2024-02-20 tablist: Melpa also gets it from orphanage, see [[https://github.com/politza/tablist/pull/21#issuecomment-1202422303][#21]]
 - 2026-03-29 selected-window-contrast: Unclear which is preferred
-- 2026-04-03 jabber: Let's wait for the dust to settle
+- 2026-04-03 jabber: Stick to codeberg, its issue tracker is still being used
 
 * Melpa
 ** New

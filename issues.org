@@ -36,7 +36,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (9)               | Package                 | Shelved |
+| Feature (10)              | Package                 | Shelved |
 |---------------------------+-------------------------+---------|
 | byte-compile-local        | eglot-python-preset     |         |
 | byte-compile-local        | eglot-typescript-preset |         |
@@ -44,6 +44,8 @@
 | checkdoc-local            | eglot-typescript-preset |         |
 | copilot-chat              | copilot                 |         |
 | copilot-chat              | copilot-chat            |         |
+| desert-theme              | color-theme-modern      |         |
+| desert-theme              | desert-theme            |         |
 | greek-polytonic           | emacs                   |         |
 | greek-polytonic           | greek-polytonic         | t       |
 | install-deps              | claude-code             |         |
