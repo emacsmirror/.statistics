@@ -107,7 +107,7 @@
 | gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5849 |   5849 |       |       |      237 |         211 |  5239 |
+| github      | 5849 |   5849 |       |       |      238 |         211 |  5239 |
 | codeberg    |  228 |    228 |       |       |       27 |          48 |   186 |
 | gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
 | sourcehut   |  126 |    126 |       |       |       22 |           6 |    80 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2167 |        |  2167 |       |          |             |    41 |
+| shelved     | 2168 |        |  2168 |       |          |             |    41 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   271 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9716 |   7041 |  2167 |   512 |      511 |         281 |  6231 |
+| total       | 9717 |   7041 |  2168 |   512 |      512 |         281 |  6231 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -480,7 +480,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (92)                | Url                                                                         |
+| Package (93)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -544,6 +544,7 @@
 | nnreddit                    | https://github.com/dickmao/nnreddit                                         |
 | nntwitter                   | https://github.com/dickmao/nntwitter                                        |
 | number                      | https://github.com/chrisdone/number                                         |
+| opensource                  | https://github.com/OpenSourceOrg/el-opensourceorg                           |
 | org-doing                   | https://github.com/rudolfolah/org-doing                                     |
 | org-multiple-keymap         | https://github.com/myuhe/org-multiple-keymap.el                             |
 | org-present-remote          | https://git.sr.ht/~duncan-bayne/org-present-remote                          |
