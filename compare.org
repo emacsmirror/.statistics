@@ -107,9 +107,9 @@
 | gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5849 |   5849 |       |       |      238 |         211 |  5239 |
+| github      | 5851 |   5851 |       |       |      238 |         211 |  5241 |
 | codeberg    |  228 |    228 |       |       |       27 |          48 |   186 |
-| gitlab      |  184 |    184 |       |       |       18 |           8 |   167 |
+| gitlab      |  183 |    183 |       |       |       18 |           8 |   166 |
 | sourcehut   |  126 |    126 |       |       |       22 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2168 |        |  2168 |       |          |             |    41 |
+| shelved     | 2169 |        |  2169 |       |          |             |    42 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   271 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9717 |   7041 |  2168 |   512 |      512 |         281 |  6231 |
+| total       | 9719 |   7042 |  2169 |   512 |      512 |         281 |  6233 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -480,7 +480,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (93)                | Url                                                                         |
+| Package (94)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
@@ -562,6 +562,7 @@
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | ripgrep                     | https://github.com/nlamirault/ripgrep.el                                    |
 | ripgrep                     | https://github.com/nlamirault/ripgrep.el                                    |
+| secretaria                  | https://gitlab.com/shackra/secretaria                                       |
 | session                     | https://github.com/emacsorphanage/session                                   |
 | show-css                    | https://github.com/8cylinder/showcss-mode                                   |
 | sml-modeline                | https://github.com/emacsorphanage/sml-modeline                              |
@@ -944,7 +945,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (41)         | Url                                                |
+| Package (42)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -982,6 +983,7 @@ Notes on builtin packages, which are not listed above by default.
 | quick-preview        | https://github.com/emacsattic/quick-preview        |
 | rainbow-blocks       | https://github.com/emacsattic/rainbow-blocks       |
 | redshank             | https://github.com/emacsattic/redshank             |
+| secretaria           | https://github.com/emacsattic/secretaria           |
 | session              | https://github.com/emacsattic/session              |
 | sml-modeline         | https://github.com/emacsattic/sml-modeline         |
 | tbx2org              | https://github.com/emacsattic/tbx2org              |
