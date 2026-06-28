@@ -64,7 +64,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (548)                | Link                                    | Summary                                                                |
+| Package (549)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -265,6 +265,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | quick-jump                   | [[https://github.com/jixiuf/quick-jump][jixiuf/quick-jump]]                       | Remember current position,and jump back                                |
 | comicscript                  | [[https://github.com/jkersey/comicscript][jkersey/comicscript]]                     | A major mode for editing comic script files                            |
 | ac-dscanner                  | [[https://github.com/jmaschme/ac-dscanner][jmaschme/ac-dscanner]]                    | Auto Completion source for dscanner for GNU Emacs                      |
+| beardbolt                    | [[https://github.com/joaotavora/beardbolt][joaotavora/beardbolt]]                    | A compiler output viewer                                               |
 | taskpaper                    | [[https://github.com/jonasoberschweiber/taskpaper-el][jonasoberschweiber/taskpaper-el]]         | Taskpaper implementation for Emacs                                     |
 | ergore                       | [[https://github.com/jonnay/ergore][jonnay/ergore]]                           | Personal Bitlbee robot and helper                                      |
 | clojure-refactoring-mode     | [[https://github.com/joodie/clojure-refactoring][joodie/clojure-refactoring]]              | Minor mode for basic clojure                                           |

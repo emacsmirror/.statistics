@@ -107,8 +107,8 @@
 | gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5855 |   5855 |       |       |      238 |         211 |  5244 |
-| codeberg    |  228 |    228 |       |       |       27 |          48 |   186 |
+| github      | 5856 |   5856 |       |       |      237 |         209 |  5245 |
+| codeberg    |  231 |    231 |       |       |       28 |          50 |   188 |
 | gitlab      |  183 |    183 |       |       |       18 |           8 |   166 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
@@ -125,10 +125,10 @@
 | shelved     | 2170 |        |  2170 |       |          |             |    42 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   271 |
+| secondary   |      |        |       |       |          |             |   272 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9725 |   7047 |  2170 |   512 |      513 |         281 |  6236 |
+| total       | 9729 |   7051 |  2170 |   512 |      513 |         281 |  6240 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -748,6 +748,7 @@
 | monorepo-cadadr         | paper-theme                      | codeberg  |
 | monorepo-zenitani       | smart-compile                    | github    |
 | musicbrainz             | listenbrainz                     | github    |
+| musicbrainz             | musicbrainz-interactive          | github    |
 | nael                    | nael-lsp                         | codeberg  |
 | nameframe               | nameframe-perspective            | github    |
 | nameframe               | nameframe-project                | github    |
