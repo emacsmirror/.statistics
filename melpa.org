@@ -64,7 +64,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (549)                | Link                                    | Summary                                                                |
+| Package (550)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -78,6 +78,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | diatheke                     | [[https://github.com/JasonFruit/diatheke.el][JasonFruit/diatheke.el]]                  | A minor mode using the diatheke command-line Bible tool                |
 | font-lock-regression-suite   | [[https://github.com/Lindydancer/font-lock-regression-suite][Lindydancer/font-lock-regression-suite]]  | Test suite for font-lock                                               |
 | company-ess                  | [[https://github.com/Lompik/company-ess][Lompik/company-ess]]                      | R/ess Completion Backend for company-mode                              |
+| mongodb                      | [[https://github.com/LuciusChen/mongodb.el][LuciusChen/mongodb.el]]                   | Native MongoDB protocol client                                         |
 | org-defprop                  | [[https://github.com/Neil-Smithline/org-defprop][Neil-Smithline/org-defprop]]              | Define Org Mode variables and settings with a corresponding #+KEYWORDS |
 | org-global-insert-link       | [[https://github.com/Neil-Smithline/org-global-insert-link][Neil-Smithline/org-global-insert-link]]   | Use Org Mode's ability to capture links in other modes                 |
 | nyan-prompt                  | [[https://github.com/PuercoPop/nyan-prompt][PuercoPop/nyan-prompt]]                   | Nyan Cat on the eshell prompt                                          |

@@ -89,7 +89,7 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (38)             | Class     | Feature                 | Shelved Provider   |
+| Package (40)             | Class     | Feature                 | Shelved Provider   |
 |--------------------------+-----------+-------------------------+--------------------|
 | ai-code                  | github    | whisper                 | whisper            |
 | build-farm               | github    | magit-popup             | magit-popup        |
@@ -121,8 +121,10 @@ sometimes also fixing) these issues quicker than I can report them.
 | matlab-mode              | github    | semantic-dep            |                    |
 | matlab-mode              | github    | semantic-format         |                    |
 | matlab-mode              | github    | semanticdb              |                    |
+| memolist                 | github    | ag                      | ag                 |
 | org-gnome                | github    | gnome-calendar          | gnome-calendar     |
 | org-link-beautify        | git       | org-media-note          |                    |
+| org-seek                 | git       | ag                      | ag                 |
 | org-supertag             | github    | supertag-drawer-adapter |                    |
 | ox-textile               | github    | org-test                |                    |
 | rustic                   | github    | helm-ag                 | helm-ag            |
@@ -134,7 +136,9 @@ sometimes also fixing) these issues quicker than I can report them.
 | symex                    | github    | chimera                 |                    |
 | symex                    | github    | rigpa                   |                    |
 | tblui                    | github    | magit-popup             | magit-popup        |
+| verilog-ext              | github    | ag                      | ag                 |
 | verilog-ext              | github    | ripgrep                 | ripgrep            |
+| vhdl-ext                 | github    | ag                      | ag                 |
 | vhdl-ext                 | github    | ripgrep                 | ripgrep            |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
@@ -143,7 +147,8 @@ sometimes also fixing) these issues quicker than I can report them.
 - 2025-04-03 gradle WONTFIX https://github.com/emacs-eclim/emacs-eclim/pull/106
 - 2025-06-20 glab
   - git-commit-insert-issue https://gitlab.com/emacs-stuff/git-commit-insert-issue/-/issues/24
-  - magit-gitlab  https://gitlab.com/arvidnl/magit-gitlab/-/issues/8
+  - magit-gitlab https://gitlab.com/arvidnl/magit-gitlab/-/issues/8
+- 2026-07-05 ag https://github.com/melpa/melpa/pull/471
 
 * Missing library summary
 #+name: missing-summary

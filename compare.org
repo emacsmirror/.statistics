@@ -107,7 +107,7 @@
 | gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5856 |   5856 |       |       |      237 |         209 |  5245 |
+| github      | 5862 |   5862 |       |       |      237 |         209 |  5252 |
 | codeberg    |  231 |    231 |       |       |       28 |          50 |   188 |
 | gitlab      |  183 |    183 |       |       |       18 |           8 |   166 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2170 |        |  2170 |       |          |             |    42 |
+| shelved     | 2172 |        |  2172 |       |          |             |    42 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   272 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9729 |   7051 |  2170 |   512 |      513 |         281 |  6240 |
+| total       | 9737 |   7057 |  2172 |   512 |      513 |         281 |  6247 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -480,11 +480,13 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (94)                | Url                                                                         |
+| Package (96)                | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
+| ag                          | https://github.com/Wilfred/ag.el                                            |
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
 | auto-complete-auctex        | https://github.com/monsanto/auto-complete-auctex                            |
 | bazel                       | https://github.com/bazelbuild/emacs-bazel-mode                              |
+| blockdiag-mode              | https://github.com/xcezx/blockdiag-mode                                     |
 | bury-successful-compilation | https://github.com/EricCrosson/bury-successful-compilation                  |
 | call-graph                  | https://github.com/beacoder/call-graph                                      |
 | cfml-mode                   | https://github.com/amyers634/cfml-mode                                      |

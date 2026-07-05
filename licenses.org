@@ -69,7 +69,7 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  5079 |      72 |
+| GPL-3.0-or-later  |  5085 |      72 |
 | GPL-2.0-or-later  |   846 |      12 |
 | MIT               |   450 |       6 |
 | GPL-3.0-only      |   184 |       3 |
@@ -107,9 +107,9 @@
 | Unicode-TOU       |     1 |       0 |
 | Vim               |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6169 |      87 |
+| total GNU         |  6175 |      88 |
 |-------------------+-------+---------|
-| total             |  7051 |     100 |
+| total             |  7057 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -146,8 +146,8 @@
 #+results: attic-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-2.0-or-later  |  1183 |      55 |
-| GPL-3.0-or-later  |   676 |      31 |
+| GPL-2.0-or-later  |  1183 |      54 |
+| GPL-3.0-or-later  |   678 |      31 |
 | GPL-2.0-only      |    61 |       3 |
 | GPL               |    43 |       2 |
 | public-domain     |    41 |       2 |
@@ -178,9 +178,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  2019 |      93 |
+| total GNU         |  2021 |      93 |
 |-------------------+-------+---------|
-| total             |  2170 |     100 |
+| total             |  2172 |     100 |
 
 ** Packages with unknown/custom licenses
 #+name: attic-unknown
