@@ -36,14 +36,12 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (10)              | Package                 | Shelved |
+| Feature (9)               | Package                 | Shelved |
 |---------------------------+-------------------------+---------|
 | byte-compile-local        | eglot-python-preset     |         |
 | byte-compile-local        | eglot-typescript-preset |         |
 | checkdoc-local            | eglot-python-preset     |         |
 | checkdoc-local            | eglot-typescript-preset |         |
-| copilot-chat              | copilot                 |         |
-| copilot-chat              | copilot-chat            |         |
 | desert-theme              | color-theme-modern      |         |
 | desert-theme              | desert-theme            |         |
 | greek-polytonic           | emacs                   |         |
@@ -89,57 +87,56 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (40)             | Class     | Feature                 | Shelved Provider   |
-|--------------------------+-----------+-------------------------+--------------------|
-| ai-code                  | github    | whisper                 | whisper            |
-| build-farm               | github    | magit-popup             | magit-popup        |
-| djangonaut               | github    | magit-popup             | magit-popup        |
-| easy-hugo                | github    | helm-ag                 | helm-ag            |
-| easy-jekyll              | github    | helm-ag                 | helm-ag            |
-| eca                      | github    | whisper                 | whisper            |
-| eev                      | github    | lean4-mode              |                    |
-| emidje                   | github    | magit-popup             | magit-popup        |
-| evil-textobj-tree-sitter | github    | tree-sitter             | tree-sitter        |
-| flex-compile             | github    | slite                   |                    |
-| git-commit-insert-issue  | gitlab    | glab                    | glab               |
-| govc                     | subtree   | magit-popup             | magit-popup        |
-| gradle                   | sourcehut | eclim                   | eclim              |
-| guix                     | codeberg  | magit-popup             | magit-popup        |
-| gumshoe                  | github    | gumshoe-completionist   |                    |
-| gumshoe                  | github    | gumshoe-consult         |                    |
-| gumshoe                  | github    | gumshoe-persp           |                    |
-| hyperbole                | gnu       | interaction-log         | interaction-log    |
-| icicles                  | wiki      | yow                     |                    |
-| imdb                     | github    | open-web                |                    |
-| jabber                   | codeberg  | jabber-omemo-core       |                    |
-| jest                     | github    | magit-popup             | magit-popup        |
-| kapacitor                | github    | magit-popup             | magit-popup        |
-| kubernetes               | github    | magit-popup             | magit-popup        |
-| lispy                    | github    | indium                  | indium             |
-| magit-gitflow            | github    | magit-popup             | magit-popup        |
-| magit-gitlab             | gitlab    | glab                    | glab               |
-| matlab-mode              | github    | semantic-dep            |                    |
-| matlab-mode              | github    | semantic-format         |                    |
-| matlab-mode              | github    | semanticdb              |                    |
-| memolist                 | github    | ag                      | ag                 |
-| org-gnome                | github    | gnome-calendar          | gnome-calendar     |
-| org-link-beautify        | git       | org-media-note          |                    |
-| org-seek                 | git       | ag                      | ag                 |
-| org-supertag             | github    | supertag-drawer-adapter |                    |
-| ox-textile               | github    | org-test                |                    |
-| rustic                   | github    | helm-ag                 | helm-ag            |
-| scopeline                | github    | tree-sitter             | tree-sitter        |
-| sdml-mode                | github    | tree-sitter             | tree-sitter        |
-| sdml-mode                | github    | tree-sitter-hl          | tree-sitter        |
-| sdml-mode                | github    | tree-sitter-indent      | tree-sitter-indent |
-| symbol-navigation-hydra  | github    | helm-ag                 | helm-ag            |
-| symex                    | github    | chimera                 |                    |
-| symex                    | github    | rigpa                   |                    |
-| tblui                    | github    | magit-popup             | magit-popup        |
-| verilog-ext              | github    | ag                      | ag                 |
-| verilog-ext              | github    | ripgrep                 | ripgrep            |
-| vhdl-ext                 | github    | ag                      | ag                 |
-| vhdl-ext                 | github    | ripgrep                 | ripgrep            |
+| Package (39)             | Class     | Feature               | Shelved Provider   |
+|--------------------------+-----------+-----------------------+--------------------|
+| ai-code                  | github    | whisper               | whisper            |
+| build-farm               | github    | magit-popup           | magit-popup        |
+| djangonaut               | github    | magit-popup           | magit-popup        |
+| easy-hugo                | github    | helm-ag               | helm-ag            |
+| easy-jekyll              | github    | helm-ag               | helm-ag            |
+| eca                      | github    | whisper               | whisper            |
+| eev                      | github    | lean4-mode            |                    |
+| emidje                   | github    | magit-popup           | magit-popup        |
+| evil-textobj-tree-sitter | github    | tree-sitter           | tree-sitter        |
+| flex-compile             | github    | slite                 |                    |
+| git-commit-insert-issue  | gitlab    | glab                  | glab               |
+| govc                     | subtree   | magit-popup           | magit-popup        |
+| gradle                   | sourcehut | eclim                 | eclim              |
+| guix                     | codeberg  | magit-popup           | magit-popup        |
+| gumshoe                  | github    | gumshoe-completionist |                    |
+| gumshoe                  | github    | gumshoe-consult       |                    |
+| gumshoe                  | github    | gumshoe-persp         |                    |
+| hyperbole                | gnu       | interaction-log       | interaction-log    |
+| icicles                  | wiki      | yow                   |                    |
+| imdb                     | github    | open-web              |                    |
+| jabber                   | codeberg  | jabber-omemo-core     |                    |
+| jest                     | github    | magit-popup           | magit-popup        |
+| kapacitor                | github    | magit-popup           | magit-popup        |
+| kubernetes               | github    | magit-popup           | magit-popup        |
+| lispy                    | github    | indium                | indium             |
+| magit-gitflow            | github    | magit-popup           | magit-popup        |
+| magit-gitlab             | gitlab    | glab                  | glab               |
+| matlab-mode              | github    | semantic-dep          |                    |
+| matlab-mode              | github    | semantic-format       |                    |
+| matlab-mode              | github    | semanticdb            |                    |
+| memolist                 | github    | ag                    | ag                 |
+| org-gnome                | github    | gnome-calendar        | gnome-calendar     |
+| org-link-beautify        | git       | org-media-note        |                    |
+| org-seek                 | git       | ag                    | ag                 |
+| ox-textile               | github    | org-test              |                    |
+| rustic                   | github    | helm-ag               | helm-ag            |
+| scopeline                | github    | tree-sitter           | tree-sitter        |
+| sdml-mode                | github    | tree-sitter           | tree-sitter        |
+| sdml-mode                | github    | tree-sitter-hl        | tree-sitter        |
+| sdml-mode                | github    | tree-sitter-indent    | tree-sitter-indent |
+| symbol-navigation-hydra  | github    | helm-ag               | helm-ag            |
+| symex                    | github    | chimera               |                    |
+| symex                    | github    | rigpa                 |                    |
+| tblui                    | github    | magit-popup           | magit-popup        |
+| verilog-ext              | github    | ag                    | ag                 |
+| verilog-ext              | github    | ripgrep               | ripgrep            |
+| vhdl-ext                 | github    | ag                    | ag                 |
+| vhdl-ext                 | github    | ripgrep               | ripgrep            |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
