@@ -59,9 +59,10 @@
 
 - greek-polytonic: debbugs, wontfix
 
-There are always a few conflicts caused by AI-coded AI tools.  I am
-not reporting these issues upstream because the AI is producing (and
-sometimes also fixing) these issues quicker than I can report them.
+There are always a few conflicts caused by stochastic parrots.  I am
+not reporting these issues upstream because the LLMs are producing
+(and sometimes also fixing) these issues quicker than I could report
+them.
 
 * Packages with unsatisfied dependencies
 #+name: unsatisfied
@@ -87,7 +88,7 @@ sometimes also fixing) these issues quicker than I can report them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (39)             | Class     | Feature               | Shelved Provider   |
+| Package (37)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | build-farm               | github    | magit-popup           | magit-popup        |
@@ -133,10 +134,6 @@ sometimes also fixing) these issues quicker than I can report them.
 | symex                    | github    | chimera               |                    |
 | symex                    | github    | rigpa                 |                    |
 | tblui                    | github    | magit-popup           | magit-popup        |
-| verilog-ext              | github    | ag                    | ag                 |
-| verilog-ext              | github    | ripgrep               | ripgrep            |
-| vhdl-ext                 | github    | ag                    | ag                 |
-| vhdl-ext                 | github    | ripgrep               | ripgrep            |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
