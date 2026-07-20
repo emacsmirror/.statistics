@@ -69,17 +69,17 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  5087 |      72 |
+| GPL-3.0-or-later  |  5093 |      72 |
 | GPL-2.0-or-later  |   846 |      12 |
-| MIT               |   450 |       6 |
+| MIT               |   451 |       6 |
 | GPL-3.0-only      |   184 |       3 |
 | BSD-2-Clause      |    83 |       1 |
+| Apache-2.0        |    76 |       1 |
 | BSD-3-Clause      |    76 |       1 |
-| Apache-2.0        |    75 |       1 |
 | Unlicense         |    41 |       1 |
 | WTFPL             |    36 |       1 |
+| AGPL-3.0-or-later |    35 |       0 |
 | public-domain     |    35 |       0 |
-| AGPL-3.0-or-later |    34 |       0 |
 | ISC               |    29 |       0 |
 | as-is             |    19 |       0 |
 | LGPL-3.0-or-later |     9 |       0 |
@@ -107,9 +107,9 @@
 | Unicode-TOU       |     1 |       0 |
 | Vim               |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6177 |      87 |
+| total GNU         |  6184 |      87 |
 |-------------------+-------+---------|
-| total             |  7060 |     100 |
+| total             |  7069 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -147,7 +147,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |  1183 |      54 |
-| GPL-3.0-or-later  |   678 |      31 |
+| GPL-3.0-or-later  |   679 |      31 |
 | GPL-2.0-only      |    61 |       3 |
 | GPL               |    43 |       2 |
 | public-domain     |    41 |       2 |
@@ -178,9 +178,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  2021 |      93 |
+| total GNU         |  2022 |      93 |
 |-------------------+-------+---------|
-| total             |  2172 |     100 |
+| total             |  2173 |     100 |
 
 ** Packages with unknown/custom licenses
 #+name: attic-unknown
