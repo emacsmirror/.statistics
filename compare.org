@@ -107,7 +107,7 @@
 | gnu-elpa    |  155 |    155 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5871 |   5871 |       |       |      237 |         210 |  5263 |
+| github      | 5868 |   5868 |       |       |      238 |         210 |  5263 |
 | codeberg    |  232 |    232 |       |       |       28 |          50 |   189 |
 | gitlab      |  183 |    183 |       |       |       18 |           8 |   166 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2173 |        |  2173 |       |          |             |    42 |
+| shelved     | 2176 |        |  2176 |       |          |             |    42 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   272 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9751 |   7069 |  2173 |   512 |      513 |         282 |  6261 |
+| total       | 9751 |   7066 |  2176 |   512 |      514 |         282 |  6261 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -480,7 +480,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (97)                | Url                                                                         |
+| Package (100)               | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | ag                          | https://github.com/Wilfred/ag.el                                            |
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
@@ -503,6 +503,7 @@
 | edit-list                   | https://mwolson.org/static/dist/elisp/edit-list.el                          |
 | elnode                      | https://github.com/jcaw/elnode                                              |
 | elscreen-mew                | https://github.com/masutaka/elscreen-mew                                    |
+| emidje                      | https://github.com/nubank/emidje                                            |
 | eno                         | https://github.com/enoson/eno.el                                            |
 | eshell-outline              | https://git.jamzattack.xyz/eshell-outline                                   |
 | ess-smart-underscore        | https://github.com/mattfidler/ess-smart-underscore.el                       |
@@ -554,6 +555,8 @@
 | org-recur                   | https://github.com/mrcnski/org-recur                                        |
 | org-wunderlist              | https://github.com/myuhe/org-wunderlist.el                                  |
 | paradox                     | https://github.com/Malabarba/paradox                                        |
+| pcmpl-homebrew              | https://github.com/suzzvv/pcmpl-homebrew                                    |
+| pcmpl-pip                   | https://github.com/suzzvv/pcmpl-pip                                         |
 | peek-mode                   | https://github.com/erikriverson/peek-mode                                   |
 | peep-dired                  | https://github.com/asok/peep-dired                                          |
 | projmake-mode               | https://github.com/ericbmerritt/projmake-mode                               |

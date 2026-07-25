@@ -88,7 +88,7 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (37)             | Class     | Feature               | Shelved Provider   |
+| Package (36)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | build-farm               | github    | magit-popup           | magit-popup        |
@@ -97,7 +97,6 @@ them.
 | easy-jekyll              | github    | helm-ag               | helm-ag            |
 | eca                      | github    | whisper               | whisper            |
 | eev                      | github    | lean4-mode            |                    |
-| emidje                   | github    | magit-popup           | magit-popup        |
 | evil-textobj-tree-sitter | github    | tree-sitter           | tree-sitter        |
 | flex-compile             | github    | slite                 |                    |
 | git-commit-insert-issue  | gitlab    | glab                  | glab               |
