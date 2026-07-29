@@ -628,12 +628,13 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (50)               | Link      |                                                        |
+| Package (53)               | Link      |                                                        |
 |----------------------------+-----------+--------------------------------------------------------|
 | atomizer                   | sourcehut | [[https://git.sr.ht/~flandrew/atomizer][flandrew/atomizer]]                                      |
 | awhile                     | sourcehut | [[https://git.sr.ht/~flandrew/awhile][flandrew/awhile]]                                        |
 | bidi                       | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?CategoryBiDi]]  |
 | cfrac                      | sourcehut | [[https://git.sr.ht/~flandrew/cfrac][flandrew/cfrac]]                                         |
+| codex-ide                  | git       | [[https://git.thanosapollo.org/emacs-codex-ide]]           |
 | democratize                | sourcehut | [[https://git.sr.ht/~flandrew/democratize][flandrew/democratize]]                                   |
 | ebuild-mode                | git       |                                                        |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                                 |
@@ -649,6 +650,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | goldendict                 | git       | [[https://repo.or.cz/goldendict.el.git]]                   |
 | gpicker                    | nongnu    | [[https://savannah.nongnu.org/projects/gpicker][nongnu:gpicker]]                                         |
 | gradle                     | sourcehut | [[https://git.sr.ht/~vhallac/gradle-el][vhallac/gradle-el]]                                      |
+| hermes                     | git       | [[https://git.thanosapollo.org/emacs-hermes]]              |
 | htmlr                      | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?HtmlRendering]] |
 | kage-mode                  | codeberg  | [[https://codeberg.org/scip/kage-mode][scip/kage-mode]]                                         |
 | lakota-input               | sourcehut | [[https://git.sr.ht/~shoshin/lakota-input.git]]            |
@@ -671,6 +673,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | rdictcc                    | sourcehut | [[https://git.sr.ht/~tsdh/rdictcc][tsdh/rdictcc]]                                           |
 | really-simple-wiki         | git       | [[https://www.emacswiki.org/emacs/ReallySimpleWikiMode]]   |
 | riece                      | nongnu    | [[http://www.nongnu.org/riece][nongnu:riece]]                                           |
+| simple-pass                | git       | [[https://codeberg.org/ThanosApollo/simple-pass]]          |
 | slug                       | sourcehut | [[https://git.sr.ht/~flandrew/slug][flandrew/slug]]                                          |
 | sparkly                    | sourcehut | [[https://git.sr.ht/~flandrew/sparkly][flandrew/sparkly]]                                       |
 | sparkly-stats              | sourcehut | [[https://git.sr.ht/~flandrew/sparkly-stats][flandrew/sparkly-stats]]                                 |
