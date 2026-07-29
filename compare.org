@@ -107,7 +107,7 @@
 | gnu-elpa    |  154 |    154 |       |       |      144 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5875 |   5875 |       |       |      239 |         210 |  5270 |
+| github      | 5873 |   5873 |       |       |      239 |         210 |  5269 |
 | codeberg    |  229 |    229 |       |       |       27 |          50 |   189 |
 | gitlab      |  183 |    183 |       |       |       18 |           8 |   166 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   272 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9761 |   7076 |  2176 |   512 |      515 |         282 |  6268 |
+| total       | 9759 |   7074 |  2176 |   512 |      515 |         282 |  6267 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
