@@ -885,6 +885,9 @@
           (emir-melpa--migrated-packages)) ;'include-builtin))
 #+end_src
 #+results: melpa-diverging-repositories
+| Package (1)     | Mirror |                                     | Melpa  |                             |
+|-----------------+--------+-------------------------------------+--------+-----------------------------|
+| grayscale-theme | github | [[https://github.com/belak-archive/emacs-grayscale-theme][belak-archive/emacs-grayscale-theme]] | github | [[https://github.com/belak/emacs-grayscale-theme][belak/emacs-grayscale-theme]] |
 
 Notes on builtin packages, which are not listed above by default.
 - csharp-mode: "this repo will continue being available from (M)ELPA
