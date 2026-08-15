@@ -214,8 +214,9 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (37)            | Assisted-by                                   |
+| Package (41)            | Assisted-by                                   |
 |-------------------------+-----------------------------------------------|
+| bitbucket-devops        | Codex:gpt-5.5-codex                           |
 | blamee                  | Claude:claude-fable-5                         |
 | bluesky                 | ChatGPT:chatgpt-5.5                           |
 | browsel                 | Claude:claude-opus-4-7                        |
@@ -241,10 +242,13 @@ them.
 | mongodb                 | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5 |
 | moonbit-ts-mode         | Codex:GPT-5                                   |
 | nucleo-completion       | OpenAI Codex:gpt-5                            |
+| ob-agent-shell          | Claude Code                                   |
 | ol-locate-file          | DeepSeek V4 Pro                               |
 | org-habit-ng            | Claude:claude-opus-4-8                        |
 | ox-mom                  | Claude:claude-sonnet-4-6                      |
 | ox-zola                 | Claude:claude-opus-4-5                        |
+| promptu                 | Claude:claude-opus-4-8                        |
+| r-ts-mode               | Sonet:4.6                                     |
 | sema-mode               | Claude:claude-opus-4-8                        |
 | shexc-ts-mode           | Claude:claude-sonnet-4-6                      |
 | snippy                  | Gemini:3.5 Flash                              |
