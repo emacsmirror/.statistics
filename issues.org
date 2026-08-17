@@ -214,49 +214,53 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (41)            | Assisted-by                                   |
-|-------------------------+-----------------------------------------------|
-| bitbucket-devops        | Codex:gpt-5.5-codex                           |
-| blamee                  | Claude:claude-fable-5                         |
-| bluesky                 | ChatGPT:chatgpt-5.5                           |
-| browsel                 | Claude:claude-opus-4-7                        |
-| claude-code-context     | Claude:claude-opus-4-7                        |
-| clutch                  | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5 |
-| context-clues           | Claude:claude-opus-4-8                        |
-| denote-solo             | Claude:claude-sonnet-4-6                      |
-| desert-theme            | Claude:claude-opus-4-8                        |
-| flex-x                  | Codex:GPT-5                                   |
-| fnm                     | claude:claude-opus-4.8                        |
-| folio-theme             | OpenAI Codex:GPT-5                            |
-| fzf-native              | Claude:claude-opus-4-7                        |
-| fzfa                    | Claude:claude-opus-4-7                        |
-| git-overleaf            | Codex:GPT-5.5                                 |
-| gruber-darker-ayu-theme | opencode:deepseek-v4-flash-free               |
-| har-viewer              | Claude:claude-sonnet-4.6                      |
-| hnview                  | OpenAI Codex:gpt-5                            |
-| keycoach                | Claude:claude-fable-5                         |
-| leadkey                 | deepseek-v4-pro                               |
-| lsp-ltex-plus           | Claude:claude-opus-4-7                        |
-| mac-ime                 | Gemini:3.1pro                                 |
-| mise-tasks              | Claude Code:claude-opus-4-7                   |
-| mongodb                 | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5 |
-| moonbit-ts-mode         | Codex:GPT-5                                   |
-| nucleo-completion       | OpenAI Codex:gpt-5                            |
-| ob-agent-shell          | Claude Code                                   |
-| ol-locate-file          | DeepSeek V4 Pro                               |
-| org-habit-ng            | Claude:claude-opus-4-8                        |
-| ox-mom                  | Claude:claude-sonnet-4-6                      |
-| ox-zola                 | Claude:claude-opus-4-5                        |
-| promptu                 | Claude:claude-opus-4-8                        |
-| r-ts-mode               | Sonet:4.6                                     |
-| sema-mode               | Claude:claude-opus-4-8                        |
-| shexc-ts-mode           | Claude:claude-sonnet-4-6                      |
-| snippy                  | Gemini:3.5 Flash                              |
-| synaxis                 | Hermes:multi-model                            |
-| sysml-mode              | GPT:gpt-5-5                                   |
-| ttx-mode                | OpenCode:N/A                                  |
-| verdict                 | Claude:claude-opus-4-7                        |
-| youtube-music           | Claude:claude-fable-5                         |
+| Package (45)              | Assisted-by                                   |
+|---------------------------+-----------------------------------------------|
+| annotated-completing-read | Claude:Sonnet-4.6                             |
+| auto-side-windows         | Claude:claude-opus-5                          |
+| bitbucket-devops          | Codex:gpt-5.5-codex                           |
+| blamee                    | Claude:claude-fable-5                         |
+| bluesky                   | ChatGPT:chatgpt-5.5                           |
+| browsel                   | Claude:claude-opus-4-7                        |
+| claude-code-context       | Claude:claude-opus-4-7                        |
+| clutch                    | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5 |
+| context-clues             | Claude:claude-opus-4-8                        |
+| denote-solo               | Claude:claude-sonnet-4-6                      |
+| desert-theme              | Claude:claude-opus-4-8                        |
+| flex-x                    | Codex:GPT-5                                   |
+| fnm                       | claude:claude-opus-4.8                        |
+| folio-theme               | OpenAI Codex:GPT-5                            |
+| fzf-native                | Claude:claude-opus-4-7                        |
+| fzfa                      | Claude:claude-opus-4-7                        |
+| git-overleaf              | Codex:GPT-5.5                                 |
+| gruber-darker-ayu-theme   | opencode:deepseek-v4-flash-free               |
+| har-viewer                | Claude:claude-sonnet-4.6                      |
+| hnview                    | OpenAI Codex:gpt-5                            |
+| keycoach                  | Claude:claude-fable-5                         |
+| leadkey                   | deepseek-v4-pro                               |
+| lsp-ltex-plus             | Claude:claude-opus-4-7                        |
+| mac-ime                   | Gemini:3.1pro                                 |
+| mise-tasks                | Claude Code:claude-opus-4-7                   |
+| mongodb                   | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5 |
+| moonbit-ts-mode           | Codex:GPT-5                                   |
+| nucleo-completion         | OpenAI Codex:gpt-5                            |
+| ob-agent-shell            | Claude Code                                   |
+| ol-locate-file            | DeepSeek V4 Pro                               |
+| org-habit-ng              | Claude:claude-opus-4-8                        |
+| ox-mom                    | Claude:claude-sonnet-4-6                      |
+| ox-zola                   | Claude:claude-opus-4-5                        |
+| pgsql                     | OpenAI Codex:gpt-5.5                          |
+| promptu                   | Claude:claude-opus-4-8                        |
+| r-ts-mode                 | Sonet:4.6                                     |
+| sema-mode                 | Claude:claude-opus-4-8                        |
+| shexc-ts-mode             | Claude:claude-sonnet-4-6                      |
+| snippy                    | Gemini:3.5 Flash                              |
+| synaxis                   | Hermes:multi-model                            |
+| sysml-mode                | GPT:gpt-5-5                                   |
+| ttx-mode                  | OpenCode:N/A                                  |
+| verdict                   | Claude:claude-opus-4-7                        |
+| vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>       |
+| youtube-music             | Claude:claude-fable-5                         |
 
 * Various update errors
 
