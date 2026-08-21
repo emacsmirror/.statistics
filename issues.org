@@ -214,7 +214,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (45)              | Assisted-by                                   |
+| Package (46)              | Assisted-by                                   |
 |---------------------------+-----------------------------------------------|
 | annotated-completing-read | Claude:Sonnet-4.6                             |
 | auto-side-windows         | Claude:claude-opus-5                          |
@@ -235,6 +235,7 @@ them.
 | git-overleaf              | Codex:GPT-5.5                                 |
 | gruber-darker-ayu-theme   | opencode:deepseek-v4-flash-free               |
 | har-viewer                | Claude:claude-sonnet-4.6                      |
+| hermes                    | Hermes:MoA                                    |
 | hnview                    | OpenAI Codex:gpt-5                            |
 | keycoach                  | Claude:claude-fable-5                         |
 | leadkey                   | deepseek-v4-pro                               |
