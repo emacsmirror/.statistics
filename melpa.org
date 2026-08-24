@@ -64,7 +64,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (550)                | Link                                    | Summary                                                                |
+| Package (549)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -192,7 +192,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | pgsql-linum-format           | [[https://github.com/dimitri/pgsql-linum-format][dimitri/pgsql-linum-format]]              | Dimitri Fontaine                                                       |
 | pgsrc                        | [[https://github.com/dimitri/pgsrc-el][dimitri/pgsrc-el]]                        | Source Code Editing Facilities for PostgreSQL                          |
 | mu4e                         | [[https://github.com/djcb/mu][djcb/mu]]                                 | Mu-based mua for emacs                                                 |
-| browsel                      | [[https://github.com/dmgerman/browsel][dmgerman/browsel]]                        | WebSocket bridge to a Chrome/Firefox extension                         |
 | org-manage                   | [[https://github.com/dmgerman/org-manage][dmgerman/org-manage]]                     | Manage org files in a given directory                                  |
 | ampl-mode                    | [[https://github.com/dpo/ampl-mode][dpo/ampl-mode]]                           | Ampl mode for the Emacs editor                                         |
 | symex                        | [[https://github.com/drym-org/symex.el][drym-org/symex.el]]                       | An evil way to edit Lisp symbolic expressions as trees                 |
