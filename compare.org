@@ -103,18 +103,18 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  509 |        |       |   512 |       22 |             |       |
+| builtin     |  509 |        |       |   512 |       23 |             |       |
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5896 |   5896 |       |       |      239 |         214 |  5290 |
+| github      | 5903 |   5903 |       |       |      239 |         214 |  5296 |
 | codeberg    |  235 |    235 |       |       |       28 |          53 |   193 |
 | gitlab      |  183 |    183 |       |       |       18 |           8 |   166 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
 | nongnu      |    7 |      7 |       |       |        4 |           0 |     2 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| git         |  142 |    142 |       |       |       20 |           9 |   109 |
+| git         |  143 |    143 |       |       |       20 |           9 |   110 |
 | hg          |   16 |     16 |       |       |        1 |           0 |    14 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | subtree     |   23 |     23 |       |       |          |             |       |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   272 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9792 |   7102 |  2181 |   512 |      517 |         291 |  6295 |
+| total       | 9800 |   7110 |  2181 |   512 |      518 |         291 |  6302 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -291,12 +291,13 @@
     :order-by [(asc p:name)]])
 #+end_src
 #+results: gnu-elpa-prefer-builtin
-| Package (29)        | Elpa     | Reason              |
+| Package (30)        | Elpa     | Reason              |
 |---------------------+----------+---------------------|
 | bind-key            | core     |                     |
 | cl-generic          | internal | backport of builtin |
 | cl-lib              | internal | backport of builtin |
 | cond-star           | core     | backport of builtin |
+| cperl-mode          | core     |                     |
 | csharp-mode         | github   |                     |
 | eglot               | core     |                     |
 | eldoc               | core     |                     |
