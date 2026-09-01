@@ -214,7 +214,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (59)              | Assisted-by                                                      |
+| Package (57)              | Assisted-by                                                      |
 |---------------------------+------------------------------------------------------------------|
 | annotated-completing-read | Claude:Sonnet-4.6                                                |
 | auto-capitalize           | OpenCode:Big_Pickle                                              |
@@ -263,7 +263,6 @@ them.
 | pgsql                     | OpenAI Codex:gpt-5.5                                             |
 | promptu                   | Claude:claude-opus-4-8                                           |
 | r-ts-mode                 | Sonet:4.6                                                        |
-| sapling                   | Deepseek:deepseek-v4-pro default                                 |
 | schlau-compile            | Claude:Sonnet_5                                                  |
 | sema-mode                 | Claude:claude-opus-4-8                                           |
 | shexc-ts-mode             | Claude:claude-sonnet-4-6                                         |
@@ -271,7 +270,6 @@ them.
 | synaxis                   | Hermes:multi-model                                               |
 | sysml-mode                | GPT:gpt-5-5                                                      |
 | ttx-mode                  | OpenCode:N/A                                                     |
-| vc-sapling                | Deepseek:deepseek-v4-pro default                                 |
 | verdict                   | Claude:claude-opus-4-7                                           |
 | vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>                          |
 | youtube-music             | Claude:claude-fable-5                                            |

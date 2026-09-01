@@ -64,7 +64,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (550)                | Link                                    | Summary                                                                |
+| Package (549)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -520,7 +520,6 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | clip2org                     | [[https://github.com/thamer/clip2org][thamer/clip2org]]                         | Convert Kindle's My Clippings.txt into Org                             |
 | auto-complete-clang-objc     | [[https://github.com/tharpa/auto-complete-clang-objc][tharpa/auto-complete-clang-objc]]         | Auto Completion source for clang for GNU Emacs                         |
 | borg-queen                   | [[https://github.com/thblt/borg-queen][thblt/borg-queen]]                        | Manage, install and upgrade Borg drones                                |
-| smilefjes                    | [[https://github.com/themkat/smilefjes.el][themkat/smilefjes.el]]                    | View Norwegian Food Safety Authority restaurant ratings                |
 | s3                           | [[https://github.com/thorstadt/s3.el][ryancrum/s3.el]]                          | Interact with Amazon Web Services S3                                   |
 | trac-wiki                    | [[https://github.com/tiborsimko/trac-wiki-el][tiborsimko/trac-wiki-el]]                 | Edit trac wiki pages in emacs via XML-RPC                              |
 | campfire                     | [[https://github.com/timcharper/campfire-el][timcharper/campfire-el]]                  | An interface to campfire                                               |

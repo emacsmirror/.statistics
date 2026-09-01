@@ -107,7 +107,7 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5903 |   5903 |       |       |      239 |         214 |  5296 |
+| github      | 5893 |   5893 |       |       |      239 |         214 |  5289 |
 | codeberg    |  235 |    235 |       |       |       28 |          53 |   193 |
 | gitlab      |  183 |    183 |       |       |       18 |           8 |   166 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2181 |        |  2181 |       |          |             |    44 |
+| shelved     | 2189 |        |  2189 |       |          |             |    44 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   272 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9800 |   7110 |  2181 |   512 |      518 |         291 |  6302 |
+| total       | 9798 |   7100 |  2189 |   512 |      518 |         291 |  6295 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -377,7 +377,7 @@
 #+end_src
 #+results: nongnu-elpa-new
 
-** Delayed
+** Delayed or ignored
 #+name: nongnu-elpa-delayed
 #+begin_src emacs-lisp :post addheader('("Package" "Elpa" "Reason"),*this*)
   (epkg--sql-keep
@@ -389,6 +389,10 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: nongnu-elpa-delayed
+| Package (2) | Elpa   | Reason                                      |
+|-------------+--------+---------------------------------------------|
+| sapling     | github | extreme slop and removed assisted-by header |
+| vc-sapling  | github | extreme slop and removed assisted-by header |
 
 ** Unreleased
 #+name: nongnu-elpa-unreleased
