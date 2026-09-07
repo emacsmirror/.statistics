@@ -107,7 +107,7 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5903 |   5903 |       |       |      239 |         214 |  5299 |
+| github      | 5900 |   5900 |       |       |      239 |         214 |  5299 |
 | codeberg    |  237 |    237 |       |       |       28 |          53 |   195 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2190 |        |  2190 |       |          |             |    44 |
+| shelved     | 2193 |        |  2193 |       |          |             |    44 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   272 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9806 |   7107 |  2190 |   512 |      518 |         291 |  6302 |
+| total       | 9806 |   7104 |  2193 |   512 |      518 |         291 |  6302 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -484,7 +484,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (105)               | Url                                                                         |
+| Package (108)               | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | ag                          | https://github.com/Wilfred/ag.el                                            |
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
@@ -502,6 +502,7 @@
 | d2-ts-mode                  | https://github.com/chaploud/d2-ts-mode                                      |
 | dic-lookup-w3m              | https://github.com/emacsorphanage/dic-lookup-w3m                            |
 | django-mode                 | https://github.com/unrelentingtech/django-mode                              |
+| docker-tramp                | https://github.com/emacs-pe/docker-tramp.el                                 |
 | dollaro                     | https://github.com/laynor/dollaro                                           |
 | drawille                    | https://github.com/josuah/drawille-el                                       |
 | e2wm-R                      | https://github.com/myuhe/e2wm-R.el                                          |
@@ -541,6 +542,7 @@
 | irony-eldoc                 | https://github.com/ikirill/irony-eldoc                                      |
 | ivy-yasnippet               | https://github.com/mkcms/ivy-yasnippet                                      |
 | java-snippets               | https://github.com/nekop/yasnippet-java-mode                                |
+| javadoc-lookup              | https://github.com/skeeto/javadoc-lookup                                    |
 | journalctl-mode             | https://github.com/SebastianMeisel/journalctl-mode                          |
 | js-auto-format-mode         | https://github.com/ybiquitous/js-auto-format-mode                           |
 | jss                         | https://github.com/segv/jss                                                 |
@@ -577,6 +579,7 @@
 | redshank                    | http://www.foldr.org/~michaelw/projects/redshank.git                        |
 | ripgrep                     | https://github.com/nlamirault/ripgrep.el                                    |
 | ripgrep                     | https://github.com/nlamirault/ripgrep.el                                    |
+| scihub                      | https://github.com/emacs-pe/scihub.el                                       |
 | secretaria                  | https://gitlab.com/shackra/secretaria                                       |
 | session                     | https://github.com/emacsorphanage/session                                   |
 | show-css                    | https://github.com/8cylinder/showcss-mode                                   |

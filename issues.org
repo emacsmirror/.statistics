@@ -90,10 +90,12 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (36)             | Class     | Feature               | Shelved Provider   |
+| Package (42)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
+| ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
 | build-farm               | github    | magit-popup           | magit-popup        |
+| counsel-tramp            | github    | docker-tramp          | docker-tramp       |
 | djangonaut               | github    | magit-popup           | magit-popup        |
 | easy-hugo                | github    | helm-ag               | helm-ag            |
 | easy-jekyll              | github    | helm-ag               | helm-ag            |
@@ -108,6 +110,7 @@ them.
 | gumshoe                  | github    | gumshoe-completionist |                    |
 | gumshoe                  | github    | gumshoe-consult       |                    |
 | gumshoe                  | github    | gumshoe-persp         |                    |
+| helm-tramp               | github    | docker-tramp          | docker-tramp       |
 | hyperbole                | gnu       | interaction-log       | interaction-log    |
 | icicles                  | wiki      | yow                   |                    |
 | imdb                     | github    | open-web              |                    |
@@ -126,11 +129,14 @@ them.
 | org-link-beautify        | git       | org-media-note        |                    |
 | org-seek                 | git       | ag                    | ag                 |
 | ox-textile               | github    | org-test              |                    |
+| ros                      | github    | docker-tramp          | docker-tramp       |
 | rustic                   | github    | helm-ag               | helm-ag            |
 | scopeline                | github    | tree-sitter           | tree-sitter        |
 | sdml-mode                | github    | tree-sitter           | tree-sitter        |
 | sdml-mode                | github    | tree-sitter-hl        | tree-sitter        |
 | sdml-mode                | github    | tree-sitter-indent    | tree-sitter-indent |
+| shx                      | github    | docker-tramp          | docker-tramp       |
+| slime-docker             | github    | docker-tramp          | docker-tramp       |
 | symbol-navigation-hydra  | github    | helm-ag               | helm-ag            |
 | symex                    | github    | chimera               |                    |
 | symex                    | github    | rigpa                 |                    |
@@ -238,7 +244,7 @@ them.
 | flex-x                    | Codex:GPT-5                                                        |
 | fnm                       | claude:claude-opus-4.8                                             |
 | folio-theme               | OpenAI Codex:GPT-5                                                 |
-| full-gtd                  | Kimi:kimi-k2.5, DeepSeek:deepseek-v3.2, Claude:claude-sonnet-4.6   |
+| full-gtd                  | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
 | fzf-native                | Claude:claude-opus-4-7                                             |
 | fzfa                      | Claude:claude-opus-4-7                                             |
 | git-overleaf              | Codex:GPT-5.5                                                      |
