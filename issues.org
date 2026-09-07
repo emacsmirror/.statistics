@@ -36,7 +36,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (9)               | Package                 | Shelved |
+| Feature (10)              | Package                 | Shelved |
 |---------------------------+-------------------------+---------|
 | byte-compile-local        | eglot-python-preset     |         |
 | byte-compile-local        | eglot-typescript-preset |         |
@@ -44,10 +44,12 @@
 | checkdoc-local            | eglot-typescript-preset |         |
 | desert-theme              | color-theme-modern      |         |
 | desert-theme              | desert-theme            |         |
+| gptel                     | gptel                   |         |
+| gptel                     | surveyor                |         |
 | greek-polytonic           | emacs                   |         |
 | greek-polytonic           | greek-polytonic         | t       |
 | install-deps              | claude-code             |         |
-| install-deps              | pi-coding-agent         |         |
+| install-deps              | pilish                  |         |
 | llm-test                  | llm                     |         |
 | llm-test                  | llm-test                |         |
 | lsp-tailwindcss           | lsp-mode                |         |
@@ -214,65 +216,72 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (57)              | Assisted-by                                                      |
-|---------------------------+------------------------------------------------------------------|
-| annotated-completing-read | Claude:Sonnet-4.6                                                |
-| auto-capitalize           | OpenCode:Big_Pickle                                              |
-| auto-side-windows         | Claude:claude-opus-5                                             |
-| bitbucket-devops          | Codex:gpt-5.5-codex                                              |
-| blamee                    | Claude:claude-fable-5                                            |
-| bluesky                   | ChatGPT:chatgpt-5.5                                              |
-| browser-gt                | Claude:claude-opus-4-7                                           |
-| claude-code-context       | Claude:claude-opus-4-7                                           |
-| clutch                    | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                    |
-| consult-magit             | claude:claude-opus-4.8                                           |
-| context-clues             | Claude:claude-opus-4-8                                           |
-| denote-solo               | Claude:claude-sonnet-4-6                                         |
-| desert-theme              | Claude:claude-opus-4-8                                           |
-| eglotx                    | Codex:GPT-5                                                      |
-| flex-x                    | Codex:GPT-5                                                      |
-| fnm                       | claude:claude-opus-4.8                                           |
-| folio-theme               | OpenAI Codex:GPT-5                                               |
-| full-gtd                  | Kimi:kimi-k2.5, DeepSeek:deepseek-v3.2, Claude:claude-sonnet-4.6 |
-| fzf-native                | Claude:claude-opus-4-7                                           |
-| fzfa                      | Claude:claude-opus-4-7                                           |
-| git-overleaf              | Codex:GPT-5.5                                                    |
-| gptel-agent-harness       | Kiro-cli:claude-opus-4-8, gptel-agent-harness:deepseek-v4-flash  |
-| gruber-darker-ayu-theme   | opencode:deepseek-v4-flash-free                                  |
-| har-viewer                | Claude:claude-sonnet-4.6                                         |
-| hermes                    | Hermes:MoA                                                       |
-| hnview                    | OpenAI Codex:gpt-5                                               |
-| keycoach                  | Claude:claude-fable-5                                            |
-| latex-to-svg-backend      | Claude:claude-opus-4-8                                           |
-| leadkey                   | deepseek-v4-pro                                                  |
-| lsp-ltex-plus             | Claude:claude-opus-4-7                                           |
-| mac-ime                   | Gemini:3.1pro                                                    |
-| magent                    | Codex:GPT-5.6, Magent:deepseek-v4-pro                            |
-| mise-tasks                | Claude Code:claude-opus-4-7                                      |
-| mongodb                   | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                    |
-| moonbit-ts-mode           | Codex:GPT-5                                                      |
-| mu4e-autotask             | Claude Code:claude-opus-4-8                                      |
-| nucleo-completion         | OpenAI Codex:gpt-5                                               |
-| ob-agent-shell            | Claude Code                                                      |
-| ol-locate-file            | DeepSeek V4 Pro                                                  |
-| org-draw                  | Claude:claude-opus-4-8                                           |
-| org-habit-ng              | Claude:claude-opus-4-8                                           |
-| org-relative-date         | Claude:claude-opus-4-8                                           |
-| ox-mom                    | Claude:claude-sonnet-4-6                                         |
-| ox-zola                   | Claude:claude-opus-4-5                                           |
-| pgsql                     | OpenAI Codex:gpt-5.5                                             |
-| promptu                   | Claude:claude-opus-4-8                                           |
-| r-ts-mode                 | Sonet:4.6                                                        |
-| schlau-compile            | Claude:Sonnet_5                                                  |
-| sema-mode                 | Claude:claude-opus-4-8                                           |
-| shexc-ts-mode             | Claude:claude-sonnet-4-6                                         |
-| snippy                    | Gemini:3.5 Flash                                                 |
-| synaxis                   | Hermes:multi-model                                               |
-| sysml-mode                | GPT:gpt-5-5                                                      |
-| ttx-mode                  | OpenCode:N/A                                                     |
-| verdict                   | Claude:claude-opus-4-7                                           |
-| vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>                          |
-| youtube-music             | Claude:claude-fable-5                                            |
+| Package (64)              | Assisted-by                                                        |
+|---------------------------+--------------------------------------------------------------------|
+| agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
+| annotated-completing-read | Claude:Sonnet-4.6                                                  |
+| api-credit                | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
+| auto-capitalize           | OpenCode:Big_Pickle                                                |
+| auto-side-windows         | Claude:claude-opus-5                                               |
+| auto-tab-groups           | Claude:claude-opus-5                                               |
+| bitbucket-devops          | Codex:gpt-5.5-codex                                                |
+| blamee                    | Claude:claude-fable-5                                              |
+| bluesky                   | ChatGPT:chatgpt-5.5                                                |
+| browser-gt                | Claude:claude-opus-4-7                                             |
+| claude-code-context       | Claude:claude-opus-4-7                                             |
+| clutch                    | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
+| consult-magit             | claude:claude-opus-4.8                                             |
+| context-clues             | Claude:claude-opus-4-8                                             |
+| denote-solo               | Claude:claude-sonnet-4-6                                           |
+| desert-theme              | Claude:claude-opus-4-8                                             |
+| eglotx                    | Codex:GPT-5                                                        |
+| flex-x                    | Codex:GPT-5                                                        |
+| fnm                       | claude:claude-opus-4.8                                             |
+| folio-theme               | OpenAI Codex:GPT-5                                                 |
+| full-gtd                  | Kimi:kimi-k2.5, DeepSeek:deepseek-v3.2, Claude:claude-sonnet-4.6   |
+| fzf-native                | Claude:claude-opus-4-7                                             |
+| fzfa                      | Claude:claude-opus-4-7                                             |
+| git-overleaf              | Codex:GPT-5.5                                                      |
+| gptel-agent-harness       | Kiro-cli:claude-opus-4-8, gptel-agent-harness:deepseek-v4-flash    |
+| gruber-darker-ayu-theme   | opencode:deepseek-v4-flash-free                                    |
+| har-viewer                | Claude:claude-sonnet-4.6                                           |
+| hermes                    | Hermes:MoA                                                         |
+| hnview                    | OpenAI Codex:gpt-5                                                 |
+| keycoach                  | Claude:claude-fable-5                                              |
+| latex-to-svg-backend      | Claude:claude-opus-4-8                                             |
+| leadkey                   | deepseek-v4-pro                                                    |
+| lsp-ltex-plus             | Claude:claude-opus-4-7                                             |
+| mac-ime                   | Gemini:3.1pro                                                      |
+| magent                    | Codex:GPT-5.6, Magent:deepseek-v4-pro                              |
+| mise-tasks                | Claude Code:claude-opus-4-7                                        |
+| mode-line-path            | Claude Code:claude-opus-4-6                                        |
+| mongodb                   | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
+| moonbit-ts-mode           | Codex:GPT-5                                                        |
+| mu4e-autotask             | Claude Code:claude-opus-4-8                                        |
+| nucleo-completion         | OpenAI Codex:gpt-5                                                 |
+| ob-agent-shell            | Claude Code                                                        |
+| ol-locate-file            | DeepSeek V4 Pro                                                    |
+| org-draw                  | Claude:claude-opus-4-8                                             |
+| org-habit-ng              | Claude:claude-opus-4-8                                             |
+| org-relative-date         | Claude:claude-opus-4-8                                             |
+| org-roam-gt               | Claude:claude-opus-4-7                                             |
+| ox-mom                    | Claude:claude-sonnet-4-6                                           |
+| ox-zola                   | Claude:claude-opus-4-5                                             |
+| pgsql                     | OpenAI Codex:gpt-5.5                                               |
+| pilish                    | pi:kimi-k3                                                         |
+| promptu                   | Claude:claude-opus-4-8                                             |
+| r-ts-mode                 | Sonet:4.6                                                          |
+| schlau-compile            | Claude:Sonnet_5                                                    |
+| sema-mode                 | Claude:claude-opus-4-8                                             |
+| shexc-ts-mode             | Claude:claude-sonnet-4-6                                           |
+| snippy                    | Gemini:3.5 Flash                                                   |
+| surveyor                  | Claude:claude-fable-5                                              |
+| synaxis                   | Hermes:multi-model                                                 |
+| sysml-mode                | GPT:gpt-5-5                                                        |
+| ttx-mode                  | OpenCode:N/A                                                       |
+| verdict                   | Claude:claude-opus-4-7                                             |
+| vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>                            |
+| youtube-music             | Claude:claude-fable-5                                              |
 
 * Various update errors
 
