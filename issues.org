@@ -222,7 +222,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (64)              | Assisted-by                                                        |
+| Package (65)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
 | annotated-completing-read | Claude:Sonnet-4.6                                                  |
@@ -259,11 +259,13 @@ them.
 | lsp-ltex-plus             | Claude:claude-opus-4-7                                             |
 | mac-ime                   | Gemini:3.1pro                                                      |
 | magent                    | Codex:GPT-5.6, Magent:deepseek-v4-pro                              |
+| material-icons            | DeepSeek:DeepSeek-v4-pro                                           |
 | mise-tasks                | Claude Code:claude-opus-4-7                                        |
 | mode-line-path            | Claude Code:claude-opus-4-6                                        |
 | mongodb                   | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
 | moonbit-ts-mode           | Codex:GPT-5                                                        |
 | mu4e-autotask             | Claude Code:claude-opus-4-8                                        |
+| nix3                      | Codex:gpt-5.6-sol                                                  |
 | nucleo-completion         | OpenAI Codex:gpt-5                                                 |
 | ob-agent-shell            | Claude Code                                                        |
 | ol-locate-file            | DeepSeek V4 Pro                                                    |
@@ -276,7 +278,6 @@ them.
 | pgsql                     | OpenAI Codex:gpt-5.5                                               |
 | pilish                    | pi:kimi-k3                                                         |
 | promptu                   | Claude:claude-opus-4-8                                             |
-| r-ts-mode                 | Sonet:4.6                                                          |
 | schlau-compile            | Claude:Sonnet_5                                                    |
 | sema-mode                 | Claude:claude-opus-4-8                                             |
 | shexc-ts-mode             | Claude:claude-sonnet-4-6                                           |
@@ -288,6 +289,12 @@ them.
 | verdict                   | Claude:claude-opus-4-7                                             |
 | vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>                            |
 | youtube-music             | Claude:claude-fable-5                                              |
+
+** Dropped the Assisted-by header
+
+| Package   | Commit                                                                                     |
+|-----------+--------------------------------------------------------------------------------------------|
+| r-ts-mode | https://codeberg.org/R-for-emacs/r-ts-mode/commit/0d7c496e81a759f31e8acff690a74a4c06e23799 |
 
 * Various update errors
 
