@@ -222,7 +222,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (65)              | Assisted-by                                                        |
+| Package (67)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
 | annotated-completing-read | Claude:Sonnet-4.6                                                  |
@@ -255,6 +255,7 @@ them.
 | hnview                    | OpenAI Codex:gpt-5                                                 |
 | keycoach                  | Claude:claude-fable-5                                              |
 | latex-to-svg-backend      | Claude:claude-opus-4-8                                             |
+| latex-to-svg-frontend     | Claude:claude-opus-4-8                                             |
 | leadkey                   | deepseek-v4-pro                                                    |
 | lsp-ltex-plus             | Claude:claude-opus-4-7                                             |
 | mac-ime                   | Gemini:3.1pro                                                      |
@@ -266,6 +267,7 @@ them.
 | moonbit-ts-mode           | Codex:GPT-5                                                        |
 | mu4e-autotask             | Claude Code:claude-opus-4-8                                        |
 | nix3                      | Codex:gpt-5.6-sol                                                  |
+| nonogram                  | Claude:claude-opus-4-8                                             |
 | nucleo-completion         | OpenAI Codex:gpt-5                                                 |
 | ob-agent-shell            | Claude Code                                                        |
 | ol-locate-file            | DeepSeek V4 Pro                                                    |
