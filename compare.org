@@ -107,8 +107,8 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5905 |   5905 |       |       |      239 |         214 |  5304 |
-| codeberg    |  238 |    238 |       |       |       29 |          53 |   196 |
+| github      | 5911 |   5911 |       |       |      240 |         214 |  5312 |
+| codeberg    |  239 |    239 |       |       |       29 |          53 |   197 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2193 |        |  2193 |       |          |             |    44 |
+| shelved     | 2196 |        |  2196 |       |          |             |    43 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   272 |
+| secondary   |      |        |       |       |          |             |   273 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9813 |   7111 |  2193 |   512 |      519 |         291 |  6309 |
+| total       | 9823 |   7118 |  2196 |   512 |      520 |         291 |  6318 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -484,7 +484,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (108)               | Url                                                                         |
+| Package (111)               | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | ag                          | https://github.com/Wilfred/ag.el                                            |
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
@@ -501,6 +501,7 @@
 | cybercafe-theme             | https://github.com/gboncoffee/cybercafe-emacs-theme                         |
 | d2-ts-mode                  | https://github.com/chaploud/d2-ts-mode                                      |
 | dic-lookup-w3m              | https://github.com/emacsorphanage/dic-lookup-w3m                            |
+| dionysos                    | https://github.com/nlamirault/dionysos                                      |
 | django-mode                 | https://github.com/unrelentingtech/django-mode                              |
 | docker-tramp                | https://github.com/emacs-pe/docker-tramp.el                                 |
 | dollaro                     | https://github.com/laynor/dollaro                                           |
@@ -526,6 +527,7 @@
 | gnome-calendar              | https://github.com/NicolasPetton/gnome-calendar.el                          |
 | go-autocomplete             | https://github.com/nsf/gocode                                               |
 | gogs                        | https://github.com/magit/gogs                                               |
+| gotest                      | https://github.com/nlamirault/gotest.el                                     |
 | grayscale-theme             | https://github.com/belak-archive/emacs-grayscale-theme                      |
 | greek-polytonic             | https://github.com/jhanschoo/greek-polytonic                                |
 | gtk-variant                 | https://github.com/bepvte/gtk-variant.el                                    |
@@ -552,6 +554,7 @@
 | magit-popup                 | https://github.com/magit/magit-popup                                        |
 | mic-paren                   | http://www.gnuvola.org/software/j/mic-paren/mic-paren.el                    |
 | moonshot                    | https://github.com/ageldama/moonshot                                        |
+| mozc-cand-posframe          | https://github.com/akirak/mozc-posframe                                     |
 | nimbus-theme                | https://github.com/mrcnski/nimbus-theme                                     |
 | nndiscourse                 | https://github.com/dickmao/nndiscourse                                      |
 | nnhackernews                | https://github.com/dickmao/nnhackernews                                     |
@@ -593,9 +596,9 @@
 | tree-sitter-ispell          | https://github.com/erickgnavar/tree-sitter-ispell.el                        |
 | tree-sitter-langs           | https://github.com/emacs-tree-sitter/tree-sitter-langs                      |
 | trimspace-mode              | https://github.com/bkhl/trimspace-mode                                      |
-| ttl-mode                    | https://github.com/nxg/ttl-mode                                             |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch                           |
 | wordsmith-mode              | https://github.com/istib/wordsmith-mode                                     |
+| youdotcom                   | https://github.com/SamuelVanie/youdotcom.el                                 |
 
 ** Shared repositories
 #+name: secondary-packages
@@ -612,7 +615,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (153)   | Secondary package                | Class     |
+| Primary package (154)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -748,6 +751,7 @@
 | kubel                   | kubel-evil                       | github    |
 | kubernetes              | kubernetes-evil                  | github    |
 | langtool                | langtool-popup                   | github    |
+| latex-to-svg-frontend   | latex-to-svg-for-org             | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
 | lurk-mode               | ob-lurk                          | github    |
 | mac-pseudo-daemon       | osx-pseudo-daemon                | github    |
@@ -964,7 +968,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (44)         | Url                                                |
+| Package (43)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -1008,7 +1012,6 @@ Notes on builtin packages, which are not listed above by default.
 | session              | https://github.com/emacsattic/session              |
 | sml-modeline         | https://github.com/emacsattic/sml-modeline         |
 | tbx2org              | https://github.com/emacsattic/tbx2org              |
-| ttl-mode             | https://github.com/emacsattic/ttl-mode             |
 | wordsmith-mode       | https://github.com/emacsattic/wordsmith-mode       |
 
 * Github                                                           :noexport:

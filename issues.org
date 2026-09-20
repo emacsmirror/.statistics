@@ -36,7 +36,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (10)              | Package                 | Shelved |
+| Feature (11)              | Package                 | Shelved |
 |---------------------------+-------------------------+---------|
 | byte-compile-local        | eglot-python-preset     |         |
 | byte-compile-local        | eglot-typescript-preset |         |
@@ -44,6 +44,8 @@
 | checkdoc-local            | eglot-typescript-preset |         |
 | desert-theme              | color-theme-modern      |         |
 | desert-theme              | desert-theme            |         |
+| git-modeline              | git-emacs               |         |
+| git-modeline              | git-modeline            |         |
 | gptel                     | gptel                   |         |
 | gptel                     | surveyor                |         |
 | greek-polytonic           | emacs                   |         |
@@ -90,7 +92,7 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (42)             | Class     | Feature               | Shelved Provider   |
+| Package (43)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
@@ -104,6 +106,7 @@ them.
 | evil-textobj-tree-sitter | github    | tree-sitter           | tree-sitter        |
 | flex-compile             | github    | slite                 |                    |
 | git-commit-insert-issue  | gitlab    | glab                  | glab               |
+| go-playground            | github    | gotest                | gotest             |
 | govc                     | subtree   | magit-popup           | magit-popup        |
 | gradle                   | sourcehut | eclim                 | eclim              |
 | guix                     | codeberg  | magit-popup           | magit-popup        |
@@ -222,7 +225,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (67)              | Assisted-by                                                        |
+| Package (73)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
 | annotated-completing-read | Claude:Sonnet-4.6                                                  |
@@ -247,6 +250,7 @@ them.
 | full-gtd                  | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
 | fzf-native                | Claude:claude-opus-4-7                                             |
 | fzfa                      | Claude:claude-opus-4-7                                             |
+| git-modeline              | Claude:claude-opus-5                                               |
 | git-overleaf              | Codex:GPT-5.5                                                      |
 | gptel-agent-harness       | Kiro-cli:claude-opus-4-8, gptel-agent-harness:deepseek-v4-flash    |
 | gruber-darker-ayu-theme   | opencode:deepseek-v4-flash-free                                    |
@@ -260,12 +264,14 @@ them.
 | lsp-ltex-plus             | Claude:claude-opus-4-7                                             |
 | mac-ime                   | Gemini:3.1pro                                                      |
 | magent                    | Codex:GPT-5.6, Magent:deepseek-v4-pro                              |
+| magit-standup             | Claude:claude-opus-5                                               |
 | material-icons            | DeepSeek:DeepSeek-v4-pro                                           |
 | mise-tasks                | Claude Code:claude-opus-4-7                                        |
 | mode-line-path            | Claude Code:claude-opus-4-6                                        |
 | mongodb                   | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
 | moonbit-ts-mode           | Codex:GPT-5                                                        |
 | mu4e-autotask             | Claude Code:claude-opus-4-8                                        |
+| nightpanel-theme          | Claude:claude-opus-5                                               |
 | nix3                      | Codex:gpt-5.6-sol                                                  |
 | nonogram                  | Claude:claude-opus-4-8                                             |
 | nucleo-completion         | OpenAI Codex:gpt-5                                                 |
@@ -275,11 +281,13 @@ them.
 | org-habit-ng              | Claude:claude-opus-4-8                                             |
 | org-relative-date         | Claude:claude-opus-4-8                                             |
 | org-roam-gt               | Claude:claude-opus-4-7                                             |
+| org-roam-stats            | Claude:claude-sonnet-4-6                                           |
 | ox-mom                    | Claude:claude-sonnet-4-6                                           |
 | ox-zola                   | Claude:claude-opus-4-5                                             |
 | pgsql                     | OpenAI Codex:gpt-5.5                                               |
 | pilish                    | pi:kimi-k3                                                         |
 | promptu                   | Claude:claude-opus-4-8                                             |
+| remoto                    | ECA:claude-opus-5                                                  |
 | schlau-compile            | Claude:Sonnet_5                                                    |
 | sema-mode                 | Claude:claude-opus-4-8                                             |
 | shexc-ts-mode             | Claude:claude-sonnet-4-6                                           |
@@ -287,6 +295,7 @@ them.
 | surveyor                  | Claude:claude-fable-5                                              |
 | synaxis                   | Hermes:multi-model                                                 |
 | sysml-mode                | GPT:gpt-5-5                                                        |
+| testcover-audit           | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
 | ttx-mode                  | OpenCode:N/A                                                       |
 | verdict                   | Claude:claude-opus-4-7                                             |
 | vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>                            |

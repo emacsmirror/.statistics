@@ -64,7 +64,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (549)                | Link                                    | Summary                                                                |
+| Package (550)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -320,6 +320,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | movie                        | [[https://github.com/larsmagne/movie.el][larsmagne/movie.el]]                      | Playing movies                                                         |
 | pdfscan                      | [[https://github.com/larsmagne/pdfscan.el][larsmagne/pdfscan.el]]                    | Scanning and cropping                                                  |
 | pvr                          | [[https://github.com/larsmagne/pvr.el][larsmagne/pvr.el]]                        | Personal Video Recorder                                                |
+| query-assistant              | [[https://github.com/larsmagne/query-assistant.el][larsmagne/query-assistant.el]]            | Querying the LLM APIs                                                  |
 | scan                         | [[https://github.com/larsmagne/scan.el][larsmagne/scan.el]]                       | Scanning Sleeves                                                       |
 | scrobble                     | [[https://github.com/larsmagne/scrobble.el][larsmagne/scrobble.el]]                   | Interfacing with last.fm                                               |
 | sqorm                        | [[https://github.com/larsmagne/sqorm.el][larsmagne/sqorm.el]]                      | An ORM for sqlite                                                      |
