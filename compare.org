@@ -107,7 +107,7 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5911 |   5911 |       |       |      240 |         214 |  5312 |
+| github      | 5912 |   5912 |       |       |      240 |         214 |  5312 |
 | codeberg    |  239 |    239 |       |       |       29 |          53 |   197 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
@@ -128,7 +128,7 @@
 | secondary   |      |        |       |       |          |             |   273 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9823 |   7118 |  2196 |   512 |      520 |         291 |  6318 |
+| total       | 9824 |   7119 |  2196 |   512 |      520 |         291 |  6318 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -425,8 +425,9 @@
   (emir-nongnu-elpa--migrated-packages)
 #+end_src
 #+results: nongnu-elpa-diverging-repositories
-| Package (4)              | Mirror   |                                                        | Elpa     |                                                       |
+| Package (5)              | Mirror   |                                                        | Elpa     |                                                       |
 |--------------------------+----------+--------------------------------------------------------+----------+-------------------------------------------------------|
+| autothemer               | github   | https://github.com/ocodo/autothemer                    | github   | https://github.com/jasonm23/autothemer.git            |
 | org-history              | github   | https://github.com/Anoncheg1/emacs-org-history         | codeberg | https://codeberg.org/Anoncheg/emacs-org-history       |
 | pinyin-isearch           | github   | https://github.com/Anoncheg1/pinyin-isearch            | codeberg | https://codeberg.org/Anoncheg/pinyin-isearch          |
 | selected-window-contrast | codeberg | https://codeberg.org/Anoncheg/selected-window-contrast | github   | https://github.com/Anoncheg1/selected-window-contrast |
