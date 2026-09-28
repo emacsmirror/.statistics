@@ -225,7 +225,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (73)              | Assisted-by                                                        |
+| Package (76)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
 | annotated-completing-read | Claude:Sonnet-4.6                                                  |
@@ -240,9 +240,11 @@ them.
 | claude-code-context       | Claude:claude-opus-4-7                                             |
 | clutch                    | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
 | consult-magit             | claude:claude-opus-4.8                                             |
+| consult-zoxide            | Claude:claude-opus-4-5                                             |
 | context-clues             | Claude:claude-opus-4-8                                             |
 | denote-solo               | Claude:claude-sonnet-4-6                                           |
 | desert-theme              | Claude:claude-opus-4-8                                             |
+| dharmamitra               | Claude Code:claude-fable-5-1                                       |
 | eglotx                    | Codex:GPT-5                                                        |
 | flex-x                    | Codex:GPT-5                                                        |
 | fnm                       | claude:claude-opus-4.8                                             |
@@ -286,6 +288,7 @@ them.
 | ox-zola                   | Claude:claude-opus-4-5                                             |
 | pgsql                     | OpenAI Codex:gpt-5.5                                               |
 | pilish                    | pi:kimi-k3                                                         |
+| preview-tab               | Claude:claude-opus-5                                               |
 | promptu                   | Claude:claude-opus-4-8                                             |
 | remoto                    | ECA:claude-opus-5                                                  |
 | schlau-compile            | Claude:Sonnet_5                                                    |

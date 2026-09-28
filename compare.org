@@ -107,7 +107,7 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5912 |   5912 |       |       |      240 |         214 |  5312 |
+| github      | 5917 |   5917 |       |       |      240 |         214 |  5317 |
 | codeberg    |  239 |    239 |       |       |       29 |          53 |   197 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
@@ -125,10 +125,10 @@
 | shelved     | 2196 |        |  2196 |       |          |             |    43 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   273 |
+| secondary   |      |        |       |       |          |             |   275 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9824 |   7119 |  2196 |   512 |      520 |         291 |  6318 |
+| total       | 9829 |   7124 |  2196 |   512 |      520 |         291 |  6325 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -718,6 +718,7 @@
 | frimacs                 | ob-fricas                        | github    |
 | fsharp-mode             | eglot-fsharp                     | github    |
 | fuz                     | helm-fuz                         | github    |
+| ghostel                 | consult-ghostel                  | github    |
 | ghostel                 | evil-ghostel                     | github    |
 | git-emacs               | git-blamed                       | github    |
 | gitlab                  | helm-gitlab                      | github    |
@@ -752,6 +753,7 @@
 | kubel                   | kubel-evil                       | github    |
 | kubernetes              | kubernetes-evil                  | github    |
 | langtool                | langtool-popup                   | github    |
+| latex-to-svg-frontend   | latex-to-svg-for-markdown        | github    |
 | latex-to-svg-frontend   | latex-to-svg-for-org             | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
 | lurk-mode               | ob-lurk                          | github    |
