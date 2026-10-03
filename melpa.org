@@ -629,14 +629,13 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (51)               | Link      |                                                        |
+| Package (50)               | Link      |                                                        |
 |----------------------------+-----------+--------------------------------------------------------|
 | atomizer                   | sourcehut | [[https://git.sr.ht/~flandrew/atomizer][flandrew/atomizer]]                                      |
 | awhile                     | sourcehut | [[https://git.sr.ht/~flandrew/awhile][flandrew/awhile]]                                        |
 | bidi                       | git       | [[http://www.emacswiki.org/cgi-bin/wiki.pl?CategoryBiDi]]  |
 | cfrac                      | sourcehut | [[https://git.sr.ht/~flandrew/cfrac][flandrew/cfrac]]                                         |
 | democratize                | sourcehut | [[https://git.sr.ht/~flandrew/democratize][flandrew/democratize]]                                   |
-| ebuild-mode                | git       |                                                        |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                                 |
 | elpa-admin                 | git       |                                                        |
 | erobot                     | git       | [[http://www.geocities.com/kensanata/emacs.html]]          |

@@ -225,8 +225,9 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (76)              | Assisted-by                                                        |
+| Package (77)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
+| adif                      | claude-opus-5                                                      |
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
 | annotated-completing-read | Claude:Sonnet-4.6                                                  |
 | api-credit                | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
