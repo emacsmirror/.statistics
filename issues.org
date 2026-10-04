@@ -92,7 +92,7 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (43)             | Class     | Feature               | Shelved Provider   |
+| Package (45)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
@@ -103,6 +103,7 @@ them.
 | easy-jekyll              | github    | helm-ag               | helm-ag            |
 | eca                      | github    | whisper               | whisper            |
 | eev                      | github    | lean4-mode            |                    |
+| emacspeak                | github    | u-vm-color            |                    |
 | evil-textobj-tree-sitter | github    | tree-sitter           | tree-sitter        |
 | flex-compile             | github    | slite                 |                    |
 | git-commit-insert-issue  | gitlab    | glab                  | glab               |
@@ -114,6 +115,7 @@ them.
 | gumshoe                  | github    | gumshoe-consult       |                    |
 | gumshoe                  | github    | gumshoe-persp         |                    |
 | helm-tramp               | github    | docker-tramp          | docker-tramp       |
+| hermes                   | git       | gnosis-agent-review   |                    |
 | hyperbole                | gnu       | interaction-log       | interaction-log    |
 | icicles                  | wiki      | yow                   |                    |
 | imdb                     | github    | open-web              |                    |
@@ -225,7 +227,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (77)              | Assisted-by                                                        |
+| Package (80)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
@@ -237,8 +239,10 @@ them.
 | bitbucket-devops          | Codex:gpt-5.5-codex                                                |
 | blamee                    | Claude:claude-fable-5                                              |
 | bluesky                   | ChatGPT:chatgpt-5.5                                                |
+| brewpage                  | Claude Code:claude-fable-5-1                                       |
 | browser-gt                | Claude:claude-opus-4-7                                             |
 | claude-code-context       | Claude:claude-opus-4-7                                             |
+| clel                      | Claude:claude-opus-4-5                                             |
 | clutch                    | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
 | consult-magit             | claude:claude-opus-4.8                                             |
 | consult-zoxide            | Claude:claude-opus-4-5                                             |
@@ -291,6 +295,7 @@ them.
 | pilish                    | pi:kimi-k3                                                         |
 | preview-tab               | Claude:claude-opus-5                                               |
 | promptu                   | Claude:claude-opus-4-8                                             |
+| pyfun-mode                | Claude Code:claude-opus-5                                          |
 | remoto                    | ECA:claude-opus-5                                                  |
 | schlau-compile            | Claude:Sonnet_5                                                    |
 | sema-mode                 | Claude:claude-opus-4-8                                             |

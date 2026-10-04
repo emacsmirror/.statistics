@@ -87,7 +87,7 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (78)                   | Class     | Feature                  | Reason                                            |
+| Package (77)                   | Class     | Feature                  | Reason                                            |
 |--------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                      | github    | octave-inf               | backward compatibility                            |
 | achievements                   | gitlab    | command-frequency        | shelved soft                                      |
@@ -180,9 +180,6 @@
 | twittering-mode                | shelved   | revive                   | false-positive                                    |
 | ucs-utils                      | github    | ucs-utils-6.0-delta      | backward compatibility                            |
 | vbasense                       | github    | anything-project         | anything                                          |
-| vm                             | gitlab    | atomic-extents           | XEmacs compatibility                              |
-| vm                             | gitlab    | highlight-headers        | XEmacs compatibility                              |
-| vm                             | gitlab    | timer-funcs              | XEmacs compatibility                              |
 | w3                             | gnu-elpa  | dtk-css-speech           | used to be part of emacspeak, not needed          |
 | w3                             | gnu-elpa  | dtk-voices               | used to be part of emacspeak, not needed          |
 | w3                             | gnu-elpa  | w3-site-init             | leftover noise                                    |

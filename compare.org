@@ -107,8 +107,8 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5916 |   5916 |       |       |      240 |         214 |  5316 |
-| codeberg    |  239 |    239 |       |       |       29 |          53 |   197 |
+| github      | 5921 |   5921 |       |       |      240 |         214 |  5321 |
+| codeberg    |  240 |    240 |       |       |       29 |          53 |   198 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
@@ -125,10 +125,10 @@
 | shelved     | 2197 |        |  2197 |       |          |             |    43 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   275 |
+| secondary   |      |        |       |       |          |             |   276 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9829 |   7123 |  2197 |   512 |      520 |         292 |  6324 |
+| total       | 9835 |   7129 |  2197 |   512 |      520 |         292 |  6331 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -753,6 +753,7 @@
 | kubel                   | kubel-evil                       | github    |
 | kubernetes              | kubernetes-evil                  | github    |
 | langtool                | langtool-popup                   | github    |
+| latex-to-svg-frontend   | latex-to-svg-for-latex           | github    |
 | latex-to-svg-frontend   | latex-to-svg-for-markdown        | github    |
 | latex-to-svg-frontend   | latex-to-svg-for-org             | github    |
 | load-theme-buffer-local | color-theme-buffer-local         | github    |
