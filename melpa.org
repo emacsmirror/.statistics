@@ -64,7 +64,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name summary] [github]))
 #+end_src
 #+results: missing-github
-| Package (551)                | Link                                    | Summary                                                                |
+| Package (552)                | Link                                    | Summary                                                                |
 |------------------------------+-----------------------------------------+------------------------------------------------------------------------|
 | header-file                  | [[https://github.com/0x4b/header-file-mode][0x4b/header-file-mode]]                   | Assign a major mode for header files                                   |
 | snort-mode                   | [[https://github.com/BobuSumisu/snort-mode][BobuSumisu/snort-mode]]                   | Major mode for editing Snort rules                                     |
@@ -597,6 +597,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | igor-mode                    | [[https://github.com/yamad/igor-mode][yamad/igor-mode]]                         | Major mode for editing Igor Pro procedure files                        |
 | manued                       | [[https://github.com/yamauchih/manued][yamauchih/manued]]                        | A minor mode of manued proofreading method                             |
 | go-svg                       | [[https://github.com/yhvh/go-svg-mode][yhvh/go-svg-mode]]                        | A go gtp interface with svg image support                              |
+| chai                         | [[https://github.com/yibie/chai][yibie/chai]]                              | Semantic highlights and export for Chai                                |
 | float-narrow-indirect        | [[https://github.com/yibie/float-narrow-indirect][yibie/float-narrow-indirect]]             | Floating window support for narrow-indirect                            |
 | org-embed                    | [[https://github.com/yibie/org-embed][yibie/org-embed]]                         | Embed various content in org-mode                                      |
 | org-headline-card            | [[https://github.com/yibie/org-headline-card][yibie/org-headline-card]]                 | Convert org headlines to preview cards                                 |

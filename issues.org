@@ -227,7 +227,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (80)              | Assisted-by                                                        |
+| Package (81)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
@@ -287,6 +287,7 @@ them.
 | org-draw                  | Claude:claude-opus-4-8                                             |
 | org-habit-ng              | Claude:claude-opus-4-8                                             |
 | org-relative-date         | Claude:claude-opus-4-8                                             |
+| org-repeat-by-cron        | DeepSeek Harness:deepseek-flash                                    |
 | org-roam-gt               | Claude:claude-opus-4-7                                             |
 | org-roam-stats            | Claude:claude-sonnet-4-6                                           |
 | ox-mom                    | Claude:claude-sonnet-4-6                                           |

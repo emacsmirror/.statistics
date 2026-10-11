@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2197 |        |  2197 |       |          |             |    43 |
+| shelved     | 2198 |        |  2198 |       |          |             |    43 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   276 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9835 |   7129 |  2197 |   512 |      520 |         292 |  6331 |
+| total       | 9836 |   7129 |  2198 |   512 |      520 |         292 |  6331 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -485,7 +485,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (111)               | Url                                                                         |
+| Package (112)               | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | ag                          | https://github.com/Wilfred/ag.el                                            |
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
@@ -599,6 +599,7 @@
 | trimspace-mode              | https://github.com/bkhl/trimspace-mode                                      |
 | unkillable-scratch          | https://github.com/EricCrosson/unkillable-scratch                           |
 | wordsmith-mode              | https://github.com/istib/wordsmith-mode                                     |
+| xcode-mode                  | https://github.com/nicklanasa/xcode-mode                                    |
 | youdotcom                   | https://github.com/SamuelVanie/youdotcom.el                                 |
 
 ** Shared repositories
