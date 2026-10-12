@@ -92,11 +92,15 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (45)             | Class     | Feature               | Shelved Provider   |
+| Package (46)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
 | build-farm               | github    | magit-popup           | magit-popup        |
+| codex-ide                | git       | neo-term              |                    |
+| codex-ide                | git       | neomacs-mcp           |                    |
+| codex-ide                | git       | neomacs-mcp-companion |                    |
+| codex-ide                | git       | neomacs-mcp-editor    |                    |
 | counsel-tramp            | github    | docker-tramp          | docker-tramp       |
 | djangonaut               | github    | magit-popup           | magit-popup        |
 | easy-hugo                | github    | helm-ag               | helm-ag            |
@@ -227,7 +231,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (81)              | Assisted-by                                                        |
+| Package (83)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
@@ -272,6 +276,7 @@ them.
 | mac-ime                   | Gemini:3.1pro                                                      |
 | magent                    | Codex:GPT-5.6, Magent:deepseek-v4-pro                              |
 | magit-standup             | Claude:claude-opus-5                                               |
+| markdown-ts-appear        | OpenCode:gpt-5.6-sol                                               |
 | material-icons            | DeepSeek:DeepSeek-v4-pro                                           |
 | mise-tasks                | Claude Code:claude-opus-4-7                                        |
 | mode-line-path            | Claude Code:claude-opus-4-6                                        |
@@ -290,6 +295,7 @@ them.
 | org-repeat-by-cron        | DeepSeek Harness:deepseek-flash                                    |
 | org-roam-gt               | Claude:claude-opus-4-7                                             |
 | org-roam-stats            | Claude:claude-sonnet-4-6                                           |
+| org-timegrid              | Codex:gpt-5.6-sol                                                  |
 | ox-mom                    | Claude:claude-sonnet-4-6                                           |
 | ox-zola                   | Claude:claude-opus-4-5                                             |
 | pgsql                     | OpenAI Codex:gpt-5.5                                               |
