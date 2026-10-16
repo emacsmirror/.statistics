@@ -36,30 +36,32 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (11)              | Package                 | Shelved |
-|---------------------------+-------------------------+---------|
-| byte-compile-local        | eglot-python-preset     |         |
-| byte-compile-local        | eglot-typescript-preset |         |
-| checkdoc-local            | eglot-python-preset     |         |
-| checkdoc-local            | eglot-typescript-preset |         |
-| desert-theme              | color-theme-modern      |         |
-| desert-theme              | desert-theme            |         |
-| git-modeline              | git-emacs               |         |
-| git-modeline              | git-modeline            |         |
-| gptel                     | gptel                   |         |
-| gptel                     | surveyor                |         |
-| greek-polytonic           | emacs                   |         |
-| greek-polytonic           | greek-polytonic         | t       |
-| install-deps              | claude-code             |         |
-| install-deps              | pilish                  |         |
-| llm-test                  | llm                     |         |
-| llm-test                  | llm-test                |         |
-| lsp-tailwindcss           | lsp-mode                |         |
-| lsp-tailwindcss           | lsp-tailwindcss         | t       |
-| melpa-build-install-check | eglot-python-preset     |         |
-| melpa-build-install-check | eglot-typescript-preset |         |
-| package-lint-local        | eglot-python-preset     |         |
-| package-lint-local        | eglot-typescript-preset |         |
+| Feature (12)              | Package                  | Shelved |
+|---------------------------+--------------------------+---------|
+| byte-compile-local        | eglot-python-preset      |         |
+| byte-compile-local        | eglot-typescript-preset  |         |
+| checkdoc-local            | eglot-python-preset      |         |
+| checkdoc-local            | eglot-typescript-preset  |         |
+| desert-theme              | color-theme-modern       |         |
+| desert-theme              | desert-theme             |         |
+| git-modeline              | git-emacs                |         |
+| git-modeline              | git-modeline             |         |
+| gptel                     | gptel                    |         |
+| gptel                     | surveyor                 |         |
+| greek-polytonic           | emacs                    |         |
+| greek-polytonic           | greek-polytonic          | t       |
+| install-deps              | claude-code              |         |
+| install-deps              | pilish                   |         |
+| llm-test                  | llm                      |         |
+| llm-test                  | llm-test                 |         |
+| lsp-tailwindcss           | lsp-mode                 |         |
+| lsp-tailwindcss           | lsp-tailwindcss          | t       |
+| melpa-build-install-check | eglot-python-preset      |         |
+| melpa-build-install-check | eglot-typescript-preset  |         |
+| org-links                 | org-links                |         |
+| org-links                 | org-special-block-extras |         |
+| package-lint-local        | eglot-python-preset      |         |
+| package-lint-local        | eglot-typescript-preset  |         |
 
 - greek-polytonic: debbugs, wontfix
 
@@ -92,7 +94,7 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (46)             | Class     | Feature               | Shelved Provider   |
+| Package (47)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
@@ -146,6 +148,7 @@ them.
 | sdml-mode                | github    | tree-sitter-indent    | tree-sitter-indent |
 | shx                      | github    | docker-tramp          | docker-tramp       |
 | slime-docker             | github    | docker-tramp          | docker-tramp       |
+| supertag                 | github    | superchat             |                    |
 | symbol-navigation-hydra  | github    | helm-ag               | helm-ag            |
 | symex                    | github    | chimera               |                    |
 | symex                    | github    | rigpa                 |                    |

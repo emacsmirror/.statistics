@@ -77,11 +77,11 @@
 | BSD-3-Clause      |    76 |       1 |
 | Apache-2.0        |    71 |       1 |
 | public-domain     |    46 |       1 |
-| nil               |    41 |       1 |
+| nil               |    42 |       1 |
 | AGPL-3.0-or-later |    36 |       1 |
 | WTFPL             |    36 |       1 |
 | Unlicense         |    31 |       0 |
-| ISC               |    28 |       0 |
+| ISC               |    27 |       0 |
 | as-is             |    20 |       0 |
 | LGPL-3.0-or-later |     9 |       0 |
 | CC0-1.0           |     6 |       0 |
@@ -125,7 +125,7 @@
             elx-spdx-license-identifiers))
 #+end_src
 #+results: mirror-unknown
-| Package (41)         | Class     | License | M |
+| Package (42)         | Class     | License | M |
 |----------------------+-----------+---------+---|
 | achievements         | gitlab    |         | ✓ |
 | auto-sudoedit        | github    |         | ✓ |
@@ -141,6 +141,7 @@
 | fasd                 | git       |         | ✓ |
 | filechooser          | codeberg  |         |   |
 | flymake-go           | github    |         | ✓ |
+| futhark-mode         | github    |         | ✓ |
 | gap-mode             | gitlab    |         | ✓ |
 | goldendict           | git       |         |   |
 | gruvbox-theme        | github    |         | ✓ |
