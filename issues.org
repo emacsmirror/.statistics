@@ -94,7 +94,7 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (47)             | Class     | Feature               | Shelved Provider   |
+| Package (48)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
@@ -139,6 +139,7 @@ them.
 | org-gnome                | github    | gnome-calendar        | gnome-calendar     |
 | org-link-beautify        | git       | org-media-note        |                    |
 | org-seek                 | git       | ag                    | ag                 |
+| org-semantic             | github    | pretty-tables-for-org |                    |
 | ox-textile               | github    | org-test              |                    |
 | ros                      | github    | docker-tramp          | docker-tramp       |
 | rustic                   | github    | helm-ag               | helm-ag            |
@@ -234,9 +235,10 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (83)              | Assisted-by                                                        |
+| Package (87)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
+| agent-shell-attention     | Codex:gpt-6                                                        |
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
 | annotated-completing-read | Claude:Sonnet-4.6                                                  |
 | api-credit                | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
@@ -256,6 +258,7 @@ them.
 | context-clues             | Claude:claude-opus-4-8                                             |
 | denote-solo               | Claude:claude-sonnet-4-6                                           |
 | desert-theme              | Claude:claude-opus-4-8                                             |
+| devops                    | Claude:claude-opus-5-5                                             |
 | dharmamitra               | Claude Code:claude-fable-5-1                                       |
 | eglotx                    | Codex:GPT-5                                                        |
 | flex-x                    | Codex:GPT-5                                                        |
@@ -298,6 +301,7 @@ them.
 | org-repeat-by-cron        | DeepSeek Harness:deepseek-flash                                    |
 | org-roam-gt               | Claude:claude-opus-4-7                                             |
 | org-roam-stats            | Claude:claude-sonnet-4-6                                           |
+| org-semantic              | Claude:claude-opus-4-8                                             |
 | org-timegrid              | Codex:gpt-5.6-sol                                                  |
 | ox-mom                    | Claude:claude-sonnet-4-6                                           |
 | ox-zola                   | Claude:claude-opus-4-5                                             |
@@ -311,6 +315,7 @@ them.
 | sema-mode                 | Claude:claude-opus-4-8                                             |
 | shexc-ts-mode             | Claude:claude-sonnet-4-6                                           |
 | snippy                    | Gemini:3.5 Flash                                                   |
+| supersonic                | Claude:claude-opus-5                                               |
 | surveyor                  | Claude:claude-fable-5                                              |
 | synaxis                   | Hermes:multi-model                                                 |
 | sysml-mode                | GPT:gpt-5-5                                                        |

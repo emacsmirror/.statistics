@@ -69,35 +69,35 @@
 #+results: mirror-overview
 | License           | Count | Percent |
 |-------------------+-------+---------|
-| GPL-3.0-or-later  |  5158 |      72 |
+| GPL-3.0-or-later  |  5161 |      72 |
 | GPL-2.0-or-later  |   846 |      12 |
-| MIT               |   453 |       6 |
+| MIT               |   454 |       6 |
 | GPL-3.0-only      |   169 |       2 |
 | BSD-2-Clause      |    82 |       1 |
 | Apache-2.0        |    72 |       1 |
-| public-domain     |    72 |       1 |
-| BSD-3-Clause      |    71 |       1 |
+| BSD-3-Clause      |    72 |       1 |
+| public-domain     |    66 |       1 |
 | AGPL-3.0-or-later |    36 |       1 |
 | WTFPL             |    36 |       1 |
-| as-is             |    31 |       0 |
 | ISC               |    29 |       0 |
+| as-is             |    29 |       0 |
+| Unlicense         |    11 |       0 |
 | GPL               |     9 |       0 |
 | LGPL-3.0-or-later |     9 |       0 |
-| Unlicense         |     7 |       0 |
+| CC0-1.0           |     7 |       0 |
 | GPL-3.0           |     6 |       0 |
-| CC0-1.0           |     5 |       0 |
 | MPL-2.0           |     5 |       0 |
 | LGPL-3.0-only     |     4 |       0 |
+| Zlib              |     4 |       0 |
 | nil               |     3 |       0 |
-| Artistic-2.0      |     3 |       0 |
+| 0BSD              |     3 |       0 |
 | GPL-1.0-or-later  |     3 |       0 |
-| 0BSD              |     2 |       0 |
 | CECILL-2.1        |     2 |       0 |
 | CECILL-B          |     2 |       0 |
 | FSFAP             |     2 |       0 |
 | LGPL-2.1-only     |     2 |       0 |
-| Zlib              |     2 |       0 |
 | AGPL-3.0-only     |     1 |       0 |
+| Artistic-2.0      |     1 |       0 |
 | Beerware          |     1 |       0 |
 | CC-BY-SA-4.0      |     1 |       0 |
 | EUPL-1.2          |     1 |       0 |
@@ -109,9 +109,9 @@
 | Unicode-TOU       |     1 |       0 |
 | Vim               |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  6244 |      88 |
+| total GNU         |  6247 |      88 |
 |-------------------+-------+---------|
-| total             |  7132 |     100 |
+| total             |  7136 |     100 |
 
 ** Packages with unknown licenses
 #+name: mirror-unknown
@@ -158,7 +158,7 @@
 | License           | Count | Percent |
 |-------------------+-------+---------|
 | GPL-2.0-or-later  |  1185 |      54 |
-| GPL-3.0-or-later  |   695 |      32 |
+| GPL-3.0-or-later  |   696 |      32 |
 | GPL-2.0-only      |    61 |       3 |
 | public-domain     |    52 |       2 |
 | GPL               |    45 |       2 |
@@ -186,9 +186,9 @@
 | LGPL-2.1-or-later |     1 |       0 |
 | LGPL-3.0-or-later |     1 |       0 |
 |-------------------+-------+---------|
-| total GNU         |  2042 |      93 |
+| total GNU         |  2043 |      93 |
 |-------------------+-------+---------|
-| total             |  2198 |     100 |
+| total             |  2199 |     100 |
 
 ** Packages with unknown/custom licenses
 #+name: attic-unknown

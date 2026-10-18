@@ -107,8 +107,8 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5922 |   5922 |       |       |      240 |         216 |  5322 |
-| codeberg    |  240 |    240 |       |       |       29 |          53 |   198 |
+| github      | 5925 |   5925 |       |       |      240 |         216 |  5318 |
+| codeberg    |  241 |    241 |       |       |       29 |          53 |   199 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  127 |    127 |       |       |       23 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2198 |        |  2198 |       |          |             |    43 |
+| shelved     | 2199 |        |  2199 |       |          |             |    43 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   276 |
+| secondary   |      |        |       |       |          |             |   277 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9839 |   7132 |  2198 |   512 |      520 |         294 |  6334 |
+| total       | 9844 |   7136 |  2199 |   512 |      520 |         294 |  6332 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -485,7 +485,7 @@
     :order-by [(asc packages:name)]])
 #+end_src
 #+results: melpa-shelved
-| Package (112)               | Url                                                                         |
+| Package (113)               | Url                                                                         |
 |-----------------------------+-----------------------------------------------------------------------------|
 | ag                          | https://github.com/Wilfred/ag.el                                            |
 | angular-mode                | https://github.com/rudolfolah/angularjs-mode                                |
@@ -523,6 +523,7 @@
 | flymake-golangci            | https://gitlab.com/shackra/flymake-golangci                                 |
 | fold-dwim                   | https://community.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el |
 | fold-dwim-org               | https://github.com/mattfidler/fold-dwim-org                                 |
+| fuff                        | https://github.com/joelmo/fuff                                              |
 | github-browse-file          | https://github.com/ozanmakes/github-browse-file                             |
 | glab                        | https://github.com/magit/glab                                               |
 | gnome-calendar              | https://github.com/NicolasPetton/gnome-calendar.el                          |
@@ -617,7 +618,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (154)   | Secondary package                | Class     |
+| Primary package (155)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -783,6 +784,7 @@
 | nand2tetris             | company-nand2tetris              | github    |
 | nand2tetris             | nand2tetris-assembler            | github    |
 | native-complete         | company-native-complete          | github    |
+| nix3                    | magit-nix3                       | github    |
 | nixos-options           | company-nixos-options            | github    |
 | nixos-options           | helm-nixos-options               | github    |
 | nixos-options           | nix-sandbox                      | github    |
@@ -934,8 +936,9 @@ Notes on builtin packages, which are not listed above by default.
           (emir-melpa--diverging-branches))
 #+end_src
 #+results: melpa-diverging-branches
-| Package (1) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
+| Package (2) | Used   | Forced | Melpa   | Class  | Fetcher | Repo                |
 |-------------+--------+--------+---------+--------+---------+---------------------|
+| aider       | main   | main   |         | github | github  | [[https://github.com/tninja/aider.el][tninja/aider.el]]     |
 | prettier    | master |        | release | github | github  | [[https://github.com/jscheid/prettier.el][jscheid/prettier.el]] |
 
 - 2022-08-21 prettier https://github.com/melpa/melpa/pull/6990#issuecomment-2159296874
