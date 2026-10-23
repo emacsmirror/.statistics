@@ -220,7 +220,7 @@ them.
                      (not (emir-keep-wiki-package-p pkg))
                      (list name date downloads drew
                            (mapconcat
-                            (##format "%s(%s)" % (epkg--package-type (epkg %)))
+                            (##format "%s(%s)" % (closql--abbrev-class (epkg %)))
                             dependants ", ")))))))
             (epkgs nil [wiki]))
 #+end_src
