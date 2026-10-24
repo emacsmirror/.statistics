@@ -36,7 +36,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (12)              | Package                  | Shelved |
+| Feature (13)              | Package                  | Shelved |
 |---------------------------+--------------------------+---------|
 | byte-compile-local        | eglot-python-preset      |         |
 | byte-compile-local        | eglot-typescript-preset  |         |
@@ -52,6 +52,8 @@
 | greek-polytonic           | greek-polytonic          | t       |
 | install-deps              | claude-code              |         |
 | install-deps              | pilish                   |         |
+| isbn                      | bookiez                  |         |
+| isbn                      | isbn                     |         |
 | llm-test                  | llm                      |         |
 | llm-test                  | llm-test                 |         |
 | lsp-tailwindcss           | lsp-mode                 |         |

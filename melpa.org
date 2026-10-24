@@ -21,8 +21,9 @@
             (epkgs 'name [builtin]))
 #+end_src
 #+results: built-in
-| Package (4)      | Repository                      |
+| Package (5)      | Repository                      |
 |------------------+---------------------------------|
+| faceup           | [[https://github.com/Lindydancer/faceup][Lindydancer/faceup]]              |
 | markdown-ts-mode | [[https://github.com/LionyxML/markdown-ts-mode][LionyxML/markdown-ts-mode]]       |
 | editorconfig     | [[https://github.com/editorconfig/editorconfig-emacs][editorconfig/editorconfig-emacs]] |
 | lua-mode         | [[https://github.com/immerrr/lua-mode][immerrr/lua-mode]]                |
@@ -30,6 +31,7 @@
 
 - added in 31.1: markdown-ts-mode, lua-mode, timeout
 - added in 30.1: editorconfig,
+- faceup https://github.com/melpa/melpa/issues/9080#issuecomment-6281484609
 
 * Missing from Melpa
 
