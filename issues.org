@@ -237,7 +237,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (87)              | Assisted-by                                                        |
+| Package (92)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-attention     | Codex:gpt-6                                                        |
@@ -263,10 +263,12 @@ them.
 | devops                    | Claude:claude-opus-5-5                                             |
 | dharmamitra               | Claude Code:claude-fable-5-1                                       |
 | eglotx                    | Codex:GPT-5                                                        |
+| elark                     | Claude:claude-opus-5                                               |
 | flex-x                    | Codex:GPT-5                                                        |
 | fnm                       | claude:claude-opus-4.8                                             |
 | folio-theme               | OpenAI Codex:GPT-5                                                 |
 | full-gtd                  | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
+| fz-index                  | Kimi Code CLI                                                      |
 | fzf-native                | Claude:claude-opus-4-7                                             |
 | fzfa                      | Claude:claude-opus-4-7                                             |
 | git-modeline              | Claude:claude-opus-5                                               |
@@ -288,6 +290,7 @@ them.
 | material-icons            | DeepSeek:DeepSeek-v4-pro                                           |
 | mise-tasks                | Claude Code:claude-opus-4-7                                        |
 | mode-line-path            | Claude Code:claude-opus-4-6                                        |
+| modern-tab                | Claude:claude-opus-5                                               |
 | mongodb                   | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
 | moonbit-ts-mode           | Codex:GPT-5                                                        |
 | mu4e-autotask             | Claude Code:claude-opus-4-8                                        |
@@ -317,12 +320,14 @@ them.
 | sema-mode                 | Claude:claude-opus-4-8                                             |
 | shexc-ts-mode             | Claude:claude-sonnet-4-6                                           |
 | snippy                    | Gemini:3.5 Flash                                                   |
+| straight-overview         | Claude:claude-opus-4-8                                             |
 | supersonic                | Claude:claude-opus-5                                               |
 | surveyor                  | Claude:claude-fable-5                                              |
 | synaxis                   | Hermes:multi-model                                                 |
 | sysml-mode                | GPT:gpt-5-5                                                        |
 | testcover-audit           | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
 | ttx-mode                  | OpenCode:N/A                                                       |
+| typst-overlay             | Claude:claude-sonnet-4-6, Claude:claude-opus-5-5                   |
 | verdict                   | Claude:claude-opus-4-7                                             |
 | vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>                            |
 | youtube-music             | Claude:claude-fable-5                                              |
