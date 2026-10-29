@@ -103,12 +103,12 @@
 #+results: summary
 |             | Epkg | Mirror | Attic | Emacs | GNU Elpa | NonGNU Elpa | Melpa |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| builtin     |  509 |        |       |   512 |       23 |             |       |
+| builtin     |  509 |        |       |   512 |       24 |             |       |
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | github      | 5932 |   5932 |       |       |      240 |         216 |  5327 |
-| codeberg    |  241 |    241 |       |       |       29 |          53 |   199 |
+| codeberg    |  242 |    242 |       |       |       30 |          53 |   199 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  128 |    128 |       |       |       24 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2200 |        |  2200 |       |          |             |    43 |
+| shelved     | 2199 |        |  2199 |       |          |             |    43 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | secondary   |      |        |       |       |          |             |   277 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9853 |   7144 |  2200 |   512 |      521 |         294 |  6341 |
+| total       | 9853 |   7145 |  2199 |   512 |      523 |         294 |  6341 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -215,6 +215,11 @@
     :order-by [(asc name)]])
 #+end_src
 #+results: gnu-elpa-new
+| Package (1) | Class | Url |
+|-------------+-------+-----|
+| refactor    | core  |     |
+
+- refactor: New in 32.0.50
 
 ** Delayed
 #+name: gnu-elpa-delayed

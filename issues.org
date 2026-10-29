@@ -237,7 +237,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (92)              | Assisted-by                                                        |
+| Package (93)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-attention     | Codex:gpt-6                                                        |
@@ -252,6 +252,7 @@ them.
 | bluesky                   | ChatGPT:chatgpt-5.5                                                |
 | brewpage                  | Claude Code:claude-fable-5-1                                       |
 | browser-gt                | Claude:claude-opus-4-7                                             |
+| chezmoi                   | Claude Code                                                        |
 | claude-code-context       | Claude:claude-opus-4-7                                             |
 | clel                      | Claude:claude-opus-4-5                                             |
 | clutch                    | OpenAI Codex:gpt-5.6-sol, Claude code:fable-5                      |
