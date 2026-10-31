@@ -36,7 +36,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (13)              | Package                  | Shelved |
+| Feature (14)              | Package                  | Shelved |
 |---------------------------+--------------------------+---------|
 | byte-compile-local        | eglot-python-preset      |         |
 | byte-compile-local        | eglot-typescript-preset  |         |
@@ -64,6 +64,9 @@
 | org-links                 | org-special-block-extras |         |
 | package-lint-local        | eglot-python-preset      |         |
 | package-lint-local        | eglot-typescript-preset  |         |
+| precommit-checks          | api-credit               |         |
+| precommit-checks          | full-gtd                 |         |
+| precommit-checks          | testcover-audit          |         |
 
 - greek-polytonic: debbugs, wontfix
 
