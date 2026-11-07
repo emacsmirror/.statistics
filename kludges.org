@@ -87,7 +87,7 @@
     :order-by [(asc package) (asc feature)]])
 #+end_src
 #+results: required-drop
-| Package (77)                   | Class     | Feature                  | Reason                                            |
+| Package (76)                   | Class     | Feature                  | Reason                                            |
 |--------------------------------+-----------+--------------------------+---------------------------------------------------|
 | ac-octave                      | github    | octave-inf               | backward compatibility                            |
 | achievements                   | gitlab    | command-frequency        | shelved soft                                      |
@@ -137,7 +137,6 @@
 | markchars                      | gnu-elpa  | idn                      | shelved soft                                      |
 | menu-bar+                      | wiki      | help+20                  | backward compatibility                            |
 | menu-bar+                      | wiki      | info+20                  | backward compatibility                            |
-| mew                            | github    | mw32script               | Meadow Emacs compatibility                        |
 | mhc                            | github    | bitmap                   | XEmacs compatibility                              |
 | mhc                            | github    | mhc-bm                   | Mule compatibility                                |
 | mhc                            | github    | mhc-xmas                 | XEmacs compatibility                              |

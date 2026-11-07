@@ -107,8 +107,8 @@
 | gnu-elpa    |  154 |    154 |       |       |      146 |             |       |
 | nongnu-elpa |    0 |      0 |       |       |          |           1 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| github      | 5931 |   5931 |       |       |      240 |         216 |  5326 |
-| codeberg    |  242 |    242 |       |       |       30 |          53 |   199 |
+| github      | 5934 |   5934 |       |       |      241 |         216 |  5326 |
+| codeberg    |  244 |    244 |       |       |       32 |          53 |   199 |
 | gitlab      |  178 |    178 |       |       |       18 |           8 |   161 |
 | sourcehut   |  128 |    128 |       |       |       24 |           6 |    80 |
 | gnu         |    9 |      9 |       |       |       10 |           0 |     3 |
@@ -122,13 +122,13 @@
 | file        |    7 |      7 |       |       |          |             |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
 | orphaned    |  139 |    139 |       |       |          |             |   110 |
-| shelved     | 2200 |        |  2200 |       |          |             |    43 |
+| shelved     | 2201 |        |  2201 |       |          |             |    45 |
 | mirror      |      |        |       |       |          |             |    12 |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| secondary   |      |        |       |       |          |             |   277 |
+| secondary   |      |        |       |       |          |             |   278 |
 | unreleased  |      |        |       |       |        6 |           0 |       |
 |-------------+------+--------+-------+-------+----------+-------------+-------|
-| total       | 9853 |   7144 |  2200 |   512 |      523 |         294 |  6340 |
+| total       | 9859 |   7149 |  2201 |   512 |      526 |         294 |  6343 |
 
 - Most built-in packages are not mirrored.  They are included in the
   Epkg database, but no individual repositories exist for them on the
@@ -624,7 +624,7 @@
                (asc melpa-recipes:name)]])
 #+end_src
 #+results: secondary-packages
-| Primary package (155)   | Secondary package                | Class     |
+| Primary package (156)   | Secondary package                | Class     |
 |-------------------------+----------------------------------+-----------|
 | 750words                | ox-750words                      | github    |
 | ac-php                  | ac-php-core                      | github    |
@@ -675,6 +675,7 @@
 | copyit                  | copyit-pandoc                    | github    |
 | crystal-mode            | flycheck-crystal                 | github    |
 | ctl-mode                | gs-mode                          | github    |
+| daml-mode               | daml-lsp                         | github    |
 | dash                    | dash-functional                  | github    |
 | datetime-format         | timecop                          | github    |
 | ddskk                   | ccc                              | github    |
@@ -982,7 +983,7 @@ Notes on builtin packages, which are not listed above by default.
     :order-by [(asc name)]])
 #+end_src
 #+results: melpa-from-attic
-| Package (43)         | Url                                                |
+| Package (45)         | Url                                                |
 |----------------------+----------------------------------------------------|
 | angular-mode         | https://github.com/emacsattic/angular-mode         |
 | auto-complete-auctex | https://github.com/emacsattic/auto-complete-auctex |
@@ -999,6 +1000,7 @@ Notes on builtin packages, which are not listed above by default.
 | eshell-outline       | https://github.com/emacsattic/eshell-outline       |
 | flymake-golangci     | https://github.com/emacsattic/flymake-golangci     |
 | fold-dwim            | https://github.com/emacsattic/fold-dwim            |
+| fuff                 | https://github.com/emacsattic/fuff                 |
 | github-browse-file   | https://github.com/emacsattic/github-browse-file   |
 | glab                 | https://github.com/emacsattic/glab                 |
 | go-autocomplete      | https://github.com/emacsattic/go-autocomplete      |
@@ -1027,6 +1029,7 @@ Notes on builtin packages, which are not listed above by default.
 | sml-modeline         | https://github.com/emacsattic/sml-modeline         |
 | tbx2org              | https://github.com/emacsattic/tbx2org              |
 | wordsmith-mode       | https://github.com/emacsattic/wordsmith-mode       |
+| xcode-mode           | https://github.com/emacsattic/xcode-mode           |
 
 * Github                                                           :noexport:
 ** Archived repositories

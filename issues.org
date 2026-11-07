@@ -99,7 +99,7 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (48)             | Class     | Feature               | Shelved Provider   |
+| Package (50)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
@@ -115,6 +115,7 @@ them.
 | eca                      | github    | whisper               | whisper            |
 | eev                      | github    | lean4-mode            |                    |
 | emacspeak                | github    | u-vm-color            |                    |
+| emureader                | codeberg  | emureader-dyn         |                    |
 | evil-textobj-tree-sitter | github    | tree-sitter           | tree-sitter        |
 | flex-compile             | github    | slite                 |                    |
 | git-commit-insert-issue  | gitlab    | glab                  | glab               |
@@ -132,6 +133,7 @@ them.
 | imdb                     | github    | open-web              |                    |
 | jabber                   | git       | jabber-omemo-core     |                    |
 | jest                     | github    | magit-popup           | magit-popup        |
+| jit-spell                | github    | vibe-spell            |                    |
 | kapacitor                | github    | magit-popup           | magit-popup        |
 | kubernetes               | github    | magit-popup           | magit-popup        |
 | lispy                    | github    | indium                | indium             |
@@ -240,7 +242,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (93)              | Assisted-by                                                        |
+| Package (97)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-attention     | Codex:gpt-6                                                        |
@@ -262,6 +264,7 @@ them.
 | consult-magit             | claude:claude-opus-4.8                                             |
 | consult-zoxide            | Claude:claude-opus-4-5                                             |
 | context-clues             | Claude:claude-opus-4-8                                             |
+| daml-mode                 | Claude:claude-opus-5-5                                             |
 | denote-solo               | Claude:claude-sonnet-4-6                                           |
 | desert-theme              | Claude:claude-opus-4-8                                             |
 | devops                    | Claude:claude-opus-5-5                                             |
@@ -280,8 +283,10 @@ them.
 | gptel-agent-harness       | Kiro-cli:claude-opus-4-8, gptel-agent-harness:deepseek-v4-flash    |
 | gruber-darker-ayu-theme   | opencode:deepseek-v4-flash-free                                    |
 | har-viewer                | Claude:claude-sonnet-4.6                                           |
+| helm-taskswitch           | Claude:claude-opus-5-5                                             |
 | hermes                    | Hermes:MoA                                                         |
 | hnview                    | OpenAI Codex:gpt-5                                                 |
+| japanese-menu             | ChatGPT:GPT-6                                                      |
 | keycoach                  | Claude:claude-fable-5                                              |
 | latex-to-svg-backend      | Claude:claude-opus-4-8                                             |
 | latex-to-svg-frontend     | Claude:claude-opus-4-8                                             |
@@ -334,6 +339,7 @@ them.
 | typst-overlay             | Claude:claude-sonnet-4-6, Claude:claude-opus-5-5                   |
 | verdict                   | Claude:claude-opus-4-7                                             |
 | vice-mode                 | Claude Sonnet 5 <noreply@anthropic.com>                            |
+| xdg-redirect              | Gemini:gemini-flash-latest                                         |
 | youtube-music             | Claude:claude-fable-5                                              |
 
 ** Dropped the Assisted-by header
