@@ -99,7 +99,7 @@ them.
    (epkgs [name class] [mirrored*]))
 #+end_src
 #+results: unsatisfied
-| Package (50)             | Class     | Feature               | Shelved Provider   |
+| Package (51)             | Class     | Feature               | Shelved Provider   |
 |--------------------------+-----------+-----------------------+--------------------|
 | ai-code                  | github    | whisper               | whisper            |
 | ant-project-mode         | github    | javadoc-lookup        | javadoc-lookup     |
@@ -161,6 +161,7 @@ them.
 | symex                    | github    | chimera               |                    |
 | symex                    | github    | rigpa                 |                    |
 | tblui                    | github    | magit-popup           | magit-popup        |
+| yml                      | github    | yml-core              |                    |
 
 - 2023-06-25 flex-compile https://github.com/plandes/flex-compile/commit/c6f7b97e96b4f2608954f8f599d255578c73d600
 - 2024-06-10 tree-sitter https://github.com/emacsmirror/epkgs/commit/d7bc99e41d8cf8ef32c21a983ab61edd4c4167e6
@@ -242,10 +243,11 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (97)              | Assisted-by                                                        |
+| Package (98)              | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-attention     | Codex:gpt-6                                                        |
+| agent-shell-consult       | Codex:GPT-6                                                        |
 | agent-shell-math-renderer | Claude:claude-opus-4-8                                             |
 | annotated-completing-read | Claude:Sonnet-4.6                                                  |
 | api-credit                | DeepSeek:deepseek-v4-flash, GLM:glm-5.3-flash, Laguna:laguna-s-2.1 |
