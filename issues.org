@@ -36,12 +36,16 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (14)              | Package                  | Shelved |
+| Feature (16)              | Package                  | Shelved |
 |---------------------------+--------------------------+---------|
+| benchmark                 | benchmark                |         |
+| benchmark                 | fontsloth                |         |
 | byte-compile-local        | eglot-python-preset      |         |
 | byte-compile-local        | eglot-typescript-preset  |         |
 | checkdoc-local            | eglot-python-preset      |         |
 | checkdoc-local            | eglot-typescript-preset  |         |
+| coverage                  | coverage                 |         |
+| coverage                  | fontsloth                |         |
 | desert-theme              | color-theme-modern       |         |
 | desert-theme              | desert-theme             |         |
 | git-modeline              | git-emacs                |         |
