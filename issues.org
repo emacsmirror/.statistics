@@ -14,7 +14,7 @@
 :END:
 * Features provided by multiple packages
 #+name: conflict
-#+begin_src emacs-lisp :post addheader('("Feature" "Package" "Shelved"),*this*)
+#+begin_src emacs-lisp :post addheader('("Feature" "Package" "Shelved" "Slop"),*this*)
   (let (alist)
     (dolist (name (epkgs 'name))
       (dolist (feature (epkg-sql [:select feature :from provided
@@ -26,8 +26,10 @@
             (push name (cdr elt))
           (cl-pushnew (list feature name) alist))))
     (mapcar (pcase-lambda (`(,feature ,package))
-              (list feature package
-                    (epkg-shelved-package-p (epkg package))))
+              (let ((pkg (epkg package)))
+                (list feature package
+                      (epkg-shelved-package-p pkg)
+                      (if (oref pkg assisted-by) "✓" ""))))
             (mapcan (pcase-lambda (`(,feature . ,providers))
                       (and (> (length providers) 1)
                            (list (list feature providers))
@@ -36,48 +38,52 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (16)              | Package                  | Shelved |
-|---------------------------+--------------------------+---------|
-| benchmark                 | benchmark                |         |
-| benchmark                 | fontsloth                |         |
-| byte-compile-local        | eglot-python-preset      |         |
-| byte-compile-local        | eglot-typescript-preset  |         |
-| checkdoc-local            | eglot-python-preset      |         |
-| checkdoc-local            | eglot-typescript-preset  |         |
-| coverage                  | coverage                 |         |
-| coverage                  | fontsloth                |         |
-| desert-theme              | color-theme-modern       |         |
-| desert-theme              | desert-theme             |         |
-| git-modeline              | git-emacs                |         |
-| git-modeline              | git-modeline             |         |
-| gptel                     | gptel                    |         |
-| gptel                     | surveyor                 |         |
-| greek-polytonic           | emacs                    |         |
-| greek-polytonic           | greek-polytonic          | t       |
-| install-deps              | claude-code              |         |
-| install-deps              | pilish                   |         |
-| isbn                      | bookiez                  |         |
-| isbn                      | isbn                     |         |
-| llm-test                  | llm                      |         |
-| llm-test                  | llm-test                 |         |
-| lsp-tailwindcss           | lsp-mode                 |         |
-| lsp-tailwindcss           | lsp-tailwindcss          | t       |
-| melpa-build-install-check | eglot-python-preset      |         |
-| melpa-build-install-check | eglot-typescript-preset  |         |
-| org-links                 | org-links                |         |
-| org-links                 | org-special-block-extras |         |
-| package-lint-local        | eglot-python-preset      |         |
-| package-lint-local        | eglot-typescript-preset  |         |
-| precommit-checks          | api-credit               |         |
-| precommit-checks          | full-gtd                 |         |
-| precommit-checks          | testcover-audit          |         |
+| Feature (16)              | Package                  | Shelved | Slop |
+|---------------------------+--------------------------+---------+------|
+| benchmark                 | benchmark                |         |      |
+| benchmark                 | fontsloth                |         |      |
+| byte-compile-local        | eglot-python-preset      |         |      |
+| byte-compile-local        | eglot-typescript-preset  |         |      |
+| checkdoc-local            | eglot-python-preset      |         |      |
+| checkdoc-local            | eglot-typescript-preset  |         |      |
+| coverage                  | coverage                 |         |      |
+| coverage                  | fontsloth                |         |      |
+| desert-theme              | color-theme-modern       |         |      |
+| desert-theme              | desert-theme             |         | ✓    |
+| git-modeline              | git-emacs                |         |      |
+| git-modeline              | git-modeline             |         | ✓    |
+| gptel                     | gptel                    |         |      |
+| gptel                     | surveyor                 |         | ✓    |
+| greek-polytonic           | emacs                    |         |      |
+| greek-polytonic           | greek-polytonic          | t       |      |
+| install-deps              | claude-code              |         |      |
+| install-deps              | pilish                   |         | ✓    |
+| isbn                      | bookiez                  |         |      |
+| isbn                      | isbn                     |         |      |
+| llm-test                  | llm                      |         |      |
+| llm-test                  | llm-test                 |         |      |
+| lsp-tailwindcss           | lsp-mode                 |         |      |
+| lsp-tailwindcss           | lsp-tailwindcss          | t       |      |
+| melpa-build-install-check | eglot-python-preset      |         |      |
+| melpa-build-install-check | eglot-typescript-preset  |         |      |
+| org-links                 | org-links                |         |      |
+| org-links                 | org-special-block-extras |         |      |
+| package-lint-local        | eglot-python-preset      |         |      |
+| package-lint-local        | eglot-typescript-preset  |         |      |
+| precommit-checks          | api-credit               |         | ✓    |
+| precommit-checks          | full-gtd                 |         | ✓    |
+| precommit-checks          | testcover-audit          |         | ✓    |
 
 - greek-polytonic: debbugs, wontfix
 
-There are always a few conflicts caused by stochastic parrots.  I am
-not reporting these issues upstream because the LLMs are producing
-(and sometimes also fixing) these issues quicker than I could report
-them.
+(2026-07-18) There are always a few conflicts caused by stochastic
+parrots.  I am not reporting these issues upstream because the LLMs
+are producing (and sometimes also fixing) these issues quicker than
+I could report them.
+
+(2026-11-14) Actually, I am not reporting these issues at all
+anymore, even for human-made packages.  I've done it for two decades
+and I don't feel like doing it anymore.
 
 * Packages with unsatisfied dependencies
 #+name: unsatisfied
@@ -176,6 +182,9 @@ them.
   - magit-gitlab https://gitlab.com/arvidnl/magit-gitlab/-/issues/8
 - 2026-07-05 ag https://github.com/melpa/melpa/pull/471
 
+(2026-11-14) As you can see, I've stopped reporting these a while ago.
+Someone else will have to pick up the slack.
+
 * Missing library summary
 #+name: missing-summary
 #+begin_src emacs-lisp :post addheader('("Package" "Class" "M"),*this*)
@@ -247,7 +256,7 @@ them.
              :order-by [(asc name)]])
 #+end_src
 #+results: assisted-by
-| Package (98)              | Assisted-by                                                        |
+| Package (100)             | Assisted-by                                                        |
 |---------------------------+--------------------------------------------------------------------|
 | adif                      | claude-opus-5                                                      |
 | agent-shell-attention     | Codex:gpt-6                                                        |
@@ -261,6 +270,7 @@ them.
 | bitbucket-devops          | Codex:gpt-5.5-codex                                                |
 | blamee                    | Claude:claude-fable-5                                              |
 | bluesky                   | ChatGPT:chatgpt-5.5                                                |
+| bookmark-gt               | Claude:claude-opus-4-7                                             |
 | brewpage                  | Claude Code:claude-fable-5-1                                       |
 | browser-gt                | Claude:claude-opus-4-7                                             |
 | chezmoi                   | Claude Code                                                        |
@@ -277,6 +287,7 @@ them.
 | dharmamitra               | Claude Code:claude-fable-5-1                                       |
 | eglotx                    | Codex:GPT-5                                                        |
 | elark                     | Claude:claude-opus-5                                               |
+| expui-icons               | Claude:claude-opus-5-5                                             |
 | flex-x                    | Codex:GPT-5                                                        |
 | fnm                       | claude:claude-opus-4.8                                             |
 | folio-theme               | OpenAI Codex:GPT-5                                                 |
