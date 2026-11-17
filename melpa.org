@@ -628,7 +628,7 @@ Also see https://github.com/melpa/melpa/issues/7892.
             (epkgs [name class] [git gitlab codeberg sourcehut gnu nongnu]))
 #+end_src
 #+results: missing
-| Package (50)               | Link      |                                                        |
+| Package (52)               | Link      |                                                        |
 |----------------------------+-----------+--------------------------------------------------------|
 | atomizer                   | sourcehut | [[https://git.sr.ht/~flandrew/atomizer][flandrew/atomizer]]                                      |
 | awhile                     | sourcehut | [[https://git.sr.ht/~flandrew/awhile][flandrew/awhile]]                                        |
@@ -637,11 +637,13 @@ Also see https://github.com/melpa/melpa/issues/7892.
 | democratize                | sourcehut | [[https://git.sr.ht/~flandrew/democratize][flandrew/democratize]]                                   |
 | ee                         | gnu       | [[https://savannah.gnu.org/projects/ee][gnu:ee]]                                                 |
 | elpa-admin                 | git       |                                                        |
+| elwl                       | git       | [[https://git.gay/agnes-li/elwl]]                          |
 | erobot                     | git       | [[http://www.geocities.com/kensanata/emacs.html]]          |
 | exemplify-align            | sourcehut | [[https://git.sr.ht/~flandrew/exemplify-align][flandrew/exemplify-align]]                               |
 | exemplify-ert              | sourcehut | [[https://git.sr.ht/~flandrew/exemplify-ert][flandrew/exemplify-ert]]                                 |
 | exemplify-eval             | sourcehut | [[https://git.sr.ht/~flandrew/exemplify-eval][flandrew/exemplify-eval]]                                |
 | fancy-joiner               | sourcehut | [[https://git.sr.ht/~flandrew/fancy-joiner][flandrew/fancy-joiner]]                                  |
+| fd-fairy                   | git       | [[https://git.gay/agnes-li/fd-fairy]]                      |
 | fold-and-focus             | sourcehut | [[https://git.sr.ht/~flandrew/fold-and-focus][flandrew/fold-and-focus]]                                |
 | followcursor-mode          | codeberg  | [[https://codeberg.org/scip/followcursor-mode][scip/followcursor-mode]]                                 |
 | geo                        | sourcehut |                                                        |

@@ -38,7 +38,7 @@
                     (sort alist :key #'car))))
 #+end_src
 #+results: conflict
-| Feature (16)              | Package                  | Shelved | Slop |
+| Feature (17)              | Package                  | Shelved | Slop |
 |---------------------------+--------------------------+---------+------|
 | benchmark                 | benchmark                |         |      |
 | benchmark                 | fontsloth                |         |      |
@@ -50,6 +50,8 @@
 | coverage                  | fontsloth                |         |      |
 | desert-theme              | color-theme-modern       |         |      |
 | desert-theme              | desert-theme             |         | ✓    |
+| ewc                       | fd-fairy                 |         |      |
+| ewc                       | rau                      |         |      |
 | git-modeline              | git-emacs                |         |      |
 | git-modeline              | git-modeline             |         | ✓    |
 | gptel                     | gptel                    |         |      |
@@ -136,6 +138,7 @@ and I don't feel like doing it anymore.
 | gumshoe                  | github    | gumshoe-completionist |                    |
 | gumshoe                  | github    | gumshoe-consult       |                    |
 | gumshoe                  | github    | gumshoe-persp         |                    |
+| helm                     | github    | tramp-archive         |                    |
 | helm-tramp               | github    | docker-tramp          | docker-tramp       |
 | hermes                   | git       | gnosis-agent-review   |                    |
 | hyperbole                | gnu       | interaction-log       | interaction-log    |
@@ -154,7 +157,6 @@ and I don't feel like doing it anymore.
 | matlab-mode              | github    | semanticdb            |                    |
 | memolist                 | github    | ag                    | ag                 |
 | org-gnome                | github    | gnome-calendar        | gnome-calendar     |
-| org-link-beautify        | git       | org-media-note        |                    |
 | org-seek                 | git       | ag                    | ag                 |
 | org-semantic             | github    | pretty-tables-for-org |                    |
 | ox-textile               | github    | org-test              |                    |
